@@ -1,1 +1,1 @@
-# Trainee_assignments
+# Trainee_assignments_weekly
