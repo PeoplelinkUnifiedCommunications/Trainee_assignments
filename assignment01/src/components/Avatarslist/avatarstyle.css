@@ -1,0 +1,12 @@
+.avatars_list {
+  margin-left: -4px;
+}
+.avatar_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar_image img {
+  object-fit: cover;
+  border-radius: 50%;
+}

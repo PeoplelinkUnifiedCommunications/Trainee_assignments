@@ -1,0 +1,43 @@
+.latestrecipe_wrapper {
+  max-width: 360px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  gap: 1em;
+  box-shadow: 0px 2px 2px lightgray;
+}
+.latestrecipes_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.latestrecipes_header h4 {
+  font-family: "Abril Fatface", cursive;
+  letter-spacing: 2px;
+}
+.latestrecipes_header p {
+  font-size: 0.7rem;
+  letter-spacing: 1.4px;
+}
+.latestrecipe_name {
+  line-height: 24px;
+  font-family: sans-serif;
+}
+.latest_ratings {
+  margin: 1em 0em;
+}
+.latest_servings {
+  margin-top: 2.5em;
+}
+
+.latestrecipe_details {
+  padding: 1.3em 0em;
+}
+
+.latestrecipe_img img {
+  width: 95px;
+  height: 100%;
+  object-fit: cover;
+}

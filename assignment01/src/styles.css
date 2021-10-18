@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* /////////////////////////////Header styles///////////////// */
+
+.header {
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 73%, 0% 100%);
+  background: url("./Avatars/backgroundImage.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  position: relative;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0%, 100% 73%, 0% 100%);
+  z-index: -1;
+  background: rgba(39, 38, 74, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+}
+.nav_wrapper {
+  padding: 3em 0em;
+  display: flex;
+  justify-content: space-between;
+}
+.nav_wrapper ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.left_nav li,
+.right_nav li {
+  list-style: none;
+}
+.left_nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+.left_nav li a span {
+  color: #ffbc42;
+}
+.left_nav li select {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding-right: 1.5em;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+}
+
+.right_nav li i {
+  color: white;
+}
+.right_nav li span {
+  font-size: 0.7rem;
+  color: #ffbc42;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.right_nav li img {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* /////////////////////////////Kitchen Banner/////////////////////////////////////////// */
+
+.kitchen_container {
+  width: 100%;
+  height: auto;
+  background: url("./Avatars/HeroImage.jpg") rgba(39, 38, 74, 0.9);
+  background-size: cover;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  padding: 4em;
+}
+.kitchen_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.kitchen_stats img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.kitchen_stats {
+  display: flex;
+  gap: 2.4em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.kitchen_stats_details h3 {
+  font-size: 3.5vw;
+  letter-spacing: 6px;
+  font-family: "Abril Fatface", cursive;
+  color: white;
+}
+.kitchen_stats_details .kitchen_ratings {
+  margin: 1.5em 0em;
+}
+.kitchen_ratings span:nth-child(2),
+.kitchen_ratings span:nth-child(3) {
+  color: white;
+  font-size: 0.86rem;
+  margin-left: 1.3em;
+  word-spacing: 1px;
+  letter-spacing: 1.4px;
+}
+.platinum {
+  padding: 0.3em 0.8em;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  letter-spacing: 2px;
+}
+.kitchen_likes span:not(:first-child) {
+  margin-left: 2.5em;
+}
+.kitchen_likes span {
+  color: white;
+}
+.kitchen_likes span i {
+  margin-left: 1em;
+}
+.avatars {
+  display: flex;
+}
+.post_settings {
+  display: flex;
+  gap: 2.5em;
+  align-items: center;
+  margin-top: 2.8em;
+}
+.post_settings a:nth-child(1) {
+  padding: 0.8em 1.6em;
+  background-color: lightgreen;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.post_settings a:nth-child(2) {
+  text-decoration: none;
+  color: white;
+  padding: 0.6em;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
+
+/* //////////////////////////////MAIN MENU////////////////////////////////////////// */
+.main_menu {
+  margin-top: 3.5em;
+}
+.main_menu ul {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+.main_menu ul li {
+  list-style: none;
+  color: lightgray;
+  opacity: 0.7;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+.main_menu ul li select {
+  background: transparent;
+  color: white !important;
+  padding-right: 1em;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.mobile_dropdown_hover {
+  display: none !important;
+  background-color: white;
+  box-shadow: 0px 2px 4px lightgray;
+}
+
+.mobile_dropdown_hover li {
+  list-style: none;
+  display: flex;
+  justify-self: flex-start;
+}
+
+.mobile_dropdown {
+  display: none !important;
+}
+.mobile_dropdown li {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .mobile_menu {
+    display: none !important;
+  }
+  .mobile_dropdown {
+    display: block !important;
+  }
+}
+
+@media (min-width: 276px) and (max-width: 767px) {
+  .kitchen_container {
+    padding: 1.2em;
+  }
+  .kitchen_stats {
+    gap: 1em;
+  }
+  .kitchen_stats_details .kitchen_ratings {
+    margin: 0.5em 0em;
+  }
+  .kitchen_stats img {
+    width: 50px;
+    height: 50px;
+  }
+  .kitchen_likes {
+    margin: 0.5em 0em;
+  }
+  .kitchen_ratings span:nth-child(2),
+  .kitchen_ratings span:nth-child(3) {
+    font-size: 0.65rem;
+    margin-left: 0.65em;
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+  }
+  .post_settings {
+    margin-top: 1.2em;
+  }
+  .main_menu {
+    margin-top: 1.5em;
+  }
+  .main_menu ul {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+}

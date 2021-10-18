@@ -1,0 +1,88 @@
+.recipe_container {
+  max-width: 558px;
+  width: 90%;
+}
+.recipe_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0px 3px 4px lightgray;
+  padding: 2.5em;
+  transform: translateY(-45%);
+}
+.recipe_details {
+  flex: 2;
+}
+.recipe_img {
+  flex: 1;
+}
+.avatars_ratings {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.recipe_rating {
+  padding-top: 1.4em;
+  color: gray;
+}
+.recipe_name {
+  font-family: "Abril Fatface", cursive;
+  letter-spacing: 2px;
+  margin: 0.8em 0em;
+}
+.recipe_prep {
+  font-size: 0.85rem;
+  color: gray;
+  line-height: 1.6em;
+  font-family: sans-serif;
+}
+
+.recipe_prep_time_serving {
+  color: gray;
+  font-size: 0.85rem;
+  margin-top: 1em;
+}
+.recipe_prep_time_serving span:nth-child(2) {
+  padding-left: 2.6em;
+}
+
+.recipe_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: 3em;
+}
+.recipe {
+  padding: 0.5em 1em;
+  background-color: #fef3e9;
+  color: #fab14e;
+  font-size: 0.8rem;
+  border-radius: 20px;
+}
+.avatars {
+  margin-top: 1.3em;
+}
+
+@media (max-width: 575px) {
+  .recipe_wrapper {
+    flex-direction: column;
+    padding: 1em;
+  }
+  .recipe_wrapper {
+    transform: translateY(-40%);
+    margin-top: 2em;
+  }
+  .recipe_wrapper .recipe_img {
+    order: 1;
+    text-align: center;
+  }
+  .recipe_wrapper .recipe_img img {
+    margin-left: 0;
+  }
+  .recipe_wrapper .recipe_details {
+    order: 2;
+  }
+}
