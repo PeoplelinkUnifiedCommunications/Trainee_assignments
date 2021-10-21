@@ -1,0 +1,41 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("yu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flex-container{
+    display: flex;
+    background-color: rgb(58, 58, 58);
+    padding: 5px;
+}
+.active{
+    color: oldlace;
+    text-decoration: none;
+    margin-left: 45px;
+}
+.t1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 150px;
+}
+#h1{
+    font-size: 50px;
+}
+.sp1{
+    margin-top: 50px;
+}
+#ra1{
+    margin: -7px;
+}
+@media (min-width:240px) and (max-width:767px){
+    .flex-container{
+        width: 100%;
+        padding: 0%;
+    }
+    body{
+        height: 1000px;
+    }
+}
