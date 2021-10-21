@@ -1,0 +1,15 @@
+.sideNav{
+    height: 95vh;
+    width: 69px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sideNav i{
+    padding-top: 50px;
+    color: white    ;
+}
+.btm-icon{
+    margin-top: 20em;
+}

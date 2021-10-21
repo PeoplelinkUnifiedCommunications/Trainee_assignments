@@ -1,0 +1,90 @@
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    top: 0;
+  }
+  .left {
+    left: 0;
+    background-color: #36517e;
+  }
+  .right {
+    right: 0;
+    background-color:white;
+  }
+  .child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .parent{
+    width: 60%;
+    position: absolute;
+    left: 25%;
+    top: 20%;
+  }
+  .input{
+      width: 95%;
+      padding: 10px;
+  }
+  .password{
+      width: 95%;
+      padding: 10px;
+  }
+  .button{
+      width: 100%;
+      padding: 10px;
+      color: white;
+      background-color: #47B9F8;
+      border: none;
+      border-radius: 2px;
+  }
+  .remember{
+      display: flex;
+      justify-content: space-between;
+  }
+  .icons{
+      display: flex;
+      justify-content: space-between;
+      color: green;
+  }
+  span{
+    border: 1px solid lightgray;
+    /* padding: 5px 55px 5px 55px; */
+    width: 130px;
+    text-align: center;
+  }
+  a{
+    color: #47B9F8;
+  }
+  .eye{
+    position: absolute;
+    right: 2%;
+    top:46%;
+    color: #47B9F8;
+  }
+  .lock{
+    position: absolute;
+    left: 2%;
+    bottom: 36%;
+    color: white;
+  }
+
+
+
+  @media(max-width: 768px) {
+    .left{
+      display: none;
+    }
+    .right{
+      width: 100%;
+    }
+    
+    .parent{
+      left:20%;
+    }
+    span{
+      width:130px;
+    }
+  }

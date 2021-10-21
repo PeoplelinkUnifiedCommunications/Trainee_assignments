@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.topnav{
+    height:50px;
+    background-color: burlywood;
+    
+}
+.leftnav{
+    height:94vh;
+    background-color: red;
+    width: 9vh;
+}
+.icon{
+    font-size: 50px;
+    color: white;
+    margin-left: 10px;
+}
+.cardparent{
+    width:100%;
+    height: 50px;
+    background-color: yellow;
+}
+.card1{
+    width:100px;
+    height:200px;
+    background-color: yellow;
+}
+
+  
