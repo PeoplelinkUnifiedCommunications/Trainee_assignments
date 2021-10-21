@@ -1,0 +1,126 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Poppins',sans-serif;
+}
+.left {
+    background-color: #36517E;
+    color: #F3F6F9;
+    text-align: center;
+}
+.main{
+    padding-top: 250px;
+    font-size: 15px;
+}
+.icons{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+h1{
+    font-weight: 500;
+}
+
+.Page{
+    display: flex;
+}
+.Page .left{
+    width: 30%;
+    height: 100vh;
+}
+.Page .right{
+    width: 100%;
+    height: 100vh;
+}
+.right{
+    text-align: center;
+}
+h2{
+    padding-top: 150px;
+    margin: 0%;
+    color: #3A5386;
+    font-size: 40px;
+}
+h3{
+    color: #A0A9AE;
+    font-weight: 500;
+}
+h4{
+    font-weight: 400;
+    color: #84898D;
+    font-size: 20px;
+}
+.login input[type="text"], input[type="password"], button[type="submit"]{
+    width: 50%;
+    padding: 14px;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+.rem{
+    display: inline-flex;
+    color: #A0A9AE;
+    font-weight: 400;
+}
+button{
+    font-size: 14px;
+    background-color: #47B9F8;
+    opacity: 0.5px;
+    color: #F3F6F9;
+    border: 1px solid #47B9F8;
+    cursor: pointer;
+}
+.icon1 .fa{
+    border: 1px solid #E3E3E3;
+    padding: 9px 60px;
+    margin: 0.5rem;
+}
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.bottom a{
+    margin-left: 20%;
+}
+@media (min-width:768px) and (max-width:1112px){
+    h1{
+        font-size: 15px;
+    }
+    .main a{
+        font-size: 10px;
+    }
+}
+@media (min-width:240px) and (max-width:767px){
+  .Page{
+      display: block;
+    }
+  .Page .left{
+      width: 100%;
+      height: 20vh;
+      margin: 0px;
+    }
+    .main{
+        padding-top: 0px;
+    }
+    .bottom a{
+        margin-left: 0px;
+    }
+
+    h1{
+        padding-top: 10px;
+        margin: 0%;
+        font-size: 20px;
+    }
+    .icons{
+        font-size: small;
+    }
+    h2{
+       padding-top: 50px; 
+    }
+}
+@media (min-width: 1113px) and (max-width: 1366px) {
+    h1{
+        font-size: 18px;
+    }
+}
