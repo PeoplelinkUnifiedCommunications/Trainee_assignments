@@ -1,15 +1,24 @@
-import React from 'react'
-import Card from "./card"
+import React from 'react';
+import "./cardstyles.css";
+import Card from "./card";
 
-function index() {
+function CardContainer() {
     return (
-        <div>
+        <div className="cardWrapper">
             <Card />
-           
-            
-           
+            <Card />
+            <Card />
+            <Card />
+            <Card /> 
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card /> 
+            <Card /> 
         </div>
     )
 }
 
-export default index
+export default CardContainer

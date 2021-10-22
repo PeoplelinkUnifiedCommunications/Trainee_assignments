@@ -1,16 +1,15 @@
-import React from 'react'
-import "./cardstyles.css"
+import React from "react";
+
 
 function card() {
-    return (
-        <div>
-
-        <div className="card1">
-            <div className="insidecard">
-            </div>
-        </div>
-        </div>
-    )
+  return (
+    
+      <div className="card1">
+        <span className="plus-icon-card">22</span>
+        <div className="insidecard"></div>
+        <p style={{color:'red'}}>Air Nike Tenis</p>
+      </div>
+  );
 }
 
-export default card
+export default card;
