@@ -9,7 +9,7 @@ function sideNav() {
            <i className="fa fa-building fa-2x"></i>
            <i className="fa fa-cog fa-2x"></i>
            <div className="btm-icon">
-            <i className="fa fa-tv fa-2x"></i>
+           <i class="fa fa-sign-out"></i>
            </div>
         </div>
         

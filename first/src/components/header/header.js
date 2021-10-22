@@ -5,7 +5,7 @@ function header() {
     return (
 
         <div className="header"> 
-        <p><i className="fa fa-tv fa-2x"></i>
+        <p><i class="fa fa-cloud-download fa-2x" style={{color:'white'}}></i>
          <span className="plus-icon">+</span>
         </p>
             <p>cloud inventory</p>
