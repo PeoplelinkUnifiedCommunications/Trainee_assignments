@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 51px;
+}
+.leftdiv{
+    /* border: 1px solid hotpink; */
+    font-size: 25px;
+}
+#search{
+    /* border-left: 2px solid grey; */
+    margin-left: 10px;
+}
+.logobrand{
+    /* border: 1px solid rgb(25, 0, 255); */
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+
+
+#imglogo{
+    width: 31%;
+    border-radius: 10px;
+}
+
+.rightdiv{
+    display: flex;
+    /* border: 1px solid green; */
+}
+
+.log{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#reg{
+    margin-right: 20px;
+}
+.login{
+    margin-top: 15px;
+}
+
+
+.rightdiv .sumbitclickable { 
+    /* padding-left: 10px; */
+    /* background-color: rgb(90, 202, 197); */
+    /* color: rgb(243, 64, 64); */
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+
+
+/* MENU */
+
+.menu ul{
+    border: 2px solid rgb(223, 219, 219);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.menu ul select{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+}
+.menu ul li{
+    list-style-type: none;
+    padding: 8px 15px;
+    border-right: 1px solid rgb(223, 216, 216);
+}
+
+/* cards here */
+
+
+.cardscontainer{
+    /* border: 1px solid teal; */
+    display: flex;
+    flex-wrap: wrap;
+    width:60%;
+    height: auto;
+    margin: 20px auto;
+    
+    /* background-color: rgb(209, 170, 91); */
+}
+.card1{
+    margin: 6px 10px;
+    /* border: 1px solid red; */
+    height: 290px;
+    width: 230px;
+    /* box-shadow: 2px 2px 4px grey; */
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.card h2{
+    font-size: 14px;
+    padding-top: 18px;
+}
+.card1Date{
+    display: flex;
+    justify-content: space-between;
+}
+.card1Footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.card1Footer i{
+    border-top: 2px solid rgb(243, 239, 239);
+    font-size: 18px;
+    /* padding-left: 8px; */
+    
+}
+
+.hm{
+    margin: 2px 4px;
+    padding: 0px 6px;
+    color: white;
+    background-color: aqua;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+.log{
+    background-color: hotpink;
+}
+
+
+@media all  and (min-width:350px) and  (max-width:900px){
+
+
+    .menu ul {
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media all  and (max-width:991px) {
+
+.cardscontainer{
+    
+  width: 67%;
+  margin-right: -30px;
+}
+   
+    
+}
+
+@media screen and (max-width:991px){
+    .header{
+        display: -webkit-box;
+    }
+    #imglogo {
+        width: 55%;
+        border-radius: 36px;
+        /* margin-right: 26px; */
+        margin: 0 39px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .header{
+        /* display: block; */
+        display: inline-block;
+    }
+    #imglogo {
+        width: 35%;
+        border-radius: 36px;
+        /* margin-right: 26px; */
+        margin: 0 20px;
+    }
+    .logobrand{
+        display: flow-root;
+        margin-top: 18px;
+        margin-left: -15px;
+    }
+    .login{
+        margin-bottom: 0rem;
+        padding-right: 5px;
+    }
+    #reg {
+        margin-right: 4px;
+    }
+}
+
+@media screen and (min-width:963px){
+
+    .cardscontainer{
+        width: 96%;
+        margin-right: 33px;
+    
+
+    }
+}
+@media screen and (min-width:610px) and(max-width:880px){
+    .cardscontainer{
+        width: 85%;
+    margin-left: 149
+
+}
+
+}
