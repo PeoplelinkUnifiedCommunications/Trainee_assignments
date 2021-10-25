@@ -1,0 +1,54 @@
+.div1 {
+    position: relative;
+    font-family: Arial;
+    border-radius:10px;
+    cursor: pointer;
+}
+  .text1{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+  .is1{
+    height: 700px;
+    width: 80px;
+    border-radius: 25px;
+    margin-left: 1px;
+}
+#ll1{
+    display: flex;
+    margin-left: 200px;
+    margin-top: 150px;
+}
+#div2{
+    display: flex;
+    margin-left: 400px;
+    margin-top: 150px;
+}
+.is1:hover {
+    transition:2s;
+}
+.rahul{
+    width: 700px;
+}
+@media(min-width:240px) and (max-width:767px)
+{
+    .is1{
+        width: 40px;
+        height: 400px;
+    }
+    #ll1{
+        display: flex;
+        margin-left: 1px;
+        margin-top: 5px;
+    }
+    #div2{
+        display: flex;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .rahul{
+        width: 10px;
+    }
+}

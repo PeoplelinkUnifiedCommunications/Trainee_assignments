@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ass3.css">
+   
+    <title>assignment3</title>
+</head>
+<body>
+    <div id="div2">
+        <div class="div1">
+            <img src="img1.jpg" class="is1" onclick="img(this)">
+            <div class="text1">
+              <h4>Nature</h4>
+              <p>What a islands</p>
+            </div>
+        </div>
+        <div class="div1">
+            <img src="img2.jpg" class="is1" onclick="img(this)">
+            <div class="text1">
+              <h4>Sunrise</h4>
+              <p>What a sunrise</p>
+            </div>
+        </div>
+        <div class="div1">
+            <img src="img3.jpg" class="is1" onclick="img(this)">
+            <div class="text1">
+              <h4>beach</h4>
+              <p>beaches</p>
+            </div>
+        </div>
+        <div class="div1">
+            <img src="img4.jpg" class="is1" onclick="img(this)">
+            <div class="text1">
+              <h4>islands</h4>
+              <p>islands from upviews</p>
+            </div>
+        </div>
+        <div class="div1">
+            <img src="img5.jpg" class="is1" onclick="img(this)">
+            <div class="text1">
+              <h4>Greenary</h4>
+              <p>islands greenary</p>
+            </div>
+        </div>
+    </div>
+    <script>
+         function img(e){
+            if(e.style.width=="80px" || e.style.width=="" ){
+                e.style.width="700px";
+            }
+            else{
+                e.style.width="80px";
+            }
+            var imgLength = document.getElementsByTagName('img2').length;
+
+            for(var i = 0; i<imgLength; i++){
+                if(document.getElementsByTagName('img2')[i].id==  e.id){
+                    continue;
+                }
+                document.getElementsByTagName('img2')[i].rahul="";
+            }
+        }
+    </script> 
+</body>
+</html>
