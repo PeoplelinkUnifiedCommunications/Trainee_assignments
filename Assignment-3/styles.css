@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 70px;
+    background-color:lightseagreen;
+}
+.box-container{
+      display: flex;
+      padding: 20px;
+      border-radius: 15px;
+}
+.box{
+  height:400px;
+  width:70px;
+  margin: 10px;
+  border-radius: 20px;
+  position: relative;
+  transition: 2s ease;
+  overflow: hidden;
+}
+.box.active{
+  width:600px;
+  border-radius: 20px;
+}
+.box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

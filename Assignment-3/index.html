@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box-container">
+            <div class="box">
+                <img src="clock.jpg" alt="clock">
+            </div>
+            <div class="box">
+                <img src="man.jpg" alt="man">
+            </div>  
+            <div class="box">
+                <img src="challenger.jpg" alt="challenger">
+            </div> 
+            <div class="box active">
+                <img src="square.jpg" alt="square">
+            </div> 
+            <div class="box">
+                <img src="baloch.jpg" alt="baloch">
+            </div> 
+            <div class="box">
+                <img src="woman.jpg" alt="woman">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+            $('.box').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
