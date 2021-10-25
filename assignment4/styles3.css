@@ -1,0 +1,154 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    margin: 1%;
+    padding: 0%;
+    background-color: #F7F8FA;
+}
+
+.user{
+    margin-top: 30px;
+    margin-left: 10px;
+    color: white;
+}
+.top{
+    margin-right: 20px;
+    word-spacing: 10px;
+}
+p{
+    font-size: 15px;
+}
+h1{
+    font-size: 20px;
+}
+input{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.search, a, i{
+    color: white;
+    font-size: 20px;
+}
+.topcontainer{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    width: 100%;
+    height: 250px;
+    background-image: url(color1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+.font{
+    color: #586372;
+    margin-left: 25px;
+}
+.card1{
+    width: 400px;
+    height: 430px;
+    margin: 25px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+.card2{
+    width: 400px;
+    height: 430px;
+    margin: 25px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+.card3{
+    width: 400px;
+    height: 430px;
+    margin: 25px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+.img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.in >i{
+    color:  #586372;
+    float:right;
+    padding: 20px;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+h2{
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #586372;
+}
+h5{
+   padding: 10px;
+    font-size: 15px;
+    color: #586372;
+}
+.in{
+    position: absolute; 
+    width: 94%;
+    top: 25%;
+    left: 2.5%;
+    padding: 14px;
+    background-color: pink;
+    box-shadow: 0px 4px 8px lightgray;
+
+    border-radius: 10px;
+}
+.card2 p{
+    font-size: 18px;
+    padding: 12px;
+    font-weight: 100;
+    color: #94969B;
+}
+h4{
+    padding: 15px;
+}
+
+
+.card3 >i{
+    border: 1px solid;
+    background-color: white;
+    padding: 10px;
+    border-radius: 90%;
+    position: absolute;
+    right:20px;
+}
+.img_row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img_cont{
+    display: flex;
+    gap:1em;
+}
+.img_cont img{
+    width:50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.pink{
+    margin-right: 15px;
+    color: #c66baa;
+}
