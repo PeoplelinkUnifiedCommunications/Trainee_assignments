@@ -1,0 +1,122 @@
+body{
+    background-color: #FFFFFF;
+    font-family: 'Poppins',sans-serif;
+}
+
+.icon, a, i{
+    text-decoration: none;
+    color: #939BAA;
+    font-weight: bold;
+}
+h1{
+    margin: 0%;
+    font-size: 15px;
+    font-family: 'Poppins',sans-serif;
+    color: #4E5463;
+    cursor: pointer;
+}
+h2{
+    color: #3890F1;
+    font-size: 30px;
+}
+img{
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 600px;
+    height: 570px;
+    z-index: -1;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color:#FFFFFF;
+    border: none;
+    box-shadow: 3px 3px #E7E4E9;
+    margin: 20px 80px 0px 80px;
+    padding: 14px 25px;
+    border-radius: 50px;
+    opacity: 0.9;
+}
+.icon{
+    margin-right: 30%;
+}
+b{
+    font-weight: 500;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button {
+    background-color: #247CF6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+  
+button:hover {
+    opacity: 0.8;
+}
+h4{
+    color: #B6BAC1;
+    font-weight: 500;
+}
+.login{
+    width: 400px;
+    margin: 60px;
+    margin-left: 200px;
+}
+p{
+    text-align: center;
+    color: #939BAA;
+}
+p >a{
+    color: #227AF6;
+}
+.content{
+    text-align: center;
+    word-spacing: 50px;
+    color: #C6C9D1;
+}
+h5{
+    text-align: center;
+    color: #C6C9D1;
+    font-weight: 500;
+    font-size: 15px;
+}
+@media (min-width:240px) and (max-width:767px){
+    .login{
+        width: 300px;
+        margin-left: 0px;
+        margin: 0px;
+    }
+    .content{
+        word-spacing: 10px;
+        font-size: 12px;
+    }
+    h5{
+        font-size: 10px;
+    }
+    .navbar{
+        margin: 0px;
+        font-size: 10px;
+    }
+    .icon{
+        margin-right: 0px;
+    }
+}
+@media (min-width:768px) and (max-width:1112px){
+    .login{
+        margin-left: 50px;
+    }
+}

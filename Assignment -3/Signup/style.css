@@ -1,0 +1,98 @@
+body{
+    margin: 1%;
+    padding: 0%;
+    background-color: #F7F9FB;
+}
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box ;
+    -moz-box-sizing:border-box ;
+    font-family: 'Poppins',sans-serif;
+}
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.back{
+    background-image: url('water.webp');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+}
+h1{
+    margin: 0%;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 50px;
+    color: #FFFEFD;
+}
+.signup{
+    position: absolute; 
+    top: 30%;
+    left: 35%;
+    max-width: 400px;
+    padding: 16px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #212540;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+} 
+button:hover {
+    opacity: 0.5;
+}
+h2, .web, h4, p{
+    text-align: center;
+}
+h2, h4{
+    color: #656B78;
+    font-weight: 500;   
+}
+a{
+    text-decoration:none;
+    color: #4A4E54;
+    font-weight: 700;
+}
+.fa {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type=checkbox]{
+    cursor: pointer;
+}
+@media (min-width:768px) and (max-width:1112px){
+    .signup{
+        top: 20%;
+        left: 25%;
+    }
+}
+@media(min-width:240px) and (max-width:767px){
+    .signup{
+        top: 30%;
+        left: 10%;
+        right: 10%;
+    }
+}
