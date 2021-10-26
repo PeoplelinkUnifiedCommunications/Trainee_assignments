@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+   background-color: rgb(238, 237, 243);
+    /* background-color: gainsboro; */
+}
+
+.main-container{
+    
+    margin:1.5rem;
+    position: relative;
+   
+}
+
+.bg-img-container{
+    width: 100%;
+    height: auto;
+
+/* border: 2px solid red; */
+   
+  
+
+}
+#bg-img{
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+/* From CSS Starts here */
+
+
+.form-container{
+    width: 29%;
+    display: block;
+    margin: 10px auto;
+    position: absolute;
+    top:22%;
+    left: 33%;
+    padding: 8px 12px;
+}
+.form-container .welcome{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+
+.form{
+  
+    background-color: ghostwhite;
+    text-align: center;
+    border-radius: 8px;
+    padding: 25px 8px;
+}
+
+.form .register_heading{
+    font-size: 1.3rem;
+    padding-bottom: 15px;
+}
+.fm_icon{
+    cursor: pointer;
+    margin: 0px 5px;
+    padding: 5px 25px;
+    font-size: 21px;
+    border: 1px solid gainsboro;
+    
+}
+
+#facebook{
+    color: #4267B2;
+}
+#apple{
+    color: #141414;
+}
+#google{
+ color: #458247;
+}
+
+.or{
+    padding: 9px 0px;
+    font-size: 20px;
+}
+
+#inputs_nep{
+    padding: 5px 15px;
+}
+#inputs_nep input{
+        width: 100%;
+        padding: 7px 12px;
+        margin: 5px 0;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid rgb(207, 207, 214);
+}
+
+
+.checkbox{
+    padding: 5px 17px;
+    text-align: left;
+    /* display: inline-block; */
+    /* justify-content: flex-start; */
+}
+.checkbox p {
+    display: inline-block;
+}
+.checkbox p  strong{
+    color: #34495E ;
+}
+.signUp_button{
+    padding: 3px 12px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.signUp_button  #sign_btn{
+    cursor: pointer;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 10px;
+    background-image:
+    linear-gradient(
+      to right, 
+      red, 
+      #f06d06, 
+      rgb(245, 245, 0), 
+      green
+    );
+}
+.signinlink{
+    text-align: left;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.signinlink p {
+        color: rgb(180, 170, 170);
+}
+
+.signinlink p a {
+    text-decoration: none;
+    color:#3e4a55 ;
+    font-weight: bold;
+}
+
+/* html and css Done  */ 
+
+
+
+/* Responsive code Starts here */
+
+
+@media screen and (max-width: 1200px) {
+    .form-container {
+    width: 50%;
+    top: 15%;
+    left: 27%;
+    }
+}
+@media screen and (max-width: 865px){
+    .form-container{
+        width: 55%;
+        left: 22%;
+        top: 10%;
+    }
+}
+@media screen and (min-width: 450px) and (max-width:630px){
+    .form-container{
+        width: 73%;
+        left: 16%;
+        top: 8%;
+    }
+}
+
+@media  screen and (min-width:1300px) {
+    
+    #bg-img{
+        width: 100%;
+        height: 22rem;
+        object-fit: cover;
+        border-radius: 10px;
+    
+    }
+}
+@media  screen and (max-width:380px) {
+    .form-container{
+        width: 97%;
+        left: 1.5%;
+        top: 8%;
+    }
+}

@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&family=Zen+Old+Mincho&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box; 
+    
+}
+.Page_container{
+    /* background-color: seashell; */
+    position: relative;
+    
+   
+}
+.background_img_wrapper{
+        /* border: 2px solid red; */
+        width: 100%;
+        position: absolute;
+        z-index: -5;
+        border-radius: 10px;
+    }
+
+#bg_img {
+    /* border: 1px solid rebeccapurple; */
+    object-fit: cover;
+    width: 100%;
+    height: 18rem;
+    border-radius: 26px ;
+     padding: 10px;
+    
+    
+
+}
+
+
+/* navbar css starts here */
+.nav_bar{
+        /* background-color: silver; */
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        z-index: 5;
+        padding: 15px;
+}
+.nav_bar .leftside{
+    color: red;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.nav_bar  .rightside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+#signin_color{
+    text-decoration: none;
+    color:white;
+}
+
+.rightside .search_bar{
+    position: relative;
+    left: 4px;
+    padding: 12px 18px;
+    /* background-color: white; */
+    border-radius: 2px;
+    cursor: pointer;
+}
+#search_icon{
+    position: relative;
+    left: 40px;
+    top: 2px;
+    cursor: pointer;
+}
+.rightside #searching {
+    
+    padding: 0.8rem 3.4rem;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+}
+.icons_notifications{
+    margin-left: 15px;
+}
+.icons_notifications i{
+    padding: 2px 10px;
+    cursor: pointer;
+    color: white;
+}
+.icons_notifications .sign_in{
+    cursor: pointer;
+    color: white;
+}
+
+
+/* nav bar Coding done here */
+
+.Profil_menu{
+    transform: translate(0rem,7.5rem);
+    /* border: 2px solid red; */
+    background-color: 	#befdfdc7;
+    padding: 5px 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem 4rem;
+}
+.profile_pic_info_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#profile_Picture{
+    
+    width: 52px; 
+    border-radius: 15px;   
+}
+.designation_info{
+    padding: 0 15px;
+    /* color: white; */
+}
+
+.App_Msg_set_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app{
+    color: black;
+    padding: 8px 4px;
+    border-radius: 5px;
+    margin: 0px 3px;
+    background-color: whitesmoke;
+
+}
+.App_Msg_set_wrapper p{
+    padding: 0px 1rem;
+    cursor: pointer;
+}
+.App_Msg_set_wrapper i {
+    margin: 0px 5px;
+}
+
+ /* Profile_Menu CSS Code Done Here  */
+.Prfile_info_Conversions_container{
+    position: relative;
+    top: 9rem;
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 5%; */
+
+}
+.platform_settings_wrapper{
+    width: 28%;
+}
+.platform_settings_wrapper h3{
+    color: olivedrab;
+    
+
+}
+.Prfile_account{
+    padding: 12px 0px; 
+}
+.switchbtn_container{
+display: flex;
+justify-content: flex-start;
+padding: 10px 0px;
+
+}
+.switchbtn_container p{
+padding-left:12px ;
+
+}
+
+
+
+ .Tbtn{
+    height:23px ;
+    width: 58px ;
+    background:#a3a2a2 ;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+   }
+  .moving_btn{
+    display: block;
+    height: 23px ;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+  }
+  .moveright{
+    margin-left: 32px ;
+   
+    transition: all 0.5s ;
+  }
+
+  .platform_settings_wrapper{
+      
+     padding: 15px;
+     border-radius: 12px;
+      background-color: rgb(209, 195, 195);
+      
+  }
+
+
+  /* leftPart CSs End */
+
+  /* Center Part */
+
+  .Profile_info_wrapper{
+    width: 28%;
+    /* border: 2px solid green; */
+    background-color: rgb(211, 204, 204);
+    border-radius: 10px;
+    /* padding: 12px ; */
+    padding: 15px;
+     border-radius: 12px;
+    
+
+  }
+  .info_color{
+      color: olivedrab;
+      padding-bottom: 12px;
+  }
+  .info_center_div{
+      display: flex;
+      justify-content: space-between;
+      /* padding: 15px 0px; */
+  }
+  .Name_Info h3 p {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 16px;
+  }
+  .Name_Info h3  {
+    font-family: 'Zen Old Mincho', serif;
+    font-size: 17px;
+}
+  .info_des{
+      line-height: 1.5rem;
+      padding-bottom: 12px;
+      font-size: 17px;
+  }
+  .Name_Info p{
+      color: rgb(25, 67, 251);
+      font-size: 18px;
+      display: inline-block;
+      padding: 3px 3px;
+      font-family: 'Times New Roman', Times, serif;
+      
+  }
+  .Name_Info i {
+      padding: 0px 12px;
+  } 
+
+  /* Center div CSS done Here */
+
+
+  /* Right div CSS start from here */
+
+  .prfile_conversation_wrapper{
+      width: 30%;
+    /* background-color: lightyellow; */
+    /* border:2px solid red; */
+    padding: 15px;
+     border-radius: 12px;
+     background-color: rgb(223, 220, 210);
+     border-radius:10px ;
+  }
+  .conversation_color{
+      color: olivedrab;
+      padding-bottom: 15px;
+  }
+  .conversation_img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0px 12px;
+
+  }
+  .user_info{
+      display: flex;
+        margin-bottom:12px ;
+        /* justify-content: center; */
+        align-items: center;
+  }
+  .replylink{
+     padding:0px 15px;
+      
+     
+  }
+  .replylink a{
+      text-decoration: none;
+         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         font-weight: bold;
+         color: hotpink;
+  }
+
+  /* Right div CSS completed */
