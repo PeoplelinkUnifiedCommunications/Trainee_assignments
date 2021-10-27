@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+margin: 0;
+height: 100%;
+width: 100%; 
+font-family: 'Arial Narrow Bold', sans-serif;
+font-size: small;
+ align-items: center;
+justify-content: center;
+display: flex;
+overflow: hidden;
+}
+ #maincontainer{
+    display: flex;
+    width: 900px;
+    align-items: center;
+justify-content: center;
+ }
+ .panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100px; 
+    border-radius: 50px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px; 
+    transition: width 0.5s;
+  
+} 
+.panel h3{
+    position: absolute;
+    bottom: 20px; 
+    opacity: 0.5;
+    left:50px;
+}
+.panel:hover{
+    width: 100%;
+}
+
