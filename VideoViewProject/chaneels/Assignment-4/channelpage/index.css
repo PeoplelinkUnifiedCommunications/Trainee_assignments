@@ -1,0 +1,232 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+:root{
+    --primarycolor:#EEEEEE;
+    --navbar:#FFFFFF;
+    --searchiconback:darkblue;
+    --seachicon:#C4EDF3;    
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--primarycolor);
+}
+
+/*Typography */
+h1{
+    margin: 0%;
+    padding: 0%;
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 2rem;
+}
+h2{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1.5rem;
+}
+h2:hover{
+    border-bottom: 2px solid blue;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    padding: 1rem;
+    color: black;
+}
+a:hover{
+    border: 2px solid black;
+    border-radius: 2px;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+i{
+    color: white;
+}
+input[type=text]{
+    padding: 0.5rem;
+    border: none;
+    font-size: 1.2rem;
+}
+button{
+    padding: 0.5rem;
+    padding-left: 1rem;
+    background-color: var(--searchiconback);
+    border: none;
+    cursor: pointer;
+}
+img{
+    height:9vh;
+    padding: 1rem;
+    cursor: pointer;
+}
+p{
+    color: lightslategrey;
+    font-weight: 600
+    ;
+}
+/* class */
+.navbar{
+    width: 100vw;
+    height: 8vh;
+    background-color: var(--navbar);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}    
+.right >select{
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.dropdown{
+    width: 57vw;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+.drop1 >select{
+    padding: 0.5rem;
+    border: none;
+    background-color: black;
+    font-size: 1rem;
+    color: white;
+}
+.containers{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1, .container2{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+.maincontent{
+    width: 60vw;
+    margin-left: 10%;
+}
+.card1{
+    width: 25vh;
+    height: 30vh;
+    background-color: white;
+    margin: 3.5rem;
+    margin-left: 0%;
+    margin-top: 1rem;
+}
+.avatar{
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.card1 >img{
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+}
+.content{
+    background-color: lightgrey
+}
+.semi-content{
+    display:flex;
+    justify-content: space-between;align-items: center;
+    padding: 1rem;
+}
+.views{
+    width: 30%;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+}
+.videos{
+    padding: 1em;
+    padding-bottom: 2rem;
+}
+/* media Queries */
+@media (min-width:260px) and (max-width:767px){
+    img{
+        height: 10vh;
+        padding: 1rem;
+    }
+    .card1{
+        width: 90vw;
+        margin-bottom: 10rem;
+    }
+    .maincontent{
+        margin-top: 40%;
+        margin-left: 0%;
+    }
+    .card1 >img{
+        margin-left: 7.5rem;
+    }
+    /* .right, h2{
+        display: none;
+    } */
+    .navbar{
+        width: 100vw;   
+        margin: 0%;
+        padding: 0%; 
+        display: block;
+    }
+    h2{
+        padding: 0%;
+        font-size: 0.8rem;
+    }
+    .dropdown{
+        display: block;
+        margin: 0%;
+    }
+    .drop{
+        width: 90vw;
+        padding: 1rem;
+        border: none;
+    }
+    .drop1 >select{
+        background-color:var(--primarycolor);
+        color: black;
+        border-bottom: 0.5px solid grey;
+        padding: 1rem;
+    }   
+}
+@media (min-width:768px) and (max-width:1112px){
+    .card1{
+        width: 25vw;
+        height: 20vh;
+        margin: 1rem;
+        margin-bottom: 5rem;
+    }
+    img{
+        height: 9vh;
+    }
+    h2{
+        padding: 0;
+    }
+    .right >select{
+        padding: 0.2rem;
+        font-size: 0.8rem;
+    }
+    input[type=text]{
+        padding: 0.5;   
+        border: none;
+        font-size: 1rem;
+    }
+    a{
+        padding: 0;
+    }
+}
