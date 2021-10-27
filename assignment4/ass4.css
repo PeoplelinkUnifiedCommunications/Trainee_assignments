@@ -1,6 +1,6 @@
 .img1{
     height: 50px;
-    width: 50px;
+    width: 100px;
 }
 .flex-container{
     margin-top: 15px;
@@ -10,7 +10,7 @@
 .active{
     color: rgb(0, 0, 0);
     text-decoration: none;
-    margin-left: 45px;
+    margin-left: 40px;
     
 }
 .lg1{
@@ -22,14 +22,14 @@
 }
 #search{
     background-color: rgba(4, 103, 195, 0.931);
-    height: 22px;
+    height: 20px;
     width: 40px;
     margin-left: -4px;
     border-radius: 2px;
     text-align: center;
 }
 .vd1{
-    height: 25px;
+    height: 27px;
     width: 90px;
     text-align: center;
     margin-top: 15px;
