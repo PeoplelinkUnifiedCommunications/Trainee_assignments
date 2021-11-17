@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Program</title>
+    <link rel="stylesheet" href="madhu.css"/>
+</head>
+<body>
+    <h1>Sample Program</h1>
+    <form onsubmit="event.preventDefault()" id="form">
+        FirstName: <br>
+        <input type="text" id="firstname"  style="padding: 0.4rem;" /><br><br>  
+        LastName: <br>
+        <input type="text" id="lastname"  style="padding: 0.4rem;"/><br><br>
+        Email: <br>
+        <input type="email" id="email"  style="padding: 0.4rem;"/><br><br>
+        Phone: <br> 
+        <input type="text"  maxlength="10" id="num" style="padding: 0.4rem;"/><br><br>
+        DOB : <br>
+        <input type="date"  id="date"style="padding: 0.4rem;" max="2021-11-16"/><br><br>
+        <button onclick="addDetails()" style="padding: 0.4rem;">Submit</button><br><br>
+        <table id="tablePlaceholder"></table>
+   </form>
+    <script src="madhu.js"></script>
+</body>
+</html>
