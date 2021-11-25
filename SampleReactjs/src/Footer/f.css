@@ -1,0 +1,12 @@
+
+.footer{
+    width: 100vw;
+    height: 10vh;
+    background-color: blue;
+    color: beige;
+}
+h2{
+   padding: 2rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+}

@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+.App-Input{
+  margin-top: 10%;
+  height: 55vh;
+  justify-content: center;
+  align-items: center;
+}
+h3{
+  font-size: x-large;
+  padding: 5rem;
+  width: auto;
+  height: 10vh;
+  background-color: aquamarine;
+  margin-left: 30%;
+  margin-right: 30%;
+}

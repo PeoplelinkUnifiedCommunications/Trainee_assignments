@@ -1,0 +1,11 @@
+.header{
+    width: auto;
+    height: 10vh;
+    background-color: cornflowerblue    ;
+}
+h1{
+    margin: 0%;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    padding-top: 1.5rem;
+}
