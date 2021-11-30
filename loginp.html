@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample prgm</title>
+    <link rel="stylesheet" href="./loginp.css">
+</head>
+
+<body>
+
+    <h1>login page</h1>
+    <form class="loginform" name="myform" method="post">
+        <div>UserName: <input id="loginform-user" type="text"><br><br></div>
+        <div>PassWord: <input id="loginform-pwd" type="password"><br><br></div>
+        <input type="button" value="submit" onclick="return validatepage()" class="bstyles"><br>
+    </form>
+
+    <!-- javascript code for form validation -->
+
+    <script>
+        var userdata = ["kavya", "admin", "abc", "koushik"];
+        var pwddata = ["kavya@123", "admin@123", "abc@123", "koush@123"];
+        function validatepage() {
+            var user = document.getElementById("loginform-user").value;
+            userdata.push(user);
+            var pwd = document.getElementById("loginform-pwd").value;
+            pwddata.push(pwd);
+            if (user == userdata[0] && pwd == pwddata[0]) {
+                window.location.href = "text.html";
+                alert("submit successfully");
+            }
+            else if (user == userdata[1] && pwd == pwddata[1]) {
+                window.location.href = "text.html";
+                alert("submit successfully");
+            }
+            else if (user == userdata[2] && pwd == pwddata[2]) {
+                window.location.href = "text.html";
+                alert("submit successfully");
+            }
+            else if (user == userdata[3] && pwd == pwddata[3]) {
+                window.location.href = "text.html";
+                alert("submit successfully");
+            }
+            else {
+                alert("invalid username and password");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

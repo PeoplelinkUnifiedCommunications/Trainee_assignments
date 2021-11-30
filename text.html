@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample pattern</title>
+</head>
+
+<body>
+    <h1>welcome! login successfully</h1>
+    <input type="text" id="num" autocomplete="off"><br><br>
+    <button onclick="diamond()">clickme</button>
+    <script>
+        function diamond() {
+           var rows = parseInt(document.getElementById("num").value);
+            for (var i = 1; i <= rows; i++) { //outer loop
+                for (var j = rows; j > i; j--) {//space loop
+                    document.write(" &nbsp; ");
+                }
+                for (var k = 1; k <= i; k++) { //print loop
+                    document.write(k);
+                }
+                for (var l = i - 1; l >= 1; l--) {
+                    document.write(l);
+                }
+                document.write("\n" + "<br>");
+            }
+            for (var i = rows - 1; i >= 1; i--) { //outer loop
+                for (var j = rows; j > i; j--) {//space loop
+                    document.write(" &nbsp; ");
+                }
+                for (var k = 1; k <= i; k++) { //print loop
+                    document.write(k);
+                }
+                for (var l = i - 1; l >= 1; l--) {
+                    document.write(l);
+                }
+                document.write("\n" + "<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>
