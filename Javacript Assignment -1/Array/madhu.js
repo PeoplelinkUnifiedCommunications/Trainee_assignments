@@ -44,7 +44,7 @@ function addDetails() {
         }
     
     
-    let exists = arrDetails.find((item) => item.firstName === firstName && item.lastName === lastName)
+    let exists = arrDetails.find((item) => item.firstName === firstName && item.lastName === lastName);
    console.log("exists =====", exists)
    if (!exists) {
         let row = document.createElement('tr');
