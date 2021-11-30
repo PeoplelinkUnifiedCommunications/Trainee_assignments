@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "roboto";
+    min-height: 100vh;
+    background-color: rgb(236, 184, 117) ;
+}
+.container { 
+    min-height: 100vh;
+    display: flex;  
+    flex-direction:column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+header{
+    background-color: #456;
+    color: #eee;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 200px;
+    border: solid 4px #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+main{
+    background-color: #678;
+    color: #eee;
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+.mainblocks{
+    background-color: #FFC;
+    border: 4px solid #222;
+    min-height: 250px ;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: pink;
+
+}
+footer{
+    background-color: orange;
+    border: 4px solid #222;
+    flex: 1 0 auto;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+/* tablet styles */
+/* @media (min-width: 768px) and (max-width: 1112px) {
+    .container { 
+        flex-direction: column;
+        
+    } 
+} */
+
+
+
+/* large tabs & small laptops styles */
+@media (min-width:1113px){
+    .container { 
+        flex-direction: row;
+    }
+}
+
+/* large tabs & small laptops styles */
+/* @media (min-width:1367px){
+    .container { 
+        flex-direction: row;
+    }
+} */

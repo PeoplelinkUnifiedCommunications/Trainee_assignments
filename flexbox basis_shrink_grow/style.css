@@ -1,0 +1,33 @@
+.flex-container{
+    display: flex;
+    background-color: blueviolet;
+    flex-wrap: wrap;
+}
+.flex-container .card{
+    background-color: white;
+     width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+.first{
+    flex-grow: 2;
+    flex-shrink:0px;
+    flex-basis: 100px;
+
+}
+.second{
+    flex-grow: 4;
+    flex-shrink: 0px;
+    flex-basis: 200px;
+}
+.third{
+    flex-grow: 10;
+    flex-shrink: 0px;
+    flex-basis: 300px;
+
+}
+.pdng{
+    padding: 16px;
+}

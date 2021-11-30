@@ -1,0 +1,124 @@
+:root {
+    --blue: #335BFF;
+    --selectColor: #3341ff;
+    --brdrColor: rgba(0,0,0,0.12); }
+
+/* Elements */
+html, body  { width: 100%; height:100%; overflow-x: hidden;}
+body        { font-size: 1rem; font-family: 'Courier New', Courier, monospace; color: rgba(0,0,0,0.87); background-color: rgb(246, 247, 248); }
+p           { line-height: 22px; }
+ul, li, ol  { list-style-type: none; }
+a           { text-decoration: none; }
+*{ padding: 0px; margin: 0px; box-sizing: border-box; }
+
+/* Typography */
+h1          { font-size: 2.0rem; word-break: break-word; line-height: 1.72; }
+h2          {font-size: 1.5rem; word-break: break-word; line-height: 1.72;  }
+h3          {font-size: 1.25rem; word-break: break-word; line-height: 1.72; }
+h4          {font-size: 1.125rem; word-break: break-word; line-height: 1.72; }
+h5          {font-size: 1.0rem; word-break: break-word; line-height: 1.72; }
+h6          {font-size: 0.875rem; word-break: break-word; line-height: 1.72; }
+
+    /* Ids */
+#root { width: 100%; height: 100%;}
+    /* classes */
+.mainCntnr { display: flex; flex: none; width: 100vw; flex-direction: column; height: 100vh; }
+/* padding */
+.pdngXS    {padding: 0.25rem;}
+.pdngSM    {padding: 0.875rem;}
+.pdngMD    {padding: 1rem;}
+.pdngLG    {padding: 1.5rem;}
+.pdngXL    {padding: 2rem;}
+
+.pdngHXS  {padding:0 0.25rem;}
+.pdngHSM  {padding:0 0.5rem;}
+.pdngHMD  {padding:0 1rem;}
+.pdngHLG  {padding:0 1.5rem;}
+.pdngHXL  {padding:0 2rem;}
+
+.pdngVXS  {padding:0.25rem 0;}
+.pdngVSM  {padding:0.5rem 0;}
+.pdngVMD  {padding:1rem 0;}
+.pdngVLG  {padding:1.5rem 0;}
+.pdngVXL  {padding:2rem 0;}
+
+/* RESPONSIVE PADDINGS */
+.resPdngHMD { padding: 0 1.0rem }
+
+/* margin */
+.mrgnXS    {margin: 0.25rem;}
+.mrgnSM    {margin: 0.5rem;}
+.mrgnMD    {margin: 1rem;}
+.mrgnLG    {margin: 1.5rem;}
+.mrgnXL    {margin: 2rem;}
+
+.mrgnHXS  {margin:0 0.25rem;}
+.mrgnHSM  {margin:0 0.5rem;}
+.mrgnHMD  {margin:0 1rem;}
+.mrgnHLG  {margin:0 1.5rem;}
+.mrgnHXL  {margin:0 2rem;}
+.mrgnH   {margin:0 1rem}
+
+.mrgnVXS  {margin:0.25rem 0;}
+.mrgnVSM  {margin:0.5rem 0;}
+.mrgnVMD  {margin:1rem 0;}
+.mrgnVLG  {margin:1.5rem 0;}
+.mrgnVXL  {margin:2rem 0;}
+.mrgnv   {margin:0 1rem}
+
+
+.brdr       {border: solid 1px var(--brdrColor)}
+.brdrBtm    { border-bottom: 1px solid var(--brdrColor)}
+.brdrTop    {border-top: 1px solid var(--brdrColor)}
+.brdrleft     {border-left: 1px solid var(--brdrColor)}
+.brdrright     {border-right: 1px solid var(--brdrColor)}
+
+.borderRadius   {border-radius:16px;}
+.textCenter     {text-align: center;}
+.fontSize       {font-size: 1rem;}
+.textCapital    {text-transform:capitalize ;}
+.textLower      {text-transform: lowercase;}
+
+.rowFlex    { display: flex; flex: none; width: 100%; }
+.colFlex    { display: flex; flex-direction: column; flex: none; width: 100%; }
+.resRowCol  { display: flex; flex-direction: row; flex: none; width: 100%; }
+.resColRow  { display: flex; flex-direction: column; flex: none; width: 100%; }
+
+
+.header{height: 3.5rem;background-color: rgb(34, 21, 5);z-index: 1; display: block; color: white; width: 100%; text-align: center; position: fixed;}
+.contentCntnr{width: 70vw;height: 100%; display: flex; }
+.cntnr {width: 100%;height: calc(100% - 64px); margin-top:56px; }
+.sideNav{width: 30vw;height: 100%;background-color: lightgrey;}
+.card{width:100%;}
+.card_Styling{ padding: 0.5rem; text-align: center;  background-color: white; border-radius: 4px;}
+.wrap{flex-wrap: wrap;}
+.img{border-radius: 50%;height:150px; width:150px; background-size: cover;}
+@media (min-width: 768px) and (max-width: 1112px) {
+    
+} 
+
+@media (min-width:1113px) {
+    .resRowCol  { flex-direction: column;}
+    .resColRow  { flex-direction: row;}
+    .resPdngHMD { padding: 0 1.5rem; }
+    .header     {height: 4rem;}
+    .sideNav    {width: 20vw; height: 100%;}
+    .contentCntnr{width: 80vw;  }
+    .cntnr      {margin-top: 64px;}
+    .card       {width: 33.333333%;}
+    .resWrap{flex-wrap: wrap;}
+}
+@media(min-width:320px)and (max-width:767px){
+
+}
+
+/* @media (min-width:1113px) and (max-width:1366px){
+    .resRowCol { flex-direction: column;}
+    .resColRow { flex-direction: row;}
+}
+
+
+ @media (min-width:1367px){
+    .resRowCol { flex-direction: column;}
+    .resColRow { flex-direction: row;}
+}  */
