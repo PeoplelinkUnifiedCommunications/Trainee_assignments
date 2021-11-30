@@ -54,7 +54,7 @@ function addDetails() {
             cell.appendChild(textNode);
             row.appendChild(cell);
         })
-        table.appendChild(row);
+        table.appendChild(row);setData(arr.target.value(props));
         arrDetails.push(details);
         serial += 1;
         document.getElementById("form").reset();

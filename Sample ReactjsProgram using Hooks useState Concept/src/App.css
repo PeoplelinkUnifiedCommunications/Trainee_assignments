@@ -1,0 +1,29 @@
+body{
+  width: auto;
+  height: 100vh;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.App {
+  text-align: center;
+}
+.App-Input{
+  margin-top: 10%;
+  height: 10vh;
+}
+h3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 0.5rem;
+  background-color: lightgrey;
+}
+h3:hover{
+  background-color:skyblue;
+  cursor: pointer;
+}
