@@ -1,0 +1,24 @@
+*{
+  padding:0;
+  margin:0;
+}
+.Card{
+  background-color: crimson;
+  border-radius: 5px;
+  height: 300px;
+  width: 300px;
+  align-items: center;
+}
+.card h1 p{
+  color: white;
+}
+.Top{
+  background-color: lightcyan;
+  text-align: center;
+  color: brown;
+}
+.Bottom{
+  background-color: lightcyan;
+  text-align: center;
+  color: brown;
+}
