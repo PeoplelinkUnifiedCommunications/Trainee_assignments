@@ -1,0 +1,10 @@
+.header{
+    width: autos;
+    height: 10vh;
+    background-color: #ffffff;
+    border: 0.1px solid slategrey;
+}
+h1{
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
