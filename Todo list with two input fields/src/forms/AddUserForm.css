@@ -1,0 +1,13 @@
+label{
+    font-weight: 500;
+}
+input[type=text]{
+    padding: 0.5rem;
+}
+button{
+    background-color: transparent;
+}
+button:hover{
+    border:2px solid rgb(82, 82, 189);
+    cursor: pointer;
+}

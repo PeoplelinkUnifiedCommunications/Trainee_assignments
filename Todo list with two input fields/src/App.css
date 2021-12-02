@@ -1,0 +1,49 @@
+body{
+  margin: 0%;
+  padding: 0%;
+  background-color: #f7f8fa;
+}
+h1{
+  margin: 0%;
+  padding: 1rem;
+  background-color: snow;
+  text-align: center;
+  align-items: center;
+  border-bottom: 1px solid slategray;
+}
+h2{
+  text-align: center;
+}
+label {
+    font-weight: 600;
+    max-width: 100%;
+    display: block;
+    margin: 1rem;
+}
+input[type=text]{
+    border: 1px solid #dedede;;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    width: 20%;
+    max-width: 100%;
+}
+table{
+  width: 100%;
+  min-width: 100%;
+}
+th{
+  border-bottom: 2px solid #dedede;
+  padding: 0.5rem;
+}
+td{
+  border-bottom: 2px solid #dedede;
+  padding: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.flex-row{
+  text-align: center;
+}
+
