@@ -1,0 +1,15 @@
+input[type=submit]{
+    padding: 0.5rem;
+}
+.LoginPage{
+ text-align: center;
+ position: absolute;
+ top:25%;
+ bottom: 50%;
+ left: 40%;
+}
+.Login{
+    border: 1px solid black;
+    padding: 5rem;
+}
+
