@@ -1,0 +1,47 @@
+.Main {
+    text-align: center; 
+}
+body{
+    background-color: #f7f8fa;
+    width: auto;
+    height: auto;
+}
+  
+.Main {
+    text-align: center;
+}
+.Main-Input{
+    border: 1px solid gray;
+    background-color: lightskyblue;
+    margin-bottom: 1%;
+    height: 10vh;
+}
+.display1{
+    border-bottom: 1px solid lightslategrey;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.display1:nth-child(even){
+    background-color:#d7d7c1;
+}
+input[type=text]{
+    padding: 0.3rem;
+    margin-right: 1%;
+}
+input[type=submit]{
+    padding: 0.3rem;
+}
+i{
+    border: 1px solid black;
+    padding: 0.2rem;
+}
+i:hover{
+    background-color: rgb(148, 238, 170);
+    cursor: pointer;
+}
+h3{
+margin: 0%;
+text-transform: uppercase;
+}
+  
