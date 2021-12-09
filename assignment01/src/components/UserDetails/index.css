@@ -1,0 +1,20 @@
+.list-item {
+    list-style-type: none;
+    background-color: bisque;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+  }
+.name{
+  width:150px
+}
+.email{
+  width: 300px;
+}
+.age{
+  width:50px
+}
+.line{
+    color: black;
+}
