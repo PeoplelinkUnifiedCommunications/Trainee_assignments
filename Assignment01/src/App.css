@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+}
+
+.my-app-container{
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #32a852, #dde02b);
+  display: flex;
+  padding: 40px 20px 40px 20px;
+}
+@media screen and (min-width:768px) {
+  .my-app-container{
+    justify-content: center;
+    align-items: center;
+  }
+}
