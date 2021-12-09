@@ -1,0 +1,9 @@
+.h-line{
+    width:100%;
+    border:blue 1px line;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.item-list{
+    flex-shrink:0;
+}
