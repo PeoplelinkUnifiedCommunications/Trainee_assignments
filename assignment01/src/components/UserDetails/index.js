@@ -13,7 +13,7 @@ const UserDetails = props => {
            <p className="age">{age}</p>
            <hr className='line'/>
        </li>
-       <button><Link to="/login">Create</Link></button>
+       <Link to="/login"><button>Create</button></Link>
       </div>
   )
 }
