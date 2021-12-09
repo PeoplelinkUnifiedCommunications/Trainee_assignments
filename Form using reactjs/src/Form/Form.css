@@ -1,0 +1,25 @@
+select{
+    width:10%;
+    padding: 0.2rem;
+}
+input[type=text], input[type=email], input[type=password]{
+    padding: 0.3rem;
+}
+input[type=submit]{
+    width: 10%;
+    padding: 0.3rem;
+}
+.display1:nth-child(even){
+    background-color:#d7d7c1;
+}
+i{
+    border: 1px solid black;
+    padding: 0.2rem;
+}
+i:hover{
+    background-color: rgb(148, 238, 170);
+    cursor: pointer;
+}
+h3{
+    margin: 0%;
+}
