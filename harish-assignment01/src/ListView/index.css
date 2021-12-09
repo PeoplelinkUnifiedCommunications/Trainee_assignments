@@ -1,0 +1,14 @@
+.bg-container1{
+    background-image: linear-gradient(to left,#9CAFBC ,#223C4C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 30px;
+}
+.from-container1{
+    background-color: #fff;
+    padding: 30px;
+    width:50%;
+
+}
