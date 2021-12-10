@@ -1,5 +1,8 @@
-import { Routes, Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
+
 import EnterUserDetailsForm from "./components/EnterUserDetailsForm"
+
+import ViewUserDetails from "./components/ViewUserDetails";
 
 import "./App.css"
 
@@ -9,8 +12,8 @@ const MyApp = () => {
   return(
     <div className="my-app-container">
       <Routes>
-        <Route exact path="/" element={ViewUserDetails}/>
-        <Route exact path="/form" caseSensitive={true} element={<EnterUserDetailsForm />}/>
+        <Route path="/" element={<ViewUserDetails />} />
+        <Route path="form" element={<EnterUserDetailsForm />} />
       </Routes>
     </div>
   )
