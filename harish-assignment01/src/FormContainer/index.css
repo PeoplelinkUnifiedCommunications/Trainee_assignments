@@ -10,6 +10,9 @@
     background-color: #fff;
    padding: 30px;
    width:50%;
+   display: flex;
+   flex-direction: row;
+
 
 }
 .input-container{
@@ -20,8 +23,12 @@
     border: 1px solid #8F9192;
     height: 30px;
     border-radius: 5px;
-    margin-bottom: 15px;
-    
+}
+.errorMsg{
+    color:red;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
 }
 .inputText{
     width: 100%;
@@ -47,10 +54,18 @@
 .form{
     display: flex;
     flex-direction: column;
-    
     width: 50%;
+    box-shadow: ;
     
+}
+@media (max-width:600px) {
+    .form{
+        width: 100%;
+    }
 }
 .btn{
     align-self: flex-end;
+}
+.image-logo{
+    width: 50%;
 }
