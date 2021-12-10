@@ -94,4 +94,17 @@
 }
 .error-msg{
     color: red;
+    margin-top: 0px;
+}
+
+.success{
+    color: green;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.links{
+    text-decoration: none;
+    text-align: center;
+    color: blue;
+    margin-top: 20px;
 }

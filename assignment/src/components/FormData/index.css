@@ -1,7 +1,4 @@
 .data-main-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: rgb(201, 252, 235);
     background-size: cover;
     height: 100vh;
@@ -13,15 +10,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
     padding: 50px;
 }
-@media screen and (max-width:767px){
-    .data-container{
-        width: 90%;
-        padding: 0px;
-    }
-} 
 .heading{
     display: flex;
     align-items: center;

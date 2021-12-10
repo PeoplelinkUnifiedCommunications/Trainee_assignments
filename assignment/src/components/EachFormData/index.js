@@ -1,9 +1,9 @@
 import './index.css'
 
-const FormData = props =>{
+const EachFormData = props =>{
     const {eachData} = props
-    const {name,email,dateOfBirth} = eachData
-    const dob = new Date(dateOfBirth)
+    const {name,email,date} = eachData
+    const dob = new Date(date)
     const presentDay = new Date()
     const dobYear = dob.getFullYear()
     const presentYear = presentDay.getFullYear()
@@ -22,4 +22,4 @@ const FormData = props =>{
     )
 }
 
-export default FormData
+export default EachFormData

@@ -1,6 +1,6 @@
 .data-list-item{
     display: flex;
-    justify-content: cen;
+    justify-content: center;
     align-items: center;
     border: 1px solid #7e858e;
     border-radius: 3px;
