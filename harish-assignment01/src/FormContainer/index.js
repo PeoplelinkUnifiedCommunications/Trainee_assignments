@@ -1,3 +1,4 @@
+import ListContext from "../Context/ListContext";
 import {v4} from "uuid";
 import React, { useState } from 'react';
 import { FaUserAlt } from "react-icons/fa";
@@ -5,184 +6,151 @@ import {AiFillMail} from "react-icons/ai";
 import "./index.css"
 
 const FormContainer=(props)=> {
-    let [blurMssg1, setblurMssg1] = useState(false);
+    const [validation1,setvalidation1]=useState({nameValidation:""})
+    const [validation2,setvalidation2]=useState({emailValidation:""})
+    const [validation3,setvalidation3]=useState({dateValidation:""})
     const blurNameInput = (event) => {
         if (event.target.value === "") {
-            setblurMssg1(blurMssg1 = true);
+           setvalidation1({nameValidation:"**Required**"})
         } else {
-            setblurMssg1(blurMssg1 = false);
+            setvalidation1({nameValidation:""})
         }
     };
-    let [blurMssg2, setblurMssg2] = useState(false);
     const blurEmailInput = (event) => {
         if (event.target.value === "") {
-            setblurMssg2(blurMssg2 = true);
+           setvalidation2({emailValidation:"**Required**"})
         }
         else {
-            setblurMssg2(blurMssg2 = false);
+          setvalidation2({emailValidation:""})
         }
     };
-    let [blurMssg3, setblurMssg3] = useState(false);
     const blurDateInput = (event) => {
         if (event.target.value === "") {
-            setblurMssg3(blurMssg3 = true);
+            setvalidation3({dateValidation:"**Required**"})
         } else {
-            setblurMssg3(blurMssg3 = false);
+            setvalidation3({dateValidation:""})
         }
     };
-
 
     let [name,setname]=useState("")
     let [email,setemail]= useState("")
     let [date,setdate]= useState("")
-    let [errorDate,seterrorDate]= useState(false)
-    let [emailError,setemailError]=useState(false)
-    let [validation,setvalidation]=useState(false)
-    let [eamilChecking,seteamilChecking]=useState(false)
-    
-
-
     const nameInput=(event)=> {
-        setblurMssg1(blurMssg1=false)
-        setname(name=event.target.value)
+        setvalidation1({nameValidation:""})
+        setname(event.target.value)
+    }
+    const emailInput=(event)=>{
+        setvalidation2({emailValidation:""})
+        setemail(event.target.value)
+        setvalidation2({emailValidation:""})
+    }
+    const dateInput=(event)=>{
+        setvalidation3({dateValidation:""})
+        const userDateBirth=new Date(event.target.value)
+        const nowDate=new Date()
         
-     }
-     const emailInput=(event)=>{
-        setblurMssg2(blurMssg2=false)
-         const j=event.target.value
-         if(j===""){
-             console.log("email")
-         }else{
-            if(j.endsWith(".com") && j.includes("@")){
-                setemailError(emailError=false)
-                setemail(email=event.target.value)
-            }else{
-                setemailError(emailError=true)
-               
-            }
-         }
-         
-         
-     }
-     const dateInput=(event)=>{
-        setblurMssg3(blurMssg3=false)
-         const userDateBirth=new Date(event.target.value)
-         const nowDate=new Date()
-         if(event.target.value===""){
-             console.log("date")
-         }else{
+        if(event.target.value===""){
+            console.log("date")
+        }else{
             if(userDateBirth.toString() ==="Invalid Date"){
-                seterrorDate(errorDate=true)
-            }else{
-                seterrorDate(errorDate=false)
+                setvalidation3({dateValidation:"**Date is invalid**"})
+                setdate(" ")
+            }else if(nowDate.getDate()===userDateBirth.getDate() && nowDate.getMonth()+1===userDateBirth.getMonth()+1 && nowDate.getFullYear()===userDateBirth.getFullYear()){
+                setvalidation3({dateValidation:"**Date is invalid**"})
+                setdate(" ")
+            }
+            else{
+                setvalidation3({dateValidation:""})
                 const diff=nowDate.getFullYear()-userDateBirth.getFullYear()
-                
-                setdate(date=diff)
+                setdate(diff)
             }
-         }
-         
-
         }
-
-        const submtDetails=(event)=>{
-            event.preventDefault()
-            
-
-            const newList={
-                id:v4(),
-                name:name,
-                email:email,
-                date:date,
-
-            }
-            if(name==="" || email==="" || date===""){
-                setvalidation(validation=true)
-            }else{
-                setvalidation(validation=false)
-                const getData=localStorage.getItem("userData")
-            const parsedGetData=JSON.parse(getData)
-            if(parsedGetData===null){
-                localStorage.setItem("userData",JSON.stringify([newList]))
-
-            }else{
-                const emailAvalibel=parsedGetData.find(each=>each.email===newList.email)
-                if(emailAvalibel){
-                    seteamilChecking(eamilChecking=true)
-                }else{
-                    seteamilChecking(eamilChecking=false)
-                    const newData=[...parsedGetData,newList]
-                    localStorage.setItem("userData",JSON.stringify(newData))
-                    const {history}=props 
-                    history.replace('/')
-                }
-                
-            }
-            
-            
-                
-                
-                
-
-            }
-            
-
-            
-        
-            
-    
-            
         }
-     
-
-     
-
-    return (<div className="bg-container">
-        <div className="from-container">
-            <form className="form" onSubmit={submtDetails}>
-                <label htmlFor="text">Name</label>
-                <div className="margin">
-                    <div className="input-container" id="text">
-                        <div className="icon-container">
-                            <FaUserAlt className="image" />
+        var regex = /^((([a-zA-Z]|[0-9])|([-]|[_]|[.])){1,})+[@](([a-zA-Z0-9])|([-]|[.])){2,40}[.]((([a-zA-Z0-9]){2,10})|(([a-zA-Z0-9]){2,4}[.]([a-zA-Z0-9]){2,4}))$/;
+        return <ListContext.Consumer>
+            {value=>{
+                const {list,addList}=value
+                const submtDetails=(event)=>{
+                    event.preventDefault()
+                    const newList={
+                        id:v4(),
+                        name:name,
+                        email:email,
+                        date:date,
+                    }
+                    if(newList.name==="" ){
+                        setvalidation1({nameValidation:"**Required**"})
+                        setvalidation2({emailValidation:""})
+                    }
+                    if(newList.email==="" ){
+                       setvalidation2({emailValidation:"**Required**"})
+                    }
+                    if(newList.date===""){
+                        setvalidation3({dateValidation:"**Required**"})
+                    }
+                    else if(newList.date===" "){
+                        setvalidation3({dateValidation:"**Date is invalid**"})
+                    }
+                    else if(newList.name.match(/^[A-Za-z]+$/)===null && newList.name!==""){
+                        setvalidation1({nameValidation:"**Name formate is wrong**"})
+                    }
+                    else if(newList.email.match(regex)){
+                        setvalidation2({emailValidation:""})
+                        const emailAvalibel=list.find(each=>each.email===newList.email)
+                        if(emailAvalibel || !newList.date===""){
+                            setvalidation2({emailValidation:"**Email alredy exits**"})
+                        }else{
+                            setvalidation2({emailValidation:""})
+                            addList(newList)
+                            const {history}=props
+                            history.replace('/')
+                        }
+                    }else if(newList.email!=="" || newList.email.match(regex)){
+                        setvalidation2({emailValidation:"**Email wrong**"})
+                    }
+            }
+            return (<div className="bg-container">
+                        <div className="from-container">
+                            <form className="form" onSubmit={submtDetails}>
+                                <label htmlFor="text">Name</label>
+                                <div className="margin">
+                                    <div className="input-container" id="text">
+                                       <div className="icon-container">
+                                           <FaUserAlt className="image" />
+                                        </div>
+                                        <input type="text" id="text" className="inputText" onChange={nameInput} onBlur={blurNameInput} />
+                                    </div>
+                                    <p className="errorMsg">{validation1["nameValidation"]}</p>
+                                  <br/>
+                                </div>
+                                <label htmlFor="email">Email</label>
+                                <div className="margin">
+                                    <div className="input-container" id="email">
+                                       <div className="icon-container">
+                                            <AiFillMail className="image" />
+                                        </div>
+                                        <input type="text" id="text" className="inputText" onChange={emailInput} onBlur={blurEmailInput} />
+                                    </div>
+                                     <p className="errorMsg">{validation2.emailValidation}</p>
+                                   <br/>
+                                </div>
+                                <label htmlFor="date">Date Of Birth: MM/DD/YY</label>
+                                <div className="margin">
+                                   <div className="input-container" id="date">
+                                        <div className="icon-container">
+                                           <AiFillMail className="image" />
+                                        </div>
+                                        <input type="text" id="text" className="inputText" onChange={dateInput} onBlur={blurDateInput} />
+                                    </div>
+                                    <p className="errorMsg">{validation3.dateValidation}</p>
+                                    <br/>
+                                </div>
+                                <button type="submit" className="btn">Submit</button>
+                            </form>
                         </div>
-                        <input type="text" id="text" className="inputText" onChange={nameInput} onBlur={blurNameInput} />
-                    </div>
-                    {blurMssg1 ? <p className="errorMsg">**required**</p> : <p></p>}
-                </div>
-                <label htmlFor="email">Email</label>
-                <div className="margin">
-                    <div className="input-container" id="email">
-                        <div className="icon-container">
-                            <AiFillMail className="image" />
-                        </div>
-                        <input type="text" id="text" className="inputText" onChange={emailInput} onBlur={blurEmailInput} />
-                    </div>
-                    {blurMssg2 ? <p className="errorMsg">**required**</p> : <p></p>}
-                    {emailError? <p className="errorMsg">Email worng</p>:<p></p>}
-                </div>
-                <label htmlFor="date">Date Of Birth: MM/DD/YY</label>
-                <div className="margin">
-                    <div className="input-container" id="date">
-                        <div className="icon-container">
-                            <AiFillMail className="image" />
-                        </div>
-                        <input type="text" id="text" className="inputText" onChange={dateInput} onBlur={blurDateInput} />
-                    </div>
-                    {blurMssg3 ? <p className="errorMsg">**required**</p> : <p></p>}
-                    {errorDate? <p className="errorMsg">Date formate is worng</p>:<p></p>}
-                </div>
-                {validation? <p className="errorMsg">Fileds Required</p>:<p></p>}
-                {eamilChecking? <p className="errorMsg">Email alredy exits</p>:<p></p> }
-                <button type="submit" className="btn">Submit</button>
-
-            </form>
-            <div className="image-container">
-            <img src="https://www.magezon.com/pub/media/magezon-pagebuilder/core-builder/magento-2-login-registration-page.png" alt="logo" className="image-logo" />
-            </div>
-            
-
-        </div>
-    </div>)
+                    </div>)
+            }
+            }
+        </ListContext.Consumer>
 }
-
 export default FormContainer
