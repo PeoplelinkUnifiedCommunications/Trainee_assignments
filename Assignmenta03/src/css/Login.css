@@ -23,6 +23,8 @@
 .name{
     font-size: 20px;
     color:black;
+    border-radius: 25px;
+
 }
 .nameInput{
     width: 20vw;
@@ -58,4 +60,12 @@
     background-color: blue;
     border-width: 0px;
     border-radius: 10px;
+}
+#name{
+    border-radius: 25px;
+    text-align: center;
+}
+#email{
+    border-radius: 25px;
+    text-align: center;
 }

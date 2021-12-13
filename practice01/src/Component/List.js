@@ -1,4 +1,5 @@
-import './index.css'
+import {Link} from 'react-router-dom'
+import '../css/List.css'
 function Listitems(){
     return(
         <div className="container">
@@ -11,8 +12,9 @@ function Listitems(){
                 </div>  
                 <div className="nameContainer">
                     <h1>Age</h1>
-                </div> 
-            </div>         
+                </div>
+            </div> 
+            <button className="button"><Link to="/dashboard">Create</Link></button>       
         </div>        
     )
 }

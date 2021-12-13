@@ -25,3 +25,12 @@
 .name{
     text-align: center;
 }
+.button{
+    width: 10vw;
+    height:5vh;
+    font-size: 20px;
+    color:white;    
+    background-color: blue;
+    border-width: 0px;
+    border-radius: 10px;
+}
