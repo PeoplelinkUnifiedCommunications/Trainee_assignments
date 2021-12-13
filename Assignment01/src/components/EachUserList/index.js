@@ -1,11 +1,13 @@
-import { AgeCalculator } from "@dipaktelangre/age-calculator";
+import { differenceInDays } from 'date-fns'
 
 import "./index.css"
 
 const EachUserList = (props) => {
     const {eachUser} = props
-    const {name, email, DateOfBirth} = eachUser
-    let age = AgeCalculator.getAgeIn(new Date(DateOfBirth), "years")
+    const {name, email, dob} = eachUser
+    const today = new Date()
+    let days = differenceInDays(new Date(today), new Date(dob))
+    let age = Math.floor(days/365)
     return(
         <>
             <li className="list-item">

@@ -14,16 +14,50 @@ const EnterUserDetailsForm = (props) => {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [dob, setDob] = useState("")
-    const [errorMsg, setError] = useState(false)
+
     const navigation = useNavigate()
+    const [nameErrMsg, setNameErrMsg] = useState(false)
+    const [emailErrMsg, setEmailErrMsg] = useState(false)
+    const [dateErrMsg, setDateErrMsg] = useState(false)
+    const [emaiExistErrMsg, setEmailExistErrMsg] = useState(false)
+
+    const todayDate = format(new Date(), 'yyyy-MM-dd')
 
     const formSubmit = (event) => {
         event.preventDefault()
 
-        if(name !== "" && email !== "" && dob !== ""){
-            //let age = AgeCalculator.getAgeIn(new Date(dob), "years")
-            const DateOfBirth = format(new Date(dob), 'yyyy-MM-dd')
-            const newUserDetails = {id: v4(), name, email, DateOfBirth}
+        if(name === ""){
+            setNameErrMsg(true)
+        } else {
+            let regex = /^([a-zA-Z ]+)$/;
+            regex.test(name) ? setNameErrMsg(false) : setNameErrMsg(true)
+        }
+
+        if(email === ""){
+            setEmailErrMsg(true)
+        } else {
+            let regex = /^((([a-zA-Z]|[0-9])|([-]|[_]|[.])){1,})+[@](([a-zA-Z0-9])|([-]|[.])){2,40}[.]((([a-zA-Z0-9]){2,10})|(([a-zA-Z0-9]){2,4}[.]([a-zA-Z0-9]){2,4}))$/;
+            if(regex.test(email)){
+                setEmailErrMsg(false)
+                const usersDataFromLocalStorage = JSON.parse(localStorage.getItem("userData"))
+                const isEmailExist = usersDataFromLocalStorage.find(eachUser => eachUser.email === email)                
+                isEmailExist ? setEmailExistErrMsg(true) : setEmailExistErrMsg(false)
+            } else {
+                setEmailErrMsg(true)
+            }
+        }
+
+        if(dob === ""){
+            setDateErrMsg(true)
+        } else {
+            const formatedDob = format(new Date(dob), 'yyyy-MM-dd')
+            let regex = /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|(([1][26]|[2468][048]|[3579][26])00))))$/g;
+            (!regex.test(dob) && formatedDob <= todayDate) ? setDateErrMsg(false) : setDateErrMsg(true)
+        }
+
+        if(!nameErrMsg && !emailErrMsg && !emaiExistErrMsg && !dateErrMsg && dob !== ""){
+
+            const newUserDetails = {id: v4(), name, email, dob}
             const usersDataFormLocalStorage = localStorage.getItem("userData")
 
             //updateArray(prevstate => [...prevstate, newUserDetails])
@@ -40,14 +74,10 @@ const EnterUserDetailsForm = (props) => {
             
             setName("")
             setEmail("")
-            setDob("")
-            setError(false)
-            
+            setDob("")            
             navigation("/")
-
         } else {
-            setError(true)
-
+            console.log("siva")
         }
     }
 
@@ -62,30 +92,29 @@ const EnterUserDetailsForm = (props) => {
     const onChangeDob = event => {
         setDob(event.target.value)
     }
-
-    const todayDate = format(new Date(), 'yyyy-MM-dd')
     
     return(
         <div className="user-app-container">
             <div className="form-container">
+            <h1 className="heading">Enter Your Details</h1>
                 <form className="user-form-container" onSubmit={formSubmit}>
-                    <h1 className="heading">Enter Your Details</h1>
-                    <div className="input-view">
+                    
                         <label className="label-text" htmlFor="name">Name: <span className="star">*</span></label>
                         <input className="user-input" type="text" value={name} id="name" onChange={onChangeName} placeholder="Enter Name Here"/>
-                    </div>
-
-                    <div className="input-view">
+                        {nameErrMsg && <p className="error-msg">Please Enter Valid Name</p>}
+                        <br/>
+  
                         <label className="label-text" htmlFor="email">Email: <span className="star">*</span></label>
-                        <input className="user-input" type="email" value={email} id="email" onChange={onChangeEmail} placeholder="Enter Email Here" />
-                    </div>
+                        <input className="user-input" type="text" value={email} id="email" onChange={onChangeEmail} placeholder="Enter Email Here" />                        
+                        {emailErrMsg && <p className="error-msg">Please Enter Valid Email</p>}
+                        {emaiExistErrMsg && <p className="error-msg">Email Already Exist</p>}
+                        <br/>
 
-                    <div className="input-view">
-                        <label className="label-text" htmlFor="date">Date Of Birth: <span className="star">*</span></label>
-                        <input className="user-input" type="date" max={todayDate} value={dob} id="date" onChange={onChangeDob} />
-                    </div>
+                        <label className="label-text" htmlFor="date">Date Of Birth: <span className="star">*</span></label>                    
+                        <input className="user-input" type="date" max={todayDate} value={dob} id="date" onChange={onChangeDob} />                        
+                        {dateErrMsg && <p className="error-msg">Please Enter Valid Date</p>}
+                        <br/>
 
-                    {errorMsg && <p className="error-msg">* Fields Are Mandatory</p> }
                     <div className="button-container">
                         <button className="button" type="submit">Submit</button>
                     </div>

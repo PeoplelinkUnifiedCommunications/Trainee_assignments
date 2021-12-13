@@ -1,11 +1,9 @@
 .view-user-details-container{
-    width: 100%;
-    min-height: 100 vh;
-    padding: 0px 20px 40px 20px;
+    width: 90%;
+    padding: 0px 40px 40px 40px;
     background-color: #fff;
     border: none;
-    border-radius: 5px;
-    overflow: auto;
+    border-radius: 10px;
     box-shadow:0px 0px 10px 3px rgb(211, 197, 197);
 }
 .user-details-list{
@@ -24,7 +22,6 @@
     font-size: 18px;
     width: 33%;
     text-align: center;
-
     overflow: auto;
 }
 .email-text{
@@ -44,4 +41,25 @@
     font-weight: bold;
     text-align: center;
     font-style: italic;
+}
+
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.button{
+    color: black;
+    font-family: "sans-serif";
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    box-shadow:0px 0px 10px 3px rgb(211, 197, 197);
 }

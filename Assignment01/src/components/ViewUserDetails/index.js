@@ -28,10 +28,16 @@ const ViewUserDetails = () => {
                     <p className="user-name text-weight">Age</p>
                 </li>
                 <hr className="line"/>
+                <div className="list-items">
                 {users ? <p className="no-data">No Data Found</p> : 
                 userDetailsList.map(eachUser => (<EachUserList eachUser={eachUser} key={eachUser.id} />))}
+                </div>
             </ul>
-            <Link to="form"><button>Form</button></Link>
+            
+            <div className="button-container">
+                <Link to="form"><button className="button">Form</button></Link>
+            </div>
+            
         </div>
     )
 }
