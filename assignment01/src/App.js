@@ -1,34 +1,40 @@
-import React, { useState } from "react";
-import validator from 'validator'
+import ListContext from './Context/ListContext';
+import { BrowserRouter ,Route,Switch} from 'react-router-dom';
+import FormContainer from './FormContainer/index';
+import ListView from './ListView';
+import {useState} from "react"
 
-const App = () => {
+import './App.css';
 
-const [errorMessage, setErrorMessage] = useState('')
-	
-const validateDate = (value) => {
-	
-	if (validator.isDate(value)) {
-	setErrorMessage('Valid Date :)')
-	} else {
-	setErrorMessage('Enter Valid Date!')
-	}
+const App=()=>{
+    const  [list,setlist]=useState([])
+const addList=(data)=>{
+    if(list.length===0){
+        setlist([data])
+    }else{
+
+        setlist(prevState=>[...prevState, data])
+    }
+
+}
+return <ListContext.Provider value={{list,addList:addList}}>
+<BrowserRouter>
+<Switch>
+
+<Route path="/Create" component={FormContainer} />
+
+<Route path="/" component={ListView}/>
+
+</Switch>
+
+
+</BrowserRouter>
+</ListContext.Provider>
 }
 
-return (
-	<div style={{
-	marginLeft: '200px',
-	}}>
-	<pre>
-		<h2>Validating Date in ReactJS</h2>
-		<span>Enter Date: </span><input type="text"
-		onChange={(e) => validateDate(e.target.value)}></input> <br />
-		<span style={{
-		fontWeight: 'bold',
-		color: 'red',
-		}}>{errorMessage}</span>
-	</pre>
-	</div>
-);
-}
 
-export default App
+
+
+
+
+export default App;
