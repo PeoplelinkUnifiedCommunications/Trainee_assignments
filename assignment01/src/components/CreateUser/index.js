@@ -1,5 +1,6 @@
 import DataContext from "../Context";
 import {v4} from "uuid";
+import  moment  from 'moment';
 import React, { useState } from 'react';
 import { FaUserAlt } from "react-icons/fa";
 import {AiFillMail} from "react-icons/ai";
@@ -26,10 +27,11 @@ const CreateUser=(props)=> {
     const BlurDob=(event)=>{
       if (event.target.value===""){
         setDobDetails("Required")
+        setDob("")
       }
     }
     
-    const nameInput=(event)=> {
+    const changeName=(event)=> {
         setName(event.target.value)
         if ((event.target.value).match(/^[A-Za-z ]+$/)){
           setNameDetails('')
@@ -38,7 +40,7 @@ const CreateUser=(props)=> {
         }
      }
 
-     const emailInput=(event)=>{
+     const changeEmail=(event)=>{
         setEmail(event.target.value)
         var regex = /^((([a-zA-Z]|[0-9])|([-]|[_]|[.])){1,})+[@](([a-zA-Z0-9])|([-]|[.])){2,40}[.]((([a-zA-Z0-9]){2,10})|(([a-zA-Z0-9]){2,4}[.]([a-zA-Z0-9]){2,4}))$/;
         if (regex.test(event.target.value)){
@@ -46,42 +48,39 @@ const CreateUser=(props)=> {
         }else{
           setEmailDetails("Invalid E-mail")
         }
-        if (event.target.value===""){
-          setEmailDetails("Required")
-        }
     }
 
-    const dateInput=(event)=>{
-         const userDateBirth=new Date(event.target.value)
-         const nowDate=new Date()
+    const changeDob=(event)=>{
+         const greaterDate=new Date(event.target.value)>new Date()
+         const invalidDate=new Date(event.target.value).toString() ==="Invalid Date"
+        
          if(event.target.value===""){
              setDobDetails("Required")
          }else{
-            if(userDateBirth.toString() ==="Invalid Date"){
-                setDobDetails("Invalid Date Format")
-                setDob(event.target.value)
-            }else if (userDateBirth>nowDate){
+            if(invalidDate || greaterDate){
                 setDobDetails("Please Enter Valid Date")
                 setDob(event.target.value)
             }else {
-                const diff=nowDate.getFullYear()-userDateBirth.getFullYear()
-                setDob(diff)
+                setDobDetails("")
+                setDob(event.target.value)
             }
         }
     }
         
 
-    return <DataContext.Consumer>
+    return (<DataContext.Consumer>
         {value=>{
           const {list,addList}=value
+
           const submtDetails=(event)=>{
                   event.preventDefault()
                   const newList={
                     id:v4(),
                     name:name,
                     email:email,
-                    date:dob,
+                    dob:dob,
                   }
+    
             if (name===""){
                 setNameDetails("Required")
             }
@@ -91,19 +90,21 @@ const CreateUser=(props)=> {
             if (dob===""){
                 setDobDetails("Required")
             }
+
             if(name!=="" && email!=="" && dob!==""){
-              const emailAvalibel=list.find(each=>each.email===newList.email)
               const valid=name.match(/^[A-Za-z ]+$/)
               const regex = /^((([a-zA-Z]|[0-9])|([-]|[_]|[.])){1,})+[@](([a-zA-Z0-9])|([-]|[.])){2,40}[.]((([a-zA-Z0-9]){2,10})|(([a-zA-Z0-9]){2,4}[.]([a-zA-Z0-9]){2,4}))$/
               const greaterDate=new Date(dob)>new Date()
               const invalidDate=new Date(dob).toString() ==="Invalid Date"
+              const isValid=moment(dob,"MM-DD-YYYY").isValid()
+              const emailAvalibel=list.find(each=>each.email===newList.email)
               if(emailAvalibel){
                 setEmailDetails("E-mail Already Exist") 
               }else if (!regex.test(email)){
                 setEmailDetails("Please Enter Valid E-mail")
               }else if (!valid){
                 setNameDetails("Please Enter Valid Name")
-              }else if (greaterDate || invalidDate){
+              }else if (greaterDate || invalidDate || !isValid){
                 setDobDetails("Please Enter Valid Date")
               }else{
                 addList(newList)
@@ -121,7 +122,7 @@ const CreateUser=(props)=> {
                         <div className="icon-container">
                             <FaUserAlt className="image" />
                         </div>
-                        <input type="text" id="text" value={name} className="inputText" placeholder="Enter Name" onChange={nameInput} onBlur={BlurName}/> 
+                        <input type="text" id="text" value={name} className="inputText" placeholder="Enter Name" onChange={changeName} onBlur={BlurName}/> 
                     </div>
                     <p className="errorMsg">{ValidName}</p>
                     <br/>
@@ -132,7 +133,7 @@ const CreateUser=(props)=> {
                         <div className="icon-container">
                             <AiFillMail className="image" />
                         </div>
-                        <input type="text" id="text" className="inputText" placeholder="Enter E-Mail" onChange={emailInput}  onBlur={BlurEmail} />
+                        <input type="text" id="text" className="inputText" placeholder="Enter E-Mail" onChange={changeEmail}  onBlur={BlurEmail} />
                     </div>
                     <p className="errorMsg">{ValidEmail}</p>
                     <br/>
@@ -143,7 +144,7 @@ const CreateUser=(props)=> {
                         <div className="icon-container">
                             <AiFillMail className="image" />
                         </div>
-                        <input type="text" id="text" className="inputText" placeholder="Enter Date Of Birth" onChange={dateInput}  onBlur={BlurDob} />
+                        <input type="text" id="text" className="inputText" placeholder="Enter Date Of Birth" onChange={changeDob}  onBlur={BlurDob} />
                     </div>
                     <p className="errorMsg">{ValidDob}</p>
                     <br/>
@@ -154,8 +155,7 @@ const CreateUser=(props)=> {
         }
     }
         </DataContext.Consumer>
-        
-        
+  )   
 }
 
 export default CreateUser

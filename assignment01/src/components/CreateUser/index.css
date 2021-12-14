@@ -1,5 +1,5 @@
 .bg-container{
-  background-image: linear-gradient(to left,#15e2c7 ,#098a10);
+  background-image: linear-gradient(to left,#e2bc15 ,#0dbd15);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  background-color: #d8b725;
+  background-color: #17ebe0;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 20px;
