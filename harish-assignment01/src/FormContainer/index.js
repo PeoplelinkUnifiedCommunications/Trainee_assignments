@@ -4,11 +4,15 @@ import React, { useState } from 'react';
 import { FaUserAlt } from "react-icons/fa";
 import {AiFillMail} from "react-icons/ai";
 import "./index.css"
+import  moment from 'moment';
 
 const FormContainer=(props)=> {
     const [validation1,setvalidation1]=useState({nameValidation:""})
     const [validation2,setvalidation2]=useState({emailValidation:""})
     const [validation3,setvalidation3]=useState({dateValidation:""})
+    let [name,setname]=useState("")
+    let [email,setemail]= useState("")
+    let [date,setdate]= useState("")
     const blurNameInput = (event) => {
         if (event.target.value === "") {
            setvalidation1({nameValidation:"**Required**"})
@@ -27,17 +31,24 @@ const FormContainer=(props)=> {
     const blurDateInput = (event) => {
         if (event.target.value === "") {
             setvalidation3({dateValidation:"**Required**"})
+            console.log("1")
+            setdate("")
         } else {
             setvalidation3({dateValidation:""})
         }
     };
 
-    let [name,setname]=useState("")
-    let [email,setemail]= useState("")
-    let [date,setdate]= useState("")
+    
     const nameInput=(event)=> {
+
         setvalidation1({nameValidation:""})
         setname(event.target.value)
+        if(event.target.value.match(/^[A-Za-z]+$/)){
+            setvalidation1({nameValidation:""})
+        }else if(event.target.value.match(/^[A-Za-z]+$/)===null && event.target.value!==""){
+            setvalidation1({nameValidation:"**Name formate is wrong**"})
+        }
+        
     }
     const emailInput=(event)=>{
         setvalidation2({emailValidation:""})
@@ -46,23 +57,34 @@ const FormContainer=(props)=> {
     }
     const dateInput=(event)=>{
         setvalidation3({dateValidation:""})
-        const userDateBirth=new Date(event.target.value)
-        const nowDate=new Date()
+        
+        let result = moment(event.target.value, 'MM/DD/YYYY').isValid();
+        
         
         if(event.target.value===""){
-            console.log("date")
+            setvalidation3({dateValidation:"**Required**"})
+            console.log("2")
+            setdate("")
+           
+            
         }else{
-            if(userDateBirth.toString() ==="Invalid Date"){
-                setvalidation3({dateValidation:"**Date is invalid**"})
-                setdate(" ")
-            }else if(nowDate.getDate()===userDateBirth.getDate() && nowDate.getMonth()+1===userDateBirth.getMonth()+1 && nowDate.getFullYear()===userDateBirth.getFullYear()){
-                setvalidation3({dateValidation:"**Date is invalid**"})
-                setdate(" ")
+            if(result===true ){
+                const d=event.target.value
+                if(new Date(event.target.value) > new Date()){
+                    setvalidation3({dateValidation:"**Date is invalid**"})
+                    
+                }else{
+                    setvalidation3({dateValidation:""})
+                    setdate(d)
+                }
+                
+                
             }
             else{
-                setvalidation3({dateValidation:""})
-                const diff=nowDate.getFullYear()-userDateBirth.getFullYear()
-                setdate(diff)
+                setvalidation3({dateValidation:"**Date is invalid**"})
+                
+                
+                
             }
         }
         }
@@ -72,32 +94,57 @@ const FormContainer=(props)=> {
                 const {list,addList}=value
                 const submtDetails=(event)=>{
                     event.preventDefault()
+                    let age;
+                    console.log(date)
+                    if(date!==""){
+                        const userDate=new Date(date)
+                        const nowDate=new Date()
+                    
+                        age=nowDate.getFullYear()-userDate.getFullYear()
+                      
+                    }
+                    
+                  
                     const newList={
                         id:v4(),
                         name:name,
                         email:email,
-                        date:date,
+                        date:age,
                     }
-                    if(newList.name==="" ){
+                   
+                    if(name==="" ){
                         setvalidation1({nameValidation:"**Required**"})
                         setvalidation2({emailValidation:""})
                     }
-                    if(newList.email==="" ){
+                    if(email==="" ){
                        setvalidation2({emailValidation:"**Required**"})
                     }
-                    if(newList.date===""){
+                    
+                    if(date===""){
                         setvalidation3({dateValidation:"**Required**"})
+                        console.log("3")
+                        setdate("")
+                       
                     }
-                    else if(newList.date===" "){
-                        setvalidation3({dateValidation:"**Date is invalid**"})
+                    if(name==="" || email==="" || date===""){
+                        
+
+                    }else{
+                        
+                    if(moment(event.target.value, 'MM/DD/YYYY').isValid()){
+                        setvalidation3({dateValidation:"**Date formation is wrong**"})
                     }
-                    else if(newList.name.match(/^[A-Za-z]+$/)===null && newList.name!==""){
+                    if(newList.name.match(/^[A-Za-z]+$/)===null && newList.name!==""){
                         setvalidation1({nameValidation:"**Name formate is wrong**"})
                     }
-                    else if(newList.email.match(regex)){
-                        setvalidation2({emailValidation:""})
+                    if(moment(event.target.value, 'MM/DD/YYYY').isValid()===false){
+                        setvalidation3({dateValidation:"**Date is invalid**"})
+
+                    }
+                    if(newList.email.match(regex)){
+                       
                         const emailAvalibel=list.find(each=>each.email===newList.email)
-                        if(emailAvalibel || !newList.date===""){
+                        if(emailAvalibel){
                             setvalidation2({emailValidation:"**Email alredy exits**"})
                         }else{
                             setvalidation2({emailValidation:""})
@@ -108,6 +155,8 @@ const FormContainer=(props)=> {
                     }else if(newList.email!=="" || newList.email.match(regex)){
                         setvalidation2({emailValidation:"**Email wrong**"})
                     }
+                    }
+                    
             }
             return (<div className="bg-container">
                         <div className="from-container">
