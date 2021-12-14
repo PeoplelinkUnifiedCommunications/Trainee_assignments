@@ -23,61 +23,85 @@ const EnterUserDetailsForm = (props) => {
 
     const todayDate = format(new Date(), 'yyyy-MM-dd')
 
-    const formSubmit = (event) => {
-        event.preventDefault()
+    const validateName =(name) => {
+        let regex = /^([a-zA-Z ]+)$/;
+        return regex.test(name)
+    }
 
+    const validateEmail = (email) =>{
+        let regex = /^((([a-zA-Z]|[0-9])|([-]|[_]|[.])){1,})+[@](([a-zA-Z0-9])|([-]|[.])){2,40}[.]((([a-zA-Z0-9]){2,10})|(([a-zA-Z0-9]){2,4}[.]([a-zA-Z0-9]){2,4}))$/;
+        return regex.test(email)
+    }
+
+    const validate=(parsedUsersData)=>{
+        let re = true
         if(name === ""){
             setNameErrMsg(true)
-        } else {
-            let regex = /^([a-zA-Z ]+)$/;
-            regex.test(name) ? setNameErrMsg(false) : setNameErrMsg(true)
+            re = false
+        } else if (!validateName(name)){
+            setNameErrMsg(true)
+            re = false
         }
 
         if(email === ""){
             setEmailErrMsg(true)
-        } else {
-            let regex = /^((([a-zA-Z]|[0-9])|([-]|[_]|[.])){1,})+[@](([a-zA-Z0-9])|([-]|[.])){2,40}[.]((([a-zA-Z0-9]){2,10})|(([a-zA-Z0-9]){2,4}[.]([a-zA-Z0-9]){2,4}))$/;
-            if(regex.test(email)){
-                setEmailErrMsg(false)
-                const usersDataFromLocalStorage = JSON.parse(localStorage.getItem("userData"))
-                const isEmailExist = usersDataFromLocalStorage.find(eachUser => eachUser.email === email)                
-                isEmailExist ? setEmailExistErrMsg(true) : setEmailExistErrMsg(false)
-            } else {
-                setEmailErrMsg(true)
+            re = false
+        } else if (!validateEmail(email)){
+            setEmailErrMsg(true)
+            re = false
+        }
+        else if (parsedUsersData===null) {
+            setEmailExistErrMsg(false)
+        }
+        else if (parsedUsersData!==null){
+            const isEmailExist = parsedUsersData.find(eachUser => eachUser.email === email)  
+            if (isEmailExist){
+                setEmailExistErrMsg(true)
+                re = false
+            }
+            else{
+                setEmailExistErrMsg(false)
             }
         }
-
-        if(dob === ""){
+        /*if(dob === ""){
             setDateErrMsg(true)
+            re = false
         } else {
             const formatedDob = format(new Date(dob), 'yyyy-MM-dd')
             let regex = /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|(([1][26]|[2468][048]|[3579][26])00))))$/g;
             (!regex.test(dob) && formatedDob <= todayDate) ? setDateErrMsg(false) : setDateErrMsg(true)
-        }
+            re = false
+        }*/
+        dob === "" ? setDateErrMsg(true) : setDateErrMsg(false)
+        return re
 
-        if(!nameErrMsg && !emailErrMsg && !emaiExistErrMsg && !dateErrMsg && dob !== ""){
+    }
+
+    const formSubmit = (event) => {
+        event.preventDefault()
+        const usersDataFormLocalStorage = localStorage.getItem("userData")
+        const parsedUsersData = JSON.parse(usersDataFormLocalStorage)
+        console.log(parsedUsersData)
+        console.log(validate(parsedUsersData))
+        if(validate(parsedUsersData)){
 
             const newUserDetails = {id: v4(), name, email, dob}
-            const usersDataFormLocalStorage = localStorage.getItem("userData")
+    
 
             //updateArray(prevstate => [...prevstate, newUserDetails])
 
-            if (usersDataFormLocalStorage === null){
+            if (parsedUsersData === null){
                 const newData = [newUserDetails]
                 localStorage.setItem("userData", JSON.stringify(newData))
             }
             else{
-                const parsedUsersData = JSON.parse(usersDataFormLocalStorage)
                 const newData = [...parsedUsersData, newUserDetails]
                 localStorage.setItem("userData", JSON.stringify(newData))
             }
             
             setName("")
             setEmail("")
-            setDob("")            
-            navigation("/")
-        } else {
-            console.log("siva")
+            setDob("")
         }
     }
 
