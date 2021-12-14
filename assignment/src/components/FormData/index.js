@@ -11,7 +11,6 @@ const FormData = () =>{
         <CartContext.Consumer>
             {value =>{
                 const {dataList} = value
-                console.log(dataList)
                 const isdataList  = dataList.length === 0 ? true : false
             return(
                 <div className='data-main-container'>
