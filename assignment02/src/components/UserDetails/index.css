@@ -3,7 +3,7 @@
     justify-content: center;
     background-color: rgb(112, 207, 176);
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .data-container{

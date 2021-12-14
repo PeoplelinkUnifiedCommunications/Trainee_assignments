@@ -3,11 +3,10 @@ import './index.css'
 const UserData = props =>{
     const {eachData} = props
     const {name,email,dob} = eachData
-    const Dob = new Date(dob)
+    const Dob = dob.split('/')
     const presentDay = new Date()
-    const dobYear = Dob.getFullYear()
     const presentYear = presentDay.getFullYear()
-    const age = presentYear-dobYear
+    const age = presentYear-Dob[2]
     return(
         <>
         <hr className="line"/>
