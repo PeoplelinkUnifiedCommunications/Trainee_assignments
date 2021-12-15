@@ -22,6 +22,6 @@ return <ListContext.Provider value={{list, addList:addList}}>
     </Routes>
     </BrowserRouter>
     </ListContext.Provider>
-}    
+}   
                                                     
 export default App;
