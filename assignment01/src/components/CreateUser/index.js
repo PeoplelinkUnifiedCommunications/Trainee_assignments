@@ -1,12 +1,14 @@
 import DataContext from "../Context";
 import {v4} from "uuid";
 import  moment  from 'moment';
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { FaUserAlt } from "react-icons/fa";
 import {AiFillMail} from "react-icons/ai";
 import "./index.css"
+import { useNavigate } from "react-router-dom";
 
-const CreateUser=(props)=> {
+const CreateUser=()=> {
+  const navigation = useNavigate()
     let [name,setName]=useState("")
     let [email,setEmail]= useState("")
     let [dob,setDob]= useState("")
@@ -68,11 +70,9 @@ const CreateUser=(props)=> {
     }
         
 
-    return (<DataContext.Consumer>
-        {value=>{
-          const {list,addList}=value
+    const value=useContext(DataContext)
 
-          const submtDetails=(event)=>{
+    const submtDetails=(event)=>{
                   event.preventDefault()
                   const newList={
                     id:v4(),
@@ -97,7 +97,7 @@ const CreateUser=(props)=> {
               const greaterDate=new Date(dob)>new Date()
               const invalidDate=new Date(dob).toString() ==="Invalid Date"
               const isValid=moment(dob,"MM-DD-YYYY").isValid()
-              const emailAvalibel=list.find(each=>each.email===newList.email)
+              const emailAvalibel=value.list.find(each=>each.email===newList.email)
               if(emailAvalibel){
                 setEmailDetails("E-mail Already Exist") 
               }else if (!regex.test(email)){
@@ -107,9 +107,8 @@ const CreateUser=(props)=> {
               }else if (greaterDate || invalidDate || !isValid){
                 setDobDetails("Please Enter Valid Date")
               }else{
-                addList(newList)
-                const {history}=props 
-                history.replace('/')
+                value.addList(newList)
+                navigation('/')
               }   
             }
         }
@@ -152,10 +151,7 @@ const CreateUser=(props)=> {
                 <button type="submit" className="btn">Submit</button>
             </form>
     </div>)
-        }
-    }
-        </DataContext.Consumer>
-  )   
+       
 }
 
 export default CreateUser

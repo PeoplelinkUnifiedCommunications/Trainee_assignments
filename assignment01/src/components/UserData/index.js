@@ -4,7 +4,13 @@ const UserData = props =>{
     const {eachData} = props
     const {name,email,dob} = eachData
     const currYear = new Date().getFullYear()
-    const birthYear = dob.split('/')
+    let birthYear;
+    if (dob.includes("/")){
+        birthYear = dob.split('/')
+    }
+    if (dob.includes("-")){
+        birthYear = dob.split('-')
+    }
     let age = currYear - parseInt(birthYear[2])
     const m = new Date().getMonth() - new Date(dob).getMonth();
     if (m<0 || (m===0 && new Date().getDate()< new Date(dob).getDate())){
