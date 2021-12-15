@@ -1,0 +1,118 @@
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient( pink, skyblue);
+    background-size: cover;
+    padding: 20px;
+}
+@media screen and (max-width:767px){
+    .main-container{
+        height: 100%;
+    }
+}
+.sub-container{
+    display: flex;
+}
+@media screen and (max-width:767px){
+    .sub-container{
+        display: flex;
+        flex-direction: column;
+    }
+} 
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@media screen and (max-width:767px){
+    .form-container{
+        width: 90%;
+        margin-bottom: 50px;
+    }
+} 
+
+
+
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7e858e;
+    box-shadow: 0px 8px 40px rgba(7,7,7,0.8);
+    padding: 50px;
+    background-color: white;
+    width: 300px;
+    flex-grow: 1;
+    border-radius:10px;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-self:flex-start;
+    flex-grow:1;
+    margin-bottom:10px;
+}
+
+.input-label{
+    color: #4c4e50;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-field{
+    color: #131415;
+    font-family: 'Roboto';
+    font-size: 20px;
+    border: 1px solid #7e858e;
+    border-radius: 4px;
+    height: 30px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    outline: none;
+    cursor: default;
+    flex-grow:1;
+}
+
+.button{
+    background-color: rgb(68, 79, 236);
+    border-width:0px;
+    border-radius: 3px;
+    color: white;
+    width: 120px;
+    height: 32px;
+    cursor: pointer;
+}
+.star-symbol{
+    color: red;
+}
+.error-msg{
+    color: red;
+}
+.link{
+    text-decoration: none;
+    
+}
+.form-heading{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    font-family:"Roboto";
+    color:red;
+}
+.error-message{
+    margin-top:0px;
+    color:red;
+}
