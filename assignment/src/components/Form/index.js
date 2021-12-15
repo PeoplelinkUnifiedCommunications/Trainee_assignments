@@ -1,10 +1,10 @@
-import {useState} from 'react'
+import {useState,useContext} from 'react'
 import {v4} from 'uuid'
 import {Link} from 'react-router-dom'
 import {format} from 'date-fns'
 
 import './index.css'
-import CartContext from '../../context/cartContext'
+import context from '../../context/listContext'
 import {
   validateEmail,
   validateCharecters, validateDob
@@ -15,6 +15,7 @@ const Form = props => {
   const [email, setEmail] = useState('')
   const [date, setDate] = useState('')
   const [error, setError] = useState({})
+  const contextValues = useContext(context)
 
   const maxDate = format(new Date(),"yyyy-MM-dd")
 
@@ -53,28 +54,26 @@ const Form = props => {
     return retValue
   }
 
+  const onSubmit = event => {
+    event.preventDefault()
+    const {dataList,onSubmitForm} = contextValues
+    if (validate(dataList)) {
+      const newFormData = {
+        id: v4(),
+        name,
+        email,
+        date,
+      }
+      setName('')
+      setEmail('')
+      setDate('')
+      onSubmitForm(newFormData)
+      const {history} = props
+      history.replace('/')
+    }
+  }
+
   return (
-    <CartContext.Consumer>
-      {value => {
-        const {dataList, onSubmitForm} = value
-        const onSubmit = event => {
-          event.preventDefault()
-          if (validate(dataList)) {
-            const newFormData = {
-              id: v4(),
-              name,
-              email,
-              date,
-            }
-            setName('')
-            setEmail('')
-            setDate('')
-            onSubmitForm(newFormData)
-            const {history} = props
-            history.replace('/')
-          }
-        }
-        return (
           <div className="main-container">
             <div className="sub-container">
               <div className="form-container">
@@ -138,9 +137,6 @@ const Form = props => {
               </div>
             </div>
           </div>
-        )
-      }}
-    </CartContext.Consumer>
   )
 }
 

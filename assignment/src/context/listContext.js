@@ -1,8 +1,8 @@
 import React from 'react'
 
-const CartContext = React.createContext({
+const context = React.createContext({
     dataList: [],
     onSubmitForm: () => {},
 })
 
-export default CartContext
+export default context

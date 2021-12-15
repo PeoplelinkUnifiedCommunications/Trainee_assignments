@@ -1,7 +1,7 @@
 import {Switch,Route,BrowserRouter} from 'react-router-dom'
 import FormData from './components/FormData'
 import Form from './components/Form'
-import CartContext from './context/cartContext';
+import context from './context/listContext';
 
 import './App.css';
 import { useState } from 'react';
@@ -20,7 +20,7 @@ const App = () => {
   }
 
   return(
-  <CartContext.Provider
+  <context.Provider
     value ={{
       dataList,
       onSubmitForm: onSubmitForm
@@ -33,7 +33,7 @@ const App = () => {
         </Switch>
       </BrowserRouter>
     </>
-    </CartContext.Provider>
+    </context.Provider>
 
     
 )}

@@ -1,20 +1,19 @@
 import {Link} from 'react-router-dom'
+import { useContext } from 'react'
 
 import EachFormData from '../EachFormData'
-import CartContext from '../../context/cartContext'
+import context from '../../context/listContext'
 
 import './index.css'
 
-const FormData = () =>{
+function FormData() {
 
-    return(
-        <CartContext.Consumer>
-            {value =>{
-                const {dataList} = value
-                const isdataList  = dataList.length === 0 ? true : false
-            return(
-                <div className='data-main-container'>
-                    <div className="data-container">
+    const contextValues = useContext(context)
+    const { dataList } = contextValues
+    const isdataList = dataList.length === 0 ? true : false
+                return (
+                    <div className='data-main-container'>
+                        <div className="data-container">
                             <h1 className="heading">FORM DETAILS</h1>
                             <ul className="data-table">
                                 <li className="data-list-item">
@@ -22,8 +21,8 @@ const FormData = () =>{
                                     <h1 className="data-table-headers">EMAIL</h1>
                                     <h1 className="data-table-headers">AGE</h1>
                                 </li>
-                                {isdataList &&  (
-                                    <li  className="no-data">
+                                {isdataList && (
+                                    <li className="no-data">
                                         <h1 className="no-data-msg">
                                             NO DATA FOUND. ADD SOME DATA
                                         </h1>
@@ -37,12 +36,8 @@ const FormData = () =>{
                                 <span className='link-para'> Click here to </span>
                                 <Link to='/form' className='links'><span> ADD NEW DATA</span></Link>
                             </div>
-                        </div>  
+                        </div>
                     </div>)
-                        
-                    }}
-                </CartContext.Consumer>
-            ) 
 }
 
 export default FormData

@@ -13,4 +13,20 @@ export const validateEmail = function (data) {
     return regex.test(data);
   };
   
+  /*const validate = (date) =>{
+    if (date===31 && (month === 4 || month ===  6 || month === 9 || month === 11){
+      return false
+    }
+    else if (date === 30 && month === 2){
+      return false
+    }
+    else if(date === 29 && month === 2 && !(year%4 === 0 && (year%100 !== 0 || year%400 === 0))){
+      return false
+    }
+    else if (date > 31){
+      return false
+    }
+  }
+  
+  */
   
