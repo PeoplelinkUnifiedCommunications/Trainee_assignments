@@ -1,6 +1,6 @@
 import ListContext from "../Context/ListContext";
 import {v4} from "uuid";
-import React, { useState } from 'react';
+import { React, useContext, useState } from 'react';
 import { FaUserAlt } from "react-icons/fa";
 import {AiFillMail} from "react-icons/ai";
 import "./index.css"
@@ -89,9 +89,9 @@ const FormContainer=(props)=> {
         }
         }
         var regex = /^((([a-zA-Z]|[0-9])|([-]|[_]|[.])){1,})+[@](([a-zA-Z0-9])|([-]|[.])){2,40}[.]((([a-zA-Z0-9]){2,10})|(([a-zA-Z0-9]){2,4}[.]([a-zA-Z0-9]){2,4}))$/;
-        return <ListContext.Consumer>
-            {value=>{
-                const {list,addList}=value
+        
+            
+                const context=useContext(ListContext)
                 const submtDetails=(event)=>{
                     event.preventDefault()
                     let age;
@@ -143,12 +143,12 @@ const FormContainer=(props)=> {
                     }
                     if(newList.email.match(regex)){
                        
-                        const emailAvalibel=list.find(each=>each.email===newList.email)
+                        const emailAvalibel=context.list.find(each=>each.email===newList.email)
                         if(emailAvalibel){
                             setvalidation2({emailValidation:"**Email alredy exits**"})
                         }else{
                             setvalidation2({emailValidation:""})
-                            addList(newList)
+                            context.addList(newList)
                             const {history}=props
                             history.replace('/')
                         }
@@ -198,8 +198,6 @@ const FormContainer=(props)=> {
                             </form>
                         </div>
                     </div>)
-            }
-            }
-        </ListContext.Consumer>
+            
 }
 export default FormContainer
