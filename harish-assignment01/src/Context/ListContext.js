@@ -1,8 +1,8 @@
-import React from "react"
+import React from "react";
 
-const ListContext= React.createContext({
-    list:[],
-    addList:()=>{}
-})
+const ListContext = React.createContext({
+	list: [],
+	addList: () => {},
+});
 
-export default ListContext
+export default ListContext;
