@@ -46,6 +46,7 @@ const EnterUserDetailsForm = () => {
 
         if (email === "") {
             setEmailErrMsg(true);
+            setEmailExistErrMsg(false);
             returnValidatiion = false;
         } else {
             let regex =
@@ -64,6 +65,7 @@ const EnterUserDetailsForm = () => {
                 }
             } else {
                 setEmailErrMsg(true);
+                setEmailExistErrMsg(false);
                 returnValidatiion = false;
             }
         }
