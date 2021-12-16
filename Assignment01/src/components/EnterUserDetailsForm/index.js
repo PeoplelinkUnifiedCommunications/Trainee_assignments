@@ -35,12 +35,11 @@ const EnterUserDetailsForm = () => {
             returnValidatiion = false;
         } else {
             let regex = /^([a-zA-Z ]+)$/;
-            if (regex.test(name)) {
-                setNameErrMsg(false);
-                returnValidatiion = true;
-            } else {
+            if (!regex.test(name)) {
                 setNameErrMsg(true);
                 returnValidatiion = false;
+            } else {
+                setNameErrMsg(false);
             }
         }
 
@@ -51,7 +50,10 @@ const EnterUserDetailsForm = () => {
         } else {
             let regex =
                 /^((([a-zA-Z]|[0-9])|([-]|[_]|[.])){1,})+[@](([a-zA-Z0-9])|([-]|[.])){2,40}[.]((([a-zA-Z0-9]){2,10})|(([a-zA-Z0-9]){2,4}[.]([a-zA-Z0-9]){2,4}))$/;
-            if (regex.test(email)) {
+            if (!regex.test(email)) {
+                setEmailErrMsg(true);
+                returnValidatiion = false;
+            } else {
                 setEmailErrMsg(false);
                 const isEmailExist = usersData.find(
                     (eachUser) => eachUser.email === email
@@ -61,12 +63,7 @@ const EnterUserDetailsForm = () => {
                     returnValidatiion = false;
                 } else {
                     setEmailExistErrMsg(false);
-                    returnValidatiion = true;
                 }
-            } else {
-                setEmailErrMsg(true);
-                setEmailExistErrMsg(false);
-                returnValidatiion = false;
             }
         }
 
@@ -75,12 +72,11 @@ const EnterUserDetailsForm = () => {
             returnValidatiion = false;
         } else {
             const formatedDob = moment(dob, "yyyy-MM-dd").isValid();
-            if (formatedDob) {
-                setDateErrMsg(false);
-                returnValidatiion = true;
-            } else {
+            if (!formatedDob) {
                 setDateErrMsg(true);
                 returnValidatiion = false;
+            } else {
+                setDateErrMsg(false);
             }
         }
 

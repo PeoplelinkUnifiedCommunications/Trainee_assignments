@@ -1,5 +1,4 @@
 import { differenceInDays } from "date-fns";
-// import { useMemo, useState } from "react";
 import "./index.css";
 
 const EachUserList = (props) => {
