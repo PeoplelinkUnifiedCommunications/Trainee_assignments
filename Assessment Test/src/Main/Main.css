@@ -1,0 +1,77 @@
+.Main{
+    width: 20%;
+    height: 60vh;
+    background-color: gray;
+}
+h2{
+    color: black;
+    font-size: 1.5rem;
+}
+input[type=text]{
+    width: 85%;
+    background-color: gray;
+    padding: 0.8rem;
+    border-radius:10px ;
+    border: 1px solid black;
+    color: white;
+    font-size: 1rem;
+    font-weight: 900;
+}
+input[type=submit]{
+    width:90%;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+input[type=search]{
+    width: 70vw;
+    padding: 0.7rem;
+    margin: 1%;
+    border-radius: 10px;
+}
+.Page{
+    width: auto;
+    display: flex;
+}
+th{
+    width: 15vw;
+    justify-content: space-between;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+td{
+    background-color: lightblue;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+::placeholder{
+    color: black;
+}
+@media(min-width:260px) and (max-width:767px){
+    .Main{
+        width: auto;
+        height:95vh;
+    }
+    .Page{
+        display: block;
+    } 
+    h2{
+        padding: 0.5rem;
+    }
+    th{
+        width: 5vw;
+        padding: 0.4rem;
+        font-size: 1rem;
+    }
+    td{
+        font-size: 1rem;
+    }
+}
