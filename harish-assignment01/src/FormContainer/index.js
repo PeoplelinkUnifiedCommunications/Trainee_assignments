@@ -12,8 +12,7 @@ const FormContainer = props => {
 		emailValidation: "",
 		dateValidation: "",
 	});
-	//const [validation2, setvalidation2] = useState({ emailValidation: "" });
-	//const [validation3, setvalidation3] = useState({ dateValidation: "" });
+
 	let [name, setname] = useState("");
 	let [email, setemail] = useState("");
 	let [date, setdate] = useState("");
