@@ -1,13 +1,16 @@
-import React ,{useState} from 'react'
+import React, { useState } from 'react'
 
-
-function App() {
-    const [count, setCount] = useState(0)
+export default function App() {
+    let initialCount = 0
+    const [count, setCount] = useState(initialCount)
     return (
         <div>
-            
+            <center>
+                <h1>Count: {count}</h1>
+                <button onClick={() => setCount(initialCount)}> Reset </button>&emsp;
+                <button onClick={() => setCount(prevCount => prevCount - 1)}> - </button>&emsp;
+                <button onClick={() => setCount(prevCount => prevCount + 1)}> + </button>                                
+                </center>&emsp;
         </div>
     )
 }
-
-export default App;
