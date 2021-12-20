@@ -1,0 +1,68 @@
+.view-user-details-container {
+    width: 90%;
+    padding: 0px 40px 40px 40px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgb(243, 237, 237);
+}
+.user-details-list {
+    list-style-type: none;
+    padding: 0px;
+}
+.list-item {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.user-name {
+    color: #7a0c04cb;
+    font-family: "sans-serif";
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    width: 33%;
+    text-align: center;
+    overflow: auto;
+}
+.email-text {
+    border-right: 2px solid #7a0c04cb;
+    border-left: 2px solid #7a0c04cb;
+}
+.text-weight {
+    font-weight: bold;
+}
+.line {
+    border: 1px solid #7a0c04cb;
+}
+.no-data {
+    color: #7a0c04cb;
+    font-family: "sans-serif";
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.button {
+    background-color: #ffffff70;
+    color: #7a0c04cb;
+    font-style: italic;
+    font-family: "sans-serif";
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px 3px rgb(243, 237, 237);
+}
