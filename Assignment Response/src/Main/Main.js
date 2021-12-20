@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import './Main.css'
-function Main() {
+function Main(props) {
     const localItems = () => {
         let list = localStorage.getItem('list');
         if (list) {
@@ -13,7 +13,7 @@ function Main() {
     }
     const [data, setData] = useState({ ownername: '', registername: '', vechiclecolor: '', slot: '' });
     const [items, setItems] = useState(localItems());
-    const [searchItems, setSearchItems] = useState("");
+    const [searchItems,setSearchItems]=useState("");
     const handleChange = (e) => {
         setData({ ...data, [e.target.name]: [e.target.value] });
     }
@@ -51,14 +51,14 @@ function Main() {
     const handleSlots = (d) => {
         setSlots(parseInt(d));
     };
-    const addSearch = (event) => {
+    const addSearch = (event) =>{
         setSearchItems(event.target.value)
     }
-    const search = items.filter(elem =>
-        elem.ownername[0].includes(searchItems) ? elem.ownername[0].includes(searchItems) : "")
+    const search = items.filter(elem=>
+        elem.ownername[0].includes(searchItems))
     return (
         <>
-            <Header handleSlots={handleSlots} />
+        <Header handleSlots={handleSlots} />
             <div className="Page">
                 <div className="Main">
                     <h2>Enter Incoming Card Details</h2>
@@ -72,35 +72,35 @@ function Main() {
                         </form>
                     </div>
                 </div>
-                <div className="display">
-                    <input type="search" placeholder="Search" onChange={addSearch} />
-                    <div className="table">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <th>Vechile Owner Name</th>
-                                    <th>Registration No.</th>
-                                    <th>Vechile Colour</th>
-                                    <th>Slot Number</th>
-                                    <th>Remove</th>
-                                </tr>
-                                {
-                                    search.map((elem) => {
-                                        return (
-                                            <tr key={elem.id}>
-                                                <td>{elem.ownername}</td>
-                                                <td>{elem.registername}</td>
-                                                <td>{elem.vechiclecolor}</td>
-                                                <td>{elem.slot}</td>
-                                                <td><i className="fa fa-times" aria-hidden="true" onClick={() => { deleteItem(elem.id) }}></i></td>
-                                            </tr>
-                                        )
-                                    })
-                                }   
-                            </tbody>
-                        </table>
+                    <div className="display">
+                        <input type="search" placeholder="Search" onChange={addSearch} />
+                        <div className="table">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Vechile Owner Name</th>
+                                        <th>Registration No.</th>
+                                        <th>Vechile Colour</th>
+                                        <th>Slot Number</th>
+                                        <th>Remove</th>
+                                    </tr>
+                                    {
+                                        search.map((elem) => {
+                                            return (
+                                                <tr key={elem.id}>
+                                                    <td>{elem.ownername}</td>
+                                                    <td>{elem.registername}</td>
+                                                    <td>{elem.vechiclecolor}</td>
+                                                    <td>{elem.slot}</td>
+                                                    <td><i className="fa fa-times" aria-hidden="true" onClick={() => { deleteItem(elem.id) }}></i></td>
+                                                </tr>
+                                            )
+                                        })
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
             </div>
         </>
     )

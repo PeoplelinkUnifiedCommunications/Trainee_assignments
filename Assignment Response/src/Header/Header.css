@@ -1,50 +1,71 @@
+/* parent div*/
+
 .Header{
     width: auto;
     height: 40vh;
-    background-image: url(./Image/banner.jpeg);
-    text-align: center;
+    background-image: url(./images/banner.jpeg);
     background-position: center;
-    background-repeat: no-repeat;
+    text-align: center;
 }
-.header-content{
-    float: right;
-}
+
+/* Self Closing Tags */
+
 h1{
-    padding: 2rem;
     margin: 0%;
-    font-size: 3.5rem;
+    padding: 2rem;
+    font-size: 3.5em;;
     font-family: sans-serif;
     color: white;
 }
-input[type=slots]{
-   width: 80%;
+.header-cotent input[type=text]{
+    width: 80%;
     padding: 1rem;
-    color: white;
-    background-color: transparent;
-    border-color: white;
-    border: 1px solid white;
-    border-radius: 5px;
 }
 button{
     width: 80%;
-    padding: 0.8rem;  
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    color: gray;
+    padding: 1rem;
 }
+/* Child Div */
+
+.header-cotent{
+    float: right;
+}
+
+/* media Queries */
 @media (min-width:260px) and (max-width:767px){
+    .Header{
+        background-position: fill;
+        height: 30vh;
+    }
     h1{
         font-size: 2rem;
-        padding: o.5rem;
+        padding: 0%;
     }
-    input[type=slots]{
-        width: 70%;
+    .header-cotent{
+        padding: 2rem;
+    }
+    .header-cotent input[type=text]{
         padding: 0.5rem;
     }
     button{
-        width: 50%;
-        font-size: 1rem;
         padding: 0.5rem;
+    }
+}
+@media (min-width:768px) and (max-width:1112px){
+    .Header{
+        background-position: fill;
+        height: 30vh;
+    }
+    h1{
+        padding: 0.5rem;
+    }
+    .header-cotent input[type=text], button{
+        width: 60%;
+        padding: 0.8rem;
+    }
+}
+@media(min-width:1113px) and (max-width:1336px){
+    h1{
+        padding: 0%;
     }
 }
