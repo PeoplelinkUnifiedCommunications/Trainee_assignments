@@ -6,6 +6,7 @@ const appReducer = (state = initialState, action) => {
 		default:
 			return state;
 	}
+	//reducer
 };
 
 export default appReducer;
