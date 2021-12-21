@@ -116,6 +116,7 @@ const FormContainer = props => {
 			const userDate = new Date(date);
 			const nowDate = new Date();
 			age = nowDate.getFullYear() - userDate.getFullYear();
+			age = age.toString();
 		}
 		const newList = {
 			id: v4(),
@@ -196,7 +197,7 @@ const FormContainer = props => {
 	return (
 		<div className="bg-container">
 			<div className="from-container">
-				<form autoComplete="off" className="form" onSubmit={submtDetails}>
+				<form className="form" onSubmit={submtDetails}>
 					<label htmlFor="text">Name</label>
 					<div className="margin">
 						<div className="input-container" id="text">
