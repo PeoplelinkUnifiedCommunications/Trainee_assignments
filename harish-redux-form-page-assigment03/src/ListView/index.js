@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { delTask } from "../action";
 
 import "./index.css";
 
-function ListView({ appState }) {
+function ListView({ appState, deleteTask }) {
 	let data;
 
 	if (appState.length === 0) {
@@ -16,6 +17,12 @@ function ListView({ appState }) {
 	const addSerach = event => {
 		setsearch(event.target.value);
 	};
+
+	const deleteDetails = id => {
+		console.log(id);
+		deleteTask(id);
+	};
+
 	const searchList = appState.filter(each => each.email.includes(search));
 
 	return (
@@ -40,6 +47,9 @@ function ListView({ appState }) {
 								<h1 className="heading">{each.name}</h1>
 								<h1 className="heading">{each.email}</h1>
 								<h1 className="heading">{each.date}</h1>
+								<button className="del" onClick={deleteDetails(each.id)}>
+									Delete
+								</button>
 							</li>
 						))
 					) : (
@@ -61,4 +71,8 @@ function ListView({ appState }) {
 const mapStateToProps = state => ({
 	appState: state,
 });
-export default connect(mapStateToProps)(ListView);
+
+const mapDispatchToProps = dispatch => ({
+	deleteTask: id => dispatch(delTask(id)),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(ListView);
