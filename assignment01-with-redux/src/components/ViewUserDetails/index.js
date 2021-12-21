@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import { memo, React } from "react";
+import { memo, React, useState } from "react";
 
-import { differenceInDays } from "date-fns";
+import { differenceInYears } from "date-fns";
 
 import { connect } from "react-redux";
 
@@ -16,13 +16,14 @@ const ViewUserDetails = ({ usersList }) => {
     // const value1 = useContext(UsersDataContext);
     // const { usersData } = value1;
     // console.log(usersData);
-    const users = usersList.length === 0 ? true : false;
+
+    const [search, setSearch] = useState("");
 
     const LastUser = memo(({ name, email, dob }) => {
         const today = new Date();
-        let days = differenceInDays(new Date(today), new Date(dob));
-        let age = Math.floor(days / 365);
-        console.log("siva", email);
+        let age = differenceInYears(new Date(today), new Date(dob));
+        //let age = Math.floor(days / 365);
+        //console.log("siva", email);
         return (
             <>
                 <li className="list-item">
@@ -35,8 +36,29 @@ const ViewUserDetails = ({ usersList }) => {
         );
     });
 
+    const onSearch = (event) => setSearch(event.target.value);
+
+    const filteredData = usersList.filter((item) => {
+        return Object.keys(item).some((key) => {
+            if (key !== "id") {
+                return item[key].toLowerCase().includes(search.toLowerCase());
+            } else {
+                return null;
+            }
+        });
+    });
+    const users = filteredData.length === 0 ? true : false;
+    console.log(filteredData);
+
     return (
         <div className="view-user-details-container">
+            <input
+                className="search"
+                type="text"
+                value={search}
+                onChange={onSearch}
+                placeholder="Search"
+            />
             <ul className="user-details-list">
                 <li className="list-item">
                     <p className="user-name text-weight">Name</p>
@@ -48,7 +70,7 @@ const ViewUserDetails = ({ usersList }) => {
                     {users ? (
                         <p className="no-data">No Data Found</p>
                     ) : (
-                        usersList.map((eachUser) => (
+                        filteredData.map((eachUser) => (
                             <LastUser {...eachUser} key={eachUser.id} />
                         ))
                     )}

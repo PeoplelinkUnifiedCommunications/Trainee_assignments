@@ -113,9 +113,9 @@ const EnterUserDetailsForm = () => {
             <div className="form-container">
                 <h1 className="heading">Enter Your Details</h1>
                 <form className="user-form-container" onSubmit={formSubmit}>
-                    <label className="label-text" htmlFor="name">
+                    {/* <label className="label-text" htmlFor="name">
                         Name: <span className="star">*</span>
-                    </label>
+                    </label> */}
                     <input
                         className="user-input"
                         type="text"
@@ -125,13 +125,13 @@ const EnterUserDetailsForm = () => {
                         placeholder="Enter Name Here"
                     />
                     {nameErrMsg && (
-                        <p className="error-msg">Please Enter Valid Name</p>
+                        <p className="error-msg">* Please Enter Valid Name</p>
                     )}
                     <br />
 
-                    <label className="label-text" htmlFor="email">
+                    {/* <label className="label-text" htmlFor="email">
                         Email: <span className="star">*</span>
-                    </label>
+                    </label> */}
                     <input
                         className="user-input"
                         type="text"
@@ -141,16 +141,16 @@ const EnterUserDetailsForm = () => {
                         placeholder="Enter Email Here"
                     />
                     {emailErrMsg && (
-                        <p className="error-msg">Please Enter Valid Email</p>
+                        <p className="error-msg">* Please Enter Valid Email</p>
                     )}
                     {emailExistErrMsg && (
-                        <p className="error-msg">Email Already Exist</p>
+                        <p className="error-msg">* Email Already Exist</p>
                     )}
                     <br />
 
-                    <label className="label-text" htmlFor="date">
+                    {/* <label className="label-text" htmlFor="date">
                         Date Of Birth: <span className="star">*</span>
-                    </label>
+                    </label> */}
                     <input
                         className="user-input"
                         type="date"
@@ -160,7 +160,7 @@ const EnterUserDetailsForm = () => {
                         onChange={onChangeDob}
                     />
                     {dateErrMsg && (
-                        <p className="error-msg">Please Enter Valid Date</p>
+                        <p className="error-msg">* Please Enter Valid Date</p>
                     )}
                     <br />
 

@@ -3,12 +3,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    border: none;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 3px rgb(211, 197, 197);
+    box-shadow: 0px 0px 10px 3px rgb(243, 237, 237);
     width: 90%;
     padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.user-app-container::before {
+    background-image: conic-gradient(#ff0052 20deg, transparent 120 deg);
+    position: absolute;
+    animation: rotate 2s linear infinite;
+    width: 150%;
+    height: 150%;
+}
+
+.user-app-container::after {
+    position: absolute;
+    border-radius: 10px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background-color: #101010;
+    box-shadow: inset 20px 20px 20px #0000008c;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 @media screen and (min-width: 768px) {
     .user-app-container {
@@ -17,6 +47,12 @@
 }
 
 @media screen and (min-width: 992px) {
+    .user-app-container {
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
     .user-app-container {
         width: 25%;
     }
@@ -88,14 +124,18 @@
 .user-input {
     border: none;
     outline: none;
+    background-color: transparent;
     border-radius: 4px;
+    border-bottom: 2px solid #7a0c04cb;
     height: 40px;
     padding-left: 10px;
-    color: black;
+    color: #7a0c04cb;
     font-family: "sans-serif";
-    font-size: 16px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
     width: 100%;
-    box-shadow: 0px 0px 10px 3px rgb(211, 197, 197);
+    /* box-shadow: 0px 0px 0px 3px rgb(211, 197, 197); */
 }
 
 /* @media screen and (min-width:768px) {
@@ -103,6 +143,21 @@
         width: 70%;
     }
 } */
+
+.user-input::placeholder {
+    color: #7a0c04cb;
+    font-family: "sans-serif";
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+}
+::-webkit-datetime-edit {
+    color: #7a0c04cb;
+    font-family: "sans-serif";
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+}
 
 .error-msg {
     color: red;
@@ -132,7 +187,7 @@
     height: 40px;
     width: 100px;
     margin-top: 10px;
-    box-shadow: 0px 0px 10px 3px rgb(211, 197, 197);
+    box-shadow: 0px 0px 10px 3px rgb(243, 237, 237);
 }
 
 /* .view-user-details-container{

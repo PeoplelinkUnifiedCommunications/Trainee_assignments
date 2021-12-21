@@ -66,3 +66,30 @@
     margin-top: 10px;
     box-shadow: 0px 0px 10px 3px rgb(243, 237, 237);
 }
+
+.search {
+    height: 40px;
+    width: 100%;
+    color: #7a0c04cb;
+    font-style: italic;
+    font-family: "sans-serif";
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 20px;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 3px rgb(243, 237, 237);
+}
+.search::placeholder {
+    color: #f0ebeada;
+    font-family: "sans-serif";
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+}
