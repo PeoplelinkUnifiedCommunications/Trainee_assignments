@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import './Main.css'
-function Main(props) {
+function Main(props) {  
     const localItems = () => {
         let list = localStorage.getItem('list');
         if (list) {
             return JSON.parse(localStorage.getItem('list'));
         }
-        else {
-            return [];
+        else{
+            return '';
         }
     }
     const [data, setData] = useState({ ownername: '', registername: '', vechiclecolor: '', slot: '' });
     const [items, setItems] = useState(localItems());
     const [searchItems,setSearchItems]=useState("");
     const handleChange = (e) => {
-        setData({ ...data, [e.target.name]: [e.target.value] });
+        setData({ ...data, [e.target.name]: e.target.value });
     }
     const [slots, setSlots] = useState('');
     const addItems = (event) => {
@@ -54,8 +54,9 @@ function Main(props) {
     const addSearch = (event) =>{
         setSearchItems(event.target.value)
     }
-    const search = items.filter(elem=>
-        elem.ownername[0].includes(searchItems))
+   //console.log(items)
+    const search = items.filter((elem=>elem.ownername[0].includes(searchItems)))
+    console.log(search)
     return (
         <>
         <Header handleSlots={handleSlots} />

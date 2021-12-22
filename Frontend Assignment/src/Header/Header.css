@@ -1,0 +1,20 @@
+.Header {
+    width: 80%;
+    height: 100vh;
+    background-color: #EEEEEE;
+}
+.header-content{
+    width: 100%;
+    height: 5vh;
+    font-size: 1.5rem;
+    background-color: #00B098;
+    color: #666666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    color:white;
+    font-weight: 700;
+}
+

@@ -55,7 +55,7 @@ function Main(props) {
         setSearchItems(event.target.value)
     }
     const search = items.filter(elem=>
-        elem.ownername[0].includes(searchItems)?elem.ownername[0].includes(searchItems):"")
+        elem.ownername[0].includes(searchItems))
     return (
         <>
         <Header handleSlots={handleSlots} />
@@ -72,35 +72,35 @@ function Main(props) {
                         </form>
                     </div>
                 </div>
-                <div className="display">
-                    <input type="search" placeholder="Search" onChange={addSearch} />
-                    <div className="table">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <th>Vechile Owner Name</th>
-                                    <th>Registration No.</th>
-                                    <th>Vechile Colour</th>
-                                    <th>Slot Number</th>
-                                    <th>Remove</th>
-                                </tr>
-                                {
-                                    search.map((elem) => {
-                                        return (
-                                            <tr key={elem.id}>
-                                                <td>{elem.ownername}</td>
-                                                <td>{elem.registername}</td>
-                                                <td>{elem.vechiclecolor}</td>
-                                                <td>{elem.slot}</td>
-                                                <td><i className="fa fa-times" aria-hidden="true" onClick={() => { deleteItem(elem.id) }}></i></td>
-                                            </tr>
-                                        )
-                                    })
-                                }
-                            </tbody>
-                        </table>
+                    <div className="display">
+                        <input type="search" placeholder="Search" onChange={addSearch} />
+                        <div className="table">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Vechile Owner Name</th>
+                                        <th>Registration No.</th>
+                                        <th>Vechile Colour</th>
+                                        <th>Slot Number</th>
+                                        <th>Remove</th>
+                                    </tr>
+                                    {
+                                        search.map((elem) => {
+                                            return (
+                                                <tr key={elem.id}>
+                                                    <td>{elem.ownername}</td>
+                                                    <td>{elem.registername}</td>
+                                                    <td>{elem.vechiclecolor}</td>
+                                                    <td>{elem.slot}</td>
+                                                    <td><i className="fa fa-times" aria-hidden="true" onClick={() => { deleteItem(elem.id) }}></i></td>
+                                                </tr>
+                                            )
+                                        })
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
             </div>
         </>
     )
