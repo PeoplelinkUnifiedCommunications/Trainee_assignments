@@ -7,3 +7,8 @@ export const delTask = id => ({
 	type: "del",
 	id,
 });
+
+export const greeting = name => ({
+	type: "greeting",
+	name,
+});

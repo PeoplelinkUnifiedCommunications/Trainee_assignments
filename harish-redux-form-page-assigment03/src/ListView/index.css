@@ -1,6 +1,7 @@
 .bg-container1 {
 	background-image: linear-gradient(to left, #9cafbc, #223c4c);
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
@@ -79,4 +80,7 @@
 	height: 20px;
 	width: 50px;
 	margin-top: 10px;
+}
+.msg {
+	color: #fff;
 }

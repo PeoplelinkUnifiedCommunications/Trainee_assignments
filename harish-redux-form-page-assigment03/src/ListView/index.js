@@ -2,31 +2,35 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { delTask } from "../action";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./index.css";
 
 function ListView({ appState, deleteTask }) {
+	console.log(appState);
 	let data;
 
-	if (appState.length === 0) {
-		data = false;
-	} else {
-		data = true;
-	}
 	const [search, setsearch] = useState("");
 	const addSerach = event => {
 		setsearch(event.target.value);
 	};
 
-	const deleteDetails = id => {
-		console.log(id);
-		deleteTask(id);
-	};
-
-	const searchList = appState.filter(each => each.email.includes(search));
+	const searchList = appState.appReducer1.filter(each =>
+		each.email.includes(search)
+	);
+	if (searchList.length === 0) {
+		data = false;
+	} else {
+		data = true;
+	}
 
 	return (
 		<div className="bg-container1">
+			<ToastContainer limit={1}>
+				{appState.appReducer2.length === 0 ? null : toast(appState.appReducer2)}
+			</ToastContainer>
+
 			<div className="from-container1">
 				<input
 					type="search"
@@ -47,7 +51,7 @@ function ListView({ appState, deleteTask }) {
 								<h1 className="heading">{each.name}</h1>
 								<h1 className="heading">{each.email}</h1>
 								<h1 className="heading">{each.date}</h1>
-								<button className="del" onClick={deleteDetails(each.id)}>
+								<button className="del" onClick={() => deleteTask(each.id)}>
 									Delete
 								</button>
 							</li>

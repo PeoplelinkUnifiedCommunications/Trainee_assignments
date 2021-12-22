@@ -4,11 +4,11 @@ import ListView from "./ListView";
 
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import appReducer from "./raducer/reducer";
+import reducer from "./raducer/combainedReducer";
 
 import "./App.css";
 
-const store = createStore(appReducer);
+const store = createStore(reducer);
 
 const App = () => {
 	return (

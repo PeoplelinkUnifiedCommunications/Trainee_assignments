@@ -5,10 +5,10 @@ import { AiFillMail } from "react-icons/ai";
 import "./index.css";
 import moment from "moment";
 import { connect } from "react-redux";
-import { addTask } from "../action";
+import { addTask, greeting } from "../action";
 
 const FormContainer = props => {
-	const { appState, addNewTask, history } = props;
+	const { appState, addNewTask, history, addNewGreeting } = props;
 
 	const [validation1, setvalidation1] = useState({
 		nameValidation: "",
@@ -168,7 +168,9 @@ const FormContainer = props => {
 				let emailAvalibel;
 				if (appState.length === 0) {
 				} else {
-					emailAvalibel = appState.find(each => each.email === newList.email);
+					emailAvalibel = appState.appReducer1.find(
+						each => each.email === newList.email
+					);
 				}
 
 				if (emailAvalibel) {
@@ -183,6 +185,7 @@ const FormContainer = props => {
 					}));
 
 					await addNewTask(newList);
+					await addNewGreeting(newList.name);
 
 					history.replace("/");
 				}
@@ -266,6 +269,7 @@ const mapStateToProps = newList => ({
 
 const mapDispatchToProps = dispatch => ({
 	addNewTask: newList => dispatch(addTask(newList)),
+	addNewGreeting: newList => dispatch(greeting(newList)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FormContainer);
