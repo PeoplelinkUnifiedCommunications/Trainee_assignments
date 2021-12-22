@@ -25,6 +25,18 @@
     text-align: center;
     overflow: auto;
 }
+
+.user-age {
+    color: #7a0c04cb;
+    font-family: "sans-serif";
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    width: 28%;
+    text-align: center;
+    overflow: auto;
+}
+
 .email-text {
     border-right: 2px solid #7a0c04cb;
     border-left: 2px solid #7a0c04cb;
@@ -92,4 +104,16 @@
     font-size: 16px;
     font-style: italic;
     font-weight: 600;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+}
+
+.delete {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin-right: 20px;
 }

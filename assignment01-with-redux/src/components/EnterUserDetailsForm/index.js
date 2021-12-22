@@ -8,19 +8,24 @@ import { format } from "date-fns";
 
 import moment from "moment";
 
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import { addUser } from "../../actions";
+import { addData } from "../../reducer";
 
 //import UsersDataContext from "../../context/usersdatacontext";
 
 import "./index.css";
 
-const EnterUserDetailsForm = ({ usersList, addUser }) => {
+const EnterUserDetailsForm = () => {
     // const value = useContext(UsersDataContext);
     // const { usersData, onSubmitForm } = value;
 
     //console.log(addUser);
+
+    const usersList = useSelector((state) => state.addReducer);
+    const dispatch = useDispatch();
+
+    // console.log(usersList);
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -89,12 +94,12 @@ const EnterUserDetailsForm = ({ usersList, addUser }) => {
         return returnValidatiion;
     };
 
-    const formSubmit = async (event) => {
+    const formSubmit = (event) => {
         event.preventDefault();
 
         if (validation()) {
             const newUserDetails = { id: v4(), name, email, dob };
-            await addUser(newUserDetails);
+            dispatch(addData(newUserDetails));
             setName("");
             setEmail("");
             setDob("");
@@ -181,8 +186,4 @@ const EnterUserDetailsForm = ({ usersList, addUser }) => {
     );
 };
 
-const mapStateToProps = (state) => ({
-    usersList: state,
-});
-
-export default connect(mapStateToProps, { addUser })(EnterUserDetailsForm);
+export default EnterUserDetailsForm;

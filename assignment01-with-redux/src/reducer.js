@@ -1,11 +1,20 @@
+import { createSlice } from "@reduxjs/toolkit";
+
 const initial = [];
 
-export default function reducer(state = initial, action) {
-    const { type, payload } = action;
-    switch (type) {
-        case "ADD":
-            return [...state, payload];
-        default:
-            return state;
-    }
-}
+const stateSlice = createSlice({
+    name: "formData",
+    initialState: initial,
+    reducers: {
+        addData: (state, action) => {
+            console.log(state, action.payload);
+            state.push(action.payload);
+        },
+        delData: (state, action) => {
+            console.log(action.payload);
+            state.filter((each) => each.id !== action.payload);
+        },
+    },
+});
+export const { addData, delData } = stateSlice.actions;
+export default stateSlice.reducer;

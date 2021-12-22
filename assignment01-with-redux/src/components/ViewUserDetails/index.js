@@ -4,22 +4,27 @@ import { memo, React, useState } from "react";
 
 import { differenceInYears } from "date-fns";
 
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
+import { delData } from "../../reducer";
 
 // import UsersDataContext from "../../context/usersdatacontext";
 
-// import EachUserList from "../EachUserList";
+import EachUserList from "../EachUserList";
 
 import "./index.css";
 
-const ViewUserDetails = ({ usersList }) => {
+const ViewUserDetails = () => {
     // const value1 = useContext(UsersDataContext);
     // const { usersData } = value1;
     // console.log(usersData);
+    const usersList = useSelector((state) => state.addReducer);
+    console.log(usersList);
+    const dispatch = useDispatch();
 
     const [search, setSearch] = useState("");
 
-    const LastUser = memo(({ name, email, dob }) => {
+    const LastUser = memo(({ id, name, email, dob }) => {
         const today = new Date();
         let age = differenceInYears(new Date(today), new Date(dob));
         //let age = Math.floor(days / 365);
@@ -29,7 +34,17 @@ const ViewUserDetails = ({ usersList }) => {
                 <li className="list-item">
                     <p className="user-name">{name}</p>
                     <p className="user-name email-text">{email}</p>
-                    <p className="user-name">{age}</p>
+                    <p className="user-age">{age}</p>
+                    <button
+                        className="delete-button"
+                        onClick={() => dispatch(delData(id))}
+                    >
+                        <img
+                            className="delete"
+                            src="/deleteIcon.png"
+                            alt="delete"
+                        />
+                    </button>
                 </li>
                 <hr className="line" />
             </>
@@ -48,7 +63,7 @@ const ViewUserDetails = ({ usersList }) => {
         });
     });
     const users = filteredData.length === 0 ? true : false;
-    console.log(filteredData);
+    // console.log(filteredData);
 
     return (
         <div className="view-user-details-container">
@@ -63,7 +78,7 @@ const ViewUserDetails = ({ usersList }) => {
                 <li className="list-item">
                     <p className="user-name text-weight">Name</p>
                     <p className="user-name email-text text-weight">Email</p>
-                    <p className="user-name text-weight">Age</p>
+                    <p className="user-age text-weight">Age</p>
                 </li>
                 <hr className="line" />
                 <div className="list-items">
@@ -71,7 +86,11 @@ const ViewUserDetails = ({ usersList }) => {
                         <p className="no-data">No Data Found</p>
                     ) : (
                         filteredData.map((eachUser) => (
-                            <LastUser {...eachUser} key={eachUser.id} />
+                            // <LastUser {...eachUser} key={eachUser.id} />
+                            <EachUserList
+                                eachUser={eachUser}
+                                key={eachUser.id}
+                            />
                         ))
                     )}
                 </div>
@@ -86,8 +105,4 @@ const ViewUserDetails = ({ usersList }) => {
     );
 };
 
-const mapStateToProps = (state) => ({
-    usersList: state,
-});
-
-export default connect(mapStateToProps)(ViewUserDetails);
+export default ViewUserDetails;
