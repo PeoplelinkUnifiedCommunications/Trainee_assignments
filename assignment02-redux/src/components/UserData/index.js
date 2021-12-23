@@ -1,9 +1,12 @@
+import { useDispatch } from 'react-redux'
 import './index.css'
 
 const UserData = props =>{
     const {eachData} = props
-    const {name,email,dob} = eachData
+    const {id,name,email,dob} = eachData
     const currYear = new Date().getFullYear()
+
+    const dispatch=useDispatch()
     let birthYear;
     if (dob.includes("/")){
         birthYear = dob.split('/')
@@ -16,14 +19,18 @@ const UserData = props =>{
     if (m<0 || (m===0 && new Date().getDate()< new Date(dob).getDate())){
               age=age-1
     } 
+    
+    
     return(
         <>
-        <hr className="line"/>
+        
         <li className="data-list-item">
             <p className="data-item">{name}</p>
             <p className="data-item">{email}</p>
             <p className="data-item">{age}</p>
+            <button className='btn3' type="button" onClick={()=>dispatch({type:"DELETE",payload:id})}>DELETE</button>
         </li>
+        <hr className="line"/>
        </>
     )
 }
