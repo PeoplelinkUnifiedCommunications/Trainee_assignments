@@ -16,16 +16,18 @@ const UserData = props =>{
     if (m<0 || (m===0 && new Date().getDate()< new Date(dob).getDate())){
               age=age-1
     } 
+    
     return(
-        <>
-        <hr className="line"/>
+        <> 
         <li className="data-list-item">
             <p className="data-item">{name}</p>
             <p className="data-item">{email}</p>
             <p className="data-item">{age}</p>
         </li>
+        <hr className="line"/>
        </>
     )
 }
 
-export default UserData
+
+export default (UserData)

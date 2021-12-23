@@ -31,9 +31,9 @@ function UserDetails({list}) {
             <li className="list-item">
                 <h1 className="heading ">NAME</h1>
                 <h1 className="heading ">Email</h1>
-                <h1 className="heading ">Date</h1>
+                <h1 className="heading ">Age</h1>
             </li>
-            
+            <hr className="line" />
             {data? (filteredData.map(each=><UserData className="list-item1" eachData={each} key={each.id}/>
                 )):<li className="no-data"><h1 className="heading">No data Found</h1></li>}
             
@@ -46,7 +46,6 @@ function UserDetails({list}) {
     
 }
 const mapStateToProps=(state)=>({
-    list:state,
-    
+    list:state,   
 })
 export default connect(mapStateToProps)(UserDetails);

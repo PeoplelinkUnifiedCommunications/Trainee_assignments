@@ -7,7 +7,6 @@ import {AiFillMail} from "react-icons/ai";
 import "./index.css"
 import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
-import { addData } from "../action";
 
 const CreateUser=({list,addData})=> {
   const navigation = useNavigate()
@@ -156,7 +155,12 @@ const mapStateToProps=(state)=>({
   list:state,
 })
 
+const addData = (newList)  => ({
+  type: "ADD",
+  newList
+});
+
 const mapDispatchToProps=(dispatch)=>({
-  addData:(newList)=>dispatch(addData(newList))
+  addData:(newlist)=>dispatch(addData(newlist))
 })
 export default connect(mapStateToProps,mapDispatchToProps)(CreateUser);
