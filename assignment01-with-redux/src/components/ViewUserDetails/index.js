@@ -18,38 +18,38 @@ const ViewUserDetails = () => {
     // const value1 = useContext(UsersDataContext);
     // const { usersData } = value1;
     // console.log(usersData);
-    const usersList = useSelector((state) => state.addReducer);
-    console.log(usersList);
-    const dispatch = useDispatch();
+    const usersList = useSelector((state) => state.addReducer.value);
+    // console.log(usersList);
+    // const dispatch = useDispatch();
 
     const [search, setSearch] = useState("");
 
-    const LastUser = memo(({ id, name, email, dob }) => {
-        const today = new Date();
-        let age = differenceInYears(new Date(today), new Date(dob));
-        //let age = Math.floor(days / 365);
-        //console.log("siva", email);
-        return (
-            <>
-                <li className="list-item">
-                    <p className="user-name">{name}</p>
-                    <p className="user-name email-text">{email}</p>
-                    <p className="user-age">{age}</p>
-                    <button
-                        className="delete-button"
-                        onClick={() => dispatch(delData(id))}
-                    >
-                        <img
-                            className="delete"
-                            src="/deleteIcon.png"
-                            alt="delete"
-                        />
-                    </button>
-                </li>
-                <hr className="line" />
-            </>
-        );
-    });
+    // const LastUser = memo(({ id, name, email, dob }) => {
+    //     const today = new Date();
+    //     let age = differenceInYears(new Date(today), new Date(dob));
+    //     //let age = Math.floor(days / 365);
+    //     //console.log("siva", email);
+    //     return (
+    //         <>
+    //             <li className="list-item">
+    //                 <p className="user-name">{name}</p>
+    //                 <p className="user-name email-text">{email}</p>
+    //                 <p className="user-age">{age}</p>
+    //                 <button
+    //                     className="delete-button"
+    //                     onClick={() => dispatch(delData(id))}
+    //                 >
+    //                     <img
+    //                         className="delete"
+    //                         src="/deleteIcon.png"
+    //                         alt="delete"
+    //                     />
+    //                 </button>
+    //             </li>
+    //             <hr className="line" />
+    //         </>
+    //     );
+    // });
 
     const onSearch = (event) => setSearch(event.target.value);
 
@@ -77,8 +77,9 @@ const ViewUserDetails = () => {
             <ul className="user-details-list">
                 <li className="list-item">
                     <p className="user-name text-weight">Name</p>
-                    <p className="user-name email-text text-weight">Email</p>
-                    <p className="user-age text-weight">Age</p>
+                    <p className="user-name text-weight">Email</p>
+                    <p className="user-name text-weight">Age</p>
+                    <p className="user-name action-text text-weight">Delete</p>
                 </li>
                 <hr className="line" />
                 <div className="list-items">

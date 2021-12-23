@@ -22,7 +22,7 @@ const EnterUserDetailsForm = () => {
 
     //console.log(addUser);
 
-    const usersList = useSelector((state) => state.addReducer);
+    const usersList = useSelector((state) => state.addReducer.value);
     const dispatch = useDispatch();
 
     // console.log(usersList);

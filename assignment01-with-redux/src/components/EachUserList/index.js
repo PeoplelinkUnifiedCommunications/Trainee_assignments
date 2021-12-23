@@ -16,9 +16,10 @@ const EachUserList = (props) => {
         <>
             <li className="list-item">
                 <p className="user-name">{name}</p>
-                <p className="user-name email-text">{email}</p>
-                <p className="user-age">{age}</p>
+                <p className="user-name">{email}</p>
+                <p className="user-name">{age}</p>
                 <button
+                    type="button"
                     className="delete-button"
                     onClick={() => dispatch(delData(id))}
                 >

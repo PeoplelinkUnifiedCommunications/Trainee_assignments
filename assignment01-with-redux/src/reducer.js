@@ -4,15 +4,15 @@ const initial = [];
 
 const stateSlice = createSlice({
     name: "formData",
-    initialState: initial,
+    initialState: { value: initial },
     reducers: {
         addData: (state, action) => {
-            console.log(state, action.payload);
-            state.push(action.payload);
+            state.value.push(action.payload);
         },
         delData: (state, action) => {
-            console.log(action.payload);
-            state.filter((each) => each.id !== action.payload);
+            state.value = state.value.filter(
+                (each) => each.id !== action.payload
+            );
         },
     },
 });
