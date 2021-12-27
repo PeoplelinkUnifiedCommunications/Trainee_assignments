@@ -1,0 +1,54 @@
+.body{
+    margin: 0%;
+    padding: 0%;
+}
+.sidenav{
+    width: 25%;
+    height: 100vh;
+    padding: 0px 5px;
+    background-color: white;
+    
+}
+.text{
+    text-align: center;
+    font-weight: bold;
+}
+.location{
+    font-size: small;
+    font-weight: bold;
+}
+.inputs{
+    display: flex;
+}
+.input1{
+     width: 10rem;
+     padding: 10px;
+}
+.input2{
+    width: 9rem;
+    padding: 10px;}
+.search{
+    width: 2rem;
+    height: 1.5rem; 
+    background-color: orange;
+    outline: none;
+    margin-left: 2px;
+}
+.size{
+    display: flex;
+}
+.Range{
+    width: 12rem;
+    padding: 10px;
+}
+.range1{
+    width: 8.5rem;
+    padding: 10px;}
+.button1{
+    width: 8rem;
+    padding: 10px;
+    
+}
+.button1:hover{
+    background-color: orange;
+}

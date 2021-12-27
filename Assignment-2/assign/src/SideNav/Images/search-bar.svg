@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="search-bar" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-2{fill:#666}
+        </style>
+    </defs>
+    <path id="Rectangle_13" fill="none" d="M0 0H24V24H0z"/>
+    <g id="Group_17">
+        <g id="Line_14">
+            <path id="Path_731" d="M20 20.75a.74.74 0 0 1-.53-.22l-5.31-5.31a.75.75 0 0 1 1.06-1.06l5.31 5.31a.75.75 0 0 1 0 1.06.74.74 0 0 1-.53.22z" class="cls-2"/>
+        </g>
+        <g id="Ellipse_1">
+            <path id="Path_732" d="M10.26 17.27a7 7 0 1 1 7-7 7 7 0 0 1-7 7zm0-12.52a5.51 5.51 0 1 0 5.51 5.51 5.51 5.51 0 0 0-5.51-5.51z" class="cls-2"/>
+        </g>
+    </g>
+</svg>

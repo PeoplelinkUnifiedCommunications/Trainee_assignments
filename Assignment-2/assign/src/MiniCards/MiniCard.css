@@ -1,0 +1,26 @@
+.Mini_Card_Container{
+    height: auto;
+    width: 100%;
+    background-color: white;
+    display:inline;
+    display:flex;
+    /* border-right: 2px solid black; */
+}
+.Mini_flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-grow: 2;
+    border-right: 1px solid black;
+}
+
+.article2{
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    padding-left: 8px;
+
+}
+.child_article{
+    width:100%
+}

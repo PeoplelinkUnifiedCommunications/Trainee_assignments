@@ -1,0 +1,11 @@
+.SmallCard_container{
+    width: 48%;
+    height: auto;
+    border: 1px solid black;
+}
+.SmallCard_Header{
+    display: flex;
+    background-color: blue;
+    /* justify-content: center; */
+    align-items: center;
+}

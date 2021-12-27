@@ -1,0 +1,61 @@
+.Header{
+    height:auto;
+    width:75%;
+    background-color:lightgray;
+}
+.header_content{
+    height:7vh;
+    width: 100%;
+    background-color: #00B098;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    color: white;
+}
+.See_more{
+    width: 20%;
+    padding: 10px;
+}
+.See_More{
+    border: 1px solid blue;
+    padding: 10px;
+    text-align: center;
+    color: blue;
+}
+.Advantage{
+    font-size: 1rem;
+    width: 100%;
+    padding: 0px 10px;
+}
+.Clean{
+    width: 100%;
+    padding: 0px 10px;
+    margin-top: 10px;
+}
+.Clean_content{
+    width: 70%;
+}
+.below_seemore{
+    display: flex;
+}
+.below_seemore h5{
+    color: green;
+}
+.Heat_pump_container{
+    background-color: white;
+    margin: 0px 10px;
+    box-shadow: 1px 1px 1px 1px;
+    width: 97%;
+    height: auto;
+    padding: 10px;
+}
+.process{
+    display: flex;
+    gap: 10px;
+}
+.container_red{
+    width:100%;
+    height:auto
+}
