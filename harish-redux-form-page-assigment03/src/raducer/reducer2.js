@@ -4,7 +4,7 @@ const appReducer2 = (state = initialState2, action) => {
 		case "greeting":
 			return (state = `Welcome ${action.name}`);
 		default:
-			return state;
+			return (state = "");
 	}
 	//reducer
 };
