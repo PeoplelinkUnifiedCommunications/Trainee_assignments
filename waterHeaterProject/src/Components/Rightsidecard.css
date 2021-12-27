@@ -1,0 +1,46 @@
+.RightsidecardContainer{
+    width: 80%;
+    /* height: auto; */
+    background-color: lightgray;
+}
+.headerdialouge{
+    background-color: #073D74;
+    text-align: center;
+    font-size:larger;
+    padding: 9px 0;
+    color: white;
+    
+
+}
+.headerdialouge p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rebeccapurple; */
+    color: white;
+    font-size: 18px;
+}
+
+.headerdialougeimage{
+    padding: 0 12px;
+}
+.headerdialouge p span{
+    padding: 0 12px;
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+
+
+/* From here Main Container (rightside 2nd Part)*/
+
+
+.main_container{
+    padding: 1.3rem;
+}
+.main_container .cards_heading_line {
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #0a5cae;
+}

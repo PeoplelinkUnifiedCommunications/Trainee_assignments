@@ -1,0 +1,27 @@
+.shortsideimages{
+    width: 7%;
+    height: 50vh;
+    background-color: rgb(171, 190, 245);
+}
+.totalimageContainer{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.bigsizeimageContainer{
+    
+    width: 25%;
+    /* height: 100%; */
+    /* border: 2px solid red; */
+    text-align: center;
+    background-color: white;
+    box-shadow:  2px 3px 5px 5px lightgray;
+    display: inline-block;
+}
+
+.bigsizeimageContainer .bigImage{
+    display: block;
+    margin: 1rem auto;
+    width: 30%;
+    /* height: 30%; */
+}

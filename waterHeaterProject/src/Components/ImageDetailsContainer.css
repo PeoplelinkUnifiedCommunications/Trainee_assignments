@@ -1,0 +1,38 @@
+.price{
+    display: flex;
+}
+.price1 ,.price2{
+    padding: 1rem;
+    margin-top: 4px;
+}
+.price1 {
+    border-right: 2px solid gray;
+    
+}
+
+.btnsContainer{
+    display: flex;
+
+}
+.btnsContainer .btn1{
+
+    padding: 8px 12px; 
+    margin-right: 1rem; 
+    margin-top: 2px;
+    background-color: yellow;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btnsContainer .btn2{
+    border: none;
+    color: green;
+    cursor: pointer;
+    background: none;
+    font-weight: bold;
+
+}
+
+
+

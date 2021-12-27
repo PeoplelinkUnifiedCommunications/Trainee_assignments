@@ -1,0 +1,26 @@
+.headerpage1{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.img_content_container{
+    display: flex;
+}
+.imageContainerAlone{
+    width: 20%;
+    height: 20%;
+    background-color: white;
+    /* border: 2px solid rebeccapurple; */
+}
+.prodsmallcards{
+    display: flex;
+
+    width: 100%;
+    
+}
+.pricing_in_prod{
+/* border: 1px solid green; */
+}

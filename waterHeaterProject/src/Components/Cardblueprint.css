@@ -1,0 +1,72 @@
+ *{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+
+ }
+.cardsContainer{
+    box-shadow: 2px 2px 4px  rgb(146, 145, 145);
+    background-color: white;
+    width: 32%;
+    border-radius: 10px;
+   
+
+}
+.cardTopPart{
+    display: flex;
+    padding: 3px 5px;
+    justify-content: space-between;
+    align-items:center;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+
+}
+.rightsideTop{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    
+}
+
+
+
+/* Middle Part start From Here */
+
+.cardMiddlePart{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+}
+.card_img{
+   
+    width: 23%;
+}
+.middlePartText{
+    list-style-type: circle;
+    text-align: justify;
+    
+    
+}
+.cardMiddlePart .list{
+    margin-left: 1rem;
+    padding: 4px 0px;
+}
+.list::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 100%;
+    margin-right: 10px;
+    margin-left: -15px; 
+    /* Same negative margin as li padding  */
+  }
+
+  /* DownPart From Here */
+
+
+  .cardDownPart{
+    /* padding: 1px 1px; */
+  }

@@ -1,0 +1,21 @@
+.pricing_in_prod{
+    /* border: 1px solid royalblue; */
+    padding: 5px ;
+    margin-left: 4px;
+    
+
+}
+.estbtn{
+border: 2px solid green;
+text-align: center;
+display: block;
+width: 100%;
+margin: 3px auto;
+padding: 5px 0;
+border-radius: 4px;
+
+
+}
+.pricing{
+    padding: 4px;
+}

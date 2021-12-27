@@ -1,0 +1,108 @@
+.sidebarContainer{
+    width: 27%;
+    padding: 12px;
+    /* height: 100vh; */
+    /* background-color: darkgray; */
+
+
+}
+
+
+.location{
+    padding-top: 1rem;
+}
+.inputTextField{
+    /* border: none; */
+    border: 2px solid gainsboro;
+    outline: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.selection{
+    padding: 0.5rem;
+    border-radius: 4px;
+    outline: none;
+}
+.imgsearchbtn{
+    padding: 0.2rem;
+}
+.spanofimg{
+    position: relative;
+    width: 200px;
+    height: 200px;
+
+}
+.searchbarimg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    min-height: 35px;
+    background-color: goldenrod;
+    /* -webkit-filter: brightness(0) invert(1); */
+    filter: brightness(1) invert(1); 
+}
+.slider{
+    -webkit-appearance: none;
+    width: 60%;
+    height: 15px;
+    background: #000;
+    outline: none;
+    border: 3px solid rgb(210, 218, 170);
+    border-radius: 8px;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 30px;
+    background: #000;
+    cursor: pointer;
+    border: 2px solid rgb(178, 191, 192);
+    border-radius: 4px;
+}
+.rangeContainer{
+    /* margin-top: 1rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(176, 182, 176);
+}
+.G50Btn{
+    /* background-color: gainsboro; */
+    padding: 2px 1em;
+    /* color: rgb(202, 202, 178); */
+    font-style: oblique;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.sizeOFheater{
+    margin-top: 1rem;
+}
+.typeFuel{
+    margin-top: 2rem;
+}
+.gastypeselect{
+    padding: 1rem;
+    width: 60%;
+}
+.emergency{
+    margin-top: 2rem;
+} 
+.twobtns{
+    padding: 1rem;
+}
+.nobtn{
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.5rem;
+    background-color: rgb(247, 247, 150);
+}
+.yesbtn{
+    border: none;
+    outline: none;
+    padding: 0.8rem  1.5rem;
+}

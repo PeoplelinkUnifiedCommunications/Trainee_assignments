@@ -1,0 +1,8 @@
+.PrdoverviewContainer{
+    width: 48%;
+    margin: 3px 5px;
+    border: 1px solid gray;
+}
+.setscolorblue{
+    background-color: rgb(152, 236, 185);
+}
