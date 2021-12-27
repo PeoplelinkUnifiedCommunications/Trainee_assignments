@@ -1,0 +1,88 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.cards{
+    width: 30%;
+    height: auto;
+    background-color: white;
+    margin: 2%;
+}
+.card_leftcontent h4{
+    margin: 0%;
+}
+.card_rightcontent{
+    display: flex;
+}
+.card-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+.card-content h4{
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img1{
+    width: 50%;
+    height: 35vh;
+    padding: 1rem;
+}
+.card_img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list{
+    padding: 1rem;
+}
+.Prices{
+    text-align: center;
+}
+.Prices span{
+    color: black;
+}
+.Prices h3{
+    color: black;
+    font-size: 1rem;
+}
+.get_btn{
+    width: 65%;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    color: white;
+    background-color:#00B098;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.Prices p{ 
+    padding: 0.5rem;
+    border: 2px solid green; 
+    width:100%;
+    margin: 5% 0 5% 0;
+    border-radius: 5px; 
+    text-align: center; 
+    font-weight: bolder;
+}
+.view_more{
+    width:100%;
+    background-color:lightgray;
+    color: rgb(65, 65, 180);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 2%;
+    border: none;
+}
+.popup{
+    background-color: #fff;
+    width: 80vw;
+    height: 80vh;
+}

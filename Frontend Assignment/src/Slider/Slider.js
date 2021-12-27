@@ -4,7 +4,7 @@ function Slider() {
     return (
         <div className="Slider">
             <div className="side-content">
-                <a href="">Home</a> {`>`} &nbsp;Hybrid Electric Water Heater
+                <a href="/">Home</a> {`>`} &nbsp;Hybrid Electric Water Heater
                 <div className="header">
                     <h1>Tell Us About Your Project</h1>
                 </div>
@@ -29,7 +29,9 @@ function Slider() {
                     <input type="yes" placeholder="Yes" />
                 </div>
             </div>
+           
         </div>
+         
     )
 }
 export default Slider
