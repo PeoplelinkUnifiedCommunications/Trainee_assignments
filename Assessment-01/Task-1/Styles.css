@@ -1,0 +1,100 @@
+body {
+  background-color: #ffaaad;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.Wrapper {
+  width: 95%;
+  margin: auto;
+}
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #89d4c8;
+  height: 50px;
+}
+h1 {
+  color: white;
+}
+.Container {
+  display: flex;
+  gap: 1rem;
+}
+.Aside {
+  width: 30%;
+  height: 500px;
+  margin-top: 20px;
+  background-color: #42bab8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Article {
+  background-color: #ff6e72;
+  width: 100%;
+  height: 500px;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 20px;
+}
+.Content {
+  margin-top: 180px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.Cards {
+  height: 200px;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  justify-content: center;
+}
+.Card1 {
+  background-color: #d6d5d5;
+  color: white;
+  font-size: 20px;
+  width: 150px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #89d4c8;
+  height: 50px;
+  margin-top: 20px;
+}
+@media (min-width: 260px) and (max-width: 767px) 
+{
+  .Container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .Aside {
+    width: 100%;
+  }
+  .Content{
+    margin-top: 5%;
+  }
+  .Article {
+    margin-top: auto;
+    height: 550px;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .Cards {
+    display: grid;
+    row-gap: 10px;
+  }
+  .Card1 {
+    width: 85vw;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
