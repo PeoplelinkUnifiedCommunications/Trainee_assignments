@@ -1,0 +1,40 @@
+
+.aside{
+    height: auto;
+    width: 100%;
+    padding: 8px;
+}
+h3{
+    padding: 20px 0px;
+    color: grey;
+}
+.txtdet{
+    text-align: center;
+}
+.listdiv{
+    /* padding:25px; */
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+}
+
+.liststyle{
+    color:#00b098;
+    list-style-type: none;
+    justify-content: space-evenly;
+
+}
+.ext{
+    color:black;
+}
+.btnn{
+    background-color: transparent;
+    color: blue;
+    border: 2px solid blue;
+    padding: 6px;
+    border-radius: 6px;
+}
+.fntcolor{
+    color:var(--bgcolor)
+
+}

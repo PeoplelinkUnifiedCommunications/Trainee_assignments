@@ -1,0 +1,103 @@
+
+ .card      {height:100%; width:100%;padding:8px; }
+ .cardinner {  background-color:white; height:100%;  padding:8px;/* border:2px solid red; */ }
+ .cardHeader{  background-color: #000; color: #fff; padding: 5px; display: flex; }  
+   
+ .headerRgt{
+ display: flex;
+ margin-left: auto;
+ /* border: 2px solid red; */
+ justify-content: center;
+ align-items: center;
+     
+ }
+
+ .logo{
+     width:50px;
+     height: 50px;
+ }
+ .img{
+     height:auto;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ .imgcnt{
+     width:50%;
+     height: auto;
+ }
+ .listitems{
+     width: 100%;
+     display: flex;
+     justify-content: space-evenly;
+     list-style-position: inside; 
+     padding: 8px;
+     align-items: center;
+     /* border: 2px solid red; */
+ }
+ ul{
+     list-style: none;
+ }
+ 
+
+ 
+ .listitem1{
+     padding-top: 12px;
+ }
+ .text1{
+     font-size: small;
+     text-align: left;
+ }
+ .icon{
+     color: var(--bgcolor);
+     margin-right: 25px;
+     padding-top: 5px;
+ }
+ .prices{
+      display: flex;
+     justify-content: space-around;
+     
+ }
+ .result{
+     padding: 25px;
+     text-align: center;  
+ }
+ 
+ .text{
+ border: 4px solid green;
+ justify-content: center;
+ padding: 10px;
+ display: flex;
+ width: 100%;
+ }
+ 
+ .btn{
+     text-align: center;
+     background-color:var(--bgcolor);
+     padding: 10px;
+     color: #fff;
+     border: none;
+     border-radius: 8px;
+     }
+ 
+ .cntrend{
+     margin: 10px 0 0 0;
+     text-align: center;
+     color: blue; 
+     font-size: small;
+     /* border: 2px solid red; */
+     background-color: #eee;
+ }
+ 
+ .txtclr{
+     color:green
+ }
+ .txtclrs{
+     color:var(--bgcolor);
+ }
+  @media (min-width:1113px){
+     .card{
+         width:33.33333%;
+     }
+ } 
