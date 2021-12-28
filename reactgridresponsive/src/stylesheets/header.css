@@ -1,0 +1,9 @@
+.header{
+    height: 3.5 rem;
+    width: 100%;
+    background-color: cyan;
+    text-align: center;
+    /* position: fixed; */
+    color: #fff;
+    /* padding-bottom: 20px; */
+}

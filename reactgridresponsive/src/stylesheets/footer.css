@@ -1,0 +1,8 @@
+.footer{
+    height: 3.5 rem;
+    width: 100%;
+    background-color: cyan;
+    text-align: center;
+    color: #fff;
+    /* padding-bottom: 20px; */
+}
