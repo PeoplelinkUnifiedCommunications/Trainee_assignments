@@ -1,0 +1,31 @@
+.genrate_slot {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.slot_heading {
+	font-size: 15px;
+	font-weight: 700;
+	color: #5e5e5e;
+}
+.input_txt_tag {
+	margin-left: 5px;
+	width: 30px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 3px dashed #5e5e5e;
+}
+.genrate {
+	height: 25px;
+	width: 100%;
+	border: 2px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0px;
+}
+.slot_genrate_container1 {
+	padding: 20px;
+}
