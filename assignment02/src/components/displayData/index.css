@@ -1,0 +1,35 @@
+.display-data-container-bg {
+    background-image: linear-gradient(
+            rgba(255, 255, 255, 0.9),
+            rgb(255, 255, 255, 0.9)
+        ),
+        url("/home/peoplelink/Documents/peoplelink/Trainee_assignments/assignment02/public/Parking-Dashboard.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    overflow-x: auto;
+}
+@media screen and (min-width: 768px) {
+    .display-data-container-bg {
+        margin-left: 3px;
+        padding: 10px;
+        overflow-x: auto;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #5e5e5e;
+    font-size: 20px;
+}
+
+th {
+    width: 20%;
+    height: 40px;
+}
+td {
+    width: 20vw;
+    border: 1px solid black;
+    text-align: center;
+    height: 40px;
+}
