@@ -1,0 +1,19 @@
+.right{
+    background-color: rgb(255, 129, 129);
+    height: 600px;
+    width: 1200px;
+    margin-left: 30px;
+    margin-top: 40px;
+    
+    
+}
+.article{
+    color: whitesmoke;
+    text-align: center;
+    font-size: xx-large;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}

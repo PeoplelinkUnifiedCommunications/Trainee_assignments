@@ -1,0 +1,14 @@
+.footer{
+        background-color: deepskyblue;
+        height: 100px;
+        width: 90vw;
+        margin-left: 100px;
+        margin-top: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        font-size: xx-large;
+       
+}

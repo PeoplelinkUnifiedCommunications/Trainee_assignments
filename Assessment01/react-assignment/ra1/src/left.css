@@ -1,0 +1,17 @@
+.aside{
+    background-color: blue;
+    height: 500px;
+    width: 400px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.aside1{
+    color: whitesmoke;
+    font-size: x-large;
+    margin-top: 40px;
+    margin-left: 30px;
+    
+}

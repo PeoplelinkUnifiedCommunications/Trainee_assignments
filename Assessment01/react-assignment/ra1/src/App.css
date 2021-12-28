@@ -1,0 +1,9 @@
+.app{
+  background-color: deeppink;
+  height: 102vh;
+  width: auto;
+  margin-top: -21px;
+}
+.seshu{
+  display: flex;
+}
