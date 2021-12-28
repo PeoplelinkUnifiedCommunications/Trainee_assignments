@@ -1,0 +1,79 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  
+}
+.Header{
+  width: 100%;
+  height: 10vh;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+.content{
+  display: flex;
+}
+
+.Main{
+  width: 100%;
+  height: 70vh;
+  margin-top: 1%;
+  background-color: lightblue;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+.card{
+  display: flex;
+}
+.card1, .card2{
+  display: flex;
+  justify-content: space-between;
+}
+button{
+  width: 8%;
+  margin: 1%;
+  padding: 1rem;
+  font-weight: 700;
+}
+.Footer{
+  width: 100%;
+  height: 10vh;
+  background-color: lightblue;
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+a{
+  font-size: 1rem;
+}
+@media(min-width:260px) and (max-width:767px){
+  button{
+    width: 30%;
+  }
+}
+@media(min-width:767px) and (max-width:1112px){
+  button{
+    width: 15%;
+  }
+}
+@media(min-width:1113px) and (max-width:1336px){
+  button{
+    width: 10%;
+    padding: 1rem;
+    margin: 0.8%;
+  }
+}
+
+
