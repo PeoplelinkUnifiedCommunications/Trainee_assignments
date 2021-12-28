@@ -1,0 +1,195 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+.Middle{
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    background-color: lightblue;
+    margin-top: 10px;
+}
+.Blocks_Line1{
+    display: flex;
+    gap:10px
+}
+.Block1{
+    width: 100px;
+    height: 45px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Block2{
+    width: 100px;
+    height: 45px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Blocks_Line2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap:10px
+}
+.Block3{
+    width: 100px;
+    height: 45px;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Block4{
+    width: 100px;
+    height: 45px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Blocks_Line3{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap:10px
+}
+.Block5{
+    width: 100px;
+    height: 45px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Block6{
+    width: 100px;
+    height: 45px;
+    background-color: lightslategray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Blocks_Line4{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap:10px
+}
+.Blocks_Line3{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap:10px
+}
+.Block5{
+    width: 100px;
+    height: 45px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Block6{
+    width: 100px;
+    height: 45px;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Blocks_Line4{
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-start
+}
+
+.Block7{
+    width: 100px;
+    height: 45px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Block8{
+    width: 100px;
+    height: 45px;
+    background-color: violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Block9{
+    width: 100px;
+    height: 45px;
+    background-color: darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Blocks_Line5{
+    display: flex;
+    gap:10px
+}
+.Block10{
+    margin-top: 10px;
+    width: 100px;
+    height: 45px;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Blocks_Line6{
+    display: flex;
+    gap:10px
+}
+.Block11{
+    margin-top: 10px;
+    width: 100px;
+    height: 45px;
+    background-color: palevioletred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Blocks_Line7{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.Block12{
+    width: 100px;
+    height: 45px;
+    background-color: violet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Block13{
+    width: 100px;
+    height: 45px;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Block14{
+    width: 100px;
+    height: 45px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
