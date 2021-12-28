@@ -1,0 +1,27 @@
+.pera1{
+    color:#666666;
+    font-size: 24px;
+    text-transform: capitalize;
+    padding-bottom: 16px;
+}
+.part1Innertext{
+   font-size: 22px;
+}
+.cleanHealth{
+   color: var(--secondaryColor);
+   font-weight: bold;
+   font-size: 24px;
+   text-transform: capitalize;
+    line-height: 24px;
+}
+.peraInnerText{
+   color:var(--background);
+   font-weight: 700;
+   font-size: 24px;
+}
+.part1{
+   width: 100%;
+   border-bottom: none;
+   padding: 10px;
+   
+}

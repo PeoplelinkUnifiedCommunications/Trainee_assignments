@@ -1,0 +1,159 @@
+:root {
+  --blue: #335BFF;
+  --selectColor: #3341ff;
+  --brdrColor: rgba(0,0,0,0.12); 
+  --textColor:#003966; 
+    --background:#F68D39;
+    --bordercolor:#77a456;
+    --buttonBordercolor:#869fe0;
+    --secondaryColor:rgba(55,103,80,1);
+    --innertextcolor:#666666;
+    --popupbgcolor:rgba(55,103,80,1);
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,body{
+  width: 100%;
+  height: 100vh;
+
+}
+body        { font-size: 1rem; font-family: 'Courier New', Courier, monospace; color: rgba(0,0,0,0.87); background-color: #EEEEEE; }
+#root{
+  width: 100%;
+  height: 100%;
+}
+h1 { font-size: 2.0rem; word-break: break-word; line-height: 2rem; }
+h2{font-size: 1.5rem; word-break: break-word; line-height: 1.50rem;  }
+h3{font-size: 1.25rem; word-break: break-word; line-height: 1.25rem;  }
+h4{font-size: 1.125rem; word-break: break-word; line-height: 1rem; }
+h5{font-size: 1.0rem; word-break: break-word; line-height: 0.5rem; }
+h6{font-size: 0.875rem; word-break: break-word; line-height: 0.25rem; }
+
+
+.baseCntnr{
+  width: 100%;
+  height: 100%;
+}
+.mainCntnr { display: flex; flex: none; width: 100%; flex-direction: column; height: 100vh; }
+.sideNav{
+  width: calc(100% - 56px);
+  height: 100vh;
+  /* border: 1px solid rgb(60, 255, 0); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:1000;
+  transform: translateX(-105%);
+  transition: all 0.3s ease;
+
+}
+/* .sideNave{
+transform: translateX(0%);
+} */
+
+.rowFlex    { display: flex; flex-direction: row; flex: none; width: 100%; }
+.colFlex    { display: flex; flex-direction: column; flex: none; width: 100%; }
+.resRowCol  { display: flex; flex-direction: row; flex: none; width: 100%; }
+.resColRow  { display: flex; flex-direction: column; flex: none; width: 100%; }
+
+.flexMinWidthCol{
+  display: flex;
+  flex:1;
+  min-width: 0;
+  flex-direction: column;
+}
+.flexMinWidthRow{
+  display: flex;
+  flex:1;
+  min-width: 0;
+  flex-direction: row;
+}
+.flexMinWidth{
+  display: flex;
+  flex:1;
+  min-width: 0;
+  flex-direction: row;
+}
+/* padding */
+.pdngXS    {padding: 0.25rem;}
+.pdngSM    {padding: 0.875rem;}
+.pdngMD    {padding: 1rem;}
+.pdngLG    {padding: 1.5rem;}
+.pdngXL    {padding: 2rem;}
+
+.pdngHXS  {padding:0 0.25rem;}
+.pdngHSM  {padding:0 0.5rem;}
+.pdngHMD  {padding:0 1rem;}
+.pdngHLG  {padding:0 1.5rem;}
+.pdngHXL  {padding:0 2rem;}
+
+.pdngVXS  {padding:0.25rem 0;}
+.pdngVSM  {padding:0.5rem 0;}
+.pdngVMD  {padding: 1rem 0;}
+.pdngVLG  {padding:1.5rem 0;}
+.pdngVXL  {padding:2rem 0;}
+
+/* RESPONSIVE PADDINGS */
+.resPdngMD { padding:  1.0rem }
+
+/* margin */
+.mrgnXS    {margin: 0.25rem;}
+.mrgnSM    {margin: 0.5rem;}
+.mrgnMD    {margin: 1rem;}
+.mrgnLG    {margin: 1.5rem;}
+.mrgnXL    {margin: 2rem;}
+
+.mrgnHXS  {margin:0 0.25rem;}
+.mrgnHSM  {margin:0 0.5rem;}
+.mrgnHMD  {margin:0 1rem;}
+.mrgnHLG  {margin:0 1.5rem;}
+.mrgnHXL  {margin:0 2rem;}
+.mrgnH   {margin:0 1rem}
+
+.mrgnVXS  {margin:0.25rem 0;}
+.mrgnVSM  {margin:0.5rem 0;}
+.mrgnVMD  {margin:1rem 0;}
+.mrgnVLG  {margin:1.5rem 0;}
+.mrgnVXL  {margin:2rem 0;}
+.mrgnv   {margin:0 1rem}
+
+
+.brdr       {border: solid 1px var(--innertextcolor); border-radius: 4px;}
+.brdrBtm    { border-bottom: 1px solid var(--brdrColor)}
+.brdrTop    {border-top: 1px solid var(--brdrColor)}
+.brdrleft     {border-left: 1px solid var(--brdrColor)}
+.brdrright     {border-right: 1px solid var(--brdrColor)}
+
+.borderRadius   {border-radius:16px;}
+.textCenter     {text-align: center;}
+.fontSize       {font-size: 1rem;}
+.textCapital    {text-transform:capitalize ;}
+.textLower      {text-transform: lowercase;}
+.textMuted{
+  color: #666666;
+}
+.textRight{
+  text-align: right;}
+.card { width: 100%;}
+
+@media (min-width: 768px) and (max-width: 1112px) {
+  
+} 
+
+@media (min-width:1113px) {
+  .resRowCol  { flex-direction: column;}
+  .resColRow  { flex-direction: row;}
+  .resPdngHMD { padding: 1.5rem; }
+  .sideNav    { width: 320px; transform: translateX(0);  }
+  .mainCntnr  { width: calc(100% - 320px); margin-left: 320px; }
+  .card       { width: 33.3333333%; }
+  .heatPumpImg  { width: 50%; }
+   .list{ width: 50%; }
+   .part1{ border-bottom: 2px solid var(--innertextcolor); padding-bottom: 30px; margin-bottom: 30px; }
+}
+
+

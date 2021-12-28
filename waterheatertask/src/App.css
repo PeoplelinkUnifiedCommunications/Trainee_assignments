@@ -1,0 +1,15 @@
+/* .sideNav{
+    width: calc(100% - 56px);
+    height: 100vh;
+    border: 1px solid rgb(60, 255, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:1000;
+    transform: translateX(-105%);
+    transition: all 0.3s ease;
+
+  }
+.sideNave{
+  transform: translateX(0%);
+} */

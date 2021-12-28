@@ -1,0 +1,45 @@
+.productbg{
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+}
+.PDCard{
+    width: 100%;
+    border: 1px solid var(--innertextcolor);
+    border-radius: 8px;
+    line-height: 20px;
+    font-family: "roboto";
+}
+.PDcard1{
+    width: 100%;
+    border: 1px solid var(--innertextcolor);
+    border-radius: 8px;
+    line-height: 20px;
+    font-family: "roboto";
+}
+.PDbgCardhead{
+    background-color: var(--popupbgcolor);
+    border-radius: 8px 0px;
+    color: white; 
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "roboto";
+}
+.WITh{
+    color: var(--innertextcolor);
+}
+.flexMinWidthPDtext{
+    display: flex;
+    flex: 1 1;
+    min-width: 175px;
+    flex-direction: row;
+}
+.LftCntr{
+    width: 70%;
+}
+.Rgtcntr{
+    width: 30%;
+}
+@media (min-width:1113px) {
+    .PDcard1{ width: 50%;}
+}

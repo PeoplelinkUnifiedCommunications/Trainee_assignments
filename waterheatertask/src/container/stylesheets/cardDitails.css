@@ -1,0 +1,113 @@
+.CDCntr{
+    border-bottom: 1px solid var(--innertextcolor);
+    padding-bottom: 10px;
+}
+.leftBTNPart{
+    margin-right: auto;
+}
+.CDTxt{
+   color:var(--innertextcolor) ;
+   
+}
+.rightBTNPart{
+    margin-left: auto;
+}
+.bgImg{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width: auto;
+    height:100%;
+    border-radius: 15px}
+.rightCntr{
+    width: 100%;
+    height: 100%;
+    list-style-position:inside ;
+}
+.lCntr{
+    padding: 20px;
+}
+.RhemTxt{
+    font-size: 38px;
+    font-weight: 900;
+    width: 100%;
+}
+.RhmInnerTxt{
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--innertextcolor);
+    line-height: 24px;
+}
+.XE65{
+    color: var(--secondaryColor);
+    font-size: 26px;
+    font-weight: 100;
+}
+.listItems{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    list-style-type:none ;
+    width: 70%;
+}
+.liDot{
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--popupbgcolor);
+    margin-right: 12px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px;
+}
+.listText{
+   line-height: 30px;
+   font-weight: 500;
+   display: inline;
+}
+.amtStyl{
+    font-size: 32px;
+    
+}
+.linestyl{
+    border: 1px solid red;
+    transform:rotate(60deg) ;
+    z-index: 0;
+}
+.textStyl{
+    color: var(--popupbgcolor);
+    border-left: 1px solid var(--innertextcolor);
+    padding-left: 20px;
+    font-size: 32px;
+    font-weight: bold ;
+    font-family: "roboto";
+}
+.getInstall{
+    background-color: var(--background);
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-family: "roboto";
+    font-weight: 500;
+    border: none;
+    border-radius: 8px; 
+    margin-right: 24px;
+}
+.incentives{
+    padding-left: 40px;
+}
+@media (min-width:1113px){
+    .bgImg{
+        width: 40%;
+    }
+    .rightCntr{
+        width: 60%;
+    }
+    
+}
