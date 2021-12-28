@@ -1,0 +1,12 @@
+.headerBg{
+    background-color: rgb(103, 238, 238);
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+}
+.headerText{
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,30 @@
+.ContentCntr{
+    background-color: rgb(219, 109, 109);
+    color: white;
+}
+.images{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    
+}
+
+.img{
+    /* padding: 16px; */
+}
+.cntrIMG{
+    justify-content: space-evenly;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+
+}
+/* .article{
+    justify-content: center;
+    align-items: center;
+} */
+@media (min-width:1113px) {
+    .card{
+        width: 33.33333%;
+    }
+}
