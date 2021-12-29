@@ -1,0 +1,22 @@
+.main-container {
+	width: 100vw;
+	box-sizing: border-box;
+	color: #5e5e5e;
+	min-height: 100vh;
+}
+@media screen and (min-width: 768px) {
+	.main-container {
+		height: 100vh;
+	}
+}
+.main-page {
+	display: flex;
+	height: 84.6%;
+}
+@media screen and (max-width: 767px) {
+	.main-page {
+		display: flex;
+		flex-direction: column;
+		height: 84.6%;
+	}
+}

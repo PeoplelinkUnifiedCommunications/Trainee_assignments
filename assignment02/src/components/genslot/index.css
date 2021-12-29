@@ -1,0 +1,40 @@
+.slots-container {
+	width: 80%;
+	background-image: linear-gradient(
+			rgba(255, 255, 255, 0.9),
+			rgb(255, 255, 255, 0.9)
+		),
+		url("./../../Parking-Dashboard.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+@media screen and (max-width: 767px) {
+	.slots-container {
+		display: none;
+	}
+}
+
+.table {
+	width: 100%;
+}
+
+tr {
+	height: 40px;
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.table-data {
+	text-align: center;
+}
+
+.icons {
+	color: red;
+	cursor: pointer;
+	margin: 6px;
+}

@@ -1,0 +1,12 @@
+.footer {
+	box-sizing: border-box;
+	width: 100vw;
+	align-items: center;
+	background-color: #f6ae42;
+	padding: 5px 20px;
+}
+.footer-heading {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
