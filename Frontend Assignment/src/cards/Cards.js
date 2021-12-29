@@ -41,11 +41,14 @@ function Cards(props) {
                 <h4 style={{ padding: " 3px 10px" }}>Utility Incentives <img src={props.logo} alt="too1" /> .....................................<span> $ 1,000 </span></h4>
                 <h3>Equipment Cost <img src={props.logo} alt="tooltip" /> <span>{props.Equipment_cost}</span></h3>
                 <p>Your Est Annual Savings is <span>$120</span><img src={props.logo} alt="img"></img></p>
-                <button className='get_btn'>Get Install Quote</button>
+                <button className='get_btn'>Get Install Quote</button>  
             </div>
             <Popup modal trigger={
-                <button className='view_more'>View More Details</button>
+                <div>
+                <button className='view_more'>{props.view_more}</button>
+                </div>
             } >
+    
                 <NextPage />
             </Popup>
         </div>

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .cards{
-    width: 30%;
+    width: 29%;
     height: auto;
     background-color: white;
     margin: 2%;
@@ -85,4 +85,9 @@
     background-color: #fff;
     width: 80vw;
     height: 80vh;
+}
+@media (min-width:260px) and (max-width:767px){
+    .cards{
+        width: 95%;
+    }    
 }

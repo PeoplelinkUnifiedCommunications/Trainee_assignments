@@ -3,7 +3,7 @@ import Bottom from "../Bottom/Bottom";
 import Main from "../Main/Main";
 import './Header.css'
 import tag from './image/tag.svg'
-function Header() {
+function Header(props) {
     return (
         <>
             <div className="Header">

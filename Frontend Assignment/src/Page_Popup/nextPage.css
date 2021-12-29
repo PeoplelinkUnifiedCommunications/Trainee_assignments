@@ -1,7 +1,10 @@
 .popup{
-    width: 95vw;
-    height: 90vh;
+    width: 70%;
+    height: 85vh;
+    margin-left: 20%;
     background-color: #EEEEEE;
+    box-shadow: 5px 5px 5px 5px grey;
+    overflow-y: scroll;
 }
 .pop{
     display: flex;
@@ -34,33 +37,3 @@ button{
     background-color: white;
     border: 3px solid blue;
 }
-.Product{
-    width: 97%;
-    margin: 2%;
-    height: auto;
-    background-color: white;
-    padding: 1rem;
-}
-.Product a{
-    padding: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    color:#888080;
-}
-.Product a:hover{
-    color: green;
-    padding: bottom 0rem;
-    border-bottom: 5px solid green;
-}
-.Product p{
-    padding: 1rem;
-}
-.cards1{
-    width: 25%;
-    background-color: green;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-
