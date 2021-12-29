@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "960496094191",
+    "project_id": "person-30e33",
+    "storage_bucket": "person-30e33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960496094191:android:9d493ea06c89bf79d5441a",
+        "android_client_info": {
+          "package_name": "com.ontrack.m"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960496094191-dp39577f29tovlde3abg1093f7incc6o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2XIo4X5E4z8tp2Ilxee8bMn340VJJEbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960496094191-dp39577f29tovlde3abg1093f7incc6o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
