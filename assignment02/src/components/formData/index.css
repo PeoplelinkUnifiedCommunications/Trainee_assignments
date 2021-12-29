@@ -102,9 +102,16 @@
 }
 .slot-input-container {
     display: flex;
+    margin-bottom: 10px;
 }
 .slot-input {
     background-color: transparent;
     border: none;
+    border-bottom: 2px dashed #5e5e5e;
+    width: 30px;
     outline: none;
+}
+.available-slot {
+    border: none;
+    border-bottom: 2px dashed #5e5e5e;
 }
