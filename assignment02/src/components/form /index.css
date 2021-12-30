@@ -39,6 +39,7 @@
 	color: white;
 	height: 30px;
 	border-radius: 3px;
+	margin: 0px;
 }
 .generate-slot-cont {
 	box-sizing: border-box;
@@ -88,4 +89,9 @@
 }
 .inputs-container {
 	width: 100%;
+}
+.submit-cont {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 }

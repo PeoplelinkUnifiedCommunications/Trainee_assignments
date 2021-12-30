@@ -1,0 +1,108 @@
+.main-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	background-color: rgb(201, 252, 235);
+	background-size: cover;
+	padding: 20px;
+}
+@media screen and (max-width: 767px) {
+	.main-container {
+		height: 100%;
+	}
+}
+.sub-container {
+	display: flex;
+}
+@media screen and (max-width: 767px) {
+	.sub-container {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.form-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+	.form-container {
+		width: 90%;
+		margin-bottom: 50px;
+	}
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #7e858e;
+	box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.8);
+	padding: 50px;
+	background-color: white;
+	width: 300px;
+	flex-grow: 1;
+}
+
+.input-label {
+	color: #4c4e50;
+	font-family: "Roboto";
+	font-size: 12px;
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+.input-field {
+	color: #131415;
+	font-family: "Roboto";
+	font-size: 20px;
+	border: 1px solid #7e858e;
+	border-radius: 4px;
+	height: 30px;
+	padding-left: 16px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	outline: none;
+	cursor: text;
+}
+
+.button {
+	background-color: rgb(68, 79, 236);
+	border-width: 0px;
+	border-radius: 3px;
+	color: white;
+	width: 120px;
+	height: 32px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.star-symbol {
+	color: red;
+}
+.error-msg {
+	color: red;
+	margin: 0px;
+}
+
+.success {
+	color: green;
+	text-align: center;
+	margin-bottom: 0px;
+}
+.links {
+	text-decoration: none;
+	text-align: center;
+	color: blue;
+	margin-top: 20px;
+}

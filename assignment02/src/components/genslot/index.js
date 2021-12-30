@@ -10,10 +10,6 @@ function Genslots() {
 	);
 	const dispatch = useDispatch();
 
-	// const editSlotDetails = (eachSlot) => {
-	// 	dispatch(updateSlot(eachSlot));
-	// };
-
 	const searchResults = allotedSlots.filter((item) => {
 		return Object.keys(item).some((key) => {
 			if (key !== "id") {
@@ -29,12 +25,12 @@ function Genslots() {
 			<div className='back-cont'>
 				<table className='table'>
 					<tbody>
-						<tr className='table-row'>
-							<th className='table-data'>SL_number</th>
-							<th className='table-data'>Registration_Number</th>
-							<th className='table-data'>Owner_Name</th>
-							<th className='table-data'>Car/Bike_Color</th>
-							<th className='table-data'>Remove/Update</th>
+						<tr className='table-row-header'>
+							<th className='table-data1'>SL_number</th>
+							<th className='table-data1'>Registration_Number</th>
+							<th className='table-data1'>Owner_Name</th>
+							<th className='table-data1'>Car/Bike_Color</th>
+							<th className='table-data1'>Remove/Update</th>
 						</tr>
 						{searchResults.map((eachSlot) => (
 							<tr key={eachSlot.id} className='table-row'>

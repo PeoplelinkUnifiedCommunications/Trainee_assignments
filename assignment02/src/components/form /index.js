@@ -1,19 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { updateGenSlots, addSlots } from "../../store/index";
+import InputForm from "../inputform";
+import { v4 } from "uuid";
 
 import "./index.css";
 
 function Form() {
 	const data = useSelector((state) => state.user.value);
 	const { genSlots, allotedSlots, toUpdateSlotsDetails } = data;
-	console.log(toUpdateSlotsDetails.ownerName);
 	const [form, setForm] = useState({
 		ownerName: "",
 		regNumber: "",
 		vehicleColor: "",
 		slotNumber: "",
 	});
+
+	const isUpdate = toUpdateSlotsDetails.length !== 0;
 
 	const [slots, setSlots] = useState(genSlots);
 
@@ -22,6 +25,7 @@ function Form() {
 
 	const dispatchSlots = () => {
 		dispatch(updateGenSlots(slots));
+		setError({});
 	};
 
 	function validateColor(data) {
@@ -42,152 +46,166 @@ function Form() {
 		return regex.test(data);
 	};
 
-	const validate = () => {
-		const errorObject = {};
-		let retValue = true;
+	useEffect(() => {
+		if (toUpdateSlotsDetails.length !== 0) {
+			setForm({
+				ownerName: toUpdateSlotsDetails[0].ownerName,
+				regNumber: toUpdateSlotsDetails[0].regNumber,
+				vehicleColor: toUpdateSlotsDetails[0].vehicleColor,
+				slotNumber: toUpdateSlotsDetails[0].slotNumber,
+			});
+		}
+	}, [toUpdateSlotsDetails]);
+
+	const validation = (errorObject) => {
+		let valRet = true;
 		const isSlotExist = allotedSlots.find(
 			(each) => parseInt(each.slotNumber) === parseInt(form.slotNumber)
 		);
+		const isVehExist = allotedSlots.find(
+			(each) => each.regNumber === form.regNumber
+		);
 		if (form.ownerName === "") {
 			errorObject.ownerNameError = "Enter The Name";
-			retValue = false;
+			valRet = false;
 		} else if (!validateCharecters(form.ownerName)) {
 			errorObject.ownerNameError = "Enter The Valid Name";
-			retValue = false;
+			valRet = false;
 		}
 		if (form.regNumber === "") {
 			errorObject.regNumberError = "Enter The regNumber";
-			retValue = false;
+			valRet = false;
 		} else if (!validateRegNumber(form.regNumber)) {
 			errorObject.regNumberError = "Enter The Valid Registration number";
-			retValue = false;
+			valRet = false;
+		} else if (
+			isVehExist &&
+			toUpdateSlotsDetails[0] !== undefined &&
+			form.regNumber !== toUpdateSlotsDetails[0].regNumber
+		) {
+			errorObject.regNumberError = "registration Already Exists";
+			valRet = false;
+		} else if (isVehExist && toUpdateSlotsDetails[0] === undefined) {
+			errorObject.regNumberError = "registration number alredy exist";
+			valRet = false;
 		}
 		if (form.vehicleColor === "") {
 			errorObject.vehicleColorError = "Enter The vehicleColor";
-			retValue = false;
+			valRet = false;
 		} else if (!validateColor(form.vehicleColor)) {
 			errorObject.vehicleColorError = "Enter The Valid Color";
-			retValue = false;
+			valRet = false;
 		}
 		if (form.slotNumber === "") {
 			errorObject.slotNumberError = "Enter The slotNumber";
-			retValue = false;
+			valRet = false;
 		} else if (!validateSlot(form.slotNumber)) {
 			errorObject.slotNumberError = "Enter The Valid slot";
-			retValue = false;
+			valRet = false;
 		} else if (
 			!(parseInt(form.slotNumber) > 0 && parseInt(form.slotNumber) <= genSlots)
 		) {
 			errorObject.slotNumberError = `Enter Slot Number Between 1 to ${genSlots}`;
-			retValue = false;
-		} else if (isSlotExist) {
+			valRet = false;
+		} else if (
+			isSlotExist &&
+			toUpdateSlotsDetails[0] !== undefined &&
+			form.slotNumber !== toUpdateSlotsDetails[0].slotNumber
+		) {
 			errorObject.slotNumberError = "SlotNumber Already Exists";
-			retValue = false;
+			valRet = false;
+		} else if (isSlotExist && toUpdateSlotsDetails[0] === undefined) {
+			errorObject.slotNumberError = "SlotNumber Already Exists";
+			valRet = false;
 		}
+
+		return valRet;
+	};
+
+	const validate = () => {
+		const errorObject = {};
+		let retValue = true;
+		// const isSlotExist = allotedSlots.find(
+		// 	(each) => parseInt(each.slotNumber) === parseInt(form.slotNumber)
+		// );
+		if (genSlots === allotedSlots.length) {
+			if (toUpdateSlotsDetails.length === 0) {
+				errorObject.noSlots = "No more slots available";
+				retValue = false;
+			} else {
+				retValue = validation(errorObject);
+			}
+		} else {
+			retValue = validation(errorObject);
+		}
+
 		setError(errorObject);
 		return retValue;
 	};
 
-	const onSubmitform = (event) => {
+	const onSubmitInputForm = (event) => {
 		event.preventDefault();
-		if (validate()) {
-			if (allotedSlots.length === genSlots) {
-				alert("No More Slots Available");
+		if (genSlots === 0) {
+			const errorObject = {};
+			errorObject.noSlotsGenerated = "Please Generate Slots";
+			setError(errorObject);
+		} else if (validate()) {
+			let modifiedSlot;
+			if (parseInt(form.slotNumber) < 10) {
+				modifiedSlot = `00${parseInt(form.slotNumber)}`;
+			} else if (parseInt(form.slotNumber) < 100) {
+				modifiedSlot = `0${parseInt(form.slotNumber)}`;
 			} else {
-				let modifiedSlot;
-				if (parseInt(form.slotNumber) < 10) {
-					modifiedSlot = `00${parseInt(form.slotNumber)}`;
-				} else if (parseInt(form.slotNumber) < 100) {
-					modifiedSlot = `0${parseInt(form.slotNumber)}`;
-				} else {
-					modifiedSlot = parseInt(form.slotNumber);
-				}
-
-				const newSlot = {
-					id: allotedSlots.length + 1,
-					ownerName: form.ownerName,
-					regNumber: form.regNumber,
-					vehicleColor: form.vehicleColor,
-					slotNumber: modifiedSlot,
-				};
-				setForm({
-					ownerName: "",
-					regNumber: "",
-					vehicleColor: "",
-					slotNumber: "",
-				});
-				dispatch(addSlots(newSlot));
+				modifiedSlot = parseInt(form.slotNumber);
 			}
+
+			const newSlot = {
+				id:
+					toUpdateSlotsDetails.length === 0 ? v4() : toUpdateSlotsDetails[0].id,
+				ownerName: form.ownerName,
+				regNumber: form.regNumber,
+				vehicleColor: form.vehicleColor,
+				slotNumber: modifiedSlot,
+			};
+
+			setForm({
+				ownerName: "",
+				regNumber: "",
+				vehicleColor: "",
+				slotNumber: "",
+			});
+			dispatch(addSlots(newSlot));
 		}
+	};
+
+	const onChangeNameInput = (eve) => {
+		setForm((prev) => ({ ...prev, ownerName: eve }));
+	};
+
+	const onChangeRegInput = (eve) => {
+		setForm((prev) => ({ ...prev, regNumber: eve }));
+	};
+
+	const onChangeColorInput = (eve) => {
+		setForm((prev) => ({ ...prev, vehicleColor: eve }));
+	};
+
+	const onChangeSlotInput = (eve) => {
+		setForm((prev) => ({ ...prev, slotNumber: eve }));
 	};
 
 	return (
 		<div className='form-gen'>
-			<form className='form-container' onSubmit={onSubmitform}>
-				<div className='inputs-container'>
-					<input
-						type='text'
-						className='input-field'
-						value={form.ownerName}
-						placeholder='Owner_name'
-						onChange={(e) =>
-							setForm((prev) => ({ ...prev, ownerName: e.target.value }))
-						}
-					/>
-					{error.ownerNameError && (
-						<p className='error-msg'>{error.ownerNameError}</p>
-					)}
-				</div>
-				<div>
-					<input
-						type='text'
-						className='input-field'
-						value={form.regNumber}
-						placeholder='Registration_Number'
-						onChange={(e) =>
-							setForm((prev) => ({ ...prev, regNumber: e.target.value }))
-						}
-					/>
-					{error.regNumberError && (
-						<p className='error-msg'>{error.regNumberError}</p>
-					)}
-				</div>
-				<div>
-					<input
-						type='text'
-						className='input-field'
-						value={form.vehicleColor}
-						placeholder='Car/Bike_Color'
-						onChange={(e) =>
-							setForm((prev) => ({ ...prev, vehicleColor: e.target.value }))
-						}
-					/>
-					{error.vehicleColorError && (
-						<p className='error-msg'>{error.vehicleColorError}</p>
-					)}
-				</div>
-				<div>
-					<input
-						type='text'
-						className='input-field'
-						placeholder='Slot_Number'
-						value={form.slotNumber}
-						onChange={(e) =>
-							setForm((prev) => ({
-								...prev,
-								slotNumber: e.target.value,
-							}))
-						}
-					/>
-					{error.slotNumberError && (
-						<p className='error-msg'>{error.slotNumberError}</p>
-					)}
-				</div>
-
-				<button type='submit' className='submit-button'>
-					Allot the Solt
-				</button>
-			</form>
+			<InputForm
+				form={form}
+				error={error}
+				isUpdate={isUpdate}
+				onChangeNameInput={onChangeNameInput}
+				onChangeRegInput={onChangeRegInput}
+				onChangeColorInput={onChangeColorInput}
+				onChangeSlotInput={onChangeSlotInput}
+				onSubmitInputForm={onSubmitInputForm}
+			/>
 			<div className='generate-slot-cont'>
 				<div className='slot-cont'>
 					<label htmlFor='gen-slot'>Genrate Slots:</label>
@@ -206,6 +224,9 @@ function Form() {
 						onClick={dispatchSlots}>
 						Genrate
 					</button>
+					{error.noSlotsGenerated && (
+						<p className='error-msg'>{error.noSlotsGenerated}</p>
+					)}
 				</div>
 				<div className='slot-cont'>
 					Available Slots:

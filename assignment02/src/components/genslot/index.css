@@ -7,10 +7,15 @@
 		url("./../../Parking-Dashboard.png");
 	background-repeat: no-repeat;
 	background-position: center;
+	box-sizing: border-box;
+	overflow: auto;
+}
+.slots-container::-webkit-scrollbar {
+	display: none;
 }
 @media screen and (max-width: 767px) {
 	.slots-container {
-		display: none;
+		width: 100%;
 	}
 }
 
@@ -19,14 +24,18 @@
 }
 
 tr {
-	height: 40px;
+	height: 74px;
 }
 
 table,
-th,
 td {
-	border: 1px solid black;
 	border-collapse: collapse;
+	border-bottom: 1px solid black;
+}
+.table-row-header {
+	position: sticky;
+	top: 0px;
+	background-color: rgb(240, 239, 238);
 }
 
 .table-data {

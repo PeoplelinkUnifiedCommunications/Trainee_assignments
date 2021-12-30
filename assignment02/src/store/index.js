@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialStateValue = {
 	genSlots: 0,
 	allotedSlots: [],
-	toUpdateSlotsDetails: {},
+	toUpdateSlotsDetails: [],
 	searchvalue: "",
 };
 
@@ -15,7 +15,19 @@ export const userSlice = createSlice({
 			state.value.genSlots = parseInt(action.payload);
 		},
 		addSlots: (state, action) => {
-			state.value.allotedSlots = [...state.value.allotedSlots, action.payload];
+			if (state.value.toUpdateSlotsDetails.length === 0) {
+				state.value.allotedSlots = [
+					...state.value.allotedSlots,
+					action.payload,
+				];
+			} else {
+				let index = state.value.allotedSlots.findIndex(
+					(each) => each.id === action.payload.id
+				);
+				console.log(index);
+				state.value.allotedSlots.splice(index, 1, action.payload);
+				state.value.toUpdateSlotsDetails = [];
+			}
 		},
 		deleteSlot: (state, action) => {
 			state.value.allotedSlots = state.value.allotedSlots.filter(
@@ -23,13 +35,7 @@ export const userSlice = createSlice({
 			);
 		},
 		updateSlot: (state, action) => {
-			state.value.toUpdateSlotsDetails = action.payload;
-		},
-		updateSlotDetails: (state, action) => {
-			let index = state.value.allotedSlots.findIndex(
-				(each) => each.id === action.payload.id
-			);
-			state.value.allotedSlots.slice(index, 1, action.payload);
+			state.value.toUpdateSlotsDetails = [action.payload];
 		},
 		sortedItems: (state, action) => {
 			state.value.searchvalue = action.payload;
@@ -37,13 +43,7 @@ export const userSlice = createSlice({
 	},
 });
 
-export const {
-	addSlots,
-	updateGenSlots,
-	deleteSlot,
-	updateSlot,
-	sortedItems,
-	updateSlotDetails,
-} = userSlice.actions;
+export const { addSlots, updateGenSlots, deleteSlot, updateSlot, sortedItems } =
+	userSlice.actions;
 
 export default userSlice.reducer;
