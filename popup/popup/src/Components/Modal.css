@@ -1,0 +1,51 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 5px;
+}
+
+.close-modal {
+    position: absolute;
+    bottom: 05px;
+    right: 10px;
+    padding: 5px 7px;
+    background-color: red;
+    color: white;
+    outline: white
+}
+
+
+.tip{
+    background-color: blue;
+    border: 1px solid black;
+    padding: 10px;
+}
