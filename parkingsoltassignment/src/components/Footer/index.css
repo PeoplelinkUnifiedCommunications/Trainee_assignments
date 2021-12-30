@@ -1,0 +1,11 @@
+.footer-section{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    background-color:#F6AE42;
+    font-size:18px;
+    font-weight:bold;
+    font-family: "Roboto";
+    height:50px;
+}
