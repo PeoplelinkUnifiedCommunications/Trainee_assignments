@@ -159,15 +159,7 @@ const FormContainer = ({ appState, addNewData, addUpdateData }) => {
       }));
     } else if (appState.slots === 0) {
       alert("Genrate slots first");
-    }
-
-    // else if(availbelOrNot && appState.editSlot[0]!==undefined && appState.editSlot[0].slotNum!==userFileds.slotNumber){
-    // 	alert(`Slot ${userFileds.slotNumber} is filled`)
-    // }
-    // else if(availbelOrNot && appState.editSlot[0] === undefined){
-    // 	alert(`Slot ${userFileds.slotNumber} is filled`)
-    // }
-    else if (
+    } else if (
       newData.slotNum > appState.slots &&
       appState.userVehicalData.length === appState.slots
     ) {
