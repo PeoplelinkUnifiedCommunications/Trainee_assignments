@@ -33,9 +33,8 @@
 }
 @media screen and (min-width: 768px) {
     .input-field {
-        height: 40px;
-        margin-bottom: 35px;
-        font-size: 30px;
+        height: 30px;
+        font-size: 24px;
     }
 }
 ::placeholder {
@@ -48,6 +47,11 @@
     ::placeholder {
         font-size: 20px;
     }
+}
+
+.error-msg {
+    padding: 0;
+    margin: 0;
 }
 
 .slot-button {

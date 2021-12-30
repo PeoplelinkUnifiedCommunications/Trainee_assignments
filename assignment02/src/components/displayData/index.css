@@ -7,15 +7,16 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    overflow-x: auto;
+    overflow: auto;
 }
 @media screen and (min-width: 768px) {
     .display-data-container-bg {
         margin-left: 3px;
         padding: 10px;
-        overflow-x: auto;
+        overflow: auto;
     }
 }
+
 table {
     width: 100%;
     border-collapse: collapse;

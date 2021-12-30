@@ -8,7 +8,12 @@ import "./index.css";
 
 const DisplayData = () => {
     const parkingDataList = useSelector((state) => state.addReducer.dataList);
+    const searchData = useSelector((state) => state.addReducer.search);
     const disPatch = useDispatch();
+
+    const filteredDataList = parkingDataList.filter((each) =>
+        each.registrationNumber.toLowerCase().includes(searchData.toLowerCase())
+    );
 
     return (
         <div className="display-data-container-bg">
@@ -23,8 +28,8 @@ const DisplayData = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {parkingDataList.map((eachData) => (
-                        <tr>
+                    {filteredDataList.map((eachData) => (
+                        <tr key={eachData.id}>
                             <td>{eachData.slotNumber}</td>
                             <td>{eachData.registrationNumber}</td>
                             <td>{eachData.ownerName}</td>

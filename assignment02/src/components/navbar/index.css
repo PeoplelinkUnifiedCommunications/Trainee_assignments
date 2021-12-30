@@ -86,6 +86,7 @@
     height: 100%;
     border: none;
     background-color: transparent;
+    outline: none;
 }
 .search-box::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
