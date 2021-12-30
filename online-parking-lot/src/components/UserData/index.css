@@ -1,0 +1,73 @@
+.data-container{
+    background-color: transparent;
+    height: 80vh;
+    width: 20vw;
+    border: none;
+    border-right: 2px solid #F6AE42;
+}
+.form-container{
+    background-color: transparent;
+    padding: 25px;
+    color: #5E5E5E;
+    display: flex;
+    flex-direction: column;
+    height: 55%;
+    text-align: center;   
+}
+.slot-container{
+    background-color: #F6AE42;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.data{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid #F6AE42;
+}
+.slot-button{
+    background-color: #F6AE42;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    margin-top: 10px;
+    font-size: medium;
+}
+.generate-button{
+    background-color:transparent;
+    height: 30px;
+    font-size: medium;
+    margin-bottom: 20px;
+}
+.par{
+    font-size: large;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.slots{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.slot-input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px dashed black;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 25px;
+}
+.error-msg{
+    font-size: medium;
+    color: red;
+    text-align: left;
+}

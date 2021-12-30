@@ -35,5 +35,8 @@ function UserDetails() {
      )
     
 }
+const mapStateToProps=(state)=>({
+    list:state;
+})
+export default connect(mapStateToProps,{addData})(UserDetails);
 
-export default UserDetails

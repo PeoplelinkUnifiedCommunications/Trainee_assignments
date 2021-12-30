@@ -1,0 +1,44 @@
+.header-container{
+    background-color: #F6AE42;
+    color: #5E5E5E;
+    font-family: "Roboto";
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    height: 20%;
+}
+.img-container{
+    display:flex;
+    flex-direction: row;
+}
+.header{
+    font-style: normal;
+    font-weight: bold;
+}
+.car-img{
+    height: 60px;
+    width:80px;
+}
+.search-container{
+    background-color: transparent;
+    border:2px solid black;
+    border-radius: 10px;
+    width:30vw;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search{
+    background-color: transparent;
+    border: none;
+    outline:none;
+    cursor:pointer;
+    width: 90%;
+}
+.search-img{
+    height: 70px;
+    width: 30px;
+}

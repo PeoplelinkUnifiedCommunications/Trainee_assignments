@@ -1,12 +1,14 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
+import MouseContainer from './useeffect'
+import Ref from './ref.js'
 
 function App(){
-    const [count, setCount] = useState(0)
-    useEffect(()=>console.log({count}), [count])
+
     return(
     <div>
-        <h1>enter count {count}</h1>
-        <button onClick={()=>setCount(count+1)}>submit</button>
+      <MouseContainer/>
+      <Ref/>
+      <h1>Heading</h1>
     </div>
     )
 
