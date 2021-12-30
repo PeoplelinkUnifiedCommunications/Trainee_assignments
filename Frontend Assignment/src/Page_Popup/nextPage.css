@@ -6,10 +6,7 @@
     box-shadow: 5px 5px 5px 5px grey;
     overflow-y: scroll;
 }
-.pop{
-    display: flex;
-    align-items: center;
-}
+
 .popup_header{
     display: flex;
     justify-content: space-between;
@@ -36,4 +33,10 @@ button{
 .popup_side img:hover{
     background-color: white;
     border: 3px solid blue;
+}
+@media(min-width:260px) and (max-width:767px){
+    .popup{
+        width: 100%;
+        margin-left: 0%;
+    }
 }

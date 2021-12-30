@@ -39,17 +39,41 @@ function Cards(props) {
                 <span>(Installation not included)</span>
                 <h4 style={{ padding: "3px 10px" }}>Federal Tax Credit <img src={props.logo} alt="too1" /> ...................................<span> $ 300 </span></h4>
                 <h4 style={{ padding: " 3px 10px" }}>Utility Incentives <img src={props.logo} alt="too1" /> .....................................<span> $ 1,000 </span></h4>
-                <h3>Equipment Cost <img src={props.logo} alt="tooltip" /> <span>{props.Equipment_cost}</span></h3>
+                <div className="equipment">
+                    <h3>Equipment Cost <img src={props.logo} alt="tooltip" /> <span>{props.Equipment_cost}</span></h3>
+                </div>
                 <p>Your Est Annual Savings is <span>$120</span><img src={props.logo} alt="img"></img></p>
-                <button className='get_btn'>Get Install Quote</button>  
-            </div>
-            <Popup modal trigger={
-                <div>
-                <button className='view_more'>{props.view_more}</button>
+            </div> <Popup modal trigger={
+                <div className="quote">
+                    <button className='get_btn'>Get Install Quote</button>
                 </div>
             } >
-    
+                {close => (
+                    <>
+                        <div className="test">
+                        <button onClick={() => close()}>x</button><br />    
+                            Top Selling Geysers & Water Heaters Price List in India
+                            Latest Geysers & Water Heaters Models	Price
+                            Sameer Geyser Instant Mini 3 Liter Ivory Water Heater	₹1609
+                            Bajaj RHX-2 800W Room Heater	₹1143
+                            Fogger 1500W Shockproof Water Heater Immersion Rod, SBI00014	₹331
+                            Bajaj Flashy 1000W Room Heater, 267230	₹761
+                        </div>
+                    </>
+                )
+                }
+            </Popup>
+            <Popup modal trigger={
+                <div>
+                    <button className='view_more'>{props.view_more}</button>
+                </div>
+            } >
+                {close=>(
+                    <div className="close">
+                        <button onClick={() => close()}>x</button><br />    
                 <NextPage />
+                </div>
+                )}
             </Popup>
         </div>
     )

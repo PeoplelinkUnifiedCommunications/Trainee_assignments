@@ -1,20 +1,20 @@
-import React from "react";
-function Slide(){
-    // const slide = document.querySelector("input[type=range]");
-    // const value=document.querySelector(".value");
-    // slide.textContent = slide.value;
-    // slide.oninput = function(){
-    //     value.textContent=this.value;
-    // }
-    return(
+import React, { useState} from "react";
+function Slide() {
+    const [value, onChange] = useState(0);
+
+    return (
         <div className="slide">
             <div className="range">
-                <input type="range" min="0" max="100"/>
+                <input type="range" min="0" max="100" value={value}
+                    onChange={({ target: { value: radius } }) => {
+                        onChange(radius)
+                    }}
+                />
             </div>
-            <div className="value" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-                100
+            <div className="percentage">
+                {value}%
             </div>
         </div>
-    )
+    );
 }
 export default Slide;

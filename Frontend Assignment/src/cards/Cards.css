@@ -49,7 +49,7 @@
     color: black;
 }
 .Prices h3{
-    color: black;
+    color: rgb(124, 124, 124);
     font-size: 1rem;
 }
 .get_btn{
@@ -61,6 +61,21 @@
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
+}
+.test{
+    width: 50%;
+    height: 85vh;
+    margin-left: 30%;
+    background-color: white;
+}
+.close button{
+    float: right;
+}
+.test button{
+    float: right;
+}
+.quote{
+    text-align: center;
 }
 .Prices p{ 
     padding: 0.5rem;
@@ -85,6 +100,10 @@
     background-color: #fff;
     width: 80vw;
     height: 80vh;
+}
+.view_more:hover{
+    color: orange;
+    cursor: pointer;
 }
 @media (min-width:260px) and (max-width:767px){
     .cards{

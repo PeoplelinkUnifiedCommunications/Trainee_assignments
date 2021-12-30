@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState}from "react";
 import Bottom from "../Bottom/Bottom";
 import Main from "../Main/Main";
 import './Header.css'
 import tag from './image/tag.svg'
-function Header(props) {
+function Header() {
+    const[show,setShow]=useState(false)
     return (
         <>
             <div className="Header">
@@ -16,9 +17,10 @@ function Header(props) {
                     <Main />
                 </div>
                 <div className="button1">
-                    <button>See More Details</button>
+                    <button type="button" onClick={() => setShow(!show)} >See More Details</button>
                 </div>
-                <Bottom />
+                { show ?
+                <Bottom /> : null}
             </div>
         </>
     )

@@ -25,12 +25,6 @@ function Slider() {
                     </div>
                     <h4>Size you water heater</h4>
                     <Slide />
-                    {/* <div className="slide">
-                    <div className="range">
-                        <input type="range" min="0" max="100"  />
-                    </div>
-                    <div className="percentage">100</div>
-                    </div> */}
                     <div className="fuel">
                         <h4>What is your current water heater fuel type?</h4>
                         <select>

@@ -20,6 +20,9 @@ span{
     color:white;
     font-weight: 700;
 }
+h1{
+    color: #003963;
+}
 h5{
     margin: 0%;
     font-size: 1.4rem;
@@ -37,11 +40,16 @@ border-bottom:1px solid #7c7878 ;
 }
 .button1 button{
     width: 20%;
+    cursor: pointer;
     font-size: 1rem;
+    font-weight: 700;
     padding: 1rem;
     margin: 0 0 0 2%;
     color: #003963;
     border-color: #003963;
+}
+.button1 button:hover{
+    background-color: orange;
 }
 @media (min-width:260px) and (max-width:767px){
     .main{
@@ -49,6 +57,15 @@ border-bottom:1px solid #7c7878 ;
     }
     .Header{
         width: 100%;
+    }
+    .header-content{
+        font-size: 0.9rem;
+    }
+    h5{
+        font-size: 1rem;
+    }
+    .button1 button{
+        width: 50%;
     }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Cards from "../cards/Cards";
 const Main=() => {
-    let Data = [
+    let data=[
         {
             id:1,
             manufacturer_name:'Rheem',
@@ -15,8 +15,7 @@ const Main=() => {
             Utility_incentives:'.......................$ 1,300',
             Equipment_cost:'.....................$ 499',
             your_annual_saving_is:'$ 120',
-            view_more:'View  More Details'
-
+            view_more:'View  More Details',
         },
         {
             id:2,
@@ -96,7 +95,7 @@ const Main=() => {
     return(
         <>
         { 
-        Data.map((elem) => {
+        data.map((elem) => {
         return <Cards key={elem.id} {...elem}/>
         })
     }

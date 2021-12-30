@@ -1,5 +1,5 @@
 import React from "react";
-import Information from "./Information/Information";
+import Information from "../Information/Information";
 import './Popuop_Bottom.css'
 function PopupBottom() {
     return (

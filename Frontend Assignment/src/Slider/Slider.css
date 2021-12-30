@@ -43,21 +43,25 @@ input[type=text]{
     display: flex;
 }
 .searchicon{
-    margin-left: 40%;
+    margin-left: 10%;
     padding: 0.4rem;
     border: 1px solid black;
     background: orange;
 }
 .slide{
     display: flex;
+    gap: 10px;
 }
 .percentage{
     border: 1px solid black;
     margin-left: 1%;
-    padding: 0.5rem;
+    width: 30%;
+    font-size: 1.3rem;
+    padding: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: chocolate;
 }
 .fuel select{
     width: 40%;
@@ -73,7 +77,7 @@ input[type=text]{
     background-color: orange;
 }
 .range{
-    width: 50%;
+    width: 60%;
     padding: 1rem;
     border: 1px solid black;
 }
