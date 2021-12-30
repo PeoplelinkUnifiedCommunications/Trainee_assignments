@@ -1,0 +1,47 @@
+.headerContainer{
+    background-color: #F6AE42;    
+    width:100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+.logoContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top:10px;
+    margin-left:18px;
+}
+.logo{
+    height:85%;
+    width:20%;
+}
+.logHeading{    
+    color:#5E5E5E;
+    font-weight: bold;
+    font-size: 28px;
+    padding-top:5%;    
+}
+.searchContainer{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin:15px;
+}
+.searchInput{
+    font-size: 20px;
+    padding:8px;
+    background-color:transparent ;
+    border: none; 
+    outline:none;
+    cursor:pointer;  
+}
+.searchIcon{
+    height:6vh;
+    width:3vw;
+    color:#5E5E5E;
+}

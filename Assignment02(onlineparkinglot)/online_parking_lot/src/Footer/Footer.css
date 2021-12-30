@@ -1,0 +1,18 @@
+.footerContainer{
+    background-color: #F6AE42;    
+    width:100vw;
+    height:5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.icon{
+    align-items: center;
+    font-weight: bold;
+    height:2vh;
+    width:1vw;
+    padding-top: 16px;
+}
+.content{
+    font-weight: bold;
+}
