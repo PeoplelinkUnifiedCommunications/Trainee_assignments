@@ -1,34 +1,35 @@
 .tabel {
-	width: 100%;
+  width: 100%;
 
-	border-collapse: collapse;
+  border-collapse: collapse;
+  box-shadow: 10px 10px 10px 10px #fff;
 }
 
 .tabel_heading {
-	text-align: center;
-	border: 1px solid #5e5e5e;
+  text-align: center;
+  border: 1px solid #5e5e5e;
 }
 .tabel_heading1 {
-	text-align: center;
-	border-top: none;
-	border-bottom: 1px solid #5e5e5e;
-	border-right: 1px solid #5e5e5e;
-	border-left: 1px solid #5e5e5e;
+  text-align: center;
+  border-top: none;
+  border-bottom: 1px solid #5e5e5e;
+  border-right: 1px solid #5e5e5e;
+  border-left: 1px solid #5e5e5e;
 }
 .deleteBtn {
-	background-color: transparent;
-	border: none;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .delete {
-	color: #f6ae42;
-	font-size: 17px;
+  color: #f6ae42;
+  font-size: 17px;
 }
 .del_edit {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
