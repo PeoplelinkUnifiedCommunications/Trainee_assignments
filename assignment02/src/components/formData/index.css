@@ -26,7 +26,7 @@
     border: none;
     border-bottom: 2px solid #f6ae42;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     outline: none;
     color: #5e5e5e;
     font-size: 16px;
@@ -52,6 +52,12 @@
 .error-msg {
     padding: 0;
     margin: 0;
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    height: 16px;
+    margin-bottom: 10px;
 }
 
 .slot-button {
@@ -98,6 +104,8 @@
 @media screen and (min-width: 768px) {
     .generate-text {
         font-size: 20px;
+        padding: 0;
+        margin: 0;
     }
     .generate-button {
         height: 40px;
@@ -112,10 +120,26 @@
     background-color: transparent;
     border: none;
     border-bottom: 2px dashed #5e5e5e;
-    width: 30px;
+    width: 45px;
     outline: none;
+    color: #5e5e5e;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 7px;
 }
 .available-slot {
     border: none;
     border-bottom: 2px dashed #5e5e5e;
+}
+
+.instruction {
+    display: none;
+}
+
+.on-hover:hover + .instruction {
+    display: block;
+    position: absolute;
+    background-color: aqua;
+    padding: 20px 40px;
+    border-radius: 10px;
 }

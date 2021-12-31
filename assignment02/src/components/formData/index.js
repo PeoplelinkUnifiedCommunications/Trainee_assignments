@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { v4 } from "uuid";
 import { useSelector, useDispatch } from "react-redux";
 import { addSlots, addData, onUpdate } from "../../parkingReducer";
+import { BsInfoCircle } from "react-icons/bs";
 import "./index.css";
 
 const FormData = () => {
@@ -83,42 +84,42 @@ const FormData = () => {
             (each) => each.registrationNumber === formData.registrationNumber
         );
         if (formData.ownerName === "") {
-            errorObject.ownerNameError = "Enter The Name";
+            errorObject.ownerNameError = "*Enter The Name";
             retValue = false;
         } else if (!validateCharacters(formData.ownerName)) {
-            errorObject.ownerNameError = "Enter The Valid Name";
+            errorObject.ownerNameError = "*Enter The Valid Name";
             retValue = false;
         }
         if (formData.registrationNumber === "") {
-            errorObject.regNumberError = "Enter The regNumber";
+            errorObject.regNumberError = "*Enter The Registration Number";
             retValue = false;
         } else if (!validateRegNumber(formData.registrationNumber)) {
-            errorObject.regNumberError = "Enter The Valid Registration number";
+            errorObject.regNumberError = "*Enter The Valid Registration Number";
             retValue = false;
         } else if (
             isVehExist &&
             editableData[0] !== undefined &&
             formData.registrationNumber !== editableData[0].registrationNumber
         ) {
-            errorObject.regNumberError = "registration Already Exists";
+            errorObject.regNumberError = "*Registration Number Already Exist";
             retValue = false;
         } else if (isVehExist && editableData[0] === undefined) {
-            errorObject.regNumberError = "registration number alredy exist";
+            errorObject.regNumberError = "*Registration Number Already Exist";
             retValue = false;
         }
 
         if (formData.vehicleColor === "") {
-            errorObject.vehicleColorError = "Enter The vehicleColor";
+            errorObject.vehicleColorError = "*Enter The Vehicle Color";
             retValue = false;
         } else if (!validateColor(formData.vehicleColor)) {
-            errorObject.vehicleColorError = "Enter The Valid Color";
+            errorObject.vehicleColorError = "*Enter The Valid Color";
             retValue = false;
         }
         if (formData.slotNumber === "") {
-            errorObject.slotNumberError = "Enter The slotNumber";
+            errorObject.slotNumberError = "*Enter The Slot Number";
             retValue = false;
         } else if (!validateSlot(formData.slotNumber)) {
-            errorObject.slotNumberError = "Enter The Valid slot";
+            errorObject.slotNumberError = "*Enter The Valid Slot";
             retValue = false;
         } else if (
             !(
@@ -126,17 +127,17 @@ const FormData = () => {
                 parseInt(formData.slotNumber) <= slots
             )
         ) {
-            errorObject.slotNumberError = `Enter Slot Number Between 1 to ${slots}`;
+            errorObject.slotNumberError = `*Enter Slot Number Between 1 to ${slots}`;
             retValue = false;
         } else if (
             isSlotExist &&
             editableData[0] !== undefined &&
             formData.slotNumber !== editableData[0].slotNumber
         ) {
-            errorObject.slotNumberError = "SlotNumber Already Exists";
+            errorObject.slotNumberError = "*SlotNumber Already Exists";
             retValue = false;
         } else if (isSlotExist && editableData[0] === undefined) {
-            errorObject.slotNumberError = "SlotNumber Already Exists";
+            errorObject.slotNumberError = "*SlotNumber Already Exists";
             retValue = false;
         }
         return retValue;
@@ -144,11 +145,14 @@ const FormData = () => {
 
     //-------------------------------------------------------//
     const validate = () => {
-        const errorObject = {};
+        const errorObject = {
+            slotNumberError: "",
+            vehicleColorError: "",
+            regNumberError: "",
+            ownerNameError: "",
+        };
         let valRet = true;
-        // const isSlotExist = allotedSlots.find(
-        // 	(each) => parseInt(each.slotNumber) === parseInt(form.slotNumber)
-        // );
+
         if (slots === parkingDataList.length) {
             if (editableData.length === 0) {
                 console.log("hjk");
@@ -189,6 +193,7 @@ const FormData = () => {
                 }
             } else {
                 const editableId = editableObject.id;
+                console.log(editableId);
                 const userObject = {
                     id: editableId,
                     slotNumber: formData.slotNumber,
@@ -222,6 +227,8 @@ const FormData = () => {
                         }))
                     }
                 />
+                <BsInfoCircle className="on-hover" />
+                <p className="instruction">Please Enter Name in Alphabets</p>
                 <p className="error-msg ">{errorMsgObject.ownerNameError}</p>
                 <input
                     type="text"
@@ -265,17 +272,18 @@ const FormData = () => {
                 <button type="submit" className="slot-button">
                     Allot the Slot
                 </button>
+                <p className="error-msg ">{errorMsgObject.noSlots}</p>
             </form>
 
             <div className="slot-generator-bg">
                 <div className="slot-input-container">
                     <label htmlFor="slotInput" className="generate-text">
-                        Generate Slots :
+                        {slots < 1 ? "Generate Slots :" : "Add More Slots :"}
                     </label>
                     <input
                         value={generateSlots === 0 ? "" : generateSlots}
                         id="slotInput"
-                        type="number"
+                        type="text"
                         placeholder=""
                         className="slot-input"
                         onChange={(e) => setGeneratedSlots(e.target.value)}

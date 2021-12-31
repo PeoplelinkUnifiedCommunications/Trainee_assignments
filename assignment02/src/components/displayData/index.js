@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { delData, editData } from "../../parkingReducer";
 import { MdDeleteOutline } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
+import { IoCarSportSharp, IoCarSportOutline } from "react-icons/io5";
 
 import "./index.css";
 
@@ -11,14 +12,22 @@ const DisplayData = () => {
     const searchData = useSelector((state) => state.addReducer.search);
     const disPatch = useDispatch();
 
-    const filteredDataList = parkingDataList.filter((each) =>
-        each.registrationNumber.toLowerCase().includes(searchData.toLowerCase())
-    );
+    const filteredDataList = parkingDataList.filter((item) => {
+        return Object.keys(item).some((key) => {
+            if (key !== "id") {
+                return item[key]
+                    .toLowerCase()
+                    .includes(searchData.toLowerCase());
+            } else {
+                return null;
+            }
+        });
+    });
 
     return (
         <div className="display-data-container-bg">
             <table>
-                <thead>
+                <thead className="table-head">
                     <tr>
                         <th>Sl_Num</th>
                         <th>Registration_Number</th>
@@ -33,7 +42,27 @@ const DisplayData = () => {
                             <td>{eachData.slotNumber}</td>
                             <td>{eachData.registrationNumber}</td>
                             <td>{eachData.ownerName}</td>
-                            <td>{eachData.vehicleColor}</td>
+                            <td>
+                                {eachData.vehicleColor}
+                                {eachData.vehicleColor !== "white" ? (
+                                    <IoCarSportSharp
+                                        style={{
+                                            color: eachData.vehicleColor,
+                                            marginLeft: "10px",
+                                            paddingTop: "5px",
+                                            fontSize: "30px",
+                                        }}
+                                    />
+                                ) : (
+                                    <IoCarSportOutline
+                                        style={{
+                                            marginLeft: "10px",
+                                            paddingTop: "5px",
+                                            fontSize: "30px",
+                                        }}
+                                    />
+                                )}
+                            </td>
                             <td>
                                 <MdDeleteOutline
                                     className="icon"

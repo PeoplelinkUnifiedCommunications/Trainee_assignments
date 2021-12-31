@@ -8,7 +8,8 @@ const Footer = () => {
             <div className="copy-right-container">
                 <AiOutlineCopyright className="copy-right-text" />
                 <p className="copy-right-text">
-                    2021.PeopleLink. All Rights Reserved.
+                    2021.PeopleLink. All Rights Reserved. Developed By Siva
+                    Koteswara Rao. Technologies: ReactJS, React Redux
                 </p>
             </div>
         </div>
