@@ -1,11 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './SideNav.css'
 import tag from './Images/search-bar.svg'
 import tag1 from './Images/info.svg'
 
 
+const SideNav = (props) => {
+    
+const [values, setValues] = useState(0)
+     const setValue = (e) =>{
+         setValues(e.target.value)
+         props.onChangeValue(e.target.value)
+     }
 
-const SideNav = () => {
+
     return (
         <div className='sidenav'>
             <a href='Header.js'>Home</a>{`>`}<span>Hybrid Electric Water</span><br  /><br />
@@ -24,7 +31,10 @@ const SideNav = () => {
             </div><br />
             <span className='location'> Size Your Water Heater</span>&nbsp;<img src={tag1} alt='info_image'></img>
             <div className='size'>
-            <input className='Range' type='range'/>
+            <input className='Range' type='range'min='0' max='6' value= {values} onChange={setValue}/>
+            <div className='p'>
+                {values}
+            </div>
             <input className='range1' />
             </div><br />
             <span className='location'>What Is Your Current Hot Water Fuel Type</span>
