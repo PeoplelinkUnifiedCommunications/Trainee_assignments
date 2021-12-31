@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "../cards/Cards";
-const Main=() => {
+const Main=(props) => {
     let data=[
         {
             id:1,
@@ -46,56 +46,58 @@ const Main=() => {
             your_annual_saving_is:'$ 120',
             view_more:'View  More Details'
         },
-        // {
-        //     id:4,
-        //     manufacturer_name:'Rheem',
-        //     name:'Pro Prestige 50 LeakGuar',
-        //     ef:'3.4 ef',
-        //     logo:'Images/info.svg',
-        //     logo1:'Images/EnergyStar.png',
-        //     banner_logo:'Images/img1.png',
-        //     base_price:'Base_Price................................$ 1,799',
-        //     Federal_tax:'...................................$ 1,300',
-        //     Utility_incentives:'.......................$ 1,300',
-        //     Equipment_cost:'.....................$ 499',
-        //     your_annual_saving_is:'$ 120',
-        //     view_more:'View  More Details'
+        {
+            id:4,
+            manufacturer_name:'Rheem',
+            name:'Pro Prestige 50 LeakGuar',
+            ef:'3.4 ef',
+            logo:'Images/info.svg',
+            logo1:'Images/EnergyStar.png',
+            banner_logo:'Images/img1.png',
+            base_price:'Base_Price................................$ 1,799',
+            Federal_tax:'...................................$ 1,300',
+            Utility_incentives:'.......................$ 1,300',
+            Equipment_cost:'.....................$ 499',
+            your_annual_saving_is:'$ 120',
+            view_more:'View  More Details'
 
-        // },
-        // {
-        //     id:5,
-        //     manufacturer_name:'A.O.Smith',
-        //     name:'Pro Prestige 50 LeakGuar',
-        //     ef:'3.4 ef',
-        //     logo:'./Images/info.svg',
-        //     logo1:'Images/EnergyStar.png',
-        //     banner_logo:'Images/img2.png',
+        },
+        {
+            id:5,
+            manufacturer_name:'A.O.Smith',
+            name:'Pro Prestige 50 LeakGuar',
+            ef:'3.4 ef',
+            logo:'./Images/info.svg',
+            logo1:'Images/EnergyStar.png',
+            banner_logo:'Images/img2.png',
 
-        //     base_price:'................................$ 1,799',
-        //     Availabe_incentives:'.......................$ 1,300',
-        //     Equipment_cost:'.....................$ 599',
-        //     your_annual_saving_is:'$ 120',
-        //     view_more:'View  More Details'
-        // },
-        // {
-        //     id:6,
-        //     manufacturer_name:'Rheem',
-        //     name:'Pro Prestige 50 LeakGuar',
-        //     ef:'3.4 ef',
-        //     logo:'Images/info.svg',
-        //     logo1:'Images/EnergyStar.png',  
-        //     banner_logo:'Images/img3.png',
-        //     base_price:'................................$ 1,799',
-        //     Availabe_incentives:'.......................$ 1,300',
-        //     Equipment_cost:'.....................$ 599',
-        //     your_annual_saving_is:'$ 120',
-        //     view_more:'View  More Details'
-        // },
+            base_price:'................................$ 1,799',
+            Availabe_incentives:'.......................$ 1,300',
+            Equipment_cost:'.....................$ 599',
+            your_annual_saving_is:'$ 120',
+            view_more:'View  More Details'
+        },
+        {
+            id:6,
+            manufacturer_name:'Rheem',
+            name:'Pro Prestige 50 LeakGuar',
+            ef:'3.4 ef',
+            logo:'Images/info.svg',
+            logo1:'Images/EnergyStar.png',  
+            banner_logo:'Images/img3.png',
+            base_price:'................................$ 1,799',
+            Availabe_incentives:'.......................$ 1,300',
+            Equipment_cost:'.....................$ 599',
+            your_annual_saving_is:'$ 120',
+            view_more:'View  More Details'
+        },
     ];
+  
+    let updatedData = data.slice(0,props.value)
     return(
         <>
         { 
-        data.map((elem) => {
+        updatedData.map((elem) => {
         return <Cards key={elem.id} {...elem}/>
         })
     }

@@ -3,7 +3,7 @@ import Bottom from "../Bottom/Bottom";
 import Main from "../Main/Main";
 import './Header.css'
 import tag from './image/tag.svg'
-function Header() {
+function Header(props) {
     const[show,setShow]=useState(false)
     return (
         <>
@@ -14,7 +14,7 @@ function Header() {
                 </div>
                 <h5>Your Hybrid Electric Water Heater Recomonded Options</h5>
                 <div className="main">
-                    <Main />
+                    <Main  value={props.value}/>
                 </div>
                 <div className="button1">
                     <button type="button" onClick={() => setShow(!show)} >See More Details</button>

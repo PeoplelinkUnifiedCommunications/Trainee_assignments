@@ -5,9 +5,9 @@ function Previous(){
         <div className="pop">
             Heat Pump Electric Water Heater {'>'} Reheem Performance Platinum 50
         </div>
-        <div className="buttons">
+        <div className="buttons" style={{display:'flex'}}>
            <button>{'<'} Previous</button>
-            <button>Next {'>'}</button>
+           <button>next{'>'} </button>
         </div>
     </div>
     )

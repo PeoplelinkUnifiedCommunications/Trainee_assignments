@@ -1,7 +1,8 @@
 import React from "react";
 import Slide from "./slide";
 import './Slider.css'
-function Slider() {
+function Slider(props) {
+
     return (
         <div className="Slider">
             <div className="side-content">
@@ -24,7 +25,7 @@ function Slider() {
                         </div>
                     </div>
                     <h4>Size you water heater</h4>
-                    <Slide />
+                    <Slide onChangeValue={props.onChangeValue}/>
                     <div className="fuel">
                         <h4>What is your current water heater fuel type?</h4>
                         <select>

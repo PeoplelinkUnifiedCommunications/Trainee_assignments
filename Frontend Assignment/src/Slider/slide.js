@@ -1,20 +1,22 @@
-import React, { useState} from "react";
-function Slide() {
-    const [value, onChange] = useState(0);
-
+import React, { useState, } from "react";
+function Slide(props) {
+const [values,setValues]=useState(3)
+    const setValue = (e) => {
+        setValues(e.target.value)
+        props.onChangeValue(e.target.value)
+    }
+  console.log(values)
     return (
         <div className="slide">
             <div className="range">
-                <input type="range" min="0" max="100" value={value}
-                    onChange={({ target: { value: radius } }) => {
-                        onChange(radius)
-                    }}
+                <input type="range" min="1" max="6" value={values}
+                    onChange={setValue}
                 />
             </div>
             <div className="percentage">
-                {value}%
+                {values}
             </div>
         </div>
     );
 }
-export default Slide;
+export default Slide

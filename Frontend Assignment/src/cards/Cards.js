@@ -4,7 +4,7 @@ import Popup from 'reactjs-popup'
 import NextPage from "../Page_Popup/nextPage";
 function Cards(props) {
     return (
-        <div className="cards">
+        <div className="cards" >
             <div className="card-content">
                 <div className="card_leftcontent">
                     <h3>{props.manufacturer_name}</h3>

@@ -1,16 +1,37 @@
 import React from "react";
 import "./Popup_Right.css"
+import ReactImageMagnify from 'react-image-magnify';
+// import Heater from './Images/img1.png';
+// import Copy from './Images/copy.png';
 function PopuopRight(props) {
     return (
 
         <div className="right_content">
             <div className="leftc">
-                <img src='/Images/img1.png' alt=""/>
-                <img src='/Images/img2.png' alt=""/>
-                <img src='/Images/img3.png' alt=""/>
+                <img src='/Images/img1.png' alt="" />
+                <img src='/Images/img2.png' alt="" />
+                <img src='/Images/img3.png' alt="" />
             </div>
             <div className="popup_right">
-                <img className="pop_right" src='./Images/img1.png' alt="" />
+                <div style={{ width: '150px', height: '430px',margin:'10px',}} >
+                    <ReactImageMagnify  {...{
+                        smallImage: {
+                            alt: 'Water Heater',
+                            isFluidWidth: true,
+                            src: './Images/img1.png',
+                        },
+                        largeImage: {
+                            src: './Images/img1.png',
+                            width: 1500,
+                            height: 2900
+                        },
+                        enlargedImageContainerDimensions: {
+                            width: '500%',
+                            height: '150%',
+                        }
+                    }} />
+                </div>
+                {/* <img className="pop_right" src='./Images/img1.png' alt="" /> */}
             </div>
             <div className="popup_left">
                 <div className='popupleft_content'>
@@ -25,7 +46,7 @@ function PopuopRight(props) {
                     </ul>
                     <div className='costs'>
                         <div className='cost'>
-                        <h3><sup>$</sup>1799<sup>00</sup></h3>
+                            <h3><sup>$</sup>1799<sup>00</sup></h3>
                         </div>
                         <div className='cost1'>
                             <h3><sup>$</sup>799<sup>00</sup></h3>
