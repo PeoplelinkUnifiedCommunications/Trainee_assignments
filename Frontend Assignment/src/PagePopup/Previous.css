@@ -1,0 +1,8 @@
+.previous:hover{
+    background-color: orange;
+    cursor: pointer;
+}
+.next:hover{
+    background-color: orange;
+    cursor: pointer;
+}

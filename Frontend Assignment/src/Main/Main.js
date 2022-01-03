@@ -26,7 +26,7 @@ const Main=(props) => {
             logo1:'Images/EnergyStar.png',
             banner_logo:'Images/img2.png',
 
-            base_price:'................................$ 1,799',
+            base_price:'................................$ 1,899',
             Availabe_incentives:'.......................$ 1,300',
             Equipment_cost:'.....................$ 599',
             your_annual_saving_is:'$ 120',
@@ -34,13 +34,13 @@ const Main=(props) => {
         },
         {
             id:3,
-            manufacturer_name:'Rheem',
+            manufacturer_name:'Stiebel Eltron',
             name:'Pro Prestige 50 LeakGuar',
             ef:'3.4 ef',
             logo:'Images/info.svg',
             logo1:'Images/EnergyStar.png',  
             banner_logo:'Images/img3.png',
-            base_price:'................................$ 1,799',
+            base_price:'................................$ 2,899',
             Availabe_incentives:'.......................$ 1,300',
             Equipment_cost:'.....................$ 599',
             your_annual_saving_is:'$ 120',
@@ -60,7 +60,6 @@ const Main=(props) => {
             Equipment_cost:'.....................$ 499',
             your_annual_saving_is:'$ 120',
             view_more:'View  More Details'
-
         },
         {
             id:5,
@@ -71,7 +70,7 @@ const Main=(props) => {
             logo1:'Images/EnergyStar.png',
             banner_logo:'Images/img2.png',
 
-            base_price:'................................$ 1,799',
+            base_price:'................................$ 1,899',
             Availabe_incentives:'.......................$ 1,300',
             Equipment_cost:'.....................$ 599',
             your_annual_saving_is:'$ 120',
@@ -85,7 +84,7 @@ const Main=(props) => {
             logo:'Images/info.svg',
             logo1:'Images/EnergyStar.png',  
             banner_logo:'Images/img3.png',
-            base_price:'................................$ 1,799',
+            base_price:'................................$ 2,799',
             Availabe_incentives:'.......................$ 1,300',
             Equipment_cost:'.....................$ 599',
             your_annual_saving_is:'$ 120',

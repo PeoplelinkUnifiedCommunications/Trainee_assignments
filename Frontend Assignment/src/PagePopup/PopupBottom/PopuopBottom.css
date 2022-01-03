@@ -1,6 +1,7 @@
 .Product{
     width: 97%;
     margin: 2%;
+    margin-bottom: 1%;
     height: auto;
     background-color: white;
     padding: 1rem;
@@ -77,4 +78,20 @@
     color: green;
     font-weight: 700;
     font-size: 1.5rem;
+}
+.pro{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    color:#888080;
+}
+.Overview:hover{
+    color: green;
+    padding-bottom: 0.5rem;
+    border-bottom: 5px solid green;
+}
+.Specs:hover{
+    color: green;
+    padding-bottom: 0.5rem;
+    border-bottom: 5px solid green;
 }

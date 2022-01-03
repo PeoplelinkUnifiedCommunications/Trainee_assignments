@@ -3,7 +3,7 @@ import Header from './Header/Header';
 import Slider from './Slider/Slider';
 import './App.css';
 function App() {
-  const [value,setValue]=useState(3);
+  const [value,setValue]=useState(3 );
   const onChangeValue =(props)=>{
     setValue(props)
   }

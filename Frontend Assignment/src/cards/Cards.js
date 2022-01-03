@@ -1,7 +1,7 @@
-import React from "react";
+import React  from "react";
 import "./Cards.css"
 import Popup from 'reactjs-popup'
-import NextPage from "../Page_Popup/nextPage";
+import NextPage from "../PagePopup/nextPage";
 function Cards(props) {
     return (
         <div className="cards" >
@@ -37,7 +37,7 @@ function Cards(props) {
             <div className="Prices">
                 <h3>Base Price ................................ <span>$1,799</span> </h3>
                 <span>(Installation not included)</span>
-                <h4 style={{ padding: "3px 10px" }}>Federal Tax Credit <img src={props.logo} alt="too1" /> ...................................<span> $ 300 </span></h4>
+                <h4 style={{ padding: "3px 10px" }}>Federal Tax Credit <img src={props.logo} alt="too1" />..............................<span> $1300 </span></h4>
                 <h4 style={{ padding: " 3px 10px" }}>Utility Incentives <img src={props.logo} alt="too1" /> .....................................<span> $ 1,000 </span></h4>
                 <div className="equipment">
                     <h3>Equipment Cost <img src={props.logo} alt="tooltip" /> <span>{props.Equipment_cost}</span></h3>
@@ -51,7 +51,7 @@ function Cards(props) {
                 {close => (
                     <>
                         <div className="test">
-                        <button onClick={() => close()}>x</button><br />    
+                            <button onClick={() => close()}>x</button><br />
                             Top Selling Geysers & Water Heaters Price List in India
                             Latest Geysers & Water Heaters Models	Price
                             Sameer Geyser Instant Mini 3 Liter Ivory Water Heater	₹1609
@@ -65,14 +65,14 @@ function Cards(props) {
             </Popup>
             <Popup modal trigger={
                 <div>
-                    <button className='view_more'>{props.view_more}</button>
+                    <button className='view_more'  >{props.view_more}</button>
                 </div>
             } >
-                {close=>(
+                {close => (
                     <div className="close">
-                        <button onClick={() => close()}>x</button><br />    
-                <NextPage />
-                </div>
+                        <button onClick={() => close()}>x</button><br />
+                        <NextPage />
+                    </div>
                 )}
             </Popup>
         </div>

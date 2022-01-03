@@ -1,41 +1,39 @@
-import React from "react";
-import "./Popup_Right.css"
+import React, { useState } from "react";
+import "./PopupRight.css"
 import ReactImageMagnify from 'react-image-magnify';
 // import Heater from './Images/img1.png';
 // import Copy from './Images/copy.png';
 function PopuopRight(props) {
+    const [selectedImage, setSelectedImage] = useState(props.selectedData.images[0]);
+    console.log(selectedImage); 
     return (
-
         <div className="right_content">
             <div className="leftc">
-                <img src='/Images/img1.png' alt="" />
-                <img src='/Images/img2.png' alt="" />
-                <img src='/Images/img3.png' alt="" />
+                {props.selectedData.images.length && props.selectedData.images.map(image => <img src={image} alt="" onClick={() => setSelectedImage(image)}/>)}
             </div>
-            <div className="popup_right">
-                <div style={{ width: '150px', height: '430px',margin:'10px',}} >
+            <div className="popup_right">   
+                <div style={{ width: '150px', height: '430px',margin:'10px'}} >
                     <ReactImageMagnify  {...{
                         smallImage: {
                             alt: 'Water Heater',
                             isFluidWidth: true,
-                            src: './Images/img1.png',
+                            src: `${props.selectedData.image}`,
                         },
                         largeImage: {
-                            src: './Images/img1.png',
+                            src:  `${props.selectedData.image}`,
                             width: 1500,
                             height: 2900
-                        },
+                        },  
                         enlargedImageContainerDimensions: {
                             width: '500%',
                             height: '150%',
                         }
                     }} />
                 </div>
-                {/* <img className="pop_right" src='./Images/img1.png' alt="" /> */}
             </div>
             <div className="popup_left">
                 <div className='popupleft_content'>
-                    <h2>Rheem</h2>
+                    <h2>{props.selectedData.manufacturer_name}</h2>
                     <p>50 Gal.Heat Pump Electric Water Heater</p>
                     <span>XE65T10Hd50U1</span>
                     <ul>
@@ -48,9 +46,11 @@ function PopuopRight(props) {
                         <div className='cost'>
                             <h3><sup>$</sup>1799<sup>00</sup></h3>
                         </div>
+                        <div>
                         <div className='cost1'>
                             <h3><sup>$</sup>799<sup>00</sup></h3>
                             <span>*with all incentives applied</span>
+                        </div>
                         </div>
                     </div>
                     <div className='Btn'>
