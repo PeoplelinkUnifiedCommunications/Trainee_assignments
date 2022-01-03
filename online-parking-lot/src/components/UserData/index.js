@@ -1,13 +1,14 @@
 import {v4} from "uuid"
 import { useState ,useEffect} from "react"
 import {useSelector,useDispatch} from "react-redux"
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import "./index.css"
 
 function UserData(){
 	const {list,gen_slots,editData,isEdit} = useSelector((state) => state);
 	const dispatch = useDispatch();
 
-	const [slots, setSlot] = useState(0);
+	const [slots, setSlot] = useState();
 	const [genSlotError,setSlotError]=useState('')
 	const [error,setError]=useState('')
 	const [ownerNameDetails, setOwnerName] = useState({owner:'',nameError:''});
@@ -15,20 +16,29 @@ function UserData(){
 	const [vehicleColorDetails, setVehicleColor] = useState({vehicle:'',colorError:""});
 	const [slotNumDetails, setSlotNum] = useState({slot:'',slotError:''});
 	
+	
 	useEffect(() => {
-		setOwnerName({owner:editData[0].ownerName,nameError:''});
-		setRegNum({reg:editData[0].regNum,regError:""});
-		setVehicleColor({vehicle:editData[0].vehicleColor,colorError:""});
-		setSlotNum({slot:editData[0].slotNum,slotError:''});
-		}, [editData]);
+		console.log(editData)
+		if (editData.id !== ''){
+			setOwnerName({owner:editData.ownerName,nameError:''});
+			setRegNum({reg:editData.regNum,regError:""});
+			setVehicleColor({vehicle:editData.vehicleColor,colorError:""});
+			setSlotNum({slot:editData.slotNum,slotError:''});
+		}else{
+			setOwnerName({owner:"".ownerName,nameError:''});
+			setRegNum({reg:"".regNum,regError:""});
+			setVehicleColor({vehicle:"".vehicleColor,colorError:""});
+			setSlotNum({slot:"".slotNum,slotError:''});
+
+		}}, [editData]);
 
 	const changeSlot=(e)=>{
-		if (Number(e.target.value)<1 || isNaN(e.target.value)){
-			setSlotError("Please Enter Valid Number")
-			setSlot(0)
-		}else{
-			setSlotError("")
+		if(e.target.value>0){
 			setSlot(e.target.value)
+			setSlotError("")
+		}else{
+			setSlotError("please enter correct value")
+			setSlot("")
 		}
 	}	
 	const onSubmitForm = (event) => {
@@ -68,7 +78,7 @@ function UserData(){
 			}else{
 				if (isEdit){
 					const NewSlot = {
-						id: editData[0].id,
+						id: editData.id,
 						ownerName:ownerNameDetails.owner,
 						regNum:regNumDetails.reg,
 						vehicleColor:vehicleColorDetails.vehicle,
@@ -132,20 +142,32 @@ function UserData(){
         <div className="data-container">
                 <form className="form-container" onSubmit={onSubmitForm}>
 				   <div className="input-container" >
-				       <input value={ownerNameDetails.owner} className="data" onChange={e=>setOwnerName({owner:e.target.value,nameError:""})} placeholder="Owner_Name"/>
+				       <div className="input">
+					      <input value={ownerNameDetails.owner} className="data" onChange={e=>setOwnerName({owner:e.target.value,nameError:""})} placeholder="Owner_Name" />
+				          <AiOutlineInfoCircle className="on-hover"/><p  className="hint">Hint: surya</p>
+					   </div>
 				       <p className="error-msg">{ownerNameDetails.nameError}</p>
 				   </div>
 				   <div className="input-container">
-				        <input value={regNumDetails.reg} className="data" onChange={e=>setRegNum({reg:e.target.value,regError:""})}  placeholder="Registration_Number"/>
-				   		<p className="error-msg">{regNumDetails.regError}</p>
+				        <div className="input">
+						    <input value={regNumDetails.reg} className="data" onChange={e=>setRegNum({reg:e.target.value,regError:""})}  placeholder="Registration_Number"/>
+						    <AiOutlineInfoCircle className="on-hover"/><p  className="hint">Hint: ap45-gh-3156</p>
+				   		</div>
+				        <p className="error-msg">{regNumDetails.regError}</p>
                    </div>
 				   <div className="input-container">
-				   		<input value={vehicleColorDetails.vehicle} className="data" onChange={e=>setVehicleColor({vehicle:e.target.value,colorError:''})}  placeholder="Car/Bike_Colour"/>
+				        <div className="input">
+						   <input value={vehicleColorDetails.vehicle} className="data" onChange={e=>setVehicleColor({vehicle:e.target.value,colorError:''})}  placeholder="Car/Bike_Colour"/>
+				   		   <AiOutlineInfoCircle className="on-hover"/><p  className="hint">Hint: red</p>
+						</div>
 				   		<p className="error-msg">{vehicleColorDetails.colorError}</p>
                    </div>
 				   <div className="input-container">
-				   		<input value={slotNumDetails.slot} className="data" onChange={e=>setSlotNum({slot:e.target.value,slotError:""})}  placeholder="Slot_Number"/>
-				    	<p className="error-msg">{slotNumDetails.slotError}</p>
+				        <div className="input">
+						   <input value={slotNumDetails.slot} className="data" onChange={e=>setSlotNum({slot:e.target.value,slotError:""})}  placeholder="Slot_Number"/>
+						   <AiOutlineInfoCircle className="on-hover"/><p  className="hint">Hint: 1-999</p>
+						</div>
+				   		<p className="error-msg">{slotNumDetails.slotError}</p>
 				   </div>
                    <button type="submit" className="slot-button">Allot the Slot</button> 
 				   <p className="error-msg">{error}</p>
@@ -153,14 +175,13 @@ function UserData(){
             <div className="slot-container">
                 <div className="slots">
                     <p className="par">Generate Slots: </p>
-                    <input type="text" value={slots} className="slot-input" onChange={changeSlot }/>
+                    <input type="text" value={slots===undefined?"":slots} placeholder="0" className="slot-input" autofocus onChange={changeSlot}/>
                 </div>
 				<p className="error-msg">{genSlotError}</p>
-                <button className="generate-button" onClick={()=>{dispatch({type:"GENERATE",payload:Number(slots)});setSlot('')}} type="button">Generate</button>
+                <button className="generate-button" onClick={()=>dispatch({type:"GENERATE",payload:Number(slots)})} type="button">Generate</button>
 				<div className="slots">
 				    <p className="par">Available Slots: </p>
 					<input className="slot-input" value={Number(gen_slots)-list.length} readOnly/>
-					
 				</div>
 				<div className='slots'>
                     <p className='par'>Allotted Slots: </p>

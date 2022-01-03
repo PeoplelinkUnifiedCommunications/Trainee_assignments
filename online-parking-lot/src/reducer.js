@@ -1,9 +1,9 @@
-const initial={list:[],gen_slots:0,editData:[{
+const initial={list:[],gen_slots:0,editData:{
   ownerName:"",
   regNum:"",
   vehicleColor:"",
   slotNum:"",
-}],searchInput:'',isEdit:false}
+},searchInput:'',isEdit:false}
 function reducer(state=initial,action){
     const {type,payload}=action;
       switch(type){
@@ -15,7 +15,7 @@ function reducer(state=initial,action){
           case "EDIT":
             return {
               ...state,
-              editData:(state.list).filter(post => post.id === payload),
+              editData:(state.list).find(post => post.id === payload),
               isEdit:true
             }
           case "UPDATE":
@@ -32,6 +32,7 @@ function reducer(state=initial,action){
           case "DEL":
             return {
               ...state,
+              editData:state.editData.id === payload?initial.editData:state.editData,
               list:(state.list).filter(each=>each.id!==payload),
               isEdit:false
             }

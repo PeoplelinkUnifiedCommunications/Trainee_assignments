@@ -1,9 +1,29 @@
 .data-container{
     background-color: transparent;
-    height: 80vh;
-    width: 20vw;
+    height: 80%;
+    width: 100%;
     border: none;
     border-right: 2px solid #F6AE42;
+}
+@media  screen and (min-width:760px) {
+    .data-container{
+        width: 20%;
+    }
+}
+.hint{
+    display: none;
+}
+.on-hover:hover+.hint{
+    display: block;
+    position: absolute;
+    background-color: greenyellow;
+    padding:10px 20px;
+    border-radius: 8px;
+    margin-top:25px;
+}
+.input{
+    display: flex;
+    flex-direction: row;
 }
 .form-container{
     background-color: transparent;

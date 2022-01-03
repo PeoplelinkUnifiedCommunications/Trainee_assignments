@@ -5,6 +5,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20%;
+    
     font-weight: 500;
+}
+.hints{
+    display: none;
+}
+.on-hover:hover+.hints{
+    display: block;
+    background-color: greenyellow;
 }

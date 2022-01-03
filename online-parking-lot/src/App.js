@@ -7,9 +7,11 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className='App'>
-     <Header/>
-     <ParkingSlot/>
-     <Footer/>
+     <div className='app-container'>
+        <Header/>
+        <ParkingSlot/>
+        <Footer/>
+     </div>
     </div>
   );
 }
