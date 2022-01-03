@@ -44,7 +44,8 @@ const DisplayData = () => {
                             <td>{eachData.ownerName}</td>
                             <td>
                                 {eachData.vehicleColor}
-                                {eachData.vehicleColor !== "white" ? (
+                                {eachData.vehicleColor.toLowerCase() !==
+                                "white" ? (
                                     <IoCarSportSharp
                                         style={{
                                             color: eachData.vehicleColor,

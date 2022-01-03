@@ -179,10 +179,11 @@ const FormData = () => {
             if (onClickEdit === false) {
                 const userObject = {
                     id: v4(),
-                    slotNumber: formData.slotNumber,
-                    registrationNumber: formData.registrationNumber,
-                    ownerName: formData.ownerName,
-                    vehicleColor: formData.vehicleColor,
+                    slotNumber: formData.slotNumber.toUpperCase(),
+                    registrationNumber:
+                        formData.registrationNumber.toUpperCase(),
+                    ownerName: formData.ownerName.toUpperCase(),
+                    vehicleColor: formData.vehicleColor.toUpperCase(),
                 };
                 //console.log(userObject);
 
@@ -196,10 +197,11 @@ const FormData = () => {
                 console.log(editableId);
                 const userObject = {
                     id: editableId,
-                    slotNumber: formData.slotNumber,
-                    registrationNumber: formData.registrationNumber,
-                    ownerName: formData.ownerName,
-                    vehicleColor: formData.vehicleColor,
+                    slotNumber: formData.slotNumber.toUpperCase(),
+                    registrationNumber:
+                        formData.registrationNumber.toUpperCase(),
+                    ownerName: formData.ownerName.toUpperCase(),
+                    vehicleColor: formData.vehicleColor.toUpperCase(),
                 };
                 disPatch(onUpdate(userObject));
             }
@@ -215,60 +217,96 @@ const FormData = () => {
     return (
         <div className="form-data-container">
             <form className="form-input" onSubmit={onSubmitForm}>
-                <input
-                    type="text"
-                    placeholder="Owner_Name"
-                    className="input-field"
-                    value={formData.ownerName}
-                    onChange={(e) =>
-                        setFormData((prev) => ({
-                            ...prev,
-                            ownerName: e.target.value,
-                        }))
-                    }
-                />
-                <BsInfoCircle className="on-hover" />
-                <p className="instruction">Please Enter Name in Alphabets</p>
+                <div className="info-input">
+                    <input
+                        type="text"
+                        placeholder="Owner_Name"
+                        className="input-field"
+                        value={formData.ownerName}
+                        onChange={(e) =>
+                            setFormData((prev) => ({
+                                ...prev,
+                                ownerName: e.target.value,
+                            }))
+                        }
+                    />
+                    <div>
+                        <BsInfoCircle className="on-hover" />
+                        <p className="instruction">
+                            Please Enter Name in Alphabets
+                        </p>
+                    </div>
+                </div>
                 <p className="error-msg ">{errorMsgObject.ownerNameError}</p>
-                <input
-                    type="text"
-                    placeholder="Registration_Number"
-                    className="input-field"
-                    value={formData.registrationNumber}
-                    onChange={(e) =>
-                        setFormData((prev) => ({
-                            ...prev,
-                            registrationNumber: e.target.value,
-                        }))
-                    }
-                />
+
+                <div className="info-input">
+                    <input
+                        type="text"
+                        placeholder="Registration_Number"
+                        className="input-field"
+                        value={formData.registrationNumber}
+                        onChange={(e) =>
+                            setFormData((prev) => ({
+                                ...prev,
+                                registrationNumber: e.target.value,
+                            }))
+                        }
+                    />
+                    <div>
+                        <BsInfoCircle className="on-hover" />
+                        <p className="instruction">
+                            Please Enter Registration Number in
+                            <br />
+                            Format: AP23-TX-1231
+                        </p>
+                    </div>
+                </div>
                 <p className="error-msg ">{errorMsgObject.regNumberError}</p>
-                <input
-                    type="text"
-                    placeholder="Car/Bike_Color"
-                    className="input-field"
-                    value={formData.vehicleColor}
-                    onChange={(e) =>
-                        setFormData((prev) => ({
-                            ...prev,
-                            vehicleColor: e.target.value,
-                        }))
-                    }
-                />
+
+                <div className="info-input">
+                    <input
+                        type="text"
+                        placeholder="Car/Bike_Color"
+                        className="input-field"
+                        value={formData.vehicleColor}
+                        onChange={(e) =>
+                            setFormData((prev) => ({
+                                ...prev,
+                                vehicleColor: e.target.value,
+                            }))
+                        }
+                    />
+                    <div>
+                        <BsInfoCircle className="on-hover" />
+                        <p className="instruction">
+                            Please Enter Valid Color Name
+                        </p>
+                    </div>
+                </div>
                 <p className="error-msg ">{errorMsgObject.vehicleColorError}</p>
-                <input
-                    type="text"
-                    placeholder="Slot_Number"
-                    className="input-field"
-                    value={formData.slotNumber}
-                    onChange={(e) =>
-                        setFormData((prev) => ({
-                            ...prev,
-                            slotNumber: e.target.value,
-                        }))
-                    }
-                />
+
+                <div className="info-input">
+                    <input
+                        type="text"
+                        placeholder="Slot_Number"
+                        className="input-field"
+                        value={formData.slotNumber}
+                        onChange={(e) =>
+                            setFormData((prev) => ({
+                                ...prev,
+                                slotNumber: e.target.value,
+                            }))
+                        }
+                    />
+                    <div>
+                        <BsInfoCircle className="on-hover" />
+                        <p className="instruction">
+                            Please Enter Valid Slot Number
+                        </p>
+                    </div>
+                </div>
                 <p className="error-msg ">{errorMsgObject.slotNumberError}</p>
+
                 <button type="submit" className="slot-button">
                     Allot the Slot
                 </button>

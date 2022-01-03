@@ -139,7 +139,10 @@
 .on-hover:hover + .instruction {
     display: block;
     position: absolute;
-    background-color: aqua;
-    padding: 20px 40px;
+    background-color: rgb(211, 216, 216);
+    padding: 20px;
     border-radius: 10px;
+}
+.info-input {
+    display: flex;
 }
