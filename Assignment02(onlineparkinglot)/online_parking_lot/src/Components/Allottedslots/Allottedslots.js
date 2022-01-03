@@ -3,6 +3,7 @@ import '../Allottedslots/Allottedslots.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { ImCross } from "react-icons/im";
 import { RiFileEditFill } from "react-icons/ri";
+import { AiFillCar } from "react-icons/ai";
 
 
 export default function Allottedslots() {
@@ -32,7 +33,7 @@ export default function Allottedslots() {
                         <td className='Sl_Num'>{each.slotNumber}</td>
                         <td className='Registration_Number'>{each.registrationNumber}</td>
                         <td className='Owner_Name'>{each.ownerName}</td>
-                        <td className='Car_Bike_Colour'>{each.carBikeColor}</td>
+                        <td className='Car_Bike_Colour'>{each.carBikeColor}<AiFillCar style={{color: each.carBikeColor, fontSize:'17px' ,verticalAlign:"middle"}}/></td>
                         <td className='Remove_Upadate'>
                             <ImCross className='remove' onClick={()=>dispatch({type:"DELETE", payload:each.id})}/>
                             <RiFileEditFill className='edit' onClick={()=>dispatch({type:"UPDATE", payload:each})}/>

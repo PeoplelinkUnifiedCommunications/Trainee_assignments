@@ -38,7 +38,7 @@ const reducer = (state=initialState, action) => {
                 slots:state.slots,
                 list : (state.list).filter(each => each.id !== action.payload),
                 search:state.search,
-                update:[]
+                update:state.update[0].id === action.payload?[]:state.update
 
             }
         case "SEARCH":

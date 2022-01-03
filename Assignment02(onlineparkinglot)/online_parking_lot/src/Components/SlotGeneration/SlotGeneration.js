@@ -3,6 +3,9 @@ import './SlotGeneration.css'
 import { useState, useEffect } from 'react'
 import { useDispatch, useSelector} from 'react-redux'
 import {v4} from 'uuid'
+import { BsInfoCircle } from "react-icons/bs";
+
+
 
 
 export default function SlotGeneration() {
@@ -30,7 +33,12 @@ export default function SlotGeneration() {
             setRegistrationNumber(state2[0].registrationNumber),
             setCarBikeColor(state2[0].carBikeColor),
             setSlotNumber(state2[0].slotNumber)
-        }        
+        } else{
+            setOwnerName(""),
+            setRegistrationNumber(""),
+            setCarBikeColor(""),
+            setSlotNumber("")
+        }       
     }, [state2])
 
     const soltDetailsSubmission = e =>{
@@ -116,7 +124,6 @@ export default function SlotGeneration() {
                 carBikeColor,
                 slotNumber
             }
-            console.log(slotDetails.id)
             dispatch({type:"DATA", payload:slotDetails})  
             setOwnerName('')
             setRegistrationNumber('')
@@ -130,13 +137,15 @@ export default function SlotGeneration() {
         <div className='SlotContainer'>
             <form className='Soltform' onSubmit={soltDetailsSubmission}>
                 <input type='text' value = {ownerName}  placeholder='Owner_Name' className='inputItem'
-                onChange={e =>setOwnerName(e.target.value)}/><br/>
+                onChange={e =>setOwnerName(e.target.value)}/>
+                <BsInfoCircle className='popup'/>
+                <p className='details'>name</p>
+                <br/>
                 <p className='error'>{ownerNameError}</p>
 
                 <input type="text" value={registrationNumber} placeholder='Registration_Number' className='inputItem'
                 onChange={e =>setRegistrationNumber(e.target.value)}/><br/>
                 <p className='error'>{registrationNumberError}</p>
-
 
                 <input type="text" placeholder='Car/Bike_Color' className='inputItem' value={carBikeColor}
                 onChange={e =>setCarBikeColor(e.target.value)}/><br/>
