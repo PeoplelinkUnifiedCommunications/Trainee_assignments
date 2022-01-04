@@ -1,0 +1,100 @@
+.Slider{
+    width: 30%;
+    height: 100vh;
+    position:sticky;
+    top: 0px;
+    color: #666666;
+}
+.side-content{
+    padding: 1rem;
+}
+a{
+    font-weight:700;
+    color:#5786a8;
+}
+.side-content h1{
+    margin: 0%;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+.header{
+    border-bottom: 2px solid #a8a7a7;
+}
+h4{
+    margin: 3% 0% 3% 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+input[type=text]{
+    width: 50%;
+    padding: 1rem;
+    border: 1px solid #a8a7a7;
+    border-radius: 5px;
+}
+.location select{
+    font-size: 1rem;
+    padding: 0.9rem;
+    border-radius: 5px;
+    background-color: white;
+}
+.location{
+    display: flex;
+}
+.searchicon{
+    margin-left: 10%;
+    padding: 0.4rem;
+    border: 1px solid black;
+    background: orange;
+}
+.slide{
+    display: flex;
+    gap: 10px;
+}
+.percentage{
+    border: 1px solid black;
+    margin-left: 1%;
+    width: 30%;
+    font-size: 1.3rem;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: chocolate;
+}
+.fuel select{
+    width: 40%;
+    font-size: 1rem;
+    padding: 1rem;
+}
+.yes button{
+    width: 20%;
+    font-size: 1.5rem;
+    padding: 0.5rem;  
+}
+.yes button:hover{
+    background-color: orange;
+}
+.range{
+    width: 60%;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+input[type=range]{
+    width: 100%;
+}
+.help p{
+    color: green;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top: 5%;
+    border-bottom: 1px solid grey;
+}
+@media(min-width:260px) and (max-width:767px){
+    .Slider{
+        display: none;
+    }
+}

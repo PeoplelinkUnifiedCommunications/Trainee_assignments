@@ -1,0 +1,13 @@
+.previous:hover{
+    background-color: orange;
+    cursor: pointer;
+}
+.next:hover{
+    background-color: orange;
+    cursor: pointer;
+}
+@media(min-width:260px) and (max-width:767px){
+    .pop{
+        font-size: 1rem;
+    }
+}

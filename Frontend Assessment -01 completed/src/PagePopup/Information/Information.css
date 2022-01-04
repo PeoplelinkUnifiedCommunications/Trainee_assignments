@@ -1,0 +1,29 @@
+.Information{
+    width:70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+   
+}
+.popup_cards{
+    width: 45%;
+    border: 1px solid green;
+}
+
+.popup_card{
+    background-color: green;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+@media (min-width:260px) and (max-width:767px){
+    .Information{
+        width: 100%;
+        display: block;
+    }
+    .popup_cards{
+        width: 100%;
+        margin-top: 2%;
+    }
+}

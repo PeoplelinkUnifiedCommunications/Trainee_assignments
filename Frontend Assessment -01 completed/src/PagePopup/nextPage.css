@@ -1,0 +1,52 @@
+.popup{
+    width: 70%;
+    height: 85vh;
+    margin-left: 20%;
+    background-color: #EEEEEE;
+    box-shadow: 5px 5px 5px 5px grey;
+    overflow-y: scroll;
+}
+
+.popup_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+h6{
+    margin-left: 2%;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    font-size: 1rem;
+    color: grey;
+    font-weight: 400;
+}
+.pop{
+    padding-left: 1rem;
+}
+button{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: white;
+}
+.popup_side img{
+    width: 5%;
+    height: 10vh;
+    padding: 0.5rem;
+    margin: 0.5%;
+    display: flex;
+    flex-direction:row ;
+    border: 1px solid;
+    cursor: pointer;
+}
+.popup_side img:hover{
+    background-color: white;
+    border: 3px solid blue;
+}
+@media(min-width:260px) and (max-width:767px){
+    .popup{
+        width: 95%;
+        height: 75vh;
+        margin-left: 2%;
+    }
+   
+}
