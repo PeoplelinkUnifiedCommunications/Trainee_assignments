@@ -11,12 +11,14 @@ function App() {
       <SearchBar />
       <div>
         <div className="card_container">
+      
           <div className="user_fileds_container">
             <FormContainer />
             <div className="slot_genrate_container">
               <SlotGenrator />
             </div>
-          </div>
+            </div>
+        
           <div className="table_contaier">
             <div className="inner">
               <Tabel />

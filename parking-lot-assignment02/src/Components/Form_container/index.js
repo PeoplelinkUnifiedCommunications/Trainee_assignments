@@ -4,14 +4,17 @@ import { connect } from "react-redux";
 import { addData, editAvailabelData } from "../Redux/action";
 import { v4 } from "uuid";
 import { useEffect, useRef } from "react";
+import { AiOutlineInfoCircle} from "react-icons/ai";
 
 const FormContainer = ({ appState, addNewData, addUpdateData }) => {
+  console.log(appState)
   const data = useRef("");
   const [userFileds, setuserFileds] = useState({
     ownerName: "",
     registraionNumber: "",
     color: "",
     slotNumber: "",
+    carOrBike:""
   });
 
   const [requiredFileds, setrequiredFileds] = useState({
@@ -62,6 +65,24 @@ const FormContainer = ({ appState, addNewData, addUpdateData }) => {
     }));
   };
 
+  const onChangeCar=(e)=>{
+    console.log(e.target.value)
+    
+    setuserFileds((prevState) => ({
+      ...prevState,
+      carOrBike: e.target.value,
+    }));
+  }
+
+  const onChangeBike=(e)=>{
+    console.log(e.target.value)
+    setuserFileds((prevState) => ({
+      ...prevState,
+      carOrBike: e.target.value,
+    }));
+
+  }
+
   const onsubmit = (e) => {
     e.preventDefault();
     let newData;
@@ -72,16 +93,18 @@ const FormContainer = ({ appState, addNewData, addUpdateData }) => {
       ? (newData = {
           id: appState.editSlot[0].id,
           ownerName: userFileds.ownerName,
-          registraionNumber: userFileds.registraionNumber,
+          registraionNumber: userFileds.registraionNumber.toUpperCase(),
           color: userFileds.color,
           slotNum: userFileds.slotNumber,
+          carOrBike:userFileds.carOrBike
         })
       : (newData = {
           id: v4(),
           ownerName: userFileds.ownerName,
-          registraionNumber: userFileds.registraionNumber,
+          registraionNumber: userFileds.registraionNumber.toUpperCase(),
           color: userFileds.color,
           slotNum: userFileds.slotNumber,
+          carOrBike:userFileds.carOrBike
         });
 
     const availbelOrNot = appState.userVehicalData.find(
@@ -121,7 +144,7 @@ const FormContainer = ({ appState, addNewData, addUpdateData }) => {
       }));
     } else if (
       userFileds.registraionNumber.match(
-        /^[A-Z]{2}[0-9]{2}(-)[A-z]{2}(-)[0-9]{4}$/
+        /^[A-Za-z]{2}[0-9]{2}(-)[A-Za-z]{2}(-)[0-9]{4}$/
       ) === null
     ) {
       setrequiredFileds((prevState) => ({
@@ -174,34 +197,30 @@ const FormContainer = ({ appState, addNewData, addUpdateData }) => {
         ...prevState,
         slotNumberField: `Enter slots in ${1} to ${appState.slots}`,
       }));
-    } else if (availbelOrNot || appState.isEdit === true) {
-      console.log("avafa");
-      if (appState.isEdit && !availbelOrNot) {
-        addUpdateData(newData);
-        setuserFileds((prevState) => ({
-          ...prevState,
-          ownerName: "",
-          registraionNumber: "",
-          color: "",
-          slotNumber: "",
-        }));
-      } else {
+    } else if(availbelOrNot &&
+      appState.editSlot[0] !== undefined &&
+      appState.editSlot[0].slotNum!== userFileds.slotNumber){
         alert(`Slot ${userFileds.slotNumber} is filled`);
       }
-    } else if (
+    else if(availbelOrNot &&
+      appState.editSlot[0] === undefined){
+        alert(`Slot ${userFileds.slotNumber} is filled`);
+      }
+    else if (
       userFileds.ownerName !== "" &&
       userFileds.registraionNumber !== "" &&
       userFileds.color !== "" &&
       userFileds.slotNumber !== ""
     ) {
-      console.log("udyg");
-      addNewData(newData);
+      appState.isEdit?addUpdateData(newData): addNewData(newData);
+     
       setuserFileds((prevState) => ({
         ...prevState,
         ownerName: "",
         registraionNumber: "",
         color: "",
         slotNumber: "",
+        carOrBike:""
       }));
     }
   };
@@ -227,6 +246,7 @@ const FormContainer = ({ appState, addNewData, addUpdateData }) => {
   }, [appState.userVehicalData]);
   return (
     <form className="form" onSubmit={onsubmit} action="/action_page.php">
+      <div className="input_info">
       <input
         type="text"
         className="input_tag"
@@ -235,7 +255,12 @@ const FormContainer = ({ appState, addNewData, addUpdateData }) => {
         onChange={ownerNameInput}
         ref={data}
       />
+      <AiOutlineInfoCircle className="info"/>
+      <p className="instractions">Enter owner name</p>
+      </div>
+      
       <p className="required">{requiredFileds.ownerField}</p>
+      <div className="input_info">
       <input
         type="text"
         className="input_tag"
@@ -243,7 +268,11 @@ const FormContainer = ({ appState, addNewData, addUpdateData }) => {
         value={userFileds.registraionNumber}
         onChange={registraionNumberInput}
       />
+      <AiOutlineInfoCircle className="info"/>
+      <p className="instractions">Registraion number formate is should be like this "AP09-FF-1234"</p>
+      </div>
       <p className="required">{requiredFileds.registrationField}</p>
+      <div className="input_info">
       <input
         type="text"
         className="input_tag"
@@ -251,7 +280,11 @@ const FormContainer = ({ appState, addNewData, addUpdateData }) => {
         value={userFileds.color}
         onChange={colorInput}
       />
+      <AiOutlineInfoCircle className="info"/>
+      <p className="instractions">Enter car/bike Colour</p>
+      </div>
       <p className="required">{requiredFileds.colorField}</p>
+      <div className="input_info">
       <input
         type="text"
         className="input_tag"
@@ -259,7 +292,16 @@ const FormContainer = ({ appState, addNewData, addUpdateData }) => {
         value={userFileds.slotNumber}
         onChange={slotInput}
       />
+      <AiOutlineInfoCircle className="info"/>
+      <p className="instractions">Enter Slot number</p>
+      </div>
       <p className="required">{requiredFileds.slotNumberField}</p>
+      <div className="radio">
+        <input  type="radio" id="car" value="car" name="vehical" onChange={onChangeCar}/>
+        <label htmlFor="car">Car</label>
+        <input type="radio" id="bike" value="bike" name="vehical" onChange={onChangeBike}/>
+        <label htmlFor="bike">Bike</label>
+      </div>
       <button type="submit" className="sub_btn">
         Submit
       </button>

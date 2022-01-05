@@ -18,7 +18,7 @@ const reducer = (state = intialState, action) => {
         ...state,
         userVehicalData: [
           ...state.userVehicalData.filter((each) => each.id !== action.id),
-        ],
+        ],isEdit:false
       };
     case "Add_Slot":
       return {
@@ -46,6 +46,7 @@ const reducer = (state = intialState, action) => {
         ...state,
         userVehicalData: dataUpdate,
         isEdit: false,
+        
       };
     default:
       return state;

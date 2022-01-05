@@ -13,7 +13,7 @@ body {
   margin-top: 0px;
 
   border-right: 2px solid #f6ae42;
-  width: 200px;
+  width:300px;
   padding-top: 1px;
 }
 .slot_genrate_container {
@@ -35,4 +35,23 @@ body {
 }
 .inner {
   min-height: 100%;
+}
+@media (max-width:700px){
+  .card_container{
+    flex-direction: column;
+  }
+  .user_fileds_container{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+  }
+  .slot_genrate_container{
+    width: 50%;
+  }
+  .inner{
+    width: 100%;
+    overflow: auto;
+    height: 200px;
+  }
 }
