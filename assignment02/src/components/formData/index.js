@@ -28,6 +28,7 @@ const FormData = () => {
 
     useEffect(() => {
         if (editableData.length !== 0) {
+            setMsgErrorObject({});
             setFormData({
                 ownerName: editableData[0].ownerName,
                 registrationNumber: editableData[0].registrationNumber,
@@ -307,7 +308,7 @@ const FormData = () => {
                 </div>
                 <p className="error-msg ">{errorMsgObject.slotNumberError}</p>
 
-                <button type="submit" className="slot-button">
+                <button className="allot-button" type="submit">
                     Allot the Slot
                 </button>
                 <p className="error-msg ">{errorMsgObject.noSlots}</p>

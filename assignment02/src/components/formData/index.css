@@ -90,7 +90,7 @@
     margin: 0;
     margin-bottom: 10px;
 }
-.generate-button {
+/* .generate-button {
     background-color: transparent;
     border: 1px solid black;
     height: 30px;
@@ -99,7 +99,7 @@
     color: #5e5e5e;
     font-size: 16px;
     font-weight: bold;
-}
+} */
 
 @media screen and (min-width: 768px) {
     .generate-text {
@@ -107,11 +107,33 @@
         padding: 0;
         margin: 0;
     }
-    .generate-button {
+    /* .generate-button {
         height: 40px;
         font-size: 20px;
-    }
+    } */
 }
+/* ---------- */
+.generate-button {
+    border: none;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.generate-button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+/* ---------- */
+
+/* ---------- */
+
 .slot-input-container {
     display: flex;
     margin-bottom: 10px;
@@ -146,3 +168,129 @@
 .info-input {
     display: flex;
 }
+/*-------- */
+
+/* button {
+    position: relative;
+    padding: 19px 36px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 40px;
+    border: none;
+}
+
+button span {
+    position: relative;
+    color: #fff;
+    font-family: Arial;
+    letter-spacing: 8px;
+    z-index: 1;
+}
+
+button .liquid {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #4973ff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+button .liquid::after,
+button .liquid::before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #fff;
+}
+
+button .liquid::before {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+}
+
+button .liquid::after {
+    border-radius: 40%;
+    background: rgba(20, 20, 20, 0.5);
+    animation: animate 10s linear infinite;
+}
+
+button:hover .liquid {
+    top: -120px;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+} */
+
+/*===================================================== */
+
+.allot-button {
+    text-decoration: none;
+    position: absolute;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    width: 170px;
+    height: 40px;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.allot-button:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+@keyframes ani {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.allot-button:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.allot-button:hover::before {
+    filter: blur(20px);
+}
+
+.allot-button:active {
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+}
+
+/*===================================================== */
