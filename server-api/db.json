@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": "9dc2cd74-c352-4c96-9b1f-aab8b8121f67",
+      "ownerName": "sai",
+      "registraionNumber": "AP09-AS-1233",
+      "color": "red",
+      "slotNum": "1",
+      "carOrBike": "car"
+    },
+    {
+      "id": "b398a9ad-b557-4753-ba5a-d57746b103c1",
+      "ownerName": "Ravi",
+      "registraionNumber": "AP09-SY-1357",
+      "color": "green",
+      "slotNum": "2",
+      "carOrBike": "bike"
+    }
+  ]
+}
