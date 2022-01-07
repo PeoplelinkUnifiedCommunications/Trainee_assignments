@@ -30,12 +30,13 @@ tr {
 table,
 td {
 	border-collapse: collapse;
-	border-bottom: 1px solid black;
+	border: 1px solid black;
 }
 .table-row-header {
 	position: sticky;
 	top: 0px;
 	background-color: rgb(240, 239, 238);
+	border: 1px solid black;
 }
 
 .table-data {
@@ -46,4 +47,8 @@ td {
 	color: red;
 	cursor: pointer;
 	margin: 6px;
+}
+.car {
+	vertical-align: middle;
+	margin-left: 10px;
 }

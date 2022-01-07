@@ -54,6 +54,13 @@ function Form() {
 				vehicleColor: toUpdateSlotsDetails[0].vehicleColor,
 				slotNumber: toUpdateSlotsDetails[0].slotNumber,
 			});
+		} else {
+			setForm({
+				ownerName: "",
+				regNumber: "",
+				vehicleColor: "",
+				slotNumber: "",
+			});
 		}
 	}, [toUpdateSlotsDetails]);
 
@@ -66,41 +73,41 @@ function Form() {
 			(each) => each.regNumber === form.regNumber
 		);
 		if (form.ownerName === "") {
-			errorObject.ownerNameError = "Enter The Name";
+			errorObject.ownerNameError = "Enter Name";
 			valRet = false;
 		} else if (!validateCharecters(form.ownerName)) {
-			errorObject.ownerNameError = "Enter The Valid Name";
+			errorObject.ownerNameError = "Enter Valid Name";
 			valRet = false;
 		}
 		if (form.regNumber === "") {
-			errorObject.regNumberError = "Enter The regNumber";
+			errorObject.regNumberError = "Enter Regisration Number";
 			valRet = false;
 		} else if (!validateRegNumber(form.regNumber)) {
-			errorObject.regNumberError = "Enter The Valid Registration number";
+			errorObject.regNumberError = " Invalid Registration number";
 			valRet = false;
 		} else if (
 			isVehExist &&
 			toUpdateSlotsDetails[0] !== undefined &&
 			form.regNumber !== toUpdateSlotsDetails[0].regNumber
 		) {
-			errorObject.regNumberError = "registration Already Exists";
+			errorObject.regNumberError = "Reg.no Already Exists";
 			valRet = false;
 		} else if (isVehExist && toUpdateSlotsDetails[0] === undefined) {
-			errorObject.regNumberError = "registration number alredy exist";
+			errorObject.regNumberError = "Reg.no Alredy exist";
 			valRet = false;
 		}
 		if (form.vehicleColor === "") {
-			errorObject.vehicleColorError = "Enter The vehicleColor";
+			errorObject.vehicleColorError = "Enter Vehicle Color";
 			valRet = false;
 		} else if (!validateColor(form.vehicleColor)) {
-			errorObject.vehicleColorError = "Enter The Valid Color";
+			errorObject.vehicleColorError = "Enter Valid Color";
 			valRet = false;
 		}
 		if (form.slotNumber === "") {
-			errorObject.slotNumberError = "Enter The slotNumber";
+			errorObject.slotNumberError = "Enter slotNumber";
 			valRet = false;
 		} else if (!validateSlot(form.slotNumber)) {
-			errorObject.slotNumberError = "Enter The Valid slot";
+			errorObject.slotNumberError = "Enter Valid slot";
 			valRet = false;
 		} else if (
 			!(parseInt(form.slotNumber) > 0 && parseInt(form.slotNumber) <= genSlots)
@@ -210,9 +217,10 @@ function Form() {
 				<div className='slot-cont'>
 					<label htmlFor='gen-slot'>Genrate Slots:</label>
 					<input
-						type='number'
+						type='text'
 						id='gen-slot'
 						value={slots}
+						min={0}
 						className='slots-avil'
 						onChange={(e) => setSlots(e.target.value)}
 					/>

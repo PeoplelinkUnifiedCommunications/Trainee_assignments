@@ -1,6 +1,7 @@
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { deleteSlot, updateSlot } from "../../store/index";
 import { useSelector, useDispatch } from "react-redux";
+import { AiFillCar } from "react-icons/ai";
 
 import "./index.css";
 
@@ -37,7 +38,14 @@ function Genslots() {
 								<td className='table-data'>{eachSlot.slotNumber}</td>
 								<td className='table-data'>{eachSlot.regNumber}</td>
 								<td className='table-data'>{eachSlot.ownerName}</td>
-								<td className='table-data'>{eachSlot.vehicleColor}</td>
+								<td className='table-data'>
+									{eachSlot.vehicleColor}
+									<AiFillCar
+										className='car'
+										fontSize='30px'
+										color={eachSlot.vehicleColor}
+									/>
+								</td>
 								<td className='table-data'>
 									<AiOutlineDelete
 										className='icons'

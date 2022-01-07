@@ -1,3 +1,5 @@
+import { AiFillInfoCircle } from "react-icons/ai";
+
 import "./index.css";
 
 const InputForm = (props) => {
@@ -38,49 +40,68 @@ const InputForm = (props) => {
 			autoComplete='true'
 			onSubmit={onSubmitform}>
 			<div className='inputs-container'>
-				<input
-					type='text'
-					className='input-field'
-					value={form.ownerName}
-					placeholder='Owner_name'
-					onChange={onChangeName}
-				/>
+				<div className='info-input'>
+					<input
+						type='text'
+						className='input-field'
+						value={form.ownerName}
+						placeholder='Owner_name'
+						onChange={onChangeName}
+					/>
+					<div>
+						<AiFillInfoCircle className='info' />
+						<p className='info-msg'>Please Enter Alphabets Only</p>
+					</div>
+				</div>
+
 				{error.ownerNameError && (
 					<p className='error-msg'>{error.ownerNameError}</p>
 				)}
 			</div>
 			<div>
-				<input
-					type='text'
-					className='input-field'
-					value={form.regNumber}
-					placeholder='Registration_Number'
-					onChange={onChangeReg}
-				/>
+				<div className='info-input'>
+					<input
+						type='text'
+						className='input-field'
+						value={form.regNumber}
+						placeholder='Registration_Number'
+						onChange={onChangeReg}
+					/>
+					<AiFillInfoCircle className='info' />
+					<p className='info-msg'>Please Enter Reg.no(ex: AP09-AO-1111)</p>
+				</div>
 				{error.regNumberError && (
 					<p className='error-msg'>{error.regNumberError}</p>
 				)}
 			</div>
 			<div>
-				<input
-					type='text'
-					className='input-field'
-					value={form.vehicleColor}
-					placeholder='Car/Bike_Color'
-					onChange={onChangeColor}
-				/>
+				<div className='info-input'>
+					<input
+						type='text'
+						className='input-field'
+						value={form.vehicleColor}
+						placeholder='Car/Bike_Color'
+						onChange={onChangeColor}
+					/>
+					<AiFillInfoCircle className='info' />
+					<p className='info-msg'>Please Enter Alphabets Only</p>
+				</div>
 				{error.vehicleColorError && (
 					<p className='error-msg'>{error.vehicleColorError}</p>
 				)}
 			</div>
 			<div>
-				<input
-					type='text'
-					className='input-field'
-					placeholder='Slot_Number'
-					value={form.slotNumber}
-					onChange={onChangeSlot}
-				/>
+				<div className='info-input'>
+					<input
+						type='text'
+						className='input-field'
+						placeholder='Slot_Number'
+						value={form.slotNumber}
+						onChange={onChangeSlot}
+					/>
+					<AiFillInfoCircle className='info' />
+					<p className='info-msg'>Please Enter Numbers Only</p>
+				</div>
 				{error.slotNumberError && (
 					<p className='error-msg'>{error.slotNumberError}</p>
 				)}
