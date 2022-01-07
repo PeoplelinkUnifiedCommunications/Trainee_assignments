@@ -1,0 +1,112 @@
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    .item-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .access-time {
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: bold;
+  
+    color: #64748b;
+  }
+  @media screen and (min-width: 768px) {
+    .access-time {
+      font-size: 24px;
+      width: 12%;
+    }
+  }
+  .domain-item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    .domain-item-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+    }
+  }
+  .domain-logo-title-container {
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    .domain-logo-title-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .domain-logo {
+    width: 50px;
+    margin-right: 20px;
+  }
+  .title-domain-url-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 768px) {
+    .title-domain-url-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .domain-logo {
+      width: 30px;
+      margin-right: 20px;
+    }
+  }
+  .title {
+    font-size: 18px;
+    font-family: 'Roboto';
+    color: #475569;
+    font-weight: 500;
+    margin-bottom: 0px;
+  }
+  .domain-url {
+    font-size: 18px;
+    font-family: 'Roboto';
+    color: #64748b;
+    font-weight: 500;
+    margin-top: 0px;
+  }
+  @media screen and (min-width: 768px) {
+    .title {
+      font-size: 20px;
+      margin-right: 10px;
+      margin-bottom: 25px;
+    }
+    .domain-url {
+      font-size: 18px;
+      font-family: 'Roboto';
+      color: #64748b;
+      font-weight: 500;
+      margin-top: 15px;
+    }
+  }
+  .delete-button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+  }
+  .delete-icon {
+    width: 25px;
+    height: 25px;
+  }
