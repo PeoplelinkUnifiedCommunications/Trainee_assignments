@@ -5,7 +5,7 @@ const Cardlist = (props) => {
     const{data}=props
     return (
         <>
-            <div className="colFlex card pdngSM ">
+            <div className="colFlex card pdngXS ">
                 <div className="colFlex cardbg">
                     <div className="cardHeader rowFlex ">
                         <div className="headerLeft">

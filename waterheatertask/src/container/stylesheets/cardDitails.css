@@ -12,9 +12,38 @@
 .rightBTNPart{
     margin-left: auto;
 }
+
+.lpart{
+    width: 10%;
+    padding: 16px;
+}
+.imgsize{
+    /* width: 100%; */
+    height: 64px;
+    padding: 4px;
+    border: 1px solid var(--innertextcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+.img-magnifier-container {
+    position:relative;
+  }
+  
+  .img-magnifier-glass {
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor: none;
+    /*Set the size of the magnifier glass:*/
+    width: 10px;
+    height: 0px;
+    left: 24px;
+  }
 .bgImg{
     background-color: white;
-    width: 100%;
+    width: 90%;
     height: auto;
     background-size: cover;
     display: flex;
@@ -22,11 +51,15 @@
     align-items: center;
 }
 .img{
-    width: auto;
-    height:100%;
-    border-radius: 15px}
+    width: 350px;
+    height:350px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .rightCntr{
-    width: 100%;
+    width: 90%;
     height: 100%;
     list-style-position:inside ;
 }
@@ -72,13 +105,25 @@
 }
 .amtStyl{
     font-size: 32px;
+    padding-right: 24px;
+    position: relative;
+}
+.amtStyl ::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 55%;
+    right: 0;
+    border-top: 2px solid;
+    border-color: red;
     
-}
-.linestyl{
-    border: 1px solid red;
-    transform:rotate(60deg) ;
-    z-index: 0;
-}
+    -webkit-transform:rotate(-15deg);
+    -moz-transform:rotate(-15deg);
+    -ms-transform:rotate(-15deg);
+    -o-transform:rotate(-15deg);
+    transform:rotate(-15deg);
+  }
+
 .textStyl{
     color: var(--popupbgcolor);
     border-left: 1px solid var(--innertextcolor);
@@ -101,6 +146,24 @@
 }
 .incentives{
     padding-left: 40px;
+}
+.preicon{
+    background-color: var(--background);
+    color: white;
+    padding: 16px;
+}
+.previous{
+    background-color: white;
+    border: none; 
+    font-size: 16px;
+    font-weight: bold;
+    border-right: 1px solid var(--innertextcolor);
+}
+.next{
+    background-color: white;
+    border: none; 
+    font-size: 16px;
+    font-weight: bold; 
 }
 @media (min-width:1113px){
     .bgImg{

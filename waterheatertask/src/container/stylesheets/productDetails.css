@@ -35,11 +35,17 @@
     flex-direction: row;
 }
 .LftCntr{
-    width: 70%;
+    width: 100%;
 }
 .Rgtcntr{
-    width: 30%;
+    width: 100%;
 }
 @media (min-width:1113px) {
     .PDcard1{ width: 50%;}
+    .LftCntr{
+        width: 70%;
+    }
+    .Rgtcntr{
+        width: 30%;
+    }
 }

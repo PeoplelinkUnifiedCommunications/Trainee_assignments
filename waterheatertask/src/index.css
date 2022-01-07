@@ -26,6 +26,7 @@ body        { font-size: 1rem; font-family: 'Courier New', Courier, monospace; c
   width: 100%;
   height: 100%;
 }
+
 h1 { font-size: 2.0rem; word-break: break-word; line-height: 2rem; }
 h2{font-size: 1.5rem; word-break: break-word; line-height: 1.50rem;  }
 h3{font-size: 1.25rem; word-break: break-word; line-height: 1.25rem;  }
@@ -33,7 +34,9 @@ h4{font-size: 1.125rem; word-break: break-word; line-height: 1rem; }
 h5{font-size: 1.0rem; word-break: break-word; line-height: 0.5rem; }
 h6{font-size: 0.875rem; word-break: break-word; line-height: 0.25rem; }
 
-
+ul {
+  list-style-type: none;
+}
 .baseCntnr{
   width: 100%;
   height: 100%;
@@ -98,7 +101,7 @@ transform: translateX(0%);
 .pdngVXL  {padding:2rem 0;}
 
 /* RESPONSIVE PADDINGS */
-.resPdngMD { padding:  1.0rem }
+.resPdngMD { padding:  0.876rem }
 
 /* margin */
 .mrgnXS    {margin: 0.25rem;}
@@ -154,6 +157,9 @@ transform: translateX(0%);
   .heatPumpImg  { width: 50%; }
    .list{ width: 50%; }
    .part1{ border-bottom: 2px solid var(--innertextcolor); padding-bottom: 30px; margin-bottom: 30px; }
-}
+.aside{width:10%}
+.main{width:90%}
+
+  }
 
 

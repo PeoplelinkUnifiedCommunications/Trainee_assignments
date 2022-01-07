@@ -71,8 +71,6 @@ const Waterheater = () => {
                     <p className="pera">Your Hybrid Electric Water Heater Recommended Options</p>
                     <div className="resColRow  ">
                         {Data.map((item) => <CardList data={item} />)}
-
-
                     </div>
                     <div className="btnCreate">
                         <button className="btnSeeMore">See more Options</button>

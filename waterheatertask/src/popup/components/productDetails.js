@@ -13,7 +13,7 @@ const ProductDetails = () => {
                         <p className='pdngVSM'>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested</p>
                     </div>
 
-                    <div className='rowFlex'>
+                    <div className='rowFlex resColRow'>
                         <div className='LftCntr'>
                             {/* 1strow */}
                             <div className='rowFlex resColRow '>
@@ -130,6 +130,8 @@ const ProductDetails = () => {
 
                             </div>
                         </div>
+
+
                         <div className='Rgtcntr  '>
                             <div className="cardFooter colFlex ">
                                 <div className=" rowFlex">

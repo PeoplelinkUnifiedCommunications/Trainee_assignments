@@ -4,11 +4,11 @@ import CardDitails from '../popup/components/cardDitails'
 import ProductDetails from '../popup/components/productDetails.js';
 function App() {
   const [isOpen, setIsOpen] = useState(false);
- 
+
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
- 
+
   return <>
     <input
       type="button"
@@ -19,13 +19,18 @@ function App() {
 
     {isOpen && <PopupCntr
       content={
-      <>
-        <CardDitails />
-        <ProductDetails />
-      </>
-      }handleClose={togglePopup}
+        <>
+          
+              <CardDitails />
+              <ProductDetails />
+            
+
+
+
+        </>
+      } handleClose={togglePopup}
     />}
   </>
 }
- 
+
 export default App;
