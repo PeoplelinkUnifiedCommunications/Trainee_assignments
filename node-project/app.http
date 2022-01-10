@@ -1,0 +1,30 @@
+POST http://localhost:3001/addSlot/
+Content-Type: application/json
+
+{
+    "id":"1236",
+    "slNo":"001",
+    "ownerName":"Bharath",
+    "color":"Red",
+    "regNumber":"AP20-AP-1234"
+}
+
+###
+
+GET http://localhost:3001/getSlots/
+
+###
+
+DELETE http://localhost:3001/deleteSlot/1236
+
+###
+PUT http://localhost:3001/updateSlot/1236
+Content-Type: application/json
+
+{
+    "id":"1236",
+    "slNo":"002",
+    "ownerName":"harika",
+    "color":"Red",
+    "regNumber":"AP20-AP-1234"
+}
