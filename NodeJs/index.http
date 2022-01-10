@@ -1,0 +1,49 @@
+GET http://localhost:3004/getSlots/
+###
+
+POST http://localhost:3004/addSlot/
+Content-Type: application/json
+
+{
+    "id": "c309263a-529a-43d0-b8d3-2644a3f95d18",
+    "ownerName": "jdf",
+    "registrationNumber": "ap09-ww-2344",
+    "color": "red",
+    "slotNum": "1",
+    "carOrBike": "car"
+}
+###
+
+POST http://localhost:3004/addSlot/
+Content-Type: application/json
+
+{
+    "id": "c309263a-529a-43d0-b8d3-2644a3f95d18",
+    "ownerName": "jdf",
+    "registrationNumber": "ap09-ww-2344",
+    "color": "red",
+    "slotNum": "2",
+    "carOrBike": "car"
+}
+###
+
+
+DELETE http://localhost:3004/deleteSlot/1
+###
+
+PUT http://localhost:3004/updateSlot/2
+Content-Type: application/json
+
+{
+    "id": "c309263a-529a-43d0-b8d3-2644a3f95d18",
+    "ownerName": "Harish",
+    "registrationNumber": "ap09-ww-2344",
+    "color": "Green",
+    "slotNum": "2",
+    "carOrBike": "car"
+}
+###
+
+
+GET http://localhost:3004/getSlots/2
+###

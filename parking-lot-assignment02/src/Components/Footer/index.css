@@ -18,14 +18,14 @@
   font-size: 20px;
   margin-right: 5px;
 }
-.info_for_fotter{
+.info_for_fotter {
   font-size: 20px;
   margin-left: 10px;
 }
-.devloped_by{
+.devloped_by {
   display: none;
 }
-.info_for_fotter:hover + .devloped_by{
+.info_for_fotter:hover + .devloped_by {
   display: block;
   position: absolute;
   background-color: rgb(175, 247, 247);
@@ -33,11 +33,9 @@
   border-radius: 10px;
   font-size: 15px;
   margin-bottom: 50px;
-
 }
-@media (max-width:700px){
-  .footter{
+@media (max-width: 700px) {
+  .footter {
     font-size: 10px;
   }
-  
 }

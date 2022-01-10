@@ -26,37 +26,35 @@
   height: 13px;
   font-size: 13px;
 }
-.input_info{
+.input_info {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.instractions{
+.instractions {
   display: none;
 }
-.info:hover+.instractions{
-    display: block;
-    position: absolute;
-    background-color: rgb(175, 247, 247);
-    padding: 20px;
-  
-    border-radius: 10px;
+.info:hover + .instractions {
+  display: block;
+  position: absolute;
+  background-color: rgb(175, 247, 247);
+  padding: 20px;
 
+  border-radius: 10px;
 }
-.info{
+.info {
   font-size: 20px;
-  margin-left:5px;
+  margin-left: 5px;
 }
-@media (max-width:700px){
-  .form{
+@media (max-width: 700px) {
+  .form {
     width: 50%;
-
   }
-  .input_tag{
+  .input_tag {
     width: 100%;
   }
 }
-.radio{
+.radio {
   margin-bottom: 10px;
   margin-right: 20px;
 }

@@ -11,21 +11,22 @@ import { edit } from "../Reducer/action";
 const Tabel = ({ addEditbleData }) => {
 	const [data, setdata] = useState([]);
 
-	const onEdite = (id) => {
-		axios.get(`/data/${id}`).then((response) => {
+	const onEdite = (slotNum) => {
+		axios.get(`/getSlots/${slotNum}`).then((response) => {
+			console.log(response.data);
 			addEditbleData(response.data);
 		});
 	};
 
-	const onDeleteData = (id) => {
-		axios.delete(`/data/${id}`).then((response) => {
+	const onDeleteData = (slotNum) => {
+		axios.delete(`/deleteSlot/${slotNum}`).then((response) => {
 			console.log(response);
 		});
 	};
 
 	useEffect(() => {
 		axios
-			.get("/data")
+			.get("/getSlots/")
 			.then((response) => {
 				setdata(response.data);
 			})
@@ -50,7 +51,7 @@ const Tabel = ({ addEditbleData }) => {
 					<tr>
 						<td className="tabel_heading1">{each.slotNum}</td>
 						<td className="tabel_heading1">{each.ownerName}</td>
-						<td className="tabel_heading1">{each.registraionNumber}</td>
+						<td className="tabel_heading1">{each.registrationNumber}</td>
 						<td className="tabel_heading2">
 							<div className="car">
 								{each.color}
@@ -77,11 +78,14 @@ const Tabel = ({ addEditbleData }) => {
 							<div className="del_edit">
 								<button
 									className="deleteBtn"
-									onClick={() => onDeleteData(each.id)}
+									onClick={() => onDeleteData(each.slotNum)}
 								>
 									<MdDelete className="delete" />
 								</button>
-								<button className="deleteBtn" onClick={() => onEdite(each.id)}>
+								<button
+									className="deleteBtn"
+									onClick={() => onEdite(each.slotNum)}
+								>
 									<RiFileEditFill className="delete" />
 								</button>
 							</div>

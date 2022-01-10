@@ -10,12 +10,13 @@ import { connect, useSelector } from "react-redux";
 const FormContainer = ({ onSubmit }) => {
 	const editbelData = useSelector((state) => state.editbleData);
 	const isEdit = useSelector((state) => state.isEdit);
+	const [jsonData, setjsonData] = useState(null);
+	console.log(editbelData);
 	console.log(isEdit);
-
 	const data = useRef("");
 	const [userFileds, setuserFileds] = useState({
 		ownerName: "",
-		registraionNumber: "",
+		registrationNumber: "",
 		color: "",
 		slotNumber: "",
 		carOrBike: "",
@@ -29,6 +30,7 @@ const FormContainer = ({ onSubmit }) => {
 	});
 
 	const ownerNameInput = (e) => {
+		console.log(e.target.value);
 		setuserFileds((prevState) => ({
 			...prevState,
 			ownerName: e.target.value,
@@ -39,9 +41,10 @@ const FormContainer = ({ onSubmit }) => {
 		}));
 	};
 	const registraionNumberInput = (e) => {
+		console.log(e.target.value);
 		setuserFileds((prevState) => ({
 			...prevState,
-			registraionNumber: e.target.value,
+			registrationNumber: e.target.value,
 		}));
 		setrequiredFileds((prevState) => ({
 			...prevState,
@@ -83,15 +86,24 @@ const FormContainer = ({ onSubmit }) => {
 		}));
 	};
 
+	useEffect(() => {
+		axios.get("/getSlots/").then((response) => {
+			console.log(response);
+			setjsonData(response.data);
+		});
+	}, []);
+
 	const onsubmit = (e) => {
 		e.preventDefault();
+		console.log(jsonData);
+		console.log(typeof userFileds.slotNumber);
 		onSubmit();
 		let newData;
 		isEdit
 			? (newData = {
 					id: editbelData.id,
 					ownerName: userFileds.ownerName,
-					registraionNumber: userFileds.registraionNumber.toUpperCase(),
+					registrationNumber: userFileds.registrationNumber,
 					color: userFileds.color,
 					slotNum: userFileds.slotNumber,
 					carOrBike: userFileds.carOrBike,
@@ -99,31 +111,35 @@ const FormContainer = ({ onSubmit }) => {
 			: (newData = {
 					id: v4(),
 					ownerName: userFileds.ownerName,
-					registraionNumber: userFileds.registraionNumber.toUpperCase(),
+					registrationNumber: userFileds.registrationNumber,
 					color: userFileds.color,
 					slotNum: userFileds.slotNumber,
 					carOrBike: userFileds.carOrBike,
 			  });
+		const rejistrationIsAvailble = jsonData.find(
+			(each) => each.registrationNumber === userFileds.registrationNumber
+		);
+		console.log(rejistrationIsAvailble);
 
-		if (userFileds.ownerName === "") {
+		if (userFileds.ownerName === undefined) {
 			setrequiredFileds((prevState) => ({
 				...prevState,
 				ownerField: "Required",
 			}));
 		}
-		if (userFileds.registraionNumber === "") {
+		if (userFileds.registrationNumber === undefined) {
 			setrequiredFileds((prevState) => ({
 				...prevState,
 				registrationField: "Required",
 			}));
 		}
-		if (userFileds.color === "") {
+		if (userFileds.color === undefined) {
 			setrequiredFileds((prevState) => ({
 				...prevState,
 				colorField: "Required",
 			}));
 		}
-		if (userFileds.slotNumber === "") {
+		if (userFileds.slotNumber === undefined) {
 			setrequiredFileds((prevState) => ({
 				...prevState,
 				slotNumberField: "Required",
@@ -134,7 +150,7 @@ const FormContainer = ({ onSubmit }) => {
 				ownerField: "field formate is wrong",
 			}));
 		} else if (
-			userFileds.registraionNumber.match(
+			userFileds.registrationNumber.match(
 				/^[A-Za-z]{2}[0-9]{2}(-)[A-Za-z]{2}(-)[0-9]{4}$/
 			) === null
 		) {
@@ -153,23 +169,23 @@ const FormContainer = ({ onSubmit }) => {
 				slotNumberField: "Please enter number",
 			}));
 		} else if (
-			userFileds.ownerName !== "" &&
-			userFileds.registraionNumber !== "" &&
-			userFileds.color !== "" &&
-			userFileds.slotNumber !== ""
+			userFileds.ownerName !== undefined &&
+			userFileds.registrationNumber !== undefined &&
+			userFileds.color !== undefined &&
+			userFileds.slotNumber !== undefined
 		) {
 			isEdit
-				? axios.put(`/data/${newData.id}`, newData).then((response) => {
+				? axios.put(`/updateSlot/${newData.id}`, newData).then((response) => {
 						console.log(response.data);
 				  })
-				: axios.post("/data", newData).then((response) => {
+				: axios.post("/addSlot/", newData).then((response) => {
 						console.log(response);
 				  });
 
 			setuserFileds((prevState) => ({
 				...prevState,
 				ownerName: "",
-				registraionNumber: "",
+				registrationNumber: "",
 				color: "",
 				slotNumber: "",
 				carOrBike: "",
@@ -178,13 +194,14 @@ const FormContainer = ({ onSubmit }) => {
 	};
 
 	useEffect(() => {
-		if (editbelData.length !== 0) {
+		console.log(editbelData.length);
+		if (editbelData.length !== undefined) {
 			setuserFileds({
-				ownerName: editbelData.ownerName,
-				registraionNumber: editbelData.registraionNumber,
-				color: editbelData.color,
-				slotNumber: editbelData.slotNum,
-				carOrBike: editbelData.carOrBike,
+				ownerName: editbelData[0].ownerName,
+				registrationNumber: editbelData[0].registrationNumber,
+				color: editbelData[0].color,
+				slotNumber: editbelData[0].slotNum,
+				carOrBike: editbelData[0].carOrBike,
 			});
 		}
 		setrequiredFileds({
@@ -198,6 +215,7 @@ const FormContainer = ({ onSubmit }) => {
 	useEffect(() => {
 		data.current.focus();
 	}, []);
+
 	return (
 		<form className="form" onSubmit={onsubmit} action="/action_page.php">
 			<div className="input_info">
@@ -219,7 +237,7 @@ const FormContainer = ({ onSubmit }) => {
 					type="text"
 					className="input_tag"
 					placeholder="Registration_Number"
-					value={userFileds.registraionNumber}
+					value={userFileds.registrationNumber}
 					onChange={registraionNumberInput}
 				/>
 				<AiOutlineInfoCircle className="info" />

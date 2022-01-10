@@ -4,8 +4,8 @@ import { MdDelete } from "react-icons/md";
 import { RiFileEditFill } from "react-icons/ri";
 import { deleteData, editData } from "../Redux/action";
 import { connect } from "react-redux";
-import { RiEBike2Fill,RiEBike2Line } from "react-icons/ri";
-import { AiFillCar,AiOutlineCar} from "react-icons/ai";
+import { RiEBike2Fill, RiEBike2Line } from "react-icons/ri";
+import { AiFillCar, AiOutlineCar } from "react-icons/ai";
 
 const Tabel = ({ deleteUserData, editEachData }) => {
   const userVehicalData = useSelector((state) => state.userVehicalData);
@@ -13,9 +13,7 @@ const Tabel = ({ deleteUserData, editEachData }) => {
   const filterData = userVehicalData.filter((each) =>
     each.registraionNumber.includes(searchInputValue)
   );
-  console.log(userVehicalData)
-
-
+  console.log(userVehicalData);
 
   return (
     <table className="tabel">
@@ -35,11 +33,26 @@ const Tabel = ({ deleteUserData, editEachData }) => {
             <td className="tabel_heading1">{each.ownerName}</td>
             <td className="tabel_heading1">{each.registraionNumber}</td>
             <td className="tabel_heading2">
-            <div className="car"> 
-            {each.color}
-            {each.carOrBike==="car"?each.color.toLowerCase()==="white"?<AiOutlineCar className="car_logo"/>:<AiFillCar style={{color:`${each.color}`}} className="car_logo"/>:each.color.toLowerCase()==="white"?<RiEBike2Line className="car_logo"/>:<RiEBike2Fill style={{color:`${each.color}`}} className="car_logo"/>}
-            </div>
-            
+              <div className="car">
+                {each.color}
+                {each.carOrBike === "car" ? (
+                  each.color.toLowerCase() === "white" ? (
+                    <AiOutlineCar className="car_logo" />
+                  ) : (
+                    <AiFillCar
+                      style={{ color: `${each.color}` }}
+                      className="car_logo"
+                    />
+                  )
+                ) : each.color.toLowerCase() === "white" ? (
+                  <RiEBike2Line className="car_logo" />
+                ) : (
+                  <RiEBike2Fill
+                    style={{ color: `${each.color}` }}
+                    className="car_logo"
+                  />
+                )}
+              </div>
             </td>
             <td className="tabel_heading1">
               <div className="del_edit">

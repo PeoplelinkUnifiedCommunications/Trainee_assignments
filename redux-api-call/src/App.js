@@ -16,19 +16,28 @@ const App = ({ request, sucess, fail }) => {
 	const submit = () => {
 		request();
 		axios
-			.get("https://jsonplaceholder.typicode.com/users")
-			.then(response => {
+			.get("https://jsonplaceholder.typicode.com/users", {
+				params: { _limit: 3 },
+			})
+			.then((response) => {
 				let users = response.data;
 				sucess(users);
 			})
-			.catch(error => {
+			.catch((error) => {
 				fail(error);
+			});
+	};
+	const create = async () => {
+		await axios
+			.delete("https://jsonplaceholder.typicode.com/users/1")
+			.then((response) => {
+				console.log(response);
 			});
 	};
 	let noData;
 	let error;
 
-	const data = useSelector(state => state);
+	const data = useSelector((state) => state);
 	console.log(data);
 	if (data.user.length === 0) {
 		noData = false;
@@ -54,7 +63,7 @@ const App = ({ request, sucess, fail }) => {
 						<h1 className="heading">Email</h1>
 						<h1 className="heading">User Name</h1>
 					</li>
-					{data.user.map(each => (
+					{data.user.map((each) => (
 						<ListView eachData={each} key={each.id} />
 					))}
 				</ul>
@@ -64,14 +73,15 @@ const App = ({ request, sucess, fail }) => {
 			<button onClick={submit} className="button">
 				Click to see user data
 			</button>
+			<button onClick={create}>create</button>
 		</div>
 	);
 };
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
 	request: () => dispatch(fetchUserRequest()),
-	sucess: users => dispatch(fetchUserSuccess(users)),
-	fail: error => dispatch(fetchUserFail(error)),
+	sucess: (users) => dispatch(fetchUserSuccess(users)),
+	fail: (error) => dispatch(fetchUserFail(error)),
 });
 
 export default connect(null, mapDispatchToProps)(App);

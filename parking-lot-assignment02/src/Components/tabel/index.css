@@ -33,40 +33,36 @@
   justify-content: center;
   align-items: center;
 }
-.car{
+.car {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.tabel_heading2{
+.tabel_heading2 {
   text-align: center;
   border-top: none;
   border-bottom: 1px solid #5e5e5e;
   border-right: 1px solid #5e5e5e;
   border-left: 1px solid #5e5e5e;
   text-align: center;
- 
- 
 }
-.car_logo{
+.car_logo {
   margin-left: 5px;
 }
-@media (max-width:700px){
-  .tabel{
-    
+@media (max-width: 700px) {
+  .tabel {
   }
-  .tabel_heading{
+  .tabel_heading {
     font-size: 9px;
   }
 
-  .tabel_heading1{
+  .tabel_heading1 {
     font-size: 9px;
   }
-  .tabel_heading2{
+  .tabel_heading2 {
     font-size: 9px;
-    
   }
-  .delete{
+  .delete {
     font-size: 15px;
   }
 }
