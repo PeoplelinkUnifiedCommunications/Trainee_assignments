@@ -14,7 +14,7 @@ const DisplayData = () => {
     const disPatch = useDispatch();
 
     useEffect(() => {
-        axios.get("/").then((response) => console.log(response.data));
+        axios.get("/data").then((response) => console.log(response.data));
     }, []);
 
     const filteredDataList = parkingDataList.filter((item) => {

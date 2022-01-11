@@ -51,11 +51,6 @@ const FormData = () => {
     const disPatch = useDispatch();
 
     const onClickGenerateSlots = () => {
-        axios
-            .put("/genSlots", { slots: parseInt(generateSlots) })
-            .then((response) => console.log(response.data))
-            .catch((error) => console.log(error));
-
         disPatch(addSlots(parseInt(generateSlots)));
         setGeneratedSlots(0);
     };
