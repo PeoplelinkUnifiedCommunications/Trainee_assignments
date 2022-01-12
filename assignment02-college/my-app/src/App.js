@@ -4,8 +4,8 @@ import Academics from './components/Academics';
 import Home from './components/Home';
 import Gallery from './components/Gallery';
 import Admissionform from './components/Admissionform';
-import Data from './components/Data';
 import CivilEngineering from './components/CivilEngineering';
+import English from './components/English';
 import './App.css';
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
        <Route path="/academics" element={<Academics/>}/>
       <Route path="/admissions" element={<Admissionform/>}/>
       <Route path="/gallery" element={<Gallery/>}/>
-      <Route path="/btech" element={<Data/>}/>
-      <Route path="civilengineering" element={<CivilEngineering/>}/>
+      <Route path="/civilengineering" element={<CivilEngineering/>}/>
+      <Route path="/english" element={<English/>}/>
      </Routes>
    </Router>
   )

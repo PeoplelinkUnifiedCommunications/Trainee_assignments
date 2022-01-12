@@ -13,8 +13,26 @@
 .content{
     height: 100%;
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
     justify-content: center;
+    
+}
+
+ul{
+    list-style:none;
+}
+
+.academics-container{
+    border: 1px solid black;
+    /* background-color: rgb(95, 87, 170); */
+    background-color: transparent;
+    width: 350px;
+    height: 220px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
     
 }
 
@@ -28,14 +46,23 @@
     color: white;
     list-style: none;
     padding-left: 20px;
+    padding-bottom: 25px;
 
 }
 
 .btech {
     padding-left:15px;
     padding-bottom: 10px;
+    color: white;
+    font-weight: 600;
+    padding-top: 15px;
 }
 
-.btech{
+
+.civil{
+    text-decoration: none;
     color: white;
+    list-style-type: none;
+    padding-top: 10px;
+    font-size: 15px;
 }

@@ -8,19 +8,19 @@ function Academics() {
         <div className="academics">
             <div className="content">
             <h1 className="courses">Courses Offered</h1>
-            <p className="btech"><Link to="/btech">B.Tech</Link></p>
-            {/* <ul className="group-container">
-                <li className="group">Civil Engineering</li>
-                <li className="group">Computer Science and Engineering</li>
-                <li className="group">Mechanical Engineering</li>
-                <li className="group">Computer Science and Engineering (AI & ML)</li>
-                <li className="group">Computer Science and Information Technology</li>
-                <li className="group">Electronics and Communication Engineering</li>
-                <li className="group">Electrical and Electronics Engineering</li>
-                <li className="group">Electronics and Instrumentation Engineering</li>
-                <li className="group">Information Technology</li>
-                
-            </ul> */}
+            <ul className="academics-container">
+            <li className="btech">B.Tech</li>
+            <ul>
+            <li className="civil"><Link to="/civilengineering" className="civil">Civil Engineering</Link></li>
+            <li className="civil"><Link to="/cscengineering" className="civil">Computer Science and Engineering</Link></li>
+        </ul>
+        <li className="btech">Arts</li>
+        <ul>
+            <li className="civil"><Link to="/english" className="civil">English</Link></li>
+            <li className="civil"><Link to="/sociology " className="civil">Sociology </Link></li>
+        </ul>
+        
+        </ul> 
             </div>
         </div>
     )

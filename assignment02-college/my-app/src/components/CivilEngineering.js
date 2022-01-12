@@ -1,12 +1,13 @@
 import React from 'react'
-import './Data.css';
+// import './Data.css';
+import "./CivilEngineering.css";
 import civil from './civil.jpg';
 
 function CivilEngineering() {
     return (
         <div className="data-container">
-            <div className="container-data"> 
-            <h1 className="civil-image">CIVIL ENGINEERING DEPARTMENT</h1>
+            <div>
+            <h1 className="civil-header">CIVIL ENGINEERING DEPARTMENT</h1>
             <div className="civil-image">
                 <img src={civil} alt="civil" className="civil"/>
             </div>
@@ -21,7 +22,7 @@ The Department of Civil Engineering was established in the year 2011 with an int
 </p>
             </div>
             </div>
-        </div>
+            </div>
     )
 }
 
