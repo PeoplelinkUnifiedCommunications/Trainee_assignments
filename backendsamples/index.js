@@ -10,7 +10,7 @@ app.use(express.json());
 
 const db = async () => {
 	await mongoose.connect(
-		"mongodb+srv://durga:gdp85863@sandbox.hrnke.mongodb.net/sampledata?retryWrites=true&w=majority"
+		"mongodb+srv://@sandbox.hrnke.mongodb.net/sampledata?retryWrites=true&w=majority"
 	);
 	console.log("db connected..!");
 };
