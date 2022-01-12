@@ -9,4 +9,4 @@ const parkingData = mongoose.Schema({
     slotNumber: { type: Number, required: true },
 });
 
-module.exports = mongoose.model("Parking_data", parkingData);
+module.exports = mongoose.model("parkingdatas", parkingData);

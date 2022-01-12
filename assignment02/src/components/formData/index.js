@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { v4 } from "uuid";
 import { useSelector, useDispatch } from "react-redux";
-import { addSlots, addData, onUpdate } from "../../parkingReducer";
+import { addSlots, addData } from "../../parkingReducer";
 import { BsInfoCircle } from "react-icons/bs";
 import axios from "../../server";
+
 import "./index.css";
 
-const FormData = () => {
+const FormData = (props) => {
+    const { editableData, afterEditSetEditableData } = props;
+    console.log(editableData);
+
     const [generateSlots, setGeneratedSlots] = useState(0);
 
     const slots = useSelector((state) => state.addReducer.slots);
+    //axios.get("/getSlots", )
     const parkingDataList = useSelector((state) => state.addReducer.dataList);
 
-    const onClickEdit = useSelector((state) => state.addReducer.clickEdit);
-    console.log(onClickEdit);
+    //const onClickEdit = useSelector((state) => state.addReducer.clickEdit);
+    //console.log(onClickEdit);
 
-    const editableData = useSelector((state) => state.addReducer.editableData);
+    // const editableData = useSelector((state) => state.addReducer.editableData);
     const editableObject = editableData[0];
 
     const [formData, setFormData] = useState({
@@ -52,7 +57,7 @@ const FormData = () => {
 
     const onClickGenerateSlots = () => {
         axios
-            .put("/genSlots", { slots: parseInt(generateSlots) })
+            .post("/genSlots", { slots: parseInt(generateSlots) })
             .then((response) => console.log(response.data))
             .catch((error) => console.log(error));
 
@@ -162,7 +167,7 @@ const FormData = () => {
 
         if (slots === parkingDataList.length) {
             if (editableData.length === 0) {
-                console.log("hjk");
+                //console.log("hjk");
                 errorObject.noSlots = "No more slots available";
                 valRet = false;
             } else {
@@ -178,29 +183,29 @@ const FormData = () => {
 
     //-------------------------------------------------------//
 
-    const onSubmitForm = (event) => {
+    const onSubmitForm = async (event) => {
         event.preventDefault();
         if (slots === 0) {
             alert("Please Generate Slots");
         } else if (validate()) {
-            if (onClickEdit === false) {
+            if (editableData.length === 0) {
                 const userObject = {
                     id: v4(),
-                    slotNumber: formData.slotNumber.toUpperCase(),
+                    slotNumber: formData.slotNumber,
                     registrationNumber:
                         formData.registrationNumber.toUpperCase(),
                     ownerName: formData.ownerName.toUpperCase(),
                     vehicleColor: formData.vehicleColor.toUpperCase(),
                 };
                 const mongoUserObject = {
-                    slotNumber: formData.slotNumber.toUpperCase(),
+                    slotNumber: formData.slotNumber,
                     registrationNumber:
                         formData.registrationNumber.toUpperCase(),
                     ownerName: formData.ownerName.toUpperCase(),
                     vehicleColor: formData.vehicleColor.toUpperCase(),
                 };
                 //console.log(userObject);
-                axios
+                await axios
                     .post("/create", mongoUserObject)
                     .then((response) => console.log(response.data))
                     .catch((error) => console.log(error));
@@ -211,17 +216,20 @@ const FormData = () => {
                     alert("No Slot Available");
                 }
             } else {
-                const editableId = editableObject.id;
-                console.log(editableId);
+                const id = editableObject._id;
                 const userObject = {
-                    id: editableId,
-                    slotNumber: formData.slotNumber.toUpperCase(),
+                    slotNumber: formData.slotNumber,
                     registrationNumber:
                         formData.registrationNumber.toUpperCase(),
                     ownerName: formData.ownerName.toUpperCase(),
                     vehicleColor: formData.vehicleColor.toUpperCase(),
                 };
-                disPatch(onUpdate(userObject));
+                //disPatch(onUpdate(userObject));
+                await axios
+                    .put(`/update/${id}`, userObject)
+                    .then((response) => console.log(response))
+                    .catch((error) => console.log(error.message));
+                afterEditSetEditableData();
             }
             setFormData({
                 ownerName: "",

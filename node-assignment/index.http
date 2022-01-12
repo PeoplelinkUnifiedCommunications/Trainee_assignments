@@ -4,7 +4,7 @@ GET http://localhost:9000/d
 GET http://localhost:3004/movies/
 ###
 
-GET http://localhost:3004/movies/2/
+GET http://localhost:9000/get/61deb698dde3d9e01a62a50d
 ###
 
 POST http://localhost:3004/movies/
@@ -18,13 +18,14 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3004/movies/2/
+PUT http://localhost:9000/update/61de96ffab8cb6d6556d3fa4
 Content-Type: application/json
 
 {
-  "directorId": 24,
-  "movieName": "Thor",
-  "leadActor": "Christopher Hemsworth"
+  "ownerName": "RAM",
+  "registrationNumber": "AP23-TD-1531",
+  "vehicleColor": "BLUE",
+  "slotNumber": 1
 }
 
 ###

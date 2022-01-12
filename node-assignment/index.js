@@ -17,23 +17,14 @@ app.listen(9000, () => {
     console.log("Server Running at http://localhost:9000");
 });
 
-app.put("/genSlots", async (request, response) => {
+app.post("/genSlots", async (request, response) => {
     const { slots } = request.body;
     try {
-        const newSlots = genSlots({
+        const newSlots = {
             slots,
-        });
-        await newSlots.save();
-        return response.send(await genSlots.find());
-    } catch (error) {
-        console.log(error.message);
-    }
-});
-
-app.get("/", async (request, response) => {
-    try {
-        const allData = await parkingData.find();
-        return response.send(allData);
+        };
+        await genSlots.replaceOne({}, newSlots);
+        return response.json(await genSlots.find());
     } catch (error) {
         console.log(error.message);
     }
@@ -50,10 +41,53 @@ app.post("/create", async (request, response) => {
             slotNumber,
         });
         await newData.save();
-        return response.send(await parkingData.find());
+        return response.json(await parkingData.find());
     } catch (error) {
         console.log(error.message);
     }
+});
+
+app.get("/", async (request, response) => {
+    try {
+        const allData = await parkingData.find();
+        return response.json(allData);
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+app.get("/get/:id", async (request, response) => {
+    const id = request.params.id;
+    try {
+        const data = await parkingData.find({ _id: id });
+        return response.json(data);
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+app.put("/update/:id", async (request, response) => {
+    const id = request.params.id;
+    const { ownerName, registrationNumber, vehicleColor, slotNumber } =
+        request.body;
+    try {
+        const newData = {
+            ownerName,
+            registrationNumber,
+            vehicleColor,
+            slotNumber,
+        };
+        await parkingData.updateOne({ _id: id }, newData);
+        return response.json("success update");
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+app.delete("/delete/:id", async (request, response) => {
+    const id = request.params.id;
+    await parkingData.deleteOne({ _id: id });
+    response.send("deleted");
 });
 
 module.exports = app;

@@ -4,4 +4,4 @@ const genSlots = mongoose.Schema({
     slots: { type: Number, required: true },
 });
 
-module.exports = mongoose.model("genSlots", genSlots);
+module.exports = mongoose.model("genslots", genSlots);

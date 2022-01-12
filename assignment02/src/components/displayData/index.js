@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { delData, editData } from "../../parkingReducer";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { MdDeleteOutline } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
 import { IoCarSportSharp, IoCarSportOutline } from "react-icons/io5";
@@ -8,14 +7,18 @@ import axios from "../../server";
 
 import "./index.css";
 
-const DisplayData = () => {
-    const parkingDataList = useSelector((state) => state.addReducer.dataList);
+const DisplayData = (props) => {
+    //const parkingDataList = useSelector((state) => state.addReducer.dataList);
+    const [parkingDataList, setParkingDataList] = useState([]);
     const searchData = useSelector((state) => state.addReducer.search);
-    const disPatch = useDispatch();
+    //const disPatch = useDispatch();
 
     useEffect(() => {
-        axios.get("/").then((response) => console.log(response.data));
-    }, []);
+        axios
+            .get("/")
+            .then((response) => setParkingDataList(response.data))
+            .catch((error) => console.log(error.message));
+    }, [parkingDataList]);
 
     const filteredDataList = parkingDataList.filter((item) => {
         return Object.keys(item).some((key) => {
@@ -28,6 +31,20 @@ const DisplayData = () => {
             }
         });
     });
+
+    const onEdit = (id) => {
+        //console.log(id);
+        props.onEditGetData(id);
+    };
+
+    const onDelete = (id) => {
+        //console.log(id);
+        axios
+            .delete(`/delete/${id}`)
+            .then((response) => console.log(response))
+            .catch((error) => console.log(error.message));
+    };
+    // console.log(parkingDataList);
 
     return (
         <div className="display-data-container-bg">
@@ -43,7 +60,7 @@ const DisplayData = () => {
                 </thead>
                 <tbody>
                     {filteredDataList.map((eachData) => (
-                        <tr key={eachData.id}>
+                        <tr key={eachData._id}>
                             <td>{eachData.slotNumber}</td>
                             <td>{eachData.registrationNumber}</td>
                             <td>{eachData.ownerName}</td>
@@ -72,15 +89,11 @@ const DisplayData = () => {
                             <td>
                                 <MdDeleteOutline
                                     className="icon"
-                                    onClick={() =>
-                                        disPatch(delData(eachData.id))
-                                    }
+                                    onClick={() => onDelete(eachData._id)}
                                 />{" "}
                                 <FiEdit
                                     className="icon"
-                                    onClick={() =>
-                                        disPatch(editData(eachData.id))
-                                    }
+                                    onClick={() => onEdit(eachData._id)}
                                 />
                             </td>
                         </tr>
