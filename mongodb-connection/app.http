@@ -1,0 +1,30 @@
+POST http://localhost:3004/add/ 
+Content-Type: application/json
+
+{   "id":"12345",
+    "sl_no":"1000",
+   "owner_name":"vijay",
+   "reg_number":"ad56-fv-3456 ",
+  "color":"black"
+}
+
+
+###
+
+GET http://localhost:3004/get/ 
+
+###
+
+DELETE http://localhost:3004/delete/1000
+
+###
+
+PUT http://localhost:3004/update/450 
+Content-Type: application/json
+
+{
+    "sl_no":"450",
+   "owner_name":"shiva sai",
+   "reg_number":"as23-ed-3456",
+  "color":"red"
+}
