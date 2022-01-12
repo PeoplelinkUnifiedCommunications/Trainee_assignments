@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Century Gothic", sans-serif;
+}
+
+.navlist{
+    width: 100%;
+    padding: 5px 5vw;
+    height: 45px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(#000000c3, #000000c3);
+    background-size: cover;
+    padding-top: 10px;
+    /* margin-bottom: 50px; */
+    
+}
+
+.header{
+    font-size: 19px;
+    padding-top: 3px;
+    color: white;
+    font-weight: bold;
+
+}
+
+.links {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navlist ul{
+    display: flex;
+    list-style: none;
+    padding-top: 4px;
+}
+
+.navlist ul li:first-child{
+    flex: 1;
+}
+
+.lists {
+    margin-right: 15px;
+    font-size: 17px;
+}
+
+.navlist ul Link{
+    margin-left: 15px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding-top: 25vh;
+    background-image: linear-gradient(#000000c3, #000000c3), url("homecollege.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.container h1{
+    font-family: serif;
+    margin-bottom: 20px;
+    word-spacing: 5px;
+}
+
+.container p{
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.container button{
+    padding: 10px;
+    background: none;
+    border: 1px solid #f80;
+}
+
+.container button:hover{
+    background: #f80;
+}
+
+.About {
+    text-align: center;
+    font-size: 18px;
+}
+
+.conter{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Mission{
+    font-size: 15px;
+    padding-bottom: 6px;
+}
+
+.paragraph{
+    font-size: 13px;;
+}
+
+/* nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: rgb(41, 83, 160);
+    color:white;
+  }
+  
+  .nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+  }
+
+ .links {
+      text-decoration: none;
+      color: white;
+ } */
