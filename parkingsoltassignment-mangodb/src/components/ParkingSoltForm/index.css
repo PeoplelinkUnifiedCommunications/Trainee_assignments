@@ -1,0 +1,13 @@
+.parking-lot-container{
+    min-height:87vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center
+}
+@media screen and (min-width:768px){
+    .parking-lot-container{
+        display:flex;
+        flex-direction:row;
+        align-items:flex-start
+    }
+}
