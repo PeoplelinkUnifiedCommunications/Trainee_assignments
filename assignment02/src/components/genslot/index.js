@@ -1,25 +1,44 @@
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
-import { deleteSlot, updateSlot } from "../../store/index";
+import { updateSlot } from "../../store/index";
 import { useSelector, useDispatch } from "react-redux";
 import { AiFillCar } from "react-icons/ai";
+import axios from "axios";
 
 import "./index.css";
+import { useEffect, useState } from "react";
 
 function Genslots() {
-	const { searchvalue, allotedSlots } = useSelector(
-		(state) => state.user.value
-	);
+	const [slotData, setSlotData] = useState([]);
 	const dispatch = useDispatch();
 
-	const searchResults = allotedSlots.filter((item) => {
-		return Object.keys(item).some((key) => {
-			if (key !== "id") {
-				return item[key].toLowerCase().includes(searchvalue.toLowerCase());
-			} else {
-				return null;
-			}
-		});
-	});
+	// const searchResults = allotedSlots.filter((item) => {
+	// 	return Object.keys(item).some((key) => {
+	// 		if (key !== "id") {
+	// 			return item[key].toLowerCase().includes(searchvalue.toLowerCase());
+	// 		} else {
+	// 			return null;
+	// 		}
+	// 	});
+	// });
+
+	const onClickDelete = async (id) => {
+		try {
+			await axios.delete(`http://localhost:3005/delete/${id}`);
+		} catch (e) {
+			console.log(e.message);
+		}
+	};
+
+	useEffect(() => {
+		axios
+			.get("http://localhost:3005/")
+			.then((response) => {
+				setSlotData(response.data);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}, [slotData]);
 
 	return (
 		<div className='slots-container'>
@@ -33,7 +52,7 @@ function Genslots() {
 							<th className='table-data1'>Car/Bike_Color</th>
 							<th className='table-data1'>Remove/Update</th>
 						</tr>
-						{searchResults.map((eachSlot) => (
+						{slotData.map((eachSlot) => (
 							<tr key={eachSlot.id} className='table-row'>
 								<td className='table-data'>{eachSlot.slotNumber}</td>
 								<td className='table-data'>{eachSlot.regNumber}</td>
@@ -49,7 +68,7 @@ function Genslots() {
 								<td className='table-data'>
 									<AiOutlineDelete
 										className='icons'
-										onClick={() => dispatch(deleteSlot(eachSlot.id))}
+										onClick={() => onClickDelete(eachSlot.id)}
 									/>
 									<AiOutlineEdit
 										className='icons'

@@ -1,20 +1,23 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { updateGenSlots, addSlots } from "../../store/index";
+import { updateGenSlots, updateSlot } from "../../store/index";
 import InputForm from "../inputform";
 import { v4 } from "uuid";
+import axios from "axios";
 
 import "./index.css";
 
 function Form() {
 	const data = useSelector((state) => state.user.value);
-	const { genSlots, allotedSlots, toUpdateSlotsDetails } = data;
+	const { genSlots, toUpdateSlotsDetails } = data;
 	const [form, setForm] = useState({
 		ownerName: "",
 		regNumber: "",
 		vehicleColor: "",
 		slotNumber: "",
 	});
+
+	const [formData, setFormData] = useState([]);
 
 	const isUpdate = toUpdateSlotsDetails.length !== 0;
 
@@ -64,12 +67,23 @@ function Form() {
 		}
 	}, [toUpdateSlotsDetails]);
 
+	useEffect(() => {
+		axios
+			.get("http://localhost:3005/")
+			.then((response) => {
+				setFormData(response.data);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}, [formData]);
+
 	const validation = (errorObject) => {
 		let valRet = true;
-		const isSlotExist = allotedSlots.find(
+		const isSlotExist = formData.find(
 			(each) => parseInt(each.slotNumber) === parseInt(form.slotNumber)
 		);
-		const isVehExist = allotedSlots.find(
+		const isVehExist = formData.find(
 			(each) => each.regNumber === form.regNumber
 		);
 		if (form.ownerName === "") {
@@ -135,7 +149,7 @@ function Form() {
 		// const isSlotExist = allotedSlots.find(
 		// 	(each) => parseInt(each.slotNumber) === parseInt(form.slotNumber)
 		// );
-		if (genSlots === allotedSlots.length) {
+		if (genSlots === formData.length) {
 			if (toUpdateSlotsDetails.length === 0) {
 				errorObject.noSlots = "No more slots available";
 				retValue = false;
@@ -148,6 +162,24 @@ function Form() {
 
 		setError(errorObject);
 		return retValue;
+	};
+
+	const postData = (newData) => {
+		try {
+			axios.post("http://localhost:3005/postdata", newData);
+			console.log(newData);
+		} catch (e) {
+			console.log(e.message);
+		}
+	};
+
+	const updateData = async (newData) => {
+		try {
+			await axios.put(`http://localhost:3005/update/${newData.id}`, newData);
+			dispatch(updateSlot([]));
+		} catch (e) {
+			console.log(e.message);
+		}
 	};
 
 	const onSubmitInputForm = (event) => {
@@ -181,7 +213,10 @@ function Form() {
 				vehicleColor: "",
 				slotNumber: "",
 			});
-			dispatch(addSlots(newSlot));
+			// dispatch(addSlots(newSlot));
+			toUpdateSlotsDetails.length === 0
+				? postData(newSlot)
+				: updateData(newSlot);
 		}
 	};
 
@@ -244,7 +279,7 @@ function Form() {
 						id='gen-slot'
 						className='slots-avil'
 						readOnly
-						value={genSlots - allotedSlots.length}
+						value={genSlots - formData.length}
 					/>
 				</div>
 				<div className='slot-cont'>
@@ -253,7 +288,7 @@ function Form() {
 						type='text'
 						id='gen-slot'
 						className='slots-avil'
-						value={allotedSlots.length}
+						value={formData.length}
 						readOnly
 					/>
 				</div>
