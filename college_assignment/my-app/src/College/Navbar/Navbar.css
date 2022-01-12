@@ -1,0 +1,36 @@
+.mainPageContainer{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+nav{
+    background-color: rgb(19, 56, 90);
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin-right: 13px;
+    margin-top: 6px;
+}
+
+.clg_name{
+    font-family: "roboto";
+    font-size: 30px;
+    color: rgb(245, 246, 248);
+}
+
+li{
+    margin-right: 10px;
+    list-style-type: none;
+    font-weight: 500;
+    padding-right: 10px;
+    color:rgb(245, 246, 248)
+}

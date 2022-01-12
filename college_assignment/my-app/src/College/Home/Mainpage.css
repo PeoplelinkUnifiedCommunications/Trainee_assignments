@@ -1,0 +1,62 @@
+.body_content{
+    background-color: rgb(43, 62, 114);
+    background-image: url("https://www.asiapacifichealthcaremanagement.org/wp-content/uploads/2018/01/background_home.jpg");
+    background-size: cover;
+}
+
+.clg_description{
+    font-family: "roboto";
+    color: rgb(252, 249, 249);
+    font-size: 16px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    padding:20px;
+}
+
+.accred_container{
+    text-align: center;
+}
+
+.accreditation{
+    width: 100px;
+    margin-left: 20px;
+    border-radius: 50px;
+    margin-top: 60px;
+}
+
+.clg_pic{
+    width: 100%;
+    height: 70vh;
+}
+
+.footer_container{
+    background-color: rgb(16, 44, 70);
+    padding: 15px;
+    padding-top: 1px;
+    height: 17vh;
+    text-align: center;
+}
+
+hr{
+    width: 170px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.contact_us{
+    color: white;
+    font-family: "roboto";
+    font-size: 30px;
+    padding-top: 0px;
+    margin-top: 10px;
+}
+
+
+.footer{
+    color: white;
+    padding: 13px;
+}
+
+a{
+    color: white;
+}

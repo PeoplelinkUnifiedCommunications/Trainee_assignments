@@ -1,0 +1,108 @@
+.admission_border{
+    background-color: white;
+    border: 1px solid white;
+    margin-top: 1px;
+    padding-left: 14px;
+    padding-right: 14px;
+    width: 25%;
+    height: 28rem;
+}
+
+.admission_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url("https://www.asiapacifichealthcaremanagement.org/wp-content/uploads/2018/01/background_home.jpg");
+    padding: 20px;
+    font-family: "roboto";
+}
+
+.admission_heading{
+    font-size: 20px;
+    font-weight: 700;
+    border-style: solid;
+    border-color: rgb(19, 56, 90);
+    background-color: rgb(19, 56, 90);
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 8px;
+    text-align: center;
+}
+
+form{
+    padding: 10px;
+}
+
+input{
+    margin-bottom: 20px;
+    width: 70%;
+    height: 17px;
+    margin-bottom: 25px;
+}
+
+.form_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.options{
+    width: 80%;
+    height: 23px;
+    padding: 1px;
+}
+
+textarea{
+    height: 70px;
+    width: 40%;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button{
+    border-width: 0px;
+    background-color: rgb(19, 56, 90);
+    padding:8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.core_team_heading{
+    font-family: "roboto";
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+}
+
+.core_container{
+    text-align: center;
+}
+
+.core_team_img{
+    width: 60%;
+}
+
+.core_team_names{
+    font-family: "roboto";
+    color:white;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.admin{
+    font-family: "roboto";
+    color:rgb(226, 231, 236);
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+
