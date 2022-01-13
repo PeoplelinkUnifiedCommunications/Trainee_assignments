@@ -1,0 +1,83 @@
+POST http://localhost:3008/addMovies/
+Content-Type: application/json
+
+[
+{
+    "title" : "Fight Club",
+    "writer" : "Chuck Palahniuk",
+    "year" : "1999",
+    "actors" : ["Brad Pitt","Edward Norton"]
+},
+
+{
+    "title" : "Pulp Fiction",
+    "writer" : "Quentin Tarantino",
+    "year" : "1994",
+    "actors" : ["John Travolta","Uma Thurman"]
+},
+
+{
+    "title" : "nglorious Basterds",
+    "writer" : "Quentin Tarantino",
+    "year" : "2009",
+    "actors" : ["Brad Pitt","Diane Kruger","Eli Roth"]
+},
+
+{
+    "title" : "The Hobbit: An Unexpected Journey",
+    "writer" : "J.R.R. Tolkein",
+    "year" : "2012",
+    "franchise" : "The Hobbit"
+},
+
+{
+    "title" : "The Hobbit: The Desolation of Smaug",
+    "writer" : "J.R.R. Tolkein",
+    "year" : "2013",
+    "franchise" : "The Hobbit"
+}
+]
+
+###
+
+POST http://localhost:3008/addMovies/
+Content-Type: application/json
+
+[{
+    
+    "title" : "nglorious Basterds",
+    "writer" : "Quentin Tarantino",
+    "year" : "2009",
+    "actors" : ["Brad Pitt","Diane Kruger","Eli Roth"]
+
+}]
+
+###
+
+POST http://localhost:3008/addOneMovie/
+Content-Type: application/json
+
+{
+    "title" : "The Hobbit: The Desolation of Smaug",
+    "writer" : "Harish",
+    "year" : "2013",
+    "franchise" : "The Hobbit"
+}
+
+###
+
+GET http://localhost:3008/getMovieData/
+
+###
+
+
+GET http://localhost:3008/getMovieByWriter/Quentin%20Tarantino
+
+###
+
+
+ GET http://localhost:3008/getMovieYear/?year1=2015&year2=2011
+ 
+###
+
+ GET http://localhost:3008/getMovieByActorAndWriter/?writer=Quentin%20Tarantino&year=2009
