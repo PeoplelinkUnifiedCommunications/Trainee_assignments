@@ -1,0 +1,34 @@
+.masters{
+    height: 100%;
+    width: 100%;
+}
+.back{
+    width: 100%;
+    height: 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: none;
+
+}
+.imgB{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: none;
+
+}
+.linkH{
+    padding: 0.5rem;
+
+}
+.com{
+    width: 100vw;
+    height: fit-content;
+}

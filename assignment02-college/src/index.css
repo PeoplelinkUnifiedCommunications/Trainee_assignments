@@ -37,6 +37,15 @@ code {
   height: 100%;border-radius: 1rem;
 
 }
+.linkH{
+  padding: 0.5rem;
+  text-decoration: none;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 4px;
+  margin-right: 1rem;
+
+}
 @media (min-width: 768px) and (max-width: 1112px) {
 }
 @media (min-width: 1113px) and (max-width: 1366px) {
@@ -44,7 +53,7 @@ code {
     padding-top: 4rem;
   }
 }
-@media (min-width: 1367) {
+@media (min-width: 1367px) {
   .mainContainer {
     padding-top: 4rem;
   }

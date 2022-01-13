@@ -1,13 +1,15 @@
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: DodgerBlue;
-    justify-content: center;
-  }
-  
-  .flex-container > div {
-    background-color: #f1f1f1;
-    width: 30%;
-    margin: 10px;
-    text-align: center;
-  }
+.gallery{
+  width: 100%;
+  height: 100%;
+}
+.imageG{
+  width: 100%;
+  height: 100%;
+
+}
+.ban{
+  width: 100vw;
+  height: inherit;
+}
+
+
