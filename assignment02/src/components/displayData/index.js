@@ -19,6 +19,7 @@ const DisplayData = (props) => {
             .then((response) => setParkingDataList(response.data))
             .catch((error) => console.log(error.message));
     }, [parkingDataList]);
+    //console.log(parkingDataList);
 
     const filteredDataList = parkingDataList.filter((item) => {
         return Object.keys(item).some((key) => {

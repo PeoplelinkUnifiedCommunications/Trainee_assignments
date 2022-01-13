@@ -19,11 +19,19 @@ app.listen(9000, () => {
 
 app.post("/genSlots", async (request, response) => {
     const { slots } = request.body;
+    // const existed = await genSlots.find();
+    // console.log(existed);
     try {
         const newSlots = {
             slots,
         };
-        await genSlots.replaceOne({}, newSlots);
+        await genSlots.remove({});
+        await new genSlots(newSlots).save();
+        // await genSlots.find().forEach((doc) => {
+        //     doc.slots = slots + doc.slots;
+        //     return genSlots.save(doc);
+        // });
+        // await genSlots.updateOne();
         return response.json(await genSlots.find());
     } catch (error) {
         console.log(error.message);
