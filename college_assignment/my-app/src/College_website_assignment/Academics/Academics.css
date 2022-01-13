@@ -1,0 +1,64 @@
+.academics_heading{
+    color: white;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.academics_description{
+    color: white;
+    padding: 15px;
+    font-size: 17px;
+}
+
+.branch_container{
+    justify-content: space-between;
+}
+
+.img_container{
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.branch{
+    background-color: white;
+    padding: 13px;
+    margin: 10px;
+    border-radius: 8px;
+    margin: 2rem;
+    padding-bottom: 2rem;
+}
+
+.branch_img{
+    width: 95%;
+    height: 40%;
+}
+
+.branch_name{
+    font-size: 18px;
+    color: rgb(13, 43, 71);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.branch_desc{
+    color:rgb(93, 95, 97);
+}
+
+.list{
+    font-family: "roboto";
+    color: black;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+.branch_link{
+    color: rgb(13, 43, 71);
+    text-decoration: none;
+    font-weight: 500;
+}

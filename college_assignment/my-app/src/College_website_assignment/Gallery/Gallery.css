@@ -1,0 +1,18 @@
+.pics_container{
+    padding: 1rem;
+}
+
+.pic_heading{
+    margin-top: 0;
+    font-size: 2rem;
+    color: white;
+}
+
+.pics{
+    height: 8rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+}
+

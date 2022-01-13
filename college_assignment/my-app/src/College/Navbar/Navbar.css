@@ -14,17 +14,17 @@ ul{
 }
 
 .logo{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
-    margin-right: 13px;
-    margin-top: 6px;
+    margin: 6px 13px 6px 0px;
 }
 
 .clg_name{
     font-family: "roboto";
     font-size: 30px;
     color: rgb(245, 246, 248);
+    align-self: center;
 }
 
 li{

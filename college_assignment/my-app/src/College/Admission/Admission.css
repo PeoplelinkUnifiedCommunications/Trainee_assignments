@@ -12,9 +12,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     background-image: url("https://www.asiapacifichealthcaremanagement.org/wp-content/uploads/2018/01/background_home.jpg");
     padding: 20px;
     font-family: "roboto";
+    height: 100%;
 }
 
 .admission_heading{
@@ -30,14 +32,12 @@
     text-align: center;
 }
 
-form{
-    padding: 10px;
-}
+form{padding: 10px;}
 
 input{
     margin-bottom: 20px;
     width: 70%;
-    height: 17px;
+    height: 1.3rem;
     margin-bottom: 25px;
 }
 
@@ -67,9 +67,7 @@ textarea{
 button{
     border-width: 0px;
     background-color: rgb(19, 56, 90);
-    padding:8px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding:8px 20px;
     color: white;
     border-radius: 8px;
     margin-top: 30px;
@@ -80,29 +78,27 @@ button{
     font-size: 25px;
     font-weight: 700;
     color: white;
+    margin-bottom: 1.5rem;
 }
 
-.core_container{
-    text-align: center;
-}
+.core_container{text-align: center; margin-top: 6rem;}
 
-.core_team_img{
-    width: 60%;
-}
+.core_team_img{width: 60%;}
 
 .core_team_names{
     font-family: "roboto";
     color:white;
     font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 2px;
 }
 
 .admin{
     font-family: "roboto";
     color:rgb(226, 231, 236);
     margin-top: 0px;
+    margin-bottom: 2rem;
     padding-top: 0px;
 }
+
 
 

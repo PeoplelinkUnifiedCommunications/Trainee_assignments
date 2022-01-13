@@ -1,0 +1,35 @@
+.img_container{
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.accred_img{
+    height: 6rem;
+    width: 6rem;
+    margin: 1rem 1rem 0;
+    border-radius: 4rem;
+}
+
+.description{
+    font-family: "roboto";
+    color: white;
+    padding: 20px;
+    margin-top: 4rem;
+}
+
+.footer{
+    background-color: rgb(13, 38, 61);
+    color: white;
+    text-align: center;
+    padding: 1rem 0 ;
+}
+
+.contact{
+    padding-bottom: 2px;
+    margin-bottom: 0.5rem;
+}
+
+span{
+    margin-left: 1rem;
+}
