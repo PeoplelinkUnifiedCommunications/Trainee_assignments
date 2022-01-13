@@ -1,0 +1,69 @@
+POST http://localhost:3004/postData/
+Content-Type: application/json
+
+[{
+    "title": "Fight Club",
+"writer": "siva",
+"year": "2000",
+"actors": ["tarun","roja"],
+"franchise":"dvv",
+"synopsis":"murder"
+},
+{
+    "title": "rrr",
+"writer": "rajamouli",
+"year": "2022",
+"actors": ["Ram","ntr"],
+"franchise":"dvv",
+"synopsis":"story"
+},
+{
+    "title": "Pushpa",
+"writer": "suku",
+"year": "2021",
+"actors": ["allu","arjun","rashmika"],
+"franchise":"arka",
+"synopsis":"tree based"
+},
+{
+    "title": "bell bottom",
+"writer": "bharath",
+"year": "2012",
+"actors": ["ravi","sam"],
+"franchise":"drk",
+"synopsis":"myth"
+},
+{
+    "title": "raksha",
+"writer": "harish",
+"year": "2001",
+"actors": ["ntr","raja"],
+"franchise":"msk",
+"synopsis":"story"
+}]
+
+### 13/01/2022
+
+POST http://localhost:3004/addData/
+Content-Type: application/json
+
+{
+    "title": "Fight",
+"writer": "raju",
+"year": "2015",
+"actors": ["tarun","roja"],
+"franchise":"dvv",
+"synopsis":"fighting"
+}
+###
+GET http://localhost:3004/get/
+
+###
+GET http://localhost:3004/getFields/
+###
+GET http://localhost:3004/get/61dfedbe72d0effe92647404
+
+###
+GET http://localhost:3004/data/?writer=world
+###
+GET http://localhost:3004/year/?less=1900&greater=2000
