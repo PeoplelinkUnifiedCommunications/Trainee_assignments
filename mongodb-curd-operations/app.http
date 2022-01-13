@@ -1,0 +1,46 @@
+POST http://localhost:3004/postData/
+Content-Type: application/json
+
+[{
+    "title": "Fight Club",
+"writer": "Chuck Palahniuk",
+"year": "1999",
+"actors": ["hai","hello","write"],
+"franchise":"hai",
+"synopsis":""
+},
+{
+    "title": "Fight Club",
+"writer": "Chuck Palahniuk",
+"year": "1999",
+"actors": ["hai","hello","write"],
+"franchise":"hai",
+"synopsis":""
+}]
+
+### 13/01/2022
+
+POST http://localhost:3004/addData/
+Content-Type: application/json
+
+{
+    "title": "Fight Club",
+"writer": "world",
+"year": "3033",
+"actors": ["hai","hello","write"],
+"franchise":"hai",
+"synopsis":""
+}
+
+###
+GET http://localhost:3004/get/
+
+###
+GET http://localhost:3004/getFields/
+###
+GET http://localhost:3004/get/61dfedbe72d0effe92647404
+
+###
+GET http://localhost:3004/data/?writer=world
+###
+GET http://localhost:3004/year/?less=1900&greater=2000
