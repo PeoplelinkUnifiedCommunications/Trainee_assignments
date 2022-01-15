@@ -1,0 +1,26 @@
+.container {
+    padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+    font-size: 25px;
+  }
+  
+  ul {
+    list-style-type: square;
+  }
+  
+  li {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  
+  ol {
+    list-style-type: lower-alpha;
+  }

@@ -1,0 +1,27 @@
+.container {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+table {
+    width: 800px;
+  }
+  
+  th {
+    text-align: left;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+  }
+
+  

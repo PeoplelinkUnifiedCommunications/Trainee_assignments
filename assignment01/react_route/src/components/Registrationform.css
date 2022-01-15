@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+  
+  .container-block {
+    width: 50vw;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 15px;
+    border-radius: 10px;
+    border-color: lightgrey;
+  }
+  
+  h1 {
+    font-size: 17px;
+    font-weight: normal;
+  }
+  
+  .gender {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .block {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .heading {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .button-name {
+    background-color: lightskyblue;
+    border-width: 0px;
+    width: 80px;
+    height: 45px;
+    border-radius: 10px;
+  }

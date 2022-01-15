@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+  }
+  
+  .sub-heading {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .birds {
+    width: 360px;
+  }
+  
+  .image-container {
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+  }
