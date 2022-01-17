@@ -1,0 +1,37 @@
+POST http://localhost:8000/addSlot/
+Content-Type: application/json
+
+{
+    "slotNum": "2",
+	"ownerName":"Krishna" ,
+	"registrationNumber": "AP09-GG-1233",
+	"color": "GREEN",
+	"carOrBike": "bike"
+}
+
+###
+
+GET http://localhost:3006/getSlotData/
+
+###
+
+DELETE http://localhost:3006/deleteSlot/1
+
+###
+
+PUT http://localhost:3006/updateSlot/2
+Content-Type: application/json
+
+{
+    "slot_num": "2",
+	"owner_name":"Harish" ,
+	"registration_number": "AP09-GG-3453",
+	"color": "Green",
+	"car_or_bike": "car"
+}
+
+###
+
+GET http://localhost:3006/getDateSlot/2
+
+###

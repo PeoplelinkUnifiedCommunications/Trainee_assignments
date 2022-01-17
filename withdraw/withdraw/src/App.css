@@ -1,0 +1,64 @@
+.container{
+  background-color: white;
+  width: 100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.withdraw{
+  background-color: #150b3e;
+  padding:30px;
+  border-radius: 10px;
+  width:50vw;
+  height:50vh;
+}
+.icon{
+  color:#7c3aed;
+  background-color: #c7d2fe;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:25px;
+  padding-right:25px;
+  border-radius:30px;
+  margin-right: 20px;
+}
+.name{
+  color:#d4d2db;
+  margin-bottom: 40px;
+}
+.amountContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.balance{
+  color:#382f5a;
+}
+.amount{
+  font-size: 30px;
+  color:#d4d2db;
+}
+
+.amount1{
+  font-size: 40px;
+  color:#d4d2db;
+  font-weight: bold;
+}
+
+.buttons{
+  display: flex;
+  flex-wrap: wrap;
+}
+.money{
+  width:6vw;
+  font-size: 20px;
+  color:#c4c4c4;
+  background-color: #585076;
+  border-width: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+

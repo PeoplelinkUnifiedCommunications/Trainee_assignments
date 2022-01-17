@@ -13,6 +13,7 @@ export default function Allottedslots() {
     const state1 = useSelector(state => state.search)
 
     const isExistItem = state.filter(each => each.registrationNumber.includes(state1))
+    console.log(isExistItem)
 
 
     return (
@@ -29,7 +30,7 @@ export default function Allottedslots() {
 
                 {
                     isExistItem.map((each)=> (
-                    <tr className='details' key={each.id}>
+                    <tr className='tr-details' key={each.id}>
                         <td className='Sl_Num'>{each.slotNumber}</td>
                         <td className='Registration_Number'>{each.registrationNumber}</td>
                         <td className='Owner_Name'>{each.ownerName}</td>

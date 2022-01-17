@@ -51,7 +51,9 @@ table,tr,td{
     color:#F6AE42;
 }
 
-@media only screen and (max-width: 768px) {
+
+
+@media screen and (max-width: 767px) {
     .AllottedContainer{
         font-size: 10px;
         background-image: linear-gradient(rgba(255, 255, 255, 0.900), rgb(255, 255, 255, 0.900)), url('/home/peoplelink/myProjects/Trainee_assignments/Assignment02(onlineparkinglot)/online_parking_lot/src/Parking_Lot/Parking-Dashboard.png');
