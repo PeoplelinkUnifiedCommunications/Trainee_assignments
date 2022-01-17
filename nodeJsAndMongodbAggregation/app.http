@@ -1,0 +1,190 @@
+POST http://localhost:3009/addStudentData/
+Content-Type: application/json
+
+[
+    {
+        "student_name": "Harish",
+	    "age": 20,
+	    "course": "Mechanical",
+	    "section": "A",
+	    "course_fee": 65000,
+	    "subjects": ["Material Science and Engineering","Engineering Mechanics","Fluid Mechanics","Machine Drawing"],
+	    "date_of_joining_year": 2019,
+	     "weight": 60
+    },
+    {
+        "student_name": "Mahesh",
+	    "age": 21,
+	    "course": "Mechanical",
+	    "section": "A",
+	    "course_fee": 65000,
+	    "subjects": ["Material Science and Engineering","Engineering Mechanics","Machine Drawing"],
+	    "date_of_joining_year": 2019,
+	     "weight": 58
+    },
+    {
+
+        "student_name": "Bharath",
+	    "age": 20,
+	    "course": "Mechanical",
+	    "section": "B",
+	    "course_fee": 65000,
+	    "subjects": ["Material Science and Engineering","Engineering Mechanics"],
+	    "date_of_joining_year": 2019,
+	     "weight": 70
+    },
+    {
+        "student_name": "Ravi",
+	    "age": 21,
+	    "course": "Mechanical",
+	    "section": "B",
+	    "course_fee": 65000,
+	    "subjects": ["Material Science and Engineering","Engineering Mechanics","Fluid Mechanics"],
+	    "date_of_joining_year": 2019,
+	     "weight": 64
+    },
+    {
+        "student_name": "Sai",
+	    "age": 20,
+	    "course": "Computers",
+	    "section": "A",
+	    "course_fee": 70000,
+	    "subjects": ["Programming language theory","Computer graphics","Human-computer interaction"],
+	    "date_of_joining_year":2020,
+	     "weight": 60
+    },
+    {
+        "student_name": "Harish",
+	    "age": 20,
+	    "course": "Computers",
+	    "section": "A",
+	    "course_fee": 70000,
+	    "subjects": ["Programming language theory","Computer graphics","Human-computer interaction"],
+	    "date_of_joining_yaer": 2020,
+	     "weight": 62
+    },
+    {
+        "student_name": "Shiva",
+	    "age": 22,
+	    "course": "Computers",
+	    "section": "B",
+	    "course_fee": 72000,
+	    "subjects": ["Programming language theory","Human-computer interaction"],
+	    "date_of_joining_year":2019,
+	     "weight": 68
+    },
+    {
+        "student_name": "Surya",
+	    "age": 20,
+	    "course": "Computers",
+	    "section": "B",
+	    "course_fee": 72000,
+	    "subjects": ["Programming language theory","Human-computer interaction"],
+	    "date_of_joining_year":2020,
+	     "weight": 78
+    }
+
+]
+
+###
+
+GET http://localhost:3009/getStudents/
+
+###
+
+GET http://localhost:3009/getStudentNames/
+
+###
+
+GET http://localhost:3009/getStudentNamesByAge/
+
+###
+
+GET http://localhost:3009/getStudentGroup/
+
+###
+
+GET http://localhost:3009/countOfStudents/
+
+###
+
+GET http://localhost:3009/avgWeight/
+
+###
+
+GET http://localhost:3009/getStudentsByAgeRange/
+
+###
+
+POST http://localhost:3009/addStudentMarksData/
+Content-Type: application/json
+
+[
+	{
+		"name": "Harish",
+	    "marks": 89,
+	    "status":"Pass"
+    },
+	{
+		"name": "Mahesh",
+	    "marks": 90,
+	    "status":"Pass"
+    },
+	{
+		"name": "Bharath",
+	    "marks": 55,
+	    "status":"Fail"
+    },
+	{
+		"name": "Ravi",
+	    "marks": 78,
+	    "status":"Pass"
+    },
+	{
+		"name": "Sai",
+	    "marks": 46,
+	    "status":"Fail"
+    },
+	{
+		"name": "Shiva",
+	    "marks": 75,
+	    "status":"Pass"
+    },
+	{
+		"name": "Surya",
+	    "marks": 90,
+	    "status":"Pass"
+	}
+]
+
+###
+
+POST http://localhost:3009/addStudentClassDetails/
+Content-Type: application/json
+
+[
+	{
+		"student_name": "Harish",
+	    "section": "A",
+	    "course":"Mechanical"
+    },
+	{
+		"student_name": "Mahesh",
+	    "section": "A",
+	    "course":"Mechanical"
+    },
+	{
+		"student_name": "Bharath",
+	    "section":"B",
+	    "course":"Mechanical"
+    },
+	{
+		"section": "Ravi",
+	    "section": "B",
+	    "course":"Mechanical"
+    }
+]
+
+###
+
+GET http://localhost:3009/studenDetailsPassORFail/
