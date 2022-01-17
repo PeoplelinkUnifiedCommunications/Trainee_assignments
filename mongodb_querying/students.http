@@ -1,9 +1,49 @@
 
-GET http://localhost:9090/noofstudents/
-
+GET http://localhost:9090/studentnames/
 ###
 
 
+GET http://localhost:9090/getstudentsdata/
+###
+
+GET http://localhost:9090/students%20data%20age%20greaterthan/
+###
+
+
+GET http://localhost:9090/students%20names%20age%20greaterthan/
+###
+
+GET http://localhost:9090/studentnamesandagegreaterthan/
+###
+
+GET http://localhost:9090/studentnamesandagegreaterthaninsectionA/
+###
+
+
+GET http://localhost:9090/addField/
+###
+
+GET http://localhost:9090/diskuse/
+###
+
+
+GET http://localhost:9090/append/
+###
+
+GET http://localhost:9090/collation/
+###
+
+GET http://localhost:9090/count/
+###
+
+GET http://localhost:9090/exec/
+###
+
+GET http://localhost:9090/facet/
+###
+
+GET http://localhost:9090/group/
+###
 
 post http://localhost:9090/students/
 Content-Type: application/json
