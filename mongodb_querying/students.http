@@ -67,6 +67,37 @@ GET http://localhost:9090/sample/
 GET http://localhost:9090/search/
 ###
 
+GET http://localhost:9090/skip/
+###
+
+
+GET http://localhost:9090/sort/
+###
+
+GET http://localhost:9090/sortbycount/
+###
+
+GET http://localhost:9090/unwind/
+###
+
+
+GET http://localhost:9090/unwindmulti/
+###
+
+
+GET http://localhost:9090/totalstudents/
+###
+
+GET http://localhost:9090/totalstudentseachclasswithmaxage/
+###
+
+
+GET http://localhost:9090/studentwithmaxage/
+###
+
+GET http://localhost:9090/distinctnames/
+###
+
 post http://localhost:9090/students/
 Content-Type: application/json
 

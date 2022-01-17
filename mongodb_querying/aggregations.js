@@ -367,8 +367,125 @@ app.get("/search/", async (request, response) => {
         response.send(
             await studentCollection
                 .aggregate()
-                .search({ student_name: { quesy: "siva", path: "plot" } })
+                .search({ student_name: { query: "siva" } })
         );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//skip()
+app.get("/skip/", async (request, response) => {
+    try {
+        response.send(await studentCollection.aggregate().skip(10));
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//sort()
+app.get("/sort/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection
+                .aggregate([
+                    { $match: { age: { $gte: 13 } } },
+                    {
+                        $project: {
+                            student_name: 1,
+                            age: 1,
+                            _id: 0,
+                        },
+                    },
+                ])
+                .sort("age -student_name")
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//sortByCount()
+app.get("/sortbycount/", async (request, response) => {
+    try {
+        response.send(await studentCollection.aggregate().sortByCount("age"));
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//unwind()
+app.get("/unwind/", async (request, response) => {
+    try {
+        response.send(await studentCollection.aggregate().unwind("class"));
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+app.get("/unwindmulti/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate().unwind("student_name", "weight")
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//Displaying the total number of students in one class only
+app.get("/totalstudents/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                { $match: { class: 10, section: "A" } },
+                { $count: "Total students" },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//Displaying the total number of students in both the sections and maximum and minimum age from both section
+app.get("/totalstudentseachclasswithmaxage/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $group: {
+                        _id: "$class",
+                        total_students: { $sum: 1 },
+                        max_age: { $max: "$age" },
+                        min_age: { $min: "$age" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//Displaying details of a students having the largest age in the class
+// app.get("/studentwithmaxage/", async (request, response) => {
+//     try {
+//         response.send(
+//             await studentCollection.aggregate([
+//                 { $group: { _id: "$class" } },
+//                 { $sort: { age: -1 } },
+//                 { $limit: 1 },
+//             ])
+//         );
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// });
+
+//distinct
+app.get("/distinctnames/", async (request, response) => {
+    try {
+        response.send(await studentCollection.distinct("student_name"));
     } catch (error) {
         console.log(error.message);
     }
