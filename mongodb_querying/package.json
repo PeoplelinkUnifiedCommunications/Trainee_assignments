@@ -2,9 +2,9 @@
     "name": "mongodb_querying",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "aggregations.js",
     "scripts": {
-        "start": "nodemon index.js"
+        "start": "nodemon aggregations.js"
     },
     "keywords": [],
     "author": "",

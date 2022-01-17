@@ -31,7 +31,52 @@ const moviesData = new mongoose.Schema({
     synopsis: String,
 });
 
+// const companiesSchema = new mongoose.Schema({
+//     name: String,
+//     permalink: String,
+//     crunchbase_url: String,
+//     homepage_url: String,
+//     blog_url: String,
+//     blog_feed_url: String,
+//     twitter_username: String,
+//     category_code: String,
+//     number_of_employees: Number,
+//     founded_year: Number,
+//     founded_month: Number,
+//     founded_day: Number,
+//     deadpooled_year: Number,
+//     deadpooled_month: Number,
+//     deadpooled_day: Number,
+//     deadpooled_url: String,
+//     tag_list: String,
+//     alias_list: String,
+//     email_address: String,
+//     phone_number: String,
+//     description: String,
+//     created_at: String,
+//     updated_at: String,
+//     overview: String,
+//     image: Object,
+//     products: Array,
+//     relationships: Array,
+//     competitions: Array,
+//     providerships: Array,
+//     total_money_raised: String,
+//     funding_rounds: Array,
+//     investments: Array,
+//     acquisition: Object,
+//     acquisitions: Array,
+//     offices: Array,
+//     milestones: Array,
+//     ipo: Object,
+//     video_embeds: Array,
+//     screenshots: Array,
+//     external_links: Array,
+//     partners: Array,
+// });
+
 const moviesCollection = mongoose.model("moviedatas", moviesData);
+// const companiesdatabase = mongoose.model("companies", companiesSchema);
 
 app.post("/movies/", async (request, response) => {
     try {
@@ -85,6 +130,14 @@ app.get("/getmovies/", async (request, response) => {
         response.send(
             await moviesCollection.find({ year: { $gte: year2, $lte: year1 } })
         );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+app.get("/getdata/", async (request, response) => {
+    try {
+        response.send(await moviesCollection.find({ $limit: 5 }));
     } catch (error) {
         console.log(error.message);
     }

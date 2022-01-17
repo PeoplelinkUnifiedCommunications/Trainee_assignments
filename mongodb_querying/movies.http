@@ -69,6 +69,14 @@ Content-Type: application/json
 
 GET http://localhost:9090/getmovies/
 
+###
+
+GET http://localhost:9090/getCount/
+
+###
+
+
+GET http://localhost:9090/getdata/
 
 ###
 GET http://localhost:9090/getmovies/Quentin%20Tarantino

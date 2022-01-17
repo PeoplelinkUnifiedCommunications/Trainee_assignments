@@ -1,0 +1,123 @@
+
+GET http://localhost:9090/noofstudents/
+
+###
+
+
+
+post http://localhost:9090/students/
+Content-Type: application/json
+
+[
+    {
+    "student_name": "siva",
+    "class": 10,
+    "section": "A",
+    "subjects": ["English", "Telugu", "Maths"],
+    "course_fee": 10000,
+    "date_of_joining": "12-06-2021",
+    "age": 15,
+    "weight": 40
+},
+{
+    "student_name": "ashok",
+    "class": 10,
+    "section": "A",
+    "subjects": ["English", "Telugu", "Maths", "Science"],
+    "course_fee": 11000,
+    "date_of_joining": "12-06-2021",
+    "age": 14,
+    "weight": 38
+}, 
+{
+    "student_name": "sowjanya",
+    "class": 10,
+    "section": "A",
+    "subjects": ["English", "Telugu"],
+    "course_fee": 12500,
+    "date_of_joining": "15-06-2021",
+    "age": 13,
+    "weight": 35
+},
+{
+    "student_name": "Tanvi",
+    "class": 10,
+    "section": "A",
+    "subjects": ["English", "Telugu", "Maths"],
+    "course_fee": 10000,
+    "date_of_joining": "12-06-2021",
+    "age": 12,
+    "weight": 30
+},
+{
+    "student_name": "kumar",
+    "class": 10,
+    "section": "B",
+    "subjects": ["English", "Maths"],
+    "course_fee": 9000,
+    "date_of_joining": "10-06-2021",
+    "age": 15,
+    "weight": 40
+},
+{
+    "student_name": "ram",
+    "class": 9,
+    "section": "A",
+    "subjects": ["English", "Maths"],
+    "course_fee": 9000,
+    "date_of_joining": "9-06-2021",
+    "age": 15,
+    "weight": 40
+},
+{
+    "student_name": "sivaram",
+    "class": 9,
+    "section": "B",
+    "subjects": ["English", "Telugu"],
+    "course_fee": 9000,
+    "date_of_joining": "10-06-2021",
+    "age": 15,
+    "weight": 40
+},
+{
+    "student_name": "sivakumar",
+    "class": 8,
+    "section": "A",
+    "subjects": ["English", "Maths", "Science"],
+    "course_fee": 9000,
+    "date_of_joining": "12-06-2021",
+    "age": 14,
+    "weight": 33
+},
+{
+    "student_name": "deva",
+    "class": 7,
+    "section": "A",
+    "subjects": ["English", "Telugu"],
+    "course_fee": 7000,
+    "date_of_joining": "12-07-2021",
+    "age": 12,
+    "weight": 28
+},
+{
+    "student_name": "aditya",
+    "class": 7,
+    "section": "B",
+    "subjects": ["English", "Maths"],
+    "course_fee": 7000,
+    "date_of_joining": "10-06-2021",
+    "age": 11,
+    "weight": 27
+},
+{
+    "student_name": "siva",
+    "class": 7,
+    "section": "B",
+    "subjects": ["English", "Maths"],
+    "course_fee": 7500,
+    "date_of_joining": "10-06-2021",
+    "age": 12,
+    "weight": 30
+}
+]
+###
