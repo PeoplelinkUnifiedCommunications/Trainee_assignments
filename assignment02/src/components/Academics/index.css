@@ -1,0 +1,13 @@
+
+
+
+.order {
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: black;
+}
+
+.list{
+    padding-left: 3rem;
+}

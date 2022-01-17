@@ -1,0 +1,10 @@
+.head {
+    padding: 4rem;
+    text-align: center;
+}
+
+.p1,.p2,.p3,.p4 {
+    width: 450px;
+    height: 400px;
+    padding: 2rem;
+}

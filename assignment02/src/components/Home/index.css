@@ -1,0 +1,17 @@
+.sec1,.sec2,.sec3 {
+    font-size: large;
+    padding: 2rem;
+}
+
+.sec1 {
+    color: #ff0000;
+}
+
+.sec2 {
+    color: #336EBF;
+}
+
+.sec3 {
+    color: magenta;
+}
+

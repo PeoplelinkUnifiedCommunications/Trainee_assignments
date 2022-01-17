@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.html,body,#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.flexRow {
+  display: flex;
+  width: 100%;
+}
+
+.flexCol{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+
+.baseContainer {
+  width: 100%;
+  height: 100vh;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100%;
+}
+
+@media(min-width: 768px) and (max-width: 1112px) {
+
+}
+
+@media(min-width: 1113px) and (max-width: 1366px) {
+  .mainContainer {
+    padding-top: 4rem;
+  }
+
+}
+
+@media(min-width: 1367px) {
+  .mainContainer {
+    padding-top: 4rem;
+  }
+}
+
+
+.bgImage{
+  height: 100%;
+  background-size: cover;
+  background-image: url("https://image.shutterstock.com/image-photo/books-on-bookshelf-public-library-260nw-1442557865.jpg");
+}
+
+

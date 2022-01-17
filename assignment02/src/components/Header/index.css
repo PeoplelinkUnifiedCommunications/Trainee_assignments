@@ -1,0 +1,23 @@
+.header {
+    width: 100%;
+    height: 5.5rem;
+    position: fixed;
+    z-index: 1;
+    background-color: yellow;
+}
+
+.heading {
+    font-size: 24px;
+}
+
+.logo {
+    padding: 26px;
+}
+
+.navBar {
+    list-style-type: none;
+}
+
+.navBar li {
+    padding: 26px;
+}

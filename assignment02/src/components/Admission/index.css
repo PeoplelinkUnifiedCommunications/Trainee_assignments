@@ -1,0 +1,27 @@
+.head {
+    padding: 10px;
+    color:blueviolet;
+}
+
+.que {
+    font-size:x-large;
+    padding: 40px;
+    align-items: center;
+}
+
+.i1,.i2,.i3,.i4,.i5,.i6,.i7,.i8,.i9,.i0 {
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+
+.s1,.s2,.s3,.s4,.s5,.s6,.s7 {
+    color:black;
+    font-weight: bold;
+}
+
+.i9,.i0 {
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 50px;
+}
