@@ -12,6 +12,7 @@ import Economy from "./components/Economy";
 import Business from "./components/Business";
 import Admission from "./components/Admission";
 import Gallery from "./components/Gallery";
+
 function App() {
   return (
     <Router>
