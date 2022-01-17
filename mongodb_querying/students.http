@@ -45,6 +45,28 @@ GET http://localhost:9090/facet/
 GET http://localhost:9090/group/
 ###
 
+GET http://localhost:9090/limit/
+###
+
+GET http://localhost:9090/match/
+###
+
+GET http://localhost:9090/pipeline/
+###
+
+GET http://localhost:9090/project/
+###
+
+GET http://localhost:9090/projectavg/
+###
+
+GET http://localhost:9090/sample/
+###
+
+
+GET http://localhost:9090/search/
+###
+
 post http://localhost:9090/students/
 Content-Type: application/json
 

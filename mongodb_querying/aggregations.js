@@ -293,4 +293,85 @@ app.get("/group/", async (request, response) => {
     }
 });
 
+//limit()
+app.get("/limit/", async (request, response) => {
+    try {
+        response.send(await studentCollection.aggregate().limit(2));
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//match()
+app.get("/match/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection
+                .aggregate()
+                .match({ student_name: { $in: [/siva/] } })
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//pipeline()
+app.get("/pipeline/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection
+                .aggregate()
+                .match({ student_name: { $in: ["siva", "tanvi"] } })
+                .pipeline()
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//project()
+app.get("/project/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate().project("student_name age -_id")
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+// app.get("/projectavg/", async (request, response) => {
+//     try {
+//         response.send(
+//             await studentCollection
+//                 .aggregate()
+//                 .project({ avg: { $avg: "age" } })
+//         );
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// });
+
+//sample() -- gives ramdom no of documents
+app.get("/sample/", async (request, response) => {
+    try {
+        response.send(await studentCollection.aggregate().sample(2));
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//search()
+app.get("/search/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection
+                .aggregate()
+                .search({ student_name: { quesy: "siva", path: "plot" } })
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 module.exports = app;
