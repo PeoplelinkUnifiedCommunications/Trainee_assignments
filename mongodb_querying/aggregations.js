@@ -33,12 +33,31 @@ const studentSchema = new mongoose.Schema({
     weight: Number,
 });
 
+const studentMarksSchema = new mongoose.Schema({
+    name: String,
+    marks: Number,
+    age: Number,
+});
+
 const studentCollection = mongoose.model("studentsdatas", studentSchema);
+const studentMarksCollection = mongoose.model(
+    "studentsMarks",
+    studentMarksSchema
+);
 
 app.post("/students/", async (request, response) => {
     try {
         await studentCollection.insertMany(request.body);
         response.send(await studentCollection.find());
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+app.post("/studentsmarks/", async (request, response) => {
+    try {
+        await studentMarksCollection.insertMany(request.body);
+        response.send(await studentMarksCollection.find());
     } catch (error) {
         console.log(error.message);
     }
@@ -486,6 +505,117 @@ app.get("/totalstudentseachclasswithmaxage/", async (request, response) => {
 app.get("/distinctnames/", async (request, response) => {
     try {
         response.send(await studentCollection.distinct("student_name"));
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//lookup
+app.get("/lookup/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection.aggregate([
+                {
+                    $lookup: {
+                        from: "studentsdatas",
+                        localField: "name",
+                        foreignField: "student_name",
+                        as: "student_details",
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//and operator
+app.get("/andoperator/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $match: {
+                        $and: [
+                            { class: 10 },
+                            { section: "A" },
+                            { weight: { $lte: 35 } },
+                        ],
+                    },
+                },
+                {
+                    $project: {
+                        student_name: 1,
+                        class: 1,
+                        section: 1,
+                        weight: 1,
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//or operator
+app.get("/oroperator/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $match: {
+                        $or: [
+                            { class: 10 },
+                            { section: "A" },
+                            { weight: { $lte: 35 } },
+                        ],
+                    },
+                },
+                {
+                    $project: {
+                        student_name: 1,
+                        class: 1,
+                        section: 1,
+                        weight: 1,
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//not operator
+app.get("/notoperator/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $match: {
+                        $or: [
+                            { class: 10 },
+                            { section: "A" },
+                            { weight: { $lte: 35 } },
+                        ],
+                        $not: [{ section: "B" }],
+                    },
+                },
+                {
+                    $project: {
+                        student_name: 1,
+                        class: 1,
+                        section: 1,
+                        weight: 1,
+                        _id: 0,
+                    },
+                },
+            ])
+        );
     } catch (error) {
         console.log(error.message);
     }

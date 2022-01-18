@@ -98,6 +98,19 @@ GET http://localhost:9090/studentwithmaxage/
 GET http://localhost:9090/distinctnames/
 ###
 
+GET http://localhost:9090/lookup/
+###
+
+GET http://localhost:9090/andoperator/
+###
+
+GET http://localhost:9090/oroperator/
+###
+
+
+GET http://localhost:9090/notoperator/
+###
+
 post http://localhost:9090/students/
 Content-Type: application/json
 
@@ -214,3 +227,29 @@ Content-Type: application/json
 }
 ]
 ###
+
+post http://localhost:9090/studentsmarks/
+Content-Type: application/json
+
+[
+    {
+    "name": "siva",
+    "marks": 100,
+    "age": 15
+},
+{
+    "name": "ashok",
+    "marks": 95,
+    "age": 14
+}, 
+{
+    "name": "sowjanya",
+    "marks": 70,
+    "age": 13
+},
+{
+    "name": "Tanvi",
+    "marks": 100,
+    "age": 12
+}
+]
