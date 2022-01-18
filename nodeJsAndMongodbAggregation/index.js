@@ -152,11 +152,12 @@ app.post("/addStudentClassDetails/", async (req, res) => {
 	await studentClassDEatilsModel.insertMany(req.body);
 	res.send("Data added successfully");
 });
+// $lookup
 app.get("/studenDetailsPassORFail/", async (req, res) => {
 	const studenDetailsPassORFail = await studentDetailsModel.aggregate([
 		{
 			$lookup: {
-				from: "studentClassDEatilsModel",
+				from: "studentclassdeatils",
 				localField: "name",
 				foreignField: "student_name",
 				as: "passOrFailStudentDeatils",
