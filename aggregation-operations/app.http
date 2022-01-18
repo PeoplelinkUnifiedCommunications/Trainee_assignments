@@ -189,3 +189,27 @@ GET http://localhost:3004/getAnyElementTrue
 ###
 GET http://localhost:3004/getAllElementsTrue
 
+
+
+///////////////////////////////////////////////////////////////
+
+////   Arithmetic Aggregation Operators//////////////////////
+
+////////////////////////////////////////////////////////////
+
+###
+GET http://localhost:3004/getAbsValues
+
+###
+GET http://localhost:3004/getAddedValues
+
+###
+GET http://localhost:3004/getCeilValues
+
+###
+GET http://localhost:3004/getExpValues
+
+###
+GET http://localhost:3004/getFloorValues
+###
+GET http://localhost:3004/getLnValues

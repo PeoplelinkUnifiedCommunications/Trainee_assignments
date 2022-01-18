@@ -266,4 +266,128 @@ app.get("/getAllElementsTrue/",async (request,response)=>{
     response.send(data)
 })
 
+
+
+
+///////////////////////////////////////////////////////////////
+
+////   Arithmetic Aggregation Operators//////////////////////
+
+////////////////////////////////////////////////////////////
+
+//Abs()
+
+app.get("/getAbsValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:
+            {
+                delta: {
+                    $abs:{
+                        $subtract:[
+                            "$age",20
+                        ]
+                    }
+                }
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+
+//add()
+
+app.get("/getAddedValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:
+            {
+                student_name:1,
+                total_fee:{
+                    $add:[
+                        "$course_fee",5000
+                    ]
+                }
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+//ceil()
+
+app.get("/getCeilValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:
+            {
+                student_name:1,
+                ceilingValue: { $ceil: { $divide: [ "$course_fee", 2.5 ] } } 
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+//exp()
+
+app.get("/getExpValues",async (request,response)=>{
+    const data =  await studentModel.aggregate([
+        {
+            $project:
+            {
+                expValue: { $exp: 2 }  
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+
+//ceil()
+
+app.get("/getFloorValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:
+            {
+                student_name:1,
+                floorValue: { $floor: { $divide: [ "$course_fee", 2.5 ] } } 
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+//ln()
+app.get("/getLnValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:
+            {
+                student_name:1,
+                lnValue: { $ln: "$course_fee" } 
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+
+
+
+
+
+
+
+
+
+
 module.exports = app
