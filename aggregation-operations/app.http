@@ -213,3 +213,25 @@ GET http://localhost:3004/getExpValues
 GET http://localhost:3004/getFloorValues
 ###
 GET http://localhost:3004/getLnValues
+
+
+//////////////////////////////////////////////////////////////////////
+/////////////////String aggregation operations //////////////////////
+//////////////////////////////////////////////////////////////////////
+
+
+###
+GET http://localhost:3004/getConcatValues
+
+###
+GET http://localhost:3004/getSubStringValues
+
+###
+GET http://localhost:3004/getToLowerValues
+
+###
+GET http://localhost:3004/getToUpperValues
+
+###
+GET http://localhost:3004/getStringCompareValues
+

@@ -382,6 +382,89 @@ app.get("/getLnValues",async (request,response)=>{
 
 
 
+//////////////////////////////////////////////////////////////////////
+/////////////////String aggregation operations //////////////////////
+//////////////////////////////////////////////////////////////////////
+
+//concat()
+
+app.get("/getConcatValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:
+            {
+                itemDescription: { $concat: [ "$student_name", " - ", "$date_of_joining" ] } 
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+
+//$substr()
+
+app.get("/getSubStringValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:
+            {
+                date_of_joining:1,
+                year:{ $substr: [ "$date_of_joining", 8, 11 ] }
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+//$toLower()
+app.get("/getToLowerValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:
+            {
+                student_name:1,
+                lowerCaseName:{$toLower:"$student_name"}
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+//$toUpper()
+app.get("/getToUpperValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:
+            {
+                student_name:1,
+                lowerCaseName:{$toUpper:"$student_name"}
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+//$strcasecmp()
+
+app.get("/getStringCompareValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:
+            {
+                student_name:1,
+                comparisonResult: { $strcasecmp: [ "$student_name", "bharath" ] }
+            }
+        }
+    ])
+    response.send(data);
+
+})
+
+
 
 
 
