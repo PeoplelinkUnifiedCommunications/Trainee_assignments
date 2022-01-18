@@ -135,114 +135,135 @@ app.get("/getNotAge/",async (request,response)=>{
 
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////
 
-///post Schema
 
-const postSchema = new Schema({
-    title:String,
-    author:String,
-    likes:Number
-});
 
-const postModel = model("Posts",postSchema);
 
-//addPosts
-app.post("/addPosts/",async (request,response)=>{
-    await postModel.insertMany(request.body)
-    response.send("inserted data")
+
+///////////////////////////////////////////////////////////////////////////////
+/////////     set operations (Aggregations) //////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+
+const setEqualSchema = new Schema({
+    A:Array,
+    B:Array
 })
 
-//getPosts
-app.get("/getPosts/",async (request,response)=>{
-    const data = await postModel.find()
+const setEqualModel = model("SetEqual",setEqualSchema)
+
+app.post('/addSetEqualData/',async (request,response)=>{
+    await setEqualModel.insertMany(request.body)
+    response.send("inserted")
+})
+
+///get setEqual
+
+app.get('/getSetEqualData/',async (request,response)=>{
+    const data = await setEqualModel.aggregate(
+        [
+          { $project: { A: 1, B: 1, sameElements: { $setEquals: [ "$A", "$B" ] }, _id: 0 } },
+          {$match:{sameElements:true}}
+        ]
+     ).limit(2)
     response.send(data)
 })
 
-
-// comments Schema
-
-const commentSchema = new Schema({
-    postTitle:String,
-    comment:String,
-    likes:Number
-})
-
-const commentModel = model("Comments",commentSchema)
-
-//addComments
-app.post("/addComments/",async (request,response)=>{
-    await commentModel.insertMany(request.body)
-    response.send("inserted data")
-})
-
-//getComments
-app.get("/getComments/",async (request,response)=>{
-    const data = await commentModel.find()
+//get setIntersection to get common data
+app.get('/getIntersectionData/',async (request,response)=>{
+    const data = await setEqualModel.aggregate(
+        [
+          { $project: 
+            { 
+              A: 1, 
+              B: 1, 
+              commonToBoth: { $setIntersection: [ "$A", "$B" ] }, 
+              _id: 0 
+            }
+        }
+        ]
+     )
     response.send(data)
 })
 
-//lookup()
-
-app.get("/lookup/",async (request,response)=>{
-    const data = await postModel.aggregate([
-        { $lookup:
+//get all elements using union
+app.get("/getUnionData/",async (request,response)=>{
+    const data = await setEqualModel.aggregate([
+        {
+            $project:
             {
-               from: "comments",
-               localField: "title",
-               foreignField: "postTitle",
-               as: "comments"
+                A:1,
+                B:1,
+                allValues:{$setUnion:["$A","$B"]},
+                _id:0
             }
         }
     ])
-    response.send(data);
+    response.send(data)
 })
 
+//get elements from B which is not A
+app.get("/getDifferenceData/",async (request,response)=>{
+    const data = await setEqualModel.aggregate([
+        {
+            $project:
+            {
+                A:1,
+                B:1,
+                inBOnly:{$setDifference:["$B","$A"]},
+                _id:0
+            }
+        }
+    ])
+    response.send(data)
+})
 
+//get subset values
+app.get("/getIsSubsetData/",async (request,response)=>{
+    const data = await setEqualModel.aggregate([
+        {
+            $project:
+            {
+                A:1,
+                B:1,
+                AIsSubset:{$setIsSubset:["$A","$B"]},
+                _id:0
+            }
+        }
+    ])
+    response.send(data)
+})
 
+//get anyElementTrue
+app.get("/getAnyElementTrue/",async (request,response)=>{
+    const data = await setEqualModel.aggregate([
+        {
+            $project:
+            {
+                A:1,
+                B:1,
+                isAnyTrue:{$anyElementTrue:["$A"]},
+                _id:0
+            }
+        }
+    ])
+    response.send(data)
+})
 
-
-
-
+//get allElementTrue
+app.get("/getAllElementsTrue/",async (request,response)=>{
+    const data = await setEqualModel.aggregate([
+        {
+            $project:
+            {
+                A:1,
+                B:1,
+                isAnyTrue:{$allElementsTrue:["$A"]},
+                _id:0
+            }
+        }
+    ])
+    response.send(data)
+})
 
 module.exports = app
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

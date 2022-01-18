@@ -149,3 +149,43 @@ GET http://localhost:3004/getStudentNameOrSection/
 
 ###
 GET http://localhost:3004/getStudentNameSection/
+
+
+
+//////////////////
+###
+POST http://localhost:3004/addSetEqualData/
+Content-Type: application/json
+
+[
+    { "A" : [ "red", "blue" ], "B" : [ "red", "blue" ] },
+{ "A" : [ "red", "blue" ], "B" : [ "blue", "red", "blue" ] },
+{ "A" : [ "red", "blue" ], "B" : [ "red", "blue", "green" ] },
+{ "A" : [ "red", "blue" ], "B" : [ "green", "red" ] },
+{ "A" : [ "red", "blue" ], "B" : [ ] },
+{ "A" : [ "red", "blue" ], "B" : [ [ "red" ], [ "blue" ] ] },
+{ "A" : [ "red", "blue" ], "B" : [ [ "red", "blue" ] ] },
+{ "A" : [ ], "B" : [ ] },
+{ "A" : [ ], "B" : [ "red" ] }
+]
+
+###
+GET http://localhost:3004/getSetEqualData
+
+###
+GET http://localhost:3004/getIntersectionData
+###
+GET http://localhost:3004/getUnionData
+
+###
+GET http://localhost:3004/getDifferenceData
+
+###
+GET http://localhost:3004/getIsSubsetData
+
+###
+GET http://localhost:3004/getAnyElementTrue
+
+###
+GET http://localhost:3004/getAllElementsTrue
+
