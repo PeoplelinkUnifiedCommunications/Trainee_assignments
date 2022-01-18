@@ -77,3 +77,11 @@ GET http://localhost:4000/multiple/
 ###
 
 GET http://localhost:4000/power/
+
+###
+
+GET http://localhost:4000/concatNameAndCourse/
+
+###
+
+GET http://localhost:4000/substr/

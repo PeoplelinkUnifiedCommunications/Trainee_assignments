@@ -269,4 +269,32 @@ app.get("/power/", async (req, res) => {
 	res.send(powerMarks);
 });
 
+//string operations
+
+app.get("/concatNameAndCourse/", async (req, res) => {
+	const concatNameAndCourse = await studentSchemaModel.aggregate([
+		{
+			$project: {
+				_id: 0,
+				studenNameAndCourse: {
+					$toUpper: { $concat: ["$student_name", "-", "$course"] },
+				},
+			},
+		},
+	]);
+	res.send(concatNameAndCourse);
+});
+
+app.get("/substr/", async (req, res) => {
+	const substr = await studentSchemaModel.aggregate([
+		{
+			$project: {
+				_id: 0,
+				subString: { $substr: ["$student_name", 0, 3] },
+			},
+		},
+	]);
+	res.send(substr);
+});
+
 module.exports = app;
