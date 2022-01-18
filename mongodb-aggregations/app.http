@@ -1,0 +1,229 @@
+POST http://localhost:3004/postData
+Content-Type: application/json
+
+[
+    {
+        "student_name": "shiva",
+        "class": "9",
+        "section": "B",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "300000",
+        "date_of_joining": "12-mach-2021",
+        "age": "16",
+        "weight": "55"
+    },
+    {
+        "student_name": "harish",
+        "class": "8",
+        "section": "A",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "250000",
+        "date_of_joining": "11-April-2021",
+        "age": "15",
+        "weight": "48"
+    },
+    {
+        "student_name": "rahul",
+        "class": "10",
+        "section": "B",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "350000",
+        "date_of_joining": "25-March-2021",
+        "age": "18",
+        "weight": "58"
+    },
+    {
+        "student_name": "ajay",
+        "class": "9",
+        "section": "A",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "300000",
+        "date_of_joining": "12-mach-2021",
+        "age": "16",
+        "weight": "55"
+    },
+    {
+        "student_name": "smallesh",
+        "class": "10",
+        "section": "A",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "350000",
+        "date_of_joining": "02-mach-2021",
+        "age": "18",
+        "weight": "55"
+    },
+    {
+        "student_name": "abhi",
+        "class": "8",
+        "section": "A",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "250000",
+        "date_of_joining": "1-April-2021",
+        "age": "15",
+        "weight": "45"
+    },
+    {
+        "student_name": "krishna",
+        "class": "10",
+        "section": "A",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "380000",
+        "date_of_joining": "19-May-2021",
+        "age": "18",
+        "weight": "65"
+    },
+    {
+        "student_name": "sarath",
+        "class": "9",
+        "section": "B",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "300000",
+        "date_of_joining": "12-mach-2021",
+        "age": "16",
+        "weight": "68"
+    },
+    {
+        "student_name": "durga",
+        "class": "8",
+        "section": "B",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "330000",
+        "date_of_joining": "12-march-2021",
+        "age": "16",
+        "weight": "52"
+    },
+    {
+        "student_name": "sai",
+        "class": "10",
+        "section": "B",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "300000",
+        "date_of_joining": "12-April-2021",
+        "age": "16",
+        "weight": "62"
+    },
+    {
+        "student_name": "rajesh",
+        "class": "10",
+        "section": "A",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "390000",
+        "date_of_joining": "12-Feb-2021",
+        "age": "19",
+        "weight": "62"
+    },
+    {
+        "student_name": "raju",
+        "class": "10",
+        "section": "B",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "350000",
+        "date_of_joining": "12-mach-2021",
+        "age": "18",
+        "weight": "56"
+    },
+    {
+        "student_name": "venki",
+        "class": "9",
+        "section": "B",
+        "subjects": ["maths","teligu","science","social","english","hindi"],
+        "course_fee": "300000",
+        "date_of_joining": "12-mach-2021",
+        "age": "17",
+        "weight": "53"
+    }
+]
+
+###
+
+GET http://localhost:3004/aggregate/
+
+###
+
+GET http://localhost:3004/getNamesAndAge/
+####
+
+GET http://localhost:3004/getAddedAge/
+
+###
+GET http://localhost:3004/diskUsage/
+
+###
+GET http://localhost:3004/append/
+
+###
+GET http://localhost:3004/countNames/
+###
+GET http://localhost:3004/facet/
+
+###
+GET http://localhost:3004/limit/
+
+###
+GET http://localhost:3004/group/
+
+###
+GET http://localhost:3004/match/
+
+###
+GET http://localhost:3004/sort/
+
+###
+POST http://localhost:3004/addPosts
+Content-Type: application/json
+
+[{
+    "title" : "my first post",
+    "author" : "Jim",
+    "likes" : 5
+},
+{
+    "title" : "my second post",
+    "author" : "Jim",
+    "likes" : 2
+},
+{
+    "title" : "hello world",
+    "author" : "Joe",
+    "likes" : 3
+}]
+
+
+###
+GET http://localhost:3004/getPosts
+
+###
+POST http://localhost:3004/addComments
+Content-Type: application/json
+
+[{
+    "postTitle" : "my first post",
+    "comment" : "great read",
+    "likes" : 3
+},
+{
+    "postTitle" : "my second post",
+    "comment" : "good info",
+    "likes" : 0
+},
+{
+    "postTitle" : "my second post",
+    "comment" : "i liked this post",
+    "likes" : 12
+},
+{
+    "postTitle" : "hello world",
+    "comment" : "not my favorite",
+    "likes" : 8
+},
+{
+    "postTitle" : "my last post",
+    "comment" : null,
+    "likes" : 0
+}]
+
+###
+GET http://localhost:3004/getComments
+
+###
+GET http://localhost:3004/lookup/
