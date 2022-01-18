@@ -11,3 +11,41 @@ GET http://localhost:4000/getStudentsEitherMechOrComputers/
 ###
 
 GET http://localhost:4000/getStudentsNotComputers/
+
+###
+
+POST http://localhost:4000/addData/
+Content-Type: application/json
+
+[
+    {"A" : [ "red", "blue"], "B" : [ "red", "blue" ] },
+    {"A" : [ "red", "blue","blue"], "B" : [ "blue", "red", "blue" ] },
+    {"A" : [ "red", "blue" ], "B" : [ "red", "blue", "green" ] },
+    {"A" : [ "red", "blue" ], "B" : [ "green", "red" ] },
+    {"A" : [ "red", "blue" ], "B" : [ ] },
+    {"A" : [ "red", "blue" ], "B" : [ [ "red" ], [ "blue" ] ] },
+    {"A" : [ "red", "blue" ], "B" : [ [ "red", "blue" ] ] },
+    {"A" : [ ], "B" : [ ] },
+    {"A" : [ ], "B" : [ "red" ] }
+]
+
+###
+
+GET http://localhost:4000/setEquales/
+ 
+###
+
+GET http://localhost:4000/commonData/
+
+###
+
+GET http://localhost:4000/setunionData/
+
+###
+
+GET http://localhost:4000/setDifferenceData/
+
+###
+
+GET http://localhost:4000/setIsSubsetData/
+

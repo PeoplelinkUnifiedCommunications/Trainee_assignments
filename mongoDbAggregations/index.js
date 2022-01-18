@@ -50,11 +50,20 @@ const studentClassDEatilsSchema = new Schema({
 	course: String,
 });
 
+const setOperationsSchema = new Schema({
+	A: Array,
+	B: Array,
+});
+
 const studentSchemaModel = mongoose.model("studentData", studentSchema);
 const studentDetailsModel = mongoose.model("studentMarks", studentMarksDeatils);
 const studentClassDEatilsModel = mongoose.model(
 	"studentClassDEatils",
 	studentClassDEatilsSchema
+);
+const setOperationsSchemaModel = mongoose.model(
+	"setOperationsData",
+	setOperationsSchema
 );
 
 app.get("/getData/", async (req, res) => {
@@ -100,6 +109,85 @@ app.get("/getStudentsNotComputers/", async (req, res) => {
 		{ $project: { student_name: 1, course: 1, section: 1, _id: 0 } },
 	]);
 	res.send(getStudentsNotComputers);
+});
+
+app.post("/addData/", async (req, res) => {
+	await setOperationsSchemaModel.insertMany(req.body);
+	res.send("add successfully");
+});
+
+app.get("/setEquales/", async (req, res) => {
+	const setEqualesData = await setOperationsSchemaModel.aggregate([
+		{
+			$project: {
+				A: 1,
+				B: 1,
+				setEquales: { $setEquals: ["$A", "$B"] },
+				_id: 0,
+			},
+		},
+		{
+			$match: { setEquales: true },
+		},
+	]);
+
+	res.send(setEqualesData);
+});
+
+app.get("/commonData/", async (req, res) => {
+	const commonData = await setOperationsSchemaModel.aggregate([
+		{
+			$project: {
+				A: 1,
+				B: 1,
+				commonBoth: { $setIntersection: ["$A", "$B"] },
+				_id: 0,
+			},
+		},
+	]);
+	res.send(commonData);
+});
+
+app.get("/setunionData/", async (req, res) => {
+	const setunionData = await setOperationsSchemaModel.aggregate([
+		{
+			$project: {
+				A: 1,
+				B: 1,
+				allData: { $setUnion: ["$A", "$B"] },
+				_id: 0,
+			},
+		},
+	]);
+	res.send(setunionData);
+});
+
+app.get("/setDifferenceData/", async (req, res) => {
+	const setDifferenceData = await setOperationsSchemaModel.aggregate([
+		{
+			$project: {
+				A: 1,
+				B: 1,
+				differenceData: { $setDifference: ["$B", "$A"] },
+				_id: 0,
+			},
+		},
+	]);
+	res.send(setDifferenceData);
+});
+
+app.get("/setIsSubsetData/", async (req, res) => {
+	const setIsSubsetData = await setOperationsSchemaModel.aggregate([
+		{
+			$project: {
+				A: 1,
+				B: 1,
+				AisSubset: { $setIsSubset: ["$A", "$B"] },
+				_id: 0,
+			},
+		},
+	]);
+	res.send(setIsSubsetData);
 });
 
 module.exports = app;
