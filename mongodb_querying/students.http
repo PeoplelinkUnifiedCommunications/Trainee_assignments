@@ -132,8 +132,41 @@ GET http://localhost:9090/setissubset/
 GET http://localhost:9090/anyelementtrue/
 ###
 
-
 GET http://localhost:9090/allelementstrue/
+###
+
+GET http://localhost:9090/absolute/
+###
+
+GET http://localhost:9090/add/
+###
+
+GET http://localhost:9090/ceil/
+###
+
+
+GET http://localhost:9090/divide/
+###
+
+GET http://localhost:9090/floor/
+###
+
+GET http://localhost:9090/logarithm/
+###
+
+GET http://localhost:9090/log/
+###
+
+GET http://localhost:9090/mod/
+###
+
+GET http://localhost:9090/multiply/
+###
+
+GET http://localhost:9090/power/
+###
+
+GET http://localhost:9090/sqrt/
 ###
 
 

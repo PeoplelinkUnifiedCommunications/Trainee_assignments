@@ -788,4 +788,231 @@ app.get("/allelementstrue/", async (request, response) => {
     }
 });
 
+//arithametic operators
+//absolute
+app.get("/absolute/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection.aggregate([
+                {
+                    $project: {
+                        delta: {
+                            $abs: { $subtract: ["$marks", 123] },
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//add
+app.get("/add/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection.aggregate([
+                {
+                    $project: {
+                        addmarks: {
+                            $add: ["$marks", 5],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//ceil
+app.get("/ceil/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection
+                .aggregate([
+                    {
+                        $project: {
+                            ceilingValue: {
+                                $ceil: [5 / 2],
+                            },
+                            _id: 0,
+                        },
+                    },
+                ])
+                .limit(1)
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//divide
+app.get("/divide/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection
+                .aggregate([
+                    {
+                        $project: {
+                            ceilingValue: {
+                                $ceil: { $divide: [5, 6] },
+                            },
+                            _id: 0,
+                        },
+                    },
+                ])
+                .limit(1)
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//floor
+app.get("/floor/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection
+                .aggregate([
+                    {
+                        $project: {
+                            floorValue: {
+                                $floor: { $divide: [6, 4] },
+                            },
+                            _id: 0,
+                        },
+                    },
+                ])
+                .limit(1)
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//logarithm
+app.get("/logarithm/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection.aggregate([
+                {
+                    $project: {
+                        logValue: {
+                            $ln: ["$marks"], //$ln is equivalent to $log: [ <number>, Math.E ] expression, where Math.E is a JavaScript representation for Euler’s number e.
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//logarithm
+app.get("/log/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection.aggregate([
+                {
+                    $project: {
+                        logValue: {
+                            $log: ["$marks", 2],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//mod
+app.get("/mod/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection.aggregate([
+                {
+                    $project: {
+                        remainder: {
+                            $mod: ["$marks", 2],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//multiply
+app.get("/multiply/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection.aggregate([
+                {
+                    $project: {
+                        multiply: {
+                            $multiply: ["$marks", 10],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//power
+app.get("/power/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection.aggregate([
+                {
+                    $project: {
+                        powerValue: {
+                            $pow: ["$marks", 2],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//squareroot
+app.get("/sqrt/", async (request, response) => {
+    try {
+        response.send(
+            await studentMarksCollection.aggregate([
+                {
+                    $project: {
+                        squareroot: {
+                            $sqrt: "$marks",
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 module.exports = app;
