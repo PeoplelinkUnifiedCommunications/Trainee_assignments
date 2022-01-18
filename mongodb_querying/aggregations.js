@@ -1015,4 +1015,89 @@ app.get("/sqrt/", async (request, response) => {
     }
 });
 
+//string Aggregations
+//concat
+app.get("/concat/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        classwithsection: {
+                            $concat: [{ $toString: "$class" }, "-", "$section"],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//substring
+app.get("/substr/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        substring: {
+                            $substr: ["$student_name", 0, 3],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//tolower and toupper
+app.get("/lowerandupper/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        lower: {
+                            $toLower: "$student_name",
+                        },
+                        upper: {
+                            $toUpper: "$student_name",
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//string case comparision
+app.get("/strcasecmp/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        student_name: 1,
+                        stringcomparision: {
+                            $strcasecmp: ["$student_name", "SIva"],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 module.exports = app;

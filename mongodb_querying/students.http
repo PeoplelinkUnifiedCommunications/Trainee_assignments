@@ -170,6 +170,17 @@ GET http://localhost:9090/sqrt/
 ###
 
 
+GET http://localhost:9090/concat/
+###
+
+GET http://localhost:9090/substr/
+###
+
+GET http://localhost:9090/lowerandupper/
+###
+
+GET http://localhost:9090/strcasecmp/
+###
 
 post http://localhost:9090/students/
 Content-Type: application/json
