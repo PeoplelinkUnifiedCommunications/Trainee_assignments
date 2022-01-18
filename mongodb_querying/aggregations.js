@@ -39,11 +39,18 @@ const studentMarksSchema = new mongoose.Schema({
     age: Number,
 });
 
+const setSchema = new mongoose.Schema({
+    A: Array,
+    B: Array,
+});
+
 const studentCollection = mongoose.model("studentsdatas", studentSchema);
 const studentMarksCollection = mongoose.model(
     "studentsMarks",
     studentMarksSchema
 );
+
+const setOperatorCollection = mongoose.model("setoperators", setSchema);
 
 app.post("/students/", async (request, response) => {
     try {
@@ -58,6 +65,15 @@ app.post("/studentsmarks/", async (request, response) => {
     try {
         await studentMarksCollection.insertMany(request.body);
         response.send(await studentMarksCollection.find());
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+app.post("/setoperators/", async (request, response) => {
+    try {
+        await setOperatorCollection.insertMany(request.body);
+        response.send(await setOperatorCollection.find());
     } catch (error) {
         console.log(error.message);
     }
@@ -611,6 +627,157 @@ app.get("/notoperator/", async (request, response) => {
                         class: 1,
                         section: 1,
                         weight: 1,
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//setequals
+app.get("/setequals/", async (request, response) => {
+    try {
+        response.send(
+            await setOperatorCollection.aggregate([
+                {
+                    $project: {
+                        A: 1,
+                        B: 1,
+                        haveSameDistinctElements: { $setEquals: ["$A", "$B"] },
+                        _id: 0,
+                    },
+                },
+                { $match: { haveSameDistinctElements: true } },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//setintersection
+app.get("/setintersection/", async (request, response) => {
+    try {
+        response.send(
+            await setOperatorCollection.aggregate([
+                {
+                    $project: {
+                        A: 1,
+                        B: 1,
+                        commonDistinctElements: {
+                            $setIntersection: ["$A", "$B"],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//setunion
+app.get("/setunion/", async (request, response) => {
+    try {
+        response.send(
+            await setOperatorCollection.aggregate([
+                {
+                    $project: {
+                        A: 1,
+                        B: 1,
+                        allDistinctElements: {
+                            $setUnion: ["$A", "$B"],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//setdifference
+app.get("/setdifference/", async (request, response) => {
+    try {
+        response.send(
+            await setOperatorCollection.aggregate([
+                {
+                    $project: {
+                        A: 1,
+                        B: 1,
+                        elementsInBonly: {
+                            $setDifference: ["$B", "$A"],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//setissubset
+app.get("/setissubset/", async (request, response) => {
+    try {
+        response.send(
+            await setOperatorCollection.aggregate([
+                {
+                    $project: {
+                        A: 1,
+                        B: 1,
+                        isSubset: {
+                            $setIsSubset: ["$A", "$B"],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//anyelementtrue
+app.get("/anyelementtrue/", async (request, response) => {
+    try {
+        response.send(
+            await setOperatorCollection.aggregate([
+                {
+                    $project: {
+                        A: 1,
+                        isanytrue: {
+                            $anyElementTrue: ["$A"],
+                        },
+                        _id: 0,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//allelementstrue
+app.get("/allelementstrue/", async (request, response) => {
+    try {
+        response.send(
+            await setOperatorCollection.aggregate([
+                {
+                    $project: {
+                        A: 1,
+                        isalltrue: {
+                            $allElementsTrue: ["$A"],
+                        },
                         _id: 0,
                     },
                 },

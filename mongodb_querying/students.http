@@ -111,6 +111,33 @@ GET http://localhost:9090/oroperator/
 GET http://localhost:9090/notoperator/
 ###
 
+
+GET http://localhost:9090/setequals/
+###
+
+
+GET http://localhost:9090/setintersection/
+###
+
+
+GET http://localhost:9090/setunion/
+###
+
+GET http://localhost:9090/setdifference/
+###
+
+GET http://localhost:9090/setissubset/
+###
+
+GET http://localhost:9090/anyelementtrue/
+###
+
+
+GET http://localhost:9090/allelementstrue/
+###
+
+
+
 post http://localhost:9090/students/
 Content-Type: application/json
 
@@ -253,3 +280,24 @@ Content-Type: application/json
     "age": 12
 }
 ]
+
+###
+
+
+post http://localhost:9090/setoperators/
+Content-Type: application/json
+
+
+[
+    { "A" : [ "red", "blue" ], "B" : [ "red", "blue" ] },
+{ "A" : [ "red", "blue","blue" ], "B" : [ "blue", "red", "blue" ] },
+{ "A" : [ "red", "blue" ], "B" : [ "red", "blue", "green" ] },
+{ "A" : [ "red", "blue" ], "B" : [ "green", "red" ] },
+{ "A" : [ "red", "blue" ], "B" : [ ] },
+{ "A" : [ "red", "blue" ], "B" : [ [ "red" ], [ "blue" ] ] },
+{ "A" : [ "red", "blue" ], "B" : [ [ "red", "blue" ] ] },
+{ "A" : [ "red", "blue" ], "B" : [ "orange", "red", "blue"] },
+{ "A" : [ ], "B" : [ ] },
+{ "A" : [ ], "B" : [ "red" ] }
+]
+###
