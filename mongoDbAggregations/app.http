@@ -49,3 +49,31 @@ GET http://localhost:4000/setDifferenceData/
 
 GET http://localhost:4000/setIsSubsetData/
 
+###
+
+GET http://localhost:4000/absoluteValues/
+
+###
+
+GET http://localhost:4000/addMarks/
+
+###
+
+GET http://localhost:4000/ceilMarks/
+
+###
+
+
+GET http://localhost:4000/logarithm/
+
+###
+
+GET http://localhost:4000/reminder/
+
+###
+
+GET http://localhost:4000/multiple/
+
+###
+
+GET http://localhost:4000/power/

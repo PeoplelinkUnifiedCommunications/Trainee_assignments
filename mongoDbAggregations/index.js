@@ -71,6 +71,8 @@ app.get("/getData/", async (req, res) => {
 	res.send(getData);
 });
 
+//setOperations
+
 app.get("/getStudentsMechanicalASection/", async (req, res) => {
 	const getStudentsMechanicalASection = await studentSchemaModel.aggregate([
 		{
@@ -188,6 +190,83 @@ app.get("/setIsSubsetData/", async (req, res) => {
 		},
 	]);
 	res.send(setIsSubsetData);
+});
+
+//arithimetic operations
+
+app.get("/absoluteValues/", async (req, res) => {
+	const absoluteValues = await studentDetailsModel.aggregate([
+		{
+			$project: { reminingMarks: { $abs: { $subtract: ["$marks", 100] } } },
+		},
+	]);
+	res.send(absoluteValues);
+});
+
+app.get("/addMarks/", async (req, res) => {
+	const addMarks = await studentDetailsModel.aggregate([
+		{
+			$project: { marks: 1, addingMarks: { $add: ["$marks", 20] } },
+		},
+	]);
+	res.send(addMarks);
+});
+
+app.get("/ceilMarks/", async (req, res) => {
+	const ceilMarks = await studentDetailsModel.aggregate([
+		{
+			$project: {
+				_id: 0,
+				fractionalMarks: { $divide: ["$marks", 8] },
+				ceilMarks: { $ceil: { $divide: ["$marks", 8] } },
+				floorMarks: { $floor: { $divide: ["$marks", 8] } },
+			},
+		},
+	]);
+	res.send(ceilMarks);
+});
+
+app.get("/logarithm/", async (req, res) => {
+	const logarithm = await studentDetailsModel.aggregate([
+		{
+			$project: { marks: 1, logarithm: { $ln: "$marks" } },
+		},
+	]);
+	res.send(logarithm);
+});
+
+app.get("/reminder/", async (req, res) => {
+	const reminder = await studentDetailsModel.aggregate([
+		{
+			$project: { marks: 1, reminder: { $mod: ["$marks", 7] } },
+		},
+	]);
+	res.send(reminder);
+});
+
+app.get("/multiple/", async (req, res) => {
+	const multiple = await studentDetailsModel.aggregate([
+		{
+			$project: {
+				_id: 0,
+				persentage: { $multiply: [{ $divide: ["$marks", 100] }, 100] },
+			},
+		},
+	]);
+	res.send(multiple);
+});
+
+app.get("/power/", async (req, res) => {
+	const powerMarks = await studentDetailsModel.aggregate([
+		{
+			$project: {
+				_id: 0,
+				pow: { $pow: ["$marks", 2] },
+				sqrt: { $sqrt: { $pow: ["$marks", 2] } },
+			},
+		},
+	]);
+	res.send(powerMarks);
 });
 
 module.exports = app;
