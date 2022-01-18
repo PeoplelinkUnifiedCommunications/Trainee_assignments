@@ -251,7 +251,7 @@ app.get("/lookup/",async (request,response)=>{
     const data = await postModel.aggregate([
         { $lookup:
             {
-               from: "Comments",
+               from: "comments",
                localField: "title",
                foreignField: "postTitle",
                as: "comments"
