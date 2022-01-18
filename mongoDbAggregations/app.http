@@ -1,0 +1,13 @@
+GET http://localhost:4000/getData/
+
+###
+
+GET http://localhost:4000/getStudentsMechanicalASection/
+
+###
+
+GET http://localhost:4000/getStudentsEitherMechOrComputers/
+
+###
+
+GET http://localhost:4000/getStudentsNotComputers/
