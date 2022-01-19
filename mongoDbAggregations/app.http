@@ -92,7 +92,7 @@ GET http://localhost:4000/getSubjects/
 
 ###
 
-GET http://localhost:4000/unWind/
+GET http://localhost:4000/unwind/
 
 ###
 
@@ -105,3 +105,30 @@ GET http://localhost:4000/sample/
 ###
 
 GET http://localhost:4000/outAgggregation/
+
+###
+
+GET http://localhost:4000/getFirstAndLastSubject/
+
+###
+GET http://localhost:4000/concatArrays/
+
+###
+
+GET http://localhost:4000/filter/
+
+###
+
+GET http://localhost:4000/isArray/
+
+###
+
+GET http://localhost:4000/isArraySize/
+
+###
+
+GET http://localhost:4000/silceArray/
+
+
+
+

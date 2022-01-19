@@ -320,7 +320,7 @@ app.get("/getSubjects/", async (req, res) => {
 	res.send(getSubjects);
 });
 
-app.get("/unWind/", async (req, res) => {
+app.get("/unwind/", async (req, res) => {
 	const unWind = await studentSchemaModel.aggregate([
 		{
 			$match: { student_name: "Harish" },
@@ -363,6 +363,117 @@ app.get("/outAgggregation/", async (req, res) => {
 		},
 	]);
 	res.send(outAgggregation);
+});
+
+//array aggregations operations
+
+app.get("/getFirstAndLastSubject/", async (req, res) => {
+	const getFirstAndLastSubject = await studentSchemaModel.aggregate([
+		{
+			$project: {
+				_id: 0,
+
+				first: { $arrayElemAt: ["$subjects", 0] },
+				last: {
+					$arrayElemAt: [
+						"$subjects",
+						{ $subtract: [{ $size: "$subjects" }, 1] },
+					],
+				},
+			},
+		},
+	]);
+	res.send(getFirstAndLastSubject);
+});
+
+app.get("/concatArrays/", async (req, res) => {
+	const concatArrays = await setOperationsSchemaModel.aggregate([
+		{
+			$project: { concatArrays: { $concatArrays: ["$A", "$B"] } },
+		},
+	]);
+	res.send(concatArrays);
+});
+
+app.get("/filter/", async (req, res) => {
+	const filter = await studentSchemaModel.aggregate([
+		{
+			$match: { student_name: "Harish" },
+		},
+		{
+			$project: {
+				item: {
+					$filter: {
+						input: "$subjects",
+						as: "item",
+						cond: {},
+					},
+				},
+			},
+		},
+	]);
+	res.send(filter);
+});
+
+app.get("/isArray/", async (req, res) => {
+	const isArray = await setOperationsSchemaModel.aggregate([
+		{
+			$project: {
+				concatarray: {
+					$cond: {
+						if: { $and: [{ $isArray: "$A" }, { $isArray: "$B" }] },
+						then: { $concatArrays: ["$A", "$B"] },
+						else: "One or more fields is not an array.",
+					},
+				},
+			},
+		},
+	]);
+	res.send(isArray);
+});
+
+app.get("/isArraySize/", async (req, res) => {
+	const isArraySize = await setOperationsSchemaModel.aggregate([
+		{
+			$project: {
+				A: 1,
+				B: 1,
+				_id: null,
+				size: {
+					$size: {
+						$cond: {
+							if: { $and: [{ $isArray: "$A" }, { $isArray: "$B" }] },
+							then: { $concatArrays: ["$A", "$B"] },
+							else: "One or more fields is not an array.",
+						},
+					},
+				},
+			},
+		},
+	]);
+	res.send(isArraySize);
+});
+
+app.get("/silceArray/", async (req, res) => {
+	const silceArray = await setOperationsSchemaModel.aggregate([
+		{
+			$project: {
+				slice: {
+					$slice: [
+						{
+							$cond: {
+								if: { $and: [{ $isArray: "$A" }, { $isArray: "$B" }] },
+								then: { $concatArrays: ["$A", "$B"] },
+								else: "One or more fields is not an array.",
+							},
+						},
+						3,
+					],
+				},
+			},
+		},
+	]);
+	res.send(silceArray);
 });
 
 module.exports = app;
