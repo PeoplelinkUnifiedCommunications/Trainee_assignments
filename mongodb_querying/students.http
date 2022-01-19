@@ -3,6 +3,9 @@ GET http://localhost:9090/studentnames/
 ###
 
 
+GET http://localhost:9090/studentsdata/
+###
+
 GET http://localhost:9090/getstudentsdata/
 ###
 
@@ -180,6 +183,22 @@ GET http://localhost:9090/lowerandupper/
 ###
 
 GET http://localhost:9090/strcasecmp/
+###
+
+
+GET http://localhost:9090/redact/
+###
+
+GET http://localhost:9090/sample/
+###
+
+GET http://localhost:9090/getunwind/
+###
+
+GET http://localhost:9090/getgroup/
+###
+
+GET http://localhost:9090/out/
 ###
 
 post http://localhost:9090/students/

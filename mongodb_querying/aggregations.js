@@ -88,6 +88,14 @@ app.get("/getstudentsdata/", async (request, response) => {
     }
 });
 
+app.get("/studentsdata/", async (request, response) => {
+    try {
+        response.send(await studentCollection.find());
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 // get all students names
 app.get("/studentnames/", async (request, response) => {
     try {
@@ -1093,6 +1101,104 @@ app.get("/strcasecmp/", async (request, response) => {
                         _id: 0,
                     },
                 },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//pipeline aggregation stages
+//redact
+app.get("/redact/", async (request, response) => {
+    const inputSubjects = ["Telugu", "Science"];
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $redact: {
+                        $cond: {
+                            if: {
+                                $gt: [
+                                    {
+                                        $size: {
+                                            $setIntersection: [
+                                                "$subjects",
+                                                inputSubjects,
+                                            ],
+                                        },
+                                    },
+                                    0,
+                                ],
+                            },
+                            then: "$$DESCEND",
+                            else: "$$PRUNE",
+                        },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//unwind
+app.get("/getunwind/", async (req, res) => {
+    try {
+        const unwind = await studentCollection.aggregate([
+            {
+                $match: { student_name: "siva" },
+            },
+            {
+                $unwind: "$subjects",
+            },
+        ]);
+        res.send(unwind);
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//group
+app.get("/getgroup/", async (req, res) => {
+    const group = await studentCollection.aggregate([
+        {
+            $group: { _id: null, totalFees: { $sum: "$course_fee" } },
+        },
+    ]);
+    res.send(group);
+});
+
+//sample
+app.get("/sample/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $sample: {
+                        size: 2,
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//out aggregation
+app.get("/out/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $group: {
+                        _id: "$class",
+                        students: { $push: "$student_name" },
+                    },
+                },
+                { $out: "classStudents" },
             ])
         );
     } catch (error) {
