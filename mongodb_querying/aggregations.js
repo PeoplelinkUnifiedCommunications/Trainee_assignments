@@ -1206,4 +1206,185 @@ app.get("/out/", async (request, response) => {
     }
 });
 
+// Array Aggregation Operators
+//arrayElemAt
+app.get("/arrayelemat/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        first_subject: { $arrayElemAt: ["$subjects", 0] },
+                        last_subject: { $arrayElemAt: ["$subjects", -1] },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//array concat
+app.get("/arrayconcat/", async (request, response) => {
+    try {
+        response.send(
+            await setOperatorCollection.aggregate([
+                {
+                    $project: {
+                        allColors: { $concatArrays: ["$A", "$B"] },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//array filter
+app.get("/arrayfilter/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        subjects: {
+                            $filter: {
+                                input: "$subjects",
+                                as: "subject",
+                                cond: {
+                                    $eq: ["$$subject", "English"],
+                                },
+                            },
+                        },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//isArray
+app.get("/isarray/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        subjectsIsArray: { $isArray: "$subjects" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//-------------
+// app.get("/isarray/", async (request, response) => {
+//     try {
+//         response.send(
+//             await studentCollection.aggregate([
+//                 {
+//                     $project: {
+//                         subjectsIsArray: {
+//                             $cond: {
+//                                 if: { $isArray: "$subjects" },
+//                                 then: {
+//                                     $filter: {
+//                                         input: "$subjects",
+//                                         as: "subject",
+//                                         cond: {
+//                                             $concat: [
+//                                                 "All subjects are: ",
+//                                                 "$$subject",
+//                                             ],
+//                                         },
+//                                     },
+//                                 },
+//                                 else: "Subjects array not available",
+//                             },
+//                         },
+//                     },
+//                 },
+//             ])
+//         );
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// });
+
+//----------
+
+// app.get("/isarray/", async (request, response) => {
+//     try {
+//         response.send(
+//             await studentCollection.aggregate([
+//                 {
+//                     $project: {
+//                         subjectsIsArray: {
+//                             $concat: [
+//                                 "All subjects are: ",
+//                                 {
+//                                     $cond: {
+//                                         if: { $isArray: "$subjects" },
+//                                         then: {
+//                                             $filter: {
+//                                                 input: "$subjects",
+//                                                 as: "subject",
+//                                                 cond: {},
+//                                             },
+//                                         },
+//                                         else: "Subjects array not available",
+//                                     },
+//                                 },
+//                             ],
+//                         },
+//                     },
+//                 },
+//             ])
+//         );
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// });
+
+//array size
+app.get("/arraysize/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        noOfSubjects: { $size: "$subjects" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//slice
+app.get("/arrayslice/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        sliceOfArray: { $slice: ["$subjects", 0, 2] },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 module.exports = app;

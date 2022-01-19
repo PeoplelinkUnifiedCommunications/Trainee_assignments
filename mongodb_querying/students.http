@@ -201,6 +201,25 @@ GET http://localhost:9090/getgroup/
 GET http://localhost:9090/out/
 ###
 
+GET http://localhost:9090/arrayelemat/
+###
+
+GET http://localhost:9090/arrayconcat/
+###
+
+GET http://localhost:9090/arrayfilter/
+###
+
+
+GET http://localhost:9090/isarray/
+###
+
+GET http://localhost:9090/arraysize/
+###
+
+GET http://localhost:9090/arrayslice/
+###
+
 post http://localhost:9090/students/
 Content-Type: application/json
 

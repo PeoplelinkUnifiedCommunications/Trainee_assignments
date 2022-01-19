@@ -143,4 +143,21 @@ app.get("/getdata/", async (request, response) => {
     }
 });
 
+//array size
+app.get("/arraysize/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        noOfSubjects: { $size: "$subjects" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 module.exports = app;
