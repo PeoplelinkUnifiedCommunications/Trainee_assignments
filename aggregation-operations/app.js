@@ -669,5 +669,173 @@ app.get("/getSliceValues",async (request,response)=>{
     response.send(data);
 })
 
+//////////////////////////////////////////////////////////////////
+//////////////////Date Aggregation Operators/////////////////////
+////////////////////////////////////////////////////////////////
+
+const dateSchema = new Schema({
+    item:String,
+    price:Number,
+    quantity:Number,
+    date:{ type: Date, default: Date.now }
+})
+
+const dateModel = model("Dates",dateSchema)
+
+app.post("/addDateData/", async (request,response)=>{
+    const {item,price,quantity,date} = request.body
+    const updatedDate = new Date(date)
+    await dateModel.create({
+        item,
+        price,
+        quantity,
+        date: updatedDate
+    })
+    response.send(await dateModel.find())
+})
+
+//$year()
+
+app.get("/getYearValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                year: { $year: "$date" }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+//$month()
+app.get("/getMonthValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                month: { $month: "$date" }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+//$dayOfMonth()
+app.get("/getDateOfMonthValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                day: { $dayOfMonth: "$date" }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+//$hour()
+app.get("/getHourValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                hour: { $hour: "$date" }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+//$minutes()
+
+app.get("/getMinutesValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                minutes: { $minute: "$date" }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+//$second()
+
+app.get("/getSecondsValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                seconds: { $second: "$date" }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+// $millisecond()
+
+app.get("/getMilliSecondsValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                milliseconds: { $millisecond: "$date" }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+
+//$dayOfYear()
+
+app.get("/getDateOfYearValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                dayOfYear: { $dayOfYear: "$date" }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+//$dayOfWeek()
+
+app.get("/getDateOfWeekValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                dayOfWeek: { $dayOfWeek: "$date" }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+//$week()
+
+app.get("/getWeekValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                week: { $week: "$date" }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+//$dateToString()
+
+app.get("/getDateToStringValues",async (request,response)=>{
+    const data = await dateModel.aggregate([
+        {
+            $project:{
+                yearMonthDay: { $dateToString: { format: "%Y-%m-%d", date: "$date" } },
+                time: { $dateToString: { format: "%H:%M:%S:%L", date: "$date" } }
+              }
+        }
+    ])
+    response.send(data);
+})
+
+
 
 module.exports = app

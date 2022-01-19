@@ -278,3 +278,45 @@ GET http://localhost:3004/getSizeValues
 
 ###
 GET http://localhost:3004/getSliceValues
+
+
+
+
+
+//////////////////////////////////////////////////////////////////
+//////////////////Date Aggregation Operators/////////////////////
+////////////////////////////////////////////////////////////////
+###
+POST http://localhost:3004/addDateData/
+Content-Type: application/json
+
+{
+    "item":"munni",
+    "price":"20",
+    "quantity":"8",
+    "date":"2022-01-01T10:24:51.303Z"
+}
+
+###
+GET http://localhost:3004/getYearValues
+###
+GET http://localhost:3004/getMonthValues
+###
+GET http://localhost:3004/getDateOfMonthValues
+###
+GET http://localhost:3004/getHourValues
+###
+GET http://localhost:3004/getMinutesValues
+###
+GET http://localhost:3004/getSecondsValues
+###
+GET http://localhost:3004/getMilliSecondsValues
+###
+GET http://localhost:3004/getDateOfYearValues
+###
+GET http://localhost:3004/getDateOfWeekValues
+###
+GET http://localhost:3004/getWeekValues
+###
+GET http://localhost:3004/getDateToStringValues
+
