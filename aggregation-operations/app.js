@@ -547,13 +547,127 @@ app.get("/getSortValues",async (request,response)=>{
 app.get("/getOutValues",async (request,response)=>{
     const data = await studentModel.aggregate([
         { $group :{ _id:"$class",students:{$push: "$student_name"}}},
-        {$out:"students"} 
+        {$out:"stud"} 
     ])
     response.send(data);
 })
 
 
 
+
+///////////////////////////////////////////////////////////////////////////////
+////////////////////// Array Aggregation Operators  //////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+//$arrayElemAt()
+
+app.get("/getArrayElementAtValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:{
+                data:{
+                    $arrayElemAt:[
+                        "$subjects",0
+                    ]
+                }
+            }
+        }
+    ])
+    response.send(data);
+})
+
+//$concatArrays()
+
+app.get("/getConcatArrayValues",async (request,response)=>{
+    const data = await setEqualModel.aggregate([
+        {
+            $project:{
+                items:{
+                    $concatArrays:["$A","$B"]
+                }
+            }
+        }
+    ])
+    response.send(data);
+})
+
+// $filter()
+
+app.get("/getFilterValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:{
+                items:{
+                    $filter: {
+                        input:"$subjects",
+                        as:"sub",
+                        cond:{$eq:[{$arrayElemAt:[
+                            "$item",0
+                        ]},'social']}
+                    }
+                }
+            }
+        }
+    ])
+    response.send(data);
+})
+
+// $isArray()
+
+app.get("/getIsArrayValues",async (request,response)=>{
+    const data = await setEqualModel.aggregate([
+        {
+            $project:{
+                items:{
+                $cond:
+                    {
+                    if: { $and: [ { $isArray: "$A" }, true ] },
+                    then: { $concatArrays: [ "$A", "$B" ] },
+                    else: "One or more fields is not an array."
+                    }
+                }
+            }
+        }
+    ])
+    response.send(data);
+})
+
+// $size()
+
+app.get("/getSizeValues",async (request,response)=>{
+    const data = await setEqualModel.aggregate([
+        {
+            $project:{
+                B:1,
+                items:{
+                $cond:
+                    {
+                    if: { $isArray: "$A" },
+                    then: { $size:"$B" },
+                    else: "NA"
+                    }
+                }
+            }
+        }
+    ])
+    response.send(data);
+})
+
+// $slice()
+
+app.get("/getSliceValues",async (request,response)=>{
+    const data = await setEqualModel.aggregate([
+        {
+            $project:{
+                B:1,
+                items:{
+                    $slice:["$B",-2,1]
+                }
+            }
+        }
+    ])
+    response.send(data);
+})
 
 
 module.exports = app

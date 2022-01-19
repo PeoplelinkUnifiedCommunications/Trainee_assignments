@@ -256,3 +256,25 @@ GET http://localhost:3004/getSortValues
 ###
 GET http://localhost:3004/getOutValues
 
+
+
+///////////////////////////////////////////////////////////////////////////////
+////////////////////// Array Aggregation Operators  //////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+###
+GET http://localhost:3004/getArrayElementAtValues
+###
+GET http://localhost:3004/getConcatArrayValues
+
+###
+GET http://localhost:3004/getFilterValues
+
+###
+GET http://localhost:3004/getIsArrayValues
+
+###
+GET http://localhost:3004/getSizeValues
+
+###
+GET http://localhost:3004/getSliceValues
