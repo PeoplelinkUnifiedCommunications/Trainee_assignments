@@ -220,6 +220,12 @@ GET http://localhost:9090/arraysize/
 GET http://localhost:9090/arrayslice/
 ###
 
+GET http://localhost:9090/dateformats/
+###
+
+GET http://localhost:9090/datetostring/
+###
+
 post http://localhost:9090/students/
 Content-Type: application/json
 
@@ -230,7 +236,7 @@ Content-Type: application/json
     "section": "A",
     "subjects": ["English", "Telugu", "Maths"],
     "course_fee": 10000,
-    "date_of_joining": "12-06-2021",
+    "date_of_joining": "$2021-06-07-00:00:00Z",
     "age": 15,
     "weight": 40
 },
@@ -240,17 +246,17 @@ Content-Type: application/json
     "section": "A",
     "subjects": ["English", "Telugu", "Maths", "Science"],
     "course_fee": 11000,
-    "date_of_joining": "12-06-2021",
+    "date_of_joining": "$2019-12-31-00:00:00Z",
     "age": 14,
     "weight": 38
-}, 
+},
 {
     "student_name": "sowjanya",
     "class": 10,
     "section": "A",
     "subjects": ["English", "Telugu"],
     "course_fee": 12500,
-    "date_of_joining": "15-06-2021",
+    "date_of_joining": "$2020-07-21-00:00:00Z",
     "age": 13,
     "weight": 35
 },
@@ -260,7 +266,7 @@ Content-Type: application/json
     "section": "A",
     "subjects": ["English", "Telugu", "Maths"],
     "course_fee": 10000,
-    "date_of_joining": "12-06-2021",
+    "date_of_joining": "$2021-06-07-00:00:00Z",
     "age": 12,
     "weight": 30
 },
@@ -270,7 +276,7 @@ Content-Type: application/json
     "section": "B",
     "subjects": ["English", "Maths"],
     "course_fee": 9000,
-    "date_of_joining": "10-06-2021",
+    "date_of_joining": "$2017-11-31-00:00:00Z",
     "age": 15,
     "weight": 40
 },
@@ -280,7 +286,7 @@ Content-Type: application/json
     "section": "A",
     "subjects": ["English", "Maths"],
     "course_fee": 9000,
-    "date_of_joining": "9-06-2021",
+    "date_of_joining": "$2020-06-12-00:00:00Z",
     "age": 15,
     "weight": 40
 },
@@ -290,7 +296,7 @@ Content-Type: application/json
     "section": "B",
     "subjects": ["English", "Telugu"],
     "course_fee": 9000,
-    "date_of_joining": "10-06-2021",
+    "date_of_joining": "$2018-04-07-00:00:00Z",
     "age": 15,
     "weight": 40
 },
@@ -300,7 +306,7 @@ Content-Type: application/json
     "section": "A",
     "subjects": ["English", "Maths", "Science"],
     "course_fee": 9000,
-    "date_of_joining": "12-06-2021",
+    "date_of_joining": "$2019-07-07-00:00:00Z",
     "age": 14,
     "weight": 33
 },
@@ -310,7 +316,7 @@ Content-Type: application/json
     "section": "A",
     "subjects": ["English", "Telugu"],
     "course_fee": 7000,
-    "date_of_joining": "12-07-2021",
+    "date_of_joining": "$2021-06-15-00:00:00Z",
     "age": 12,
     "weight": 28
 },
@@ -320,7 +326,7 @@ Content-Type: application/json
     "section": "B",
     "subjects": ["English", "Maths"],
     "course_fee": 7000,
-    "date_of_joining": "10-06-2021",
+    "date_of_joining": "$2016-10-07-00:00:00Z",
     "age": 11,
     "weight": 27
 },
@@ -330,7 +336,7 @@ Content-Type: application/json
     "section": "B",
     "subjects": ["English", "Maths"],
     "course_fee": 7500,
-    "date_of_joining": "10-06-2021",
+    "date_of_joining": "$2021-05-07-00:00:00Z",
     "age": 12,
     "weight": 30
 }

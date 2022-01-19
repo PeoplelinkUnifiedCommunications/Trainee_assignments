@@ -28,7 +28,7 @@ const studentSchema = new mongoose.Schema({
     section: String,
     subjects: Array,
     course_fee: Number,
-    date_of_joining: String,
+    date_of_joining: { type: Date, default: Date.now },
     age: Number,
     weight: Number,
 });
@@ -1378,6 +1378,59 @@ app.get("/arrayslice/", async (request, response) => {
                 {
                     $project: {
                         sliceOfArray: { $slice: ["$subjects", 0, 2] },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//date format aggregations
+app.get("/dateformats/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        student_name: 1,
+                        class: 1,
+                        section: 1,
+                        date_of_joining: 1,
+                        year: { $year: "$date_of_joining" },
+                        month: { $month: "$date_of_joining" },
+                        day: { $dayOfMonth: "$date_of_joining" },
+                        hour: { $hour: "$date_of_joining" },
+                        minutes: { $minute: "$date_of_joining" },
+                        seconds: { $second: "$date_of_joining" },
+                        milliseconds: { $millisecond: "$date_of_joining" },
+                        dayOfYear: { $dayOfYear: "$date_of_joining" },
+                        dayOfWeek: { $dayOfWeek: "$date_of_joining" },
+                        week: { $week: "$date_of_joining" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//date to string format
+app.get("/datetostring/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        date_of_joining: 1,
+                        date_in_string_format: {
+                            $dateToString: {
+                                format: "%d-%m-%Y",
+                                date: "$date_of_joining",
+                            },
+                        },
                     },
                 },
             ])
