@@ -226,6 +226,16 @@ GET http://localhost:9090/dateformats/
 GET http://localhost:9090/datetostring/
 ###
 
+GET http://localhost:9090/sum/
+###
+
+GET http://localhost:9090/avg/
+###
+
+GET http://localhost:9090/roundingavg/
+###
+
+
 post http://localhost:9090/students/
 Content-Type: application/json
 

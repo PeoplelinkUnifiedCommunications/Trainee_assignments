@@ -1440,4 +1440,59 @@ app.get("/datetostring/", async (request, response) => {
     }
 });
 
+//group accumulator operator
+//sum
+app.get("/sum/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $group: {
+                        _id: "$class",
+                        totalWeightOfClass: { $sum: "$weight" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//average
+app.get("/avg/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $group: {
+                        _id: "$class",
+                        averageAgeOfClass: { $avg: "$age" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//average
+app.get("/roundingavg/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $group: {
+                        _id: "$class",
+                        averageAgeOfClass: { $round: [{ $avg: "$age" }, 2] },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 module.exports = app;
