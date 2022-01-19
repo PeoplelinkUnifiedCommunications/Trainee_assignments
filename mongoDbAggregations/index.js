@@ -297,4 +297,72 @@ app.get("/substr/", async (req, res) => {
 	res.send(substr);
 });
 
+//pipeline aggregations
+
+app.get("/getSubjects/", async (req, res) => {
+	var subj = ["Computer graphics", "Fluid Mechanics", "Engineering Mechanics"];
+	const getSubjects = await studentSchemaModel.aggregate([
+		{
+			$project: { student_name: 1, subjects: 1, _id: 0 },
+		},
+		{
+			$redact: {
+				$cond: {
+					if: {
+						$gt: [{ $size: { $setIntersection: ["$subjects", subj] } }, 0],
+					},
+					then: "$$DESCEND",
+					else: "$$PRUNE",
+				},
+			},
+		},
+	]);
+	res.send(getSubjects);
+});
+
+app.get("/unWind/", async (req, res) => {
+	const unWind = await studentSchemaModel.aggregate([
+		{
+			$match: { student_name: "Harish" },
+		},
+		{
+			$unwind: "$subjects",
+		},
+	]);
+	res.send(unWind);
+});
+
+app.get("/group/", async (req, res) => {
+	const group = await studentSchemaModel.aggregate([
+		{
+			$group: { _id: null, totalFees: { $sum: "$course_fee" } },
+		},
+	]);
+	res.send(group);
+});
+
+app.get("/sample/", async (req, res) => {
+	const sample = await studentSchemaModel.aggregate([
+		{
+			$sample: { size: 3 },
+		},
+		{
+			$sort: { weight: -1 },
+		},
+	]);
+	res.send(sample);
+});
+
+app.get("/outAgggregation/", async (req, res) => {
+	const outAgggregation = await studentSchemaModel.aggregate([
+		{
+			$group: { _id: "$section", student_names: { $push: "$student_name" } },
+		},
+		{
+			$out: "sections",
+		},
+	]);
+	res.send(outAgggregation);
+});
+
 module.exports = app;

@@ -85,3 +85,23 @@ GET http://localhost:4000/concatNameAndCourse/
 ###
 
 GET http://localhost:4000/substr/
+
+###
+
+GET http://localhost:4000/getSubjects/
+
+###
+
+GET http://localhost:4000/unWind/
+
+###
+
+GET http://localhost:4000/group/
+
+###
+
+GET http://localhost:4000/sample/
+
+###
+
+GET http://localhost:4000/outAgggregation/
