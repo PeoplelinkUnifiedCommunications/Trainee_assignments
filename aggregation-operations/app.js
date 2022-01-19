@@ -465,9 +465,92 @@ app.get("/getStringCompareValues",async (request,response)=>{
 })
 
 
+//////////////////////////////////////////////////////////////////////////////////
+/////////////////////// pipeline aggregations operations ////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 
+//$redact()
 
+
+app.get("/getRedactValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+       
+            {
+                $redact:{
+                    $cond:{
+                        if: { $gt: [ { $size: {
+                            $setIntersection:["$subjects",["fluid","eng"]]
+                        } }, 0 ] },
+                        then: "$$PRUNE",
+                        else: "$$DESCEND"
+                    }
+                }
+            }
+        
+    ])
+    response.send(data);
+
+})
+
+//$unwind()
+
+
+app.get("/getUnwindValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {$match:{student_name:"Bharath"}},
+        { $unwind:"$subjects"}
+        
+    ])
+    response.send(data);
+
+})
+
+//$group()
+
+
+app.get("/getGroupValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $group : {
+               _id : null,
+               totalFeeAmount: { $sum: "$course_fee" },
+              
+            }
+          }
+        
+    ])
+    response.send(data);
+
+})
+
+//$sample()
+
+app.get("/getSampleValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        { $sample: { size: 3 } }    
+    ])
+    response.send(data);
+})
+
+//$sort()
+
+app.get("/getSortValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        { $sort:{student_name:1 }}    
+    ])
+    response.send(data);
+})
+
+//$out()
+
+app.get("/getOutValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        { $group :{ _id:"$class",students:{$push: "$student_name"}}},
+        {$out:"students"} 
+    ])
+    response.send(data);
+})
 
 
 

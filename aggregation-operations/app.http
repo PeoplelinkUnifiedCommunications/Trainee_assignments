@@ -235,3 +235,24 @@ GET http://localhost:3004/getToUpperValues
 ###
 GET http://localhost:3004/getStringCompareValues
 
+
+//////////////////////////////////////////////////////////////////////////////////
+/////////////////////// pipeline aggregations operations ////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+###
+GET http://localhost:3004/getRedactValues
+
+###
+GET http://localhost:3004/getUnwindValues
+
+###
+GET http://localhost:3004/getGroupValues
+###
+GET http://localhost:3004/getSampleValues
+###
+GET http://localhost:3004/getSortValues
+
+###
+GET http://localhost:3004/getOutValues
+
