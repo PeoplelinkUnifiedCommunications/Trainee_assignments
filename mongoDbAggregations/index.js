@@ -55,6 +55,13 @@ const setOperationsSchema = new Schema({
 	B: Array,
 });
 
+const dateSchema = new Schema({
+	item: String,
+	price: Number,
+	quantity: Number,
+	date: { type: Date },
+});
+
 const studentSchemaModel = mongoose.model("studentData", studentSchema);
 const studentDetailsModel = mongoose.model("studentMarks", studentMarksDeatils);
 const studentClassDEatilsModel = mongoose.model(
@@ -65,6 +72,8 @@ const setOperationsSchemaModel = mongoose.model(
 	"setOperationsData",
 	setOperationsSchema
 );
+
+const dateModel = mongoose.model("dateAggregations", dateSchema);
 
 app.get("/getData/", async (req, res) => {
 	const getData = await studentSchemaModel.find();
@@ -474,6 +483,46 @@ app.get("/silceArray/", async (req, res) => {
 		},
 	]);
 	res.send(silceArray);
+});
+
+//date aggregations
+
+app.post("/addDate/", async (req, res) => {
+	await dateModel.insertMany(req.body);
+	res.send("added");
+});
+
+app.get("/dateaggregation/", async (req, res) => {
+	const dateaggregation = await dateModel.aggregate([
+		{
+			$project: {
+				year: { $year: "$date" },
+				month: { $month: "$date" },
+				day: { $dayOfMonth: "$date" },
+				hour: { $hour: "$date" },
+				minutes: { $minute: "$date" },
+				seconds: { $second: "$date" },
+				milliseconds: { $millisecond: "$date" },
+				dayOfYear: { $dayOfYear: "$date" },
+				dayOfWeek: { $dayOfWeek: "$date" },
+				week: { $week: "$date" },
+			},
+		},
+	]);
+	res.send(dateaggregation);
+});
+
+app.get("/dateStringFormate/", async (req, res) => {
+	const dateStringFormate = await dateModel.aggregate([
+		{
+			$project: {
+				yearMonthDay: { $dateToString: { format: "%Y-%m-%d", date: "$date" } },
+				time: { $dateToString: { format: "%H:%M:%S:%L", date: "$date" } },
+			},
+		},
+	]);
+
+	res.send(dateStringFormate);
 });
 
 module.exports = app;

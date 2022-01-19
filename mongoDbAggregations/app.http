@@ -127,7 +127,59 @@ GET http://localhost:4000/isArraySize/
 
 ###
 
-GET http://localhost:4000/silceArray/
+GET  http://localhost:4000/silceArray/
+
+###
+
+
+POST http://localhost:4000/addDate/
+Content-Type: application/json
+
+[
+    { 
+        "item" : "loptop", 
+        "price" : "42000", 
+        "quantity" : "2", 
+        "date" : "$2014-01-01-00:00:00Z"
+    },
+    { 
+        "item" : "TV", 
+        "price" : "80000", 
+        "quantity" : "1", 
+        "date" : "$2013-02-29-00:00:00Z"
+    },
+    { 
+        "item" : "lamp", 
+        "price" : "500", 
+        "quantity" : "4", 
+        "date" : "$2013-02-25-00:00:00Z"
+    },
+    { 
+        "item" : "Bike", 
+        "price" : "89000", 
+        "quantity" : "1", 
+        "date" : "$2020-08-04-00:00:00Z"
+    },
+    { 
+        "item" : "car", 
+        "price" : "142000", 
+        "quantity" : "1", 
+        "date" : "$2021-04-01-00:00:00Z"
+    },
+    { 
+        "item" : "TV", 
+        "price" : "42000", 
+        "quantity" : "1", 
+        "date" : "$2019-02-21-00:00:00Z"
+    }
+]
+###
+
+GET http://localhost:4000/dateaggregation/
+
+###
+
+GET http://localhost:4000/dateStringFormate/
 
 
 
