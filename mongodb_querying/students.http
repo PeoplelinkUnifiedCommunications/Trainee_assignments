@@ -257,6 +257,11 @@ GET http://localhost:9090/addtoset/
 GET http://localhost:9090/map/
 ###
 
+GET http://localhost:9090/split/
+###
+
+GET http://localhost:9090/reduceandtrim/
+###
 
 post http://localhost:9090/students/
 Content-Type: application/json

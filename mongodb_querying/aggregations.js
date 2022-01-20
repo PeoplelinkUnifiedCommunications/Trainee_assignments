@@ -1696,4 +1696,63 @@ app.get("/map/", async (request, response) => {
     }
 });
 
+//split
+app.get("/split/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        splitElements: {
+                            $map: {
+                                input: "$subjects",
+                                as: "subject",
+                                in: {
+                                    $split: ["$$subject", "i"],
+                                },
+                            },
+                        },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//reduce and trim
+app.get("/reduceandtrim/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $project: {
+                        _id: 0,
+                        student_name: 1,
+                        class: 1,
+                        section: 1,
+                        all_subjects: {
+                            $trim: {
+                                input: {
+                                    $reduce: {
+                                        input: "$subjects",
+                                        initialValue: "",
+                                        in: {
+                                            $concat: ["$$value", "$$this", ","],
+                                        },
+                                    },
+                                },
+                                chars: ",",
+                            },
+                        },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 module.exports = app;
