@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+}
+
+.un-order{
+  display: flex;
+  flex-direction: column;
+}
+.list-item{
+  list-style-type: none;
+  display: flex;
+  
+}
+.item{
+  width: 5rem;
+  
+}
+.title{
+  width: 50rem;
+}
+.price{
+  width: 10rem;
+}
+.category{
+  width: 30rem;
+}
+.item-container{
+  display: flex;
+  flex-direction: row;
+}
+.images{
+  height: 20rem;
+  width: 30rem;
+}
