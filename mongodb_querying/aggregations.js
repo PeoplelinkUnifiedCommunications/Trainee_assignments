@@ -44,11 +44,20 @@ const setSchema = new mongoose.Schema({
     B: Array,
 });
 
+const userSchema = new mongoose.Schema({
+    userName: String,
+    email: String,
+    password: String,
+});
+
 const studentCollection = mongoose.model("studentsdatas", studentSchema);
+
 const studentMarksCollection = mongoose.model(
     "studentsMarks",
     studentMarksSchema
 );
+
+const userCollection = mongoose.model("userData", userSchema);
 
 const setOperatorCollection = mongoose.model("setoperators", setSchema);
 
@@ -1752,6 +1761,18 @@ app.get("/reduceandtrim/", async (request, response) => {
         );
     } catch (error) {
         console.log(error.message);
+    }
+});
+
+//userdata verification
+app.post("/registration/", async (request, response) => {
+    const { userName, email, password } = request.body;
+    const dataFromDb = await userCollection.findOne({ email });
+    if (dataFromDb === null) {
+        await userCollection.create(request.body);
+        response.send(await userCollection.find());
+    } else {
+        response.send("Email Already Exists...!!!");
     }
 });
 

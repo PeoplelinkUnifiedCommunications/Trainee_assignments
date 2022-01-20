@@ -426,3 +426,12 @@ Content-Type: application/json
 { "A" : [ ], "B" : [ "red" ] }
 ]
 ###
+
+post http://localhost:9090/registration/
+Content-Type: application/json
+
+{
+    "userName": "siva",
+    "email": "siva1@gmail.com",
+    "password": "siva123"
+}
