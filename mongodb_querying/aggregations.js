@@ -1477,7 +1477,7 @@ app.get("/avg/", async (request, response) => {
     }
 });
 
-//average
+//rounding average
 app.get("/roundingavg/", async (request, response) => {
     try {
         response.send(
@@ -1485,7 +1485,99 @@ app.get("/roundingavg/", async (request, response) => {
                 {
                     $group: {
                         _id: "$class",
-                        averageAgeOfClass: { $round: [{ $avg: "$age" }, 2] },
+                        averageAgeOfClass: { $avg: "$age" },
+                    },
+                },
+                {
+                    $project: {
+                        roundAvg: { $round: ["$averageAgeOfClass", 2] },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+// //rounding
+// app.get("/roundingavg/", async (request, response) => {
+//     try {
+//         response.send(
+//             await studentCollection.aggregate([
+//                 {
+//                     $project: {
+//                         round: {
+//                             $round: [2.52345, 2],
+//                         },
+//                     },
+//                 },
+//             ])
+//         );
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// });
+
+//first
+app.get("/first/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                { $sort: { date_of_joining: -1 } },
+                {
+                    $group: {
+                        _id: "$class",
+                        firstPersonJoiningDate: { $first: "$date_of_joining" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//last
+app.get("/last/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                { $sort: { date_of_joining: -1 } },
+                {
+                    $group: {
+                        _id: "$class",
+                        lastPersonJoiningDate: { $last: "$date_of_joining" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//max
+app.get("/max/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $group: {
+                        _id: "$class",
+                        count: { $sum: 1 },
+                    },
+                },
+                {
+                    $group: {
+                        _id: "$class",
+                        max_count: { $max: "$count" },
+                    },
+                },
+                {
+                    $project: {
+                        class: 1,
+                        max: { $eq: ["$max_count", { $max: "$count" }] },
                     },
                 },
             ])

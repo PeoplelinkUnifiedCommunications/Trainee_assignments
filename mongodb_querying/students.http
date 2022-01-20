@@ -235,6 +235,14 @@ GET http://localhost:9090/avg/
 GET http://localhost:9090/roundingavg/
 ###
 
+GET http://localhost:9090/first/
+###
+
+GET http://localhost:9090/last/
+###
+
+GET http://localhost:9090/max/
+###
 
 post http://localhost:9090/students/
 Content-Type: application/json

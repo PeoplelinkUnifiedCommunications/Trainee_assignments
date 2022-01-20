@@ -160,4 +160,33 @@ app.get("/arraysize/", async (request, response) => {
     }
 });
 
+app.get("/max/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $group: {
+                        _id: "$class",
+                        count: { $sum: 1 },
+                    },
+                },
+                {
+                    $group: {
+                        _id: "$class",
+                        max_count: { $max: "$count" },
+                    },
+                },
+                {
+                    $project: {
+                        class: 1,
+                        max: { $eq: ["$max_count", { $max: "$count" }] },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
 module.exports = app;
