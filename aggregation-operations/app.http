@@ -320,3 +320,34 @@ GET http://localhost:3004/getWeekValues
 ###
 GET http://localhost:3004/getDateToStringValues
 
+//////////////////////////////////////////////////
+
+###
+GET http://localhost:3004/getRoundValues
+
+
+////////////////////////////////////////////////////////////////////
+///////////////////////Group Accumulator Operators/////////////////
+//////////////////////////////////////////////////////////////////
+
+###
+GET http://localhost:3004/getSumValues
+###
+GET http://localhost:3004/getSumProjectValues
+
+###
+GET http://localhost:3004/getAvgValues
+
+###
+GET http://localhost:3004/getFirstValues
+###
+GET http://localhost:3004/getLastValues
+###
+GET http://localhost:3004/getMaxValues
+###
+GET http://localhost:3004/getMinValues
+###
+GET http://localhost:3004/getPushValues
+###
+GET http://localhost:3004/getAddToSetValues
+

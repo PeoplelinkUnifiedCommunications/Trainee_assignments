@@ -837,5 +837,178 @@ app.get("/getDateToStringValues",async (request,response)=>{
 })
 
 
+//$round()
+
+// app.get("/getRoundValues",async (request,response)=>{
+//     const data = await studentModel.aggregate([
+//         {
+//             $project:{ roundedValue: { $round: [ 4.678, 2 ] } }
+//         }
+//     ])
+//     response.send(data);
+// })
+
+
+//
+app.get("/getRoundValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $group:{ 
+                _id:"$class",
+                roundedValue:  {$avg:"$age"}
+             }
+        },
+        {
+            $project:{
+                rounded:{
+                    $round:["$roundedValue",2]
+                }
+            }
+        }
+       
+    ])
+    response.send(data);
+})
+
+
+////////////////////////////////////////////////////////////////////
+///////////////////////Group Accumulator Operators/////////////////
+//////////////////////////////////////////////////////////////////
+
+//$sum()
+app.get("/getSumValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $group:{ 
+                _id:"$class",
+                roundedValue:  {$sum:"$age"}
+             }
+        }
+       
+    ])
+    response.send(data);
+})
+
+app.get("/getSumProjectValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $project:{ 
+                _id:"$class",
+                roundedValue:  {$sum:"$course_fee"}
+             }
+        }
+       
+    ])
+    response.send(data);
+})
+
+//$avg()
+app.get("/getAvgValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $group:{ 
+                _id:"$class",
+                roundedValue:  {$avg:"$course_fee"}
+             }
+        }
+       
+    ])
+    response.send(data);
+})
+
+//$first()
+app.get("/getFirstValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $group:{ 
+                _id:"$class",
+                firstName:  {$first:"$course_fee"}
+             }
+        }
+       
+    ])
+    response.send(data);
+})
+
+//$last()
+app.get("/getLastValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        {
+            $group:{ 
+                _id:"$class",
+                firstName:  {$last:"$course_fee"}
+             }
+        }
+       
+    ])
+    response.send(data);
+})
+
+//max()
+app.get("/getMaxValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        
+       {
+           $group:{
+               _id:"$class",
+               m:{
+                    $max:"$class"
+                }
+           }
+       }
+    ])
+    response.send(data);
+})
+
+//min()
+app.get("/getMinValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        
+       {
+           $group:{
+               _id:"$class",
+               m:{
+                    $min:"$class"
+                }
+           }
+       }
+    ])
+    response.send(data);
+})
+
+//push()
+app.get("/getPushValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        
+       {
+           $group:{
+               _id:"$class",
+              details:{
+                  $push:{name:"$student_name",age:"$age",fee:"$course_fee"}
+              }
+           }
+       }
+    ])
+    response.send(data);
+})
+
+//$addtoset()
+app.get("/getAddToSetValues",async (request,response)=>{
+    const data = await studentModel.aggregate([
+        
+       {
+           $group:{
+               _id:"$section",
+              details:{
+                  $addToSet:{fee:"$class"}
+              }
+           }
+       }
+    ])
+    response.send(data);
+})
+
+
+
 
 module.exports = app
