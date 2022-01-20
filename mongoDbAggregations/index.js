@@ -620,4 +620,83 @@ app.get("/stdDevPop/", async (req, res) => {
 	res.send(stdDevPop);
 });
 
+//map operator
+
+app.get("/mapSubjects/", async (req, res) => {
+	const mapSubjects = await studentSchemaModel.aggregate([
+		{
+			$project: {
+				subjects: 1,
+				concateEachSubjec: {
+					$map: {
+						input: "$subjects",
+						as: "each",
+						in: { $concat: ["$$each", "Hi"] },
+					},
+				},
+			},
+		},
+	]);
+	res.send(mapSubjects);
+});
+
+//split
+
+app.get("/splitSubject/", async (req, res) => {
+	const splitSubject = await studentSchemaModel.aggregate([
+		{
+			$project: {
+				concateEachSubjec: {
+					$reduce: {
+						input: "$subjects",
+						initialValue: "",
+						in: { $concat: ["$$value", "$$this", "-"] },
+					},
+				},
+			},
+		},
+	]);
+	res.send(splitSubject);
+});
+
+app.get("/lengthOfString/", async (req, res) => {
+	const lengthOfString = await studentSchemaModel.aggregate([
+		{
+			$project: {
+				subjects: 1,
+				concateEachSubjec: {
+					$map: {
+						input: "$subjects",
+						as: "each",
+						in: { $strLenCP: "$$each" },
+					},
+				},
+			},
+		},
+	]);
+	res.send(lengthOfString);
+});
+
+app.get("/switch/", async (req, res) => {
+	const switchCases = await studentSchemaModel.aggregate([
+		{
+			$project: {
+				student_name: 1,
+				summary: {
+					$switch: {
+						branches: [
+							{
+								case: { $lte: ["$age", 21] },
+								then: "age grater then 23",
+							},
+						],
+						default: "No matches found",
+					},
+				},
+			},
+		},
+	]);
+	res.send(switchCases);
+});
+
 module.exports = app;

@@ -208,3 +208,20 @@ GET http://localhost:4000/addTOSet/
 ###
 
 GET http://localhost:4000/stdDevPop/
+
+###
+
+GET http://localhost:4000/mapSubjects/
+
+###
+
+GET http://localhost:4000/splitSubject/
+
+###
+
+GET http://localhost:4000/lengthOfString/
+
+###
+
+
+GET http://localhost:4000/switch/
