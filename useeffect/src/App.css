@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.un-order{
+  display: flex;
+  flex-direction: column;
+}
+.list-item{
+  list-style-type: none;
+  display: flex;
+}
+.item{
+  margin-right: 10px;
+}
