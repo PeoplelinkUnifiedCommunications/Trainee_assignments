@@ -1574,10 +1574,119 @@ app.get("/max/", async (request, response) => {
                         max_count: { $max: "$count" },
                     },
                 },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+// app.get("/max/", async (request, response) => {
+//     try {
+//         response.send(
+//             await studentCollection.aggregate([
+//                 {
+//                     $group: {
+//                         _id: "$class",
+//                         count: { $sum: 1 },
+//                     },
+//                 },
+//                 {
+//                     $group: {
+//                         _id: "$class",
+//                         max_count: { $max: "$count" },
+//                     },
+//                 },
+//                 {
+//                     $project: {
+//                         class: 1,
+//                         max: { $eq: ["$max_count", { $max: "$count" }] },
+//                     },
+//                 },
+//             ])
+//         );
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// });
+
+//min
+app.get("/min/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $group: {
+                        _id: "$class",
+                        count: { $sum: 1 },
+                    },
+                },
+                {
+                    $group: {
+                        _id: "$class",
+                        min_count: { $min: "$count" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//push
+app.get("/push/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $group: {
+                        _id: "$class",
+                        names: { $push: "$student_name" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//addtoset
+app.get("/addtoset/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
+                {
+                    $group: {
+                        _id: "$class",
+                        names: { $addToSet: "$student_name" },
+                    },
+                },
+            ])
+        );
+    } catch (error) {
+        console.log(error.message);
+    }
+});
+
+//map
+app.get("/map/", async (request, response) => {
+    try {
+        response.send(
+            await studentCollection.aggregate([
                 {
                     $project: {
-                        class: 1,
-                        max: { $eq: ["$max_count", { $max: "$count" }] },
+                        all_subjects: {
+                            $map: {
+                                input: "$subjects",
+                                as: "subject",
+                                in: {
+                                    $concat: ["$$subject", " subjects"],
+                                },
+                            },
+                        },
+                        concated: { $concatArrays: ["$subjects", "$subjects"] },
                     },
                 },
             ])

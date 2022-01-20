@@ -244,6 +244,20 @@ GET http://localhost:9090/last/
 GET http://localhost:9090/max/
 ###
 
+GET http://localhost:9090/min/
+###
+
+GET http://localhost:9090/push/
+###
+
+GET http://localhost:9090/addtoset/
+###
+
+
+GET http://localhost:9090/map/
+###
+
+
 post http://localhost:9090/students/
 Content-Type: application/json
 
@@ -252,11 +266,11 @@ Content-Type: application/json
     "student_name": "siva",
     "class": 10,
     "section": "A",
-    "subjects": ["English", "Telugu", "Maths"],
-    "course_fee": 10000,
+    "subjects": ["Telugu", "Maths"],
+    "course_fee": 12000,
     "date_of_joining": "$2021-06-07-00:00:00Z",
-    "age": 15,
-    "weight": 40
+    "age": 17,
+    "weight": 53
 },
 {
     "student_name": "ashok",
