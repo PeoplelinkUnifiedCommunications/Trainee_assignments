@@ -181,6 +181,30 @@ GET http://localhost:4000/dateaggregation/
 
 GET http://localhost:4000/dateStringFormate/
 
+###
 
+GET http://localhost:4000/totalPrice/
 
+###
 
+GET http://localhost:4000/avarage/
+
+###
+
+GET http://localhost:4000/firstGroupVaues/
+
+###
+
+GET http://localhost:4000/maximumPrice/
+
+###
+
+GET http://localhost:4000/pushItems/
+
+###
+
+GET http://localhost:4000/addTOSet/
+
+###
+
+GET http://localhost:4000/stdDevPop/

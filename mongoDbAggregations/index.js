@@ -525,4 +525,99 @@ app.get("/dateStringFormate/", async (req, res) => {
 	res.send(dateStringFormate);
 });
 
+//group aggeregation operations
+
+app.get("/totalPrice/", async (req, res) => {
+	const totalPrice = await dateModel.aggregate([
+		{
+			$group: {
+				_id: { year: { $year: "$date" } },
+				totalSum: { $sum: { $multiply: ["$price", "$quantity"] } },
+			},
+		},
+	]);
+	res.send(totalPrice);
+});
+
+app.get("/avarage/", async (req, res) => {
+	const avargePrice = await dateModel.aggregate([
+		{
+			$group: {
+				_id: null,
+				avargePrice: { $avg: { $divide: ["$price", 2] } },
+				maximum: { $max: "$price" },
+			},
+		},
+		{
+			$project: {
+				max: "$maximum",
+				round: { $round: ["$avargePrice", 1] },
+			},
+		},
+	]);
+	res.send(avargePrice);
+});
+
+app.get("/firstGroupVaues/", async (req, res) => {
+	const firstGroupVaues = await dateModel.aggregate([
+		{
+			$group: {
+				_id: "$item",
+				firstSalesDate: { $first: "$date" },
+				count: { $sum: 1 },
+			},
+		},
+	]);
+	res.send(firstGroupVaues);
+});
+
+app.get("/maximumPrice/", async (req, res) => {
+	const maximumPrice = await dateModel.aggregate([
+		{
+			$group: {
+				_id: "$item",
+				count: { $sum: 1 },
+			},
+		},
+		{
+			$group: {
+				_id: null,
+				maxCount: { $max: "$count" },
+			},
+		},
+	]);
+	res.send(maximumPrice);
+});
+
+app.get("/pushItems/", async (req, res) => {
+	const pushItems = await dateModel.aggregate([
+		{ $group: { _id: { $year: "$date" }, itemsSlod: { $push: "$item" } } },
+	]);
+	res.send(pushItems);
+});
+
+app.get("/addTOSet/", async (req, res) => {
+	const addTOSet = await dateModel.aggregate([
+		{
+			$group: {
+				_id: { $year: "$date" },
+				itemSlodInYear: { $addToSet: "$item" },
+			},
+		},
+	]);
+	res.send(addTOSet);
+});
+
+app.get("/stdDevPop/", async (req, res) => {
+	const stdDevPop = await dateModel.aggregate([
+		{
+			$group: {
+				_id: { $year: "$date" },
+				deveation: { $stdDevPop: "$price" },
+			},
+		},
+	]);
+	res.send(stdDevPop);
+});
+
 module.exports = app;
