@@ -350,4 +350,11 @@ GET http://localhost:3004/getMinValues
 GET http://localhost:3004/getPushValues
 ###
 GET http://localhost:3004/getAddToSetValues
-
+###
+GET http://localhost:3004/getMapValues
+###
+GET http://localhost:3004/getMValues
+###
+GET http://localhost:3004/getSplitValues
+###
+GET http://localhost:3004/getReduceValues

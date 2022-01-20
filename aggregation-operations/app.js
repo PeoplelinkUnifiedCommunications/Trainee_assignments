@@ -1008,7 +1008,52 @@ app.get("/getAddToSetValues",async (request,response)=>{
     response.send(data);
 })
 
+//map()
 
+app.get("/getMapValues",async (request,response)=>{
+    const data = await studentModel.aggregate([  
+       {
+           $project:{
+               subjectConcat:{
+                   $map:{
+                       input:"$subjects",
+                        as:"s",
+                        in: {$concat:["$$s","-"]}               }
+               }
+           }
+       }
+    ])
+    response.send(data);
+})
+
+//Split()
+app.get("/getSplitValues",async (request,response)=>{
+    const data = await studentModel.aggregate([  
+       {
+           $project:{
+            split_date : { $split: ["$date_of_joining", "-"] }
+           }
+       }
+    ])
+    response.send(data);
+})
+
+//
+app.get("/getReduceValues",async (request,response)=>{
+    const data = await studentModel.aggregate([  
+       {
+           $project:{
+               subjectConcat:{
+                   $reduce:{
+                       input:"$subjects",
+                        initialValue:"",
+                        in: {$concat:["$$value","$$this","-"]}               }
+               }
+           }
+       }
+    ])
+    response.send(data);
+})
 
 
 module.exports = app
