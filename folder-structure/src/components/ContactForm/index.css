@@ -1,0 +1,53 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:antiquewhite;
+    /* background-image: linear-gradient(to top, #9796f0, #fbc7d4); */
+    padding: 20px;
+    height: 90vh;
+  }
+
+  .login-form {
+    padding: 20px;
+    display: flex;
+    background-color: #7e858e;
+    flex-direction: column;
+    width: 30%;
+    margin-right: 10px;
+    min-height: 60%;
+  }
+  .container{
+      margin-top: 20px;
+  }
+ 
+  .add-button {
+    align-self: flex-end;
+    background-color: #8b5cf6;
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    outline: none;
+    margin-top: 10px;
+  }
+  
+  .appointments-list {
+    min-height: 60%;
+    width: 70%;
+    background-color:  rgb(112, 148, 12);
+    padding: 20px;
+  }
+  .un-orders{
+    display: flex;
+    min-height: 500px;
+    justify-content: center;
+    padding: 10px;
+    
+  }
+
+  
+  

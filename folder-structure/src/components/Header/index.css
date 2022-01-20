@@ -1,0 +1,13 @@
+.header-tab{
+    background-color: rgb(29, 29, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+
+}
+h1{
+    font-family: "Roboto";
+    font-size: 20px;
+    color: #ffffff;
+}

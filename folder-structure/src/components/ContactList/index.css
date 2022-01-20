@@ -1,0 +1,17 @@
+.list-item{
+    display: flex;
+    list-style-type: none;
+}
+.name{
+     width: 15rem;
+}
+.email{
+    width:30rem;
+}
+.number{
+    width: 20rem;
+}
+.del{
+    width: 15rem;
+    margin-left: 10px;
+}
