@@ -1,0 +1,17 @@
+.nav_bar {
+    background-color: #fff;
+    height: 9vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo {
+    width: 160px;
+    height: 50px;
+}
+.logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

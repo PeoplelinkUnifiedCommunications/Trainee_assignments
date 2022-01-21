@@ -1,0 +1,18 @@
+POST http://localhost:9000/logup/
+Content-Type: application/json
+
+{
+    "name": "sowjanya",
+    "email": "sowjanya1@gmail.com",
+    "password": "sowji123"
+}
+###
+
+POST http://localhost:9000/login/
+Content-Type: application/json
+
+{
+    "name": "sowjanya",
+    "email": "sowjy@gmail.com",
+    "password": "sowji123"
+}

@@ -1,0 +1,9 @@
+.signup-link {
+    color: rgb(75, 72, 72);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.signup-link:hover {
+    color: rgb(235, 16, 16);
+}

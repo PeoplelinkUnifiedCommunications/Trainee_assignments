@@ -1,0 +1,117 @@
+.bg-container {
+    height: 91vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "sans-serif";
+    color: rgb(75, 72, 72);
+}
+.form-container {
+    padding: 30px;
+    padding-right: 35px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.login-form-heading {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    color: rgb(63, 71, 65);
+}
+.form-box {
+    width: 100%;
+    padding: 10px;
+}
+.input-box {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.input-field {
+    width: 95%;
+    height: 45px;
+    color: rgb(75, 72, 72);
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding-left: 15px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn {
+    color: rgb(75, 72, 72);
+    position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.btn::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.sign-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+.signin-link {
+    color: rgb(75, 72, 72);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.signin-link:hover {
+    color: rgb(58, 122, 14);
+}
