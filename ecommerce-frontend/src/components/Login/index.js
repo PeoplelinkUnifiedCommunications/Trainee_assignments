@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import axios from '../../Api';
+import {login} from '../../Api'
 import { useNavigate } from "react-router-dom";
 import './index.css'
 
@@ -27,26 +27,18 @@ const Login = ()=>{
             userName:data.userName,
             password:data.password
         }
-       await axios.post("/login/",value).then((response)=>{
-            navigate('/home')
-            setData({
-                userName:"",
-                password:"",
-                showSubmitError:false,
-                errorMsg:""
-            })
-       }).catch(()=>{
-         setData({
-             ...data,
-             showSubmitError:true,
-             errorMsg:"Invalid UserName or Password"
-         })
-       })
-        
-        
+        const response = await login(value)
+        if(response.data.status === 200){
+          navigate('/home',{ replace: true })
+        }else{
+          setData({
+                   ...data,
+                   showSubmitError:true,
+                   errorMsg:response.data.message
+               })
+        }
     }
 
-    
     return(
         <div className="login-container">
         <form className="form-container" onSubmit={submitForm}>
