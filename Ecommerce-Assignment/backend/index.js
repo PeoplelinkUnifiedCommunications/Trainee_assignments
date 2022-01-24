@@ -30,7 +30,26 @@ const userSchema = mongoose.Schema({
     password: String,
 });
 
+const productSchema = mongoose.Schema({
+    productName: String,
+    price: Number,
+    url: String,
+    quantity: Number,
+    description: String,
+});
+
+const cartSchema = mongoose.Schema({
+    productName: String,
+    price: Number,
+    url: String,
+    quantity: Number,
+});
+
 const userDataCollection = mongoose.model("userDatabase", userSchema);
+
+const productCollection = mongoose.model("productDatabase", productSchema);
+
+const cartCollection = mongoose.model("cartproducts", cartSchema);
 
 app.post("/signup/", async (request, response) => {
     const { name, email, password } = request.body;
@@ -53,20 +72,51 @@ app.post("/signin/", async (request, response) => {
         const data = await userDataCollection.findOne({ email });
         //console.log(data);
         if (data === null) {
-            //response.send({ status: 404, message: "Email not found" });
             response.statusCode = 400;
-            response.send(data);
+            response.send({ status: 400, message: "Email not found" });
         } else {
             if (password === data.password) {
-                response.status(200).send("Login success");
+                response.status(200).send("Login successfull");
             } else {
                 response.status(400).send("Password wrong");
             }
         }
     } catch (error) {
-        //response.status(400).send(error.message);
-        response.statusCode = 404;
-        response.send(data);
+        response.status(404).send(error.message);
+    }
+});
+
+app.post("/createproduct/", async (request, response) => {
+    try {
+        await productCollection.create(request.body);
+        response.status(200).send(await productCollection.find());
+    } catch (error) {
+        response.status(400).send(error.message);
+    }
+});
+
+app.get("/getproducts", async (request, response) => {
+    try {
+        response.send(await productCollection.find());
+    } catch (error) {
+        response.status(400).send(error.message);
+    }
+});
+
+app.post("/addtocart/", async (request, response) => {
+    try {
+        await cartCollection.create(request.body);
+        response.status(200).send(await cartCollection.find());
+    } catch (error) {
+        response.status(400).send(error.message);
+    }
+});
+
+app.get("/getcartproducts", async (request, response) => {
+    try {
+        response.send(await cartCollection.find());
+    } catch (error) {
+        response.status(400).send(error.message);
     }
 });
 

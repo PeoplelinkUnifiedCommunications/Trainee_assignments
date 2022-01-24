@@ -8,6 +8,16 @@ Content-Type: application/json
 }
 ###
 
+POST http://localhost:9000/signup/
+Content-Type: application/json
+
+{
+    "name": "siva",
+    "email": "siva@gmail.com",
+    "password": "siva123"
+}
+###
+
 POST http://localhost:9000/login/
 Content-Type: application/json
 

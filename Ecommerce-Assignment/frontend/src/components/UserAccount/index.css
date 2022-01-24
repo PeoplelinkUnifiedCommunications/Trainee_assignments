@@ -1,0 +1,8 @@
+.user {
+    height: 90vh;
+}
+
+.main {
+    display: flex;
+    height: 100%;
+}

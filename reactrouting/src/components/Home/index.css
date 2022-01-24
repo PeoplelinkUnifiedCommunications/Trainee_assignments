@@ -1,0 +1,10 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    color: brown;
+    font-size: 45px;
+    font-weight: bold;
+}

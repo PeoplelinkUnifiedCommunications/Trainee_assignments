@@ -17,8 +17,17 @@ const LoginPage = () => {
 
     const onSubmitForm = async (event) => {
         event.preventDefault();
-        const checkLogin = await axios.post("/signin/", userObject);
-        console.log(checkLogin.data);
+        // console.log(userObject);
+        try {
+            const data = await axios.post("/signin/", userObject);
+            if (data !== undefined) {
+                navigate("/useraccount");
+            } else {
+                alert(data.statusText);
+            }
+        } catch (error) {
+            console.log(error.message);
+        }
     };
 
     return (
