@@ -1,0 +1,30 @@
+.product_cards {
+	border-radius: 10px;
+	background: rgba(253, 249, 249, 0.863);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(236, 243, 243, 0.308);
+	border-radius: 10px;
+	width: 200px;
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.card_img {
+	width: 100px;
+}
+.product_card_img_container {
+	background-color: #fff;
+	width: 180px;
+	height: 240px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+.item_heading {
+	text-align: center;
+	overflow: hidden;
+}

@@ -1,0 +1,126 @@
+.card {
+	width: 100%;
+	border-radius: 10px;
+	background: rgba(253, 249, 249, 0.863);
+	box-shadow: 0 15px 25px rgba(236, 243, 243, 0.308);
+	border-radius: 10px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.product_image_container {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+}
+.product_image {
+	width: 40%;
+}
+.product_name {
+	font-size: 20px;
+}
+.price {
+	font-weight: 600;
+	font-size: 25px;
+}
+.reatil_price {
+	margin-left: 10px;
+	font-size: 18px;
+}
+.discount {
+	color: green;
+	margin-left: 10px;
+}
+.discreption {
+	color: grey;
+}
+.span_discreption {
+	color: black;
+	margin-left: 10px;
+	font-size: 15px;
+}
+.add_cart_btn {
+	width: 50%;
+	height: 40px;
+	background-color: #ff9f00;
+	outline: none;
+	border: none;
+}
+.add_cart_btn2 {
+	background-color: #fb641b;
+}
+.product_deatils {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.details {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 50%;
+}
+.product_qnty_container {
+	display: flex;
+	margin-top: -4px;
+	margin-left: 10px;
+}
+.product_decrease {
+	height: 25px;
+	width: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 40px;
+	margin-right: 10px;
+	border: 1px solid gray;
+}
+.item_count {
+	height: 25px;
+	width: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+	border: 1px solid gray;
+}
+.product_increase {
+	height: 25px;
+	width: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 40px;
+	border: 1px solid gray;
+}
+.qnty {
+	display: flex;
+}
+.stock_availble_msg1 {
+	color: green;
+}
+.stock_availble_msg2 {
+	color: #fb641b;
+}
+.remove {
+	text-align: right;
+	margin-top: -10px;
+	align-self: flex-end;
+	margin-bottom: 5px;
+	font-size: 20px;
+	margin-left: 10px;
+}
+.icons {
+	align-self: flex-end;
+}
+.favorites {
+	text-align: right;
+	margin-top: -10px;
+	align-self: flex-end;
+	margin-bottom: 5px;
+	font-size: 20px;
+	margin-left: 10px;
+	color: red;
+}

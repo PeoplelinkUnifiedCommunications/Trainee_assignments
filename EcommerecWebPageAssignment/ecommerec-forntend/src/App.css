@@ -1,0 +1,12 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0px;
+}
+.bg_container {
+	background-image: linear-gradient(rgb(51, 42, 42), rgb(41, 41, 51));
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}

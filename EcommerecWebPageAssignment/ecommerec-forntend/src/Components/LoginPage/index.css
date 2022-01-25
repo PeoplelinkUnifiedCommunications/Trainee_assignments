@@ -1,0 +1,85 @@
+.loginpage_container {
+	background-image: linear-gradient(
+		to right,
+		rgb(148, 148, 192),
+		rgb(154, 208, 240)
+	);
+	height: 91vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.form_container {
+	padding: 20px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+}
+.inpu_container {
+	margin-bottom: 20px;
+	margin-top: 15px;
+}
+.input {
+	border: none;
+	outline: none;
+	margin-bottom: 5px;
+	background-color: transparent;
+	height: 20px;
+	color: #fff;
+}
+.input::placeholder {
+	color: #fff;
+}
+.inpu_container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid #fff;
+}
+.image {
+	margin-bottom: 5px;
+	margin-right: 20px;
+	color: #fff;
+}
+.label {
+	font-size: 15px;
+	color: #fff;
+}
+.button {
+	border-radius: 20px;
+	outline: none;
+	height: 30px;
+	border: none;
+	background-image: linear-gradient(
+		to left,
+		rgb(148, 148, 192),
+		rgb(154, 208, 240)
+	);
+	color: green;
+	font-weight: 600;
+}
+.btn {
+	height: 30px;
+	width: 80px;
+	border-radius: 10px;
+	align-self: flex-end;
+	margin-top: 0px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(
+		to left,
+		rgb(148, 148, 192),
+		rgb(154, 208, 240)
+	);
+	color: rgb(6, 119, 163);
+	font-weight: 600;
+}

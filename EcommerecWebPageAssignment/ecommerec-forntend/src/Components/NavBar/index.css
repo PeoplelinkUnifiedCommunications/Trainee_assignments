@@ -1,0 +1,29 @@
+.nav_bar {
+	background-color: #fff;
+	height: 9vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo {
+	width: 80px;
+	border-radius: 20px;
+}
+.logo_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ancorEle {
+	margin-right: 100px;
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+}
+.ancorLink {
+	margin-right: 30px;
+}
+.heading_logo {
+	color: rgb(47, 47, 114);
+}

@@ -1,0 +1,28 @@
+.product_list1 {
+	background-image: linear-gradient(
+		to right,
+		rgb(148, 148, 192),
+		rgb(154, 208, 240)
+	);
+	height: 91vh;
+	padding: 20px;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.product_list2 {
+	background-image: linear-gradient(
+		to right,
+		rgb(148, 148, 192),
+		rgb(154, 208, 240)
+	);
+	height: 91vh;
+	padding: 20px;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: row;
+
+	flex-wrap: wrap;
+}

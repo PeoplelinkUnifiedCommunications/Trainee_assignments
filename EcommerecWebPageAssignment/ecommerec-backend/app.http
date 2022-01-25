@@ -1,0 +1,90 @@
+POST http://localhost:4001/addUser/
+Content-Type: application/json
+
+{
+    "name":"Harish Sriyadula",
+    "userName":"Harish",
+    "email":"hari@gmail.com",
+    "password":"hari%123"
+}
+
+###
+
+POST http://localhost:4001/login/
+Content-Type: application/json
+
+{
+    "userName":"Harish",
+    "password":"hari%12"
+}
+
+###
+
+POST http://localhost:4001/addProduct/
+Content-Type: application/json
+
+{
+    "product_name": "Fire-Boltt Talk Bluetooth Calling Smartwatch",
+	"product_image_url":"https://rukminim1.flixcart.com/image/416/416/kpr8k280/smartwatch/y/l/g/bsw004-android-ios-fire-boltt-original-imag3wwa4uk2kwva.jpeg?q=70" ,
+	"price":9999,
+	"quantity": 2499,
+	"description": "The Fire-Boltt BSW004 smartwatch tracks your activities, relays your phone notifications, and also helps you monitor your health. This stylish and elegant timepiece uses Bluetooth technology to deliver notifications, including calls and messages, straight from your phone to your wrist. It features a large colour display that helps you see the information clearly and navigate through the menu easily. What's more, you can select from a host of pre-installed designs to personalise the watch face to complement your style."
+}
+
+###
+
+GET http://localhost:4001/getProductData/
+
+###
+
+POST http://localhost:4001/addProduct/
+Content-Type: application/json
+
+{
+    "product_name": "Lenovo Tab Ideapad Duet 3 with Bluetooth Keyboard and Digital Pen 4 GB RAM 128 GB ROM 10.3 inches with Wi-Fi Only Tablet (Grey)",
+	"product_image_url":"https://rukminim1.flixcart.com/image/416/416/krf91u80/tablet/z/v/c/82at00dcin-lenovo-original-imag57nbrwzmjzd6.jpeg?q=70" ,
+	"price":45000,
+	"quantity": 2990,
+	"description": "Get dependable performance for work and play from the Duet 3i?s Intel? Pentium? processor, which gives you the ability to effortlessly multitask with multi-screen capabilities, communicate easily with friends and family, and take all your favorite entertainment to go."
+}
+
+###
+
+POST http://localhost:4001/addDataToCart/
+Content-Type: application/json
+
+{
+    "product_name":"Fire-Boltt Talk Bluetooth Calling Smartwatch" ,
+	"product_image_url":"https://rukminim1.flixcart.com/image/416/416/kpr8k280/smartwatch/y/l/g/bsw004-android-ios-fire-boltt-original-imag3wwa4uk2kwva.jpeg?q=70" ,
+	"price":9999,
+	"id":"61ee7ed5d40f8d1144193455",
+}
+
+###
+
+GET http://localhost:4001/getCartData/
+
+
+###
+
+DELETE http://localhost:4001/deleteCartData/61ee80f5d40f8d114419346b
+
+###
+
+PUT http://localhost:4001/updateQnty/61ef9145f91ef2887e8844c7
+Content-Type: application/json
+
+{
+	"item_count":2
+}
+
+###
+
+PUT http://localhost:4001/updateIsFavorites/61efae82cd6f4659abd04a6b
+Content-Type: application/json
+
+{
+	"isFevorites":true
+}
+
+###
