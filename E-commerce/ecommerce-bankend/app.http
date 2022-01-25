@@ -1,0 +1,52 @@
+POST http://localhost:3004/register 
+Content-Type: application/json
+###
+POST http://localhost:3004/login
+Content-Type: application/json
+
+{
+    "userName":"bharath",
+    "password":"Bharath@1234"
+}
+###
+POST http://localhost:3004/registers
+Content-Type: application/json
+
+{
+    "userName":"bharath"
+}
+
+###
+
+POST http://localhost:3004/addProduct
+Content-Type: application/json
+
+{
+    "product_name": "doll",
+    "product_image_url": "image1",
+    "retail_price": "650",
+    "quantity": "30",
+    "description": "beautiful doll"
+}
+
+###
+GET http://localhost:3004/getProductsList
+
+###
+GET http://localhost:3004/getProductItem/61efa369a9ca8eb914650f7f
+
+###
+POST http://localhost:3004/addProductToCart
+Content-Type: application/json
+
+{
+    "product_name": "doll",
+    "product_image_url": "image1",
+    "retail_price": "650",
+    "quantity": "30",
+    "description": "beautiful doll",
+    "selected_quantity":3
+}
+
+###
+GET http://localhost:3004/getCartProductsList
