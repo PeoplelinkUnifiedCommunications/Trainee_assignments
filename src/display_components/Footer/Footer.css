@@ -1,0 +1,26 @@
+.footer-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    background-color: black;
+    color: white;
+    height: 15vh;
+    margin-left: 18.95%;
+   /* position: fixed;
+   left: 0;
+   bottom:0; */
+   /* border: 1px solid black; */
+
+}
+
+.footer-unordered-list{
+    list-style: none;
+    display: flex;
+}
+  
+
+.footer-unordered-list > li > a{
+    color: orange;
+} 

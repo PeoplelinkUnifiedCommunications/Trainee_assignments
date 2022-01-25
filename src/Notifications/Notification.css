@@ -1,0 +1,87 @@
+.base_container{
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .containers{
+    overflow: auto;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+  }
+  
+  .buttonn{
+    visibility: visible;
+    position: fixed;
+    /* top: 40%;
+    left: 40%; */
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-container{
+      align-self: center;
+  }
+
+  .btn{
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    background-color: rgb(25, 180, 204);
+    font-size: 15px;
+    font-weight: bold;
+    border-width: 2px;
+    border: 1px solid black;
+    height: 45px;
+    width: 170px;
+  }
+  
+  .btn:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 2px 1px 10px black;
+    cursor: pointer;
+  }
+
+  .message{
+    border: 2px solid black;
+    margin: 15px 15px;
+    padding: 10px 25px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-start-end-radius: 12px;
+    font-size: 20px;
+    background-color: white;
+    border-width: 0;
+    align-self: flex-end;
+    box-shadow: 7px 7px 7px rgb(3, 3, 3);
+  }
+  
+  .color1{
+    color: red;
+    order: -1;
+  }
+
+  .color2{
+    color:rgb(52, 52, 216);
+    order: -2;
+  }
+  
+  .color3{
+    color: green;
+  }
+  
+  .color4{
+    color: yellow;
+  }
+  
+  .color5{
+    color: rgb(19, 55, 88);
+  }

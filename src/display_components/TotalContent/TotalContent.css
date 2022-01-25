@@ -1,0 +1,37 @@
+.total-container{
+    display: flex;
+    justify-content: space-between;
+    /* background-image: url("./homeimage.jpg");
+    background-size: contain;
+    background-repeat: no-repeat; */
+    /* background-image: url("./homelandscape.jpg"); */
+    background-color: azure;
+    background-size: cover;
+   
+}
+
+.side-nav-bar{
+    flex-basis: 23%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+}
+
+.body-part{
+    flex-basis: 100%;
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+
+    /* background-image: url("./homelandscape.jpg"); */
+    /* background-size: contain;
+     background-repeat: no-repeat; */
+    /* background-size: cover; */
+   
+    
+}

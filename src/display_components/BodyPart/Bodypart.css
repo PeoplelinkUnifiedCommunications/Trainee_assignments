@@ -1,0 +1,60 @@
+.bodypartContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("/home/peoplelink/Desktop/react-total-projects/display-projects/src/display_components/BodyPart/myProfile.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.BodypartFlexContianer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 25px;
+    
+}
+
+.bodypart{
+    /* width: 35%;
+    height: 22vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    /* background-color: rgb(231, 223, 223); */
+    padding: 15px;
+    /* border-radius: 10px; */
+    /* box-shadow: 0px 0px 10px; */
+}
+
+.bodypart h1{
+    font-size: 55px;
+}
+
+.bodypart h3{
+    font-size: 25px;
+    padding-top: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.home-button{
+    padding-top: 20px;
+}
+
+.homebutton{
+    height:40px;
+    width: 110px;
+    background-color: transparent;
+    border-width: 0;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-left: 30px;;
+}
+
+.homebutton:hover{
+    background-color: rgb(210, 210, 224);
+    color: black;
+}
