@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
 }
 .logo {
     width: 160px;

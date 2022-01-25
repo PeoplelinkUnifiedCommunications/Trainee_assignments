@@ -36,6 +36,7 @@ const productSchema = mongoose.Schema({
     url: String,
     quantity: Number,
     description: String,
+    favourite: Boolean,
 });
 
 const cartSchema = mongoose.Schema({
@@ -103,6 +104,29 @@ app.get("/getproducts", async (request, response) => {
     }
 });
 
+app.get("/getproduct/:id", async (request, response) => {
+    const { id } = request.params;
+    try {
+        response.send(await productCollection.findOne({ _id: id }));
+    } catch (error) {
+        response.status(400).send(error.message);
+    }
+});
+
+app.put("/updatefav/", async (request, response) => {
+    try {
+        await productCollection.updateOne(
+            { _id: request.body._id },
+            request.body
+        );
+        response.send(
+            await productCollection.findOne({ _id: request.body._id })
+        );
+    } catch (error) {
+        response.status(400).send(error.message);
+    }
+});
+
 app.post("/addtocart/", async (request, response) => {
     try {
         await cartCollection.create(request.body);
@@ -115,6 +139,25 @@ app.post("/addtocart/", async (request, response) => {
 app.get("/getcartproducts", async (request, response) => {
     try {
         response.send(await cartCollection.find());
+    } catch (error) {
+        response.status(400).send(error.message);
+    }
+});
+
+app.post("/removeItem", async (request, response) => {
+    try {
+        await cartCollection.findOneAndDelete({ _id: request.body._id });
+    } catch (error) {
+        response.status(400).send(error.message);
+    }
+});
+
+app.put("/updatequantity", async (request, response) => {
+    const { product, count } = request.body;
+    try {
+        await cartCollection.updateOne({ _id: product._id }, [
+            { $set: { quantity: count } },
+        ]);
     } catch (error) {
         response.status(400).send(error.message);
     }

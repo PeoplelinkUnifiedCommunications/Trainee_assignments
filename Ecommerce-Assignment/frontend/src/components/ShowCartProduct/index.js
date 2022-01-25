@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
+// import { useNavigate } from "react-router-dom";
 import "./index.css";
 import axios from "../../axiosbaseurl";
 
@@ -10,6 +11,9 @@ const ShowCartProduct = (props) => {
 
     const onClickIncrease = () => {
         setCount(count + 1);
+        // await axios
+        //     .put("/updatequantity", { product, count })
+        //     .then(window.location.reload(false));
         onIncreaseTotalPrice(product.price);
     };
 
@@ -20,6 +24,12 @@ const ShowCartProduct = (props) => {
             setCount(count - 1);
             onDecreaseTotalPrice(product.price);
         }
+    };
+
+    const removeItem = async () => {
+        await axios
+            .post("/removeItem", product)
+            .then(window.location.reload(true));
     };
 
     return (
@@ -39,7 +49,10 @@ const ShowCartProduct = (props) => {
                         +
                     </p>
                 </div>
-                <button className="product-button buy-now">Remove Item</button>
+
+                <button className="product-button buy-now" onClick={removeItem}>
+                    Remove Item
+                </button>
             </div>
             <div className="cart-product-details-box">
                 <h1 className="product-heading">{product.productName}</h1>

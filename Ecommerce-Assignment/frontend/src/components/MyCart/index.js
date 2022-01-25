@@ -13,15 +13,14 @@ const MyCart = () => {
             .then((response) => setCartProductList(response.data))
             .catch((error) => console.log(error.message));
     }, []);
-    console.log(cartProductList);
+    //console.log(cartProductList);
 
-    let cost = 0;
     useEffect(() => {
+        let cost = 0;
         const onSetTotalPrice = () => {
             for (let product of cartProductList) {
                 const { quantity, price } = product;
-                const newCost = quantity * price;
-                cost = cost + newCost;
+                cost += quantity * price;
             }
         };
         onSetTotalPrice();

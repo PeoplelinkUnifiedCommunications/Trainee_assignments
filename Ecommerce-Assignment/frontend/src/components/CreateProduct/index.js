@@ -9,6 +9,7 @@ const CreateProduct = () => {
         url: "",
         quantity: "",
         description: "",
+        favourite: false,
     });
     const [error, setError] = useState(false);
 
@@ -44,6 +45,7 @@ const CreateProduct = () => {
                     url: "",
                     quantity: "",
                     description: "",
+                    favourite: false,
                 });
                 setError(false);
             } catch (error) {
