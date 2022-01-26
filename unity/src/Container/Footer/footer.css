@@ -1,0 +1,30 @@
+.footer{
+    height: 6rem;
+    background-color: grey;
+    padding: 0.5rem;
+    justify-content: space-between;
+    color: white;
+}
+.foot{
+    width: auto;
+    padding: 0.5rem;
+    color: whitesmoke;
+
+}
+
+
+
+
+@media (min-width : 768px) and (max-width : 1112px){
+}
+@media (min-width : 1113px) and (max-width : 1366px){
+    .footer{
+        height: 8em;
+    }
+}
+@media (min-width : 1367px){
+    .footer{
+        height: 8rem;
+    }
+
+}

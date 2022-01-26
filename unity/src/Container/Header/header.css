@@ -1,0 +1,33 @@
+.header{
+    height: 3.5rem;
+    background-color: grey;
+    justify-content: space-between;
+    padding: 0.5rem;
+    position: fixed;
+    z-index: 1000;
+}
+
+.img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.details{
+    align-items: center;
+    color: white;
+}
+
+
+@media (min-width : 768px) and (max-width : 1112px){
+}
+@media (min-width : 1113px) and (max-width : 1366px){
+    .header{
+        height: 4rem;
+    }
+}
+@media (min-width : 1367px){
+    .header{
+        height: 4rem;
+    }
+
+}

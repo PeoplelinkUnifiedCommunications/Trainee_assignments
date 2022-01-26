@@ -1,0 +1,35 @@
+.dashboard {
+  height: 100%;
+}
+
+.sideNav {
+  padding: 2rem;
+  width: 15%;
+  height: 100%;
+  background-color: lightslategrey;
+  /* justify-content: center; */
+  /* align-items: center; */
+
+}
+.nav{
+    padding: 1rem;
+    
+}
+.link{
+  color: white;
+  text-decoration: none;
+}
+.link:hover{
+  cursor: pointer;
+  color: lightblue;
+}
+.nav:hover{
+  background-color: rgb(175, 171, 171);
+  border-radius: 10px;
+}
+
+.main {
+  width: 85%;
+  background-color: lightgrey;
+}
+
