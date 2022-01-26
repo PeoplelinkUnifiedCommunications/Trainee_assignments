@@ -1,0 +1,17 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(23, 8, 51);
+    height: 2.6rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+}
+
+.copyright{
+    font-size: 14px;
+    color: white;
+}

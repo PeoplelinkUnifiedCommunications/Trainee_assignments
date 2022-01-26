@@ -1,0 +1,9 @@
+.header_container{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titles{
+    color: white;
+    margin-bottom: 5px;
+}

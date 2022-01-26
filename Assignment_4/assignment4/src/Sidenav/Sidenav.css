@@ -1,0 +1,26 @@
+.sidenav{
+    background-color: rgb(37, 37, 37);
+    height: 80vh;
+    width: 20vw;
+    padding-top: 3rem;
+    position: fixed;
+    margin-top: 84px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.icon_spacing{
+    margin: 0 1rem;
+}
+
+li{
+    font-size: 18px;
+    padding: 1rem;
+    color: white;
+}
+
+li:hover{
+    background-color: #58525298;
+}
