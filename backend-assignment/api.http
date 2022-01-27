@@ -1,0 +1,32 @@
+POST http://localhost:9000/createuser/
+Content-Type: application/json
+
+{
+    "name": "ram",
+    "roll": "teacher"
+}
+###
+
+GET http://localhost:9000/getusers/
+
+###
+
+PUT http://localhost:9000/updateuser/
+Content-Type: application/json
+
+{   
+    "_id": "61f26cc9d7e55b021b7485f3",
+    "roll": "student"
+}
+
+###
+
+POST http://localhost:9000/createclass/
+Content-Type: application/json
+
+{
+    "class": "10th",
+    "description": "abcdef",
+    "userId": "61f25e348be5cb62fb0cd2ab"
+}
+###
