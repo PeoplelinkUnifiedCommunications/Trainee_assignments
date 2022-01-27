@@ -13,3 +13,24 @@
     font-size: 40px;
     margin-left: 15px;
 }
+
+.no-products-in-productslist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    margin: 0;
+}
+.text-create-product {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+}
+.text-create-product:hover {
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+    text-decoration-color: rgb(90, 133, 4);
+    text-decoration-style: wavy;
+}

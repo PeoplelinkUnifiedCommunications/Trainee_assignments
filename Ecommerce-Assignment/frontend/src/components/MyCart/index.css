@@ -21,3 +21,12 @@
     margin: 0;
     align-self: center;
 }
+
+.no-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+}

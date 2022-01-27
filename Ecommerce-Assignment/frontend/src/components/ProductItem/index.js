@@ -21,9 +21,16 @@ const ProductItem = () => {
         const { _id, productName, price, url } = product;
         const cartObject = { _id, productName, price, url, quantity: 1 };
         try {
-            await axios.post("/addtocart/", cartObject);
-            //console.log(responseData.data);
-            alert("Item added to cart");
+            await axios
+                .post("/addtocart/", cartObject)
+                .then((response) => {
+                    if (response.data !== "Item already added") {
+                        alert("Item added to cart");
+                    } else {
+                        alert("Item already added to cart");
+                    }
+                })
+                .catch((error) => error.message);
         } catch (error) {
             console.log(error.message);
         }

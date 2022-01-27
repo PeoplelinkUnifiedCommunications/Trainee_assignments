@@ -1,36 +1,8 @@
-import React, { useState } from "react";
-
-// import { useNavigate } from "react-router-dom";
+import React from "react";
 import "./index.css";
-import axios from "../../axiosbaseurl";
 
 const ShowCartProduct = (props) => {
-    const { product, onDecreaseTotalPrice, onIncreaseTotalPrice } = props;
-
-    const [count, setCount] = useState(1);
-
-    const onClickIncrease = () => {
-        setCount(count + 1);
-        // await axios
-        //     .put("/updatequantity", { product, count })
-        //     .then(window.location.reload(false));
-        onIncreaseTotalPrice(product.price);
-    };
-
-    const onClickDcrease = () => {
-        if (count === 1) {
-            setCount(1);
-        } else {
-            setCount(count - 1);
-            onDecreaseTotalPrice(product.price);
-        }
-    };
-
-    const removeItem = async () => {
-        await axios
-            .post("/removeItem", product)
-            .then(window.location.reload(true));
-    };
+    const { product, onClickDcrease, onClickIncrease, removeItem } = props;
 
     return (
         <div className="cart-product-box">
@@ -41,16 +13,29 @@ const ShowCartProduct = (props) => {
                     alt="product"
                 />
                 <div className="quantity_container">
-                    <p className="count-button" onClick={onClickDcrease}>
+                    <p
+                        className="count-button"
+                        onClick={() =>
+                            onClickDcrease(product._id, product.quantity)
+                        }
+                    >
                         -
                     </p>
-                    <p className="count">{count}</p>
-                    <p className="count-button" onClick={onClickIncrease}>
+                    <p className="count">{product.quantity}</p>
+                    <p
+                        className="count-button"
+                        onClick={() =>
+                            onClickIncrease(product._id, product.quantity)
+                        }
+                    >
                         +
                     </p>
                 </div>
 
-                <button className="product-button buy-now" onClick={removeItem}>
+                <button
+                    className="product-button buy-now"
+                    onClick={() => removeItem(product)}
+                >
                     Remove Item
                 </button>
             </div>
@@ -60,12 +45,13 @@ const ShowCartProduct = (props) => {
                     Price: <span className="price-span">{product.price}/-</span>
                 </p>
                 <p className="price">
-                    Quantity: <span className="description-span">{count}</span>
+                    Quantity:{" "}
+                    <span className="description-span">{product.quantity}</span>
                 </p>
                 <p className="price">
-                    Total {count} items Price:{" "}
+                    Total {product.quantity} items Price:{" "}
                     <span className="description-span">
-                        {count * product.price}
+                        {product.quantity * product.price}
                     </span>
                 </p>
             </div>

@@ -9,6 +9,7 @@ import CreateProduct from "./components/CreateProduct";
 import ProductList from "./components/ProductList";
 import MyCart from "./components/MyCart";
 import ProductItem from "./components/ProductItem";
+import NotFound from "./components/NotFound";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="productitem/:id" element={<ProductItem />} />
                     <Route path="mycart" element={<MyCart />} />
                 </Route>
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </div>
     );

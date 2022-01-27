@@ -129,8 +129,14 @@ app.put("/updatefav/", async (request, response) => {
 
 app.post("/addtocart/", async (request, response) => {
     try {
-        await cartCollection.create(request.body);
-        response.status(200).send(await cartCollection.find());
+        const data = await cartCollection.findOne({ _id: request.body._id });
+        console.log(data);
+        if (data === null) {
+            await cartCollection.create(request.body);
+            response.status(200).send(await cartCollection.find());
+        } else {
+            response.send("Item already added");
+        }
     } catch (error) {
         response.status(400).send(error.message);
     }
@@ -147,17 +153,27 @@ app.get("/getcartproducts", async (request, response) => {
 app.post("/removeItem", async (request, response) => {
     try {
         await cartCollection.findOneAndDelete({ _id: request.body._id });
+        response.send(await cartCollection.find());
     } catch (error) {
         response.status(400).send(error.message);
     }
 });
 
-app.put("/updatequantity", async (request, response) => {
-    const { product, count } = request.body;
+app.put("/increasequantity", async (request, response) => {
+    const { id } = request.body;
     try {
-        await cartCollection.updateOne({ _id: product._id }, [
-            { $set: { quantity: count } },
-        ]);
+        await cartCollection.updateOne({ _id: id }, { $inc: { quantity: 1 } });
+        response.send(await cartCollection.find());
+    } catch (error) {
+        response.status(400).send(error.message);
+    }
+});
+
+app.put("/decreasequantity", async (request, response) => {
+    const { id } = request.body;
+    try {
+        await cartCollection.updateOne({ _id: id }, { $inc: { quantity: -1 } });
+        response.send(await cartCollection.find());
     } catch (error) {
         response.status(400).send(error.message);
     }

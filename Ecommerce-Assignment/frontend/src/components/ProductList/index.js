@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "../../axiosbaseurl";
 import ShowProduct from "../ShowProduct";
 import "./index.css";
@@ -18,7 +19,12 @@ const ProductList = () => {
             <h1 className="heading">Products</h1>
             <div className="products-container">
                 {productList.length === 0 ? (
-                    <p>No products are available</p>
+                    <div className="no-products-in-productslist">
+                        <h1>No products are created</h1>
+                        <Link to=".." className="text-create-product">
+                            <h2>Create product</h2>
+                        </Link>
+                    </div>
                 ) : (
                     productList.map((eachProduct) => (
                         <ShowProduct

@@ -15,24 +15,59 @@ const MyCart = () => {
     }, []);
     //console.log(cartProductList);
 
+    const onClickIncrease = async (id, cartQuantity) => {
+        try {
+            await axios
+                .get(`/getproduct/${id}`)
+                .then(async (response) => {
+                    if (response.data.quantity > cartQuantity) {
+                        await axios
+                            .put("/increasequantity", { id })
+                            .then((response) =>
+                                setCartProductList(response.data)
+                            )
+                            .catch((error) => console.log(error.message));
+                    } else {
+                        alert("Item not available");
+                    }
+                })
+                .catch((error) => console.log(error.message));
+        } catch (error) {
+            console.log(error.message);
+        }
+    };
+
+    const onClickDcrease = async (id, cartQuantity) => {
+        try {
+            if (cartQuantity > 1) {
+                await axios
+                    .put("/decreasequantity/", { id })
+                    .then((response) => setCartProductList(response.data))
+                    .catch((error) => console.log(error.message));
+            }
+        } catch (error) {
+            console.log(error.message);
+        }
+    };
+
     useEffect(() => {
         let cost = 0;
-        const onSetTotalPrice = () => {
-            for (let product of cartProductList) {
-                const { quantity, price } = product;
-                cost += quantity * price;
-            }
-        };
-        onSetTotalPrice();
+        for (let product of cartProductList) {
+            const { quantity, price } = product;
+            cost += quantity * price;
+        }
         setTotalPrice(cost);
     }, [cartProductList]);
 
-    const onIncreaseTotalPrice = (price) => {
-        setTotalPrice((prevState) => prevState + price);
-    };
-
-    const onDecreaseTotalPrice = (price) => {
-        setTotalPrice((prevState) => prevState - price);
+    const removeItem = async (product) => {
+        try {
+            await axios
+                .post("/removeItem", product)
+                .then((response) => setCartProductList(response.data))
+                .catch((error) => console.log(error.message));
+        } catch (error) {
+            console.log(error.message);
+        }
     };
 
     return (
@@ -40,12 +75,15 @@ const MyCart = () => {
             <h1 className="heading">Cart Items</h1>
 
             {cartProductList.length === 0 ? (
-                <p>No products are available</p>
+                <div className="no-products">
+                    <h1>No products are available</h1>
+                </div>
             ) : (
                 cartProductList.map((eachProduct) => (
                     <ShowCartProduct
-                        onIncreaseTotalPrice={onIncreaseTotalPrice}
-                        onDecreaseTotalPrice={onDecreaseTotalPrice}
+                        onClickIncrease={onClickIncrease}
+                        onClickDcrease={onClickDcrease}
+                        removeItem={removeItem}
                         product={eachProduct}
                         key={eachProduct._id}
                     />

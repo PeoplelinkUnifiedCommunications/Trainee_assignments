@@ -48,9 +48,7 @@
     padding-left: 40px;
     overflow-y: auto;
 }
-.product-details-box::-webkit-scrollbar {
-    display: none;
-}
+
 .each-product-heading {
     color: rgb(15, 15, 15);
     font-size: 20px;

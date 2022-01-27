@@ -32,22 +32,23 @@ const CreateProduct = () => {
             description !== "" &&
             quantity !== ""
         ) {
-            console.log(productObject);
+            //console.log(productObject);
             try {
-                const responseData = await axios.post(
-                    "/createproduct/",
-                    productObject
-                );
-                console.log(responseData.data);
-                setProductObject({
-                    productName: "",
-                    price: "",
-                    url: "",
-                    quantity: "",
-                    description: "",
-                    favourite: false,
-                });
-                setError(false);
+                await axios
+                    .post("/createproduct/", productObject)
+                    .then((response) => {
+                        setProductObject({
+                            productName: "",
+                            price: "",
+                            url: "",
+                            quantity: "",
+                            description: "",
+                            favourite: false,
+                        });
+                        setError(false);
+                        alert("Product created");
+                    })
+                    .catch((error) => console.log(error.message));
             } catch (error) {
                 console.log(error.message);
             }
