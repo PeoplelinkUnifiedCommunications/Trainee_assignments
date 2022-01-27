@@ -25,8 +25,12 @@ POST http://localhost:9000/createclass/
 Content-Type: application/json
 
 {
-    "class": "10th",
+    "class": "7",
     "description": "abcdef",
-    "userId": "61f25e348be5cb62fb0cd2ab"
+    "userId": "61f26cc9d7e55b021b7485f3"
 }
+###
+
+
+GET http://localhost:9000/userclasses/61f25c838744232fc99d047d
 ###

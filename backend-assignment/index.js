@@ -141,4 +141,21 @@ app.post("/createclass", async (request, response) => {
     }
 });
 
+app.get("/userclasses/:id", async (request, response) => {
+    const { id } = request.params;
+    try {
+        const data = await classCollection.aggregate([
+            {
+                $match: { $or: [{ studentsList: id }, { teachersList: id }] },
+            },
+            {
+                $project: { _id: 0, class: 1 },
+            },
+        ]);
+        response.send(data);
+    } catch (error) {
+        response.send(error.message);
+    }
+});
+
 module.exports = app;
