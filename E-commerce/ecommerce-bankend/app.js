@@ -158,6 +158,7 @@ app.put('/updateCartQuantity/:id',async (request,response)=>{
     } } ])
     response.send("deleted Successfully")
 })
+
 app.put('/updateFavorites/:id',async (request,response)=>{
     try{
         await productModel.updateOne({_id:request.params.id},[ { $set: {
