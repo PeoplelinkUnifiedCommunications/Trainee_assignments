@@ -1,0 +1,37 @@
+POST http://localhost:3000/addUser
+Content-Type: application/json
+
+{
+    "name":"bharath",
+    "role":"teacher"
+}
+
+###
+
+GET http://localhost:3000/getUsers
+
+###
+DELETE http://localhost:3000/deleteUser/61f249a7adfd4fd7cae4cad9
+
+###
+PUT http://localhost:3000/updateUser/61f249a7adfd4fd7cae4cad9
+Content-Type: application/json
+
+{
+    "name":"harish"
+}
+
+// classes Api
+
+###
+GET http://localhost:3000/getClassData
+
+###
+POST http://localhost:3000/postClassData/61f259a8e5b091441e8b18e8
+Content-Type: application/json
+
+{
+    
+    "className":"7",
+    "description":"welcome to 4th class"
+}
