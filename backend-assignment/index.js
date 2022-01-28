@@ -46,6 +46,15 @@ app.post("/createuser", async (request, response) => {
     }
 });
 
+app.post("/addfield", async (request, response) => {
+    try {
+        await usersCollection.aggregate([{ $addFields: { gender: "Male" } }]);
+        response.send(await usersCollection.find());
+    } catch (error) {
+        response.send(error.message);
+    }
+});
+
 app.get("/getusers", async (request, response) => {
     try {
         response.send(await usersCollection.find());
@@ -92,45 +101,152 @@ app.get("/getclasses", async (request, response) => {
     }
 });
 
-app.post("/createclass", async (request, response) => {
+// app.post("/createclass", async (request, response) => {
+//     const userData = await usersCollection.findOne({
+//         _id: request.body.userId,
+//     });
+//     const userRoll = userData.roll;
+//     if (userData !== null) {
+//         try {
+//             const classData = await classCollection.findOne({
+//                 class: request.body.class,
+//             });
+//             if (classData !== null) {
+//                 await classCollection.updateOne(
+//                     { class: request.body.class },
+//                     {
+//                         $cond: [
+//                             { $eq: ["$userRoll", "teacher"] },
+//                             {
+//                                 teachersList: request.body.userId,
+//                             },
+//                             {
+//                                 studentsList: request.body.userId,
+//                             },
+//                         ],
+//                     }
+//                 );
+//             } else {
+//                 if (userData.roll === "teacher") {
+//                     await classCollection.create({
+//                         class: request.body.class,
+//                         description: request.body.description,
+//                         teachersList: [request.body.userId],
+//                     });
+//                 } else {
+//                     await classCollection.create({
+//                         class: request.body.class,
+//                         description: request.body.description,
+//                         studentsList: [request.body.userId],
+//                     });
+//                 }
+//             }
+//             response.send(await classCollection.find());
+//         } catch (error) {
+//             response.send(error.message);
+//         }
+//     } else {
+//         response.send("User not existed in users database");
+//     }
+// });
+
+// app.post("/makeclass", async (request, response) => {
+//     const userData = await usersCollection.findOne({
+//         _id: request.body.userId,
+//     });
+//     const userRoll = userData.roll;
+//     if (userData !== null) {
+//         try {
+//             await classCollection.updateOne(
+//                 { class: request.body.class },
+//                 {
+//                     $cond: {
+//                         if: { "$userData.roll": { $eq: "teacher" } },
+//                         then: console.log("siva"),
+//                         // {
+//                         //     $addToSet: {teachersList: request.body.userId},
+//                         // },
+//                         else: console.log("ch"),
+//                         // {
+//                         //     $addToSet: {studentsList: request.body.userId},
+//                         // },
+//                     },
+//                 },
+//                 { upsert: true }
+//             );
+//             response.send(await classCollection.find());
+//         } catch (error) {
+//             response.send(error.message);
+//         }
+//     } else {
+//         response.send("User not existed in users database");
+//     }
+// });
+
+// app.post("/makeclass", async (request, response) => {
+//     const userData = await usersCollection.findOne({
+//         _id: request.body.userId,
+//     });
+//     const userRoll = userData.roll;
+//     if (userData !== null) {
+//         try {
+//             await classCollection.updateOne(
+//                 { class: request.body.class },
+//                 {
+//                     $switch: {
+//                         branches: [
+//                             {
+//                                 case: { $eq: [userRoll, "teacher"] },
+//                                 then: {
+//                                     $addToSet: {
+//                                         teachersList: request.body.userId,
+//                                     },
+//                                 },
+//                             },
+//                             {
+//                                 case: { $eq: [userRoll, "student"] },
+//                                 then: {
+//                                     $addToSet: {
+//                                         studentsList: request.body.userId,
+//                                     },
+//                                 },
+//                             },
+//                         ],
+//                     },
+//                 },
+//                 { upsert: true }
+//             );
+//             response.send(await classCollection.find());
+//         } catch (error) {
+//             response.send(error.message);
+//         }
+//     } else {
+//         response.send("User not existed in users database");
+//     }
+// });
+
+app.post("/makeclass", async (request, response) => {
     const userData = await usersCollection.findOne({
         _id: request.body.userId,
     });
     if (userData !== null) {
         try {
-            const classData = await classCollection.findOne({
-                class: request.body.class,
-            });
-            if (classData !== null) {
-                if (userData.roll === "teacher") {
-                    await classCollection.updateOne(
-                        { class: request.body.class },
-                        {
-                            $addToSet: { teachersList: request.body.userId },
-                        }
-                    );
-                } else {
-                    await classCollection.updateOne(
-                        { class: request.body.class },
-                        {
-                            $addToSet: { studentsList: request.body.userId },
-                        }
-                    );
-                }
+            if (userData.roll === "teacher") {
+                await classCollection.updateOne(
+                    { class: request.body.class },
+                    {
+                        $addToSet: { teachersList: userData._id },
+                    },
+                    { upsert: true }
+                );
             } else {
-                if (userData.roll === "teacher") {
-                    await classCollection.create({
-                        class: request.body.class,
-                        description: request.body.description,
-                        teachersList: [request.body.userId],
-                    });
-                } else {
-                    await classCollection.create({
-                        class: request.body.class,
-                        description: request.body.description,
-                        studentsList: [request.body.userId],
-                    });
-                }
+                await classCollection.updateOne(
+                    { class: request.body.class },
+                    {
+                        $addToSet: { studentsList: userData._id },
+                    },
+                    { upsert: true }
+                );
             }
             response.send(await classCollection.find());
         } catch (error) {

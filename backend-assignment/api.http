@@ -2,12 +2,17 @@ POST http://localhost:9000/createuser/
 Content-Type: application/json
 
 {
-    "name": "ram",
-    "roll": "teacher"
+    "name": "santhu",
+    "roll": "teacher",
+    "gender": "Female"
 }
 ###
 
 GET http://localhost:9000/getusers/
+
+###
+
+POST  http://localhost:9000/addfield/
 
 ###
 
@@ -25,7 +30,18 @@ POST http://localhost:9000/createclass/
 Content-Type: application/json
 
 {
-    "class": "7",
+    "class": "1",
+    "description": "abcdef",
+    "userId": "61f2434305af74671c43ec1a"
+}
+###
+
+
+POST http://localhost:9000/makeclass/
+Content-Type: application/json
+
+{
+    "class": "1",
     "description": "abcdef",
     "userId": "61f26cc9d7e55b021b7485f3"
 }
