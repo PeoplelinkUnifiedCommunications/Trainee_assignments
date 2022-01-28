@@ -153,30 +153,19 @@ app.post('/postClassData/:id',async (request,response)=>{
 
             }else{
                 if(data.role.toLowerCase()==="student"){
-                    
-                    const isArrayValueExists = await classModel.findOne({
-                        students:{$in :data._id}
+                    await classModel.updateOne({
+                        className:request.body.className
+                    },{
+                        $addToSet:{students:id}
                     })
-                    
-                    if(isArrayValueExists===null){
-                        isClassExists.students.push(data._id)
-                        await isClassExists.save();
-                        response.send(await classModel.find())
-                    }else{
-                        response.send("Student already exists")
-                    }
                 }else{
-                    const isArrayValueExists = await classModel.findOne({
-                        teachers:{$in :data._id}
+                    await classModel.updateOne({
+                        className:request.body.className
+                    },{
+                        $addToSet:{teachers:id}
                     })
-                    if(isArrayValueExists===null){
-                        isClassExists.teachers.push(data._id)
-                        await isClassExists.save();
-                        response.send(await classModel.find())
-                    }else{
-                        response.send("Teacher already exists")
-                    }
                 }
+                response.send(await classModel.find())
             }
         }
         
@@ -184,6 +173,90 @@ app.post('/postClassData/:id',async (request,response)=>{
         response.send(e.message)
     }
 })
+
+///
+
+// using findOneAndUpdate it will return a document
+app.post('/postClassDetails/:id',async (request,response)=>{
+    const {id} = request.params
+    try{
+       const data =  await userModel.findOne({_id:request.params.id})
+       if(data === null){
+            response.send("user Not existed")
+        }else{
+                const {className} = request.body
+                if(data.role.toLowerCase()==="student"){
+                    await classModel.findOneAndUpdate({className:className},{
+                        className:request.body.className,
+                        description:request.body.description,
+                        $addToSet:{students:id}
+                    },{
+                        new: true,
+                        upsert: true 
+                      })
+                }else{
+                   const data = await classModel.findOneAndUpdate({className:className},{
+                        className:request.body.className,
+                        description:request.body.description,
+                        $addToSet:{teachers:id}
+                    },{
+                        new: true,
+                        upsert: true
+                      })
+                      console.log(data)
+                }
+                response.send(await classModel.find())
+        }
+    }catch(e){
+        response.send(e.message)
+    }
+})
+
+///using updateOne does not return (it just returns the _id if it has created a new document)
+
+app.post('/demo/:id',async (request,response)=>{
+    const {id} = request.params
+    const {className} = request.body
+    try{
+       const data =  await userModel.findOne({_id:request.params.id})
+       if(data === null){
+            response.send("user Not existed")
+        }else{
+                if(data.role.toLowerCase()==="student"){
+                    updatedField={students:id}
+                }else{
+                    updatedField = {teachers:id}
+                }
+
+                await classModel.updateOne({className:className},{
+                    className:request.body.className,
+                    description:request.body.description,
+                    $addToSet:updatedField
+                },{
+                    new: true,
+                    upsert: true 
+                  })
+                response.send(await classModel.find())
+        }
+    }catch(e){
+        response.send(e.message)
+    }
+})
+
+
+app.get('/getClassList/:id',async (request,response)=>{
+    const {id} = request.params
+    const data = await classModel.aggregate([
+        {
+            $match:{$or:[{students:id},{teachers:id}]}
+        },
+        {
+            $project:{className:1}
+        }
+    ])
+    response.send(data)
+})
+
 
 
 module.exports = app

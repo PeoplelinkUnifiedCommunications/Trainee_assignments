@@ -27,11 +27,35 @@ Content-Type: application/json
 GET http://localhost:3000/getClassData
 
 ###
-POST http://localhost:3000/postClassData/61f259a8e5b091441e8b18e8
+POST http://localhost:3000/postClassData/61f24235ece2737f9684890d
 Content-Type: application/json
 
 {
     
-    "className":"7",
+    "className":"8",
     "description":"welcome to 4th class"
 }
+
+
+###
+POST http://localhost:3000/postClassDetails/61f259a8e5b091441e8b18e8
+Content-Type: application/json
+
+{
+    
+    "className":"5",
+    "description":"welcome to 4th class"
+}
+
+###
+POST http://localhost:3000/demo/61f24235ece2737f9684890d
+Content-Type: application/json
+
+{
+    
+    "className":"1",
+    "description":"welcome to 4th class"
+}
+
+###
+GET http://localhost:3000/getClassList/61f24235ece2737f9684890d
