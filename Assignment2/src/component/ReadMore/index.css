@@ -1,0 +1,65 @@
+.slickContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.title{
+    color: royalblue;
+    font-family: "Roboto";
+    font-size: 30px;
+}
+.imageEdit{
+    height: 300px;
+    width: 300px;
+}
+.event-container{
+    width: 100%;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.app-containers{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.event-app-container{
+    border-radius: 5px;
+    border: none;
+    height: 400px;
+    width: 350px;
+    margin: 20px;
+    margin-bottom: 20px;
+    box-shadow: 7px 7px 5px grey;
+}
+.workshop-image{
+    height: 300px;
+    width: 100%;
+}
+.workshop-name{
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 19px;
+    color: black;
+}
+.spanEl{
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 15px;
+    color:cadetblue;
+}
+.worshop-div{
+    background-color: white;
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

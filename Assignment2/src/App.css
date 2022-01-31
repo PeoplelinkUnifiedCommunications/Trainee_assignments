@@ -1,0 +1,15 @@
+
+.backrgoundImage{
+  background-image: url("http://housedemocrats.wa.gov/tmp/2012/12/DomeWebsiteBackground2.jpg");
+  min-height: 100vh;
+  min-width: 100%;
+  background-size: cover;
+
+}
+
+.component-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

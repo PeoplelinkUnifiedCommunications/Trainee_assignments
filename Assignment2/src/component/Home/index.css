@@ -1,0 +1,57 @@
+.app-container{
+    background-image: url("https://www.danceinforma.com/wp-content/uploads/2016/07/college-dance.jpg");
+    background-size: cover;
+    min-height: 90vh;
+    width: 1300px;
+    padding: 20px;
+}
+.home-container{
+    margin-top: 50px;
+    margin-left: 20px;
+    border-radius: 7px;
+    background-color: white;
+    width: 40%;
+    margin-right: auto;
+    height: 380px;
+}
+.home-app-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+.home-title{
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500px;
+    margin-top: 60px;
+}
+.career{
+    font-family: "Roboto";
+    font-size: 30px;
+    margin-right: 100px;
+    font-weight: 500px;
+    color: darkslateblue;
+
+}
+.BlueDiv{
+    background-color: green;
+    border-radius: 3px;
+    width: 55px;
+    height: 3px;
+    margin-bottom: 15px;
+}
+.home-description{
+    font-family:"Roboto";
+    font-size: 20px;
+}
+.button{
+    border-radius: 3px;
+    border: 0px none;
+    background-color: teal;
+    color: white;
+    padding: 5px;
+    width: 80px;
+    height: 40px;
+}
