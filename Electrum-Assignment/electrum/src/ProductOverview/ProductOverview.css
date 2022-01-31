@@ -1,0 +1,95 @@
+.productDescription{
+    color: var(--textColor);
+    font-size: 13px;
+    margin: 1.5rem 0;
+}
+
+.cardContainer{
+    width: 70%;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advTitles{
+    background-color: var(--secondaryColor);
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+}
+
+.tick{
+    width: 20px;
+    align-self:flex-end;
+    margin-right: 1rem;
+}
+
+.advDescription{
+    color: var(--textColor);
+    font-size: 12px;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.card{
+    width: 50%;
+    border: 1px solid var(--textColor);
+    border-radius: 7px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.priceContainer{
+    width: 30%;
+}
+
+.basePrice{
+    color: var(--textColor);
+    padding-left: 1rem;
+    font-weight: 500;
+}
+
+.installation{
+    font-size: 10px;
+    color: var(--textColor);
+    padding-left: 1rem;
+}
+
+.incentive{
+    color: var(--textColor);
+    font-size: 12px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+.equipmentCost{
+    color: var(--textColor);
+    font-size: 14px;
+    padding-left: 1rem;
+}
+
+.eqCost{
+    color: var(--buttonColor);
+    font-weight: bold;
+}
+
+.savings{
+    border: 2px solid rgb(42, 156, 27);
+    padding: 8px 0.7rem;
+    margin: 1rem;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.savingsMoney{
+    color: rgb(41, 119, 30);
+    font-weight: bold;
+}
+
+.longVl{
+    margin-right: 1rem;
+    margin-left: 1rem;
+}

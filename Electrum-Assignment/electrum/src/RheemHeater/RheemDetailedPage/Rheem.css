@@ -1,0 +1,49 @@
+.secondPage{
+    padding: 1rem;
+    background-color: var(--backgroundColor);
+}
+
+.headerContainer{
+    justify-content: space-between;
+}
+
+.path{
+    font-size: 12px;
+    padding-top: 1rem;
+}
+
+.detailsPageLine{margin-top: 0.5rem;}
+
+.bottomContainer{
+    padding: 1rem;
+    background-color: var(--backgroundColor);
+}
+
+.bottomContent{
+    background-color: white;
+    box-shadow: 2px 2px 5px grey;
+    padding: 1rem;
+}
+
+.productOverBtn{
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    color: var(--textColor);
+    margin: 0 1rem;
+}
+
+.btnTriggered{
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 3px solid var(--secondaryColor);
+    color: var(--secondaryColor);
+    margin: 0 1rem;
+}
+
+.bottomDesc{
+    color: var(--textColor);
+    font-size: 11px;
+    padding: 0 1rem;
+}

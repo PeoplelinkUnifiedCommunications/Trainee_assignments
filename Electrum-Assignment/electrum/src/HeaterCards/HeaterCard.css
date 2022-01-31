@@ -1,0 +1,149 @@
+.heaterCard{
+    width: 95%;
+    background-color: white;
+    border-radius: 7px;
+    align-items: flex-start;
+    box-shadow: 1px 1px 8px grey;
+    margin-right: 1rem;
+    margin-left: 0.4rem;
+}
+
+.cardHeader{
+    width: 100%;
+    background-color: var(--stepperColor);
+    padding: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    justify-content: space-between;
+}
+
+.spaceBetween{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name{
+    color: white;
+}
+
+.model{
+    color: white;
+    font-size: 12px;
+}
+
+.ef{
+    color: white;
+    font-size: 12px;
+}
+
+.info{
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.star{
+    width: 30%;
+    border-radius: 3px;
+}
+
+.heaterImage{
+    width: 4rem;
+}
+
+.heaterContainer{
+    padding: 1rem 1.5rem;
+}
+
+.pt{
+    color: var(--buttonColor);
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+.advantages{
+    color: var(--textColor);
+    font-size: 13px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.line{
+    color: var(--textColor);
+    width: 95%;
+    align-self: center;
+    margin-bottom: 0.5rem;
+}
+
+
+.basePrice{
+    color: var(--textColor);
+    padding-left: 1rem;
+    font-weight: 500;
+}
+
+.installation{
+    font-size: 10px;
+    color: var(--textColor);
+    padding-left: 1rem;
+}
+
+.incentive{
+    color: var(--textColor);
+    font-size: 12px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+.equipmentCost{
+    color: var(--textColor);
+    font-size: 14px;
+    padding-left: 1rem;
+}
+
+.eqCost{
+    color: var(--buttonColor);
+    font-weight: bold;
+}
+
+.savings{
+    border: 2px solid rgb(42, 156, 27);
+    padding: 8px 0.7rem;
+    margin: 1rem;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.savingsMoney{
+    color: rgb(41, 119, 30);
+    font-weight: bold;
+}
+
+.btn{
+    text-align: center;
+}
+
+.installBtn{
+    background-color: var(--buttonColor);
+    color: white;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.moreDetails{
+    color: var(--primaryColor);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--backgroundColor);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+

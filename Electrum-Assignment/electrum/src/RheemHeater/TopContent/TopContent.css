@@ -1,0 +1,113 @@
+.detailsContainer{
+    background-color: var(--backgroundColor);
+    height: 100%;
+}
+
+.verticalLine{
+    color: var(--backgroundColor);
+    width: 1px;
+}
+
+.heater{
+    width: 30%;
+    height: 25rem;
+    background-color:white;
+    padding: 2rem 7rem;
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px var(--stepperColor);
+    margin-right: 2.5rem;
+}
+
+.topContent{
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.heaterModel{
+    color: var(--textColor);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.modelId{
+    color: var(--secondaryColor);
+    font-size: 13px;
+}
+
+.smallLine{
+    width: 3rem;
+    margin: 0.5rem 0;
+}
+
+
+.RheemAdvantages{
+    color: var(--textColor);
+    margin: 0.2rem 0.5rem;
+    list-style-type: none;
+}
+
+.RheemAdvantages::before{
+    content: ".";
+    font-size: 20px;
+    color: var(--secondaryColor);
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+.ul{
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.exponential{
+    font-size: 10px;
+    color: var(--textColor);
+    margin-top: 0.4rem;
+}
+
+.strikePrice{
+    color: var(--textColor);
+    font-size: 22px;
+    position:relative;
+    margin-top: 0.4rem;
+}
+
+.strikePrice::before{
+    top: 40%; 
+    background:var(--alertColor); 
+    content: '';
+    width: 135%;
+    position: absolute;
+    height: 2px;
+    transform: rotate(-15deg);
+    border-radius: 20px;
+}
+
+.expPrice{
+    font-size: 12px;
+    color: var(--secondaryColor);
+}
+
+.vLine{
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+}
+
+.price{
+    color: var(--secondaryColor);
+    font-size: 20px;
+}
+
+.subtext{
+    font-size: 10px;
+    color: var(--textColor);
+    margin-left: 0.1rem;
+}
+
+.marginTopAndRight{
+    margin-top: 2rem;
+    margin-right: 1.5rem;
+}
