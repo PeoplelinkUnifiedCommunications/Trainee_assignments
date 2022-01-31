@@ -1,0 +1,106 @@
+.productOverviewContainer{
+    width: 100%;
+}
+
+.cardSubOnesidePart{
+    border: 1px solid gray;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    margin-top: 1rem;
+}
+
+.cardSubOneContainer{
+    /* border: 1px solid black; */
+    width:48%;
+    height: 8rem;
+    box-shadow: 0 0 10px #7e7979;
+    border-radius: 0.3rem;
+    margin-right: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.cardsSubHeadingContainer{
+    background-color: rgb(11, 61, 11);
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    /* padding-bottom: 0.1rem; */
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.cardsSubHeadingContainer h3{
+    font-size:0.77rem;
+    color: white;
+    font-weight: 500;
+    padding-left:0.2rem;
+
+}
+
+.cardsSubHeadingContainer img{
+    height: 1.2rem;
+    padding-left:0.2rem;
+}
+
+.cardSubOneContainer p{
+    font-size: 0.9rem;
+    color: #7e7979;
+    padding: 0.5rem;
+    padding-top: 1rem
+}
+
+.cardSubPriceTag{
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    margin-right: 0.3rem
+}
+
+.cardSubPriceTag h3{
+    font-size: 1.2rem;
+    color:#7e7979
+}
+
+.cardSubPriceTag p{
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    color: #7e7979;
+    padding-left:0.6rem;
+    padding-bottom: 0.5rem;
+}
+
+.cardSubPriceTag label{
+    color: #7e7979;
+    font-size: 0.89rem;
+}
+
+.cardSubPriceTag h2{
+    font-size: 1.2rem;
+}
+
+.cardSubPriceTag h2 span {
+    color: orange;
+}
+
+.annualSaveContainer{
+    border: 3px solid green;
+    border-radius: .3rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.annualSaveContainer p {
+    color: black;
+    padding-bottom: 0.5rem;
+}
+
+.productPargarph p{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #7e7979;
+    font-size: 0.9rem
+}

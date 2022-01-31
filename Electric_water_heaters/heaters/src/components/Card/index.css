@@ -1,0 +1,240 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* .cardsContainer{
+    padding: 0.8rem;
+} */
+
+.cardsTotalContainer{
+    width: 85%;
+}
+
+/* //////////////////////////////////// */
+
+/* .imageSizeCheck{
+    position: absolute;
+    box-sizing: border-box;
+    pointer-events: none;
+    width: 138.6px;
+    height: 138.6px;
+    top: 0px;
+    overflow: hidden;
+    left: 0px;
+    visibility: hidden;
+    border-radius: 50%;
+    z-index: 1;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    transform: translate(-69.3px, -69.3px);
+    background-color: rgba(225, 225, 225, 0.5);
+    background-clip: padding-box;
+} */
+
+/* .imageStyle{
+    position: absolute;
+    box-sizing: border-box; 
+    display: block; 
+    top: 0px; left: 0px; 
+    transform: translate(64.3px, 64.3px);
+     z-index: 1;
+      visibility: hidden; 
+      width: auto;
+
+}
+
+.imageHead{
+    position: relative; overflow: visible; user-select: none; cursor: crosshair;
+} */
+
+/* 
+////////////////////////////////////////////////////// */
+
+.cardsUpperContainer{
+    background-color: rgb(225, 225, 225);
+}
+
+.rheeemContainer{
+    height: 100%;
+    width: 37%;
+    box-shadow: 0 0 10px rgb(168, 168, 168);
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: white;
+    margin-top: 0.5rem;
+    margin-left: 0.6rem;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rheemImage{
+    height: 25rem;
+}
+
+.crossedPriceTag{
+    display: inline-block;
+  position: relative;
+  color: #666666;
+  padding-top: 1rem;
+  font-size: 1.7rem;
+}
+
+.crossedPriceTag:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+    color: red;
+    border-width: 0.2rem;
+    
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    transform:rotate(-5deg);
+  }
+
+  .vertical {
+        border-left: 3px solid rgb(188, 188, 188);
+        height: 3.5rem;
+}
+
+.rightSideContainer{
+    height: 100%;
+    padding-left: 4rem;
+    width: 100%;
+    background-size: cover;
+}
+
+.rightSideContainer h1{
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.priceTagFlexContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.rightSideContainer p{
+    font-size: 1.1rem;
+}
+
+.colorChangeP{
+    color: green;
+    font-size: 0.9rem !important;
+}
+
+.topContainer{
+    /* border: 1px solid black; */
+    padding-bottom: 1.2rem;
+    padding-top: 0.7rem;
+}
+
+.cardUnorderedList{
+    list-style: none;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;;
+}
+
+.cardUnorderedList li{
+    padding-top: 1rem;
+    color: #666666;
+    font-size: 1rem;;
+
+}
+
+.cardUnorderedList li::before {
+    content: ".  ";
+     color: green;
+     font-weight: bolder;
+     height: 0;
+     width: 1rem;
+  }
+
+  .realPriceTagContainer h2{
+      color: green;
+  }
+
+  .realPriceTagContainer p {
+     font-size: 0.8rem;
+     color: #666666;
+  }
+
+  .cardLogoContainer{
+      padding-top: 0.5rem;
+      padding-right: 0.5rem;
+  }
+
+  .cardLogoContainer p{
+      font-size: 0.8rem;
+      color:#666666;
+      padding-left: 0.3rem;;
+  }
+
+  .cardsButton{
+      height: 2.5rem;
+      width: 10rem;
+      color: rgb(68, 68, 236);
+      border: none;
+      background-color: transparent;
+  }
+
+.cardBackButton{
+    text-decoration: none;
+    color: rgb(68, 68, 236);
+}
+
+.cardsButton1{
+    height: 2.5rem;
+    width: 10rem;
+    color: rgb(68, 68, 236);
+    background-color: transparent;
+    background-color: orange;
+    border-radius: 0.4rem;
+    border-width: 0;
+    color: white ;
+    text-decoration: none;
+}
+
+.cardsBottomContainer{
+    padding: 0.8rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px rgb(143, 141, 141);
+    margin-left: 0.6rem;
+}
+
+.buttonChangeColor{
+    font-size: 15px;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 3px solid green;
+    color: green;
+    font-weight: bold;
+    background-color: transparent;
+  }
+
+  .buttonDiagram{
+    font-size: 15px;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    color: #666666;
+    background-color: transparent;
+  }
+
+
+  .slideImagesC{
+      padding-top: 0.6rem
+  }

@@ -1,0 +1,40 @@
+.productSpecs{
+    margin-bottom: 1rem;
+}
+
+.tableTop h3{
+    font-size: 1rem;
+    padding-top: 1rem;
+    color: gray;
+    padding-bottom:0.5rem;
+}
+
+
+table{
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    color: #666666;
+  }
+
+tr{
+    width: 100%;
+
+}
+
+
+td{
+    width:25%;
+    padding-left: 0.5rem;
+    font-size: 0.8rem;
+    height: 1.8rem;
+
+}
+
+td:nth-child(odd){
+    font-weight: 500;
+    background-color: #f4f2f2;
+}
