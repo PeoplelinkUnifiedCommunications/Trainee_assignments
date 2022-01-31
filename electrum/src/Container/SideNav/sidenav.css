@@ -1,0 +1,117 @@
+.sidenav{
+    width: 30%;
+    height: 100%;
+    padding: 1rem;
+}
+.sn1{
+    padding-bottom: 0.5rem;
+    color: var(--SecondaryColor);
+    /* font-weight: bold; */
+    font-size: 1.2rem;
+    border-bottom: solid 2px lightgrey;
+}
+.pn1{
+    color: var(--TextColor);
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.25rem;
+}
+.sub1{
+    justify-content: space-between;
+}
+.input1{
+    width: 88%;
+    border-radius: 4px;
+    border: solid 1px var(--TextColor);
+}
+.input2{
+    border-radius: 4px;
+    border: solid 1px var(--TextColor);
+}
+.input3{
+    width: 50%;
+    border-radius: 4px;
+    border: solid 1px var(--TextColor);
+}
+.ip1{
+    width: 60%;
+    padding: 0.5rem;
+    border-right: solid 1px var(--TextColor);
+}
+.ip2{
+    height: 42px;
+    justify-content: center;
+    width: 70%;
+    padding: 0.5rem;
+    border-right: solid 1px var(--TextColor);
+}
+.ip3{
+    height: 42px;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center ;
+}
+.ip4{
+    width: 50%;
+    height: 42px;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center ;
+    border-right: solid 1px var(--TextColor);
+
+}
+.ip5{
+    width: 50%;
+    height: 42px;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center ;
+}
+.ip4:hover,.ip5:hover{
+    background-color: var(--SecondaryColor);
+}
+.drop1{
+    width: 40%;
+    padding: 0.5rem;
+}
+.in1{
+    color: var(--TextColor);
+    font-size: 0.8rem;
+}
+.enter1{
+    border-style: hidden;
+}
+.search{
+    width: 42px;
+    height: 42px;
+    border-radius: 4px;
+    background-color: var(--Button);
+    padding: 0.6rem;
+}
+.infoN{
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    outline: 0;
+    background-color: var(--TextColor) ;
+    border-radius: 20px;
+}
+.ip4:active{
+    background-color: green;
+    color: white;
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 35px;
+    border: 1px solid var(--Button);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px var(--Button);
+    cursor: pointer;
+}

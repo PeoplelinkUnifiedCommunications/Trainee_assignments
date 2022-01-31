@@ -1,0 +1,57 @@
+#root{
+  --PrimaryColor : #003963;
+  --SecondaryColor : #00B098;
+  --Alert : #DD2200;
+  --ErrorMessageColor : #DD2200;
+  --BackgroundColor : #EEEEEE;
+  --StepperColor : #666666;
+  --TextColor : #666666;
+  --Button : #F68D39;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width : 100%;
+  height : 100vh;
+}
+#root{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.baseContainer{
+  width:100%;
+  min-height: 100vh;
+}
+.mainContainer{
+  width: 100%;
+  height: 100%;
+}
+.flexRow{
+  display: flex;
+  flex: none;
+  width: 100%;
+}
+.flexCol{
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  width: 100%;
+}
