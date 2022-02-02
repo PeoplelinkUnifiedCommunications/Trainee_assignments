@@ -1,0 +1,89 @@
+
+.expanding-body{
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  overflow:hidden;
+  margin: 50px;
+}
+
+@media (min-width: 500px) {
+  .expanding-body{
+    margin: 0px;
+  }
+}
+.exapand-app-container{
+  width: 80%;
+  display: flex;
+  align-content: center;
+  min-height: 100vh;
+  margin-left: 250px;
+  margin-right: 50px;
+  padding-top: 50px;
+}
+@media (max-width: 500px) {
+  .exapand-app-container{
+    margin-top: 50px;
+    height: 40vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 150px;
+  }
+}
+.inactive{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 40px;
+  margin: 10px;
+  flex: 0.5;
+  position: relative;
+  transition: flex 0.8s ease-out;
+  cursor: pointer;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .inactive{
+    width: 50%;
+    height: 60px;
+    flex: initial;
+  }
+  
+}
+.before{
+  position: absolute;
+  align-self: flex-end;
+  left:20px;
+  opacity:0;
+}
+
+.active{
+  flex: 5;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 40px;
+  margin: 10px;
+  position: relative;
+  transition: flex 1s ease-out;
+  cursor: pointer;
+  display: flex;
+}
+@media (max-width: 500px) {
+  .active{
+    height: 40vh;
+    width: 90%;
+    flex: initial;
+    background-size: cover;
+    transition: flex 1.5s ease-in-out;
+  }
+  
+}
+.after{
+  opacity:1;
+   transition: opacity 0.4s ease-in 0.4s;
+   position: absolute;
+   align-self: flex-end;
+   left:20px;
+}

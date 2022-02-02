@@ -1,0 +1,57 @@
+  
+  .base_container{
+    height: 100%;
+    width: 100%;
+  }
+  
+
+  .Notification-button{
+    visibility: visible;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+  }
+  
+  .btn{
+      background-color: transparent;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-width: 2px;
+    height: 60px;
+    width: 120px;
+    border: 1px solid white;
+  }
+  
+  .btn:hover{
+    color: white;
+    box-shadow: 2px 1px 10px black;
+    cursor: pointer;
+  }
+  
+
+  .color1{
+    color: red;
+    order: -1;
+  }
+  
+  .color2{
+    color:rgb(52, 52, 216);
+    order: -2;
+  }
+  
+  .color3{
+    color: green;
+  }
+  
+  .color4{
+    color: yellow;
+  }
+  
+  .color5{
+    color: rgb(19, 55, 88);
+  }

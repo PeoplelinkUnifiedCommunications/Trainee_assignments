@@ -1,0 +1,82 @@
+
+.test-card{
+    width: 600px;
+    background-color: rgb(67, 120, 235);
+    padding: 1rem;
+    border-radius: 20px;
+    align-items:space-evenly;
+    
+}
+.ts-sub1{
+    width: 100%;
+    padding: 1rem;
+}
+.ts-bar{
+    height: 0.2rem;
+    position: relative;
+    overflow: hidden;
+}
+.ts-slider{
+    position: absolute;
+    background-color: white;
+    min-width: 0%;
+    height: 100%;
+    border-radius: 0.5rem;
+    animation:loader 3s infinite forwards;
+}
+.ts-sub2{
+    width: 100%;
+    color: white;
+}
+.ts-sub3{
+    width: 100%;
+    color: white;
+    justify-content: center;
+}
+.ts-about{
+    padding: 1rem;
+    word-break: break-word;
+}
+.ts-profile{
+    height: 50px;
+    width: 50px;
+}
+.ts-img1{
+    width: 100%;
+    border-radius: 50%;
+}
+.ts-info{
+    
+    padding-left: 0.5rem;
+
+}
+.ts-flexRow{
+    display: flex;
+    flex: none;
+    width: 100%;
+  }
+  .ts-flexCol{
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    width: 100%;
+  }
+  .ts-flexAuto{
+    display: flex;
+    flex: none;
+    min-width: 1.5rem;
+  }
+  .ts-flexAutoCol{
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    min-width: 1.5rem;
+  }
+  
+
+
+@keyframes loader {
+    0%{width : 0}
+    100%{width : 100%}
+    
+}
