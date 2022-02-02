@@ -1,0 +1,463 @@
+.detailsApp{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;    
+    background-color: #d8dee0;
+}
+.detailsHeaderApp{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 20px; 
+    margin-top: 15px;
+}
+.detailsHeader{
+    color: #666666;
+}
+.detailsHeaderSpan{
+    color: black;
+    margin-left: 10px;
+}
+.buttonContainer{
+ display: flex;
+ flex-direction: row;  
+}
+.leftArrrowButton{
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    height: 30px;
+    width: 30px;
+    background-color: #F68D39;
+    color: #FFFFFF;
+}
+
+.rigthArrrowButton{
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    height: 30px;
+    width: 30px;
+    background-color: #F68D39;
+    color: #FFFFFF;
+    margin-right: 20px; 
+}
+.previousApp{
+    background-color: #FFFFFF;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #666666;
+
+}
+.nextApp{
+    background-color: #FFFFFF;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #666666; 
+    font-size: 15px;
+    border-left: 1px solid #666666;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+.moredetailsLine{
+    border: 1px solid #666666;
+    background-color: #666666;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.heaterDetailsPageApp{
+    display: flex;
+    flex-direction: row;
+
+}
+.multipleImages{
+    width: 7%;
+    min-height: 100vh;
+    background-color: #d8dee0;
+}
+.multipleContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.multipleImgCont{
+    margin-top: 20px;
+    height: 50px;
+    width: 50px;
+    border: 3px solid black;
+    border-radius: 2px;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 #b6b5b5f5, 0 6px 20px 0 #cacaca86;
+}
+.inactiveImgCon{
+    margin-top: 20px;
+    background-color: #9e9d9d;
+    height: 50px;
+    width: 50px;
+    border-radius: 2px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.5;
+    box-shadow: 0 4px 8px 0 #b6b5b5f5, 0 6px 20px 0 #cacaca86;
+}
+.detailsImg1{
+    height: 40px;
+    width: 20px;
+    margin-left: 15px;
+    margin-top: 5px;
+    
+}
+.detailsImg2{
+    margin-top: 10px;
+    height: 20px;
+    width: 20px;
+    
+}
+.detailsDescription{
+    color: #FFFFFF;
+    font-size: 8px;
+    margin-bottom: 10px;
+}
+.inHomeHeaterCont{
+    margin-top: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 2px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 #b6b5b5f5, 0 6px 20px 0 #cacaca86;
+}
+.inHomeHeater{
+    height: 50px;
+    width: 50px;
+
+}
+.rheem-app{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-height: 100vh;
+}
+.rheem-app-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.rheemImgContainer{
+    width: 39%;
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    height: 490px;
+
+}
+.rheemImgEdit{
+    margin-top: 30px;
+    height: 380px;
+    width: 160px;
+    margin-left: 160px;
+}
+.rheemdetialsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+.rheemNameContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.titleCont{
+    margin-left: 500px;
+}
+.titleImg{
+    height: 50px;
+    width: 50px;
+}
+.titleDescription{
+    font-weight: normal;
+    color: #666666;
+    font-size: 20px;
+}
+.heaterNumber{
+    color: #3b694f;
+    font-size: 18px;
+    margin: 5px;
+}
+.smallLine{
+    border: 1px solid #666666;
+    width: 80px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #666666;
+}
+.heaterulList{
+
+    list-style-type: none;
+}
+.rheemList::before {content: "•"; color: #3b694f;
+    display: inline-block; width: 1em;
+    font-size: 170%;
+    margin-left: -1em}
+
+.rheemList{
+    color: #666666;
+    font-size: 16px; 
+    margin: 5px;
+}
+.rheemCostCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.costLine{
+    height: 30px;
+    background-color: #666666;
+    border: 1px solid #666666;
+}
+.rheemActualCost{
+    font-size: 20px;
+    color: #666666;
+    margin: 15px;
+
+}
+.rheemActualCost {
+    position: relative;
+  }
+  .rheemActualCost:before {
+    color: red;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+    
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    transform:rotate(-5deg);
+  }
+  .rheemDiscount{
+      color: #3b694f;
+      margin: 20px;
+      font-size: 18px;
+  }
+  .allTaxes{
+      font-size: 14px;
+      color: #666666;
+  }
+  .btResults{
+      background-color: transparent;
+      border: none;
+      margin: 10px;
+      color: #253979f1;
+      font-size: 18px;
+  }
+
+  .installQuoteRheem{
+    background-color: #f59e58;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    font-size: 15px;
+    margin-left: 40px;
+  }
+  .aboutRheemHeaterApp{
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      width: 100%;
+      min-height: 500px;
+      box-shadow: 0 4px 8px 0 #b6b5b5f5, 0 6px 20px 0 #cacaca86;
+      border-radius: 5px;
+      margin: 20px;
+  }
+  .overSpecsCont{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  .pOverview{
+      background-color: transparent;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 3px solid #3b694f;
+      margin-right: 20px;
+      color: #3b694f;
+      font-size: 15px;
+      font-weight: 500;
+      padding-bottom: 10px;
+  }
+  .pSpecs{
+      font-size: 15px;
+      border: none;
+      background-color: transparent;
+      color: #9e9d9d;
+  }
+  .acceleraPump{
+      color: #666666;
+      font-size: 18px;
+      margin: 30px;
+      text-align: justify;
+  }
+  .overviewContainer{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+  }
+  .overviewPointsCont{
+      width: 65%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left:20px;
+  }
+  .heaterOverviewPoint{
+      border-top: none;
+      border-left: 1px solid #9e9d9d;
+      border-right: 1px solid #9e9d9d;
+      border-bottom: 1px solid #9e9d9d;
+      border-radius: 5px;
+      height: 130px;
+      width: 390px;
+      display: flex;
+      flex-direction: column;
+      margin-left:20px;
+      margin-bottom: 20px
+  }
+  .saveEnergyCont{
+      height: 30px;
+      background-color: #3b694f;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      width: 100%;
+
+  }
+.mdDone{
+    color: #ffffff;
+    font-size: 19px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.pointDescription{
+    color: #ffffff;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.proterrahybrid{
+    font-size: 13px;
+    color: #666666;
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: justify;
+    margin-right: 10px;
+}
+
+.pageObasePrice{
+    color: #666666;
+    font-weight: bold;
+    font-size: 15px;
+}
+.pageObasePriceSpan{
+    margin-right: 10px;
+    font-weight: normal;
+}
+.pageOinstallation{
+    color: #bbb8b8;
+    font-weight: 500;
+    font-size: 12px;
+
+}
+.pageOcircleList{
+    background-color: #F68D39;
+    height: 10px;
+    width: 10px;
+    border-radius: 30px;
+}
+.pageOwhiteList{
+    background-color: #ffffff;
+    height: 6px;
+    width: 6px;
+    padding-top: 10px;
+    border-radius: 30px;
+}
+.pageOavailableIncentive{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+.pageOavailableContainer{
+    color: #666666;
+    font-size: 15px;
+}
+.pageOEquimentCost{
+    margin-top: 10px;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+.pageOequimentPrice{
+    color: #F68D39;
+    font-weight: 500;
+    margin: 10px;
+}
+.pageOannualCostApp{
+    height: 30px;
+    width: 90%;
+    margin: 10px;
+    border: 3px solid #3b694f;
+    border-radius: 7px;
+    
+}
+.pageOannualDescription{
+    margin-right: 10px;
+    margin-top: 10px;
+    color: black;
+    font-weight: 500;
+}
+.pageOannualCost{
+    color: #3b694f;
+    font-weight: 600;
+}
+.pageSecondCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.pageSLine{
+    min-height: 500px;
+    background-color: #9e9d9d;
+    width: 1px;
+    margin-bottom: 50px;
+    margin-right: 35px;
+}

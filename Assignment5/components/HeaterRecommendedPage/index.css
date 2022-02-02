@@ -1,0 +1,467 @@
+
+.app-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;    
+}
+
+.slider-app{  /* slider app main container*/
+    min-height: 100vh;
+    width: 30%;
+    margin: 10px;
+}
+
+.slider-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.slider-description{
+    color: green;
+    font-weight: 500;
+}
+
+.slider-line{
+    background-color: grey;
+    width: 100%;    
+}
+.form-app{
+    display: flex;
+    flex-direction: column;
+}
+.location-description{
+    color: #666666;
+}
+.location-app{
+    display: flex;
+    flex-direction: row;
+
+}
+.location-container{
+    height: 30px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.text-address{
+    border: none;
+    width: 55%;
+}
+.select-heater{
+    height: 30px;
+    border-left: 1px solid #666666; 
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+    background-color: transparent;
+}
+.horizontal-line{
+    font-size: 20px;
+    color: #666666;
+}
+.search-button{
+    background-color: #F68D39;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+.infoToolTip{
+    margin-left: 10px;
+}
+.slidecontainer {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+  }
+  .personContainer{
+      height: 40px;
+      width: 40%;
+      border-left: 1px solid #666666;
+      text-align: center;
+  }
+  .gallons{
+      font-weight: 500;
+      font-size: 12px;
+      color: #F68D39;
+  }
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 50%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #d3d3d3;; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .3s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #ffffff; /* Green background */
+    border: 1px solid black;
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #ffffff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+
+.selectFuel{
+    height: 45px;
+    border: 1px solid #666666;
+    border-radius: 3px;
+    width: 50%;
+    background-color: transparent;
+}
+.YesButton{
+    height: 45px;
+    width: 130px;
+    border: 1px solid #666666;
+    background-color: #ffffff;
+    border-radius: 3px;
+    color: #666666;
+}
+.NoButton{
+    height: 45px;
+    width: 130px;
+    border: none;
+    background-color: #F68D39;
+    border-radius: 1px;
+    color: #ffffff;
+}
+
+
+/*---------------------------------------------------------------*/
+
+.heater-app{
+    min-height: 100vh;
+    background-color: #e5e5eb;
+    margin-left: 10px;
+    width: 85%;
+}
+.incentiveContainer{
+    background-color: #3b694f;
+    height: 35px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.incentive{
+    color: #ffffff;
+    margin-left: 10px;
+}
+.incentiveBold{
+    font-weight: bold;
+}
+.recommendedOptions{
+    margin-top: 20px;
+    font-size: 19px;
+    color: #3b694f;
+    margin-left: 25px;
+}
+.recommendedLine{
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #666666;
+    
+}
+.recommended-App{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.recommended-container{
+    height: 580px;
+    width: 350px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heaterContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 50px;
+    width: 100%;
+}
+.heaterNameContainer{
+    font-size: 15px;
+    margin: 5px;
+    color: #ffffff;
+}
+.hname{
+    font-weight: bold;
+}
+.heaterImage{
+    color: #ffffff;
+}
+.heaterImg{
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+    margin-right: 7px;
+    border-radius: 2px;
+}
+.heaterImageContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 22px;
+    margin-bottom: 20px;
+
+}
+.performanceImg{
+    height: 220px;
+    width: 100px;
+    margin-left: 30px;
+}
+.heaterPerformance{
+    color: #666666;
+    list-style-type: disc;
+
+}
+.list-item{
+    margin-top: 13px;
+    margin-bottom: 13px;
+    margin-right: 30px;
+}
+.list-item4{
+    margin-top: 13px;
+    margin-bottom: 13px;
+    margin-right: 10px;
+}
+.heaterLiner{
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #666666;
+    height: 1px;
+    width: 90%;
+}
+.basePrice{
+    color: #666666;
+    font-weight: bold;
+    font-size: 15px;
+}
+.basePriceSpan{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: normal;
+}
+.installation{
+    color: #bbb8b8;
+    font-weight: 500;
+    font-size: 12px;
+
+}
+.circleList{
+    background-color: #F68D39;
+    height: 10px;
+    width: 10px;
+    border-radius: 30px;
+}
+.whiteList{
+    background-color: #ffffff;
+    height: 6px;
+    width: 6px;
+    padding-top: 10px;
+    border-radius: 30px;
+}
+.availableIncentive{
+    display: flex;
+    flex-direction: row;
+}
+.availableContainer{
+    color: #666666;
+    font-size: 15px;
+}
+.EquimentCost{
+    margin-top: 10px;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+.equimentPrice{
+    color: #F68D39;
+    font-weight: 500;
+}
+.annualCostApp{
+    height: 30px;
+    width: 85%;
+    margin: 10px;
+    border: 3px solid #3b694f;
+    border-radius: 7px;
+    
+}
+.annualDescription{
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: black;
+    font-weight: 500;
+}
+.annualCost{
+    color: #3b694f;
+    font-weight: 600;
+}
+.installQuote{
+    background-color: #f59e58;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 60%;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.moreDetailsPage{
+    background-color: #d3d3d3;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+}
+.moreDetails{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d1d8a;
+    text-decoration: none;
+    text-align: center;
+}
+.seeMore{
+    background-color: transparent;
+    border-radius: 3px;
+    border: 2px solid #1d1d8a;
+    height: 40px;
+    width: 200px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.heaterAdv{
+    color: #585858;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.advatangesApp{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+.advatange1{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #3b694f;
+}
+.advatangeDescription{
+    margin-left: 5px;
+    color: #666666;
+}
+.treePlanted{
+    color: #F68D39;
+    font-weight: 500;
+}
+.pumpWaterContainer{
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    min-height: 500px;
+    width: 95%;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pumpHeater{
+    margin-top: 20px;
+    height: 400px;
+    width: 1000px;
+    margin-bottom: 30px;
+}
+
+.process{
+    color: #3b694f;
+    font-size: 17px;
+    margin-left: 40px;
+    margin-right: 100px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 4px solid #3b694f;
+    background-color: transparent;
+    border-radius: 2px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+.component{
+    color: #666666;
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+    margin-top: 20px;
+}
+.pumpLine{
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #666666;
+    padding: none;
+    
+}
+.hybridDescription{
+    color: #666666;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.displayedPage{
+    color: #666666;
+    margin-left: 20px;
+    font-size: 14px;
+    margin-right: 20px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
