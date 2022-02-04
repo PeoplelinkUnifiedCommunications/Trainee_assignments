@@ -2,11 +2,11 @@ import { Link } from "react-router-dom"
 import "./card.css"
 import Info from "./info.svg"
 import Star from "./star.png"
-import Img1 from "./img1.png"
+import Img3 from "./img3.png"
 
 
 
-function Card() {
+function Card3() {
     return (
         <div className="flexCol card">
             <div className="flexRow head">
@@ -24,7 +24,7 @@ function Card() {
             </div>
             <div className="flexRow ubody">
                 <div className="flexCol image">
-                    <img src={Img1} alt="image1" width="100%" />
+                    <img src={Img3} alt="image1" width="100%" />
 
                 </div>
                 <div className="flexCol adv">
@@ -97,4 +97,4 @@ function Card() {
 
     );
 }
-export default Card;
+export default Card3;

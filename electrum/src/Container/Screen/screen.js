@@ -1,10 +1,38 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./screen.css"
+
+import A from "./a"
+import B from "./b"
 
 import Img from "./img1.png"
 import Star from "./star.png"
 import Info from "./info.svg"
 
+
 function Screen() {
+    // const [productOverviewBtn, setProductOverviewBtn] = useState(true)
+    // const [productSpecsBtn, setproductSpecsBtn] = useState(false)
+
+    const [productOverview, setProductOverview] = useState(true)
+    const [productSpecs, setproductSpecs] = useState(false)
+
+    const productOverviewTriggered = () => {
+        // setProductOverviewBtn(true)
+        // setproductSpecsBtn(false)
+
+        setProductOverview(true)
+        setproductSpecs(false)
+    }
+
+    const productSpecsTriggered = () => {
+        // setProductOverviewBtn(false)
+        // setproductSpecsBtn(true)
+
+        setProductOverview(false)
+        setproductSpecs(true)
+    }
+
     return (
         <div className="flexCol screen">
             <div className="flexCol d">
@@ -17,6 +45,7 @@ function Screen() {
                         <div className="flexRow navR">
                             <button className="bl">&lt;</button>
                             <span className="spnB">Previous</span>
+                            <div className="vl"></div>
                             <span className="spnB1">Next</span>
                             <button className="bl">&gt;</button>
 
@@ -73,7 +102,7 @@ function Screen() {
 
                                 </div>
                                 <div className="flexCol b2b">
-                                    <span className="sb">Back To Results</span>
+                                    <span className="sb"><Link to="/">back to results</Link></span>
                                 </div>
 
                             </div>
@@ -83,10 +112,11 @@ function Screen() {
                     </div>
                     <div className="flexCol down">
                         <div className="flexRow">
-                            <button className="bGreen">Product Overview</button>
-                            <button className="bGreen">Products Specs</button>
+                            <button className="bGreen" onClick={productOverviewTriggered}>Product Overview</button>
+                            <button className="bGreen" onClick={productSpecsTriggered}>Products Specs</button>
                         </div>
                         <div className="hl"></div>
+                        {productOverview ? <A /> : <B />}
 
                     </div>
                     <span className="spnS">All values that are displayed on this page are based on standard industry assumptions. Savings number are calculated based on present day market circumstances,

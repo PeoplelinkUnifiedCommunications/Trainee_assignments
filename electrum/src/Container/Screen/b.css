@@ -1,0 +1,27 @@
+.spna1{
+    font-size: 0.8rem;
+    color: var(--TextColor);
+}
+.spna2{
+    font-size: 0.8rem;
+    color: var(--TextColor);
+}
+.tab{
+    padding: 0.5rem 0;
+}
+table{
+    width: 100%;
+    margin: 0.25rem 0;
+}
+td{
+    width: 25%;
+    padding: 0.1rem 0.5rem;
+}
+table,td {
+    border: 1px solid var(--TextColor);
+    border-collapse: collapse;
+  }
+  
+th:nth-child(odd),td:nth-child(odd) {
+    background-color: lightgrey;
+  }

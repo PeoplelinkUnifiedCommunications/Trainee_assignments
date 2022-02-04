@@ -1,0 +1,66 @@
+.txta1{
+    padding: 0.5rem;
+}
+.spna1{
+    font-size: 0.8rem;
+    color: var(--TextColor);
+}
+.downA{
+    padding: 0.5rem;
+}
+.flow{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.miniC{
+    margin: 0.4rem;
+    height: 130px;
+    width: 48%;
+    border: 1px solid var(--TextColor);
+    border-radius: 3px;
+}
+.miniG{
+    align-items: center;
+    padding: 0.5rem;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: var(--SecondaryColor);
+}
+.sw{
+    font-size: 0.8rem;
+    color: white;
+}
+.miniT{
+    padding: 0.5rem;
+}
+.rate{
+    width:26%;
+}
+.aa1a{
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+.taa1{
+    color: var(--TextColor);
+    font-size: 0.8rem;
+}
+.tsa1{
+    color: var(--TextColor);
+    font-size: 0.6rem;
+    padding-left: 1rem;
+}
+.tya1{
+    color: var(--Button);
+    font-size: 0.8rem;
+}
+.tg{
+    color: var(--SecondaryColor);
+    font-size: 0.8rem;
+}
+.aa1{
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    border: solid 2px var(--SecondaryColor);
+    border-radius: 4px;
+}

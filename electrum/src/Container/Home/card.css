@@ -1,106 +1,107 @@
-.card{
-    width: 33%;
-    background-color: white;
+.card {
+  width: 33%;
+  background-color: white;
 }
-.head{
-    background-color: grey;
-    padding: 0.5rem;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+.head {
+  background-color: grey;
+  padding: 0.5rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
-.left1{
-    width: 60%;
-    justify-content: space-between;
+.left1 {
+  width: 60%;
+  justify-content: space-between;
 }
-.rig1{
-    width: 40%;
-    color: white;
-    align-items: center;
-    justify-content: space-between;
+.rig1 {
+  width: 40%;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
 }
-.tu{
-    color: white;
-    font-size: 1rem;
+.tu {
+  color: white;
+  font-size: 1rem;
 }
-.tb{
-    color: white;
-    font-size: 0.8rem;
+.tb {
+  color: white;
+  font-size: 0.8rem;
 }
-.ubody{
-    padding: 0.5rem;
-    border-bottom: solid 2px lightgrey;
+.ubody {
+  padding: 0.5rem;
+  border-bottom: solid 2px lightgrey;
 }
-.image{
-    width: 40%;
-    padding: 0.5rem;
+.image {
+  width: 40%;
+  padding: 0.5rem;
 }
-.adv{
-    width: 60%;
-    padding: 0.5rem 0;
-    justify-content: space-evenly;
+.adv {
+  width: 60%;
+  padding: 0.5rem 0;
+  justify-content: space-evenly;
 }
-.o{
-    color: var(--Button);
-    font-weight: bold;
-    padding-right: 0.25rem;
+.o {
+  color: var(--Button);
+  font-weight: bold;
+  padding-right: 0.25rem;
 }
-.ta{
-    color: var(--TextColor);
-    font-size: 1rem;
+.ta {
+  color: var(--TextColor);
+  font-size: 1rem;
 }
-.ts{
-    color: var(--TextColor);
-    font-size: 0.8rem;
-    padding-left: 1rem;
+.ts {
+  color: var(--TextColor);
+  font-size: 0.8rem;
+  padding-left: 1rem;
 }
-.ty{
-    color: var(--Button);
-    font-size: 1rem;
+.ty {
+  color: var(--Button);
+  font-size: 1rem;
 }
-.taa{
-    color: var(--TextColor);
-    font-size: 0.8rem;
+.taa {
+  color: var(--TextColor);
+  font-size: 0.8rem;
 }
-.tg{
-    color: var(--SecondaryColor);
-    font-size: 0.8rem;
+.tg {
+  color: var(--SecondaryColor);
+  font-size: 0.8rem;
 }
-.lbody{
-    padding: .5rem;
-    justify-content: space-between;
+.lbody {
+  padding: 0.5rem;
+  justify-content: space-between;
 }
-.a1{
-    padding: 0.5rem;
-    justify-content: space-between;
+.a1 {
+  padding: 0.5rem;
+  justify-content: space-between;
 }
-.a2{
-    padding: 0.5rem;
-    justify-content: space-between;
+.a2 {
+  padding: 0.5rem;
+  justify-content: space-between;
 }
-.aa1{
-    padding: 0.5rem 1rem;
-    justify-content: space-between;
-    border: solid 2px var(--SecondaryColor);
-    border-radius: 4px;
+.aa1 {
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  border: solid 2px var(--SecondaryColor);
+  border-radius: 4px;
 }
-.orange{
-    padding:1rem 3rem 0 3rem;
-    align-items: center;
-    justify-content: center;
-    
+.orange {
+  padding: 1rem 3rem 0 3rem;
+  align-items: center;
+  justify-content: center;
 }
-.aa3{
-    padding: 1rem ;
-    background-color: var(--Button);
-    border-radius: 4px;
+.aa3 {
+  padding: 1rem;
+  background-color: var(--Button);
+  border-radius: 4px;
 }
-.bb{
-    background-color: var(--TextColor);
-    padding: 0.5rem;
-    align-items: center;
-    justify-content: center;
+.bb {
+  background-color: var(--TextColor);
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
-.tp{
-    color: lightgrey;
-    font-size: 0.8rem;
+.tp {
+  color: lightgrey;
+  font-size: 0.8rem;
 }
