@@ -230,24 +230,19 @@ app.post("/makeclass", async (request, response) => {
         _id: request.body.userId,
     });
     if (userData !== null) {
+        userData.roll.toLowerCase() === "teacher"
+            ? (updatedField = { teachersList: userData._id })
+            : (updatedField = { studentsList: userData._id });
         try {
-            if (userData.roll === "teacher") {
-                await classCollection.updateOne(
-                    { class: request.body.class },
-                    {
-                        $addToSet: { teachersList: userData._id },
-                    },
-                    { upsert: true }
-                );
-            } else {
-                await classCollection.updateOne(
-                    { class: request.body.class },
-                    {
-                        $addToSet: { studentsList: userData._id },
-                    },
-                    { upsert: true }
-                );
-            }
+            await classCollection.updateOne(
+                { class: request.body.class },
+                {
+                    class: request.body.class,
+                    description: request.body.description,
+                    $addToSet: updatedField,
+                },
+                { upsert: true }
+            );
             response.send(await classCollection.find());
         } catch (error) {
             response.send(error.message);

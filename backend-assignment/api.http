@@ -20,7 +20,7 @@ PUT http://localhost:9000/updateuser/
 Content-Type: application/json
 
 {   
-    "_id": "61f26cc9d7e55b021b7485f3",
+    "_id": "61f2d58a9782473b32d8fe0e",
     "roll": "student"
 }
 
@@ -41,12 +41,15 @@ POST http://localhost:9000/makeclass/
 Content-Type: application/json
 
 {
-    "class": "1",
+    "class": "3",
     "description": "abcdef",
-    "userId": "61f26cc9d7e55b021b7485f3"
+    "userId": "61f2d58a9782473b32d8fe0e"
 }
 ###
 
 
 GET http://localhost:9000/userclasses/61f25c838744232fc99d047d
+###
+
+GET http://localhost:9000/getclasses
 ###
