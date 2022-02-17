@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content='width=device-width, initial-scale=1.0'>
+        <title>Registration Form</title>
+        <style>
+            body{
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKkblcfjFYAuRLDjdwkxV4GQc-qk5LjSvvpg&usqp=CAU");
+                background-size: cover;
+            }
+            h1.divContainer{
+                color: white;
+                text-align: center;
+                padding-bottom: 10px;
+                
+            }
+            form.form-container{
+                margin-left: 35%;
+                padding: 10px;
+            }
+            label{
+                color: white;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 20px;
+            }
+            input.inputEl{
+                border-radius: 5px;
+                border: 1px solid white;
+                height: 30px;
+                width: 260px;
+                margin-left: 20px;
+                background-color: transparent;
+            }
+            select.inputElement{
+                border-radius: 5px;
+                border: 1px solid white;
+                height: 30px;
+                width: 260px;
+                margin-left: 20px;
+                background-color: transparent;
+
+            }
+            div.labelForm{
+                padding: 7px;
+            } 
+            button{
+                border-radius: 5px;
+                border: 1px white solid;
+                padding: 10px;
+                background-color: transparent;
+                margin-top: 40px;
+                width: 100px;
+                height: 40px;
+            }
+            
+              
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1 class="divContainer">Register Now</h1>
+        </div>
+        
+            <form class="form-container">
+                <div class="labelForm">
+                    <label>Name: </label>
+                    <input type="text" placeholder="Enter Your Name" class="inputEl">
+
+                </div>
+                <div class="labelForm">
+                    <label >Email: </label>
+                    <input type="text" placeholder="Enter Your Email" class="inputEl">
+                </div>
+                <div class="labelForm">
+                    <label >Mobile:</label>
+                    <input type="number" placeholder="Enter Your Number" class="inputEl">
+                </div>
+                <div class="labelForm">
+                    <label style="margin-right: 5px;">Gender:</label>
+                    <input type="radio" id='male'/>
+                    <label for='male'>Male</label>
+                    <input type="radio" id='female'/>
+                    <label for='female'>Female</label>
+                </div>
+                <div class="labelForm">
+                    <label >DOB: </label>
+                    <input type="date" placeholder="Enter Your Date Of Birth" class="inputEl">
+                </div>
+                <div class="labelForm">
+                    <label for='degree' >Degree:</label>
+                    <select class="inputElement">
+                        <option value="be/btech">
+                            BE/BTECH
+                        </option>
+                        <option value="bca">BCA</option>
+                        <option value="bsc">B.SC</option>
+                        <option value="mca">MCA</option>
+                    </select>
+                    
+                </div>
+                <div class="labelForm">
+                    <label >Password:</label>
+                    <input type="password" placeholder="Enter Your Password" class="inputEl">
+                </div>
+                <div class="labelForm">
+                    <label >Confirm Password:</label>
+                    <input type="password" placeholder="Confirm Your Password" class="inputEl">
+                </div>
+                <div class="labelForm">
+                    <button style="color: white;" type="button">Register</button>
+                </div>
+                
+
+            </form>
+
+    </body>
+</html>
