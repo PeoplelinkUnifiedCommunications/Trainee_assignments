@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  font-family: Lato;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+form {
+  margin-left: 1.5rem;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.labels {
+  width: 10rem;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.inputFields {
+  width: 18rem;
+  height: 1.8rem;
+  padding: 0.2rem 0.3rem;
+}
+
+.centerAlignment {
+  justify-content: center;
+}
+
+.radioFields {
+  margin-top: 0.2rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.radioText {
+  margin-bottom: 0.5rem;
+}
+
+table,
+tr,
+td {
+  margin-top: 1rem;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  background-color: rgb(228, 225, 225);
+  padding: 0.2rem 1.5rem;
+  width: 50rem;
+  text-align: center;
+  font-size: 16px;
+}
+
+th {
+  background-color: rgb(134, 30, 30);
+  color: white;
+  width: 60rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+}
+
+.btn {
+  border: 1px solid black;
+  border-radius: 2px;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+  margin-right: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+span {
+  width: 10rem;
+  margin-top: 2px;
+  padding-top: 0;
+  color: rgb(243, 7, 7);
+  font-size: 14px;
+}
