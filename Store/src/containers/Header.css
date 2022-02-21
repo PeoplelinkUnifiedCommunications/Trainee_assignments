@@ -1,0 +1,18 @@
+.Header{
+    /* border: 1px solid black; */
+    height: 50px;
+    background-color: rgb(104, 51, 189);
+    position: fixed;
+    width: 100%;
+    top:0;
+    
+}
+
+.headerHeading h2{
+    padding-top: 9px;
+}
+
+.headerHeading span{
+   color: white;
+   font-size: 30px;
+}
