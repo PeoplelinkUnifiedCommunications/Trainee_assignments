@@ -1,0 +1,26 @@
+.bottom{
+    width: 100%;
+    height: auto; 
+}
+.cardBottom{
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+}
+li.hover:hover{
+    color: var(--secondarycolor);
+}
+.hpwhImg{
+    text-align: center;
+    
+}
+.hdngstl{
+padding: 0%;
+}
+
+.hpwhstl{
+    background-size: cover;
+    width: 100%; 
+    height: auto; 
+}

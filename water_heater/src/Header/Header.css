@@ -1,0 +1,23 @@
+/* .header{
+    background-color: darkcyan; 
+}
+.headTag{
+    text-align: center; */
+    /* border: 2px solid red;*/
+/* } 
+.logo{
+    height: 50px;
+    width:50px;
+    margin-left: auto; */
+    /* border: 2px solid red; */
+/* } */
+.headStyles{
+    background-color:var(--secondarycolor);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    height: 3.5 rem;
+    /* position: fixed; */
+    text-align: center;
+   
+}
