@@ -1,0 +1,125 @@
+.AllottedContainer{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.900), rgb(255, 255, 255, 0.900)), url('/home/peoplelink/myProjects/Trainee_assignments/Assignment02(onlineparkinglot)/online_parking_lot/src/Parking_Lot/Parking-Dashboard.png');
+    background-size: cover;
+    width:80vw;
+    height:85vh;
+    overflow: auto;
+}
+table,tr,td{
+    color:#5E5E5E;
+    text-align: center;
+    border:2px solid black;
+    border-collapse: collapse;
+    border-top:none;
+    border-left:none;
+}
+
+
+.Sl_Num{
+    width:13vw;
+    padding-top:5px;
+    padding-bottom:5px
+}
+.Registration_Number{
+    width:18vw;
+    padding-top:5px;
+    padding-bottom:5px
+}
+.Owner_Name{
+    width:18vw;
+    padding-top:5px;
+    padding-bottom:5px
+}
+.Car_Bike_Colour{
+    width:16vw;
+    padding-top:5px;
+    padding-bottom:5px
+}
+.Remove_Upadate{
+   
+    width:15vw;  
+    padding-top:5px;
+    padding-bottom:5px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.remove{
+    color:#F6AE42;
+}
+.edit{
+    color:#F6AE42;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .AllottedContainer{
+        font-size: 10px;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.900), rgb(255, 255, 255, 0.900)), url('/home/peoplelink/myProjects/Trainee_assignments/Assignment02(onlineparkinglot)/online_parking_lot/src/Parking_Lot/Parking-Dashboard.png');
+        background-size: cover;
+        width:100vw;
+        height:85vh;
+        overflow: scroll;
+    }
+    .table{
+        width:96vw;
+        margin:2%
+    }
+    table,tr,td{
+        color:#5E5E5E;
+        text-align: center;
+        border:2px solid black;
+        border-collapse: collapse;
+        align-items: center;
+    }
+    
+    
+    .Sl_Num{
+        width:13vw;
+        padding-top:5px;
+        padding-bottom:5px;
+        text-align: center;
+        overflow: scroll;
+
+    }
+    .Registration_Number{
+        width:18vw;
+        padding-top:5px;
+        padding-bottom:5px;
+        text-align: center;
+        overflow: scroll;
+
+
+    }
+    .Owner_Name{
+        width:18vw;
+        padding-top:5px;
+        padding-bottom:5px;
+        text-align: center;
+        overflow: scroll;
+
+
+    }
+    .Car_Bike_Colour{
+        width:20vw;
+        padding-top:5px;
+        padding-bottom:5px;
+        text-align: center;
+        overflow: scroll;
+    }
+    .Remove_Upadate{
+        padding-top:5px;
+        padding-bottom:5px;
+        display: flex;
+        justify-content: space-around;
+        border-radius: none;
+        border:none;
+    }
+    .remove{
+        color:#F6AE42;
+    }
+    .edit{
+        color:#F6AE42;
+    }
+}

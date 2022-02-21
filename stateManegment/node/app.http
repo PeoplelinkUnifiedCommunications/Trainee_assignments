@@ -1,0 +1,9 @@
+POST http://localhost:3004/add/ 
+Content-Type: application/json
+
+{   "id":"12345",
+    "slotNumber":"1000",
+   "ownerName":"vijay",
+   "regNumber":"ad56-fv-3456 ",
+  "color":"black"
+}

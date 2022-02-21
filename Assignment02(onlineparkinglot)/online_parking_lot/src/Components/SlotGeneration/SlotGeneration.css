@@ -1,0 +1,165 @@
+.SlotContainer{
+    height:85vh;
+    width: 20vw;
+    border-right:3px solid  #F6AE42;
+}
+.Soltform{
+    height:45vh;
+    padding: 20px;
+    margin-top:30px
+}
+.inputItem{
+    color:#5E5E5E;
+    width:18vw;    
+    height:3vh;
+    font-size: 20px;
+    padding-top:2px;
+    border:none;
+    outline: none;
+    border-bottom: 2px solid #F6AE42;
+}
+.formbutton{
+    color:#5E5E5E;
+    width:17vw;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #F6AE42;
+    margin-bottom: 10px; 
+    padding-top: 15px;  
+    padding-bottom:15px;
+    border-width: 0px;
+    border-radius: 5px;
+}
+
+.GenerateSlot{
+    background-color: #F6AE42;
+    height: 30vh;
+    padding:20px;
+    border-top-right-radius: 15px;
+}
+.Slots{
+    color:#5E5E5E;
+    font-size: 18px;
+    font-weight: bold;
+}
+.inputSlot{
+    width: 2vw;
+    text-align: center;
+    color:Black;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    border-bottom: 2px dashed #5E5E5E;
+    margin-left:10px;
+}
+.button{
+    color:#5E5E5E;
+    width:18vw;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent; 
+    border:2px solid #5E5E5E
+}
+.GSlotContainer{
+    padding-left:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.error{
+    color:red;
+    height:2vh;
+
+}
+
+.popup:hover+.details{
+    display: block;
+    position:absolute;
+}
+.details{
+    width:100px;
+    text-align: center;
+    background-color: #F6AE42;
+    border-radius: 2px;
+    padding:2px;
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .SlotContainer{
+        width: 100vw;
+        height:cover;
+        align-items:center;  
+        border-right:none;
+     
+    }
+    .Soltform{
+        height:45vh;
+        padding: 20px;
+        margin-top:30px;    
+        text-align: center;
+    }
+    .inputItem{
+        color:#5E5E5E;
+        width:80vw;    
+        height:3vh;
+        font-size: 20px;
+        padding-top:2px;
+        border:none;
+        outline: none;
+        border-bottom: 2px solid #F6AE42;
+    }
+    .formbutton{
+        color:#5E5E5E;
+        width:18vw;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #F6AE42;
+        margin-bottom: 10px; 
+        padding-top: 15px;  
+        padding-bottom:15px;
+        border-width: 0px;
+        border-radius: 5px;
+    }
+
+    .GenerateSlot{
+        background-color: #F6AE42;
+        height: 20vh;
+        padding:20px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        text-align: center;
+    }
+    .Slots{
+        color:#5E5E5E;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .inputSlot{
+        width: 2vw;
+        text-align: center;
+        color:Black;
+        background-color: transparent;
+        border:none;
+        outline: none;
+        border-bottom: 2px dashed #5E5E5E;
+        margin-left:10px;
+    }
+    .button{
+        color:#5E5E5E;
+        width:18vw;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: transparent; 
+        border:2px solid #5E5E5E
+    }
+    .GSlotContainer{
+        padding-left:20px;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    .error{
+        color:red;
+        height:2vh;
+
+    }    
+}

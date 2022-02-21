@@ -1,0 +1,31 @@
+.footerContainer{
+    background-color: #F6AE42;    
+    width:100vw;
+    height:5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.icon{
+    align-items: center;
+    font-weight: bold;
+    height:2vh;
+    width:1vw;
+}
+.content{
+    font-weight: bold;
+    vertical-align:middle;
+}
+
+.popup:hover+.details{
+    display: block;
+    position:absolute;
+}
+.details{
+    width:100px;
+    text-align: center;
+    background-color: #F6AE42;
+    border-radius: 2px;
+    padding:2px;
+    display: none;
+}

@@ -1,0 +1,25 @@
+POST http://localhost:8000/add
+Content-Type: application/json
+
+{
+    "sno":"2",
+    "name":"krishna",
+    "age":"25"
+}
+
+###
+
+GET http://localhost:8000/
+
+###
+DELETE http://localhost:8000/deletename/krishna/
+
+###
+PUT http://localhost:8000/change/krishna
+Content-Type: application/json
+
+{
+    "sno":"2",
+    "name":"dheeraz",
+    "age":"25"
+}

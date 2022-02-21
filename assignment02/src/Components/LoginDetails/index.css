@@ -1,0 +1,56 @@
+
+.DetailsContainer{
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.rowContainer{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.formContainer{
+    background-color: white;
+    width: 30vw;
+    height:40vh;
+    padding:20px;
+    margin: 40px;
+    
+    
+}
+.name{
+    font-size: 25px;
+    color:green;
+    padding:20px
+}
+.email{
+    font-size: 25px;
+    color:green;
+    padding:20px
+}
+.dob{
+    font-size: 25px;
+    color:green;
+    padding:20px
+}
+.boxsize{
+    height: 12%;
+    width:60%;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.button{
+    padding:10%;
+}
+
+.listContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    width:50%
+}
