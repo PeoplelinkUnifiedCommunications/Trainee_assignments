@@ -1,0 +1,253 @@
+{
+  "cardData": [
+    {
+      "id": 1,
+      "navId": 1,
+      "cardType": "Total Views",
+      "icon": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868947/view_izfmz3.png",
+      "chart": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868949/wchart_chr2ub.png",
+      "views": 308402,
+      "text": "Start from jan 2021",
+      "isActiveCard": true,
+      "path": "views"
+    },
+    {
+      "id": 2,
+      "navId": 4,
+      "cardType": "Total Products",
+      "icon": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868914/shopping-bag_qjnx2n.png",
+      "chart": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868907/rchart_yrlh9v.png",
+      "views": 10820,
+      "text": "+ Add New Product",
+      "isActiveCard": false,
+      "path": "products"
+    },
+    {
+      "id": 3,
+      "navId": 3,
+      "cardType": "Total Users",
+      "icon": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868820/group_e5rsok.png",
+      "chart": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868788/gchart_tebmgm.png",
+      "views": 8425,
+      "text": "New User Noted Every Week",
+      "isActiveCard": false,
+      "path": "users"
+    },
+    {
+      "id": 4,
+      "navId": 4,
+      "cardType": "Total Sells",
+      "icon": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868820/group_e5rsok.png",
+      "chart": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868788/gchart_tebmgm.png",
+      "views": 8425,
+      "text": "New User Noted Every Week",
+      "isActiveCard": false,
+      "path": "sells"
+    }
+  ],
+  "table": [
+    {
+      "id": 1,
+      "photo": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868861/mobile_jwbzyk.jpg",
+      "photoinfo": "News Mobile App UI KIT F...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 2,
+      "photo": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868835/landing_pnqscx.jpg",
+      "photoinfo": "40+ Landing Page Temp...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 3,
+      "photo": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868689/doctor_gjwr7e.jpg",
+      "photoinfo": "Doctor Consultion UI KIT ...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 4,
+      "photo": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868945/startup_lutyln.png",
+      "photoinfo": "Startup Illustration UI KIT Ve...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 5,
+      "photo": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868732/extra_wjny0b.jpg",
+      "photoinfo": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 6,
+      "photo": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643869340/case_p6wkpn.jpg",
+      "photoinfo": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 7,
+      "photo": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643869370/demo_cnhptq.jpg",
+      "photoinfo": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 8,
+      "photo": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643869381/learn_pkxmtr.jpg",
+      "photoinfo": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 9,
+      "photo": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643869393/trust_rkcfql.jpg",
+      "photoinfo": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 10,
+      "photo": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643869405/web_njzza6.jpg",
+      "photoinfo": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    }
+  ],
+  "viewsData": [
+    {
+      "id": 1,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219519/bag_pdgcbi.jpg",
+      "product": "BAG",
+      "views": 1110,
+      "sells": 449,
+      "users": 123
+    },
+    {
+      "id": 2,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219510/bike_kjw4je.jpg",
+      "product": "BIKE",
+      "views": 1170,
+      "sells": 559,
+      "users": 440
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219498/bulb_lygzqg.jpg",
+      "product": "BULB",
+      "views": 911,
+      "sells": 669,
+      "users": 4420
+    },
+    {
+      "id": 4,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219489/cap_bfn5yk.jpg",
+      "product": "CAP",
+      "views": 1115,
+      "sells": 779,
+      "users": 119
+    },
+    {
+      "id": 5,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219482/car_lhuiak.jpg",
+      "product": "CAR",
+      "views": 118,
+      "sells": 889,
+      "users": 225
+    },
+    {
+      "id": 6,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219471/charger_tufzz6.jpg",
+      "product": "CHARGER",
+      "views": 221,
+      "sells": 999,
+      "users": 333
+    },
+    {
+      "id": 7,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219461/earphones_ulcjee.jpg",
+      "product": "EARPHONES",
+      "views": 3332,
+      "sells": 119,
+      "users": 444
+    },
+    {
+      "id": 8,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219452/fan_qshrbk.jpg",
+      "product": "FAN",
+      "views": 3330,
+      "sells": 9,
+      "users": 4551
+    },
+    {
+      "id": 9,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219440/laptop_e18ouo.jpg",
+      "product": "LAPTOP",
+      "views": 3333,
+      "sells": 922,
+      "users": 661
+    },
+    {
+      "id": 10,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219432/phone_kzvkvg.jpg",
+      "product": "PHONE",
+      "views": 32236,
+      "sells": 933,
+      "users": 772
+    },
+    {
+      "id": 11,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219420/scooty_phwy4z.jpg",
+      "product": "SCOOTY",
+      "views": 237,
+      "sells": 9044,
+      "users": 880
+    },
+    {
+      "id": 12,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219413/shoes_acuysf.jpg",
+      "product": "SHOES",
+      "views": 2341,
+      "sells": 970067,
+      "users": 994
+    },
+    {
+      "id": 13,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219398/slippers_gkrhct.jpg",
+      "product": "SLIPPERS",
+      "views": 32234,
+      "sells": 96006,
+      "users": 115
+    },
+    {
+      "id": 14,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219388/tv_q1c35j.jpg",
+      "product": "TV",
+      "views": 2,
+      "sells": 23239,
+      "users": 27077
+    },
+    {
+      "id": 15,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219375/watch_ctwzzg.jpg",
+      "product": "WATCH",
+      "views": 3248,
+      "sells": 97707,
+      "users": 9555
+    }
+  ],
+  "productData": []
+}

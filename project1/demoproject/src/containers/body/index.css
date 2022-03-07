@@ -1,0 +1,100 @@
+.dashBoardCntnr{
+    width: calc(100vw - 9rem);
+    margin-left: 7rem;
+    padding:25px
+}
+
+.mapping{
+    display: flex;
+    justify-content: space-between;
+    /* margin: 1rem; */
+}
+
+
+.tbleGrpCntnr{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+.actcardCntnr{
+    width:100%;
+    padding:2rem;
+    background-color: #4290FD;
+    color: var(--white);
+    height:auto;
+    cursor: pointer;
+}
+.inActcardCntnr{
+    width:100%;
+    padding:2rem;
+    background-color: var(--white);
+    height:auto;
+    cursor: pointer;
+}
+
+.cardImages{
+    padding-bottom: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.viewsFontSize{
+    font-size: 2rem;
+    padding-bottom: 0.4rem;
+    /* color: var(--white); */
+}
+
+.fontSize{
+    font-size: 1.2rem;
+    /* color: var(--white); */
+    padding-top: 0.4rem;
+
+}
+
+.imageSize{
+    height: 1.5rem;
+    width: 1.5rem;
+    color: darkmagenta;
+}
+.imageBg{
+    height: 2.0rem;
+    width:2.0rem;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(194, 241, 241);
+}
+
+
+@media(min-width:340px) and (max-width:600px){
+
+    
+    .dashBoardCntnr {
+        width: calc(100vw - 6rem);
+        margin-left: 5rem;
+        padding: 0px;
+    }
+
+    .filter{
+        display: flex; flex: none; width: 100%; flex-direction: column;
+    
+    }
+
+    .imgHeight{
+        height: 2000px;
+        width: 200px;
+    }
+
+
+}

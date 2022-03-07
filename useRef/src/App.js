@@ -13,6 +13,7 @@ function App() {
 
   function keyPressHandle(e) {
     if (e.keyCode === 13) {
+      console.log(e.keyCode);
       if (e.target.id === "nameInput") {
         ageRef.current.focus();
       }

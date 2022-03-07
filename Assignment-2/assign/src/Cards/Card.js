@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Card.css'
 // import info from './Images/info.svg'/
 // import energy from './Images/EnergyStar.png'
@@ -7,6 +7,71 @@ import Popup from 'reactjs-popup'
 import Page2image from '../Page2/page2image'
 
 const Card = (props) => {
+    let Data = [
+        {
+            id:1,
+            manufacturer_name:'Rheem',
+            name:'Performance Platinum 50',
+            ef:'3.4 ef',
+            logo:'Images/info.svg',
+            logo1:'Images/EnergyStar.png',
+            banner_logo:'Images/img1.png',
+            // list1:'Leak detection with auto water shut-off',
+            // list2:'Control from your Smart phone',
+            // list3:' Multiple Operating Modes',
+            // list4:' 10 year Manufacture Warrenty',
+            base_price:'Base_Price................................$ 1,799',
+            Federal_tax:'...................................$ 1,300',
+            Utility_incentives:'.......................$ 1,300',
+            Equipment_cost:'.....................$ 499',
+            your_annual_saving_is:'$ 120'
+        },
+        {
+            id:2,
+            manufacturer_name:'A.O.Smith',
+            name:'Elite Master 56',
+            ef:'3.4 ef',
+            logo:'./Images/info.svg',
+            logo1:'Images/EnergyStar.png',
+            banner_logo:'Images/img2.png',
+            // list1:'Leak detection with auto water shut-off',
+            // list2:'Control from your Smart phone',
+            // list3:' Multiple Operating Modes',
+            // list4:' 10 year Manufacture Warrenty',
+            base_price:'................................$ 1,799',
+            Availabe_incentives:'.......................$ 1,300',
+            Equipment_cost:'.....................$ 599',
+            your_annual_saving_is:'$ 120'
+        },
+        {
+            id:3,
+            manufacturer_name:'Stiebel Eltron',
+            name:'Hybrid Electric 50',
+            ef:'3.4 ef',
+            logo:'Images/info.svg',
+            logo1:'Images/EnergyStar.png',
+            banner_logo:'Images/img3.png',
+            // list1:'Leak detection with auto water shut-off',
+            // list2:'Control from your Smart phone',
+            // list3:' Multiple Operating Modes',
+            // list4:' 10 year Manufacture Warrenty',
+            base_price:'................................$ 1,799',
+            Availabe_incentives:'.......................$ 1,300',
+            Equipment_cost:'.....................$ 599',
+            your_annual_saving_is:'$ 120'
+        }
+    ]
+    const [dataindex,setDataIndex] =useState(0);
+    const prev=()=>{
+        if(dataindex !==0){
+            setDataIndex(dataindex-1)
+        }
+    }
+    const next=()=>{
+        if(Data.length-1 !==dataindex){
+            setDataIndex(dataindex+1)
+        }
+    }
     console.log(props)
     return (
                 <div className='card_container'>
@@ -59,11 +124,11 @@ const Card = (props) => {
                         <span>Heat Pump Electric Water Heater {`>`} Rheem performance platinum 50</span>
                         <div>
                         <button type='button' onClick={()=>close()}>Close</button>
-                        <button>Previous</button>
-                        <button>Next</button>
+                        <button onClick={prev}>Previous</button>
+                        <button onClick={next}>Next</button>
                         </div>
                         </div><hr/>
-                        <Page2image />
+                        <Page2image selectedData={Data[dataindex]} />
                     </div>
     )}
             </Popup>

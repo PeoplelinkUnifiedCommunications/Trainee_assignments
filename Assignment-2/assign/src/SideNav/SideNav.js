@@ -6,7 +6,7 @@ import tag1 from './Images/info.svg'
 
 const SideNav = (props) => {
     
-const [values, setValues] = useState(0)
+const [values, setValues] = useState(3)
      const setValue = (e) =>{
          setValues(e.target.value)
          props.onChangeValue(e.target.value)

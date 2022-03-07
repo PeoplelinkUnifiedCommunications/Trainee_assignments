@@ -1,0 +1,40 @@
+.tableCntnr{
+    width:100%;
+    height:44.8vh;
+    background-color: var(--white);
+    padding: 0rem 2rem;
+    overflow-y: scroll;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+
+/* th{
+    height: 40px;
+} */
+.row{
+    height: 50px;
+    text-align: center;
+    background-color: #c7d1d1;
+
+}
+
+.tableRowGap {
+    border-collapse:separate;
+    border-spacing:0 15px;
+}
+
+.column {
+    height:50px;
+    top:0px;
+    position: sticky;
+    background-color: var(--white);
+}
+
+.imgSize{
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+}

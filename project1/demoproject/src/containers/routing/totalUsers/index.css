@@ -1,0 +1,29 @@
+.TableCard{
+    width:100%;
+    
+}
+
+.userID{
+    width: 20%;
+    height: 2rem;
+    text-align: center;
+    border: 1px solid black;
+    background-color: wheat;
+}
+.titlE{
+    width: 80%;
+    height: 2rem;
+    text-align: center;
+    border: 1px solid black;
+    background-color:aquamarine;
+}
+
+.paginationCard{
+    width: 50%;
+    position: absolute;
+    top: 15%;
+    left: 26%;
+  }
+  .cardCntr{
+    padding: 10px;
+  }

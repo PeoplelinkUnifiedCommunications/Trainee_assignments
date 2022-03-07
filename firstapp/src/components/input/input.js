@@ -2,8 +2,15 @@ import React, { useState } from "react";
 import "./input.css";
 
 function Input() {
+
+  
   const [input, setInput] = useState("");
   const [output, setOutput] = useState(false);
+
+  const changeHandler = (e) => {
+    setInput(e.target.value);
+    console.log(e);
+  };
 
   function getData(e) {
     e.preventDefault();
@@ -19,9 +26,10 @@ function Input() {
         <div className="input">
           <input
             type="text"
-            onChange={(e) => setInput(e.target.value)}
+            onChange={changeHandler}
             placeholder="Enter your data"
             required
+            value={input}
           />
         </div>
         <div className="button">

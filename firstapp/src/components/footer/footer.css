@@ -2,5 +2,7 @@
     height: 100px;
     width: 100%;
     background-color:cornflowerblue;
+    /* display: flex; */
+    /* align-items: center; */
     text-align: center;
 }

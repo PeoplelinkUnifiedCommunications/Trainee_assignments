@@ -1,0 +1,33 @@
+.menuCard {
+	list-style-type: none;
+	position: absolute;
+	background-color:aquamarine;
+    top:65px;
+	right: 1rem;
+	border: 1px solid var(--dark);
+	z-index: 10000;
+	border-radius: 10px;
+}
+
+.menuList {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	border-bottom: 1px solid red;
+	width: 200px;
+	cursor: pointer;
+}
+.lastItem {
+	border: none;
+}
+
+.ref {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: transparent;
+	z-index: 22;
+}

@@ -1,0 +1,32 @@
+.fxdLeftNav    { position: fixed; width: 5rem; height: 100%; z-index: 1000;background-color: var(--white); padding-top:50px; padding-bottom: 200px;}
+.iconMrgn{
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.logout{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.active{
+    color: blue;
+}
+.sideImage{
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+.sideButton{
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+@media(min-width:340px) and (max-width:600px){
+
+    .fxdLeftNav{
+        width: 4rem;
+    }
+    .dashBoardCntnr {
+        margin-left: 5rem;
+        padding: 0px;
+    }
+}

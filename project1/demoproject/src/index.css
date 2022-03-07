@@ -1,0 +1,232 @@
+:root {
+  --primary: #04a59b;
+  --primaryLight: #41d0cb;
+  --secondary: #ff7c00;
+  --base: #f0f3f3;
+  --baseDark: #c7d1d1;
+  --white: #ffffff;
+  --black: #000;
+  --dark: #3b4247;
+  --darkLight: #45b43b;
+  --blackOveray: rgba(0, 0, 0, 0.54);
+
+  /*Typography*/
+
+  --fontXL: 1.5rem;
+  --fontXL: 1.5rem;
+  --fontLG: 1.25rem;
+  --fontMD: 1rem;
+  --fontSM: 0.875rem;
+  --fontXS: 0.75rem;
+  --fontWXL: 600;
+  --fontWLG: 500;
+  --fontWMD: 400;
+  --textLightBlack: rgba(0, 0, 0, 0.56);
+
+  /*Borders*/
+  --brdrColor: rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--base);
+  color: var(--dark);
+  font-size: var(--fontSM);
+}
+code {
+  font-family: source-code-pro, Menlo, Monanco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-break: break-word;
+}
+h1,
+h2,
+h3 {
+  font-weight: var(--fontWMD);
+}
+
+h1 {
+  font-size: var(--fontXL);
+}
+h2 {
+  font-size: var(--fontLG);
+}
+h3 {
+  font-size: var(--fontMD);
+}
+
+.flexCol {
+  display: flex;
+  flex: none;
+  width: 100%;
+  flex-direction: column;
+}
+.flexRow {
+  display: flex;
+  flex: none;
+  width: 100%;
+}
+.resRowCol {
+  display: flex;
+  flex-direction: row;
+  flex: none;
+  width: 100%;
+}
+.resflexColRow {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  width: 100%;
+}
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+}
+.flexMinWidth {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+.flexMinWidthCol {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+}
+.flexAuto {
+  display: flex;
+  flex: none;
+  min-width: 24px;
+}
+
+/*Containers*/
+.baseCntnr {
+  width: 100%;
+  min-height: 100%;
+}
+.mainCntnr {
+  width: 100%;
+  position: relative;
+}
+.contentCntnr {
+  width: 100%;
+  padding-top: 56px;
+  margin: 0;
+}
+.fxdTopHdr {
+  position: fixed;
+  height: 56px;
+  width: 100%;
+  background-color: var(--white);
+  z-index: 999;
+}
+/* .fxdLeftNav    { position: fixed; width: 6rem; height: 100%; z-index: 1000;background-color: var(--white); } */
+.resSideNav {
+  transform: translateX(0);
+}
+
+/*Borders*/
+.brdrBottomMD {
+  border-bottom: 2px solid var(--brdrColor);
+}
+.brdrBottomSM {
+  border-bottom: 1px solid var(--brdrColor);
+}
+.brdrRightMD {
+  border-right: 2px solid var(--brdrColor);
+}
+.brdrRightSM {
+  border-right: 1px solid var(--brdrColor);
+}
+
+/*Alignments*/
+.alignCntr {
+  align-items: center;
+}
+.alignEnd {
+  align-items: flex-end;
+}
+.jcCntr {
+  justify-content: center;
+}
+.jcEnd {
+  justify-content: flex-end;
+}
+.jcBetween {
+  justify-content: space-between;
+}
+.jcAround {
+  justify-content: space-around;
+}
+.jcEvenly {
+  justify-content: space-evenly;
+}
+
+/* PADDINGS */
+.pdngHztlMD { padding: 0 1.0rem }
+.pdngMD {padding: 1.0rem;}
+.pdl{padding-left: 4rem;}
+
+/* RESPONSIVE PADDINGS */
+.respdngSM { padding: 0.5rem; }
+.respdngMD { padding: 1.0rem; }
+
+/* SMALL TABS */
+@media (min-width: 768px) and (max-width: 1112px) {
+
+}
+
+/* LARGE TAPS & SAMLL LAPTOPS */
+@media (min-width: 1113px) and (max-width: 1366px) {
+	.respdngSM { padding: 0.75rem; }
+	.respdngMD { padding: 1.5rem; }
+	
+}
+/* LARGE DEVICES */
+@media (min-width: 1367px) {
+	.respdngSM { padding: 0.75rem; }
+	.respdngMD { padding: 1.5rem; }
+}
+
+
+
+
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+hr {
+  background-color: #000;
+}
+
+

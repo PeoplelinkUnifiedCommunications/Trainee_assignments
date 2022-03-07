@@ -6,10 +6,12 @@ import SideNav from './SideNav/SideNav';
 
 const App = ()=>{
  const [value, setValue] = useState(0)
-
+console.log(value)
  const onChangeValue = (props) =>{
   setValue(props)
 }
+
+
 
   return (
     <div className="App">
@@ -17,6 +19,7 @@ const App = ()=>{
       <SideNav onChangeValue={onChangeValue} />
       <Header value={value}/>
       </div>
+      
     </div>
   );
 }

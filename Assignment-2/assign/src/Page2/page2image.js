@@ -1,9 +1,11 @@
 import React from 'react'
 import Page2Bottom from '../Page2Bottem/Page2Bottom'
+import ReactImageMagnify from 'react-image-magnify';
+
 import './Page2image.css'
 
 
-const Page2image = () => {
+const Page2image = (props) => {
     return (
         <div className='main'>
         <div className='Heater_image_Container'>
@@ -13,11 +15,30 @@ const Page2image = () => {
             <img className="Image2" src='/Images/img1.png' alt=''></img>
             <img className="Image2" src='/Images/img2.png' alt=''></img>
             </div>
+
             <div className='Heater_image'>
-                <img className="Image1" src='/Images/img1.png' alt=''></img>
+                <div className='magnifier'>
+                <ReactImageMagnify  {...{
+                        smallImage: {
+                            alt: 'Wristwatch by Ted Baker London',
+                            isFluidWidth: true,
+                            src: `${props.selectedData.banner_logo}`,
+                        },
+                        largeImage: {
+                            src: `${props.selectedData.banner_logo}`,
+                            width: 700,
+                            height: 1800
+                        },
+                        enlargedImageContainerDimensions: {
+                            width: '400%',
+                            height: '120%'
+                        }
+                    }} />
+                </div>
+                {/* <img className="Image1" src='/Images/img1.png' alt=''></img> */}
             </div>
             <div className='page2_content'>
-             <h2>Rheem</h2>
+             <h2>{props.selectedData.manufacturer_name}</h2>
              <p>50 Gal.Heat Pump Electric Water Heater</p>
              <span>XE65T10Hd50U1</span>
              <ul>
