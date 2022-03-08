@@ -4,14 +4,13 @@
     padding: 15px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
     font-weight: 500;
 }
-.hints{
-    display: none;
-}
-.on-hover:hover+.hints{
-    display: block;
-    background-color: greenyellow;
+.info-container{
+    
+    display: flex;
+    flex-direction: row;
+    
+    align-self: flex-end;
 }

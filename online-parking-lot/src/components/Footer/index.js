@@ -7,12 +7,15 @@ function Footer(){
         <div className="footer-container">
             <BiCopyright/>
             <p>2021.PeopleLink.All Rights Reserved</p>
-            <AiOutlineInfoCircle className="on-hover" style={{marginLeft:"10px"}}/>
+            <div className="info-container">
+            <AiOutlineInfoCircle className="on-hover" />
             <ul  className="hint" >
                    <li>Name:CH.Surya Gangadhara rao</li>
                    <li>Gmail:gangadhar.ch@peoplelinkvc.com</li>
                    <li>ID:9234</li>
             </ul>
+            </div>
+            
                
             
 		</div>

@@ -1,0 +1,172 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+	--white: #ffffff;
+	--black: #000000;
+	--primary: #4a79fa;
+	--secondary: #ff7c00;
+	--bgColor: #f0f3f3;
+	--iconColor: grey;
+	--dark: #3b4247;
+	--primaryLight: rgb(191, 191, 206);
+	--success: #82ca9d;
+	--iconBg: #b6e7c9;
+
+	--fontXL: 1.5rem;
+	--fontLG: 1.25rem;
+	--fontMd: 1rem;
+	--fontSM: 0.875rem;
+	--fontXs: 0.75rem;
+	--fontWLG: 500;
+	--fontWXL: 600;
+	--fontWMD: 400;
+}
+
+#root {
+	width: 100%;
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	word-break: break-word;
+}
+h1,
+h2,
+h3 {
+	font-weight: var(--fontWLG);
+}
+
+h1,
+h5,
+p {
+	color: var(--dark);
+}
+
+h1 {
+	font-size: var(--fontXL);
+}
+h2 {
+	font-size: var(--fontLG);
+}
+h3 {
+	font-size: var(--fontMd);
+}
+
+.li {
+	margin: 2rem 0;
+}
+
+.flexCol {
+	display: flex;
+	flex: none;
+	flex-direction: column;
+	width: 100%;
+}
+.flexRow {
+	display: flex;
+	flex-direction: row;
+	flex: none;
+	width: 100%;
+}
+.resFlexColRow {
+	display: flex;
+	flex: none;
+	flex-direction: column;
+	width: 100%;
+}
+.flexwrap {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	overflow: hidden;
+}
+
+.flexMinWidth {
+	display: flex;
+	flex: 1;
+	min-width: 0;
+}
+
+.flexMinWidthCol {
+	display: flex;
+	min-width: 0;
+	flex: 1;
+	flex-direction: column;
+}
+
+.flexAuto {
+	display: flex;
+	flex: none;
+	min-width: 10rem;
+}
+
+.flexAutoCol {
+	display: flex;
+	flex-direction: column;
+	flex: none;
+	min-width: 1.5rem;
+}
+.inlineBlock {
+	display: inline-block;
+}
+
+.baseCntr {
+	width: 100%;
+	height: 100%;
+}
+.mainCntr {
+	height: 100%;
+	position: relative;
+	padding: 64px 0 0 0;
+	width: 100%;
+	background-color: var(--bgColor);
+	background-size: cover;
+}
+
+.mainCntr::-webkit-scrollbar {
+	display: none;
+}
+
+.alignCenter {
+	align-items: center;
+}
+
+.justifyCntBtwn {
+	justify-content: space-between;
+}
+.justifyCntCenter {
+	justify-content: center;
+}
+.padLeft {
+	padding-left: 0;
+}

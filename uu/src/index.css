@@ -1,0 +1,25 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#root {
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.flexRow {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.inputSection {
+	width: 25%;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+.productSection {
+	width: 75%;
+	box-sizing: border-box;
+}

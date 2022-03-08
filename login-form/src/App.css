@@ -1,0 +1,47 @@
+.App {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.input-container{
+  
+  display: flex;
+  flex-direction: column;
+  
+  
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.errorMsg{
+  color:red;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+}
+
+
+.button{
+  text-align: right;
+  margin-top: 20px;
+}
+.form{
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 30vh;
+  background-color: #17ebe0;
+  padding: 10px;
+  border-radius: 10px;
+  
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+

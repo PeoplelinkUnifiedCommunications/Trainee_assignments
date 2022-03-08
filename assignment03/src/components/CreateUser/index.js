@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 
 const CreateUser=({list,addData})=> {
+  
   const navigation = useNavigate()
     let [name,setName]=useState("")
     let [email,setEmail]= useState("")

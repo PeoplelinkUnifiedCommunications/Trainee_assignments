@@ -1,0 +1,457 @@
+{
+  "productData": [],
+  "tableData": [
+    {
+      "id": 1,
+      "img": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868861/mobile_jwbzyk.jpg",
+      "text": "News Mobile App UI KIT F...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 2,
+      "img": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868835/landing_pnqscx.jpg",
+      "text": "40+ Landing Page Temp...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 3,
+      "img": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868689/doctor_gjwr7e.jpg",
+      "text": "Doctor Consultion UI KIT ...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 4,
+      "img": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868945/startup_lutyln.png",
+      "text": "Startup Illustration UI KIT Ve...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 5,
+      "img": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643868732/extra_wjny0b.jpg",
+      "text": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 6,
+      "img": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643869340/case_p6wkpn.jpg",
+      "text": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 7,
+      "img": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643869370/demo_cnhptq.jpg",
+      "text": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 8,
+      "img": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643869381/learn_pkxmtr.jpg",
+      "text": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 9,
+      "img": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643869393/trust_rkcfql.jpg",
+      "text": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    },
+    {
+      "id": 10,
+      "img": "https://res.cloudinary.com/dwvklyiwo/image/upload/v1643869405/web_njzza6.jpg",
+      "text": "News Extra App UI KIT...",
+      "status": "Active",
+      "sold": 10,
+      "view": 320
+    }
+  ],
+  "viewsData": [
+    {
+      "id": 1,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219519/bag_pdgcbi.jpg",
+      "product": "BAG",
+      "views": 2308,
+      "sells": 899,
+      "users": 523
+    },
+    {
+      "id": 2,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219510/bike_kjw4je.jpg",
+      "product": "BIKE",
+      "views": 70748,
+      "sells": 9647,
+      "users": 800
+    },
+    {
+      "id": 3,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219498/bulb_lygzqg.jpg",
+      "product": "BULB",
+      "views": 9844,
+      "sells": 4925,
+      "users": 2440
+    },
+    {
+      "id": 4,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219489/cap_bfn5yk.jpg",
+      "product": "CAP",
+      "views": 56855,
+      "sells": 8079,
+      "users": 769
+    },
+    {
+      "id": 5,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219482/car_lhuiak.jpg",
+      "product": "CAR",
+      "views": 8454,
+      "sells": 4122,
+      "users": 2455
+    },
+    {
+      "id": 6,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219471/charger_tufzz6.jpg",
+      "product": "CHARGER",
+      "views": 7061,
+      "sells": 4689,
+      "users": 1263
+    },
+    {
+      "id": 7,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219461/earphones_ulcjee.jpg",
+      "product": "EARPHONES",
+      "views": 68872,
+      "sells": 23599,
+      "users": 5764
+    },
+    {
+      "id": 8,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219452/fan_qshrbk.jpg",
+      "product": "FAN",
+      "views": 21890,
+      "sells": 9232,
+      "users": 5433
+    },
+    {
+      "id": 9,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219440/laptop_e18ouo.jpg",
+      "product": "LAPTOP",
+      "views": 35202,
+      "sells": 45859,
+      "users": 5959
+    },
+    {
+      "id": 10,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219432/phone_kzvkvg.jpg",
+      "product": "PHONE",
+      "views": 64452,
+      "sells": 24549,
+      "users": 9322
+    },
+    {
+      "id": 11,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219420/scooty_phwy4z.jpg",
+      "product": "SCOOTY",
+      "views": 24547,
+      "sells": 12459,
+      "users": 2420
+    },
+    {
+      "id": 12,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219413/shoes_acuysf.jpg",
+      "product": "SHOES",
+      "views": 21544,
+      "sells": 9525,
+      "users": 4254
+    },
+    {
+      "id": 13,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219398/slippers_gkrhct.jpg",
+      "product": "SLIPPERS",
+      "views": 42452,
+      "sells": 25459,
+      "users": 5452
+    },
+    {
+      "id": 14,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219388/tv_q1c35j.jpg",
+      "product": "TV",
+      "views": 24424,
+      "sells": 9424,
+      "users": 2452
+    },
+    {
+      "id": 15,
+      "imgUrl": "https://res.cloudinary.com/dh89405xe/image/upload/v1644219375/watch_ctwzzg.jpg",
+      "product": "WATCH",
+      "views": 18424,
+      "sells": 9445,
+      "users": 4259
+    }
+  ],
+  "ViewsAndSells": [
+    {
+      "id": 1,
+      "views": 5400,
+      "users": 1200,
+      "products": 8000,
+      "sales": 4000,
+      "date": "2022-02-09"
+    },
+    {
+      "id": 2,
+      "views": 3000,
+      "users": 1800,
+      "products": 2000,
+      "sales": 1440,
+      "date": "2022-02-08"
+    },
+    {
+      "id": 3,
+      "views": 3800,
+      "users": 2000,
+      "products": 4000,
+      "sales": 1840,
+      "date": "2022-02-07"
+    },
+    {
+      "id": 4,
+      "views": 2800,
+      "users": 2000,
+      "products": 3000,
+      "sales": 1040,
+      "date": "2022-02-06"
+    },
+    {
+      "id": 5,
+      "views": 1200,
+      "users": 1200,
+      "products": 1800,
+      "sales": 1440,
+      "date": "2022-02-05"
+    },
+    {
+      "id": 6,
+      "views": 8450,
+      "users": 8000,
+      "products": 9000,
+      "sales": 1440,
+      "date": "2022-02-04"
+    },
+    {
+      "id": 7,
+      "views": 7000,
+      "users": 6200,
+      "products": 8800,
+      "sales": 5440,
+      "date": "2022-02-03"
+    },
+    {
+      "id": 8,
+      "views": 2200,
+      "users": 4200,
+      "products": 8000,
+      "sales": 1040,
+      "date": "2022-02-02"
+    },
+    {
+      "id": 9,
+      "views": 9800,
+      "users": 1700,
+      "products": 2000,
+      "sales": 2000,
+      "date": "2022-02-01"
+    },
+    {
+      "id": 10,
+      "views": 3908,
+      "users": 3800,
+      "products": 4890,
+      "sales": 2780,
+      "date": "2022-01-31"
+    },
+    {
+      "id": 11,
+      "views": 4800,
+      "users": 3580,
+      "products": 4580,
+      "sales": 1580,
+      "date": "2022-01-29"
+    },
+    {
+      "id": 12,
+      "views": 3000,
+      "users": 1200,
+      "products": 2000,
+      "sales": 1440,
+      "date": "2022-01-28"
+    },
+    {
+      "id": 13,
+      "views": 3800,
+      "users": 3400,
+      "products": 2800,
+      "sales": 2390,
+      "date": "2022-01-27"
+    },
+    {
+      "id": 14,
+      "views": 4300,
+      "users": 4200,
+      "products": 5000,
+      "sales": 3490,
+      "date": "2022-01-21"
+    },
+    {
+      "id": 15,
+      "views": 3029,
+      "users": 3100,
+      "products": 2900,
+      "sales": 2899,
+      "date": "2022-01-14"
+    },
+    {
+      "id": 16,
+      "views": 4002,
+      "users": 3260,
+      "products": 5300,
+      "sales": 3283,
+      "date": "2022-01-07"
+    },
+    {
+      "id": 17,
+      "views": 3022,
+      "users": 1200,
+      "products": 2800,
+      "sales": 2234,
+      "date": "2022-01-04"
+    },
+    {
+      "id": 18,
+      "views": 3748,
+      "users": 5400,
+      "products": 5000,
+      "sales": 2898,
+      "date": "2021-12-26"
+    },
+    {
+      "id": 19,
+      "views": 4389,
+      "users": 3700,
+      "products": 5400,
+      "sales": 3911,
+      "date": "2021-12-15"
+    },
+    {
+      "id": 20,
+      "views": 4432,
+      "users": 3200,
+      "products": 2300,
+      "sales": 2091,
+      "date": "2021-11-21"
+    },
+    {
+      "id": 21,
+      "views": 4854,
+      "users": 1900,
+      "products": 4550,
+      "sales": 3295,
+      "date": "2021-11-01"
+    },
+    {
+      "id": 22,
+      "views": 4723,
+      "users": 5120,
+      "products": 4780,
+      "sales": 3490,
+      "date": "2021-10-27"
+    },
+    {
+      "id": 23,
+      "views": 4292,
+      "users": 4310,
+      "products": 7880,
+      "sales": 3932,
+      "date": "2021-09-17"
+    },
+    {
+      "id": 24,
+      "views": 4928,
+      "users": 5610,
+      "products": 6800,
+      "sales": 3928,
+      "date": "2021-08-10"
+    },
+    {
+      "id": 25,
+      "views": 3844,
+      "users": 3100,
+      "products": 4800,
+      "sales": 3231,
+      "date": "2021-07-18"
+    },
+    {
+      "id": 26,
+      "views": 3984,
+      "users": 6310,
+      "products": 6800,
+      "sales": 3144,
+      "date": "2021-06-18"
+    },
+    {
+      "id": 27,
+      "views": 4300,
+      "users": 3100,
+      "products": 6800,
+      "sales": 3120,
+      "date": "2021-05-18"
+    },
+    {
+      "id": 28,
+      "views": 2001,
+      "users": 2907,
+      "products": 5478,
+      "sales": 1244,
+      "date": "2021-04-18"
+    },
+    {
+      "id": 29,
+      "views": 2467,
+      "users": 7900,
+      "products": 9800,
+      "sales": 1883,
+      "date": "2021-03-13"
+    },
+    {
+      "id": 30,
+      "views": 2618,
+      "users": 1700,
+      "products": 6880,
+      "sales": 2018,
+      "date": "2021-02-18"
+    },
+    {
+      "id": 31,
+      "views": 2891,
+      "users": 4120,
+      "products": 7800,
+      "sales": 2093,
+      "date": "2021-01-18"
+    }
+  ]
+}

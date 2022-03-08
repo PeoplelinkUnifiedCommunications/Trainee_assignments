@@ -1,0 +1,86 @@
+.fxdTopHdr {
+    position: fixed;
+     height: 56px; 
+     width: 100%; 
+     background-color: var(--white);
+     z-index:999;}
+
+.headerCntnr{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon{
+    font-size: 1.5rem;
+    color: black;
+}
+
+.searchCntnr{
+    background-color: #F6F7F9;
+    padding: 1rem;
+    margin-left: 2.4rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+.search{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+}
+.buttonCntnr{
+    background-color: #438FFD;
+    color: var(--white);
+    height: 2rem;
+    width: 5rem;
+    border: none;
+}
+
+.iconCntnr{
+    display: flex;
+    width: 2rem;
+    height: 1rem;
+    position: relative;
+}
+
+
+.dropdown{
+    border:none;
+    background-color: transparent;
+}
+
+.Card {
+	list-style-type: none;
+	position: absolute;	
+    background-color: cornflowerblue;
+    top:3rem;
+	right: 1.5rem;
+	border: 1px solid var(--dark);
+	z-index: 10000;
+	border-radius: 5px;
+    color: black;
+}
+
+.List {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	border-bottom: 1px solid var(--black);
+	width: 200px;
+	cursor: pointer;
+}
+.lastItem {
+	border: none;
+}
+.mainRefCntnr {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: transparent;
+	z-index: 22;
+}

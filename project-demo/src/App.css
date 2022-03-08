@@ -1,0 +1,67 @@
+.sideImage{
+  margin:2rem 0;
+  font-size: 1.5rem;
+}
+.active{
+  color: blue;
+}
+.sideButton {
+  border:none;
+  background-color: transparent;
+  margin:2rem;
+  font-size: 1.5rem;
+}
+.fxdLeftNavExtend{
+  position: fixed;
+  width: 10rem; 
+  height: 100%; 
+  z-index: 1000;
+  background-color: var(--white);
+  padding-bottom: 100px;
+}
+@media(min-width:340px) and (max-width:600px){
+
+  .fxdLeftNav{
+      width: 4rem;
+  }
+  .dashboardCntnr {
+      margin-left: 5rem;
+      padding: 0px;
+  }
+}
+
+.main-app {
+  margin: 2% 10%;
+  border: 1px ridge #464141;
+  padding: 5%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  color: #464141;
+ }
+  
+ .container {
+  border-bottom: #fff 2px ridge;
+ }
+  
+    .pagination {
+      margin-top: 45px;
+      margin-left: -40px;
+      display: flex;
+      list-style: none;
+      outline: none;
+    }
+      .activeLink{
+        background-color: #47ccde;
+      color: #fff;
+      }
+    .order{
+      list-style-type: none;
+    }
+      
+    .pagination li {
+      border: 1px solid #47ccde;
+      padding: 5px 10px;
+      outline: none;
+      cursor: pointer;
+    }
+    

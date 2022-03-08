@@ -1,0 +1,24 @@
+.slider-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 24%;
+  }
+.location-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.range-par{
+    background-color:#EEEEEE;
+    height:100%;
+    color:#00B098;
+    width:50%;
+    text-align:center;
+    margin-top: 0px;
+}
+.button-container{
+    height: 50px;
+    width: 70%;
+    display: flex;
+}

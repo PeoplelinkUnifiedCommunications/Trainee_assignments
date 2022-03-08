@@ -1,14 +1,17 @@
 import React,{useState,useEffect} from 'react';
 import ListItem from './components/ListItem';
+import axios from 'axios'
 import './App.css';
 
 function App() {
   const [dataList,setData]=useState([])
   useEffect(()=>{
-    const url="https://jsonplaceholder.typicode.com/posts";
-    fetch(url).then(response=>response.json())
-    .then(data=>setData(data))
+    const url="https://jsonplaceholder.typicode.com/posts?limit=5";
+    axios.get(url)
+    .then(resp=>setData(resp.data))
+
   },[])
+  console.log(dataList)
   return (
     <div className="App">
       <h1>Fetch API's calls Using useEffect</h1>
@@ -18,6 +21,8 @@ function App() {
                 <h1 className='item'>ID</h1>
                 <h1>Title</h1>
               </li>
+              
+              {/* <ListItem List={dataList} /> */}
               {dataList && dataList.map(each=><ListItem key={each.id} List={each}/>)}
             </ul>
       </div>

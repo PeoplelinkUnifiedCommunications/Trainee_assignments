@@ -1,0 +1,339 @@
+.mainHeading {
+	color: #00b098;
+	font-size: 25px;
+}
+
+.inputFields {
+	height: 40px;
+	width: 100%;
+}
+.inputFields1 {
+	display: flex;
+	align-items: center;
+	height: 46px;
+	border-color: grey;
+	border-style: solid;
+	border-width: 1px;
+}
+.textInput {
+	outline: none;
+	height: 40px;
+	width: 50%;
+}
+.selectInput {
+	height: 46px;
+	border-left: none;
+	outline: none;
+	background-color: transparent;
+}
+.search-icon {
+	border: 1px solid #00b098;
+	background-color: #00b098;
+	height: 45px;
+	border-radius: 5px;
+}
+.rangeInput {
+	width: 50%;
+}
+.yes-no {
+	background-color: transparent;
+	border-width: 1px;
+	height: 40px;
+	width: 160px;
+	border-radius: 5px;
+}
+
+.product {
+	width: 80px;
+	height: 180px;
+}
+
+.colors {
+	color: #003963;
+	color: #00b098;
+	color: #f68d39;
+	color: #dd2200;
+	color: #eeeeee;
+}
+
+.header {
+	margin: 0;
+	color: white;
+	font-size: 20px;
+}
+.headerSec {
+	display: flex;
+	height: 40px;
+	justify-content: center;
+	background-color: #0e3a16d0;
+	align-items: center;
+}
+.subb {
+	padding: 1rem;
+	background-color: #eeeeee;
+}
+.cardContainer {
+	display: flex;
+}
+.productCard {
+	background-color: white;
+	margin-right: 20px;
+	box-shadow: 0px 4px 20px rgba(7, 7, 7, 0.8);
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+.ProHeading {
+	font-size: 15px;
+}
+.nameRating {
+	padding: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: black;
+	color: white;
+}
+
+.rating {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.imageListItem {
+	display: flex;
+	padding: 10px 10px;
+}
+.listItem {
+	padding-bottom: 15px;
+	padding-right: 20px;
+}
+.imgPrice {
+	padding: 20px;
+}
+
+.head {
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+h1 {
+	font-size: 20px;
+}
+.saving {
+	border: 2px solid #0e3a16d0;
+	border-radius: 5px;
+	text-align: center;
+	padding: 10px 0;
+}
+.buttonDiv {
+	display: flex;
+	justify-content: center;
+}
+.quote {
+	background-color: #f68d39;
+	color: white;
+	width: 160px;
+	height: 40px;
+	border: 0px;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.footerButton {
+	background-color: #eeeeee;
+	display: flex;
+	justify-content: center;
+}
+.detailsButton {
+	background-color: transparent;
+	border: none;
+	color: blue;
+	padding: 8px;
+}
+.see {
+	border: 1px solid blue;
+	background-color: transparent;
+	color: blue;
+}
+.see1 {
+	background-color: transparent;
+	color: blue;
+}
+.subHead {
+	color: grey;
+}
+.miniHead {
+	color: #0e3a16d0;
+}
+
+.descCard {
+	display: flex;
+}
+.card {
+	width: 22%;
+	margin: 0 0 0 20px;
+}
+.working {
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0px 4px 20px rgba(7, 7, 7, 0.8);
+}
+.btnCon {
+	border-bottom: 1px solid grey;
+}
+.imgCon {
+	display: flex;
+	justify-content: center;
+}
+.workImg {
+	width: 800px;
+	text-align: center;
+}
+.proCom {
+	width: 140px;
+	height: 40px;
+	background-color: transparent;
+	border: none;
+	font-weight: bold;
+}
+.process {
+	font-size: 15px;
+	color: #0e3a16d0;
+	border-bottom: 3px solid #0e3a16d0;
+}
+
+.popupContainer {
+	width: 80vw;
+	font-family: sans-serif;
+	height: 80vh;
+	overflow-y: auto;
+	background-color: #eeeeee;
+	padding: 1rem;
+}
+.navBtnCon {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 40px;
+}
+
+.flexRow1 {
+	display: flex;
+}
+.navBtn {
+	display: flex;
+	background-color: white;
+	border: none;
+	height: 100%;
+	padding: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 120px;
+}
+.span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #00b098;
+	height: 40px;
+	width: 40px;
+	border-radius: 5px;
+}
+.addon {
+	margin-left: 10px;
+}
+.navText {
+	width: 80px;
+}
+.flexRowCenter {
+	display: flex;
+}
+.flexRowCenter1 {
+	display: flex;
+	height: 70px;
+	padding: 10px;
+}
+.flexRowCenter2 {
+	display: flex;
+	flex-direction: column;
+	height: 70px;
+	padding: 10px;
+}
+.content {
+	margin: 20px 0px;
+}
+.flexRowHead {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+}
+.thumbNailCont {
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	padding-right: 10px;
+}
+.imgOutline {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 3px;
+	width: 55px;
+	height: 55px;
+	border: 1px solid black;
+}
+.imgStyle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30%;
+	height: 400px;
+	box-shadow: 0px 2px 10px rgba(7, 7, 7, 0.8);
+	background-color: white;
+}
+.popupData {
+	padding: 20px;
+}
+.rate {
+	margin: 0;
+	font-size: 35px;
+}
+.rate1 {
+	margin: 0;
+}
+.line {
+	display: flex;
+	width: 2px;
+}
+.unordlist {
+	width: 60%;
+}
+.dataCards {
+	border: 1px solid grey;
+	border-radius: 5px;
+	width: 48%;
+	margin: 5px;
+}
+.cardsCont {
+	width: 75%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cardHead {
+	color: white;
+	background-color: #0e3a16d0;
+	margin: 0;
+}
+.cardPara {
+	padding: 10px;
+	margin: 0;
+}
+
+.thumbnail {
+	width: 30px;
+	height: 50px;
+}
+.prices {
+	padding-left: 15px;
+}
