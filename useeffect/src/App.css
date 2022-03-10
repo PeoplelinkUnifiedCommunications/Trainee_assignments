@@ -1,15 +1,19 @@
 .App {
-  text-align: center;
+	text-align: center;
+	display: flex;
+}
+.appointments-list {
+	width: 40%;
 }
 
-.un-order{
-  display: flex;
-  flex-direction: column;
+.un-order {
+	display: flex;
+	flex-direction: column;
 }
-.list-item{
-  list-style-type: none;
-  display: flex;
+.list-item {
+	list-style-type: none;
+	display: flex;
 }
-.item{
-  margin-right: 10px;
+.item {
+	margin-right: 10px;
 }
