@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.formDivContainer{
+  width: 100%;
+  display: flex;
+  flex: none;
+  justify-content: center;
+  padding: 30px;
+
+}
+
+.app-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapperContainer{
+  display: flex;
+  flex: none;
+  justify-content: space-around;
+  /* justify-content: space-between; */
+}
+
+.formHeading {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-left: 0.8rem;
+}
+
+form{
+   padding-left: 20px;
+}
+
+h1,
+p {
+  font-family: Lato;
+}
+
+.formwrappedContainer {
+  margin-bottom: 1.5rem;
+  width: 500px;
+}
+
+.formContainer {
+  width: 100%;
+  display: flex;
+
+}
+
+.formContainer label {
+  font-size: 1.3rem;
+  padding-right: 1rem;
+  width: 8rem;
+  padding-left: 0.3rem;
+}
+
+.firstNameInput {
+  width: 100%;
+  height: 2.4rem;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+}
+
+.errorMessageContainer {
+  text-align: center;
+  padding-top: 0.5rem;
+  color: red;
+}
+
+.genderInformationContainer {
+  display: flex;
+}
+
+.radioInformation {
+  display: flex;
+}
+
+
+.buttonContainer button {
+  height: 3rem;
+  width: 6rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  border-width: 0;
+}
+
+.tableInformationContainer {
+  padding-top: 0.4rem;
+  margin-bottom: 2.5rem;
+  /* width: 50%; */
+  width: 800px;
+  /* padding-left: 30px; */
+  margin-left: 30px;
+}
+
+table{
+  width: 100%;
+  margin: auto;
+}
+
+table,
+td,
+th {
+  border: 2px solid white;
+  border-collapse: collapse;
+  height: 2.5rem;
+  /* width: 50rem; */
+  /* width: 20rem; */
+}
+
+th {
+  background-color: brown;
+  color: white;
+  /* width: 50rem; */
+}
+
+td,
+th {
+  padding-left: 0.6rem;
+  /* font-size: 15px; */
+}
+
+td{
+  font-size: 17px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.image-width{
+  width:80px;
+  height: 80px;
+}
