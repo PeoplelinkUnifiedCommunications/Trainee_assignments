@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use("/users", route)
 
-const CONNECTION_URL = "mongodb+srv://chinnababu:chinna143@cluster0.mrppy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const CONNECTION_URL = "MONGODB CONNECTION URL"
 
 mongoose.connect(CONNECTION_URL,{useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => app.listen(5000, (() => {
