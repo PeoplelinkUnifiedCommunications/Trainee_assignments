@@ -1,0 +1,239 @@
+import React, { useState, useEffect } from 'react';
+import './style.css';
+import Table from './Table';
+import Form from './Form';
+
+import EditForm from './EditForm';
+import axios from 'axios'
+
+const userData = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  role: "",
+  phone: '',
+  company: '',
+  gender: '',
+  dob: '',
+  password: '',
+  confirmPassword: '',
+};
+
+const resetDetails = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  role: '',
+  phone: '',
+  company: '',
+  gender: '',
+  dob: '',
+  password: '',
+  confirmPassword: '',
+};
+
+
+export default function App() {
+
+  const [isSubmit, setIsSubmit] = useState(false);
+  const [userDetails, setUserDetails] = useState(userData);
+  const [formError, setFormError] = useState({});
+
+  const [editObject, setEditObject] = useState({})
+  const [editClicked, setEditClicked] = useState(false)
+
+  const [userdetails, setUserdetails] = useState([])
+  const [check1, setCheck1] = useState(false)
+  const [check2, setCheck2] = useState(false)
+
+  const getDetails = () => {
+    const response = axios.get("http://localhost:8100/")
+      .then((response) => {
+        setUserdetails(response.data)
+      }).catch((error) => console.log(error.message))
+  }
+
+  const fetchDetails = async () => {
+    try {
+      const dResponse = await axios.post("http://localhost:8100/", userDetails)
+      getDetails()
+      setCheck1(false)
+      setCheck2(false)
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
+  useEffect(() => {
+    console.log(userDetails)
+    getDetails()
+    if (Object.keys(formError).length === 0 && isSubmit) {
+      fetchDetails()
+      setUserDetails(resetDetails);
+    }
+  }, [isSubmit]);
+
+  const userInput = (e) => {
+    const { name, value } = e.target;
+    setUserDetails({ ...userDetails, [name]: value });
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+    setFormError(validateError(userDetails));
+    setIsSubmit(true);
+  };
+
+  const cancelFn = () => {
+    setUserDetails(resetDetails);
+    setFormError('');
+  };
+
+  const editFormCancelFunction = () => {
+    setEditClicked(false)
+    cancelFn()
+  }
+
+  const deleteFunction = async (_id) => {
+    const newData = [...userdetails];
+    const index = userdetails.findIndex((data) => data._id === _id);
+    newData.splice(index, 1);
+
+    try {
+      const deleteResponse = await axios.delete(`http://localhost:8100/${_id}`)
+      getDetails()
+    } catch (error) {
+      console.log(error.message)
+    }
+  };
+
+  const updateFunction = (_id) => {
+    const index = userdetails.findIndex((data) => data._id === _id);
+    setEditObject(userdetails[index]);
+    setEditClicked(true)
+    getDetails()
+    console.log(editObject)
+  };
+
+  const updatedEmployee = async (_id, updatedEmployee) => {
+    setUserdetails(userdetails.map((eachItem) => eachItem._id === _id ? updatedEmployee : eachItem))
+    setEditClicked(false);
+    try {
+      const updateDetail = await axios.patch(`http://localhost:8100/${_id}`, updatedEmployee)
+      getDetails()
+
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
+  const validateError = (inputs) => {
+    const error = {};
+
+    if (inputs.firstName === '') {
+      error.firstName = '*First Name required';
+    }
+
+    if (inputs.lastName === '') {
+      error.lastName = '*Last Name required';
+    }
+
+    if (inputs.email === '') {
+      error.email = '*Email required';
+    }
+
+    userdetails.filter(each => {
+      if (each.email === userDetails.email) {
+        error.email = `Email id with ${userDetails.email} already exists`
+      }
+    })
+
+    if (inputs.phone === '') {
+      error.phone = '*Phone Number required';
+    }
+
+    userdetails.filter(each => {
+      if (each.phone === userDetails.phone) {
+        error.phone = `Mobile number already exists`
+      }
+    })
+
+    if (inputs.company === '') {
+      error.company = '*Company Name required';
+    }
+
+    if (inputs.gender === '') {
+      error.gender = '*Gender required';
+    }
+
+    if (inputs.dob === '') {
+      error.dob = '*DOB required';
+    }
+
+    if (inputs.role === '') {
+      error.role = '*Select Option';
+    }
+
+    if (inputs.password === '') {
+      error.password = '*Password required';
+    }
+
+    if (inputs.confirmPassword === '') {
+      error.confirmPassword = '*Confirm Password required';
+    }
+
+    if (inputs.password !== inputs.confirmPassword) {
+      error.passwordMatching = "Password doesn't match";
+    }
+    return error;
+  };
+
+  return (
+    <div className="mainContainer">
+      <div>
+        {editClicked ? <EditForm
+          userDetails={userDetails}
+          updatedObject={editObject}
+          updatedEmployee={updatedEmployee}
+          editFormCancelFunction={editFormCancelFunction}
+        />
+          :
+          <Form setCheck1={setCheck1}
+            setCheck2={setCheck2}
+            check1={check1}
+            check2={check2}
+            userDetails={userDetails}
+            userInput={userInput}
+            formError={formError}
+            submit={submit}
+            cancelFn={cancelFn}
+            setUserDetails={setUserDetails}
+          />}
+      </div>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Profile Pic</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>DOB</th>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {userdetails.map(eachData => (
+              <Table key={eachData._id} details={eachData} deleteFunction={deleteFunction} updateFunction={updateFunction} />
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
