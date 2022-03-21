@@ -1,0 +1,126 @@
+.formApp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato";
+    width: 100%;
+}
+.formInput{
+    height: 25px;
+    width: 200px;
+    margin-left: 60px;
+}
+.selectInput{
+    height: 30px;
+    width: 205px;
+    margin-left: 60px;   
+}
+
+.formLabel{
+    font-size: 20px;
+    color: black;
+}
+.formHead{
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+.formDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+.divSpanC{
+    display: flex;
+    flex-direction: column;
+}
+.errorMessage{
+    color: #500c0c;
+    font-size: 18px;
+    margin-left: 70px;
+    margin-bottom: 5px;
+
+}
+.genderErrorMessage{
+    color: #500c0c;
+    font-size: 18px;
+    margin-left: 150px;
+    margin-bottom: 5px;
+
+}
+.formRadioDiv{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+
+.radioDiv{
+    margin-left: 150px;
+}
+
+.maleB{
+    font-size: 19px;
+    margin-right: 10px;
+}
+.formRegister{
+    background-color: transparent;
+    border: 2px solid maroon;
+    height: 40px;
+    width: 100px;
+    color: black;
+    font-size: 18px;
+    margin: 10px;
+}
+.formButtonDiv{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+.termsDiv{
+    margin-left: 50px;
+}
+.checkboxInput{
+    height: 15px;
+    width: 15px;
+}
+.formCheckBoxLabel{
+    font-size: 18px;
+    color: black; 
+    margin-top: 20px;
+    margin-left: 15px;  
+    font-weight: 400;
+}
+
+table{
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+
+}
+th{
+    border: 1px solid white;
+    background-color: maroon;
+    color: white;
+    padding: 10px;
+}
+td{
+    padding: 10px;
+    border: 1px groove #606060;
+}
+button:disabled{
+    background-color: transparent;
+    border: 2px solid #606060;
+    height: 40px;
+    width: 100px;
+    color: #606060;
+    font-size: 18px;
+    margin: 10px;
+}
+.imageSize{
+    height: 50px;
+    width: 50px;
+}
