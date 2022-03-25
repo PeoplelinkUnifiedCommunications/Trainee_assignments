@@ -6,9 +6,9 @@ import Table from "./Components/Table";
 
 import "./index.css"
 
-const tableData = { name: "", email: "", phone: "", dob: "", role: "Frontend", password: "", conform: "" }
+const tableData = { name: "", email: "", phone: "", dob: "", role: "Frontend", password: "", conform: "", imgUrl: "" }
 
-const resetData = { name: "", email: "", phone: "", dob: "", role: "Frontend", password: "", conform: "" }
+const resetData = { name: "", email: "", phone: "", dob: "", role: "Frontend", password: "", conform: "", imgUrl: "" }
 
 
 function App() {
@@ -61,6 +61,8 @@ function App() {
     }
   }
 
+
+
   const onDeleteHandler = async (_id) => {
     try {
       const deleteData = await axios.delete(`http://localhost:8001/${_id}`)
@@ -82,7 +84,7 @@ function App() {
 
   useEffect(() => {
     if (Object.keys(validate).length === 0 && isSubmit) {
-      // setFormData(formData)
+
       detailsPost()
       // console.log(formData)
 
@@ -98,9 +100,7 @@ function App() {
     c.preventDefault()
 
     setValidate(validation(formData))
-    // console.log("create success")
     setIsSubmit(true)
-    // console.log(userData)
   }
 
 
@@ -112,6 +112,7 @@ function App() {
     setFormData({ ...formData, [name]: value })
     // console.log(formData)
   }
+
 
   const resetDataFn = () => {
     setFormData(resetData)
@@ -164,7 +165,7 @@ function App() {
       <div className="main flexRow">
         <div className="lblock flexCol">
 
-          {onEdit ? < Edit editObj={editObj} editCancelFn={editCancelFn} formData={formData} updateForm={updateForm} validation={validation} /> : <Login
+          {onEdit ? < Edit editObj={editObj} setFormData={setFormData} editCancelFn={editCancelFn} updateForm={updateForm} validation={validation} /> : <Login
             create={create}
             inputData={inputData}
             formData={formData}
@@ -182,7 +183,7 @@ function App() {
           <table>
             <thead>
               <tr>
-                <th>DP</th>
+                {/* <th>DP</th> */}
                 <th>NAME</th>
                 <th>EMAIL</th>
                 <th>PHONE</th>

@@ -119,12 +119,12 @@ function Edit({ editObj, editCancelFn, updateForm }) {
                     <input className="input0" type="password" value={conform} id="conform" title="Confirm Password" name="conform" minLength="4" maxLength="20" placeholder="confirm" onChange={(e) => setConform(e.target.value)}  ></input>
                     <span>{val.conform}</span>                    <span>{val.match}</span>
 
-                    {/* 
-                    <input className="input0" type="file" id="file" name="file" onChange={imgUpload}  ></input> */}
+
+                    <input className="input0" type="file" id="file" name="imgUrl"    ></input>
 
                     <div className="buttons flexRow">
                         <button className="input1" type="submit" >Update</button>
-                        <button className="input1" type="reset" onClick={oneditCancel} >Cancel</button>
+                        <button className="inputC" type="reset" onClick={oneditCancel} >Cancel</button>
 
                     </div>
                 </div>

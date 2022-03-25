@@ -1,6 +1,9 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 function Login({ create, inputData, formData, validate, resetDataFn, agree1, accept1, setAgree1, setAccept1, setFormData }) {
+
+
 
     const terminator = () => {
         const { name, email, phone, dob, password, conform } = formData
@@ -12,8 +15,9 @@ function Login({ create, inputData, formData, validate, resetDataFn, agree1, acc
         } else {
             return value = false
         }
-        return value
+        return value;
     }
+
 
     const inputPhoneData = (e) => {
         let mobileNumber = e.target.value
@@ -22,25 +26,21 @@ function Login({ create, inputData, formData, validate, resetDataFn, agree1, acc
         }
     }
 
-    const imgUpload = async (i) => {
-        const files = i.target.files
-        const data = new FormData()
-        data.append("file", files[0])
-        data.append("upload_preset", "sanbarrn")
-        const response = await fetch(
-            "https://api.cloudinary.com/v1_1/daqvoa4bx/upload",
-            {
-                method: "POST",
-                body: data
-            }
-        )
+    const inputDataImg = async (e) => {
+        const imgFile = e.target.files[0]
+        const ImgInst = new FormData()
+        ImgInst.append("file", imgFile)
         try {
-            const image1 = await response.json()
-            setFormData({ ...formData, imgUrl: image1.url })
+            const ImgRes = await axios.post("http://localhost:8001/imgFinal/", ImgInst)
+            setFormData({ ...formData, imgUrl: ImgRes.data.path })
+
         } catch (error) {
             console.log(error.message)
+            console.log(formData)
         }
+
     }
+
 
     return (
         <div className="formContainer flexCol">
@@ -54,7 +54,7 @@ function Login({ create, inputData, formData, validate, resetDataFn, agree1, acc
                 <div className="form1 flexCol">
                     <input className="input0" type="text" id="name" title="Full Name" name="name" value={formData.name} minLength="4" maxLength="20" placeholder="full name" onChange={inputData}></input>
                     <span>{validate.name}</span>
-                    <input className="input0" type="email" id="email" title="Email" name="email" value={formData.email} minLength="10" maxLength="20" placeholder="eg : a@mail.com" onChange={inputData}></input>
+                    <input className="input0" type="email" id="email" title="Email" name="email" value={formData.email} minLength="7" maxLength="20" placeholder="eg : a@mail.com" onChange={inputData}></input>
                     <span>{validate.email}</span>
                     <input className="input0" type="text" id="phone" name="phone" title="Phone Number" value={formData.phone} maxLength="10" placeholder="8888888888" onChange={inputPhoneData}></input>
                     <span>{validate.phone}</span>
@@ -71,7 +71,7 @@ function Login({ create, inputData, formData, validate, resetDataFn, agree1, acc
                     <input className="input0" type="password" id="conform" title="Confirm Password" name="conform" value={formData.conform} minLength="4" maxLength="20" placeholder="confirm password" onChange={inputData}></input>
                     <span>{validate.conform}</span><span>{validate.match}</span>
 
-                    <input className="input0" type="file" id="file" name="file" onChange={imgUpload} ></input>
+                    <input className="input0 " type="file" id="file" name="imgUrl" onChange={inputDataImg} ></input>
                     <div className="checkBox flexRow">
 
                         <input type="checkbox" name="accept" value="accept" id="agree" className="cb" onChange={() => setAccept1(!accept1)} checked={accept1}></input>

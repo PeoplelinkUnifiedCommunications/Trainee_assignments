@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import userDetails from "./model/schema.js";
 import cors from "cors";
+import multer from "multer";
 
 
 const app = express();
@@ -23,10 +24,22 @@ app.get("/", async (req, res) => {
     }
 
 })
-//for AWS s3
-app.get("s3Url", (req, res) => {
 
+const ImageStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'downloads/')
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + "-" + file.originalname)
+    }
 })
+
+const uploadStorage = multer({ storage: ImageStorage })
+
+app.post("/imgFinal", uploadStorage.single("file"), (req, res) => {
+    res.send(req.file)
+})
+
 
 app.post("/", async (req, res) => {
     const requestData = req.body;
@@ -61,6 +74,8 @@ app.delete("/:id", async (req, res) => {
         console.log(error.message)
     }
 })
+
+
 
 const url = "mongodb+srv://ShantanuBiswas:Xx26601234@cluster0.5bhmw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
