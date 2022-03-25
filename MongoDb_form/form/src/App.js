@@ -17,6 +17,7 @@ const userData = {
   dob: '',
   password: '',
   confirmPassword: '',
+  url: ''
 };
 
 const resetDetails = {
@@ -30,6 +31,7 @@ const resetDetails = {
   dob: '',
   password: '',
   confirmPassword: '',
+  url: ''
 };
 
 
@@ -214,7 +216,7 @@ export default function App() {
         <table>
           <thead>
             <tr>
-              <th>Profile Pic</th>
+              {/* <th>Profile Pic</th> */}
               <th>First name</th>
               <th>Last name</th>
               <th>Email</th>

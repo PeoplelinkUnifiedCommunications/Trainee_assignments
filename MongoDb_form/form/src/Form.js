@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-function Form({ submit, userDetails, setUserDetails, userInput, formError, cancelFn, setCheck1, setCheck2, check1, check2}) {
+function Form({ submit, userDetails, setUserDetails, userInput, formError, cancelFn, setCheck1, setCheck2, check1, check2 }) {
   const checking = () => {
     const { firstName, lastName, email, phone, gender, dob, company, role, password, confirmPassword, url } = userDetails
     let val
@@ -13,19 +14,28 @@ function Form({ submit, userDetails, setUserDetails, userInput, formError, cance
     return val
   }
 
-  const imageFunction = async(e) => {
-    const imgFile = e.target.files
-    const imgData = new FormData()
-    imgData.append("file", imgFile[0])
-    imgData.append("upload_preset", "upload")
-    const response = await fetch("https://api.cloudinary.com/v1_1/pawanrayala/upload", {
-      method:"POST",
-      body:imgData
-    })
-    console.log(response)
+  // const imageFunction = async (e) => {
+  //   const file = e.target.files[0]
+  //   setImge(file)
+  //   const imgDetails = new FormData()
+  //   imgDetails.append('file', file)
+  //   try {
+  //     const r = await axios.post('http://localhost:8100/uploads', imgDetails)
+  //     setUserDetails({...userDetails, url: r.data.path})
+  //   } catch (error) {
+  //     console.log(error.message)
+  //   }
+  // }
+
+  const imageFunction = async (e) => {
+    const file = e.target.files[0]
+    const imgDetails = new FormData()
+    imgDetails.append('file', file)
+
     try {
-      const img = await response.json()
-      setUserDetails({...userDetails, url: img.url})
+      const r = await axios.post("http://localhost:8100/uploads/", imgDetails)
+      setUserDetails({ ...userDetails, url: r.data.path })
+
     } catch (error) {
       console.log(error.message)
     }
@@ -33,14 +43,14 @@ function Form({ submit, userDetails, setUserDetails, userInput, formError, cance
 
   const mobileNumberValidation = (e) => {
     const mobile = e.target.value
-    if(Number(mobile) || mobile === ""){
-      setUserDetails({...userDetails, phone: mobile})
+    if (Number(mobile) || mobile === "") {
+      setUserDetails({ ...userDetails, phone: mobile })
     }
   }
-  
+
   return (
     <div>
-      <form className="flexCol centerAlignment" onSubmit={submit}>
+      <form className="flexCol centerAlignment" onSubmit={submit} encType='multipart/form-data'>
         <div className="flexRow container">
           <label htmlFor="firstName" className="labels">
             First Name
@@ -245,7 +255,7 @@ function Form({ submit, userDetails, setUserDetails, userInput, formError, cance
         <div>
           <div className="flexCol">
             <input
-              id="upload"
+              id="url"
               type="file"
               name="url"
               style={{ marginTop: "0.5rem" }}

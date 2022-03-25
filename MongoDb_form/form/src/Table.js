@@ -12,7 +12,8 @@ function Table({details, deleteFunction, updateFunction }) {
 
   return (
     <tr>
-      <td><img src={details.url} alt="profile"/></td>
+      {/* <td><img src={details.url} alt="profile"/></td> */}
+      {/* <td>{details.url}</td> */}
       <td>{details.firstName}</td>
       <td>{details.lastName}</td>
       <td>{details.email}</td>

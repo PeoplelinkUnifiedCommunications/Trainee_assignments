@@ -4,9 +4,11 @@
   "private": true,
   "proxy": "http://localhost: 8100",
   "dependencies": {
+    "@aws-amplify/cli": "^7.6.25",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "aws-amplify": "^4.3.16",
     "axios": "^0.26.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

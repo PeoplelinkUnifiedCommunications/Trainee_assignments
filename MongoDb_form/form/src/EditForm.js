@@ -12,10 +12,10 @@ function EditForm({ updatedObject, updatedEmployee, editFormCancelFunction, user
     const [dob, setDob] = useState(updatedObject.dob)
     const [password, setPassword] = useState(updatedObject.password)
     const [confirmPassword, setConfirmPassword] = useState(updatedObject.confirmPassword)
-    const [upload, setUpload] = useState(updatedObject.url)
+    const [url, setUrl] = useState(updatedObject.url)
     const [err, setErr] = useState({})
 
-    const updatedEditObject = { _id, firstName, lastName, email, phone, company, role, gender, dob, upload, password, confirmPassword }
+    const updatedEditObject = { _id, firstName, lastName, email, phone, company, role, gender, dob, url, password, confirmPassword }
 
     const updatedSubmit = (e) => {
         e.preventDefault()
@@ -276,10 +276,10 @@ function EditForm({ updatedObject, updatedEmployee, editFormCancelFunction, user
                         id="upload"
                         type="file"
                         name="url"
-                        fileName={upload}
+                        files={url}
                         className=""
                         style={{ marginTop: "0.5rem" }}
-                        onChange={(e) => setUpload(e.target.files)}
+                        onChange={(e) => setUrl(e.target.files)}
                     ></input>
                     {/* <span>{formError.upload}</span> */}
                 </div>
