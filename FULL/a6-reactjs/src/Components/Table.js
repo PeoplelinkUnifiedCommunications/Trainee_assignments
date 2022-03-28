@@ -2,7 +2,7 @@ import React from 'react'
 
 function Table({ oneUser, onDeleteHandler, editFn }) {
     const _id = oneUser._id
-    console.log(oneUser)
+
 
     // const onDelete = () => {
     //     onDeleteHandler(_id)
@@ -14,7 +14,7 @@ function Table({ oneUser, onDeleteHandler, editFn }) {
 
     return (
         <tr key={oneUser._id}>
-            {/* <td><img src={oneUser.imgUrl} alt="" /></td> */}
+            <td><img src={oneUser.imgUrl} alt="dp" /></td>
             <td>{oneUser.name}</td>
             <td>{oneUser.email}</td>
             <td>{oneUser.phone}</td>

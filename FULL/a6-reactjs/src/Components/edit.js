@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-function Edit({ editObj, editCancelFn, updateForm }) {
+function Edit({ editObj, editCancelFn, updateForm, formData, setFormData }) {
+    // console.log(editObj)
     const [name, setName] = useState(editObj.name);
     const [email, setEmail] = useState(editObj.email);
     const [phone, setPhone] = useState(editObj.phone);
@@ -57,6 +59,24 @@ function Edit({ editObj, editCancelFn, updateForm }) {
     //     }
     // }
 
+    const imageEditUpdate = async (e) => {
+        const imgFile = e.target.files[0]
+        const ImgInst = new FormData()
+        ImgInst.append("file", imgFile)
+
+
+        try {
+            const ImgRes = await axios.patch("http://localhost:8001/imgFinal/", ImgInst)
+            setFormData({ ...formData, imgUrl: ImgRes.data.path })
+
+
+        } catch (error) {
+            console.log(error.message)
+            console.log(formData)
+        }
+
+    }
+
     const validation = (updatedEditObject) => {
         const valError = {}
         if (!updatedEditObject.name) {
@@ -89,7 +109,7 @@ function Edit({ editObj, editCancelFn, updateForm }) {
 
     return (
         <div className="formContainer flexCol">
-            <h3>
+            <h3 className="h33">
                 Edit Mongo
             </h3>
             <br />
@@ -113,14 +133,14 @@ function Edit({ editObj, editCancelFn, updateForm }) {
                         <option value="Full Stack" >Full Stack</option>
                     </select>
 
-                    <input className="input0" type="password" value={password} id="password" title="Password" name="password" minLength="4" maxLength="20" placeholder="password" onChange={(e) => setPassword(e.target.value)} ></input>
+                    <input className="input0" type="password" value={password} id="password" autoComplete="off" title="Password" name="password" minLength="4" maxLength="20" placeholder="password" onChange={(e) => setPassword(e.target.value)} ></input>
                     <span>{val.password}</span>
 
-                    <input className="input0" type="password" value={conform} id="conform" title="Confirm Password" name="conform" minLength="4" maxLength="20" placeholder="confirm" onChange={(e) => setConform(e.target.value)}  ></input>
+                    <input className="input0" type="password" value={conform} id="conform" autoComplete="off" title="Confirm Password" name="conform" minLength="4" maxLength="20" placeholder="confirm" onChange={(e) => setConform(e.target.value)}  ></input>
                     <span>{val.conform}</span>                    <span>{val.match}</span>
 
 
-                    <input className="input0" type="file" id="file" name="imgUrl"    ></input>
+                    <input className="input0f" type="file" id="file" name="imgUrl" onChange={imageEditUpdate}  ></input>
 
                     <div className="buttons flexRow">
                         <button className="input1" type="submit" >Update</button>

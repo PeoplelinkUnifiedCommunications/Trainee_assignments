@@ -75,6 +75,18 @@ select {
   border-radius: 2px;
   color: black;
 }
+.input0f {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 6px 0;
+  border: 1px solid #ccb;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #7873f5, #6489ee);
+  color: #fff;
+  font-weight: bold;
+  cursor: zoom-in;
+  transition: transform 0.2s ease-out;
+}
 
 .input0::-webkit-outer-spin-button,
 .input0::-webkit-inner-spin-button {
@@ -139,7 +151,10 @@ table {
 }
 
 h3 {
-  color: #ccc;
+  color: rgb(91, 91, 190);
+}
+.h33 {
+  color: rgb(187, 187, 80);
 }
 tr {
   background-color: whitesmoke;

@@ -27,7 +27,7 @@ app.get("/", async (req, res) => {
 
 const ImageStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'downloads/')
+        cb(null, '../a6-reactjs/public/images/')
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + "-" + file.originalname)
@@ -37,6 +37,10 @@ const ImageStorage = multer.diskStorage({
 const uploadStorage = multer({ storage: ImageStorage })
 
 app.post("/imgFinal", uploadStorage.single("file"), (req, res) => {
+    res.send(req.file)
+})
+
+app.patch("/imgFinal", uploadStorage.single("file"), (req, res) => {
     res.send(req.file)
 })
 

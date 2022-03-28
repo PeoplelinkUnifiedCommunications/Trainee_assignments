@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Login from "./Components/login";
 import Edit from "./Components/edit";
@@ -27,6 +27,8 @@ function App() {
   const [accept1, setAccept1] = useState(false)
 
   const [agree1, setAgree1] = useState(false)
+
+  const inputFileReset = useRef()
 
   const details = async () => {
     const response = await axios.get("http://localhost:8001")
@@ -74,8 +76,12 @@ function App() {
 
   const editFn = (_id) => {
     const index = userData.findIndex((data) => data._id === _id)
+    // console.log(index)
     setEditObj(userData[index])
     setOnEdit(true)
+    console.log(userData[index])
+
+
   }
 
   const editCancelFn = () => {
@@ -86,7 +92,6 @@ function App() {
     if (Object.keys(validate).length === 0 && isSubmit) {
 
       detailsPost()
-      // console.log(formData)
 
       setFormData(resetData)
     }
@@ -98,19 +103,19 @@ function App() {
 
   const create = (c) => {
     c.preventDefault()
-
+    inputFileReset.current.value = ""
     setValidate(validation(formData))
     setIsSubmit(true)
+    console.log(formData)
   }
 
 
 
-  console.log(formData)
 
   const inputData = (i) => {
     const { name, value } = i.target
     setFormData({ ...formData, [name]: value })
-    // console.log(formData)
+    console.log(formData)
   }
 
 
@@ -165,25 +170,27 @@ function App() {
       <div className="main flexRow">
         <div className="lblock flexCol">
 
-          {onEdit ? < Edit editObj={editObj} setFormData={setFormData} editCancelFn={editCancelFn} updateForm={updateForm} validation={validation} /> : <Login
-            create={create}
-            inputData={inputData}
-            formData={formData}
-            validate={validate}
-            resetDataFn={resetDataFn}
-            setFormData={setFormData}
-            agree1={agree1}
-            accept1={accept1}
-            setAgree1={setAgree1}
-            setAccept1={setAccept1}
+          {onEdit ? < Edit key={editObj._id} editObj={editObj} setFormData={setFormData} formData={formData} editCancelFn={editCancelFn} updateForm={updateForm} validation={validation} />
+            : <Login
+              create={create}
+              inputData={inputData}
+              inputFileReset={inputFileReset}
+              formData={formData}
+              validate={validate}
+              resetDataFn={resetDataFn}
+              setFormData={setFormData}
+              agree1={agree1}
+              accept1={accept1}
+              setAgree1={setAgree1}
+              setAccept1={setAccept1}
 
-          />}
+            />}
         </div>
         <div className="rblock flexCol">
           <table>
             <thead>
               <tr>
-                {/* <th>DP</th> */}
+                <th>DP</th>
                 <th>NAME</th>
                 <th>EMAIL</th>
                 <th>PHONE</th>
