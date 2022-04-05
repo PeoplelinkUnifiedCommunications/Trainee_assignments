@@ -1,9 +1,10 @@
-import express from "express"
-import bodyParser from "body-parser"
-import mongoose from "mongoose"
-import personDetails from "./model/schema.js"
-import cors from 'cors'   //Enables cross-origin
-import multer from "multer"
+const express = require('express')
+const bodyParser = require('body-parser')
+const mongoose = require('mongoose')
+const personDetails = require('./model/schema.js')
+const cors = require('cors')    //enables cross-origin sharing
+const multer = require('multer')    //middleware for handling multipart/form-data, used for uploading files
+const fs = require('fs')    //used to work with the file system
 
 const app = express()
 
@@ -12,16 +13,29 @@ const PORT = 8100
 app.use(bodyParser.json())
 app.use(cors())
 
+//express.static() --> middleware for serving static files to express app
+//__dirname --> root directory of the system 
+app.use(express.static(__dirname + '/public')); 
+
+
+//diskStorage --> gives full control on storing files to desk
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'uploads/')
+        cb(null, '../form/public/')     //where to store the files
     },
     filename: (req, file, cb) => {
-        cb(null, Date.now() + '-' + file.originalname)
+        cb(null, Date.now() + '-' + file.originalname)      //name of the file
     }
 })
 
-const upload = multer({storage: storage})
+const upload = multer({
+    storage: storage,
+    fileFilter: (req, file, cb) => {
+        if (file.mimetype == 'image/png' || file.mimetype == 'image/jpeg' || file.mimetype == 'pdf') {
+            cb(null, true)
+        }
+    }
+})
 
 app.get('/', async (req, res) => {
     try {
@@ -32,39 +46,45 @@ app.get('/', async (req, res) => {
     }
 })
 
-// app.get('/uploads/:id', async(req, res) => {
-//     const {id: id} = req.params
-//     res.sendFile(path.join(__dirname, `./uploads/${id}`))
-// })
 
-app.post('/', async (req, res) => {
-    const user = req.body
-    const newUser = new personDetails(user)
-    console.log(req)
+// .single() is used for uploading single file
+app.post('/', upload.single('url'), async (req, res) => {
+    const { firstName, lastName, phone, email, gender, dob, company, role, password, confirmPassword } = req.body
+    const url = req.file.filename
+    const newUser = new personDetails({ firstName, lastName, phone, email, gender, dob, company, role, password, confirmPassword, url })
     try {
         await newUser.save()
         res.json(newUser)
-        
+
     } catch (error) {
         console.log(error.message)
     }
 })
 
-app.post("/uploads", upload.single('file'), (req, res) => {
-    res.send(req.file)
-})
-
-app.patch("/:id", async (req, res) => {
-    const user = req.body
+app.patch("/:id", upload.single('url'), async (req, res) => {
+    const { firstName, lastName, phone, email, gender, dob, company, role, password, confirmPassword, url } = req.body
     const { id: _id } = req.params
-    const updateUser = await personDetails.findByIdAndUpdate(_id, user)
-    res.json(updateUser)
+
+    if (req.file === undefined) {
+        const updateUser = await personDetails.findByIdAndUpdate(_id, { firstName, lastName, phone, email, gender, dob, company, role, password, confirmPassword, url: url })
+        res.json(updateUser)
+    } else {
+        const updateUser = await personDetails.findByIdAndUpdate(_id, { firstName, lastName, phone, email, gender, dob, company, role, password, confirmPassword, url: req.file.filename })
+        res.json(updateUser)
+
+        fs.unlink(`../form/public/${updateUser.url}`, () => {
+            console.log(`Updated Successfully`)     //unlink --> remove file from specified path
+        })
+    }
 })
 
 app.delete("/:id", async (req, res) => {
     const user = req.body
     const { id: _id } = req.params
     const deleteUser = await personDetails.findByIdAndDelete(_id, user)
+    fs.unlink(`../form/public/${deleteUser.url}`, (err) => {
+        console.log(err)
+    })
     res.json(deleteUser)
 })
 

@@ -1,6 +1,7 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-function EditForm({ updatedObject, updatedEmployee, editFormCancelFunction, userDetails }) {
+function EditForm({ updatedObject, updatedEmployee, editFormCancelFunction }) {
     const _id = updatedObject._id
     const [firstName, setFirstName] = useState(updatedObject.firstName)
     const [lastName, setLastName] = useState(updatedObject.lastName)
@@ -16,10 +17,11 @@ function EditForm({ updatedObject, updatedEmployee, editFormCancelFunction, user
     const [err, setErr] = useState({})
 
     const updatedEditObject = { _id, firstName, lastName, email, phone, company, role, gender, dob, url, password, confirmPassword }
-
     const updatedSubmit = (e) => {
         e.preventDefault()
-        if (firstName !== "" && lastName !== "" && email !== "" && phone !== "" && company !== "" && role !== "" && gender !== "" && dob !== "" && password !== "" && confirmPassword !== "") {
+        console.log(url)
+
+        if ( firstName !== "" && lastName !== "" && email !== "" && phone !== "" && company !== "" && role !== "" && gender !== "" && dob !== "" && password !== "" && confirmPassword !== "") {
             updatedEmployee(_id, updatedEditObject)
             setErr({})
         } else {
@@ -64,10 +66,17 @@ function EditForm({ updatedObject, updatedEmployee, editFormCancelFunction, user
     const cancelTriggered = () => {
         editFormCancelFunction()
     }
+    const updateImg = async(e) => {   
+        setUrl(e.target.files[0])       
+    }
+    const editMobile = (e) => {
+        if (Number(e.target.value) || e.target.value === ""){
+            setPhone(e.target.value)
+        }
+    }
 
     return <div>
-        <form className="flexCol centerAlignment" onSubmit={updatedSubmit}>
-
+        <form className="flexCol centerAlignment" onSubmit={updatedSubmit} encType='multipart/form-data'>
             <div className="flexRow container">
                 <label htmlFor="firstName" className="labels">
                     First Name
@@ -136,7 +145,7 @@ function EditForm({ updatedObject, updatedEmployee, editFormCancelFunction, user
                         minLength="10"
                         className="inputFields"
                         placeholder="Enter Your Phone Number"
-                        onChange={(e) => setPhone(e.target.value)}
+                        onChange={editMobile}
                     ></input>
                     <span>{err.phone}</span>
                 </div>
@@ -276,10 +285,9 @@ function EditForm({ updatedObject, updatedEmployee, editFormCancelFunction, user
                         id="upload"
                         type="file"
                         name="url"
-                        files={url}
-                        className=""
                         style={{ marginTop: "0.5rem" }}
-                        onChange={(e) => setUrl(e.target.files)}
+                        onChange={updateImg}
+                        accept='image/'
                     ></input>
                     {/* <span>{formError.upload}</span> */}
                 </div>

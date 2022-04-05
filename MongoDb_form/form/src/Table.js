@@ -1,18 +1,19 @@
 import React from 'react';
 
-function Table({details, deleteFunction, updateFunction }) {
+function Table({ details, deleteFunction, updateFunction }) {
 
-    const onHandleDeleteFn = () =>{
-        deleteFunction(details._id)
-    }
+  const onHandleDeleteFn = () => {
+    deleteFunction(details._id)
+  }
 
-    const onHandleEditFn = () => {
-        updateFunction(details._id)
-    }
+  const onHandleEditFn = () => {
+    updateFunction(details._id)
+  }
 
   return (
     <tr>
-      {/* <td><img src={details.url} alt="profile"/></td> */}
+      <td><img src={`/${details.url}`} alt="profile" /></td>
+
       {/* <td>{details.url}</td> */}
       <td>{details.firstName}</td>
       <td>{details.lastName}</td>
@@ -27,7 +28,7 @@ function Table({details, deleteFunction, updateFunction }) {
         </button>
       </td>
       <td>
-        <button type="button" onClick={onHandleDeleteFn} className='tableBtn'>
+        <button type="button" onClick={onHandleDeleteFn} className='tableBtn db'>
           Delete
         </button>
       </td>

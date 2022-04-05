@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import Table from './Table';
 import Form from './Form';
@@ -31,7 +31,6 @@ const resetDetails = {
   dob: '',
   password: '',
   confirmPassword: '',
-  url: ''
 };
 
 
@@ -55,23 +54,23 @@ export default function App() {
       }).catch((error) => console.log(error.message))
   }
 
-  const fetchDetails = async () => {
-    try {
-      const dResponse = await axios.post("http://localhost:8100/", userDetails)
-      getDetails()
-      setCheck1(false)
-      setCheck2(false)
-    } catch (error) {
-      console.log(error.message)
-    }
-  }
+  // const fetchDetails = async () => {
+  //   try {
+  //     const dResponse = await axios.post("http://localhost:8100/", userDetails)
+  //     getDetails()
+  //     setCheck1(false)
+  //     setCheck2(false)
+  //   } catch (error) {
+  //     console.log(error.message)
+  //   }
+  // }
 
   useEffect(() => {
-    console.log(userDetails)
     getDetails()
     if (Object.keys(formError).length === 0 && isSubmit) {
-      fetchDetails()
+      // fetchDetails()
       setUserDetails(resetDetails);
+      imagePathReset.current = ""
     }
   }, [isSubmit]);
 
@@ -80,11 +79,33 @@ export default function App() {
     setUserDetails({ ...userDetails, [name]: value });
   };
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
+
+    const data = new FormData()
+    data.append('firstName', userDetails.firstName)
+    data.append('lastName', userDetails.lastName)
+    data.append('email', userDetails.email)
+    data.append('phone', userDetails.phone)
+    data.append('gender', userDetails.gender)
+    data.append('dob', userDetails.dob)
+    data.append('company', userDetails.company)
+    data.append('role', userDetails.role)
+    data.append('password', userDetails.password)
+    data.append('confirmPassword', userDetails.confirmPassword)
+    data.append('url', userDetails.url)
+
+    const config = {
+      headers: { 'content-type': 'multipart/form-data' }
+    }
+
+    const formDataResponse = await axios.post('http://localhost:8100/', data, config)
+    console.log(formDataResponse)
+
     setFormError(validateError(userDetails));
     setIsSubmit(true);
   };
+
 
   const cancelFn = () => {
     setUserDetails(resetDetails);
@@ -103,6 +124,7 @@ export default function App() {
 
     try {
       const deleteResponse = await axios.delete(`http://localhost:8100/${_id}`)
+      setUserDetails(resetDetails)
       getDetails()
     } catch (error) {
       console.log(error.message)
@@ -113,21 +135,44 @@ export default function App() {
     const index = userdetails.findIndex((data) => data._id === _id);
     setEditObject(userdetails[index]);
     setEditClicked(true)
-    getDetails()
-    console.log(editObject)
+    // getDetails()
+    // console.log(userdetails)
   };
 
   const updatedEmployee = async (_id, updatedEmployee) => {
     setUserdetails(userdetails.map((eachItem) => eachItem._id === _id ? updatedEmployee : eachItem))
     setEditClicked(false);
+    console.log(updatedEmployee)
+
+    const updFormData = new FormData()
+    updFormData.append('firstName', updatedEmployee.firstName)
+    updFormData.append('lastName', updatedEmployee.lastName)
+    updFormData.append('email', updatedEmployee.email)
+    updFormData.append('phone', updatedEmployee.phone)
+    updFormData.append('gender', updatedEmployee.gender)
+    updFormData.append('dob', updatedEmployee.dob)
+    updFormData.append('company', updatedEmployee.company)
+    updFormData.append('role', updatedEmployee.role)
+    updFormData.append('password', updatedEmployee.password)
+    updFormData.append('confirmPassword', updatedEmployee.confirmPassword)
+    updFormData.append('url', updatedEmployee.url)
+    const config = {
+      headers: {
+        'content-type': 'multipart/form-data'
+      }
+    }
+
     try {
-      const updateDetail = await axios.patch(`http://localhost:8100/${_id}`, updatedEmployee)
+      const updateDetail = await axios.patch(`http://localhost:8100/${_id}`, updFormData, config)
+      console.log(updateDetail)
       getDetails()
 
     } catch (error) {
       console.log(error.message)
     }
   }
+
+  const imagePathReset = useRef()
 
   const validateError = (inputs) => {
     const error = {};
@@ -194,6 +239,7 @@ export default function App() {
     <div className="mainContainer">
       <div>
         {editClicked ? <EditForm
+          key={editObject._id}
           userDetails={userDetails}
           updatedObject={editObject}
           updatedEmployee={updatedEmployee}
@@ -208,6 +254,7 @@ export default function App() {
             userInput={userInput}
             formError={formError}
             submit={submit}
+            // imagePathReset={imagePathReset}
             cancelFn={cancelFn}
             setUserDetails={setUserDetails}
           />}
@@ -216,7 +263,7 @@ export default function App() {
         <table>
           <thead>
             <tr>
-              {/* <th>Profile Pic</th> */}
+              <th>Profile Pic</th>
               <th>First name</th>
               <th>Last name</th>
               <th>Email</th>

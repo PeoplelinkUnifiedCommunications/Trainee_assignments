@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function Form({ submit, userDetails, setUserDetails, userInput, formError, cancelFn, setCheck1, setCheck2, check1, check2 }) {
+function Form({ submit, imagePathReset, userDetails, setUserDetails, userInput, formError, cancelFn, setCheck1, setCheck2, check1, check2 }) {
   const checking = () => {
     const { firstName, lastName, email, phone, gender, dob, company, role, password, confirmPassword, url } = userDetails
     let val
@@ -14,31 +14,8 @@ function Form({ submit, userDetails, setUserDetails, userInput, formError, cance
     return val
   }
 
-  // const imageFunction = async (e) => {
-  //   const file = e.target.files[0]
-  //   setImge(file)
-  //   const imgDetails = new FormData()
-  //   imgDetails.append('file', file)
-  //   try {
-  //     const r = await axios.post('http://localhost:8100/uploads', imgDetails)
-  //     setUserDetails({...userDetails, url: r.data.path})
-  //   } catch (error) {
-  //     console.log(error.message)
-  //   }
-  // }
-
   const imageFunction = async (e) => {
-    const file = e.target.files[0]
-    const imgDetails = new FormData()
-    imgDetails.append('file', file)
-
-    try {
-      const r = await axios.post("http://localhost:8100/uploads/", imgDetails)
-      setUserDetails({ ...userDetails, url: r.data.path })
-
-    } catch (error) {
-      console.log(error.message)
-    }
+    setUserDetails({ ...userDetails, url: e.target.files[0] })
   }
 
   const mobileNumberValidation = (e) => {
@@ -261,6 +238,7 @@ function Form({ submit, userDetails, setUserDetails, userInput, formError, cance
               style={{ marginTop: "0.5rem" }}
               onChange={imageFunction}
               accept='image/'
+              ref={imagePathReset}
             ></input>
             <span>{formError.upload}</span>
           </div>
