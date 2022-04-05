@@ -5,14 +5,7 @@ const userDetails = require("./model/schema.js")
 const cors = require("cors")
 const multer = require("multer")
 const path = require("path")
-
-// import express from "express";
-// import bodyParser from "body-parser";
-// import mongoose from "mongoose";
-// import userDetails from "./model/schema.js";
-// import cors from "cors";
-// import multer from "multer";
-
+const fs = require("fs")
 
 
 const app = express();
@@ -45,11 +38,7 @@ const ImageStorage = multer.diskStorage({
 
 const uploadStorage = multer({
     storage: ImageStorage
-    // fileFilter: (req, file, cb) => {
-    //     if (file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
-    //         cb(null, true);
-    //     }
-    // }
+
 })
 
 
@@ -72,22 +61,32 @@ app.post("/", uploadStorage.single("imgUrl"), async (req, res) => {
 app.patch("/:id", uploadStorage.single("imgUrl"), async (req, res) => {
     const { id: _id } = req.params
     const { name, email, phone, dob,
-        role, password, conform } = req.body
+        role, password, conform, imgUrl } = req.body
 
-    const imgUrl = req.file.filename
-    try {
-        const updatedUser = await userDetails.findByIdAndUpdate(_id, {
-            name, email, phone, dob,
-            role, password, conform, imgUrl
+    if (req.file === undefined) {
+        const updateUser = await userDetails.findByIdAndUpdate(_id, { name, email, phone, dob, role, password, conform, imgUrl: imageUrl })
+        res.json(updateUser)
+    } else {
+        const updateUser = await userDetails.findByIdAndUpdate(_id, { name, email, phone, dob, role, password, conform, imgUrl: req.file.filename })
+        res.json(updateUser)
 
+        fs.unlink(`../a6-reactjs/public/${updateUser.imgUrl}`, () => {
+            console.log(`Updated Successfully`)     //unlink --> remove file from specified path
         })
-        res.json(updatedUser)
-        console.log(imgUrl)
-
-    } catch (error) {
-        console.log(error.message)
     }
 })
+// try {
+//     const updatedUser = await userDetails.findByIdAndUpdate(_id, {
+//         name, email, phone, dob,
+//         role, password, conform, imgUrl
+
+//     })
+//     res.json(updatedUser)
+//     console.log(imgUrl)
+
+// } catch (error) {
+//     console.log(error.message)
+// }
 app.delete("/:id", async (req, res) => {
     const { id: _id } = req.params
     try {

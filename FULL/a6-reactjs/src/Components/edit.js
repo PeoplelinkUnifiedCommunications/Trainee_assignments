@@ -28,6 +28,7 @@ function Edit({ editObj, editCancelFn, updateForm, formData, setFormData }) {
 
     const updateEditImage = (e) => {
         setImageUrl(e.target.files[0])
+
     }
 
     const oneditCancel = () => { editCancelFn() }
