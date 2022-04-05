@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
+const mongoose = require("mongoose")
 
 const user = mongoose.Schema({
     imgUrl: {
@@ -36,5 +37,4 @@ const user = mongoose.Schema({
 })
 
 const userDetails = mongoose.model("userDetails", user);
-
-export default userDetails;
+module.exports = userDetails;

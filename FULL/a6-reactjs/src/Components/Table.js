@@ -14,7 +14,7 @@ function Table({ oneUser, onDeleteHandler, editFn }) {
 
     return (
         <tr key={oneUser._id}>
-            <td><img src={oneUser.imgUrl} alt="dp" /></td>
+            <td><img src={`/${oneUser.imgUrl}`} alt="dp" /></td>
             <td>{oneUser.name}</td>
             <td>{oneUser.email}</td>
             <td>{oneUser.phone}</td>

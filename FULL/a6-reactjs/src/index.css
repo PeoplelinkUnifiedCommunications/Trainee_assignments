@@ -157,10 +157,10 @@ h3 {
   color: rgb(187, 187, 80);
 }
 tr {
-  background-color: whitesmoke;
+  background-color: white;
 }
 th {
-  background-color: blue;
+  background-color: rgb(51, 51, 220);
   padding: 0.5rem;
   color: white;
   border-radius: 2px;
@@ -178,7 +178,9 @@ img {
 .inputC:hover,
 .inputD:hover {
   transform: scaleX(1.05) scaleY(1.05);
+  cursor: pointer;
 }
+
 td {
   padding: 0.25rem 0.5rem;
   text-align: center;

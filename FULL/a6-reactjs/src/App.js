@@ -42,9 +42,29 @@ function App() {
   }
 
   const updateForm = async (_id, updatedDetails) => {
+    console.log(updatedDetails)
+    setUserData(userData.map((m) => m._id === _id ? updatedDetails : m))
+
+    const editDetails = new FormData()
+
+    editDetails.append("name", updatedDetails.name)
+    editDetails.append("email", updatedDetails.email)
+    editDetails.append("phone", updatedDetails.phone)
+    editDetails.append("dob", updatedDetails.dob)
+    editDetails.append("role", updatedDetails.role)
+    editDetails.append("password", updatedDetails.password)
+    editDetails.append("conform", updatedDetails.conform)
+    editDetails.append("imgUrl", updatedDetails.imageUrl)
+
+
+    const editConfig = {
+      headers: { 'content-type': 'multipart/form-data' }
+
+    }
     try {
-      const response = await axios.patch(`http://localhost:8001/${_id}`, updatedDetails)
-      console.log(response)
+      // console.log(userData)
+      const response = await axios.patch(`http://localhost:8001/${_id}`, editDetails, editConfig)
+      // console.log(response)
       details()
       setOnEdit(false)
     } catch (error) {
@@ -53,8 +73,24 @@ function App() {
   }
 
   const detailsPost = async () => {
+
+    const newDetails = new FormData()
+
+    newDetails.append("name", formData.name)
+    newDetails.append("email", formData.email)
+    newDetails.append("phone", formData.phone)
+    newDetails.append("dob", formData.dob)
+    newDetails.append("role", formData.role)
+    newDetails.append("password", formData.password)
+    newDetails.append("conform", formData.conform)
+    newDetails.append("imgUrl", formData.imgUrl)
+
+    const multiConfig = {
+      headers: { 'content-type': 'multipart/form-data' }
+    }
+
     try {
-      const postDetails = await axios.post("http://localhost:8001", formData)
+      const postDetails = await axios.post("http://localhost:8001", newDetails, multiConfig)
       details()
       setAccept1(false)
       setAgree1(false)
@@ -62,8 +98,6 @@ function App() {
       console.log(error.message)
     }
   }
-
-
 
   const onDeleteHandler = async (_id) => {
     try {
@@ -75,12 +109,10 @@ function App() {
   }
 
   const editFn = (_id) => {
-    const index = userData.findIndex((data) => data._id === _id)
-    // console.log(index)
-    setEditObj(userData[index])
     setOnEdit(true)
+    const index = userData.findIndex((data) => data._id === _id)
+    setEditObj(userData[index])
     console.log(userData[index])
-
 
   }
 
@@ -100,22 +132,20 @@ function App() {
     [validate]
   )
 
-
   const create = (c) => {
     c.preventDefault()
     inputFileReset.current.value = ""
     setValidate(validation(formData))
     setIsSubmit(true)
-    console.log(formData)
+
+
   }
-
-
 
 
   const inputData = (i) => {
     const { name, value } = i.target
     setFormData({ ...formData, [name]: value })
-    console.log(formData)
+    // console.log(formData)
   }
 
 
@@ -126,42 +156,20 @@ function App() {
 
   const validation = (dataOfUser) => {
     const valError = {}
-    if (!dataOfUser.name) {
-      valError.name = "* name required"
-    }
-    if (!dataOfUser.email) {
-      valError.email = "* email required"
-    }
+    if (!dataOfUser.name) { valError.name = "* name required" }
+    if (!dataOfUser.email) { valError.email = "* email required" }
     userData.filter(f => {
-      if (f.email === formData.email) {
-
-        valError.email = "* user with this email already exists"
-      }
+      if (f.email === formData.email) { valError.email = "* user with this email already exists" }
     })
-    if (!dataOfUser.phone) {
-      valError.phone = "* phone required"
-    }
+    if (!dataOfUser.phone) { valError.phone = "* phone required" }
     userData.filter(f => {
-      if (f.phone === formData.phone) {
-
-        valError.phone = "* user with this number already exists"
-      }
+      if (f.phone === formData.phone) { valError.phone = "* user with this number already exists" }
     })
-    if (!dataOfUser.dob) {
-      valError.dob = "* Date of birth required"
-    }
-    if (!dataOfUser.role) {
-      valError.role = "* Role required"
-    }
-    if (!dataOfUser.password) {
-      valError.password = "* password required"
-    }
-    if (!dataOfUser.conform) {
-      valError.conform = "* conform  required"
-    }
-    if (dataOfUser.conform !== dataOfUser.password) {
-      valError.match = "* password dosent match"
-    }
+    if (!dataOfUser.dob) { valError.dob = "* Date of birth required" }
+    if (!dataOfUser.role) { valError.role = "* Role required" }
+    if (!dataOfUser.password) { valError.password = "* password required" }
+    if (!dataOfUser.conform) { valError.conform = "* conform  required" }
+    if (dataOfUser.conform !== dataOfUser.password) { valError.match = "* password dosent match" }
 
     return valError
   }
@@ -170,7 +178,14 @@ function App() {
       <div className="main flexRow">
         <div className="lblock flexCol">
 
-          {onEdit ? < Edit key={editObj._id} editObj={editObj} setFormData={setFormData} formData={formData} editCancelFn={editCancelFn} updateForm={updateForm} validation={validation} />
+          {onEdit ? < Edit
+            key={editObj._id}
+            editObj={editObj}
+            setFormData={setFormData}
+            formData={formData}
+            editCancelFn={editCancelFn}
+            updateForm={updateForm}
+            validation={validation} />
             : <Login
               create={create}
               inputData={inputData}
@@ -201,15 +216,7 @@ function App() {
               </tr>
             </thead>
             <tbody >
-              {userData.map((eachItem) =>
-                <Table key={eachItem._id}
-                  editFn={editFn}
-                  oneUser={eachItem}
-                  onDeleteHandler={onDeleteHandler}
-                />
-
-
-              )}
+              {userData.map((eachItem) => <Table key={eachItem._id} editFn={editFn} oneUser={eachItem} onDeleteHandler={onDeleteHandler} />)}
             </tbody>
           </table>
 
