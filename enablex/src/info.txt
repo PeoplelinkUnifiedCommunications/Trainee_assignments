@@ -1,0 +1,399 @@
+<div className="top flexRow">
+
+                <img className="logo" src="enableX_logo.png" alt="enable logo" height="40px" />
+
+
+                <div className="upperHead flexRow">
+                    <button className="joinButton flexRow"> <img className="dicon" src="discordd.svg" alt="discord" /><span>join the community</span></button>
+
+                    <div className="sign flexRow">
+                        <span>SIGN IN</span>
+                        <span>|</span>
+                        <span>SIGN UP</span>
+
+                    </div>
+                    <button className="talkButton"> Talk To Us</button>
+
+                </div>
+            </div>
+            <div className="bottom flexRow">
+
+                <div className="lowerHead flexRow">
+
+                    <div className="flexRow">
+                        <li>Communication <br /> APIs</li>
+                        <li>Communication <br /> Solutions</li>
+                        <li>Communication For <br /> Service Providers</li>
+                        <li> <br /> Pricing</li>
+                        <li><br /> Developer Center</li>
+                        <li><br /> Insights</li>
+                        <button className="hiringButton"> We Are Hiring</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div className="info flexCol">
+                <span className="blueText"> INTRODUCING ENABLEX</span><br />
+                <h1>Build Powerful Apps With EnableX</h1><br />
+                <h1>The Engagement Platform For Live Video, Voice and Messaging</h1><br /><br />
+                <span className="smallText"> Carrier-grade, customiseable and AI-enabled solutions for secure business<br />
+                    communication without any extra infrastructure</span>
+                <div className="imageHolder flexCol">
+
+                    <img src="banner1.png" alt="banner1" height="450px" />
+                </div>
+                <div className="pairButton flexRow">
+                    <button className="p1Button">Try For Free</button>
+                    <button className="p2Button">Contact Sales</button>
+
+                </div>
+
+
+
+            </div>
+            <div className="scrollCards flexRow">
+                <div className="mark flexRow">
+
+                </div>
+                <img className="img1" src="bfc-logo.png" alt="1" height="50px" />
+                <img className="img1" src="digital-agent.png" alt="1" height="50px" />
+                <img className="img1" src="lifecell.png" alt="1" height="50px" />
+                <img className="img1" src="gslab.png" alt="1" height="50px" />
+                <img className="img1" src="qsesl.png" alt="1" height="50px" />
+                <img className="img1" src="softtech-img.png" alt="1" height="50px" /
+
+
+            </div>
+            <div className="viewButton flexCol">
+
+                <button className="p1Button"> View Custom Stories</button>
+            </div>
+            <div className="section1 flexRow">
+
+                <div className="lCard flexCol">
+                    <h1>Build In-app Omnichannel conversation.</h1><br />
+                    <span>it's that easy with</span><br />
+                    <span className="redText">EnableX Communication APIs</span><br />
+                    <div >
+
+                        <img src="images/build-app1.png" alt="left card" width="100%" /><br />
+                    </div>
+                    <span>Use the programming language of your choice to quickly and easily build production-ready Live Video,Voice, and Message applications on the Developer-trusted,API-powered platform</span><br />
+                    <div className="lastButton flexCol">
+                        <button className="p1Button">Programmable APIs and SDKs</button>
+
+                    </div>
+                    <br />
+                </div>
+                <div className="rCard flexCol">
+                    <h1>Build In-app Omnichannel conversation.</h1><br />
+                    <span>it's that easy with</span><br />
+                    <span className="redText">EnableX Communication APIs</span><br />
+                    <div>
+
+                        <img src="images/pink-visual.png" alt="right card" width="100%" /><br />
+                    </div>
+                    <span>Use the programming language of your choice to quickly and easily build production-ready Live Video,Voice, and Message applications on the Developer-trusted,API-powered platform</span><br />
+                    <div className="lastButton flexCol">
+                        <button className="p1Button">Programmable APIs and SDKs</button>
+
+                    </div>
+                    <br />
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+.info{
+    width: 100%;
+    padding: 6rem;
+    align-items: center;
+    /* background-image: linear-gradient(to right,whitesmoke, #70c7e9, white) */
+}
+.blueText{
+    color: blue;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+.smallText{
+    size: 8px;
+}
+.imageHolder{
+    position: relative;
+  animation-name: example;
+  animation-duration: 8s ;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+    0%   { right:0px; top:0px;}
+    33%  { right:-390px; top:0px;}
+     66% { right:400px; top:0px;}
+    100%   { right:0px; top:0px;}
+
+  }
+
+.p2Button{
+    color: blue;
+    padding: 0.1rem 1.2rem;
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 4px
+}
+.p2Button:hover{
+    background-color: blue;
+    color: white;
+}
+.p1Button{
+    color: white;
+    padding: 0.1rem 1.2rem;
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 4px;
+    height:40px
+}
+.p1Button:hover{
+    background-color: white;
+    color: blue;
+}
+.pairButton{
+    justify-content: space-evenly;
+    width: 300px;
+    height: 40px;
+}
+.scrollCards{
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    padding: 1rem;
+    overflow: hidden;
+}
+.viewButton{
+    padding: 2rem;
+    height: 150px;
+    justify-content: center;
+}
+.section1{
+    width: 100%;
+    padding: 4rem 12rem;
+    justify-content: space-evenly;
+}
+
+.lCard{
+    width: 45%;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 50px;
+}
+.rCard{
+    width: 45%;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 50px;
+
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .lCard {
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
+      background-color: rgba(255, 255, 255, 0.774);  
+    }
+    .warning {
+      display: none;
+    }
+  }
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .rCard {
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
+      background-color: rgba(255, 255, 255, 0.774);  
+    }
+    .warning {
+      display: none;
+    }
+  }
+.lastButton{
+    width: 100%;
+    align-items: center;
+}
+.img1{
+    margin: 0 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+.top{
+   height: 50%;
+   justify-content: space-between;
+   border-bottom-left-radius: 4px;
+   border-bottom-right-radius: 4px;
+   padding-left: 0.5rem;
+   align-items: center;
+
+}
+.logo{
+    position: relative;
+    top: 1.5rem;
+}
+
+.bottom{
+    height: 50%;
+    justify-content: flex-end;
+    padding: 0.1rem 0.15rem;
+ }
+.upperHead{
+    /* background-color: aliceblue; */
+    padding: 0.25rem;
+    justify-content: flex-end;
+
+}
+.lowerHead{
+    align-items: center;
+    padding: 0.25rem;
+    /* background-color: whiteSmoke; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(129, 173, 218);
+    border-radius: 4px;
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .lowerCard {
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
+      background-color: rgba(178, 245, 239, 0.774);  
+    }
+    .warning {
+      display: none;
+    }
+  }
+.joinButton{
+    padding: 0.25rem;
+    width: 150px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 2px rgb(219, 211, 211) ;
+    border: none;
+    position: relative;
+    top: 40rem;
+    right: 57rem;
+}
+
+.dicon{
+    background-color: rgb(93, 93, 247);
+    border-radius: 4px;
+}
+
+.sign{
+    width: 150px;
+    padding: 0.2rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.seperator{
+    background-color: black;
+    width: 1px;
+}
+.talkButton{
+    padding: 0.1rem 1.2rem;
+    background-color: white;
+    color: blue;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 2px rgb(219, 211, 211) ;
+    border: none;
+    position: relative;
+    top: 40rem;
+    left: 11rem;
+}
+.talkButton:hover{
+    background-color: blue;
+    color: white;
+}
+
+
+.hiringButton{
+    padding: 0.1rem 1.2rem;
+    background-color: blue;
+    color:white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 2px rgb(219, 211, 211) ;
+    border: none;
+}
+.hiringButton:hover{
+    background-color: white;
+    color: blue;
+}
+
+li{
+    list-style: none;
+    padding:0 0.5rem ;
+}
+.img1:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+
+}
+.img2:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+
+}
+.img3:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+
+}
+.img4:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+
+}
+.img5:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+
+}
+.img6:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,95 +1,51 @@
-.body{
-    padding-top: 100px;
-    justify-content: space-between;
+.main{
+    background-image: linear-gradient(rgb(196, 220, 252),rgb(173, 206, 250),rgb(196, 220, 252));
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.intro{
     align-items: center;
-}
-.info{
-    width: 100%;
-    padding: 6rem;
-    align-items: center;
-    background-image: linear-gradient(whitesmoke, #abe6d1, white)
-}
-.redText{
-    color: red;
-}
-.smallText{
-    size: 8px;
-}
-.imageHolder{
-    position: relative;
-  animation-name: example;
-  animation-duration: 8s ;
-  animation-iteration-count: infinite;
-}
-@keyframes example {
-    0%   { right:0px; top:0px;}
-    25%  { right:-400px; top:0px;}
-    50%   { right:0px; top:0px;}
-    75%   { right:400px; top:0px;}
-    100%   { right:0px; top:0px;}
-
-  }
-
-.p2Button{
-    color: red;
-    padding: 0.1rem 1.2rem;
-    background-color: white;
-    border: 1px solid red;
-    border-radius: 4px
-}
-.p2Button:hover{
-    background-color: red;
-    color: white;
-}
-.p1Button{
-    color: white;
-    padding: 0.1rem 1.2rem;
-    background-color: red;
-    border: 1px solid red;
-    border-radius: 4px;
-    height:40px
-}
-.p1Button:hover{
-    background-color: white;
-    color: red;
 }
 .pairButton{
-    justify-content: space-evenly;
-    width: 300px;
-    height: 40px;
-}
-.scrollCards{
+    padding: 1rem;
     align-items: center;
-    justify-content: space-evenly;
-    width: 70%;
+    justify-content: space-around;
 }
-.viewButton{
-    padding: 2rem;
-    height: 150px;
-    justify-content: center;
+.pButton{
+  background-color: white;
+  color: rgb(39, 125, 200);
+  padding: 0.3rem;
+  border: solid 1px rgb(39, 125, 200);
+  border-radius: 4px;
 }
-.section1{
+.pButton:hover{
+    color: white;
+    background-color:rgb(39, 125, 200) ;
+}
+.scrollDiv{
     width: 100%;
-    background-image: linear-gradient(rgb(252, 252, 252),lightblue);
-    padding: 4rem 12rem;
+    background-color: white;
+    height:50px;
+    border-radius: 4px;
+    overflow: hidden;
+    align-items:center;
+    /* justify-content: space-between; */
 }
-.sub1{
-    justify-content: space-evenly;
+.img1{
+    padding: 0 0.15rem;
+}
+.sub2{
+    padding: 2rem 0.5rem;
 }
 .lCard{
-    width: 45%;
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 4px;
 }
 .rCard{
-    width: 45%;
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: white;
-    border-radius: 25px;
+    margin-top:0.5rem ;
+    border-radius: 4px;
 
-}
-.lastButton{
-    width: 100%;
-    align-items: center;
 }

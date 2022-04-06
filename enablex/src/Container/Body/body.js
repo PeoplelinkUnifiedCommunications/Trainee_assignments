@@ -3,76 +3,61 @@ import "./body.css"
 
 function Body() {
     return (
-        <div className="body flexCol">
-
-            <div className="info flexCol">
-                <span className="redText"> INTRODUCING ENABLEX</span><br />
-                <h1>Build Powerful Apps With EnableX</h1><br />
-                <h1>The Engagement Platform For</h1>
-                <h1>Live Video, Voice and Messaging</h1><br /><br />
-                <span className="smallText"> Carrier-grade, customiseable and AI-enabled solutions for secure business<br />
-                    communication without any extra infrastructure</span>
-                <div className="imageHolder flexCol">
-
-                    <img src="banner1.png" alt="banner1" height="450px" />
+        <div className="main flexCol">
+            <div className="sub1 reFlex" >
+                <div className="intro flexCol">
+                    <span className="h1"> INTRODUCING ENABLE</span><br />
+                    <span className="h2">Build Powerful Apps With EnableX .The Engagement Platform For Live Video, Voice and Messaging
+                    </span>
+                    <small className="h2">Carrier-grade, customiseable and AI-enabled solutions for secure business communication without any extra infrastructure</small>
                 </div>
-                <div className="pairButton flexRow">
-                    <button className="p1Button">Try For Free</button>
-                    <button className="p2Button">Contact Sales</button>
-
+                <div className="banner flexCol">
+                    <img src="banner1.png" alt="banner1" width="100%" />
                 </div>
-
-
-
             </div>
-            <div className="scrollCards flexRow">
-                <img src="bfc-logo.png" alt="1" height="50px" />
-                <img src="digital-agent.png" alt="1" height="50px" />
-                <img src="lifecell.png" alt="1" height="50px" />
-                <img src="gslab.png" alt="1" height="50px" />
-                <img src="qsesl.png" alt="1" height="50px" />
-                <img src="softtech-img.png" alt="1" height="50px" />
+            <div className="pairButton flexRow">
+                <button className="pButton">Try For Free</button>
+                <button className="pButton">Contact Sales</button>
             </div>
-            <div className="viewButton flexCol">
-
-                <button className="p1Button"> View Custom Stories</button>
+            <div className="scrollDiv flexRow">
+                <img className="img1" src="bfc-logo.png" alt="1" height="40px" />
+                <img className="img1" src="digital-agent.png" alt="1" height="40px" />
+                <img className="img1" src="lifecell.png" alt="1" height="40px" />
+                <img className="img1" src="gslab.png" alt="1" height="40px" />
+                <img className="img1" src="qsesl.png" alt="1" height="40px" />
+                <img className="img1" src="softtech-img.png" alt="1" height="40px" />
             </div>
-            <div className="section1 flexCol">
-                <div className="sub1 flexRow">
-                    <div className="lCard flexCol">
-                        <h1>Build In-app Omnichannel conversation.</h1><br />
-                        <span>it's that easy with</span><br />
-                        <span className="redText">EnableX Communication APIs</span><br />
-                        <div >
+            <div className="sub2 reFlex" >
+                <div className="lCard flexCol">
+                    <span className="h1">Build In-app Omnichannel conversation.</span><br />
+                    <span className="h2">it's that easy with EnableX Communication APIs</span><br />
+                    <div >
 
-                            <img src="images/build-app1.png" alt="left card" width="100" /><br />
-                        </div>
-                        <span>Use the programming language of your choice to quickly and easily build production-ready Live Video,Voice, and Message applications on the Developer-trusted,API-powered platform</span><br />
-                        <div className="lastButton flexCol">
-                            <button className="p1Button">Programmable APIs and SDKs</button>
-
-                        </div>
-                        <br />
+                        <img src="images/build-app1.png" alt="left card" width="100%" /><br />
                     </div>
-                    <div className="rCard flexCol">
-                        <h1>Build In-app Omnichannel conversation.</h1><br />
-                        <span>it's that easy with</span><br />
-                        <span className="redText">EnableX Communication APIs</span><br />
-                        <div>
+                    <span className="h2">Use the programming language of your choice to quickly and easily build production-ready Live Video,Voice, and Message applications on the Developer-trusted,API-powered platform</span><br />
+                    <div className="lastButton flexCol">
+                        <button className="pButton">Programmable APIs and SDKs</button>
 
-                            <img src="images/pink-visual.png" alt="right card" width="100%" /><br />
-                        </div>
-                        <span>Use the programming language of your choice to quickly and easily build production-ready Live Video,Voice, and Message applications on the Developer-trusted,API-powered platform</span><br />
-                        <div className="lastButton flexCol">
-                            <button className="p1Button">Programmable APIs and SDKs</button>
-
-                        </div>
-                        <br />
                     </div>
-
+                    <br />
                 </div>
+                <div className="rCard flexCol">
+                    <span className="h1">Build In-app Omnichannel conversation.</span><br />
+                    <span className="h2">it's that easy with EnableX Communication APIs</span><br />
+                    <div>
 
+                        <img src="images/pink-visual.png" alt="right card" width="100%" /><br />
+                    </div>
+                    <span className="h2">Use the programming language of your choice to quickly and easily build production-ready Live Video,Voice, and Message applications on the Developer-trusted,API-powered platform</span><br />
+                    <div className="lastButton flexCol">
+                        <button className="pButton">Programmable APIs and SDKs</button>
+
+                    </div>
+                    <br />
+                </div>
             </div>
+
 
 
         </div>

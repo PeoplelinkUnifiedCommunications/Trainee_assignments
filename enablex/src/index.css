@@ -31,7 +31,9 @@ body {
 }
 .main {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  padding-top: 120px;
+  line-height: 17px;
 }
 .flexRow{
   display: flex;
@@ -42,9 +44,41 @@ body {
   flex: none;
   flex-direction: column;
 }
-button:hover{
-transform: scaleX(1.1) scaleY(1.1);
+.reFlex{
+  display: flex;
+  flex: none;
+  flex-direction: column;
+
 }
-span{
-  color: grey;
+@media (min-width: 768px) and (max-width: 1112px) {
+}
+@media (min-width: 1113px) and (max-width: 1366px) {
+  .main{
+    padding-top: 64px;
+  }
+  .reFlex{
+    flex-direction: row;
+  }
+  
+}
+@media (min-width: 1367px) {
+  .main{
+    padding-top: 64px;
+  }
+  .reFlex{
+    flex-direction: row;
+  }
+  
+}
+button{
+  border: none;
+}
+.h1{
+  color: rgb(124, 164, 216);
+  font-weight: bold;
+  font-size: large;
+}
+.h2{
+  color:gray
+
 }
