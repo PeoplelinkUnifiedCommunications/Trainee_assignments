@@ -54,17 +54,6 @@ export default function App() {
       }).catch((error) => console.log(error.message))
   }
 
-  // const fetchDetails = async () => {
-  //   try {
-  //     const dResponse = await axios.post("http://localhost:8100/", userDetails)
-  //     getDetails()
-  //     setCheck1(false)
-  //     setCheck2(false)
-  //   } catch (error) {
-  //     console.log(error.message)
-  //   }
-  // }
-
   useEffect(() => {
     getDetails()
     if (Object.keys(formError).length === 0 && isSubmit) {
@@ -142,7 +131,6 @@ export default function App() {
   const updatedEmployee = async (_id, updatedEmployee) => {
     setUserdetails(userdetails.map((eachItem) => eachItem._id === _id ? updatedEmployee : eachItem))
     setEditClicked(false);
-    console.log(updatedEmployee)
 
     const updFormData = new FormData()
     updFormData.append('firstName', updatedEmployee.firstName)
@@ -164,7 +152,6 @@ export default function App() {
 
     try {
       const updateDetail = await axios.patch(`http://localhost:8100/${_id}`, updFormData, config)
-      console.log(updateDetail)
       getDetails()
 
     } catch (error) {

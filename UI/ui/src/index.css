@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+#root{
+  height: 100%;
+  width: 100%;
+}
+
+.baseContainer{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.flexRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.flexCol{
+  display: flex;
+  flex-direction: column;
+}
+
+.alignSelfCenter{
+  align-self: center;
+}
+
+.alignSelfEnd{
+  align-self: flex-end;
+}
+
+.alignSelfStart{
+  align-self: flex-start;
+}
