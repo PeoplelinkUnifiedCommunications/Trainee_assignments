@@ -11,31 +11,32 @@
 .head{
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
 }
 
 .headerContainer{
-    background-color: white;
+    background-image: linear-gradient(rgb(80, 116, 150), rgb(33, 59, 90), rgb(7, 20, 32));
+    height: 5rem;
     padding: 1rem 0;
-    background-color: rgb(24, 57, 95);
   }
 
 .topHeader{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     /* margin-top: 1rem; */
 }
 
 .jtc{
     border: 0;
     border-radius: 4px;
-    /* box-shadow: 0px 0px 5px 2px rgb(221, 218, 218); */
+    /* box-shadow: 0px 0px 3px 2px rgb(221, 218, 218); */
     height: 2rem;
     padding: 2px 4px;
-    margin: 1rem 0;
+    margin: 2px 1rem;
     cursor: pointer;
     background-color: white;
+    align-self: flex-start;
 }
 
 .jtcText{
@@ -88,42 +89,54 @@
 }
 
 .logo{
-    height: 2rem;
+    height: 2.5rem;
     margin-bottom: 1rem;
+    background-color: rgb(243, 247, 250);
+    padding: 6px 8px;
+    border-radius: 4px;
 }
 
 li{
     list-style: none;
-    margin-right: 1.5rem;
+    margin-right: 0.3rem;
+    /* border: 1px solid rgb(31, 30, 30); */
+    border-radius: 3px;
+    color: rgb(253, 252, 252);
+    padding: 0.4rem 0.5rem;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 li:hover{
-    color:rgb(228, 74, 74);
+    color:rgb(252, 249, 249);
     cursor: pointer;
+    background-color: rgb(218, 10, 10);
 }
 
 .wahBtn{
     padding: 0.7rem 1rem;
     border-radius: 4px;
     border: 0;
-    background-color: rgb(228, 74, 74);
+    background-color: rgb(223, 51, 51);
     color: white;
 }
 
 .wahBtn:hover{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: rgb(228, 74, 74); 
-    box-shadow: 0px 0px 7px 3px rgb(221, 218, 218);
+    font-weight: bold;
+    /* box-shadow: 0px 0px 7px 3px rgb(221, 218, 218); */
     cursor: pointer;
 }
 
 .f{
     justify-content: space-between;
-    background-color: rgb(111, 112, 112);
+    background-color: rgb(18, 39, 58);
+    padding: 0.2rem 0.4rem;
 }
 
 .imgContainer{
     text-align: center;
+    padding-left: 1rem;
+    justify-content: space-between;
 }

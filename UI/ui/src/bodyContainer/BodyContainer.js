@@ -1,11 +1,14 @@
 import React from 'react'
 import './bodyContainer.css'
 import '../header/header.css'
+import { ImGoogle2, ImInstagram } from 'react-icons/im'
+import { GrFacebook } from 'react-icons/gr'
+
 
 function BodyContainer() {
     return (
         <div className=''>
-            <div className='dContainer'>
+            {/* <div className='dContainer'>
                 <div className=''>
                     <div className='jtc flexRow'>
                         <img src="discordd.svg" alt="logo" className='icon' />
@@ -22,19 +25,21 @@ function BodyContainer() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
             <div className='bodyCont'>
                 <div className='flexCol'>
                     <div className=''>
-                        <div>
-                            <img src="home-banner1.png" alt="home-banner" className='banner' />
-                        </div>
+
                         <div className=''>
                             <h4 className='introHeading head4'>INTRODUCING ENABLEX</h4>
                             <h1 className='head1'>Build Powerful Apps With EnableX</h1>
                             <h2 className='head2'>The Engagement Platform For <br /> LiveVideo, Voice and Messaging</h2>
                             <p className='para'>Carrier-grade, customisable and AI-enabled solutions for secured business <br />
                                 communications without any additional infrastructure. </p>
+                        </div>
+                        <div>
+                            <img src="home-banner1.png" alt="home-banner" className='banner' />
                         </div>
                     </div>
                     <div>
@@ -53,32 +58,48 @@ function BodyContainer() {
                         <button className='vcsBtn'>View Customer Stories</button>
                     </div>
                 </div>
+                <div>
+                    <div className='dContainer flexCol'>
+                        <ImInstagram className='ic' />
+                        <GrFacebook className='ic' />
+                        <ImGoogle2 className='ic' />
+                    </div>
+                </div>
+
+
                 <div className='featuresContainer flexRow'>
-                    <div className='card'>
-                        <h2 className='h2'>Build In-app</h2>
-                        <h2 className='h2'>Omnichannel Conversations.</h2>
-                        <p className='p'>Its that easy with</p>
-                        <h3 className='pStyle'>EnableX Communication APIs</h3>
+                    <div className='card c1 flexRow' >
+                        <div>
+                            <h2 className='h2'>Build In-app</h2>
+                            <h2 className='h2'>Omnichannel Conversations.</h2>
+                            <p className='p'>Its that easy with</p>
+                            <h3 className='pStyle'>EnableX Communication APIs</h3>
+
+                            <p className='para1'>Use the programming language of your choice to quickly and easily build production-ready Live Video, Voice, and Messaging applications on the Developer-trusted, API-powered platform. </p>
+                            
+                        </div>
                         <div>
                             <img className='buildApp' src="build-app1.png" alt='build-app' />
-                        </div>
-                        <p className='para1'>Use the programming language of your choice to quickly and easily build production-ready Live Video, Voice, and Messaging applications on the Developer-trusted, API-powered platform. </p>
-                        <div style={{ textAlign: "center" }}>
-                            <button className='btn1'>Programmable APIs and SDKs</button>
+                            <div style={{ textAlign: "center" }}>
+                                <button className='btn1'>Programmable APIs and SDKs</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div className='card'>
-                        <h2 className='h2'>You Design.</h2>
-                        <h2 className='h2'>It Codes.</h2>
-                        <p className='p'>Its that Magical with</p>
-                        <h3 className='pStyle'>EnableX Visual Builder</h3>
+                    <div className='card c2 flexRow' >
+                        <div>
+                            <h2 className='h22'>You Design. </h2>
+                            <h2 className='h22'>It Codes.</h2>
+                            <p className='p1'>Its that Magical with</p>
+                            <h3 className='pStyle1'>EnableX Visual Builder</h3>
+
+                            <p className='para11'>Embed powerful video calling to your app or sites in minutes. Powered by the worlds only Visual Builder tool, you can design your very own UI with just a few clicks, drags and drops.  </p>
+                        </div>
                         <div>
                             <img className='buildApp' src="pink-visual.png" alt='build-app' />
-                        </div>
-                        <p className='para1'>Embed powerful video calling to your app or sites in minutes. Powered by the world’s only Visual Builder tool, you can design your very own UI with just a few clicks, drags and drops.</p>
-                        <div style={{ textAlign: "center" }}>
-                            <button className='btn1'>No-Code Visual Builder</button>
+                            <div style={{ textAlign: "center" }}>
+                                <button className='btn2'>No-code Visual Builder</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -136,6 +157,7 @@ function BodyContainer() {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
