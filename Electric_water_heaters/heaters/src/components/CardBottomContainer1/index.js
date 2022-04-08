@@ -1,6 +1,6 @@
 import React from 'react';
 import RightClick from "./right-check.svg";
-import info from "/home/peoplelink/myProjects/Trainee_assignments/Electric Water Heaters/heaters/src/components/Content/info-tooltip.svg"
+import info from "./info-tooltip.svg"
 import './index.css';
 
 function ProductOverview() {
