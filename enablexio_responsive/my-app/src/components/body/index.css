@@ -1,0 +1,679 @@
+.bodyContainer{
+    position: relative;
+    z-index: 0;
+    /* height: 100vh; */
+    padding-top: 6rem;
+    background-image: linear-gradient(#def5b2,white);
+    padding-left:0.5rem;
+    padding-right: 0.5rem;
+}
+
+.bodyUpperContainer{
+    text-align: center; 
+}
+
+.bodyUpperContainer > h4{
+    color: red;
+    padding-bottom: 1rem;
+}
+
+.bodyUpperContainer > h1{
+    font-size: 1.7rem;
+}
+
+.bodyUpperFirstPar{
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.bodyUpperParagraph{
+    color: gray;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeBannerImg{
+    width: 100%;
+}
+
+.bodyHomeImageContainer{
+    text-align: center;
+}
+
+.bodyTryContactCont{
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.tryButtonContainer > button{
+    width: 6rem;
+    height: 1.5rem;
+    color: white;
+    background-color: red;
+    border-width: 0;
+    border-radius: 0.2rem;
+    margin-right: 0.4rem;
+}
+
+.contactButtonContainer > button{
+    width: 6rem;
+    height: 1.5rem;
+    color: red;
+    border-width: 0;
+    border-radius: 0.2rem;
+    margin-right: 0.4rem;
+    border: 0.5px solid gray;
+}
+
+.bodyCustomersCon{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.cImage1{
+    width: 5rem;
+    transition: transform 1s;
+    height: 2rem;
+}
+
+.cImageContainer{
+    padding-right: 4rem;
+    perspective: 100px;
+
+}
+
+.cImage1:hover{
+    transform: translateZ(20px);
+}
+
+.bodyCContainer{
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.bodyImageCards1{
+    justify-content: center;
+    margin: auto;
+    width: 18rem;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.bodyScrollImages{
+    animation: scroll 30s linear infinite;
+}
+
+.bodyScrollImages:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    /* 0%{
+        transform: translateX(0);
+    } */
+    100%{
+        /* transform: translateX(calc(-250px * 5)); */
+        transform: translateX(-66.6666%); 
+    }
+}
+
+.viewCustomerCon{
+    text-align: center;
+    /* padding-bottom: 2rem; */
+}
+
+.viewCustomerCon > button{
+    width: 9rem;
+    height: 1.5rem;
+    color: white;
+    background-color: red;
+    border-width: 0;
+    border-radius: 0.2rem;
+    margin-right: 0.4rem;
+}
+
+.bodyViewContainer{
+    padding-bottom: 4rem;
+}
+
+.bodyBuildImg1{
+    width: 100%;
+}
+
+.card1Container1{
+    background-color: white;
+    border-radius: 0.8rem;
+    width: 90%;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px 0 gray;
+}
+
+.card1Container1 > h2{
+    padding-top: 2rem;
+}
+
+.cardsInfoConainer{
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.bodyPara{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    color: black;
+}
+
+.bodyEnable{
+    color: red;
+    padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.bodyDescription{
+    color: gray;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+.bodyDescriptionbutton1 {
+    padding-bottom: 3rem;
+}
+
+.bodyDescriptionbutton1 > button{
+    width: 13rem;
+    height: 1.5rem;
+    color: white;
+    background-color: red;
+    border-width: 0;
+    border-radius: 0.2rem;
+    margin-right: 0.4rem;
+}
+
+
+/* css styles for min-width 769px */
+
+
+.bodyTop{
+    justify-content: center;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+.bodySubContainer{
+    justify-content: center;
+}
+
+.bodyInfo{
+    align-items: center;
+    justify-content: center;
+}
+
+.bodyInfo > h4{
+    text-align: center;
+    color: red;
+    padding-bottom: 1rem;
+    padding-top: 3rem;
+    font-size: 0.8rem;
+}
+
+.bodyInfo > h1{
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 0.8rem;
+    font-family: "barlow semi condensed!important";
+    font-weight: 500;
+    /* letter-spacing: 0.1; */
+}
+
+.bodyInfo > p {
+    text-align: center;
+    font-weight: 100;
+}
+
+.bodyImage{
+    width: 30rem;
+}
+
+
+.bodyUpContainer {
+    background-image: linear-gradient(#e5f5ef,white);
+    /* width: 100%; */
+}
+
+.bodyTopContainer{
+    /* padding-top: 4rem; */
+    /* background-image: linear-gradient(#e5f5ef,white); */
+    position: relative;
+    z-index: 0;
+    padding-top: 8rem;
+}
+
+.bodyButtonContainer{
+    justify-content: center;
+}
+
+.bodyButton1{
+    height: 3rem;
+    width: 10rem;
+    margin-right: 0.7rem;
+    border-radius: 0.3rem;
+    border-width: 0;
+    background-color: red;
+    color: white;
+}
+
+.bodyButton2{
+    height: 3rem;
+    width: 10rem;
+    border: 1px solid grey;
+    border-radius: 0.3rem;
+    color: red;
+}
+
+.bodyCustomerButton{
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cImage1{
+    width: 8rem;
+    transition: transform 1s;
+    height: 3rem;
+}
+
+.cImageContainer{
+    padding-right: 4rem;
+    perspective: 100px;
+
+}
+
+.cImage1:hover{
+    transform: translateZ(20px);
+}
+
+.bodyCContainer{
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.bodyImageCards{
+    justify-content: center;
+    margin: auto;
+    /* position: absolute;
+    transform: translate3d(0,0,0); */
+    width: 30rem;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.bodyScrollImages{
+    animation: scroll 30s linear infinite;
+}
+
+.bodyScrollImages:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    /* 0%{
+        transform: translateX(0);
+    } */
+    100%{
+        /* transform: translateX(calc(-250px * 5)); */
+        transform: translateX(-66.6666%); 
+    }
+}
+
+.bodyViewCustomerButton{
+    height: 3rem;
+    width: 12rem;
+    margin-right: 0.7rem;
+    border-radius: 0.3rem;
+    border-width: 0;
+    background-color: red;
+    color: white;
+}
+
+.bodyBuildImg{
+    width: 90%;
+}
+
+.bodyCardsBuild1{
+    justify-content: space-around;
+    margin-top: 3rem;
+    background-color: #e5f5ef;
+    padding-top: 3rem;
+    height: 100%;
+    padding-bottom: 2rem;
+}
+
+.cardsContainer1{
+    width: 45%;
+    background-color: white;
+    padding: 1rem;
+    height: 40rem;
+    border-radius: 0.7rem;
+}
+
+.homeBannerImgContainer {
+    justify-content: center;
+    align-items: center;
+}
+
+.cardsContainer1 > h2 {
+    font-weight: 500;
+    padding-bottom: 0.4rem;
+    font-size: 1.8rem;
+}
+
+.bodyPara{
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 0.8rem;
+}
+
+.bodyEnable{
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    color: red;
+}
+
+.buildImagesContainer{
+    padding-bottom: 1rem;
+}
+
+.bodyDescription{
+    padding-bottom: 1rem;
+    color: grey;
+}
+
+.bodyDescriptionbutton{
+    text-align: center;
+    padding-top: 1rem;;
+}
+
+.bodyDescriptionbutton > button{
+    height: 3rem;
+    width: 15rem;
+    background-color: red;
+    color: white;
+    border-width: 0;
+    border-radius: 0.3rem;
+}
+
+.sidenav{
+    width: 20rem;
+    position: fixed;
+    height: 100%;
+    z-index: 1;
+    top: 7rem;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.sidenav > h1{
+    text-align: center;
+    color: white;
+    font-size: 1.9rem;
+    font-family: "barlow semi condensed";
+}
+
+.enablex{
+    color: red;
+    font-family: "barlow semi condensed";
+}
+
+@media screen and (max-width: 769px) {
+    /* .bodyUpContainer1{
+        display: none;
+    } */
+    .bodyTopContainer{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .bodyContainer{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1110px){
+    .bodyInfoContainer{
+        width: 100%;
+    }
+    
+    .bodyTop{
+        justify-content: center;
+    }
+    
+    .bodySubContainer{
+        justify-content: center;
+    }
+    
+    .bodyInfo{
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .bodyInfo > h4{
+        text-align: center;
+        color: red;
+        padding-bottom: 1rem;
+        padding-top: 3rem;
+        font-size: 0.8rem;
+    }
+    
+    .bodyInfo > h1{
+        font-size: 2.5rem;
+        text-align: center;
+        padding-bottom: 0.8rem;
+        font-family: "barlow semi condensed!important";
+        font-weight: 500;
+        /* letter-spacing: 0.1; */
+    }
+    
+    .bodyInfo > p {
+        text-align: center;
+        font-weight: 100;
+    }
+    
+    .bodyImage{
+        width: 45rem;
+    }
+    
+    
+    .bodyUpContainer {
+        background-image: linear-gradient(#e5f5ef,white);
+    }
+    
+    .bodyTopContainer{
+        /* padding-top: 4rem; */
+        /* background-image: linear-gradient(#e5f5ef,white); */
+        position: relative;
+        z-index: 0;
+        padding-top: 8rem;
+    }
+    
+    .bodyButtonContainer{
+        justify-content: center;
+    }
+    
+    .bodyButton1{
+        height: 3rem;
+        width: 10rem;
+        margin-right: 0.7rem;
+        border-radius: 0.3rem;
+        border-width: 0;
+        background-color: red;
+        color: white;
+    }
+    
+    .bodyButton2{
+        height: 3rem;
+        width: 10rem;
+        border: 1px solid grey;
+        border-radius: 0.3rem;
+        color: red;
+    }
+    
+    .bodyCustomerButton{
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    
+    .cImage1{
+        width: 8rem;
+        transition: transform 1s;
+        height: 3rem;
+    }
+    
+    .cImageContainer{
+        padding-right: 4rem;
+        perspective: 100px;
+    
+    }
+    
+    .cImage1:hover{
+        transform: translateZ(20px);
+    }
+    
+    .bodyCContainer{
+        justify-content: center;
+        padding-top: 3rem;
+    }
+    
+    .bodyImageCards{
+        justify-content: center;
+        margin: auto;
+        /* position: absolute;
+        transform: translate3d(0,0,0); */
+        width: 50rem;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .bodyScrollImages{
+        animation: scroll 30s linear infinite;
+    }
+    
+    .bodyScrollImages:hover{
+        animation-play-state: paused;
+    }
+    
+    @keyframes scroll {
+        /* 0%{
+            transform: translateX(0);
+        } */
+        100%{
+            /* transform: translateX(calc(-250px * 5)); */
+            transform: translateX(-66.6666%); 
+        }
+    }
+    
+    .bodyViewCustomerButton{
+        height: 3rem;
+        width: 12rem;
+        margin-right: 0.7rem;
+        border-radius: 0.3rem;
+        border-width: 0;
+        background-color: red;
+        color: white;
+    }
+    
+    .bodyBuildImg{
+        width: 28rem;
+    }
+    
+    .bodyCardsBuild1{
+        justify-content: space-evenly;
+        margin-top: 3rem;
+        background-color: #e5f5ef;
+        padding-top: 3rem;
+        height: 100%;
+        padding-bottom: 2rem;
+    }
+    
+    .cardsContainer1{
+        width: 32rem;
+        background-color: white;
+        padding: 1rem;
+        height: 100%;
+        border-radius: 0.7rem;
+        padding-left: 2rem;
+    }
+    
+    .cardsContainer1 > h2 {
+        font-weight: 500;
+        padding-bottom: 0.4rem;
+        font-size: 1.8rem;
+    }
+    
+    .bodyPara{
+        font-size: 1.4rem;
+        font-weight: 300;
+        padding-bottom: 0.8rem;
+    }
+    
+    .bodyEnable{
+        padding-bottom: 1rem;
+        font-size: 1.4rem;
+        color: red;
+    }
+    
+    .buildImagesContainer{
+        padding-bottom: 1rem;
+    }
+    
+    .bodyDescription{
+        padding-bottom: 1rem;
+        color: grey;
+    }
+    
+    .bodyDescriptionbutton{
+        text-align: center;
+        padding-top: 1rem;;
+    }
+    
+    .bodyDescriptionbutton > button{
+        height: 3rem;
+        width: 15rem;
+        background-color: red;
+        color: white;
+        border-width: 0;
+        border-radius: 0.3rem;
+    }
+    
+    .sidenav{
+        width: 20rem;
+        position: fixed;
+        height: 100%;
+        z-index: 1;
+        top: 7rem;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .sidenav > h1{
+        text-align: center;
+        color: white;
+        font-size: 1.9rem;
+        font-family: "barlow semi condensed";
+    }
+    
+    .enablex{
+        color: red;
+        font-family: "barlow semi condensed";
+    }
+}
