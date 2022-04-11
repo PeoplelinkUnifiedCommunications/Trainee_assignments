@@ -1,0 +1,468 @@
+.bodyContainer{
+    padding: 0.3rem;
+    padding-top: 5.5rem;
+    text-align: center;
+    background-color: rgb(211, 214, 218);
+}
+
+.head1{
+    color: var(--secondaryColor);
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+
+.head2{
+    color: rgb(48, 66, 100);
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.head3{
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+
+.p1{
+    color: rgb(49, 49, 49);
+    font-size: 16px;
+}
+
+.bannerPic{
+    height: 12rem;
+}
+
+.btnContainer{
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.tffBtn{
+    background-color: var(--secondaryColor);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.csBtn{
+    background-color: white;
+    color: var(--secondaryColor);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.cLogoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:stretch;
+    height: 13.5rem;
+}
+
+.logos{
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.companyLogos{
+    height: 3.3rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.vcsBtn{
+    background-color: var(--secondaryColor);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 3rem;
+    border: none;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.card1{
+    background-color: var(--primaryColor);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.biHeading{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(219, 213, 213);
+}
+.iteHeading{
+    font-size: 20px;
+    color: rgb(127, 133, 146);
+    padding: 0.5rem 0;
+}
+
+.exHeading{
+    font-size: 20px;
+    color: rgb(47, 112, 165);
+}
+
+.buildImg{
+    width: 75%;
+    padding: 0.5rem 0;
+}
+.imgBuild{
+    display: none;
+}
+
+.p2{
+    font-size: 17px;
+    color: rgb(181, 184, 196);
+    padding: 0.5rem 0;
+}
+
+.pasBtn{
+    background-color: rgb(47, 112, 165);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+
+
+.card2{
+    background-color: rgb(61, 67, 77);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.biHeading1{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(219, 213, 213);
+}
+.iteHeading1{
+    font-size: 20px;
+    color: rgb(127, 133, 146);
+    padding: 0.5rem 0;
+}
+
+.exHeading1{
+    font-size: 20px;
+    color: rgb(170, 58, 58);
+}
+.passBtn{
+    display: none;
+}
+
+.p3{
+    font-size: 17px;
+    color: rgb(181, 184, 196);
+    padding: 0.5rem 0;
+}
+
+.ncvBtn{
+    background-color: rgb(170, 58, 58);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+}
+.nccvBtn{
+    display: none;
+}
+
+.logoContainer{
+    overflow: hidden;
+    margin: 1rem 1.5rem;
+}
+.ttuIcon{
+    display: none;
+}
+.smallLogo{
+    height: 3rem;
+    padding: 0 1rem;
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(20%);
+    }
+    100%{
+        transform: translateX(calc(-100%));
+    }
+}
+
+@media  (min-width: 768px) and (max-width: 1112px)  {
+    .bodyContainer{
+        padding-top: 12rem;
+    }
+    .bannerPic{
+        height: 24rem;
+    }
+    .btnContainer{
+        justify-content: center;
+    }
+    .head1,.head3{
+        font-size: 24px;
+    }
+    .head2{
+        font-size: 32px;
+    }
+    .p1{
+        font-size: 20px;
+    }
+    .tffBtn, .csBtn{
+        padding: 1rem 3rem;
+        font-size: 20px;
+        margin: 0 1rem;
+    }
+    .tffBtn:hover{
+        background-color: white;
+        color: var(--secondaryColor);
+        border: 1px solid var(--secondaryColor);
+    }
+    .csBtn:hover{
+        background-color: var(--secondaryColor);
+        color: white;
+    }
+    .cLogoContainer{
+        height: 10rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow-x:scroll;
+    }
+    .c{
+        display: flex;
+        flex-direction: row;
+    }
+    .logos{
+        display: flex;
+        flex-direction: row;
+    }
+    .companyLogos{
+        height: 4.2rem;
+        padding: 1rem 0.5rem;
+    }
+    .companyLogos:hover{
+        height: 5rem;
+        padding: 1rem 0.5rem;
+        border-radius: 4px;
+        border: none;
+        box-shadow: 0px 0px 16px 10px rgb(110, 109, 109);
+    }
+    .vcsBtn{
+        padding: 0.8rem 3rem;
+        font-size: 20px;
+    }
+    .vcsBtn:hover{
+        background-color: white;
+        border: 1px solid var(--secondaryColor);
+        color: var(--secondaryColor);
+    }
+    .cardContainer{
+        flex-direction: row;
+    }
+    .card1, .card2{
+        border-radius: 0;
+        display: flex;
+        flex-direction: row;
+    }
+    .imgBuild{
+        display: none;
+        height: 10rem;
+        padding: 0.5rem;
+        margin-bottom: 3rem;
+    }
+    .buildImg{
+        display: flex;
+    }
+    .biHeading, .iteHeading, .exHeading, .biHeading1, .iteHeading1, .exHeading1{
+        font-size: 20px;
+    }
+    .p2, .p3{
+        font-size: 16px;
+        width: 100%;
+    }
+    .pasBtn, .ncvBtn{
+        display: flex;
+    }
+    /* .passBtn{
+        display: none;
+        background-color: rgb(50, 99, 139);
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        margin-left: 10%;
+        font-size: 12px;
+    } */
+    .pasBtn:hover{
+        background-color: rgb(7, 139, 247);
+    }
+    /* .nccvBtn{
+        display: flex;
+        background-color: rgb(170, 58, 58);
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        margin-left: 10%;
+        font-size: 12px;
+    } */
+    .ncvBtn:hover{
+        background-color: rgb(243, 9, 9);
+    }
+    .smallLogo{
+        height: 4rem;
+        margin: 0.5rem 2rem;
+    }
+}
+
+@media (min-width: 1113px){
+    .bodyContainer{
+        padding-top: 12rem;
+    }
+    .bannerPic{
+        height: 28rem;
+    }
+    .btnContainer{
+        justify-content: center;
+    }
+    .head1,.head3{
+        font-size: 24px;
+    }
+    .head2{
+        font-size: 32px;
+    }
+    .p1{
+        font-size: 20px;
+    }
+    .tffBtn, .csBtn{
+        padding: 0.5rem 2.5rem;
+        font-size: 20px;
+        margin: 0 1rem;
+    }
+    .tffBtn:hover{
+        background-color: white;
+        color: var(--secondaryColor);
+        border: 1px solid var(--secondaryColor);
+    }
+    .csBtn:hover{
+        background-color: var(--secondaryColor);
+        color: white;
+    }
+    .cLogoContainer{
+        height: 10rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow:scroll;
+    }
+    .c{
+        display: flex;
+        flex-direction: row;
+    }
+    .logos{
+        display: flex;
+        flex-direction: row;
+    }
+    .cLogoContainer{
+        overflow: hidden;
+    }
+    .companyLogos{
+        height: 5rem;
+        padding: 1rem 2rem;
+    }
+    .companyLogos:hover{
+        height: 5rem;
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        border: none;
+        box-shadow:  4px 4px 24px rgb(105, 104, 104);
+    }
+    .vcsBtn{
+        padding: 0.8rem 3rem;
+        font-size: 20px;
+    }
+    .vcsBtn:hover{
+        background-color: white;
+        border: 1px solid var(--secondaryColor);
+        color: var(--secondaryColor);
+    }
+    .cardContainer{
+        flex-direction: row;
+    }
+    .card1, .card2{
+        border-radius: 0;
+        display: flex;
+        flex-direction: row;
+    }
+    .imgBuild{
+        display: flex;
+        height: 10rem;
+        padding: 0.5rem;
+        margin-bottom: 3rem;
+    }
+    .buildImg{
+        display: none;
+    }
+    .biHeading, .iteHeading, .exHeading, .biHeading1, .iteHeading1, .exHeading1{
+        font-size: 20px;
+    }
+    .p2, .p3{
+        font-size: 16px;
+        width: 100%;
+    }
+    .pasBtn, .ncvBtn{
+        display: none;
+    }
+    .passBtn{
+        display: flex;
+        background-color: rgb(50, 99, 139);
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        margin-left: 10%;
+        font-size: 12px;
+    }
+    .pasBtn:hover{
+        background-color: rgb(7, 139, 247);
+    }
+    .nccvBtn{
+        display: flex;
+        background-color: rgb(170, 58, 58);
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        margin-left: 10%;
+        font-size: 12px;
+    }
+    .ncvBtn:hover{
+        background-color: rgb(243, 9, 9);
+    }
+    .smallLogo{
+        height: 3.5rem;
+        margin: 0.5rem 2rem;
+    }
+}

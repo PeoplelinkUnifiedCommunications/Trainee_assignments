@@ -1,0 +1,212 @@
+.navbar{
+    background-image: linear-gradient(rgb(80, 116, 150), rgb(25, 61, 104), rgb(7, 20, 32));
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.logo{
+    height: 2rem;
+    background-color: white;
+    padding: 0.3rem;
+    border-radius: 4px;
+}
+
+.menu{
+    font-size: 30px;
+    color: white;
+}
+.login{
+    display: none;
+}
+
+.navOptions{
+    display: none;
+}
+
+.signupIcon{
+    font-size: 28px;
+    color: white;
+}
+
+.signText{
+    display: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 0.3rem 0;
+    color: white;
+    margin: 0.5rem 0;
+    border-bottom: 0.5px solid rgb(107, 106, 106);
+}
+
+li:hover{
+    background-color: var(--secondaryColor);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+}
+
+.sidenav{
+    position: fixed;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    margin-top: 3rem;
+    background-color: rgb(18, 39, 58);
+    transform: translateX(-100%);
+    transition:ease-out;
+    transition-duration: 0.5s;
+}
+
+.sidenavActive{
+    position: fixed;
+    width: 55%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    background-color: rgb(18, 39, 58);
+    transform: translateX(0%);
+    transition:ease-out;
+    transition-duration: 0.5s;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) and (max-width: 1112px) {
+    .navbar{
+        padding: 0.5rem 1.2rem;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+    }
+    .login{
+        display: flex;
+    }
+    .sidenav, .sidenavActive{display: none;}
+    .logo{
+        height: 2.5rem;
+        background-color: white;
+        padding: 0.3rem;
+        border-radius: 4px;
+    }
+
+    .menu, .signupIcon{display: none;}
+
+    .signText{
+        display: flex;
+        color: white;
+        font-size: 14px;
+    }
+    .navOptions{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 1rem;
+        padding-top: 3rem;
+        background-color: rgb(18, 39, 58);
+        border: none;
+        position: fixed;
+        width: 100%;
+        box-shadow: 1px 1px 8px 2px rgb(66, 65, 65);
+    }
+    .list{
+        list-style: none;
+        border-radius: 3px;
+        color: rgb(253, 252, 252);
+        padding: 0.4rem 0.5rem;
+        font-size: 14px;
+        border-bottom: none;
+        align-self: center;
+    }
+    .list:hover{
+        color:rgb(252, 249, 249);
+        cursor: pointer;
+        background-color: rgb(218, 10, 10);
+        padding: 0.4rem 0.5rem;
+    }
+    .wahBtnContainer{
+        justify-content: center;
+        align-items: center;
+        padding-left: 5rem;
+        width: 12rem;
+    }
+    .wahBtn{
+        padding: 0.3rem 0.2rem;
+        border-radius: 4px;
+        border: 0;
+        background-color: rgb(223, 51, 51);
+        color: white;
+        font-size: 14px;
+    }  
+}
+
+@media (min-width: 1113px){
+    .navbar{
+        padding: 0.5rem 1.2rem;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+    }
+    .login{
+        display: flex;
+    }
+    .sidenav, .sidenavActive{display: none;}
+    .logo{
+        height: 2.5rem;
+        background-color: white;
+        padding: 0.3rem;
+        border-radius: 4px;
+    }
+
+    .menu, .signupIcon{display: none;}
+
+    .signText{
+        display: flex;
+        color: white;
+        font-size: 14px;
+    }
+    .navOptions{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 1rem;
+        padding-top: 3.5rem;
+        background-color: rgb(18, 39, 58);
+        border: none;
+        position: fixed;
+        width: 100%;
+        box-shadow: 1px 1px 8px 2px rgb(66, 65, 65);
+    }
+    .list{
+        list-style: none;
+        border-radius: 3px;
+        color: rgb(253, 252, 252);
+        padding: 0.4rem 0.5rem;
+        font-size: 14px;
+        border-bottom: none;
+        align-self: center;
+    }
+    .list:hover{
+        color:rgb(252, 249, 249);
+        cursor: pointer;
+        background-color: rgb(218, 10, 10);
+        padding: 0.4rem 0.5rem;
+    }
+    .wahBtnContainer{
+        justify-content: center;
+        align-items: center;
+        padding-left: 5rem;
+        width: 14rem2
+    }
+    .wahBtn{
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        border: 0;
+        background-color: rgb(223, 51, 51);
+        color: white;
+        font-size: 14px;
+    } 
+}
