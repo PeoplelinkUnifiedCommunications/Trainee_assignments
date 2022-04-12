@@ -2,7 +2,7 @@
     width: 100%;
     height: 56px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     background-image: linear-gradient(white,rgb(196, 220, 252));
     padding: 0.5rem;
     justify-content: space-between;
@@ -10,33 +10,123 @@
 }
 .logoDiv{
     padding: 8px;
-    background-color: rgb(245, 234, 234);
+    background-color: white;
     border-radius: 29px;
     position: relative;
     top: 30px;
 }
-.joinButton{
+
+.ham{
     background-color: rgb(39, 125, 200);
     padding: 4px;
     border-radius: 4px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+
+
+    
 }
 .talkButton{
     color: white;
     background-color: rgb(39, 125, 200);
     padding: 4px;
     border-radius: 4px;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    font-size: 2rem;
+
+
+}
+.tNav{
+    display: none;
+}
+.nav{
+    align-items: center;
+    justify-content: center;
 }
 
+.navLink{
+    padding: 0.5rem;
+}
+.hide{
+    display: none;
+}
+
+
 @media (min-width: 768px) and (max-width: 1112px) {
+    
 }
 @media (min-width: 1113px) and (max-width: 1366px) {
     .header{
-        height: 64px;
+        height: 100px;
     }
-  
+    .ham{
+        display: none;
+    }
+    .logoDiv{
+        padding: 16px;
+        background-color: white;
+        border-radius: 42px;
+        top: 0;
+
+      
+    }
+    .navLink{
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+
+    }
+ .lll{
+     width: 250px;
+ }
+ .tNav{
+     display: flex;
+     flex: none;
+     flex-direction: row;
+    border-radius: 4px;
+    border: solid 1px grey;
+    background-color: rgb(134, 191, 230);
+    color: white;
+    padding:  0.5rem;
+   }
+
 }
 @media (min-width: 1367px) {
     .header{
-        height: 64px;
+        height: 100px;
     }
+    .ham{
+        display: none;
+    }
+    .logoDiv{
+        padding: 16px;
+        background-color: white;
+        border-radius: 42px;
+        top: 0;
+      
+    }
+  
+    .lll{
+        width: 250px;
+    }
+    .navLink{
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+
+    }
+   .tNav{
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    border-radius: 4px;
+    border: solid 1px grey;
+    background-color: rgb(134, 191, 230);
+    color: white;
+    padding:  0.5rem;
+   }
 }
