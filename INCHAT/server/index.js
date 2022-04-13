@@ -9,6 +9,11 @@ io.on("connection", socket => {
     socket.on("enter_room", (data) => {
         socket.join(data)
     })
+    socket.on("send_message", (data) => {
+        socket.to(data.room).emit("recieve_message", data)
+        console.log(data)
+
+    })
     socket.on("disconnect", () => {
         console.log("user:", socket.id, "is disconnected")
     })
