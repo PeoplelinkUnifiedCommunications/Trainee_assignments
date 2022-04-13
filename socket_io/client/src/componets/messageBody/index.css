@@ -1,0 +1,26 @@
+.messageInfo{
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    font-size: 1.2rem;
+    overflow-wrap: break-word;
+    width: fit-content;
+    max-width: 50%;
+    text-align: center;
+    /* width: 10rem; */
+}
+/* .messageInfo > p{
+    border: 1px solid black;
+    width: 100%;
+} */
+
+#me{
+    justify-content: flex-start;
+    /* overflow-wrap: break-word; */
+    /* text-align: start; */
+}
+
+#other{
+    justify-content: flex-end;
+    /* text-align: end; */
+}

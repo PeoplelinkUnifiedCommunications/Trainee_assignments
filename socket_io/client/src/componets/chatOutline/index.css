@@ -1,0 +1,70 @@
+.chatComponentContainer{
+    /* height: 100vh; */
+    border: 1px solid black;
+    /* width: 50%;
+    height: 50%; */
+    width: 26rem;
+    height: 40rem;
+}
+
+.chatHeader{
+    justify-content: center;
+    align-items: center;
+   border: 1px solid black;
+   position: fixed;
+   width: 26rem;
+   height: 5rem;
+   z-index: 1;
+   /* top:0; */
+}
+
+.chatBody{
+    /* position: relative; */
+    /* z-index: 2; */
+    height: 100%;
+    margin-top: 5rem;
+    overflow: auto;
+
+}
+
+.chatBottom{
+    border: 1px solid black;
+    width: 26rem;
+    height: 4rem;
+    /* position: fixed;
+    bottom: 15%; */
+    /* justify-content: flex-end; */
+}
+
+.chatBottom > input{
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    padding-left: 0.8rem;
+}
+
+.chatButtonContainer {
+    text-align: right;
+}
+
+.chatButtonContainer > button{
+    height: 3.9rem;
+    width: 4.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.chatMessages{
+    /* border: 1px solid black; */
+    padding: 0.5rem;
+}
+
+/* .chatMessages > p{
+    font-size: 1.7rem;
+} */
+
+.timeDetails > p{
+    padding: 0.2rem;
+    font-size: 0.8rem;
+}
