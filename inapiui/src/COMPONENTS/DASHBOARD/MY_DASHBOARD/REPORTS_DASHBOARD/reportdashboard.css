@@ -1,0 +1,34 @@
+.billings{
+    padding: 0.25rem;
+    width: 100%;
+    height: 60%;
+    justify-content: space-between;
+}
+.billingSub{
+    width: 32.5%;
+    height: 100%;
+    /* background-color: rgb(118, 178, 243); */
+    border-radius: 4px;
+    box-shadow: 0 0 4px lightgrey;
+    /* color: white; */
+    padding: 0.25rem;
+    justify-content: space-around;
+    cursor: pointer;
+
+}
+.totalNumberOf{
+    padding: 0.25rem;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+.totalInfo{
+    padding: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+.iconCntnr1{
+    padding-right: 0.5rem;
+}
+/* .iconW{
+    color: white;
+} */

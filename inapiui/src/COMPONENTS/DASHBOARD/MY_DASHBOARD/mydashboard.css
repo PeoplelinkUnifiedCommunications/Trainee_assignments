@@ -1,0 +1,22 @@
+.myDashboard{
+    width: 85%;
+padding: 1rem;
+border-top: solid 1px lightgrey;
+display: flex;
+flex-wrap: wrap;
+overflow-y:scroll ;
+}
+.square1{
+    width: 50%;
+    height: 35%;
+    padding: 0.5rem;
+  
+}
+.square{
+    width: 50%;
+    height: 50%;
+    /* background-color: var(--primaryColor); */
+    padding: 0.5rem;
+    /* border-radius: 4px; */
+    border: solid 1px lightgrey;
+}

@@ -1,0 +1,53 @@
+:root{
+  --primaryColor:#336ebf
+}
+*{
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+#root{
+  width: 100%;
+  height: 100%;
+}
+
+.base{
+  width: 100%;
+  height: 100%;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  padding-top: 3.5rem;
+}
+/* .dash{
+  height: 100%;
+
+} */
+/* UTILITY CLASSES */
+.flexRow { display: flex; flex: none }
+.flexCol { display: flex; flex: none; flex-direction: column }
+.flexInline { display: inline-flex; flex: none; }
+.flexWrap { display: flex; flex: none;  flex-wrap: wrap; overflow: hidden; }
+.flexMinWidthRow { display: flex; flex: 1; min-width: 0; }
+.flexMinWidthCol { display: flex; flex: 1; min-width: 0; flex-direction: column; }
+.flexAutoRow { display: flex; flex: none; min-width: 24px; }
+.flexAutoCol { display: flex; flex: none; min-width: 24px; flex-direction: column; }

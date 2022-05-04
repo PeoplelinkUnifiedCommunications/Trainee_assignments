@@ -1,0 +1,32 @@
+.resources{
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding: 0.25rem;
+    width: 100%;
+    box-shadow: 0 0 4px lightgrey;
+
+}
+.resource{
+    width: 50%;
+}
+.resL{
+    padding: 0.25rem;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    width: 20px;
+    color:var(--primaryColor);
+}
+.resR{
+    padding: 0.25rem;
+    width: 80%;
+      
+}
+.txt{
+    word-wrap: break-word;
+}
+.resR small{
+    margin-top: 0.5rem;
+}
