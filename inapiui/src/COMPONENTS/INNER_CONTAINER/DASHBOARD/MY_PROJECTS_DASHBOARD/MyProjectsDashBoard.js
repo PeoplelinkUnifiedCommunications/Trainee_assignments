@@ -1,9 +1,19 @@
 import React from "react"
 import "./myprojectdashboard.css"
+import Button from "@material-ui/core/Button";
 import EditOutlinedIcon from "@material-ui/icons/EditOutlined";
 import DeleteOutlineOutlinedIcon from "@material-ui/icons/DeleteOutlineOutlined";
 import VideocamOutlinedIcon from "@material-ui/icons/VideocamOutlined";
+import { createTheme, ThemeProvider } from "@material-ui/core";
 function MyProjectsDashBoard() {
+  const theme = createTheme({
+    palette : {
+      primary :  {
+        main : "#215288"
+      }
+      
+    }
+  });
   return (
     <div className="card flexCol" >
       <div className="cardHead flexRow">
@@ -46,7 +56,10 @@ function MyProjectsDashBoard() {
         
       </table>
       <div className="cardBtnCntnr flexCol">
-        <button className="cardBtn">Create project</button>
+        {/* <button className="cardBtn">Create project</button> */}
+        <ThemeProvider theme={theme}>
+          <Button variant="contained" color="primary" disableElevation>create</Button>
+        </ThemeProvider>
       </div>
     </div>
   )

@@ -1,15 +1,15 @@
 import React from "react";
 import Header from "./COMPONENTS/HEADER/Header";
 import Sidenav from "./COMPONENTS/SIDENAV/Sidenav";
-import MyDashboard from "./COMPONENTS/DASHBOARD/MY_DASHBOARD/MyDashboard";
+import InnerCntnr from "./COMPONENTS/INNER_CONTAINER/InnerCntnr";
 
 function App() {
   return (
-    <div className="base flexCol">
-      <Header />
-      <div className="main flexRow">
+    <div className="baseBlockCntnr ">
+      <div className="mainCntnr flexRow">
+        <Header />
         <Sidenav />
-        <MyDashboard />
+        <InnerCntnr />
       </div>
     </div>
   );

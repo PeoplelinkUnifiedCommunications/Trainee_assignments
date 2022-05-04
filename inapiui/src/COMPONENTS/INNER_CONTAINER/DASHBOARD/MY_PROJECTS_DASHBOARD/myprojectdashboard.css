@@ -4,6 +4,7 @@
     padding: 0.5rem;
     /* border: solid 1px lightgrey; */
     box-shadow: 0 0 8px lightgrey;
+    background-color: white;
 
     border-radius: 4px;
 }
@@ -14,9 +15,15 @@
     margin-bottom: 1rem;
 }
 .blueTxt{
-    color: rgba(9, 9, 228, 0.793);
+  color: var(--primaryColor);
     font-size: 1rem;
     cursor: pointer;
+}
+.blueTxt:hover{
+    color: var(--hoverColor);
+    transform: scale(1.05);
+
+
 }
 table{
     border-collapse: collapse;
@@ -45,6 +52,11 @@ td{
     color: var(--primaryColor);
 
 }
+.actionBtn:hover{
+    color: var(--hoverColor);
+    transform: scale(1.05);
+
+}
 .cardBtnCntnr{
     padding: 0.25rem;
     align-items: flex-end;
@@ -57,4 +69,10 @@ td{
     border: none;
     color: white;
     cursor: pointer;
+}
+.cardBtn:hover{
+    background-color: var(--hoverColor);
+    transform: scale(1.05);
+
+
 }

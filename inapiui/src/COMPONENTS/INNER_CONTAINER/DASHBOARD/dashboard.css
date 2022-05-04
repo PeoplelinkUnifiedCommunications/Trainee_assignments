@@ -1,0 +1,15 @@
+.dashBoard{
+    height: 100%;
+}
+.square1{
+    width: 100%;
+    height: 35%;
+    padding: 0.5rem;
+  
+}
+.square{
+    width: 50%;
+    height: 35%;
+    padding: 0.5rem;
+   
+}

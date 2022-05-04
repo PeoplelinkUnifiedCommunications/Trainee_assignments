@@ -1,24 +1,30 @@
-.sideNav{
-    width: 15%;
-    height: 100%;
-    /* position: fixed; */
+.sideNav {
+    width: 256px;
+    height: calc(100% - 64px);
+    position: fixed;
     background-color: var(--primaryColor);
     color: white;
-    /* align-items: center; */
-    /* justify-content: space-between; */
+    justify-content: space-between;
+    z-index: 1;
+    left: 0;
+    top: 4rem;
 }
 .navigate{
     padding: 0.75rem 0.3rem;
     align-items: center;
     justify-content: flex-start;
-    border-bottom: solid 1px whitesmoke;
+    /* border-bottom: solid 1px whitesmoke; */
     cursor: pointer;
+}
+.navigate:hover{
+    background-color: var(--hoverColor);
+    transform: scaleY(1.05);
 }
 /* logoBye{
     p
 } */
 .logOut{
-    border-top: solid 1px whitesmoke;
-    margin-top: 18rem;
+    /* border-top: solid 1px whitesmoke; */
+    /* margin-top: 18rem; */
     cursor: pointer;
 }

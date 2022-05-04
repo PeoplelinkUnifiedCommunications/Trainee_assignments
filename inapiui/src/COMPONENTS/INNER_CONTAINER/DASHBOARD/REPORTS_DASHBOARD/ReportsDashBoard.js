@@ -44,7 +44,7 @@ function ReportsDashBoard() {
           </div>
           <div className="totalInfo flexRow">
             <div className="iconCntnr1">
-              <CallOutlinedIcon className="icon iconW "/>
+              <CallOutlinedIcon className="icon  "/>
             </div>
             <span>0</span>
           </div>

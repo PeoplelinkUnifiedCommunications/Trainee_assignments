@@ -1,0 +1,8 @@
+.innerCntnr{
+    width: calc(100% - 265px);
+    margin-left: 256px;
+}
+.title{
+    width: 100%;
+    padding: 0.5rem;
+}
