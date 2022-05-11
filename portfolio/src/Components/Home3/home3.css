@@ -1,0 +1,28 @@
+.inner-sect3 {
+    width: 100%;
+    height: 60rem;
+    padding: 4rem;
+    background-color: #2d4bcf;
+}
+
+.past, .past1 {
+    font-size: 2.5rem;
+    font-family: serif;
+    font-weight: 700;
+    color: #e3ed8c;
+}
+
+.past1 {
+    margin-bottom: 1rem;
+}
+
+.s9, .s10, .s11, .s12, .s13, .s14, .s15, .s16, .s17, .s18, .s19, .s20, .s21, .s22, .s23, .s24, .s25, .s26 {
+    font-size: 12px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.blog {
+    margin-top: 4rem;
+}
