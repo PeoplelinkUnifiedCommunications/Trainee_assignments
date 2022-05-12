@@ -14,9 +14,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb2c8744-47f2-49dd-a95f-82f84502325c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ontrack/coroutinesuspand/ManiActivity3.kt" afterDir="false" />
+    <list default="true" id="cb2c8744-47f2-49dd-a95f-82f84502325c" name="Default Changelist" comment="Deferred">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ontrack/coroutinesuspand/New.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +138,14 @@
       <option name="presentableId" value="Default" />
       <updated>1652244601519</updated>
     </task>
+    <task id="LOCAL-00001" summary="Deferred">
+      <created>1652271379841</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652271379841</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,5 +158,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Deferred" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deferred" />
   </component>
 </project>
