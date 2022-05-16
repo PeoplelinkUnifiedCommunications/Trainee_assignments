@@ -1,6 +1,6 @@
 .section4 {
     width: 100%;
-    height: 26rem;
+    height: 30rem;
     background-color: #361055;
 }
 
@@ -15,7 +15,11 @@
     color: #d1cfd4;
 }
 
-ul {
+.anc {
+    color: #c8ca96;
+}
+
+.ul-list {
     list-style-type: none;
 }
 
@@ -43,7 +47,7 @@ ul {
     margin-left: 6rem;
 }
 
-a {
+.a2, .a3{
     color: #c8ca96;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;

@@ -21,12 +21,14 @@
 }
 
 .menu {
-    margin-top: 0.8rem;
-    margin-right: 10rem;
+    margin-top: 2rem;
+    margin-left: 6rem;
 }
 
 .logo {
-    padding: 1rem;
+    margin: 0.9rem;
+    border: 1px solid yellow;
     border-radius: 50%;
+    background-color: #fff;
 }
 

@@ -1,15 +1,15 @@
 .heading {
-    height: 20rem;
+    height: 22rem;
     width: 100%;
     background-color: #0a44cc;
 }
 
 .ui, .devloper {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
-    font-family: serif ;
+    font-family:fantasy ;
     color: #d9ed24;
-    margin-left: 6rem;
+    margin-left: 4rem;
 }
 
 .abt1, .abt2 {

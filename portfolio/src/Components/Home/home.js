@@ -22,8 +22,8 @@ function Home() {
                    <span className="exp5">mockups,visual design and design</span> <br />
                    <span className="exp6">software,user research.</span> <br />
                </div>
-               </div>
             </div>
+        </div>
         </div>
     )    
 }

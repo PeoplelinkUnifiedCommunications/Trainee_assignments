@@ -1,6 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./home4.css";
 function Home4() {
+
+  const [values, setValues] = useState({name:'', email:'', msg:''})
+
+  const saveFormData = async () => {
+    const response = await fetch('/api', {
+      method: 'POST',
+      body: JSON.stringify(values)
+    });
+    if (response.status !== 200) {
+      throw new Error(`Request failed: ${response.status}`); 
+    }
+  }
+
+  const onSubmit = async (event) => {
+    event.preventDefault(); // Prevent default submission
+    try {
+      await saveFormData();
+      alert('Your registration was successfully submitted!');
+      setValues({
+        name: '', email: '', msg: ''
+      });
+    } catch (e) {
+      alert(`Registration failed! ${e.message}`);
+    }
+  }
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
+
+
+  const handleSubmit = event => {
+    event.preventDefault()
+  }
+
+  const handleNameChange = event => {
+    setName(event.target.value)
+  }
+
+  const handleEmailChange = event => {
+    setEmail(event.target.value)
+  }
+
+  const handleMsgChange = event => {
+    setMsg(event.target.value)
+  }
+
+
   return (
     <div className="flexRow section3">
       <div className="inner-sect4">
@@ -13,9 +62,11 @@ function Home4() {
             <span>projects, web apps</span> <br />
             <span>and experimentals.</span>
           </div>
+          <Link to={"/work"}>
           <div className="rectangle">
-            <p>SEE MY WORK &nbsp; &nbsp; &#10230;</p>
+            <button className="btn">SEE MY WORK &nbsp; &nbsp; &#10230;</button>
           </div>
+          </Link>
 
           <div className="hr">
             <hr />
@@ -31,9 +82,11 @@ function Home4() {
             <span>learning and life.</span>
           </div>
 
+          <Link to ={"/shelf"}>
           <div className="rectangle">
-            <p>READ MY ARTICLES &nbsp; &nbsp; &#10230;</p>
+            <button className="btn">READ MY ARTICLES &nbsp; &nbsp; &#10230;</button>
           </div>
+          </Link>
         </div>
 
         <div className="message">
@@ -45,26 +98,27 @@ function Home4() {
             <span>Go ahead.</span>
           </div>
 
+          <form onSubmit={handleSubmit}>
           <div className="fields">
             <label htmlFor="name">Your Name</label>
             <br />
-            <input type="text" placeholder="Enter your name" /> <br />
+            <input type="text" name="name" onChange={handleNameChange} value={name} placeholder="Enter your name" /> <br />
             <br />
             <label htmlFor="email">Email Address</label>
             <br />
-            <input type="text" placeholder="Enter your email address" /> <br />
+            <input type="text" name="email" onChange={handleEmailChange} value={email} placeholder="Enter your email address" /> <br />
             <br />
             <label htmlFor="msg">Your Message</label>
             <br />
             <input
-              type="text"
+              type="text" name="msg" onChange={handleMsgChange} value={msg}
               placeholder="Hi, I think we need a design system for our products at Company"
             />
           </div>
+          </form>
 
-          <div className="rectangle">
-            <p>SHOOT &nbsp; &nbsp; &#10230;</p>
-          </div>
+         
+            <button onClick={onSubmit} className="btn">SHOOT &nbsp; &nbsp; &#10230;</button>
         </div>
       </div>
     </div>

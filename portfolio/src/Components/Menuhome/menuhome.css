@@ -1,0 +1,48 @@
+h1 {
+    padding: 2rem;
+    color: blue;
+}
+
+.li-element {
+    margin-left: 4rem;
+    padding-bottom: 2rem;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.ul-list1 {
+    color: blue;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.span-element {
+    color: #dad1d1;
+    letter-spacing: 2px;
+    letter-spacing: 4px;
+    font-size: 19px;
+}
+
+.redirected-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    align-items: center;
+}
+
+.a0 {
+    color: blue;
+    text-decoration: none;
+}
+
+.a1 {
+    text-decoration: none;
+    color: blue;
+    margin-right: 2rem;
+}
+
+.ul-listn {
+    list-style-type: none;
+}
+

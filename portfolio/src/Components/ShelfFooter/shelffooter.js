@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./footer.css";
-function Footer() {
+function ShelfFooter() {
   return (
     <footer className="section4">
       <div className="inner-content">
@@ -12,20 +11,20 @@ function Footer() {
               <li className="item1">
                 <a className="anc" target="_blank" href="https://mail.google.com/mail/u/0/#inbox">hello@marti.dev</a></li>
               <li className="item2">
-              <a className="anc" target="_blank" href="https://web.telegram.org/z/">t.me/mrshema</a></li>
+                <a className="anc" target="_blank" href="https://web.telegram.org/z/">t.me/mrshema</a></li>
             </ul>
 
             <ul className="list">
-              <Link to={"/work"}>
+              <Link to={"/"}>
               <li>
-                <a className="a2" href="#">My Work</a>
+                <a className="a2" href="#">Home</a>
               </li>
               </Link>
               <br />
 
-              <Link to={"/shelf"}>
+              <Link to={"/work"}>
               <li>
-                <a className="a2" href="#">My Shelf</a>
+                <a className="a2" href="#">My Work</a>
               </li>
               </Link>
               <br />
@@ -51,16 +50,16 @@ function Footer() {
 
           <ul className="list1">
             <li className="itm1">
-              <a className="a3" target="_blank" href="https://twitter.com/">TW</a>
+              <a className="a3" target={"_blank"} href="https://twitter.com/">TW</a>
             </li>
             <li className="itm2">
-              <a className="a3" target="_blank" href="https://github.com/">GH</a>
+              <a className="a3" target={"_blank"} href="https://github.com/">GH</a>
             </li>
             <li className="itm3">
-              <a className="a3" target="_blank" href="https://www.linkedin.com/">LN</a>
+              <a className="a3" target={"_blank"} href="https://www.linkedin.com/">LN</a>
             </li>
             <li className="itm4">
-              <a className="a3" target="_blank" href="https://www.youtube.com/">YT</a>
+              <a className="a3" target={"_blank"} href="https://www.youtube.com/">YT</a>
             </li>
           </ul>
         </div>
@@ -68,4 +67,4 @@ function Footer() {
     </footer>
   );
 }
-export default Footer
+export default ShelfFooter
