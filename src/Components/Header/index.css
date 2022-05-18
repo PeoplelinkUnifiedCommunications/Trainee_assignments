@@ -1,0 +1,16 @@
+.header-styling{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    color: #d9ff66;
+    align-items: center;
+    background-color: #0a44cc;
+}
+
+.menu-icon{
+height: 4rem;
+width: 4rem;
+color: #d9ff66;
+}

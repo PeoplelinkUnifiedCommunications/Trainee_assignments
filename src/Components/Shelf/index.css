@@ -1,0 +1,30 @@
+.menu-navbar-conatiner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.shelf-part-bg-container{
+    padding: 4rem;
+}
+
+.shelf-part-content-container{
+    color:#605252 ;
+    padding: 3rem;
+}
+
+.shelf-part-heading{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.shelf-problem-title{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.line-break-shelf{
+    margin-top: 3rem;
+    margin-bottom: 3rem
+}
