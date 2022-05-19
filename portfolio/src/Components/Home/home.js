@@ -1,30 +1,62 @@
 import React from "react";
+import { BiMenuAltRight } from "react-icons/bi";
 import "./home.css";
+
 function Home() {
-    return (
-        <div className="flexRow heading">
+  return (
+    <div className="doubleCntnr">
+      <div className="flexRow header">
+        <h1 className="nm">Marti</h1>
+        <a className="menu-icon" href="/menu">
+          <BiMenuAltRight />
+        </a>
+      </div>
+      <div className="cntCntnr">
+        <div className="imtxtCntnr">
+          <div className="txtCntnr">
             <div className="role">
-               <span className="ui">UI/UX</span><br />
-               <span className="devloper">Developer.</span>
-               <br/>
-               <div className="about">
-                <span className="abt1">UX designers spend much of their time in</span> <br />
-                <span className="abt2">creating the best possible experience.</span>
-               </div>
-               <div className="grid-cntnr">
-                <div className="sec1">
-                   <span className="exp1">UX designers use a combo</span> <br />
-                   <span className="exp2">of technical and workplace </span> <br />
-                   <span className="exp3">skills in their design work.</span>
-                </div>
-               <div className="sec2">
-                   <span className="exp4">Prototypes,wireframes,userflows,</span> <br />
-                   <span className="exp5">mockups,visual design and design</span> <br />
-                   <span className="exp6">software,user research.</span> <br />
-               </div>
+              <span className="ui">UI/UX</span>
+              <br />
+              <span className="dev">Developer.</span>
             </div>
+            <div className="about">
+              <span className="sp1">
+                I like to craft solid and scalable ui
+              </span>
+              <br />
+              <span className="sp2">products with great user experiences.</span>
+            </div>
+          </div>
+          <div className="imgCntnr">
+            <img className="developer"
+              src="./images/developer.jpeg"
+              alt="ui/ux developer"
+              width="350px"
+              height="340px"
+            />
+          </div>
         </div>
+        <div className="section">
+          <div className="sec1">
+            <span>Highly skilled at progressive</span>
+            <br />
+            <span>enhancements,design systems & UI</span>
+            <br />
+            <span>Engineering.</span>
+          </div>
+          <div className="sec2">
+            <span>Highly skilled at progressive</span>
+            <br />
+            <span>enhancements,design systems & UI</span>
+            <br />
+            <span>Engineering.</span>
+          </div>
         </div>
-    )    
+      </div>
+      <div className="imgCntnr1">
+        <img className="dev" src="./images/developer.jpeg" alt = "developer" width="220px" height="200px"/>
+      </div>
+    </div>
+  );
 }
-export default Home
+export default Home;

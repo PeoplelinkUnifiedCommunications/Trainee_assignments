@@ -13,10 +13,15 @@
     margin-right: 2rem;
 }
 
+.home-4-card1-inner{
+    background-color: ghostwhite;
+    padding: 4rem;
+}
+
 h2 {
     font-size: 28px;
     font-family: sans-serif;
-    color: #2633eb;
+    color: #4831D4;
 }
 
 .essential, .essential1, .message {
@@ -53,9 +58,14 @@ h2 {
     font-weight: bold;
     background-color: transparent;
 }
+.section3 {
+    padding: 5rem;
+    background-color: ghostwhite;
+}
 
-.hr {
-    padding: 4rem;
+.home4-card1, .home4-card2 {
+    background-color: #fff;
+    padding: 5rem;
 }
 
 .message {
@@ -89,6 +99,62 @@ input[type=text] {
     border-bottom: 1px solid #686a70;
     margin-top: 2rem;
     width: 24rem;
+}
+.home-4-card1-inner {
+    flex-grow: 1;
+    background-color: #fff;
+}
+
+@media(min-width: 1200px) {
+    .home4-card-1-bg-container {
+        display: flex;
+    }
+    .home-4-card1-inner {
+        flex-grow: 1;
+        background-color: #fff;
+    }
+    .home4-card-2-bg-container {
+        /* width: 50vw; */
+        align-self: center;
+    }
+    .text-headpara {
+        text-align: center;
+    }
+    .section3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .namemailCntnr {
+        display: flex;
+        justify-content: space-between;
+    }
+    .fields {
+        width: 50vw;
+    }
+    /* .msgCntnr {
+        width: 100%;
+        align-self: center;
+    } */
+    .txtarea {
+        border-top: none;
+        border-left:none;
+        border-right: none;
+        background: inherit;
+        width: 60%;
+    }
+
+    label {
+        line-height: 20px;
+    }
+    input {
+        padding-bottom: 2rem;
+    }
+    .shoot {
+    
+        display: flex;
+        justify-content: center;
+        
+    }
 }
 
 

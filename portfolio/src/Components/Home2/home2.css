@@ -22,3 +22,29 @@
     margin-top: 1rem;
     margin-bottom: 4rem;
 }
+
+@media (min-width: 1200px) {
+    .section1 {
+        height: 80vh;
+    }
+    .design, .engineer {
+        margin-left: 6rem;
+        line-height: 20px;
+    }
+    /* .inner-sect1, .inner-sect2{
+        padding: 6rem;
+    } */
+    .inner-sect2 {
+        float: right;
+    }
+    .main, .main1 {
+        font-family: sans-serif;
+        margin-top: 10rem;
+        margin-left: 6rem;
+        font-size: 4.5rem;
+    }
+    .s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8  {
+        font-size: 1rem;
+        font-weight: bold;
+    } 
+}

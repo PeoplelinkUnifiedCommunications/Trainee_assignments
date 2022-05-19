@@ -15,8 +15,8 @@ function Home2() {
                 <div className="inner-sect2">
                     <span className="main1">Engineering</span> <br />
                     <div className="engineer">
-                        <span className="s6">A user experience (UX) engineer builds and designs</span>
-                        <span className="s7">digital products like websites and apps while using UX principles.</span>
+                        <span className="s6">A user experience (UX) engineer builds and designs</span><br />
+                        <span className="s7">digital products like websites and apps while using UX principles.</span><br />
                         <span className="s8">UX engineers generally deal with the front end of layouts.</span>
                     </div>
                 </div>

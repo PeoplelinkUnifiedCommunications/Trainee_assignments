@@ -74,4 +74,9 @@
     margin-right: 1rem;
 }
 
-
+button {
+    font-size: 16px;
+    border: none;
+    background: inherit;
+    color: #c8ca96;
+}

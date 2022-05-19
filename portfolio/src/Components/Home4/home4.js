@@ -1,59 +1,11 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./home4.css";
 function Home4() {
 
-  const [values, setValues] = useState({name:'', email:'', msg:''})
-
-  const saveFormData = async () => {
-    const response = await fetch('/api', {
-      method: 'POST',
-      body: JSON.stringify(values)
-    });
-    if (response.status !== 200) {
-      throw new Error(`Request failed: ${response.status}`); 
-    }
-  }
-
-  const onSubmit = async (event) => {
-    event.preventDefault(); // Prevent default submission
-    try {
-      await saveFormData();
-      alert('Your registration was successfully submitted!');
-      setValues({
-        name: '', email: '', msg: ''
-      });
-    } catch (e) {
-      alert(`Registration failed! ${e.message}`);
-    }
-  }
-
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [msg, setMsg] = useState("");
-
-
-  const handleSubmit = event => {
-    event.preventDefault()
-  }
-
-  const handleNameChange = event => {
-    setName(event.target.value)
-  }
-
-  const handleEmailChange = event => {
-    setEmail(event.target.value)
-  }
-
-  const handleMsgChange = event => {
-    setMsg(event.target.value)
-  }
-
-
   return (
-    <div className="flexRow section3">
-      <div className="inner-sect4">
-        <div className="innerCntnr">
+    <div className="flexCol section3">
+      <div className="home4-card-1-bg-container">
+        <div className="home-4-card1-inner">
           <h2>I build &</h2>
           <h2>design stuff</h2>
 
@@ -63,16 +15,17 @@ function Home4() {
             <span>and experimentals.</span>
           </div>
           <Link to={"/work"}>
-          <div className="rectangle">
-            <button className="btn">SEE MY WORK &nbsp; &nbsp; &#10230;</button>
-          </div>
+            <div className="rectangle">
+              <button className="btn">
+                SEE MY WORK &nbsp; &nbsp; &#10230;
+              </button>
+            </div>
           </Link>
+        </div>
 
-          <div className="hr">
-            <hr />
-          </div>
-
-          <div className="content">
+        <hr />
+        <div className="home-4-card1-inner">
+          <div>
             <h2>I write,</h2>
             <h2>sometimes</h2>
           </div>
@@ -82,43 +35,67 @@ function Home4() {
             <span>learning and life.</span>
           </div>
 
-          <Link to ={"/shelf"}>
-          <div className="rectangle">
-            <button className="btn">READ MY ARTICLES &nbsp; &nbsp; &#10230;</button>
-          </div>
+          <Link to={"/shelf"}>
+            <div className="rectangle">
+              <button className="btn">
+                READ MY ARTICLES &nbsp; &nbsp; &#10230;
+              </button>
+            </div>
           </Link>
         </div>
-
+      </div>
+      <div className="home4-card-2-bg-container">
         <div className="message">
-          <h2>Send me a message!</h2>
+          <h2 className="text-headpara">Send me a message!</h2>
 
-          <div className="msg">
-            <span>Got a question or proposal, or just want to say hello?</span>
+          <div className="text-headpara msg">
+            <span className="text-headpara">
+              Got a question or proposal, or just want to say hello?
+            </span>
             <br />
             <span>Go ahead.</span>
           </div>
 
-          <form onSubmit={handleSubmit}>
           <div className="fields">
-            <label htmlFor="name">Your Name</label>
-            <br />
-            <input type="text" name="name" onChange={handleNameChange} value={name} placeholder="Enter your name" /> <br />
-            <br />
-            <label htmlFor="email">Email Address</label>
-            <br />
-            <input type="text" name="email" onChange={handleEmailChange} value={email} placeholder="Enter your email address" /> <br />
-            <br />
-            <label htmlFor="msg">Your Message</label>
-            <br />
-            <input
-              type="text" name="msg" onChange={handleMsgChange} value={msg}
-              placeholder="Hi, I think we need a design system for our products at Company"
-            />
+            <div className="namemailCntnr">
+              <div className="nameCntnr">
+                <label htmlFor="name">Your Name</label>
+                <br />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                />{" "}
+                <br />
+                <br />
+              </div>
+              <div className="mailCntnr">
+                <label htmlFor="email">Email Address</label>
+                <br />
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Enter your email address"
+                />{" "}
+                <br />
+                <br />
+              </div>
+            </div>
+            <div className="msgCntnr">
+              <label htmlFor="msg">Your Message</label>
+              <br />
+              <textarea className="txtarea"
+              rows="2"
+              cols="30"
+                type="text"
+                name="msg"
+                placeholder="Hi, I think we need a design system for our products at Company"
+              />
+            </div>
+            <div className="shoot">
+            <button className="btn">SHOOT &nbsp; &nbsp; &#10230;</button>
+            </div>
           </div>
-          </form>
-
-         
-            <button onClick={onSubmit} className="btn">SHOOT &nbsp; &nbsp; &#10230;</button>
         </div>
       </div>
     </div>

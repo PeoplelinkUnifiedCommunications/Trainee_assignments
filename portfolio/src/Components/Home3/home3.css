@@ -25,3 +25,27 @@
 .blog {
     margin-top: 4rem;
 }
+
+@media(min-width: 1200px) {
+   .past, .past1 {
+       font-size: 4.5rem;
+       font-weight: bolder;
+       font-family:sans-serif;
+       /* margin-left: 6rem; */
+   } 
+   .inner-sect3 {
+       display: flex;
+   }
+
+   .spanCntnr {
+       margin-left: 6rem;
+   }
+
+   .s9, .s10, .s11, .s12, .s13, .s14, .s15, .s16, .s17, .s18, .s19, .s20, .s21, .s22, .s23, .s24, .s25, .s26 {
+       font-size: 1rem;
+       line-height: 2;
+   }
+   .blogCntnr {
+       padding: 14rem;
+   }
+}

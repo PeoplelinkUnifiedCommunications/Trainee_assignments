@@ -8,7 +8,7 @@ function Menu() {
         <h1>Marti</h1>
         <Link to={"/"}>
           <div>
-            <img className="cross" src="./images/cross.png" width="30px" height="30px"/>
+            <img className="cross" src="./images/cross.png" width="30px" height="40px"/>
           </div>
         </Link>
       </div>
@@ -33,10 +33,10 @@ function Menu() {
           <span className="span-element">SAY HELLO</span>
         </li>
         <li className="li-element">
-          <a className="a0" target="_blank" href="https://mail.google.com/mail/u/0/#inbox">hello@hema.dev</a>
+          <a className="a0" target="_blank" href="https://mail.google.com/mail/u/0/#inbox">hello@marti.dev</a>
         </li>
         <li className="li-element">
-          <a className="a0" target="_blank" href="https://web.telegram.org/z/">t.me/mrshema</a>
+          <a className="a0" target="_blank" href="https://web.telegram.org/z/">t.me/mrsmarti</a>
         </li>
         <br />
         <ul className="ul-listn">

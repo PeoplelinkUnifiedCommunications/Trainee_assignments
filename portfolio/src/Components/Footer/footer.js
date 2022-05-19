@@ -3,36 +3,36 @@ import { Link } from "react-router-dom";
 import "./footer.css";
 function Footer() {
   return (
-    <footer className="section4">
+    <footer className="flexRow section4">
       <div className="inner-content">
         <div className="footer-main">
           <span className="s27">SAY HELLO</span> <br />
           <div className="flexRow lists">
             <ul className="ul-list">
               <li className="item1">
-                <a className="anc" target="_blank" href="https://mail.google.com/mail/u/0/#inbox">hello@marti.dev</a></li>
+                <a className="anc" target="_blank" href="https://mail.google.com/mail/u/0/#inbox"><button>hello@marti.dev</button></a></li>
               <li className="item2">
-              <a className="anc" target="_blank" href="https://web.telegram.org/z/">t.me/mrshema</a></li>
+              <a className="anc" target="_blank" href="https://web.telegram.org/z/"><button>t.me/mrsmarti</button></a></li>
             </ul>
 
+          
             <ul className="list">
               <Link to={"/work"}>
               <li>
-                <a className="a2" href="#">My Work</a>
+                <a className="a2" href="#"><button>My Work</button></a>
               </li>
               </Link>
               <br />
-
               <Link to={"/shelf"}>
               <li>
-                <a className="a2" href="#">My Shelf</a>
+                <a className="a2" href="#"><button>My Shelf</button></a>
               </li>
               </Link>
               <br />
 
               <Link to={"/resume"}>
               <li>
-                <a className="a2" href="#">My Resume</a>
+                <a className="a2" href="#"><button>My Resume</button></a>
               </li>
               </Link>
             </ul>
