@@ -1,0 +1,52 @@
+.experience-bg-container{
+    background-color: #4831D4;
+    color: white;
+    padding: 3rem;
+    padding-left: 5rem;
+    min-height: 100vh;
+}
+
+.experience-heading{
+    color: #CCF381;
+    font-size: 38.986px;
+    padding-bottom: 1rem;
+   
+}
+
+.experience-paragraph{
+    color: #FFFFFF;
+    padding-bottom: 1rem;
+    line-height: 1.5rem;
+    font-size: 11.986px;
+}
+
+.experiance-image{
+    height: 90%;
+    width: 100%;
+    padding-top: 3rem;
+}
+
+@media (min-width:768px) {
+    .experience-text-card{
+        width: 38vw;
+    }
+    .experience-bg-container{
+        display: flex;
+        align-self: center;
+        
+    }
+    .experience-paragraph{
+        line-height: 1rem;
+        font-size: 10.7px;
+    }
+    .experiance-image{
+        padding-left: 2rem;
+        height: 50%;
+        width: 80%;
+    }
+    .experience-image-container{
+        align-self: center;
+        display: flex;
+        justify-content: center;
+    }
+}
