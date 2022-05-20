@@ -99,15 +99,33 @@ input[type=text] {
     border-bottom: 1px solid #686a70;
     margin-top: 2rem;
     width: 24rem;
+    padding-bottom: 1rem;
 }
+
 .home-4-card1-inner {
     flex-grow: 1;
     background-color: #fff;
 }
 
+.txtarea {
+    border-top: none;
+    border-left:none;
+    border-right: none;
+    background: inherit;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+.msgCntnr {
+    line-height: 3.5;
+}
+
+
 @media(min-width: 1200px) {
     .home4-card-1-bg-container {
         display: flex;
+        height: 80vh;
+        padding: 4rem;
+        width: 100%;
     }
     .home-4-card1-inner {
         flex-grow: 1;
@@ -140,20 +158,54 @@ input[type=text] {
         border-left:none;
         border-right: none;
         background: inherit;
-        width: 60%;
+        width: 100%;
+        margin-bottom: 1rem;
     }
 
     label {
         line-height: 20px;
-    }
-    input {
-        padding-bottom: 2rem;
+        font-size: 19px;
     }
     .shoot {
     
         display: flex;
         justify-content: center;
         
+    }
+    h2 {
+        font-size: 60px;
+    }
+
+    .essential, .essential1 {
+        font-size: 30px;
+    }
+    .btn {
+        height: 60px;
+        width: 300px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-top: 4rem;
+    }
+    .text-headparamsg {
+        font-size: 30px;
+    }
+    .text-headpara1, .text-headpara2 {
+        margin-left: 10rem;
+    }
+    ::placeholder {
+        font-size: 19px;
+    }
+    .btn:hover {
+        background-color: blue;
+        cursor: pointer;
+        transition: background-color .2s
+    }
+    .txtarea {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        scrollbar-color: rebeccapurple green;
+        scrollbar-width: thin;
     }
 }
 

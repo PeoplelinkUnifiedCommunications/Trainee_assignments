@@ -31,9 +31,11 @@
         margin-left: 6rem;
         line-height: 20px;
     }
-    /* .inner-sect1, .inner-sect2{
-        padding: 6rem;
-    } */
+
+    .inner-sect1{
+       margin-top: 2rem;
+    }
+
     .inner-sect2 {
         float: right;
     }

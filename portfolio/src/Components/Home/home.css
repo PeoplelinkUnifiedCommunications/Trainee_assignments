@@ -71,7 +71,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 64%;
+    min-height: 59%;
 }
 
 
@@ -79,10 +79,12 @@
 @media (min-width :1200px) {
     .doubleCntnr {
       background-image: linear-gradient(to right, #4831d4 65%, #ccf381 35%);
-      height: 90vh;
+      height: 75vh;
     }
 
     .header{
+        position: fixed;
+        z-index: 1;
         padding: 2rem;
     }
     .menu-icon {
@@ -94,15 +96,20 @@
         margin-top: 4rem;
         margin-left: 6rem;
     }
+    .ui, .dev {
+        font-size: 60px;
+    }
 
     .about {
         /* line-height: 26px; */
         margin-left: 6rem;
+        font-family: "Ubuntu";
+    
     }
     .section {
         display: flex;
         margin-left: 9rem;
-        margin-top: 12rem;
+        margin-top: 7rem;
     } 
     
     .sp1 {
@@ -111,17 +118,21 @@
 
     .sec1, .sec2{
         /* margin-top: 6rem; */
+        font-family: "Open Sans";
         margin-left: 1rem;
-        font-size: 15px;
+        font-size: 17px;
         line-height: 22px;
     }
 
     .txtCntnr {
-        width: 59%;
+        margin-top: 10rem;
+        width: 54%;
     }
 
     .imgCntnr {
         display: flex;
+        align-items: center;
+        margin-top: 8rem;
     }
     
     .imtxtCntnr {

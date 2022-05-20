@@ -48,12 +48,12 @@ function Home4() {
         <div className="message">
           <h2 className="text-headpara">Send me a message!</h2>
 
-          <div className="text-headpara msg">
-            <span className="text-headpara">
+          <div className="text-headparamsg">
+            <span className="text-headpara1">
               Got a question or proposal, or just want to say hello?
             </span>
             <br />
-            <span>Go ahead.</span>
+            <span className="text-headpara2">Go ahead.</span>
           </div>
 
           <div className="fields">
@@ -65,7 +65,7 @@ function Home4() {
                   type="text"
                   name="name"
                   placeholder="Enter your name"
-                />{" "}
+                />
                 <br />
                 <br />
               </div>
@@ -76,7 +76,7 @@ function Home4() {
                   type="text"
                   name="email"
                   placeholder="Enter your email address"
-                />{" "}
+                />
                 <br />
                 <br />
               </div>
@@ -85,15 +85,14 @@ function Home4() {
               <label htmlFor="msg">Your Message</label>
               <br />
               <textarea className="txtarea"
-              rows="2"
+              rows="3"
               cols="30"
                 type="text"
                 name="msg"
-                placeholder="Hi, I think we need a design system for our products at Company"
-              />
+                placeholder="Hi, I think we need a design system for our products at Company.How soon can you hop on to discuss this?" />
             </div>
             <div className="shoot">
-            <button className="btn">SHOOT &nbsp; &nbsp; &#10230;</button>
+            <a href="https://formspree.io/hello@olaolu.devSHOOT" target="_blank" rel="noreferrer"><button className="btn">SHOOT&nbsp; &nbsp; &#10230;</button></a>
             </div>
           </div>
         </div>

@@ -31,7 +31,7 @@
     margin-bottom: 3rem;
 }
 
-.span-ele {
+.span-ele1 {
     margin-left: 5rem;
     color: #4d4d4d;
     font-size: 18px;
@@ -89,3 +89,22 @@
     font-family: sans-serif;
     color: #3366ff;
 }
+
+.flexCol1 {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+}
+
+/* .cardsCntnr {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+@media(min-width: 1200px) {
+    .cardsCntnr {
+        max-width: 70%;
+    }
+
+} */

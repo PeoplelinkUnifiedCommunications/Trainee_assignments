@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="doubleCntnr">
       <div className="flexRow header">
-        <h1 className="nm">Marti</h1>
+        <h1 className="nm">Olaolu</h1>
         <a className="menu-icon" href="/menu">
           <BiMenuAltRight />
         </a>
@@ -29,7 +29,7 @@ function Home() {
           </div>
           <div className="imgCntnr">
             <img className="developer"
-              src="./images/developer.jpeg"
+              src="./images/developer1.jpg"
               alt="ui/ux developer"
               width="350px"
               height="340px"
@@ -45,11 +45,11 @@ function Home() {
             <span>Engineering.</span>
           </div>
           <div className="sec2">
-            <span>Highly skilled at progressive</span>
+            <span>Over a decade of experience building</span>
             <br />
-            <span>enhancements,design systems & UI</span>
+            <span>products for clients across several</span>
             <br />
-            <span>Engineering.</span>
+            <span>countries.</span>
           </div>
         </div>
       </div>

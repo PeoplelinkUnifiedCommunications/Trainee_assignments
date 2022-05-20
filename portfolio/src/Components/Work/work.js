@@ -21,6 +21,7 @@ function Work() {
         </span>
       </div>
 
+      <div className="cardsCntnr">
       <div className="flexCol">
         <div className="card-header">
            <img className="card1" src="./images/card1.png" alt="git"/>
@@ -78,6 +79,7 @@ function Work() {
       <div className="card-footer">
         <h3 className="span1">North American Institutions</h3>
         <span className="span2">NAI.com</span>
+      </div>
       </div>
       </div>
 

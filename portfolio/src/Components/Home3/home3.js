@@ -9,7 +9,7 @@ function Home3() {
         <span className="past1">past 11 years,</span> <br />
         <br />
         <span className="s9">
-          Martí is a senior UI/UX designer based in New York.For the past{" "}
+          Olaolu is a senior UI/UX designer based in New York.For the past
         </span>
         <br />
         <span className="s10">
@@ -17,11 +17,11 @@ function Home3() {
         </span>
         <br />
         <span className="s11">
-          following industries:banking, hospitality,pharmaceutical,{" "}
+          following industries:banking, hospitality,pharmaceutical
         </span>
         <br />
         <span className="s12">
-          automotive,and software.His past clients include Hewlett-Packard{" "}
+          automotive,and software.His past clients include Hewlett-Packard
         </span>
         <br />
         <br />
@@ -47,11 +47,11 @@ function Home3() {
         </span>
         <br />
         <span className="s18">
-          banking and healthcare projects across the UAE, Saudi Arabia,{" "}
+          banking and healthcare projects across the UAE, Saudi Arabia,
         </span>
         <br />
         <span className="s19">
-          Egypt, and Spain.Designed for a variety of clients including{" "}
+          Egypt, and Spain.Designed for a variety of clients including
         </span>
         <br />
         <span className="s20">
@@ -87,8 +87,8 @@ function Home3() {
           className="blog"
           src="./images/blog.png"
           alt="avatar"
-          width="500px"
-          height="300px"
+          width="600px"
+          height="500px"
         />
       </div>
 
