@@ -1,7 +1,6 @@
 
 
 .about-bg{
-    
     height: 90vh;
     display: flex;
     padding: 3rem;
@@ -48,7 +47,7 @@
 
 @media (min-width:768px) {
     .about-bg{
-        height:80vh;
+        max-height: 500px;
     }
     .horizontal-line{
         width: 1%;
@@ -59,9 +58,7 @@
         
         flex-direction: row;
     }
-    
-
-    
+     
     
 }
 

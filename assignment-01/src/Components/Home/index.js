@@ -19,13 +19,16 @@ import './index.css'
 function Home (){
     return(
          <div className="bg-container nav"> 
+        
              <div className="header-bg-container">
-                <div className="navbar-container">
+
+             <div className="header">
+                 <div className="navbar-container ">
                     <h1 className="navbar-logo">Olaolu</h1>
-                    <div>
-                        <a className="menu-bar-icon" href='/menu'><BiMenuAltRight/></a>
-                   </div>  
+                    <a className="menu-bar-icon" href='/menu'><BiMenuAltRight/></a> 
                 </div>
+             </div>
+             
                 <div className="header-content-container">
                     <div className="header-frist-part" >
                     <h1><span className="card-1-heading">Frontend <br/> Developer.</span></h1>

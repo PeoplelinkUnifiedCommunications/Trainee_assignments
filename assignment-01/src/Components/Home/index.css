@@ -8,6 +8,8 @@
     font-size: 3rem;
 }
 
+
+
 .menu-bar-icon{
     color: #ccf381;
     font-weight: bold;
@@ -19,7 +21,6 @@
     justify-content: space-between;
     padding: 2rem;
     align-items: center;
-    
 }
 
 .header-content-container{
@@ -80,6 +81,7 @@
     .card-1-heading{
         font-size: 4rem;
     }
+   
     .profile-pic-logo-style{
         height: 20rem;
         width: 20rem; 
@@ -119,7 +121,10 @@
         background-image: linear-gradient(to right, #4831d4 65%, #ccf381 35%);
         height: 100vh;
     }
-    
+    .header{
+        position: fixed;
+        width: 100%;
+    }
     
     .menu-bar-icon{
         color: #4831D4;
@@ -129,6 +134,9 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+    }
+    .header-content-container{
+       padding-top: 6rem;
     }
     .headingbreak1{
         display: none ;
