@@ -1,0 +1,71 @@
+.form-bg-container{
+    background-color: rgb(201, 248, 201);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-bg{
+    min-height: 80%;
+    width: 50%;
+    background-image: radial-gradient( rgb(223, 142, 154), rgb(232, 134, 134), lightpink ,rgb(223, 142, 154),rgb(223, 142, 154));
+    border-radius: 5px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-thank-you{
+    color: blueviolet;
+    text-align: center;
+    width: 60%;
+}
+
+.err-msg-style{
+    color: red;
+    padding: 0;
+    width: 60%;
+    text-align: left;
+}
+
+.formHeading{
+    color: blue;
+    text-decoration: underline;
+}
+
+.lable-style{
+   color: blueviolet;
+   font-weight: 500;
+}
+
+.lable-input-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 1rem;
+    line-height: 2rem;
+}
+
+.input-element{
+    padding: 1rem;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 15px;
+}
+
+.submitButton{
+    border-color: blue;
+    background-color:lightblue;
+    color:blue ;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
