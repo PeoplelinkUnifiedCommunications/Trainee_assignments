@@ -1,0 +1,7 @@
+.form-bg-container{
+    background-color: ghostwhite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

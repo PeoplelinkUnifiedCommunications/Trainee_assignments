@@ -4,11 +4,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5rem;
+}
+
+.msg-mail-container{
+    width: 100%;
 }
 
 .form-bg{
     min-height: 80%;
-    width: 50%;
+    width: 100%;
     background-color: transparent;
     border-radius: 5px;
     display: flex;
@@ -48,16 +53,38 @@
 .lable-input-container{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 100%;
     margin-top: 1rem;
     line-height: 2rem;
 }
-
+.lable-input-container-msg{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    line-height: 2rem;
+}
 .input-element{
     padding: 1rem;
-    border-radius: 10px;
-    border-style: none;
+    border-style: solid;
     font-size: 15px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: auto;
+
+}
+
+.input-element-msg{
+    padding: 1rem;
+    width: 100%;
+    border-style: solid;
+    font-size: 15px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: auto;
+
 }
 
 .submitButton{
@@ -72,4 +99,15 @@
     font-weight: 500;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+@media (min-width:768px) {
+    .msg-mail-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .lable-input-container{
+        width: 45%;
+    }
+
 }

@@ -7,6 +7,7 @@ import Shelf from './Components/Shelf';
 import Telegram from './Components/Telegram';
 import WorkMenu from './Components/WorkMenu';
 import ShelfMenu from "./Components/ShelfMenu";
+import FormSubmitView from './Components/FormSubmitView'
 
 function App(){
   return(
@@ -19,7 +20,8 @@ function App(){
           <Route exact path="/shelf" element={<Shelf/>}/>
           <Route exact path="/telegram" element={<Telegram/>}/>
           <Route exact path="/workmenu" element={<WorkMenu/>}/>
-          <Route exact path="//shelfmenu" element={<ShelfMenu/>}/>
+          <Route exact path="/shelfmenu" element={<ShelfMenu/>}/>
+          <Route exact path="/formsubmitview" element={<FormSubmitView/>}/>
         </Routes>
       </Router>
     </div>
