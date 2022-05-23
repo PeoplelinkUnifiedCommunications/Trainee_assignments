@@ -1,0 +1,62 @@
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    position: fixed;
+    width: 100vw;
+}
+.menu-bar-icon{
+    color: #4831D4;
+    size: 3rem;
+   
+}
+
+.logo{
+    color: inherit;
+    background-color: inherit;
+    border-style: none;
+    font-size: 3rem;
+    font-weight: 500;
+}
+.navbar-logo{
+    color: #ccf381;
+    font-size: 3rem;
+}
+.navigation-menu{
+  width: 20vw;
+  background-color: white;
+  min-height: 30vw;
+  margin-right: 20vw;
+ padding: 1rem;
+}
+.menu-button1{
+    background-color:transparent;
+    border-style: none;
+    display: none;
+}
+.menu-ul-bg-container{
+    align-self: start;
+}
+.menu-button{
+    background-color:transparent;
+    border-style: none;
+    
+}
+
+.pop-up-lg-device{
+    display: block;
+}
+
+@media screen  and (min-width: 768px){
+    .menubar-small-device{
+        display: none;
+        background-color: red;
+    }
+    .pop-up-lg-device{
+        display: flex;
+    }
+    .menu-button1{
+        display: flex;
+    }
+}
+

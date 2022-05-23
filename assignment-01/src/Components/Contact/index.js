@@ -145,18 +145,18 @@ function Contact() {
                     <div className='msg-mail-container'>
                         <div className='lable-input-container'>
                             <label className='lable-style' htmlFor='Name'>Your Name</label>
-                            <input onBlur={validName} value={name} onChange={onChangeName} className='input-element' id="Name" type="text" placeholder='Enter Your Name' />
+                            <input required onBlur={validName} value={name} onChange={onChangeName} className='input-element' id="Name" type="text" placeholder='Enter Your Name'/>
                             {nameErrMsg ? <p className='err-msg-style'>*Enter valid name</p> : null}
                         </div>
                         <div className='lable-input-container'>
                             <label className='lable-style' htmlFor='Email'>Your Email</label>
-                            <input value={email} onBlur={validEmail} onChange={onChangeEmail} className='input-element' id="Email" type="text" placeholder='Enter Your Email' />
+                            <input  value={email} onBlur={validEmail} onChange={onChangeEmail} className='input-element' id="Email" type="text" placeholder='Enter Your Email' required />
                             {emailErrMsg ? <p className='err-msg-style'>*Enter valid mail Id</p> : null}
                         </div>
                     </div>
                     <div className='lable-input-container-msg'>
                         <label className='lable-style' htmlFor='Message'>Your Message</label>
-                        <textarea value={message} onBlur={validMessage} onChange={onChangeMessage} rows="4" className='input-element-msg' id="Message" type="text" placeholder='Enter Your Message'></textarea>
+                        <textarea required value={message} onBlur={validMessage} onChange={onChangeMessage} rows="4" className='input-element-msg' id="Message" type="text" placeholder='Enter Your Message'></textarea>
                         {messageErrMsg ? <p className='err-msg-style'>*Enter message</p> : null}
                     </div>
 

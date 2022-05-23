@@ -5,6 +5,7 @@ import './index.css'
 function Menu(){
     return(
         <div className='menu-bg-container'>
+           
             <div className='menu-header'>
                 <h1>Olaolu</h1>
                 <a href='/'><GiTireIronCross/></a>
@@ -21,13 +22,13 @@ function Menu(){
                  <li className='list-item-footer-part say-hello-menu'>SAY HELLO</li>
                  <li className='list-item-footer-part'>hello@olaolu.dev</li>
                  <li className='list-item-footer-part'>
-                 <a  className="anchor-element-style" href='/telegram'><button className='anchor-button' type='button'>t.me/mrolaolu</button></a></li>
+                 <a  className="anchor-element-style" href='https://web.telegram.org/k/'><button className='anchor-button' type='button'>t.me/mrolaolu</button></a></li>
              </ul>
             </div>
             <div className='menu-ul-bg-container'>
             <ul className='ul-of-footer-footer-part'>
                <li className='list-item-footer-part'>
-                    <a className="anchor-element-style" rel='noreferrer' href="https://web.telegram.org/" target={"_blank"}>
+                    <a className="anchor-element-style" rel='noreferrer' href="https://twitter.com/i/flow/login" target={"_blank"}>
                        <button className='anchor-button' type='button'>TW</button>
                     </a>
                 </li>

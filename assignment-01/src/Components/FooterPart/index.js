@@ -25,7 +25,7 @@ function FooterPart(){
            <div className='footer-footer-part'>
               <span>© Olaolu Olawuyi 2022</span>
               <ul className='ul-of-footer-footer-part'>
-               <a rel='noreferrer'  href="https://web.telegram.org/" target={"_blank"}><li className='list-item-footer-part'>TW</li></a>
+               <a rel='noreferrer'  href="https://twitter.com/i/flow/login" target={"_blank"}><li className='list-item-footer-part'>TW</li></a>
                <a  rel='noreferrer' href="https://github.com/login" target={"_blank"}><li className='list-item-footer-part'>GH</li></a>
                <a  rel='noreferrer' href="https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin" target={"_blank"}> <li className='list-item-footer-part'>LN</li></a>
                <a rel='noreferrer' href="https://www.youtube.com/" target={"_blank"} ><li className='list-item-footer-part'>YT</li></a>

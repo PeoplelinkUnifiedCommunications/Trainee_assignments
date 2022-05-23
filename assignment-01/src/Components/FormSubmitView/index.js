@@ -1,10 +1,20 @@
+import { Link } from 'react-router-dom'
+
+import { BsArrowRight } from "react-icons/bs"
+
 import './index.css'
 
-function FormSubmitView(){
-    return(
+function FormSubmitView() {
+    return (
         <div className="form-bg-container">
-            <h1>Form submitted Successfully</h1>
+            <div className='go-back-buttton-container'>
+                <h1>Thank you for sending message.</h1>
+                <Link to="/">
+                    <button  className='submitButton' type='button'>Go Back <BsArrowRight /></button>
+                </Link>
+            </div>
         </div>
+       
     )
 }
 export default FormSubmitView

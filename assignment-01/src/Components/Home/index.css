@@ -31,6 +31,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 3rem;
+    padding-top: 7rem;
 }
 .card-1-heading{
     color: #CCF381;
@@ -175,8 +176,7 @@
     
 }
 
-
-
-
-
-
+ .bg-container{
+     height: 100vh;
+     overflow-y: scroll;
+ }

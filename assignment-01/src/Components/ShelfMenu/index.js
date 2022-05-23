@@ -20,7 +20,7 @@ function ShelfMenu(){
                  <li className='list-item-footer-part say-hello-menu'>SAY HELLO</li>
                  <li className='list-item-footer-part'>hello@olaolu.dev</li>
                  <li className='list-item-footer-part'>
-                 <a  className="anchor-element-style" href='/telegram'><button className='anchor-button' type='button'>t.me/mrolaolu</button></a></li>
+                 <a  className="anchor-element-style" href='https://web.telegram.org/k/'><button className='anchor-button' type='button'>t.me/mrolaolu</button></a></li>
              </ul>
             </div>
             <div className='menu-ul-bg-container'>

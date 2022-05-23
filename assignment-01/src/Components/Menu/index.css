@@ -6,7 +6,8 @@
 }
 
 .menu-bg-container{
-      padding: 3rem;
+      width: 100%;
+      margin-right: 3rem;
 }
 
 .menu-hello-part{
@@ -21,10 +22,19 @@
     margin-bottom: 4rem;
 }
 
-.menu-hello-part{
+/* .menu-hello-part{
     margin: 4rem;
-}
+} */
 
+@media screen and (max-width:768px) {
+    .ul-of-footer-footer-part{
+        padding: 0;
+        margin: 0;
+    }
+    .menu-bg-container{
+        padding: 4rem;
+  }
+}
 .say-hello-menu{
     color:gray;
 }
@@ -42,3 +52,4 @@
     border-style: none;
     font-size: medium;
 }
+
