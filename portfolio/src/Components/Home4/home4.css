@@ -63,10 +63,10 @@ h2 {
     background-color: ghostwhite;
 }
 
-.home4-card1, .home4-card2 {
+/* .home4-card1, .home4-card2 {
     background-color: #fff;
     padding: 5rem;
-}
+} */
 
 .message {
     width: 100%;
@@ -118,12 +118,15 @@ input[type=text] {
 .msgCntnr {
     line-height: 3.5;
 }
+.errMsg {
+    color: red;
+}
 
 
 @media(min-width: 1200px) {
     .home4-card-1-bg-container {
         display: flex;
-        height: 80vh;
+        height: 90vh;
         padding: 4rem;
         width: 100%;
     }

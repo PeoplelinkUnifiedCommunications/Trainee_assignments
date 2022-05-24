@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="doubleCntnr">
       <div className="flexRow header">
-        <h1 className="nm">Olaolu</h1>
+        <a href="/"><button className="toggle">Olaolu</button></a>
         <a className="menu-icon" href="/menu">
           <BiMenuAltRight />
         </a>
@@ -32,7 +32,7 @@ function Home() {
               src="./images/developer1.jpg"
               alt="ui/ux developer"
               width="350px"
-              height="340px"
+              height="330px"
             />
           </div>
         </div>

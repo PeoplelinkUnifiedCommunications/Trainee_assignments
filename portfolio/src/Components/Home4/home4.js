@@ -1,6 +1,60 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
 import "./home4.css";
 function Home4() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
+
+  const [formSubmit, setFormSubmit ] = useState("")
+  
+  const changeName = (e) => {
+    setName(e.target.value);
+  };
+
+  const changeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const changeMsg = (e) => {
+    setMsg(e.target.value);
+  };
+
+  const onFormSubmission = (e) => {
+    e.preventDefault()
+    if(name.length <= 2) {
+      setIsValidName(true)
+    }
+    else {
+      setIsValidName(false)
+    }
+
+    if(email.endsWith("@gmail.com")) {
+      setIsValidEmail(false)
+    }
+    else {
+      setIsValidEmail(true)
+    }
+
+    if(msg.length <= 30) {
+      setIsValidMsg(true)
+    }
+    else {
+      setIsValidMsg(false)
+    }
+
+    if((isValidName || isVaildEmail || isVaildMsg) === false) {
+      setFormSubmit(true)
+    }
+    else {
+      setFormSubmit(false)
+    }
+
+  }
+
+  const  [ isValidName, setIsValidName ] = useState(false)
+  const  [ isVaildEmail, setIsValidEmail ] = useState(false)
+  const  [ isVaildMsg, setIsValidMsg ] = useState(false)
 
   return (
     <div className="flexCol section3">
@@ -56,7 +110,7 @@ function Home4() {
             <span className="text-headpara2">Go ahead.</span>
           </div>
 
-          <div className="fields">
+          {formSubmit ? <Navigate to="/Afterform"/> : <form onSubmit={onFormSubmission} className="fields">
             <div className="namemailCntnr">
               <div className="nameCntnr">
                 <label htmlFor="name">Your Name</label>
@@ -64,8 +118,12 @@ function Home4() {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Enter your name"
+                  value={name}
+                  onChange={changeName}
+                  placeholder="Enter your name" required
                 />
+                {isValidName && <p className="errMsg">*Enter valid name</p>}
+
                 <br />
                 <br />
               </div>
@@ -75,8 +133,12 @@ function Home4() {
                 <input
                   type="text"
                   name="email"
-                  placeholder="Enter your email address"
+                  value={email}
+                  onChange={changeEmail}
+                  placeholder="Enter your email address" required
                 />
+
+                { isVaildEmail && <p className="errMsg">*Enter valid Email</p> }
                 <br />
                 <br />
               </div>
@@ -84,17 +146,29 @@ function Home4() {
             <div className="msgCntnr">
               <label htmlFor="msg">Your Message</label>
               <br />
-              <textarea className="txtarea"
-              rows="3"
-              cols="30"
+              <textarea
+                className="txtarea"
+                rows="3"
+                cols="30"
                 type="text"
                 name="msg"
-                placeholder="Hi, I think we need a design system for our products at Company.How soon can you hop on to discuss this?" />
+                value={msg}
+                onChange={changeMsg}
+                placeholder="Hi, I think we need a design system for our products at Company.How soon can you hop on to discuss this?"
+               required/>
+              { isVaildMsg && <p className="errMsg">*Enter valid Message</p> }
             </div>
             <div className="shoot">
-            <a href="https://formspree.io/hello@olaolu.devSHOOT" target="_blank" rel="noreferrer"><button className="btn">SHOOT&nbsp; &nbsp; &#10230;</button></a>
+              <a
+                href="https://formspree.io/hello@olaolu.devSHOOT"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button type="submit" className="btn">SHOOT&nbsp; &nbsp; &#10230;</button>
+              </a>
             </div>
-          </div>
+          </form> }
+            
         </div>
       </div>
     </div>

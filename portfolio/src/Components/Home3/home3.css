@@ -24,7 +24,10 @@
 
 .blog {
     margin-top: 4rem;
+    width: 600px;
+    height: 300px;
 }
+
 
 @media(min-width: 1200px) {
    .past, .past1 {

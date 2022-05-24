@@ -10,7 +10,6 @@
 }
 
 .nm {
-    /* margin-left: 1rem; */
     font-size: 3rem;
     font-family: serif;
     font-weight: bold;
@@ -19,10 +18,19 @@
 
 .menu-icon{
     margin-top: 2rem;
+    margin-right: 4rem;
     font-size: 3rem;
     color: #ccf381;
 }
 
+.toggle {
+    margin-top: 2rem;
+    margin-left: 4rem;
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #ccf381;
+}
 /* .role {
     margin-left: 6rem;
 } */
@@ -118,7 +126,7 @@
 
     .sec1, .sec2{
         /* margin-top: 6rem; */
-        font-family: "Open Sans";
+        font-family: initial;
         margin-left: 1rem;
         font-size: 17px;
         line-height: 22px;
