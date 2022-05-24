@@ -1,0 +1,18 @@
+.navbar-bg{
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+    width: 100%;
+    align-items: center;
+}
+.anchor-element{
+    margin-right: 3rem;
+    text-decoration: none;
+    color: blue;
+}
+.navbar-logo{
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: bold;
+    margin: 3rem;
+}

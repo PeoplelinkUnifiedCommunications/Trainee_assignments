@@ -1,0 +1,92 @@
+.ticket-card-container{
+    background-color:rgba(17, 16, 19, 0.569);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: ghostwhite;
+    min-width: 500px;
+    min-height: 600px;
+}
+
+.ticket-page-card-bg-container{
+    background-image: url("https://media.istockphoto.com/photos/white-passenger-bus-picture-id135327019?k=20&m=135327019&s=612x612&w=0&h=YJneXYFReSVuKSIFOy5wGIygeLeb1UquX4BWLk-MluI=");
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh; 
+}
+.input-filed-for-ticket-booking{
+    border-color: gray;
+    border-style: solid;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 85%;
+    background-color: transparent;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+}
+
+.input-element-icon{
+    color: inherit;
+    background-color: inherit;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.input-element-booking{
+    background-color: inherit;
+    border-style: none;
+    font-size: 1.5rem;
+    color: white;
+    max-width: 75%;
+    margin-right: 2rem;
+}
+.gender-select-bg{
+    width: 30%;
+    height: 60%;
+    background-color: inherit;
+    border-style: none;
+}
+
+.gender-select-lable{
+    width: 30%;
+    height: 60%;
+    background-color: inherit;
+    border-style: none;
+    text-align: center;
+    color: rgb(25, 156, 23);
+    font-weight: bold;
+}
+.gender-quantity-container{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.option-style{
+    height: 85%;
+    background-color: antiquewhite;
+    color: blue;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.lable-input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.proceed-button{
+    margin-top: 2rem;
+}
+
