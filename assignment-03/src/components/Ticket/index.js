@@ -135,25 +135,32 @@ function Ticket() {
                         <button className='book-ticket-button proceed-button' type='submit'>Submit</button>
                     </div>
                 </form>
-                <table className='table-bg'>
-                    <thead>
-                        <tr>
-                            <th className='table-heading'>Name</th>
-                            <th className='table-heading'>Email</th>
-                            <th className='table-heading'>Gender</th>
-                            <th className='table-heading'>adultsCount</th>
-                            <th className='table-heading'>childrenCount</th>
-                            <th className='table-heading'>Journey Date</th>
-                            <th className='table-heading'>Edit / delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {tickets.map((each) => {
-                            return (
-                                <TableRow key={each[0]} content={each} onDelete={onDeleteItem} onChange={onEditItem} />)
-                        })}
-                    </tbody>
-                </table>
+                {tickets.length === 0 && <div>
+                    <img className='no-ticte-image' src="https://www.tripmoney.com/ext/static/TravelLoan/travelLoan.png" alt="no ticket view" />
+                </div>}
+                {tickets.length > 0 &&
+                    <table className='table-bg'>
+                        <thead>
+                            <tr>
+                                <th className='table-heading'>Name</th>
+                                <th className='table-heading'>Email</th>
+                                <th className='table-heading'>Gender</th>
+                                <th className='table-heading'>adultsCount</th>
+                                <th className='table-heading'>childrenCount</th>
+                                <th className='table-heading'>Journey Date</th>
+                                <th className='table-heading'>Edit / delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {tickets.map((each) => {
+                                return (
+                                    <TableRow key={each[0]} content={each} onDelete={onDeleteItem} onChange={onEditItem} />)
+                            })}
+                        </tbody>
+                    </table>
+
+                }
+
 
             </div>
 

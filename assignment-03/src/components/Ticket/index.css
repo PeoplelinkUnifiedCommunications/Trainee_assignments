@@ -125,6 +125,12 @@
 @media screen and (min-width: 768px){
     .ticket-page-card-bg-container{
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
     }
+    .no-ticte-image{
+        height: 50vh;
+        width: 40vw;
+    }
 }
+
