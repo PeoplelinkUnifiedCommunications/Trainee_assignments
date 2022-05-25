@@ -4,7 +4,7 @@ import Popup from 'reactjs-popup';
 
 import 'reactjs-popup/dist/index.css';
 import { BiMenuAltRight} from "react-icons/bi"
-import {GiTireIronCross} from 'react-icons/gi'
+// import {GiTireIronCross} from 'react-icons/gi'
 //import Menu from '../Menu'
 
 
@@ -21,7 +21,7 @@ function Navbar() {
             <div>
                 <div className="navigation-menu">
                    
-                    <a href='/'><GiTireIronCross /></a>
+                    <a className='into-tag' href='/'>x</a>
                     <div className='menu-hello-part'>
 
                         <ul className='menu-work-part-bg'>

@@ -1,5 +1,5 @@
 
-import {GiTireIronCross} from 'react-icons/gi'
+// import {GiTireIronCross} from 'react-icons/gi'
 import './index.css'
 
 function Menu(){
@@ -8,7 +8,7 @@ function Menu(){
            
             <div className='menu-header'>
                 <h1>Olaolu</h1>
-                <a href='/'><GiTireIronCross/></a>
+                <a href='/'>x</a>
             </div>
             <div className='menu-hello-part'>
             

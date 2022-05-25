@@ -1,13 +1,16 @@
 
 import Navbar from '../Navbar'
 
-function SeatView() {
 
+function SeatView() {
+    const newTicket = localStorage.getItem("myList")
+    console.log(newTicket)
+    
     return (
         <>
             <Navbar />
             <div className='seat-page-card-bg-container'>
-                <h1>hai</h1>
+                <h1>Confirm Ticket Details</h1>
             </div>
         </>
     )

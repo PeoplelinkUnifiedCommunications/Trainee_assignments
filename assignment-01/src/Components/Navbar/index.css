@@ -8,7 +8,14 @@
 .menu-bar-icon{
     color: #4831D4;
     size: 3rem;
-   
+  
+    
+}
+.into-tag{
+    color: #4831D4;
+    size: 4rem;
+    font-weight: 500;
+    text-decoration: none;
 }
 
 .logo{

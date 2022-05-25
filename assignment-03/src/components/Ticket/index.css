@@ -9,6 +9,7 @@
     color: ghostwhite;
     min-width: 500px;
     min-height: 600px;
+    margin-top: 20px;
 }
 
 .ticket-page-card-bg-container{
@@ -90,3 +91,40 @@
     margin-top: 2rem;
 }
 
+.bg-tickets{
+    background-color: red;
+}
+
+.details-checking-page{
+    min-height:500px;
+    min-width: 450px;
+    background-color:lightskyblue;
+    border-radius: 20px;
+    padding: 5rem;
+}
+.buttton-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list{
+    list-style: none;
+}
+.table-bg{
+    background-color: aquamarine;
+    margin-top: 3rem;
+}
+
+.table-heading{
+    padding: 1rem;
+    font-size: 1rem;
+    border-color: white;
+    border-style: solid;
+}
+
+@media screen and (min-width: 768px){
+    .ticket-page-card-bg-container{
+        display: flex;
+        justify-content: space-around;
+    }
+}
