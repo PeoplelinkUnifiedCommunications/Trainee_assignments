@@ -26,62 +26,7 @@ function Navbar() {
                 <a className="a0" target="_blank" rel="noreferrer" href="https://olaolu.dev/shelf/">My Shelf</a>
               </li>
 
-              <li>￼
-Frontend
-Developer.
-I like to craft solid and scalable frontend products with great user experiences.
-
-Highly skilled at progressive enhancement, design systems & UI Engineering.
-Over a decade of experience building products for clients across several countries.
-Highly skilled at progressive enhancement, design systems & UI Engineering.
-Over a decade of experience building products for clients across several countries.
-￼
-￼
-￼￼
-Frontend
-Developer.
-I like to craft solid and scalable frontend products with great user experiences.
-
-Highly skilled at progressive enhancement, design systems & UI Engineering.
-Over a decade of experience building products for clients across several countries.
-Highly skilled at progressive enhancement, design systems & UI Engineering.
-Over a decade of experience building products for clients across several countries.
-￼
-￼
-￼￼
-Frontend
-Developer.
-I like to craft solid and scalable frontend products with great user experiences.
-
-Highly skilled at progressive enhancement, design systems & UI Engineering.
-Over a decade of experience building products for clients across several countries.
-Highly skilled at progressive enhancement, design systems & UI Engineering.
-Over a decade of experience building products for clients across several countries.
-￼
-￼
-￼￼
-Frontend
-Developer.
-I like to craft solid and scalable frontend products with great user experiences.
-
-Highly skilled at progressive enhancement, design systems & UI Engineering.
-Over a decade of experience building products for clients across several countries.
-Highly skilled at progressive enhancement, design systems & UI Engineering.
-Over a decade of experience building products for clients across several countries.
-￼
-￼
-￼
-￼
-￼
-
-￼
-￼
-
-￼
-￼
-
-￼
-￼
+              <li>
 
                 <a className="a0" target="_blank" rel="noreferrer" href="https://olaolu.dev/resume/">My Resume</a>
               </li>

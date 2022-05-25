@@ -1,0 +1,95 @@
+.formOutline {
+    background-color: #ffcccc;
+    width: 40%;
+    height: 80vh;
+}
+
+.formInline {
+   background-color: #e6ffff;
+   display: flex;
+   width: 30vw;
+   height: 60vh;
+   margin: 6rem;
+}
+
+.fieldCntnr {
+    padding: 4rem;
+}
+
+.fname, .lname, .email, .gen, .desig, .phno{
+    font-size: 20px;
+    padding: 1rem;
+    font-family: serif;
+}
+.fname, .lname{
+    margin-right: 2rem;
+}
+ .email {
+     margin-right: 4.5rem;
+ }
+ .gen {
+     margin-right: 4rem;
+ }
+ .desig {
+     margin-right: 1.5rem;
+ }
+ .mal {
+     margin-right: 4rem;
+ }
+
+
+input[type="text"] {
+    width: 260px;
+    padding: 0.6rem;
+    margin-top: 1rem;
+}
+input[type="radio"] {
+    margin-top: 1rem;
+}
+input[type="email"] {
+    width: 260px;
+    padding: 0.6rem;
+    margin-top: 1rem;
+}
+input[type="number"] {
+    width: 260px;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+select {
+    width: 260px;
+    padding: 0.6rem;
+    margin-top: 1rem;
+} 
+
+input[type="checkbox"] {
+    margin-left: 2.2rem;
+}
+
+textarea {
+    width: 61%;
+    margin-left: 5rem;
+}
+
+.errMsg {
+    color: red;
+    padding-left: 10rem;
+}
+
+button {
+    width: 25%;
+    height: 10%;
+    font-size: 16px;
+    background-color: cornflowerblue;
+    margin-left: 10rem;
+    margin-top: 2rem;
+    border: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
