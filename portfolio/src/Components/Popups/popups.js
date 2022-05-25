@@ -2,95 +2,128 @@ import React from "react";
 import "./popups.css";
 import { BiMenuAltRight } from "react-icons/bi";
 import Popup from "reactjs-popup";
-function Popups() {
+import "reactjs-popup/dist/index.css";
+function Navbar() {
   return (
-    <div>
-      <nav className="navigate">
-        <a href="/">
-          <button className="toggle">Olaolu</button>
-        </a>
-        <Popup
+    <div className="fixed">
+      <nav className="navigation">
+
+        <Popup className="popupCntnr"
           trigger={
-            <button className="menu-icon">
-              <BiMenuAltRight />
+            <button className="menu-icon"><BiMenuAltRight />
+             
             </button>
           }
-          position="right center"
+          position="left top"
         >
-          {/* <div className="flexRow lists">
-          <ul className="ul-list1">
-            <Link to={"/work"}>
-              <li className="li-element">
-                <a className="a0" target="_blank" href="">
-                  My Work
-                </a>
+          <div className="navigation-menu">
+            <ul className="unorder1">
+              <li>
+                <a className="a0" target="_blank" rel="noreferrer" href="https://olaolu.dev/work/">My Work</a>
               </li>
-            </Link>
-            <Link to={"/shelf"}>
-              <li className="li-element">
-                <a className="a0" href="#">
-                  My Shelf
-                </a>
-              </li>
-            </Link>
-            <Link to={"/resume"}>
-              <li className="li-element">
-                <a className="a0" href="#">
-                  My Resume
-                </a>
-              </li>
-            </Link>
 
-            <li className="li-element">
-              <span className="span-element">SAY HELLO</span>
-            </li>
-            <li className="li-element">
-              <a
-                className="a0"
-                target="_blank"
-                href="https://mail.google.com/mail/u/0/#inbox"
-              >
-                hello@marti.dev
-              </a>
-            </li>
-            <li className="li-element">
-              <a
-                className="a0"
-                target="_blank"
-                href="https://web.telegram.org/z/"
-              >
-                t.me/mrsmarti
-              </a>
-            </li>
-            <br />
-            <ul className="ul-listn">
-              <li className="li-element">
-                <a className="a1" target="_blank" href="https://twitter.com/">
-                  TW
-                </a>
-                <a className="a1" target="_blank" href="https://github.com/">
-                  GH
-                </a>
-                <a
-                  className="a1"
-                  target="_blank"
-                  href="https://www.linkedin.com/"
-                >
-                  LN
-                </a>
-                <a
-                  className="a1"
-                  target="_blank"
-                  href="https://www.youtube.com/"
-                >
-                  YT
-                </a>
+              <li>
+                <a className="a0" target="_blank" rel="noreferrer" href="https://olaolu.dev/shelf/">My Shelf</a>
+              </li>
+
+              <li>￼
+Frontend
+Developer.
+I like to craft solid and scalable frontend products with great user experiences.
+
+Highly skilled at progressive enhancement, design systems & UI Engineering.
+Over a decade of experience building products for clients across several countries.
+Highly skilled at progressive enhancement, design systems & UI Engineering.
+Over a decade of experience building products for clients across several countries.
+￼
+￼
+￼￼
+Frontend
+Developer.
+I like to craft solid and scalable frontend products with great user experiences.
+
+Highly skilled at progressive enhancement, design systems & UI Engineering.
+Over a decade of experience building products for clients across several countries.
+Highly skilled at progressive enhancement, design systems & UI Engineering.
+Over a decade of experience building products for clients across several countries.
+￼
+￼
+￼￼
+Frontend
+Developer.
+I like to craft solid and scalable frontend products with great user experiences.
+
+Highly skilled at progressive enhancement, design systems & UI Engineering.
+Over a decade of experience building products for clients across several countries.
+Highly skilled at progressive enhancement, design systems & UI Engineering.
+Over a decade of experience building products for clients across several countries.
+￼
+￼
+￼￼
+Frontend
+Developer.
+I like to craft solid and scalable frontend products with great user experiences.
+
+Highly skilled at progressive enhancement, design systems & UI Engineering.
+Over a decade of experience building products for clients across several countries.
+Highly skilled at progressive enhancement, design systems & UI Engineering.
+Over a decade of experience building products for clients across several countries.
+￼
+￼
+￼
+￼
+￼
+
+￼
+￼
+
+￼
+￼
+
+￼
+￼
+
+                <a className="a0" target="_blank" rel="noreferrer" href="https://olaolu.dev/resume/">My Resume</a>
               </li>
             </ul>
-          </ul></div> */}
+
+            <ul className="unorder2">
+              <li>
+                <a className="tag" target="_blank" rel="noreferrer" href="#">SAY HELLO</a>
+              </li>
+
+              <li>
+                <a className="a0" target="_blank" rel="noreferrer" href="">hello@olaolu.dev</a>
+              </li>
+
+              <li>
+                <a className="a0" target="_blank" rel="noreferrer" href="https://web.telegram.org/z/">t.me/mrolaolu</a>
+              </li>
+            </ul>
+
+            <ul className="unorder3">
+              <li>
+                <a className="tw" target="_blank" rel="noreferrer" href="https://twitter.com/">TW</a>
+              </li>
+
+              <li>
+                <a className="gh" target="_blank" rel="noreferrer" href="https://github.com/">GH</a>
+              </li>
+
+              <li>
+                <a className="ln" target="_blank" rel="noreferrer" href="https://www.linkedin.com/feed/">LN</a>
+              </li>
+
+              <li>
+                <a className="yt" target="_blank" rel="noreferrer" href="https://www.youtube.com/">YT</a>
+              </li>
+            </ul>
+          </div>
         </Popup>
       </nav>
+      <a className="small" href="/menu"> <button className="menu-icon"><BiMenuAltRight /></button> </a>
     </div>
   );
 }
-export default Popups;
+
+export default Navbar;

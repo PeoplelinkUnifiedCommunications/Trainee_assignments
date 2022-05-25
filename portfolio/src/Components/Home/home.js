@@ -1,5 +1,6 @@
 import React from "react";
-import { BiMenuAltRight } from "react-icons/bi";
+import Popups from "../Popups/popups"
+import Nav from "../Navbar/nav"
 import "./home.css";
 
 function Home() {
@@ -7,9 +8,10 @@ function Home() {
     <div className="doubleCntnr">
       <div className="flexRow header">
         <a href="/"><button className="toggle">Olaolu</button></a>
-        <a className="menu-icon" href="/menu">
+        {/* <a className="menu-icon" href="/menu">
           <BiMenuAltRight />
-        </a>
+        </a> */}
+        <Popups />
       </div>
       <div className="cntCntnr">
         <div className="imtxtCntnr">
@@ -21,18 +23,18 @@ function Home() {
             </div>
             <div className="about">
               <span className="sp1">
-                I like to craft solid and scalable ui
+                I like to craft solid and scalable ui products with 
               </span>
               <br />
-              <span className="sp2">products with great user experiences.</span>
+              <span className="sp2">great user experiences.</span>
             </div>
           </div>
           <div className="imgCntnr">
             <img className="developer"
-              src="./images/developer1.jpg"
+              src="./images/olaolu.png"
               alt="ui/ux developer"
-              width="350px"
-              height="330px"
+              width="360px"
+              height="380px"
             />
           </div>
         </div>
@@ -54,8 +56,9 @@ function Home() {
         </div>
       </div>
       <div className="imgCntnr1">
-        <img className="dev" src="./images/developer.jpeg" alt = "developer" width="220px" height="200px"/>
+        <img className="dev" src="./images/olaolu.png" alt = "developer" width="220px" height="200px"/>
       </div>
+      <Nav />
     </div>
   );
 }

@@ -87,8 +87,8 @@ function Home3() {
           className="blog"
           src="./images/blog.png"
           alt="avatar"
-          width="600px"
-          height="500px"
+          width="800px"
+          height="600px"
         />
       </div>
 

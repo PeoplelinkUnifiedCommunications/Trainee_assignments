@@ -27,7 +27,7 @@ function Footer() {
               <br />
 
               <li>
-                <a className="a2" href="https://olaolu.dev/resume/" target="_blank" rel="noreferrer"><button className="button">My Resume</button></a>
+                <a className="a2" target="_blank" rel="noreferrer" href="https://olaolu.dev/resume/" ><button className="button">My Resume</button></a>
               </li>
             </ul>
           </div>

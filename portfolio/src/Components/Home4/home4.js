@@ -23,27 +23,27 @@ function Home4() {
   const onFormSubmission = (e) => {
     e.preventDefault()
     if(name.length <= 2) {
-      setIsValidName(true)
+      setIsNotValidName(true)
     }
     else {
-      setIsValidName(false)
+      setIsNotValidName(false)
     }
 
     if(email.endsWith("@gmail.com")) {
-      setIsValidEmail(false)
+      setIsNotValidEmail(false)
     }
     else {
-      setIsValidEmail(true)
+      setIsNotValidEmail(true)
     }
 
     if(msg.length <= 30) {
-      setIsValidMsg(true)
+      setIsNotValidMsg(true)
     }
     else {
-      setIsValidMsg(false)
+      setIsNotValidMsg(false)
     }
 
-    if((isValidName || isVaildEmail || isVaildMsg) === false) {
+    if((isNotValidName || isNotValidEmail || isNotValidMsg) === false) {
       setFormSubmit(true)
     }
     else {
@@ -52,9 +52,9 @@ function Home4() {
 
   }
 
-  const  [ isValidName, setIsValidName ] = useState(false)
-  const  [ isVaildEmail, setIsValidEmail ] = useState(false)
-  const  [ isVaildMsg, setIsValidMsg ] = useState(false)
+  const  [ isNotValidName, setIsNotValidName ] = useState(false)
+  const  [ isNotValidEmail, setIsNotValidEmail ] = useState(false)
+  const  [ isNotValidMsg, setIsNotValidMsg ] = useState(false)
 
   return (
     <div className="flexCol section3">
@@ -122,7 +122,7 @@ function Home4() {
                   onChange={changeName}
                   placeholder="Enter your name" required
                 />
-                {isValidName && <p className="errMsg">*Enter valid name</p>}
+                {isNotValidName && <p className="errMsg">*Enter valid name</p>}
 
                 <br />
                 <br />
@@ -138,7 +138,8 @@ function Home4() {
                   placeholder="Enter your email address" required
                 />
 
-                { isVaildEmail && <p className="errMsg">*Enter valid Email</p> }
+                { isNotValidEmail && <p className="errMsg">*Enter valid Email</p> }
+
                 <br />
                 <br />
               </div>
@@ -155,8 +156,8 @@ function Home4() {
                 value={msg}
                 onChange={changeMsg}
                 placeholder="Hi, I think we need a design system for our products at Company.How soon can you hop on to discuss this?"
-               required/>
-              { isVaildMsg && <p className="errMsg">*Enter valid Message</p> }
+               required />
+              { isNotValidMsg && <p className="errMsg">*Enter valid Message</p> }
             </div>
             <div className="shoot">
               <a

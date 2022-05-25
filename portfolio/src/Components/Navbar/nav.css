@@ -1,0 +1,10 @@
+.tab {
+    color: red;
+    position: absolute;
+    right: 160px;
+    font-size: 20px;
+    height: 25px;
+    width: 25px;
+    background-color: blue;
+    border-radius: 50%;
+}

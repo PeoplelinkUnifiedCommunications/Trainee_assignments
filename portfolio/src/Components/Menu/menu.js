@@ -5,7 +5,7 @@ function Menu() {
   return (
     <div>
       <div className="redirected-menu">
-        <h1>Marti</h1>
+        <h1>Olaolu</h1>
         <Link to={"/"}>
           <div>
             <img
@@ -19,27 +19,23 @@ function Menu() {
       </div>
       <div className="flexRow lists">
       <ul className="ul-list1">
-        <Link to={"/work"}>
           <li className="li-element">
-            <a className="a0" target="_blank" href="">
+            <a className="a0" href="https://olaolu.dev/work/">
               My Work
             </a>
           </li>
-        </Link>
-        <Link to={"/shelf"}>
+
           <li className="li-element">
-            <a className="a0" href="#">
+            <a className="a0" href="https://olaolu.dev/shelf/">
               My Shelf
             </a>
           </li>
-        </Link>
-        <Link to={"/resume"}>
+
           <li className="li-element">
-            <a className="a0" href="#">
+            <a className="a0" href="https://olaolu.dev/resume/">
               My Resume
             </a>
           </li>
-        </Link>
 
         <li className="li-element">
           <span className="span-element">SAY HELLO</span>

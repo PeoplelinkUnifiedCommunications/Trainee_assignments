@@ -44,6 +44,7 @@
 
 .sp1, .sp2 {
     font-size: 20px;
+    font-family: sans-serif;
     color: #fff;
     letter-spacing: 1px;
 }
@@ -79,7 +80,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 59%;
+    min-height: 42%;
+}
+
+.cntCntnr {
+    padding: 2rem;
 }
 
 
@@ -98,7 +103,6 @@
     .menu-icon {
         color: #4831d4;
     } 
-
     .role {
         font-size: 40px;
         margin-top: 4rem;
@@ -108,20 +112,19 @@
         font-size: 60px;
     }
 
-    .about {
-        /* line-height: 26px; */
+    .about { 
         margin-left: 6rem;
-        font-family: "Ubuntu";
-    
+        font-family:sans-serif;
     }
+
     .section {
         display: flex;
         margin-left: 9rem;
-        margin-top: 7rem;
+        margin-top: 5rem;
     } 
     
     .sp1 {
-       line-height: 3px;
+       line-height: 6px;
     }
 
     .sec1, .sec2{
@@ -137,6 +140,10 @@
         width: 54%;
     }
 
+    .cntCntnr {
+        padding: 0;
+    } 
+
     .imgCntnr {
         display: flex;
         align-items: center;
@@ -151,13 +158,6 @@
     .imgCntnr1 {
         display: none;
     }
-
-
-    /* .imgCntnr {
-        margin-left: 34rem;
-    } */
-
-
 
 }
 

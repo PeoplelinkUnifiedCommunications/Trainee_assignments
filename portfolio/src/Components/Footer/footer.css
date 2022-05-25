@@ -1,6 +1,6 @@
 .section4 {
     width: 100%;
-    height: 30rem;
+    /* height: 30rem; */
     background-color: #3D155f;
 }
 
@@ -52,12 +52,18 @@
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
+.a2:hover {
+    cursor: pointer;
+}
 
 .new {
     margin-top: 4rem;
     border-color:  #c8ca96;
 }
 
+li {
+    line-height: none;
+}
 
 .footer-bottom {
     padding-top: 3rem;
@@ -103,11 +109,8 @@ button {
     .itm1, .itm2, .itm3, .itm4 {
         margin-right: 3rem;
     }
-
     .footer-bottom {
         width: 205%;
         padding-top: 4rem;
     }
-
-
 }
