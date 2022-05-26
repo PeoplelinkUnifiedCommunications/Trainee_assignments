@@ -1,0 +1,102 @@
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    z-index: 1;
+    background-image: linear-gradient(to right, #4d79ff, #9999ff);
+}
+
+.arrCircle {
+    width: 6%;
+    font-size: 25px;
+    color: #f2f2f2;
+}
+
+.searchIcon {
+    font-size: 25px;
+    color: #f2f2f2;
+}
+
+.paragraph {
+    margin-left: 1rem;
+    color: #f2f2f2;
+}
+
+.headerRight {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+.notifyIcon, .envelopeIcon, .settingIcon {
+    font-size: 25px;
+    color: #f2f2f2;
+    margin-left: 2rem;
+}
+.settingIcon {
+    margin-right: 2rem;
+}
+
+.bottomCntnr {
+    height: 100vh;
+    width: 100%;
+    background-color: ghostwhite;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+}
+.card1 {
+    width: 30%;
+    height: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+}
+.quantity {
+    font-size: 30px;
+    color: #0047b3;
+}
+.status {
+    font-size: 16px;
+    color: #595959;
+}
+.hioutIcon {
+    height: 24px;
+}
+
+.marker {
+    background-color: #4d79ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+
+.charts {
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.lineChart {
+    width: 60%;
+    background-color: #fff;
+}
+.pieChart{
+    width: 30%;
+    background-color: #fff;
+}
+
+
