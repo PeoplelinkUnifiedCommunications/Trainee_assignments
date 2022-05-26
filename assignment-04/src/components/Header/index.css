@@ -1,0 +1,33 @@
+.header-bg-container{
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(140, 114, 246), rgb(150, 98, 209));
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+}
+.header-search-bar{
+    background-color: inherit;
+    border-style: none;
+    color: white;
+}
+.header-input-container{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+   
+}
+.search-icon-container{
+    display: flex;
+    padding: 0.4rem;
+    padding-left: 2rem;
+}
+.span-elemet-header{
+    margin-right:2rem ;
+}
+
+.header-right-part-bg-container{
+    display: flex;
+    align-items: center;
+}

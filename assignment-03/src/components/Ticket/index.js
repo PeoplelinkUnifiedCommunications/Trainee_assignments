@@ -57,7 +57,7 @@ function Ticket() {
         setEmail("")
         setAdultCount("1")
         setChildrenCount("0")
-        setGender("Male")
+        setGender("MALE")
         setDate("")
         setTicketsList(list)
 
