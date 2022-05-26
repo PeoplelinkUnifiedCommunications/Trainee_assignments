@@ -35,7 +35,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: 'Chart.js Line Chart',
+      text: 'Product sales cart',
     },
   },
 };
@@ -46,7 +46,7 @@ export const data = {
   labels,
   datasets: [
     { 
-      label: 'Product scales',
+      label: 'Product sales',
       data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
       borderColor: 'rgb(53, 162, 235)',
       backgroundColor: 'rgba(53, 162, 235, 0.5)',
