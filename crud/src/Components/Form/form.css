@@ -21,8 +21,11 @@
     padding: 1rem;
     font-family: serif;
 }
-.fname, .lname{
+.fname {
     margin-right: 2rem;
+}
+.lname {
+    margin-right: 2.1rem;
 }
  .email {
      margin-right: 4.5rem;
@@ -55,7 +58,7 @@ input[type="number"] {
     width: 260px;
     padding: 0.6rem;
     margin-top: 1rem;
-    margin-left: 2rem;
+    margin-left: 2.3rem;
 }
 select {
     width: 260px;
@@ -92,4 +95,15 @@ button:hover {
 }
 
 
+
+table {
+    width: 50%;
+    margin: 2rem;
+}
+
+table,th,td {
+    border-collapse: collapse;
+    border: solid #00ff55;
+    padding: 0.6rem;
+}
 

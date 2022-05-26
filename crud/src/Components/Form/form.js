@@ -124,7 +124,8 @@ function Form() {
                     {reqPhno && <p className="errMsg">*Enter Phone Number</p>}
 
                     <div onChange={changeGender}>
-                    <label className="gen" htmlFor="Gender">Gender</label>
+                    <label className="gen" htmlFor="gender">Gender</label>
+
                     <input type="radio" value="male" name="gender" />
                     <label className="mal" htmlFor="male">Male</label>
 
@@ -166,7 +167,7 @@ function Form() {
                 <tbody>
                     {list.map((each) => {
                         return (
-                            <Table content={each} />
+                            <Table formDetails={each} />
                         )
                     })}
                 </tbody>
