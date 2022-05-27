@@ -9,8 +9,6 @@
     "react": "^18.1.0",
     "react-chartjs-2": "^4.1.0",
     "react-dom": "^18.1.0",
-    "react-fakers": "^1.0.3-rc1",
-    "react-icons": "^4.3.1",
     "react-js-loader": "^0.1.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
@@ -39,8 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@faker-js/faker": "^7.1.0"
   }
 }

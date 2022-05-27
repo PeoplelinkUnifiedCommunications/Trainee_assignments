@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Line } from 'react-chartjs-2';
 
-import { faker } from '@faker-js/faker';
 
 import {
   Chart as ChartJS,
@@ -39,15 +38,16 @@ export const options = {
     },
   },
 };
+const values= {"1st Week":400, "2nd Week":500, "3rd Week":300, "4th week":400, "5th Week":900, "6th Week":200, "7th Week":1000, "8th Week":300, "9th Week":400, "10th Week":300}
 
-const labels = ["1st Week", "2nd week", "3rd week", "4th weeek", "5th week", "6th week", "7th week", "8th week", "9th week", "10th week"];
+const labels = ["1st Week", "2nd Week", "3rd Week", "4th week", "5th Week", "6th Week", "7th Week", "8th Week", "9th Week", "10th Week"];
 
 export const data = {
   labels,
   datasets: [
     { 
       label: 'Product sales',
-      data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+      data: labels.map((each) => values[each]),
       borderColor: 'rgb(53, 162, 235)',
       backgroundColor: 'rgba(53, 162, 235, 0.5)',
     },

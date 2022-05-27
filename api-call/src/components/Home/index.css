@@ -1,0 +1,11 @@
+.chart-container{
+    height: 40vh;
+    width: 40vw;
+}
+.bg-container{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

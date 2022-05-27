@@ -5,6 +5,7 @@ import { BsCheck2Circle, BsArrowDownCircle } from 'react-icons/bs'
 import Header from "../Header"
 import { LineChart } from '../LineChart'
 import PieCharts from '../PieCharts'
+
 import './index.css'
 
 function Home() {
@@ -34,6 +35,7 @@ function Home() {
             <PieCharts />
           </div>
         </div>
+        
       </div>
     </div>
   )
