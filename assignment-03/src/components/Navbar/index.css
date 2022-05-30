@@ -3,6 +3,7 @@
     justify-content: space-between;
     background-color: aquamarine;
     width: 100%;
+    height: 40px;
     align-items: center;
 }
 .anchor-element{
@@ -11,7 +12,7 @@
     color: blue;
 }
 .navbar-logo{
-    font-size: 3rem;
+    font-size: 2rem;
     font-style: italic;
     font-weight: bold;
     margin: 3rem;

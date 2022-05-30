@@ -1,3 +1,5 @@
+import {RiEdit2Fill} from 'react-icons/ri'
+import {MdDelete} from 'react-icons/md'
 import './index.css'
 
 function TableRow(props) {
@@ -21,15 +23,16 @@ function TableRow(props) {
 
     return (
         <tr key={id}>
+            <td className='table-heading1'>{id}</td>
             <td className='table-heading1'>{name}</td>
-            <td className='table-heading1'>{email}</td>
+            <td className='table-heading1 email-text '>{email}</td>
             <td className='table-heading1'>{gender}</td>
-            <td className='table-heading1'>{aCount}</td>
-            <td className='table-heading1'>{childrenCount}</td>
+            <td className='child-count'>{aCount}</td>
+            <td className='table-heading1 child-count'>{childrenCount}</td>
             <td className='table-heading1'>{date}</td>
             <td className='table-heading1'>
-                <button onClick={onEditTicket} >edit</button>
-                <button onClick={onDeleteTicket}>delete</button>
+                <button className='edit-button' onClick={onEditTicket} ><RiEdit2Fill/></button>
+                <button onClick={onDeleteTicket}><MdDelete/></button>
             </td>
         </tr>
     )

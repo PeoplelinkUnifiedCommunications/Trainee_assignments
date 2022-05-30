@@ -1,8 +1,27 @@
 .table-heading1{
-    padding: 1rem;
     font-size: 1rem;
     border-color: white;
     border-style: solid;
-    color: red;
+    color:blue;
     text-align: center;
+    max-width: 40px;
+    overflow-x: hidden;
+}
+.child-count{
+    font-size: 1rem;
+    border-color: white;
+    border-style: solid;
+    color:blue;
+    text-align: center;
+    overflow-x: hidden;
+    max-width: 10px;
+}
+.email-text{
+    text-align: left;
+    padding-left: 5px;
+    max-width: 60px;
+    overflow-wrap: break-word;
+}
+.edit-button{
+    margin-right: 5px;
 }

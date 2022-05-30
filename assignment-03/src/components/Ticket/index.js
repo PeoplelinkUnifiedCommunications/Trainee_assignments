@@ -2,8 +2,8 @@
 import Navbar from '../Navbar'
 import { useState } from 'react'
 import { BsFillPersonFill } from 'react-icons/bs'
+import {BiFilter} from 'react-icons/bi'
 import { MdEmail } from 'react-icons/md'
-// import { useNavigate } from 'react-router-dom'
 import { v4 as uuid } from 'uuid';
 import TableRow from '../TableRow'
 import './index.css'
@@ -17,10 +17,11 @@ function Ticket() {
     const [aCount, setAdultCount] = useState(1)
     const [childrenCount, setChildrenCount] = useState(0)
     const [date, setDate] = useState("")
-    // const [editId, setEditId] = useState("")
-    // const navigate = useNavigate()
     const id = uuid()
     const [tickets, setTicketsList] = useState([])
+    const [searchInupt, setSearchInput] = useState("")
+    const [filteredList, setFilteredList] = useState(tickets)
+    const [editItemId, setEditItem] = useState(null)
 
     const saveGender = (event) => {
         setGender(event.target.value)
@@ -50,7 +51,13 @@ function Ticket() {
 
     const onBookTicket = (event) => {
         event.preventDefault()
-        const newTicket = [id, name, email, gender, aCount, childrenCount, date]
+        let newTicket = []
+        if (editItemId === null){
+            newTicket = [id.slice(0,7), name, email, gender, aCount, childrenCount, date]
+        }else{
+            newTicket = [editItemId, name, email, gender, aCount, childrenCount, date]
+        }
+     
         let list = tickets
         list.push(newTicket)
         setName("")
@@ -60,7 +67,10 @@ function Ticket() {
         setGender("MALE")
         setDate("")
         setTicketsList(list)
-
+        setFilteredList(tickets)
+        setEditItem(null)
+        updateList(searchInupt)
+        
     }
 
 
@@ -72,6 +82,7 @@ function Ticket() {
 
     const onEditItem = (id) => {
         const existingTickets = tickets
+        setEditItem(id)
         const ticketToEdit = existingTickets.filter(each => each[0] === id)
         const newLists = existingTickets.filter(each => each[0] !== id)
         setName(ticketToEdit[0][1])
@@ -80,26 +91,33 @@ function Ticket() {
         setChildrenCount(ticketToEdit[0][5])
         setGender(ticketToEdit[0][3])
         setDate(ticketToEdit[0][6])
-        setTicketsList(newLists)
+        setTicketsList(newLists) 
+        updateList(searchInupt)
+    }
+    const updateList = (value)=>{
+        const updatedList = tickets.filter((each) => each[1].includes(value) || each[1].includes(value.toUpperCase()) || each[0].includes(value))
+        setFilteredList(updatedList)
     }
 
+    const searchElement = (event) => {
+        setSearchInput(event.target.value)
+        updateList(event.target.value)
 
-
+    }
 
     return (
-        <>
+        < div className='ticket-part-bg-container'>
             <Navbar />
             <div className='ticket-page-card-bg-container'>
+                <div className='bg-ticket-form'>
                 <form onSubmit={onBookTicket} className='ticket-card-container'>
-                    <h1>Passenger Information</h1>
-                    <h4>(Give your details to reserve seat)</h4>
+                    <h4 className='heading'>Passenger Information <br />(Give your details to reserve seat)</h4>
                     <div className='input-filed-for-ticket-booking'>
                         <span className="input-element-icon"><BsFillPersonFill /></span>
-                        <input placeholder='Enter Name' value={name} onChange={saveName} id="Name" className='input-element-booking' type="text" required />
+                        <input placeholder='Enter Name' value={name} onChange={saveName} col="20" id="Name" className='input-element-booking' type="name" required />
                     </div>
                     <div className='input-filed-for-ticket-booking'>
                         <span className="input-element-icon"><MdEmail /></span>
-
                         <input placeholder='Mail' value={email} onChange={saveEmail} className='input-element-booking' type="email" required />
                     </div>
                     <div className='input-filed-for-ticket-booking'>
@@ -131,40 +149,50 @@ function Ticket() {
                             <option value={3} name="childrenCount">3</option>
                         </select>
                     </div>
-                    <div>
-                        <button className='book-ticket-button proceed-button' type='submit'>Submit</button>
+                    <div className='button-book-container'>
+                        <button className='book-ticket-button' type='submit'>Book</button>
                     </div>
                 </form>
+                </div>
+                <div className='bg-ticket-form'>
                 {tickets.length === 0 && <div>
                     <img className='no-ticte-image' src="https://www.tripmoney.com/ext/static/TravelLoan/travelLoan.png" alt="no ticket view" />
                 </div>}
                 {tickets.length > 0 &&
-                    <table className='table-bg'>
-                        <thead>
-                            <tr>
-                                <th className='table-heading'>Name</th>
-                                <th className='table-heading'>Email</th>
-                                <th className='table-heading'>Gender</th>
-                                <th className='table-heading'>adultsCount</th>
-                                <th className='table-heading'>childrenCount</th>
-                                <th className='table-heading'>Journey Date</th>
-                                <th className='table-heading'>Edit / delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {tickets.map((each) => {
-                                return (
-                                    <TableRow key={each[0]} content={each} onDelete={onDeleteItem} onChange={onEditItem} />)
-                            })}
-                        </tbody>
-                    </table>
+                    <div>
+                        <div className='filter-container'>
+                            <BiFilter />
+                            <input value={searchInupt} onChange={searchElement} type="text" placeholder="Filter Here" />
+                        </div>
+                        <table className='table-bg'>
+                            <thead>
+                                <tr>
+                                    <th className='table-heading'>Id</th>
+                                    <th className='table-heading'>Name</th>
+                                    <th className='table-heading'>Email</th>
+                                    <th className='table-heading'>Gender</th>
+                                    <th className='table-heading'>adults<br/>Count</th>
+                                    <th className='table-heading'>children<br/>Count</th>
+                                    <th className='table-heading'>Journey Date</th>
+                                    <th className='table-heading'>Edit / delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {filteredList.map((each) => {
+                                    return (
+                                        <TableRow key={each[0]} content={each} onDelete={onDeleteItem} onChange={onEditItem} />)
+                                })}
+                            </tbody>
+                        </table>
+                    </div>
 
                 }
+                </div>
 
 
             </div>
 
-        </>
+        </div>
     )
 }
 export default Ticket
