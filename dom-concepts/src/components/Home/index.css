@@ -1,0 +1,169 @@
+
+
+.bg-container-home-page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.home-dashboard-content-part-header{
+    background-image: linear-gradient(to right, lightblue,purple);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-content-bg-container{
+    flex-grow: 1;
+    background-color: ghostwhite;
+}
+
+.menu-button{
+    background-color:inherit;
+    border-style: none;
+    font-size: 1rem;
+    margin-right: 3rem;
+}
+
+.search-input-tag{
+    background-color: ghostwhite;
+   border-style: none;
+   margin-left: 5px;
+    color: white;
+}
+
+.header-first-part-container{
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.icon-styling{
+    margin-right: 2rem;
+}
+
+.content-part-cards-container{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content-part-header-below-bg{
+    padding: 3rem;
+}
+.card-details-container{
+    background-color: white;
+    padding: 1rem;
+    color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-radius: 10px;
+    max-width: 28%;
+}
+
+.card-icon-right-check-circle{
+    background-color: blue;
+    color: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.menu-toggle-dashboard{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+.menu-toggle-dashboard-header{
+    padding: 11.5px;
+    background-color: lightblue;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+
+.prifile-pic-navlinks-conatiner{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:2rem;
+    
+}
+
+.profile-image{
+    height: 80%;
+    width: 100%;
+   
+}
+.ul{
+    width: 100%;
+    text-align: center;
+
+}
+
+.dashboard-list-item{
+    list-style: none;
+    color: blue;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.profile-image-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 3rem;
+}
+
+.charts-bg-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 80vw;
+}
+
+
+
+.garph-upper-card-container{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 5px;
+    flex-grow: 1;
+    max-width: 300px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+
+}
+
+.line-chart-bg-container{
+    width: 60%;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.pie-chart-container{
+    display: flex;
+    flex-grow: 1;
+    min-width: 30%;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top:30px ;
+    padding: 30px;
+}
