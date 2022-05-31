@@ -1,0 +1,11 @@
+.heading{
+    text-align: center;
+    width: 100%;
+}
+.resume-bg-container{
+    padding: 3rem;
+}
+.button-print{
+    align-self: flex-end;
+    margin-top: 3rem;
+}

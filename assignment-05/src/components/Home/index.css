@@ -1,0 +1,75 @@
+.Resume-bg-container{
+    padding: 4rem;
+    text-align: center;
+    width: 100vw;
+}
+
+.label-input-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.label-input-container-select{
+    padding-right:1rem ;
+    padding-left: 1rem;
+}
+
+.form-bg-container{
+   border-style: solid;
+   border-width: 1px; 
+   border-radius: 10px;
+   padding: 3rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.button-save-div{
+    align-self: center;
+    margin-top: 2rem;
+}
+
+.educational-details-container{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+.list-item-education-field{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 3rem;
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.button-add-field{
+    align-self: flex-end;
+    background-color: transparent;
+    color: BLUE;
+    border-style: none;
+}
+
+.button-container{
+    width: 100%;
+    text-align: end;
+}
+.input-field{
+   margin: 10px; 
+}
+.heading1{
+    width: 100%;
+    text-align: left;
+}
+
+.heading2{
+    width: 100%;
+    text-align: left;
+    margin-top: 2rem;
+}
