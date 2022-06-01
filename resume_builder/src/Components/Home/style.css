@@ -1,0 +1,116 @@
+.resumeMain {
+    margin: 4rem;
+}
+
+.resumeCntnr {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid #4d4d4d;
+    background-color: #ccffdd;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+    color: #668cff;
+}
+
+h1 {
+    font-family: fantasy;
+    margin-left: 2.3rem;
+    margin-top: 2rem;
+}
+
+h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.fieldCntnr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 1px solid #4d4d4d;
+    border-radius: 16px;
+    margin: 2rem;
+    padding: 4rem;
+}
+
+.fieldCntnr1, .fieldCntnr2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #4d4d4d;
+    border-radius: 16px;
+    margin: 2rem;
+    padding: 4rem;
+}
+
+.txtField, .selectField{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.labelField {
+    font-size: 20px;
+}
+
+.inputField {
+    border: 1px solid #3385ff;
+    border-radius: 10px;
+    padding: 0.8rem;
+    width: 300px;
+    font-size: 20px;
+}
+
+.radioField{
+    width: 40px;
+}
+
+select.inputField {
+    font-size: 20px;
+    background-color: #ffff;
+    border-radius: 10px;
+}
+
+::placeholder {
+    font-size: 18px;
+}
+
+.plusIcon {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.hi {
+    width: 40px;
+    height: 25px;
+}
+
+.plusBtn {
+    width: 4%;
+    height: 40px;
+    border: solid #66a3ff;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2rem;
+}
+
+.generateBtn {
+    width: 10%;
+    height: 40px;
+    border: solid #66a3ff;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
