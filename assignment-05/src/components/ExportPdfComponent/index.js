@@ -11,6 +11,8 @@ function ExportPdfComponent() {
 
   return (<>
   <div className="print__section">
+    <br/>
+    <br/>
     <div className="container">
       <div className="row">
         <div className="col-md-12">
