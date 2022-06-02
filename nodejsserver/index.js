@@ -24,27 +24,6 @@ app.post("/Images", upload.single("profile"),(req,res) => {
     res.send(req.file);
 });
 
-// app.post("/multiple",upload.array("images",2),(req,res) => {
-//     console.log(req.file);
-//     res.send("Multiple files uploaded successfully!")
-// });
-
-
-
-// function saveImageToDisk(url,path) {
-
-//     const fullUrl = url
-
-//     const localPath = fs.createWriteStream(path)
-
-//     const request = https.get(fullUrl,function(response) {
-//         console.log(response);
-
-//         response.pipe(localPath)
-//     })
-// }
-
-// saveImageToDisk("https://thumbs.dreamstime.com/b/rainbow-love-heart-background-red-wood-60045149.jpg","./Images/" + Date.now() + ".png")
 
 
 

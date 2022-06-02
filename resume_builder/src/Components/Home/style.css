@@ -10,7 +10,7 @@
     background-color: #ccffdd;
 }
 
-span {
+.mainHeading{
     display: flex;
     justify-content: center;
     font-size: 50px;
@@ -18,13 +18,13 @@ span {
     color: #668cff;
 }
 
-h1 {
+.heading1{
     font-family: fantasy;
     margin-left: 2.3rem;
     margin-top: 2rem;
 }
 
-h2 {
+.heading2 {
     width: 100%;
     margin-bottom: 1rem;
     text-decoration: underline;
@@ -109,6 +109,7 @@ select.inputField {
 .generateBtn {
     width: 10%;
     height: 40px;
+    font-size: 16px;
     border: solid #66a3ff;
     border-radius: 10px;
     background-color: transparent;
