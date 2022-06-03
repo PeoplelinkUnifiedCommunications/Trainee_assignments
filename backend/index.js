@@ -4,6 +4,7 @@ import cors from 'cors';
 import bodyParser from "body-parser";
 import Quote from 'inspirational-quotes';
 import multer from "multer";
+import users from "./model/schema.js";
 
 
 
@@ -81,8 +82,8 @@ app.delete("/:id", async(req, res) => {
 
 
  
- 
-const CONNECTION_URL = 'mongodb+srv://SujithaKonda:13QP1A0245@cluster0.k9ilwcu.mongodb.net/?retryWrites=true&w=majority';
+                      
+const CONNECTION_URL = 'mongodb+srv://sujithaKonda:13QP1A0245@cluster0.csgivkf.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(CONNECTION_URL, {useNewUrlParser : true , useUnifiedTopology : true})
 .then(() => 
 app.listen(8000, () => {
