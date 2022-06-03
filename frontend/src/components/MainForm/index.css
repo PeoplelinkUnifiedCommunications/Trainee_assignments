@@ -1,0 +1,199 @@
+h3 {
+    padding: 1.0rem;
+    margin-left: 0.8rem;
+}
+
+.btn {
+    padding: 0.5rem;
+    width: 85px;
+    height: 50px;
+    margin: 6px;
+}
+
+label {
+    padding: 15px;
+}
+
+.btn1 {
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-bottom: 12px;
+    padding-right: 14px;
+    width: 85px;
+    height: 50px;
+    margin: 6px;
+}
+
+.mainDiv {
+    justify-content: center;
+}
+
+.radioDiv {
+    margin-top: 1rem;
+    margin-left: 6.9rem;
+}
+
+.inf {
+    margin-left: 4.7rem;
+}
+.in2 {
+    margin-left: 4.9rem;
+    padding: 0.4rem;
+}
+
+.in3 {
+    margin-left: 5rem;
+    padding: 0.4rem;
+}
+
+.in4 {
+    margin-left: 7.3rem;
+    padding: 0.4rem;
+}
+
+.in5 {
+    margin-left: 6.9rem;
+    padding: 0.4rem;
+}
+
+.in6 {
+    margin-left: 5.7rem;
+    padding: 6px;
+}
+
+.dropdown {
+    margin-left: 4.5rem;
+    padding: 0.4rem;
+    padding-left: 3rem;
+}
+
+.in8 {
+    padding: 6px;
+    margin-left: 8.1rem;
+    padding-right: 2rem;
+}
+
+.in9{
+    padding: 6px;
+    margin-left: 5.9rem;
+}
+
+.in0 {
+    padding: 6px;
+    margin-left: 2rem;
+}
+
+
+.check1 {
+    margin-right: 11rem;
+    /* margin-left: 3rem; */
+}
+
+/* .check2 {
+    margin-left: 0.8rem;
+} */
+
+.status {
+    display: flex;
+    justify-content: center;
+}
+
+.form-input {
+    margin-left: 3.6rem;
+}
+
+.button {
+    margin-left: 8rem;
+}
+
+.btn1 {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    /* width: 4rem; */
+    height: 50px;
+    margin: 6px;
+}
+
+.tab {
+    padding: 6px;
+}
+
+th {
+    padding: 12px;
+    height: 15px;
+    background-color: var(--darkColor);
+    color: var(--whiteColor);
+}
+
+.t2 {
+    padding: 0.3125rem;
+}
+
+.btnDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0.1rem;
+}
+
+
+.err {
+    color: #ed4a2d;
+    margin-left: 12rem;
+}
+
+
+/* .btn2 {
+    padding-top: 15px;
+    padding-left: 1rem;
+    padding-bottom: 12px;
+    padding-right: 14px;
+    width: 85px;
+    height: 50px;
+} */
+
+.tab {
+    padding: 6px;
+}
+
+.t2 {
+    padding: 0.3125rem;
+}
+
+td {
+    padding: 10px;
+}
+
+.image {
+    flex-direction: row;
+    padding: 2.7rem;
+    margin-left: 4rem;
+}
+
+table, th, td {
+    border: 1px solid #a1a6a2;
+    border-collapse: collapse;
+}
+
+.input {
+    width: 4rem;
+    height: 4rem;
+}
+
+table td {
+    background-color: #eba8ed;
+}
+
+input[type=text] {
+    border : 1px solid red;
+}
+
+input[type=date] {
+    border : 1px solid red;
+}
+
+input[type=password] {
+    border : 1px solid red;
+}

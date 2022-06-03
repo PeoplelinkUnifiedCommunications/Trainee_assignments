@@ -49,6 +49,7 @@ function Home() {
   const savePercentage = (event) => { setPersentage(event.target.value) }
   const saveDescription = (event) => { setDescription(event.target.value) }
   const saveDuration = (event) => { setDuration(event.target.value) }
+  
   const saveImage = (event)=>{
     let img = event.target.files[0]
     setImageUrl(img)
@@ -82,7 +83,6 @@ function Home() {
     setYearOfPassing("")
     setPersentage("")
   }
-
 
 
 
@@ -152,6 +152,9 @@ function Home() {
           </div>
           <div className='btn-bg-div'>
             <button className='generate-button' type='submit'>Generate PDF</button>
+          </div>
+          <div>
+           <button type="reset">Reset</button>
           </div>
         </form>
         

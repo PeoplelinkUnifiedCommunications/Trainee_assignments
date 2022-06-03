@@ -1,0 +1,62 @@
+p {
+    padding: 6px;
+}
+
+/* .btn {
+    padding: 0.5rem;
+    width: 85px;
+    height: 50px;
+    margin: 6px;
+} */
+
+label {
+    padding: 15px;
+}
+
+/* .in {
+    height: 30px;
+}
+
+.in1 {
+    padding: 6px;
+    margin: 10px;
+} */
+
+.btn1 {
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-bottom: 12px;
+    padding-right: 14px;
+    width: 85px;
+    height: 50px;
+    margin: 6px;
+}
+
+.btn2 {
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-bottom: 12px;
+    padding-right: 14px;
+    width: 85px;
+    height: 50px;
+}
+
+.tab {
+    padding: 6px;
+}
+
+th {
+    padding: 12px;
+    height: 15px;
+    background-color: var(--darkColor);
+    color: var(--whiteColor);
+}
+
+.t2 {
+    padding: 0.3125rem;
+}
+
+.b1 {
+    width: 50px;
+    height: 30px;
+}
