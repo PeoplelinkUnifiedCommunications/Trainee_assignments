@@ -22,8 +22,7 @@ import "./style.css";
 function Dashboard() {
   const [nav, setNav] = useState(false);
 
-  const changeNav = () => setNav(!nav);
-  Trainee_assignments
+  const changeNav = () => setNav(!nav)
   return (
       <div className="mainCntnr">
           
@@ -40,7 +39,7 @@ function Dashboard() {
                          <li className="nm">Aaryan</li>
                       </ul>   
                           
-                   </div>
+                  </div>
                    <div className="navList">
                    <div className="lsCntnr">
                        <GoDashboard className="go"/>

@@ -14,3 +14,26 @@ p{
     font-weight: bold;
 }
 
+.fileCntnr {
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+
+.signature {
+    border: 1px solid black;
+}
+
+table th {
+    font-size: 20px;
+    background-color: #f5a142;
+}
+
+table tr td {
+     font-size: 18px;
+     background-color: #ccff99;
+}
+
+td {
+    text-align: center;
+}

@@ -38,14 +38,14 @@ function Form() {
   const [reqEmail, setReqEmail] = useState(false);
   const [reqPhno, setReqPhno] = useState(false);
   const [reqGender, setReqGender] = useState(false);
-  const [reqDesig, setReqDesig] = useState(false);
+  // const [reqDesig, setReqDesig] = useState(false);
 
   const [list, setList] = useState([]);
 
   const formSubmission = (e) => {
     e.preventDefault();
 
-    const newList = [firstname, lastname, email, phno, gender];
+    const newList = [firstname, lastname, email, phno, gender, desig];
     let existingList = list;
     existingList.push(newList);
     setList(existingList);
@@ -87,11 +87,11 @@ function Form() {
       setReqGender(false);
     }
 
-    if (desig === "") {
-      setReqDesig(true);
-    } else {
-      setReqDesig(false);
-    }
+    // if (desig === "") {
+    //   setReqDesig(true);
+    // } else {
+    //   setReqDesig(false);
+    // }
   };
   return (
     <div className="mainContainer">
@@ -183,7 +183,7 @@ function Form() {
                 None
               </option>
             </select>
-            {reqDesig && <p className="errMsg">*Please select a value </p>}
+            {/* {reqDesig && <p className="errMsg">*Please select a value </p>} */}
 
             <button type="submit">Submit</button>
           </form>

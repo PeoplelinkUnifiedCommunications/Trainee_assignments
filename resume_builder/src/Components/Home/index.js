@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import GenerateForm from "../GenerateForm";
-// import { HiPlus } from "react-icons/hi";
+import { HiPlus } from "react-icons/hi";
 import "./style.css";
 function Home() {
+
+
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
@@ -13,6 +15,10 @@ function Home() {
   const [mobno, setMobno] = useState("");
   const [email, setEmail] = useState("");
   const [gender, setGender] = useState("");
+
+  const [image, setImage] = useState("");
+  const [signature, setSignature] = useState("");
+
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [country, setCountry] = useState("");
@@ -24,7 +30,7 @@ function Home() {
   const [project, setProject] = useState("");
   const [duration, setDuration] = useState("");
   const [description, setDescription] = useState("");
-  const [formSubmitted, setSubmitStatus] = useState(false);
+  const [resumeSubmitted, setResumeSubmitted] = useState(false);
 
   const changeName = (e) => setName(e.target.value);
   const changeMobno = (e) => setMobno(e.target.value);
@@ -42,12 +48,13 @@ function Home() {
   const changeDuration = (e) => setDuration(e.target.value);
   const changeDescription = (e) => setDescription(e.target.value);
 
-  const [list, setList] = useState([]);
   let details = {
     name,
     mobno,
     email,
     gender,
+    image,
+    signature,
     city,
     state,
     country,
@@ -63,40 +70,42 @@ function Home() {
 
   const resumeSubmission = (e) => {
     e.preventDefault();
-    const newList = [
-      name,
-      mobno,
-      email,
-      gender,
-      city,
-      state,
-      country,
-      code,
-      eduType,
-      clgName,
-      yop,
-      cgpa,
-      project,
-      duration,
-      description,
-    ];
-
-    let existingList = list;
-    existingList.push(newList);
-    setList(existingList);
-
-    setSubmitStatus(true);
+    changeEduDetails();
+    setResumeSubmitted(true);
   };
+
+  const [eduDetails, setEduDetails] = useState([])
+
+  const changeEduDetails = () => {
+  const newEduDetails = [eduType, clgName, yop, cgpa]
+  const existEduDetails = eduDetails;
+  const updatedEduDetails = [...existEduDetails,newEduDetails]
+  setEduDetails(updatedEduDetails)
+  setEduType("")
+  setClgName("")
+  setYop("")
+  setCgpa("")
+}
+
+  const saveImage = (e) => {
+    let img = e.target.files[0]
+    setImage(img)
+  }
+
+  const saveSignature = (e) => {
+    let signature = e.target.files[0]
+    setSignature(signature)
+  }
 
   return (
     <div className="resumeMain">
-      {!formSubmitted && (
+      {!resumeSubmitted && (
         <>
-          <span className="mainHeading">Resume Builder</span>
+          <span className="mainHeading">Create Your Own Resume</span>
           <div className="resumeCntnr">
             <form onSubmit={resumeSubmission}>
               <h1 className="heading1">Personal Details</h1>
-              <div className="fieldCntnr">
+              <div className="fieldCntnr-n">
                 <div>
                   <div className="txtField">
                     <label className="labelField" htmlFor="name">
@@ -175,6 +184,19 @@ function Home() {
                       Female
                     </label>
                   </div>
+
+                  <div className="fileField">
+                  <label className="labelField" htmlFor="image">
+                      Image
+                    </label>
+                    <br />
+                    <input
+                      className="fileInput"
+                      type="file"
+                      onChange={saveImage}
+                      required
+                    />
+                  </div> 
                 </div>
 
                 <div>
@@ -295,90 +317,68 @@ function Home() {
                       required
                     />
                   </div>
+
+                  <div className="txtField">
+                  <label className="labelField" htmlFor="signature">
+                      Signature
+                  </label>
+                  <br /> 
+                    <input
+                      className="inputField"
+                      type="file"
+                      onChange={saveSignature}
+                      required
+                    />
+                </div>
                 </div>
               </div>
 
               <h1 className="heading1">Educational Details</h1>
               <div className="fieldCntnr1">
+                  
                 <div className="txtField">
-                  <label className="labelField" htmlFor="eduType">
-                    Education Type
-                  </label>
-                  <br />
-                  <select
-                    className="inputField"
-                    onChange={changeEducation}
-                    required
-                  >
-                    <option value="graduation" name="eduType">
-                      Graduation
-                    </option>
-                    <option value="post graduation" name="eduType">
-                      Post Graduation
-                    </option>
-                    <option value="board" name="eduType">
-                      Board of Intermediate
-                    </option>
-                    <option value="ssc" name="eduType">
-                      SSC
-                    </option>
-                    <option value="none" name="eduType" selected>
-                      None
-                    </option>
-                  </select>
+                <label className="labelField" htmlFor="eduType">
+                      Education Type
+                    </label>
+                    <br />
+                    <input
+                      className="inputField"
+                      type="text"
+                      placeholder="Education"
+                      value={eduType}
+                      onChange={changeEducation}
+                      required
+                    />
                 </div>
 
                 <div className="txtField">
-                  <label className="labelField" htmlFor="clg-name">
-                    Name of college
-                  </label>
-                  <br />
-                  <input
-                    className="inputField"
-                    type="text"
-                    placeholder="College"
-                    value={clgName}
-                    onChange={changeCollege}
-                    required
-                  />
+                <label className="labelField" htmlFor="eduType">
+                      Name of College
+                    </label>
+                    <br />
+                    <input
+                      className="inputField"
+                      type="text"
+                      placeholder="College"
+                      value={clgName}
+                      onChange={changeCollege}
+                      required
+                    />
                 </div>
 
                 <div className="txtField">
-                  <label className="labelField" htmlFor="yop">
-                    Year of Passing
-                  </label>
-                  <br />
-                  <select className="inputField" onChange={changeYop} required>
-                    <option value="2016" name="yop">
-                      2016
-                    </option>
-                    <option value="2017" name="yop">
-                      2017
-                    </option>
-                    <option value="2018" name="yop">
-                      2018
-                    </option>
-                    <option value="2019" name="yop">
-                      2019
-                    </option>
-                    <option value="2020" name="yop">
-                      2020
-                    </option>
-                    <option value="2021" name="yop">
-                      2021
-                    </option>
-                    <option value="2022" name="yop">
-                      2022
-                    </option>
-                    <option
-                      className="optField"
-                      value="none"
-                      name="yop"
-                      selected
-                    >
-                      None
-                    </option>
-                  </select>
+                <label className="labelField" htmlFor="eduType">
+                      Year of Passing
+                    </label>
+                    <br />
+                    <input
+                      className="inputField"
+                      type="text"
+                      placeholder="YOP"
+                      value={yop}
+                      onChange={changeYop}
+                      required
+                    />
                 </div>
 
                 <div className="txtField">
@@ -396,10 +396,11 @@ function Home() {
                   />
                 </div>
 
-                {/* <div className="plusIcon">
-                <button className="plusBtn"><HiPlus className="hi"/></button>
-                </div>  */}
-              </div>
+
+                <div className="plusIcon">
+                <button onClick={changeEduDetails} type="button" className="plusBtn"><HiPlus className="hi"/></button>
+                </div> 
+                </div>
 
               <h1 className="heading1">Experience</h1>
               <div className="fieldCntnr2">
@@ -451,7 +452,7 @@ function Home() {
               </div>
 
               <div className="btn">
-                <button type="submit" className="generateBtn ">
+                <button type="submit" className="generateBtn">
                   Generate Resume
                 </button>
               </div>
@@ -459,8 +460,8 @@ function Home() {
           </div>
         </>
       )}
-      {formSubmitted && (
-        <div className="print__section">
+      {resumeSubmitted && (
+        <div className="printsection">
           <br />
           <br />
           <div className="container">
@@ -468,16 +469,16 @@ function Home() {
               <div className="col-md-12">
                 <div ref={componentRef} className="card">
                   <div className="float__start">
-                    <h3 className="card-title mb-0 heading">{name} Resume</h3>
+                    <h3 className="card-title"><span className="resume_title">{name} RESUME</span></h3>
                   </div>
                   <hr />
-                  <div className="float__infoss">
-                    <GenerateForm details={details} />
+                  <div className="printsection">
+                    <GenerateForm details={details} educationalDetails={eduDetails}/>
                   </div>
                 </div>
                 <button
                   onClick={handlePrint}
-                  className="print__button button-print"
+                  className="print_button"
                 >
                   Print
                 </button>
