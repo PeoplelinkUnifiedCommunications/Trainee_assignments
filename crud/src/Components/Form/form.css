@@ -1,7 +1,7 @@
 .formOutline {
     background-color: #ffcccc;
     width: 40%;
-    height: 80vh;
+    /* height: 80vh; */
 }
 
 .formInline {
@@ -48,6 +48,7 @@ input[type="text"] {
 }
 input[type="radio"] {
     margin-top: 1rem;
+    margin-right: 0.6rem;
 }
 input[type="email"] {
     width: 260px;
@@ -80,7 +81,8 @@ textarea {
     padding-left: 10rem;
 }
 
-button {
+
+.submitBtn{
     width: 25%;
     height: 10%;
     font-size: 16px;
@@ -90,14 +92,12 @@ button {
     border: #fff;
 }
 
-button:hover {
+.submitBtn:hover {
     cursor: pointer;
 }
 
-
-
 table {
-    width: 50%;
+    width: 100%;
     margin: 2rem;
 }
 
@@ -106,4 +106,8 @@ table,th,td {
     border: solid #00ff55;
     padding: 0.6rem;
 }
+
+
+
+
 

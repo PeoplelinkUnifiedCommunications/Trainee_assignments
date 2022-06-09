@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 function GenerateForm(props) {
   const { details, educationalDetails} = props;
-  console.log(educationalDetails);
+  // console.log(educationalDetails);
   const {
     name,
     mobno,

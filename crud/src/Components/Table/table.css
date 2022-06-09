@@ -2,3 +2,13 @@
 .field {
     text-align: center;
 }
+
+.editBtn, .deleteBtn{
+    border: none;
+    background: none;
+}
+
+.edit2Fill, .fillDelete {
+    width: 40px;
+    height: 20px;
+}

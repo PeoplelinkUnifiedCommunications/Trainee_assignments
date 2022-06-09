@@ -79,7 +79,7 @@ function Home() {
   const changeEduDetails = () => {
   const newEduDetails = [eduType, clgName, yop, cgpa]
   const existEduDetails = eduDetails;
-  const updatedEduDetails = [...existEduDetails,newEduDetails]
+  const updatedEduDetails = [...existEduDetails, newEduDetails]
   setEduDetails(updatedEduDetails)
   setEduType("")
   setClgName("")
@@ -134,7 +134,7 @@ function Home() {
                       value={mobno}
                       onChange={changeMobno}
                       required
-                    />
+                    /> 
                   </div>
 
                   <div className="txtField">
