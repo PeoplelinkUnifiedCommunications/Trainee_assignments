@@ -76,7 +76,7 @@ function Dashboard() {
           </div> }
       <div className="dashboardCntnr">
         <div className="flexRow header">
-          <button onClick={changeNav}>{nav ? <BsArrowRightCircle  className="arrCircle"/> :<BsArrowLeftCircle  className="arrCircle"/>}</button>
+          <button onClick = {changeNav}>{nav ? <BsArrowRightCircle  className="arrCircle"/> : <BsArrowLeftCircle  className="arrCircle"/>}</button>
           
           <BiSearch className="searchIcon" />
           <p className="paragraph">Find Projects or clients</p>
