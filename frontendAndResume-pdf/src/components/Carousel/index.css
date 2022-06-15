@@ -1,0 +1,18 @@
+.carousal-bg{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.active{
+    display: flex;
+}
+.Inactive{
+    display: none;
+}
+
+.pdf-bg-container{
+    height: 100%;
+    overflow-y: scroll;
+}

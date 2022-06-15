@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import ReactForm from "./components/ReactForm"
+import Home from './components/Home';
 
 
 function App(){
@@ -8,7 +8,7 @@ function App(){
     <div className="baseContainer">
       <Router>
         <Routes>
-          <Route exact path="/" element={<ReactForm/>}/>
+          <Route exact path="/" element={<Home/>}/>
         </Routes>
       </Router>
     </div>

@@ -1,0 +1,87 @@
+.Home-bg-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-pdf-bg-container{
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.pdf-bg-container{
+    background-color: ghostwhite;
+    display: flex;
+    flex-grow: 1;
+    overflow-y: scroll;
+    justify-content: center;
+    padding-top: 3rem;
+  
+}
+
+.page-a4{
+    width: 600px;
+    height: 1100px;
+    box-shadow: 1rem black;
+    background-color:white;   
+}
+
+.HeaderPart{
+    width: 100%;
+    text-align: center;
+}
+
+
+.navbar-bg-container-resume-home-page{
+    height: 3rem;
+    width: 100%;
+    background-color: rgb(217, 225, 217);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-bg-container{
+    width: 40%;
+    min-height: 100%;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume-logo-stying{
+    margin-left: 4rem;
+    height: 2.5rem;
+    width: 6rem;
+}
+
+.tab-list-container{
+  width: 100%;
+  justify-content: center;
+
+}
+
+.ul-list{
+    display: flex;
+    list-style: none;
+    justify-content:space-around;
+}
+
+.hr-line{
+    width: 90%;
+}
+
+.tab-button-styling{
+    background-color: inherit;
+    border-style: none;
+    color: aquamarine;
+    font-weight: bolder;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
