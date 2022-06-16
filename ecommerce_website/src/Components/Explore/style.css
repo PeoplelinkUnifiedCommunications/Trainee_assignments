@@ -1,0 +1,80 @@
+.exploreBgContainer {
+    width: auto;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+}
+
+.header {
+    width: 100%;
+    height: 95px;
+}
+
+.innerCntnr {
+    padding: 2rem;
+}
+
+.exploreHeading {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    color: #183b56;
+    margin-bottom: 2rem;
+}
+
+.cardCntnr {
+    width: 100%;
+}
+
+.cardOuterCntnr {
+    border-radius: 20px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.cardInnerCntnr {
+    padding: 1rem;
+}
+
+.exploreSubHeading {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #183b56;
+    margin-bottom: 2rem;
+}
+
+.gadgetsCntnr {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.ecommerce {
+    border-radius: 20px;
+    padding: 0.1rem;
+}
+
+.mrgnHMD{
+    margin: 1.5rem 0;
+}
+
+.spanElement {
+    font-size: 1.8rem;
+}
+
+.jsCenter {
+    /* display: flex; */
+    justify-content: center;
+}
+
+.seeAllDeals {
+    font-size: 2rem;
+    color: #ff9f00;
+}
+
+/* .pdngSM {
+    padding: 0.5rem;
+} */
+
+
+
+
+

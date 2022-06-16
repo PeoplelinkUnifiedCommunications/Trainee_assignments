@@ -1,0 +1,58 @@
+.exploreBgContainer {
+    width: auto;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+}
+
+.cardCntnr {
+    width: 100%;
+}
+
+.cardCntnr1 {
+    padding: 2rem;
+}
+
+.cardOuterCntnr {
+    border-radius: 20px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.cardInnerCntnr {
+    padding: 1rem;
+}
+
+.exploreSubHeading {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #183b56;
+    margin-bottom: 2rem;
+}
+
+.gadgetsCntnr {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cardImg {
+    border-radius: 20px;
+}
+
+.mrgnHMD{
+    margin: 1.5rem 0;
+}
+
+.spanElement {
+    font-size: 1.8rem;
+}
+
+.jsCenter {
+    /* display: flex; */
+    justify-content: center;
+}
+
+.seeAllDeals {
+    font-size: 2rem;
+    color: #ff9f00;
+}

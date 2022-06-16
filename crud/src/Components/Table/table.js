@@ -7,6 +7,7 @@ function Table(props) {
     
     const {formDetails, editDetails, deleteDetails} = props;
     const id = formDetails[0];
+    console.log(formDetails);
     
     const changeDetails = (id) => {
         editDetails(formDetails[0])  

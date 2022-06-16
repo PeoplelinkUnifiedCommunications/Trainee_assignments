@@ -1,6 +1,6 @@
 import React from "react";
 import Popups from "../Popups/popups"
-import Nav from "../Navbar/nav"
+// import Nav from "../Navbar/nav"
 import "./home.css";
 
 function Home() {
@@ -58,7 +58,7 @@ function Home() {
       <div className="imgCntnr1">
         <img className="dev" src="./images/olaolu.png" alt = "developer" width="220px" height="200px"/>
       </div>
-      <Nav />
+      {/* <Nav /> */}
     </div>
   );
 }

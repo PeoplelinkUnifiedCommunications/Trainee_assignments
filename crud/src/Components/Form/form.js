@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import axios from "axios";
 import { v4 } from "uuid";
 import Table from "../Table/table";
@@ -11,6 +11,15 @@ function Form() {
   const [phno, setPhno] = useState("");
   const [gender, setGender] = useState("");
   const [desig, setDesig] = useState("");
+
+  useEffect(() => {
+    window.localStorage.setItem('firstname', firstname)
+    window.localStorage.setItem('lastname', lastname)
+    window.localStorage.setItem('email', email)
+    window.localStorage.setItem('phno', phno)
+    window.localStorage.setItem('gender', gender)
+    window.localStorage.setItem('desig', desig)
+  })
 
 
   const id = v4();
@@ -39,6 +48,7 @@ function Form() {
     setDesig(e.target.value);
   };
 
+  
   const [reqFirstName, setReqFirstName] = useState(false);
   const [reqLastName, setReqLastName] = useState(false);
   const [reqEmail, setReqEmail] = useState(false);
@@ -46,8 +56,8 @@ function Form() {
   const [reqGender, setReqGender] = useState(false);
   const [reqDesig, setReqDesig] = useState(false);
 
-  const [isEdit , setEditStatus] = useState(false)
-  const [editId, setEditId] = useState("")
+  const [isEdit , setEditStatus] = useState(false);
+  const [editId, setEditId] = useState(false);
   
   const [userDetails, setUserDetails] = useState([]);
 
@@ -61,7 +71,7 @@ function Form() {
     setPhno("");
     setGender("");
     setDesig("");
-    setUserDetails(list);
+    setUserDetails(userDetails);
   }
 
   const updateUser = () => {
@@ -125,7 +135,7 @@ function Form() {
   };
 
 const editDetails = (id) => {
-    console.log(id)
+    // console.log(id)
     setEditStatus(true)
     setEditId(id)
     const existingDetails = userDetails;
@@ -228,7 +238,7 @@ const editDetails = (id) => {
                 Male
               </label>
 
-              <input type="radio" value="female" name="gender" checked={gender === "female"} onChange={(e) => setGender(e.target.value)}/>
+              <input className="radioBtn" type="radio" value="female" name="gender" checked={gender === "female"} onChange={(e) => setGender(e.target.value)}/>
               <label className="female" htmlFor="female">
                 Female
               </label>
@@ -239,33 +249,29 @@ const editDetails = (id) => {
             <label className="desig" htmlFor="desig">
               Designation
             </label>
-            <select name="desig" onChange={(e) => setDesig(e.target.value)}>
-              <option value="director" name="desig">
+            <select name="desig" onChange={changeDesig}>
+              <option value="director">
                 Director
-              </option>
-              <option value="manager" name="desig">
+              </option>  
+              <option value="manager">
                 Manager
               </option>
-              <option value="trainee" name="desig">
+              <option value="trainee" >
                 Trainee
               </option>
-              <option value="employee" name="desig">
+              <option value="employee" >
                 Employee
               </option>
-              <option value="assistant" name="desig">
+              <option value="assistant" >
                 Assistant
               </option>
-              <option value="none" name="desig" selected>
+              <option selected>
                 None
               </option>
             </select>
             {reqDesig && <p className="errMsg">*Please select a value </p>}
 
-            <button className="submitBtn" type="submit" 
-            >
-              {/* onClick={sendDataToAPI} */}
-              Submit
-            </button>
+          <button type="submit" className="submitBtn">Submit</button>
           </form>
     
       </div>

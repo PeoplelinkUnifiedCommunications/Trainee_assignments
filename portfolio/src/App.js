@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Main from "./Components/Main/main";
 import Menu from "./Components/Menu/menu";
-import Menuhome from "./Components/Menuhome/menuhome"
+import Menuhome from "./Components/Menuhome/menuhome";
 import Shelf from "./Components/Shelf/shelf";
 import Resume from "./Components/Resume/resume";
 import Afterform from "./Components/Afterform/afterform";

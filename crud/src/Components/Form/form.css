@@ -1,5 +1,5 @@
 .formOutline {
-    background-color: #ffcccc;
+    background-color: #ff99bb;
     width: 40%;
     /* height: 80vh; */
 }
@@ -21,6 +21,7 @@
     padding: 1rem;
     font-family: serif;
 }
+
 .fname {
     margin-right: 2rem;
 }
@@ -49,7 +50,13 @@ input[type="text"] {
 input[type="radio"] {
     margin-top: 1rem;
     margin-right: 0.6rem;
+    /* margin-left: 1rem;   */
 }
+
+.radioBtn {
+    margin-left: 1rem;
+}
+
 input[type="email"] {
     width: 260px;
     padding: 0.6rem;
@@ -96,8 +103,7 @@ textarea {
     cursor: pointer;
 }
 
-table {
-    width: 100%;
+table{
     margin: 2rem;
 }
 
