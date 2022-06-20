@@ -11,3 +11,306 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.baseContainer {
+  height: 100vh;
+  width: 100%;
+}
+
+
+/* PADDINGS */
+.pdngXSM {
+  padding: 0.25rem;
+}
+
+.pdngSM {
+  padding: 0.5rem;
+}
+
+.pdngMD {
+  padding: 1rem !important;
+}
+
+.pdngLG {
+  padding: 1.5rem;
+}
+
+.pdngXL {
+  padding: 2rem;
+}
+
+/* VERTICAL PADDINGS */
+.pdngVXSM {
+  padding: 0.25rem 0;
+}
+
+.pdngVSM {
+  padding: 0.5rem 0;
+}
+
+.pdngVMD {
+  padding: 1rem 0;
+}
+
+.pdngVLG {
+  padding: 0 1.5rem;
+}
+
+.pdngVXL {
+  padding: 2rem 0;
+}
+
+/* HORIZONTAL PADDINGS */
+.pdngHXSM {
+  padding: 0 0.25rem;
+}
+
+.pdngHSM {
+  padding: 0 0.5rem;
+}
+
+.pdngHMD {
+  padding: 0 1rem;
+}
+
+.pdngHLG {
+  padding: 0 1.5rem;
+}
+
+.pdngRXSM {
+  padding-right: 0.25rem;
+}
+
+.pdngRSM {
+  padding-right: 0.5rem;
+}
+
+.pdngRMD {
+  padding-right: 1rem;
+}
+
+.pdngRLG {
+  padding-right: 1.5rem;
+}
+
+.pdngLXSM {
+  padding-left: 0.25rem;
+}
+
+.pdngLSM {
+  padding-left: 0.5rem;
+}
+
+.pdngLMD {
+  padding-left: 1rem;
+}
+
+.pdngLLG {
+  padding-left: 1rem;
+}
+
+.pdngTXSM {
+  padding-top: 0.25rem;
+}
+
+.pdngTSM {
+  padding-top: 0.5rem;
+}
+
+.pdngTMD {
+  padding-top: 1rem;
+}
+
+.pdngTLG {
+  padding-top: 1.5rem;
+}
+
+.pdngTXL {
+  padding-top: 2rem;
+}
+
+.pdngBXSM {
+  padding-bottom: 0.25rem;
+}
+
+.pdngBSM {
+  padding-bottom: 0.5rem;
+}
+
+.pdngBMD {
+  padding-bottom: 1rem;
+}
+
+.pdngBLG {
+  padding-bottom: 1.5rem;
+}
+
+/* MARGINS */
+.mrgnSM {
+  margin: 0.5rem;
+}
+
+.mrgnMD {
+  margin: 1rem;
+}
+
+.mrgnLG {
+  margin: 1.5rem;
+}
+
+.mrgnXL {
+  margin: 2rem;
+}
+
+.mrgnTXSM {
+  margin-top: 0.25rem;
+}
+
+.mrgnTSM {
+  margin-top: 0.5rem;
+}
+
+.mrgnTMD {
+  margin-top: 1rem;
+}
+
+.mrgnTLG {
+  margin-top: 1.5rem;
+}
+
+.mrgnTXL {
+  margin-top: 2rem;
+}
+
+
+.mrgnHLG {
+  margin: 1.5rem 0;
+}
+
+.mrgnHMD {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mrgnBXSM {
+  margin-bottom: 0.25rem;
+}
+
+.mrgnBSM {
+  margin-bottom: 0.5rem;
+}
+
+.mrgnBMD {
+  margin-bottom: 1rem;
+}
+
+.mrgnBLG {
+  margin-bottom: 1.5rem;
+}
+
+.mrgnBXL {
+  margin-bottom: 2rem;
+}
+
+.mrgnVXSM {
+  margin: 0.25rem 0;
+}
+
+.mrgnVSM {
+  margin: 0.5rem 0;
+}
+
+.mrgnVMD {
+  margin: 1rem 0;
+}
+
+.mrgnVLG {
+  margin: 1.5rem 0;
+}
+
+.mrgnRMD {
+  margin-right: 1rem;
+}
+
+/* Flex */
+.txtAlignCntr{
+  text-align: center;
+}
+
+
+.flexRow {
+  display: flex;
+  flex: none;
+  width: 100%;
+}
+
+.alignCntr {
+  align-items: center;
+}
+
+.jcCntr{
+  justify-content: center;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  width: 100%;
+}
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.fullHeight{
+  height: 100%;
+}
+
+.flexInline {
+  display: flex;
+  flex: none;
+}
+
+.flexMinWidthRow {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+
+.flexMinWidthCol {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.flexAutoRow {
+  display: flex;
+  flex: none;
+  min-width: 24px;
+}
+
+.flexAutoCol {
+  display: flex;
+  flex: none;
+  min-width: 24px;
+  flex-direction: column;
+}
+
+.flexAuto {
+  display: flex;
+  flex: none;
+  min-width: 1.5rem;
+}
+
+.borderNone {
+  border: none;
+}
+
+.borderRadius{
+  border-radius: 4px;
+}
