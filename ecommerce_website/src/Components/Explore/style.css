@@ -1,5 +1,5 @@
 .exploreBgContainer {
-    width: auto;
+    width: 100%;
     min-height: 100vh;
     background-color: #f5f7fa;
 }
@@ -9,22 +9,33 @@
     height: 95px;
 }
 
+.exploreCntnr {
+    width: 900px;
+}
+
 .innerCntnr {
     padding: 2rem;
 }
 
 .exploreHeading {
     font-size: 2rem;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     color: #183b56;
     margin-bottom: 2rem;
 }
 
 .cardCntnr {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mrgnBSM {
+    margin-bottom: 1rem;
 }
 
 .cardOuterCntnr {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
     width: 100%;
     background-color: #ffffff;
@@ -43,8 +54,16 @@
 
 .gadgetsCntnr {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.pdngL {
+    padding: 1rem;
+}
+
+.imgsCntnr {
+    justify-content: space-between;
 }
 
 .ecommerce {
@@ -52,16 +71,17 @@
     padding: 0.1rem;
 }
 
-.mrgnHMD{
-    margin: 1.5rem 0;
-}
-
 .spanElement {
     font-size: 1.8rem;
 }
 
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .jsCenter {
-    /* display: flex; */
     justify-content: center;
 }
 
@@ -70,9 +90,58 @@
     color: #ff9f00;
 }
 
-/* .pdngSM {
-    padding: 0.5rem;
-} */
+.offersCntnr, .accessoriesCntnr {
+    width: 900px;
+}
+
+.cardContainerBg{
+    width: 100%;
+    color: #ffffff;
+}
+
+.homeBgCntnr {
+    width: auto;
+    height: 100vh;
+    background-color: #f5f7fa;
+}
+
+.fontLG {
+    font-size: 4rem;
+    color: #183b56;
+}
+
+.fontMD {
+    font-size: 2.5rem;
+    color: #183b56;
+}
+
+.ecommerce {
+    border-radius: 20px;
+}
+
+.spanElement {
+    font-size: 2rem;
+    color: #1f2933;
+    
+}
+@media (min-width:768px) {
+    
+    .cardContainer{
+        width: 45%;
+    }
+    
+}
+
+@media (min-width:992px) {
+    .cardContainer{
+        width: 30%;
+    } 
+    
+}
+
+
+
+
 
 
 

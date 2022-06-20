@@ -1,5 +1,5 @@
 .exploreBgContainer {
-    width: auto;
+    width: 100%;
     min-height: 100vh;
     background-color: #f5f7fa;
 }
@@ -13,23 +13,20 @@
     padding: 2rem;
 }
 
-.exploreHeading {
-    font-size: 2rem;
-    letter-spacing: 4px;
-    color: #183b56;
-    margin-bottom: 2rem;
-}
-
 .cardCntnr {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.cardCntnr1 {
-    padding: 2rem;
+.mrgnBSM {
+    margin-bottom: 1rem;
 }
+
 
 .cardOuterCntnr {
     border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 100%;
     background-color: #ffffff;
 }
@@ -47,7 +44,7 @@
 
 .gadgetsCntnr {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -56,8 +53,20 @@
     padding: 0.1rem;
 }
 
-.mrgnHMD{
+.mrgnHL{
     margin: 1.5rem 0;
+}
+
+.cntr{
+    text-align: center;
+}
+
+.marginSM {
+    margin: 1rem;
+}
+
+.pdngL {
+    padding: 1rem;
 }
 
 .spanElement {
@@ -65,13 +74,16 @@
 }
 
 .jsCenter {
-    /* display: flex; */
     justify-content: center;
 }
 
 .seeAllDeals {
     font-size: 2rem;
     color: #ff9f00;
+}
+
+.bg{
+    background-color: blue;
 }
 
 
