@@ -1,0 +1,49 @@
+.blueBg{
+    background-color: rgb(201, 242, 228);
+    overflow-y: scroll;
+}
+
+.redBg{
+    background-color: rgb(228, 169, 169);
+}
+
+.actionbtn{
+    background-color: inherit;
+    color: rgb(216, 75, 36);
+    font-size: larger;
+}
+
+.main-bg{
+   height: 100vh;
+}
+
+.bg{
+  background-color: aqua;
+}
+
+.bgWhite{
+    background-color: #fff;
+}
+
+.borderBottom{
+    border-width: 1px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-style: solid;
+    border-color: black;
+}
+
+.page{
+    padding-bottom: 2rem;
+}
+
+.hr-line{
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+}
+
+.pdfCntr{
+    min-height: 100vh;
+}

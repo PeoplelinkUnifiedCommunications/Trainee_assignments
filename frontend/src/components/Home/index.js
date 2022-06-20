@@ -21,15 +21,9 @@ function Home() {
     const [OfficeLocation, setOfficeLocation] = useState("")
     const [Designation, setDesignation] = useState("")
 
-    const [Institution, setInstitution] = useState("")
 
     const handleTabChnage = (event) => {
         setActiveTab(event.target.value)
-    }
-
-    const saveDate=(event)=>{
-        console.log(event.target.value)
-
     }
 
     const handleHeaderSubmit = (event) => {
@@ -145,20 +139,7 @@ function Home() {
 
     const getEducationPart = () => {
         return (
-            <div>
-                <form className='form-container'>
-                    <TextField
-                        required
-                        margin='dense'
-                        id="outlined-required"
-                        label="Institution"
-                        variant="outlined"
-                        size='small'
-                        value={Institution}
-                        onChange={(event) => { setInstitution(event.target.value) }}
-                    />
-                </form>
-            </div>
+            <h1>Education</h1>
         )
     }
 
