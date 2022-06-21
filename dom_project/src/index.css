@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.baseContainer {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.flexRow {
+  display: flex;
+  flex: none;
+  width: 100%;
+}
+
+.flexCol {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* PADDINGS */
+.pdngXSM {
+  padding: 0.25rem;
+}
+.pdngSM {
+  padding: 0.5rem;
+}
+.pdngMD {
+  padding: 1rem !important;
+}
+.pdngLG {
+  padding: 1.5rem;
+}
+.pdngXL {
+  padding: 2rem;
+}
+/* VERTICAL PADDINGS */
+.pdngVXSM {
+  padding: 0.25rem 0;
+}
+.pdngVSM {
+  padding: 0.5rem 0;
+}
+.pdngVMD {
+  padding: 1rem 0;
+}
+.pdngVLG {
+  padding: 1.5rem 0;
+}
+.pdngVXL {
+  padding: 2rem 0;
+}
+/* HORIZONTAL PADDINGS */
+.pdngHXSM {
+  padding: 0 0.25rem;
+}
+.pdngHSM {
+  padding: 0 0.5rem;
+}
+.pdngHMD {
+  padding: 0 1rem;
+}
+.pdngHLG {
+  padding: 0 1.5rem;
+}
+.pdngRXSM {
+  padding-right: 0.25rem;
+}
+.pdngRSM {
+  padding-right: 0.5rem;
+}
+.pdngRMD {
+  padding-right: 1rem;
+}
+.pdngRLG {
+  padding-right: 1.5rem;
+}
+.pdngLXSM {
+  padding-left: 0.25rem;
+}
+.pdngLSM {
+  padding-left: 0.5rem;
+}
+.pdngLMD {
+  padding-left: 1rem;
+}
+.pdngLLG {
+  padding-left: 1rem;
+}
+.pdngTXSM {
+  padding-top: 0.25rem;
+}
+.pdngTSM {
+  padding-top: 0.5rem;
+}
+.pdngTMD {
+  padding-top: 1rem;
+}
+.pdngTLG {
+  padding-top: 1.5rem;
+}
+.pdngTXL {
+  padding-top: 2rem;
+}
+.pdngBXSM {
+  padding-bottom: 0.25rem;
+}
+.pdngBSM {
+  padding-bottom: 0.5rem;
+}
+.pdngBMD {
+  padding-bottom: 1rem;
+}
+.pdngBLG {
+  padding-bottom: 1.5rem;
+}

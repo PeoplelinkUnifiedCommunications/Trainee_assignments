@@ -1,0 +1,47 @@
+
+.label  {
+    font-size: 2rem;
+}
+
+.input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.formCntnr {
+    padding: 4rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+#btn {
+    font-size: 1.5rem;
+    width: 5%;
+}
+
+.mrgnVSM {
+    margin: 1rem 0;
+}
+
+.mrgnVLG {
+    margin: 2rem 0;
+}
+
+.xBtn {
+    font-size: 40px;
+    width: 100%;
+    display: flex;
+    border: none;
+    justify-content: flex-end;
+    background-color: #ffffff;
+   
+}
+
+
+
+
+
