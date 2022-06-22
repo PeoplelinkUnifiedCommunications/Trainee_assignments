@@ -4,7 +4,7 @@ import "./style.css";
 function Form() {
 
     
-       //  GETELEMENTBYID //
+          //  GETELEMENTBYID //
     // var headerTitle = document.getElementById("headerTitle")
     // console.log(headerTitle);
 
@@ -13,7 +13,7 @@ function Form() {
     // headerTitle.innerHTML = "<h1>hello</h1>"
     // headerTitle.style.borderBottom = "1px solid #000000";
 
-    // GETELEMENTSBYCLASSNAME //
+           // GETELEMENTSBYCLASSNAME //
 
     // var items = document.getElementsByClassName("list-group-item");
     // console.log(items);
@@ -31,14 +31,14 @@ function Form() {
     //   items[i].style.color="green";
     // }
 
-    // GETELEMENTSBYTAGNAME //
+           // GETELEMENTSBYTAGNAME //
 
     // var li = document.getElementsByTagName("li");
     // console.log(li);
     // console.log(li[1]);
     // li[1].style.fontWeight = "bold";
 
-    // QUERY SELECTOR //
+          // QUERY SELECTOR //
 
     // var id = document.querySelectorAll("li");
     // console.log(id);
@@ -46,9 +46,7 @@ function Form() {
     // var input = document.querySelector("input");
     // input.value = "Fruits";
 
-    // var submit = document.querySelector('input[type="submit"]');
-    // submit.value = "SEND";
-
+    
     return (
     <form id="addForm">
       <div className="formCntnr">
