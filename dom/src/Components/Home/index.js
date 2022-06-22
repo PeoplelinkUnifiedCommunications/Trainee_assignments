@@ -78,17 +78,24 @@ function Home() {
     
 
     //CREATING ELEMENTS
-    var h1 = document.createElement('h1')
-    console.log(h1);
+    // var h1 = document.createElement('h1')
+    // console.log(h1);
 
-    h1.id="heading";
-    h1.className="heading1";
-    h1.setAttribute('title', "I am heading");
+    // h1.id="heading";
+    // h1.className="heading1";
+    // h1.setAttribute('title', "I am heading");
 
-    var heading = document.createTextNode('This is my heading');
-    h1.appendChild(heading);
+    // var heading = document.createTextNode('This is my heading');
+    // h1.appendChild(heading);
+
+    var para = document.createElement("p");
+    var textNode = document.createTextNode("This is new");
+    para.appendChild(textNode);
+    console.log(para);
     
+
     
+
     return (
         <div className="homePage">
             <div className="container">
@@ -113,9 +120,9 @@ function Home() {
                 
             <input className="input" type="text" placeholder="Enter your wish" id="input" autoComplete="off" />&nbsp;
            
-            <button className="btn" type="button">Read More...</button>
+            <button onClick="alert('hello')" className="btn" type="submit">Read More...</button>
             </div>
-            
+
         </div>
 
     )

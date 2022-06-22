@@ -1,6 +1,7 @@
 
 .label  {
     font-size: 2rem;
+    font-family: sans-serif;
 }
 
 .input {
@@ -14,8 +15,25 @@
     padding: 4rem;
 }
 
+.headerTitle {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    color: #e600e6;
+    background-color: #73e600;
+    width: 15%;
+}
+
 li {
     list-style-type: none;
+}
+
+.jsCenter {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.list-group-item {
+    font-size: 2rem;
 }
 
 #btn {

@@ -3,32 +3,59 @@ import Button from "@mui/material/Button";
 import "./style.css";
 function Form() {
 
-    // var form = document.getElementById("addForm");
-    // var ul = document.getElementById("list-group"); 
+    
+       //  GETELEMENTBYID //
+    // var headerTitle = document.getElementById("headerTitle")
+    // console.log(headerTitle);
 
-    // form.addEventListener("submit", (e) => {
-    //     // e.preventDefault();
-    //     // const newElement = document.getElementById("item").value;
-    //     // console.log(newElement);
+    // console.log(headerTitle.textContent)
+    // console.log(headerTitle.innerText)
+    // headerTitle.innerHTML = "<h1>hello</h1>"
+    // headerTitle.style.borderBottom = "1px solid #000000";
 
-    //     // var li = document.createElement("li");
-    //     // li.className = "list-group-item";
-    //     // li.innerHTML = newElement;
+    // GETELEMENTSBYCLASSNAME //
 
-    //     // var button = document.createElement("button");
-    //     // button.className = "xBtn deleteBtn";
-    //     // button.innerHTML = ul;
+    // var items = document.getElementsByClassName("list-group-item");
+    // console.log(items);
+    // console.log(items[0]);
+    // console.log(items[2]);
 
-    //     // li.appendChild(button);
-    //     // ul.appendChild(li);
-    // })
+    // items[0].textContent = "Text 3";
+    // items[0].style.color = "blue";
+    // items[1].style.backgroundColor= "green";
 
-  return (
+   // Gives the error //
+    // items.style.backgroundColor = "black";
+
+    // for (var i=0; i<items.length; i++) {
+    //   items[i].style.color="green";
+    // }
+
+    // GETELEMENTSBYTAGNAME //
+
+    // var li = document.getElementsByTagName("li");
+    // console.log(li);
+    // console.log(li[1]);
+    // li[1].style.fontWeight = "bold";
+
+    // QUERY SELECTOR //
+
+    // var id = document.querySelectorAll("li");
+    // console.log(id);
+
+    // var input = document.querySelector("input");
+    // input.value = "Fruits";
+
+    // var submit = document.querySelector('input[type="submit"]');
+    // submit.value = "SEND";
+
+    return (
     <form id="addForm">
       <div className="formCntnr">
+      <h1 id ="headerTitle">Item Lister</h1>
         <div className="itemsCntnr">
           <label className="label" htmlFor="Enter Items">
-            Enter Items
+            Add Items
           </label>
           <input
             className="input"
@@ -42,35 +69,40 @@ function Form() {
             ADD
           </Button>
         </div>
-        <hr />
+        
 
-        <div className="listCntnr">
+        <div className="flexCol listCntnr">
           <ul id="list-group">
-            <li className="mrgnVSM list-group-item">Apple
-              <button className="xBtn deleteBtn">
-                X
-              </button>
+            <div className="jsCenter">
+            <li className="list-group-item">Item 1
+              
             </li>
+          
+            </div>
             <hr />
-            <li className="mrgnVSM list-group-item">Mango
-              <button className="xBtn">
-                X
-              </button>
+            
+            <div className="jsCenter">
+            <li className="list-group-item">Item 2
+              
             </li>
+            
+              </div>
             <hr />
-
-            <li className="mrgnVSM list-group-item">Banana
-              <button className="xBtn">
-                X
-              </button>
+            
+            <div className="jsCenter">
+            <li className="list-group-item">Item 3
+              
             </li>
+            
+            </div>
             <hr />
-
-            <li className="mrgnVSM list-group-item">Orange
-              <button className="xBtn">
-                X
-              </button>
+            
+            <div className="jsCenter">
+            <li className="list-group-item">Item 4
+              
             </li>
+            
+            </div>
             <hr />
           </ul>
         </div>
