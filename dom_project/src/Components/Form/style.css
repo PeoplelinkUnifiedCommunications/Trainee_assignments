@@ -1,4 +1,6 @@
-
+#addForm {
+    padding: 4rem;
+}
 .label  {
     font-size: 2rem;
     font-family: sans-serif;
@@ -27,7 +29,7 @@ li {
     list-style-type: none;
 }
 
-.jsCenter {
+.flexStart {
     display: flex;
     justify-content: flex-start;
 }
@@ -38,7 +40,7 @@ li {
 
 #btn {
     font-size: 1.5rem;
-    width: 5%;
+    /* width: 5%; */
 }
 
 .mrgnVSM {
@@ -51,15 +53,75 @@ li {
 
 .xBtn {
     font-size: 40px;
-    width: 100%;
     display: flex;
     border: none;
     justify-content: flex-end;
     background-color: #ffffff;
-   
+}
+
+.mainCntnr {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.darkBackground {
+    width: 30%;
+    height: 100vh;
+    background-color: #000000;
+    margin: 4rem;
+    align-items: center;
+}
+
+.imgContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 
+.switchBoard {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    background-color: #7b8794;
+    border-radius: 12px;
+}
 
+.switchStatus {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-family: Roboto;
+    letter-spacing: 2px;
+}
 
+.btnStatus {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
+
+#offBtn {
+    width: 30%;
+    background-color: #e12d39;
+    padding: 0.4rem;
+    font-size: 2rem;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+#onBtn {
+    width: 30%;
+    background-color: #cbd2d9;
+    padding: 0.4rem;
+    font-size: 2rem;
+    border-radius: 12px;
+    font-weight: bold;
+}
 

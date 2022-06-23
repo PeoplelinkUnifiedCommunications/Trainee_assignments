@@ -1,111 +1,50 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import "@fontsource/roboto"; 
+import Button from '@mui/material/Button';
 import "./style.css";
-function Form() {
+function Dom() {
+  
 
-    
-          //  GETELEMENTBYID //
-    // var headerTitle = document.getElementById("headerTitle")
-    // console.log(headerTitle);
+  const switchOff = () => {
+    document.getElementById("bulbImage").src = "./images/bulb-go-off-img.png";
+    document.getElementById("catImage").src = "./images/cat-eyes-img.png";
+    document.getElementById("switchStatus").textContent = "Switched On";
+    document.getElementById("offBtn").style.backgroundColor = "#cbd2d9";
+    document.getElementById("onBtn").style.backgroundColor = "#22c55e";
+  }
 
-    // console.log(headerTitle.textContent)
-    // console.log(headerTitle.innerText)
-    // headerTitle.innerHTML = "<h1>hello</h1>"
-    // headerTitle.style.borderBottom = "1px solid #000000";
+  const switchOn = () => {
+    document.getElementById("bulbImage").src = "./images/bulb-go-on-img.png";
+    document.getElementById("catImage").src = "./images/cat-img.png";
+    document.getElementById("switchStatus").textContent = "Switched Off";
+    document.getElementById("onBtn").style.backgroundColor = "#cbd2d9";
+    document.getElementById("offBtn").style.backgroundColor = "#e12d39";
+  }
 
-           // GETELEMENTSBYCLASSNAME //
-
-    // var items = document.getElementsByClassName("list-group-item");
-    // console.log(items);
-    // console.log(items[0]);
-    // console.log(items[2]);
-
-    // items[0].textContent = "Text 3";
-    // items[0].style.color = "blue";
-    // items[1].style.backgroundColor= "green";
-
-   // Gives the error //
-    // items.style.backgroundColor = "black";
-
-    // for (var i=0; i<items.length; i++) {
-    //   items[i].style.color="green";
-    // }
-
-           // GETELEMENTSBYTAGNAME //
-
-    // var li = document.getElementsByTagName("li");
-    // console.log(li);
-    // console.log(li[1]);
-    // li[1].style.fontWeight = "bold";
-
-          // QUERY SELECTOR //
-
-    // var id = document.querySelectorAll("li");
-    // console.log(id);
-
-    // var input = document.querySelector("input");
-    // input.value = "Fruits";
-
-    
-    return (
-    <form id="addForm">
-      <div className="formCntnr">
-      <h1 id ="headerTitle">Item Lister</h1>
-        <div className="itemsCntnr">
-          <label className="label" htmlFor="Enter Items">
-            Add Items
-          </label>
-          <input
-            className="input"
-            type="text"
-            placeholder="Enter New Items"
-            id="item"
-          />
+  return (
+    <div className="mainCntnr">
+      <div className="flexCol darkBackground">
+        <div className="flexCol imgContainer">
+          <div>
+            <img id = "bulbImage" src="./images/bulb-go-on-img.png" alt="bulb-go-on" width="150px" />
+          </div>
+          <div>
+            <img id = "catImage" src="./images/cat-img.png" alt="cat-img" width="300px"/>
+          </div>
         </div>
-        <div className="flexCol mrgnVLG btnCntnr">
-          <Button id="btn" variant="contained" type="submit">
-            ADD
-          </Button>
-        </div>
-        
-
-        <div className="flexCol listCntnr">
-          <ul id="list-group">
-            <div className="jsCenter">
-            <li className="list-group-item">Item 1
-              
-            </li>
-          
-            </div>
-            <hr />
-            
-            <div className="jsCenter">
-            <li className="list-group-item">Item 2
-              
-            </li>
-            
-              </div>
-            <hr />
-            
-            <div className="jsCenter">
-            <li className="list-group-item">Item 3
-              
-            </li>
-            
-            </div>
-            <hr />
-            
-            <div className="jsCenter">
-            <li className="list-group-item">Item 4
-              
-            </li>
-            
-            </div>
-            <hr />
-          </ul>
+        <div className="flexCol mrgnVLG switchBoard">
+          <div className="switchStatus">
+            <h1 id = "switchStatus">Switched On</h1> 
+          </div>
+          <div className="btnStatus">
+           <Button onClick={switchOff} id="offBtn" variant="contained">OFF</Button>
+           <Button onClick={switchOn} id="onBtn" variant="contained">ON</Button>
+          </div>
         </div>
       </div>
-    </form>
+    </div>
+
+   
   );
 }
-export default Form;
+export default Dom;
