@@ -21,6 +21,7 @@ function AdminNav() {
                 <h2><Link className='noTextDecoration' to="/myprofile">Home</Link></h2>
                 <h2><Link className='noTextDecoration' to="/addBook">Add Book</Link></h2>
                 <h2><Link className='noTextDecoration' to="/getTotalBooks">Total Books</Link></h2>
+                <h2><Link className='noTextDecoration' to="/usersList">Users</Link></h2>
                 <h2><Link className='noTextDecoration' to="/requestedBooks">Requested Books</Link></h2>
                 <h2><Link className='noTextDecoration' to="/totalIssuedBooks">Issued Books</Link></h2>
                 <Button onClick={handleLogout} className="mrgnVLG" variant="contained">

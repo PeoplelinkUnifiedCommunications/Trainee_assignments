@@ -13,6 +13,7 @@ import UserTotalBooks from './components/UserTotalBooks';
 import IssuedBooks from './components/IssuedBooks';
 import UserRequestedBooks from './components/UserRequestedBooks';
 import TotalIssuedBooks from './components/TotalIssuedBooks';
+import Users from './components/Users';
 
 
 
@@ -33,6 +34,7 @@ function App() {
             <Route exact path="/myBooks" element={<MyBooks/>}/>
             <Route exact path="/addBook" element={<AddBook/>}/>
             <Route exact path="/getTotalBooks" element={<TotalBooks/>}/>
+            <Route exact path="/usersList" element={<Users/>}/>
             <Route exact path="/UserTotalBooks" element={<UserTotalBooks/>}/>
             <Route exact path="/myIssuedBooks" element={<IssuedBooks/>}/>
             <Route exact path="/totalIssuedBooks" element={<TotalIssuedBooks/>}/>
