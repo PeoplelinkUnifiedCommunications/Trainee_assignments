@@ -33,7 +33,6 @@ function Home() {
     const updateUser = (id)=>{
        const newName = prompt("enter Name") 
        const newLastName = prompt("enter last name...")
-
        Axios.put("http://localhost:3000/update", {"id":id, "name":newName, "secondName": newLastName})
 
     }

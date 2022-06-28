@@ -1,0 +1,9 @@
+
+.borderRed{
+    border-style: solid;
+    border-color: brown;
+    border-width: 1px;
+}
+.Login-heading{
+    color: rgb(103, 103, 206);
+}

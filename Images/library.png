@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+
+<!--[if IE 6]>
+	<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+	<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+	<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if IE 9]>
+	<html id="ie9" lang="en-US">
+<![endif]-->
+<!--[if (gt IE 9) | (!IE)  ]><!-->
+	<html  lang="en-US">
+<!--<![endif]-->
+
+<head>
+
+<meta charset="UTF-8" />
+
+<title>KRLS</title>
+
+<link rel="shortcut icon" href="https://krls.org/wp-content/themes/Builder-Bryant/lib/builder-core/favicons/default.ico" />
+
+<link rel="stylesheet" href="https://krls.org/wp-content/themes/Builder-Bryant/lib/builder-core/css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://krls.org/wp-content/themes/Builder-KRLS-Bryant-Custom/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://krls.org/wp-content/uploads/it-file-cache/builder-layouts/51798032b3b4a.css?version=37bf4bc11be1838732bb9f8a5213dc5f" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://krls.org/wp-content/themes/Builder-KRLS-Bryant-Custom/style-responsive.css" type="text/css" media="only screen and (max-width: 1125px)" />
+<link rel="stylesheet" href="https://krls.org/wp-content/themes/Builder-KRLS-Bryant-Custom/style-mobile.css" type="text/css" media="only screen and (max-width: 500px)" />
+<link rel="stylesheet" href="https://krls.org/wp-content/themes/Builder-Bryant/lib/builder-core/css/structure.css?ver=2" type="text/css" media="screen" />
+
+<!--[if lt IE 7]>
+	<script src="https://krls.org/wp-content/themes/Builder-Bryant/lib/builder-core/js/dropdown.js" type="text/javascript"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+	<script src="https://krls.org/wp-content/themes/Builder-Bryant/lib/builder-core/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://krls.org/xmlrpc.php" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="KRLS &raquo; Feed" href="https://krls.org/index.php/feed/" />
+<link rel="alternate" type="text/calendar" title="KRLS &raquo; iCal Feed" href="https://krls.org/index.php/events/?ical=1" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v7.17.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=UA-138495111-1"  type="text/javascript" data-cfasync="false"></script>
+			<script type="text/javascript" data-cfasync="false">
+				var mi_version = '7.17.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStr = 'ga-disable-UA-138495111-1';
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					return document.cookie.indexOf( disableStr + '=true' ) > - 1;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					window[disableStr] = true;
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+					window[disableStr] = true;
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+				if ( mi_track_user ) {
+					function __gtagTracker() {dataLayer.push( arguments );}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+						                    });
+					__gtagTracker( 'config', 'UA-138495111-1', {
+						forceSSL:true,link_attribution:true,					} );
+										window.gtag = __gtagTracker;										(
+						function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof (
+											arguments[1].hitType
+										) ) {
+											hitObject = arguments[1];
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var gaKey, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+									};
+									for ( gaKey in gaMap ) {
+										if ( 'undefined' !== typeof args[gaKey] ) {
+											hit[gaMap[gaKey]] = args[gaKey];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						}
+					)();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+				<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/krls.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.6"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://krls.org/wp-includes/css/dist/block-library/style.min.css?ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://krls.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='menu-image-css'  href='https://krls.org/wp-content/plugins/menu-image/includes/css/menu-image.css?ver=3.0.4' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://krls.org/wp-includes/css/dashicons.min.css?ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='novelist-css'  href='https://krls.org/wp-content/plugins/novelist/templates/novelist-front-end.css?ver=1.1.11' type='text/css' media='all' />
+<style id='novelist-inline-css' type='text/css'>
+.novelist-button {
+			background: #333333;
+		}
+		
+		.novelist-button:hover {
+			background: #010101;
+		}.novelist-button, .novelist-button:hover {
+			color: #ffffff;
+		}
+</style>
+<link rel='stylesheet' id='default-icon-styles-css'  href='https://krls.org/wp-content/plugins/svg-vector-icon-plugin/public/../admin/css/wordpress-svg-icon-plugin-style.min.css?ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='Builder-Bryant-Fonts-css'  href='//fonts.googleapis.com/css?family=Roboto%3A400%2C100%2C300%2C500%2C700%2C900%2C100italic%2C300italic%2C400italic%2C500italic%2C700italic%2C900italic%7CRoboto+Slab%3A400%2C100%2C300%2C700%29%3B&#038;ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='sucarouselmergedcss-css'  href='https://krls.org/wp-content/plugins/supercarousel/css/supercarouselmerged.css?ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='upw_theme_standard-css'  href='https://krls.org/wp-content/plugins/ultimate-posts-widget/css/upw-theme-standard.min.css?ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='fo-fonts-declaration-css'  href='https://krls.org/wp-content/uploads/font-organizer/fo-declarations.css?ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='fo-fonts-elements-css'  href='https://krls.org/wp-content/uploads/font-organizer/fo-elements.css?ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='abcfsl-staff-list-css'  href='https://krls.org/wp-content/plugins/abcfolio-staff-list-pro/css/staff-list.css?ver=3.7.8' type='text/css' media='all' />
+<link rel='stylesheet' id='awesome-responsive-menu-stylesheet-css'  href='https://krls.org/wp-content/plugins/awesome-responsive-menu/assets/css/component.css?ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='__EPYT__style-css'  href='https://krls.org/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=13.4.2' type='text/css' media='all' />
+<style id='__EPYT__style-inline-css' type='text/css'>
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style>
+<link rel='stylesheet' id='it-builder-style-59245d9d8404e-css'  href='https://krls.org/wp-content/uploads/builder-style-manager/krls-website-style.css?ver=5.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://krls.org/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='monsterinsights-frontend-script-js-extra'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/krls.org","hash_tracking":"false","ua":"UA-138495111-1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=7.17.0' id='monsterinsights-frontend-script-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/sticky-menu-or-anything-on-scroll/assets/js/jq-sticky-anything.min.js?ver=2.1.1' id='stickyAnythingLib-js'></script>
+<script type='text/javascript' id='__ytprefs__-js-extra'>
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https:\/\/krls.org\/wp-admin\/admin-ajax.php","security":"c9259aa6ee","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/krls.org\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"https:\/\/krls.org\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"13.4.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=13.4.2' id='__ytprefs__-js'></script>
+<link rel="https://api.w.org/" href="https://krls.org/index.php/wp-json/" /><link rel="alternate" type="application/json" href="https://krls.org/index.php/wp-json/wp/v2/pages/357" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://krls.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://krls.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.7.6" />
+<link rel="canonical" href="https://krls.org/" />
+<link rel='shortlink' href='https://krls.org/' />
+<link rel="alternate" type="application/json+oembed" href="https://krls.org/index.php/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkrls.org%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://krls.org/index.php/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkrls.org%2F&#038;format=xml" />
+<script>
+jQuery(document).ready(function() {
+jQuery( '#awesome-menu' ).dlmenu({
+	animationClasses : { classin : 'dl-animate-in-5', classout : 'dl-animate-out-5' }
+	
+	});
+jQuery( "#awesome-menu" ).prependTo( "body");
+});
+   </script>
+    
+    <style>
+.responsive-menuwrapper{
+	display:none;
+}
+
+@media screen and (max-width: 500px) {
+	
+	#builder-module-58bf0c4847249 {
+		display:none;
+}
+	
+.responsive-menuwrapper {
+		display:block;
+	}
+}
+ 
+.responsive-menuwrapper button:hover, .responsive-menuwrapper button.dl-active, .responsive-menuwrapper button, .responsive-menuwrapper ul {background:#777777}.responsive-menuwrapper li a{color:#ffffff}</style>
+    
+    <meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://krls.org"><link rel="https://theeventscalendar.com/" href="https://krls.org/index.php/wp-json/tribe/events/v1/" /><script type='text/javascript'>
+(function() {
+var bsl=document.createElement('script');
+bsl.type='text/javascript';bsl.async=true;bsl.src='https://krls.org/wp-content/uploads/it-file-cache/builder-core/script.js';
+var se=document.getElementsByTagName('script')[0];se.parentNode.insertBefore(bsl,se);
+})();
+</script>
+<link rel='stylesheet' id='builder-core-style-css' href='https://krls.org/wp-content/uploads/it-file-cache/builder-core/style.css' type='text/css' media='all' />
+
+		<script
+			type="text/javascript">var ajaxurl = 'https://krls.org/wp-admin/admin-ajax.php';</script>
+
+		<link rel="icon" href="https://krls.org/wp-content/uploads/2017/06/cropped-KRLS-Logo-Header-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://krls.org/wp-content/uploads/2017/06/cropped-KRLS-Logo-Header-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://krls.org/wp-content/uploads/2017/06/cropped-KRLS-Logo-Header-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://krls.org/wp-content/uploads/2017/06/cropped-KRLS-Logo-Header-270x270.jpg" />
+<div id="awesome-menu" class="responsive-menuwrapper"><button class="menu-trigger">Open Menu</button><ul id="menu-home-page-menu" class="awesome-menu"><li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-12"><a href="http://krls.org" aria-current="page">Home</a></li>
+<li id="menu-item-142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-142"><a href="http://192.168.0.69">Branch Locations</a>
+<ul class="sub-menu">
+	<li id="menu-item-152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"><a href="https://krls.org/index.php/bemidji-home-page/">Bemidji Public Library</a></li>
+	<li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="https://krls.org/index.php/blackduck-home-page/">Blackduck Community Library</a></li>
+	<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://krls.org/index.php/brainerd-home-page/">Brainerd Public Library</a></li>
+	<li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://krls.org/index.php/cass-lake-home-page/">Cass Lake Community Library</a></li>
+	<li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><a href="https://krls.org/index.php/headquarters/">Headquarters</a></li>
+	<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://krls.org/index.php/longville-home-page/">Margaret Welch Memorial Library</a></li>
+	<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://krls.org/index.php/mobile-library/">Mobile Library</a></li>
+	<li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://krls.org/index.php/park-rapids-home-page/">Park Rapids Area Library</a></li>
+	<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://krls.org/index.php/pine-river-home-page/">Pine River Public Library</a></li>
+	<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://krls.org/index.php/wadena-home-page/">Wadena City Library</a></li>
+	<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://krls.org/index.php/walker-home-page/">Walker Public Library</a></li>
+</ul>
+</li>
+<li id="menu-item-1278" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1278"><a href="https://krls.ent.sirsi.net">Catalog</a></li>
+<li id="menu-item-153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153"><a href="http://krls.org/index.php/events/">Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-439" class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-439"><a href="https://krls.org/index.php/venue/bemidji-public-library/">Bemidji Public Library</a></li>
+	<li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-440"><a href="https://krls.org/index.php/venue/blackduck-community-library/">Blackduck Community Library</a></li>
+	<li id="menu-item-441" class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-441"><a href="https://krls.org/index.php/venue/brainerd-public-library/">Brainerd Public Library</a></li>
+	<li id="menu-item-442" class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-442"><a href="https://krls.org/index.php/venue/cass-lake-community-library/">Cass Lake Community Library</a></li>
+	<li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-443"><a href="https://krls.org/index.php/venue/margaret-welch-memorial-library/">Margaret Welch Memorial Library</a></li>
+	<li id="menu-item-444" class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-444"><a href="https://krls.org/index.php/venue/mobile-library/">Mobile Library</a></li>
+	<li id="menu-item-445" class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-445"><a href="https://krls.org/index.php/venue/park-rapids-area-library/">Park Rapids Area Library</a></li>
+	<li id="menu-item-446" class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-446"><a href="https://krls.org/index.php/venue/pine-river-public-library/">Pine River Public Library</a></li>
+	<li id="menu-item-447" class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-447"><a href="https://krls.org/index.php/venue/wadena-city-library/">Wadena City Library</a></li>
+	<li id="menu-item-448" class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-448"><a href="https://krls.org/index.php/venue/walker-public-library/">Walker Public Library</a></li>
+</ul>
+</li>
+<li id="menu-item-154" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-154"><a>About</a>
+<ul class="sub-menu">
+	<li id="menu-item-155" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-155"><a>Regional Services</a>
+	<ul class="sub-menu">
+		<li id="menu-item-597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-597"><a href="https://krls.org/index.php/interlibrary-load/">Interlibrary Loan</a></li>
+		<li id="menu-item-687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-687"><a href="https://krls.org/index.php/book-club-in-a-bag/">Book Club in a Bag</a></li>
+		<li id="menu-item-688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-688"><a href="https://krls.org/index.php/kits-for-kids/">Kits for Kids</a></li>
+	</ul>
+</li>
+	<li id="menu-item-701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-701"><a href="https://krls.org/index.php/headquarters/">Headquarters</a></li>
+	<li id="menu-item-466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-466"><a>Kitchigami Regional Library Board</a>
+	<ul class="sub-menu">
+		<li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="https://krls.org/index.php/board-members/">Board Members</a></li>
+		<li id="menu-item-465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465"><a href="https://krls.org/index.php/board-meetings-minutes-agenda/">Board Meetings, Minutes, &amp; Agenda</a></li>
+	</ul>
+</li>
+	<li id="menu-item-459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-459"><a>Employment Opportunities</a>
+	<ul class="sub-menu">
+		<li id="menu-item-457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-457"><a href="https://krls.org/index.php/current-employment-opportunities/">Current Employment Opportunities</a></li>
+		<li id="menu-item-458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458"><a href="https://krls.org/index.php/equal-employment-opportunity-statement/">Equal Employment Opportunity Statement</a></li>
+	</ul>
+</li>
+	<li id="menu-item-589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589"><a href="https://krls.org/index.php/policies/">Policies</a></li>
+	<li id="menu-item-451" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-451"><a href="https://krls.org/index.php/mission-values/">Mission &amp; Values</a></li>
+	<li id="menu-item-1199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1199"><a href="http://krls.org/wp-content/uploads/2022/02/2020-Audit-Final-Report.pdf">Financial Report</a></li>
+	<li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707"><a href="https://krls.org/index.php/volunteers/">Volunteers</a></li>
+	<li id="menu-item-1183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1183"><a href="https://krls.org/index.php/holiday-hours/">Holiday Hours</a></li>
+</ul>
+</li>
+<li id="menu-item-156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-156"><a>Digital Library</a>
+<ul class="sub-menu">
+	<li id="menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608"><a href="https://ebook.yourcloudlibrary.com/">CloudLibrary</a></li>
+	<li id="menu-item-6128" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6128"><a href="http://hoopladigital.com">hoopla</a></li>
+	<li id="menu-item-607" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-607"><a href="http://search.ebscohost.com/login.aspx?authtype=ip,cpid&#038;custid=s9124673&#038;profile=eon">Flipster Magazines</a></li>
+	<li id="menu-item-606" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-606"><a href="http://ebooksmn.org/">eBooks Minnesota</a></li>
+	<li id="menu-item-5930" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5930"><a href="https://elibrarymn.org/">eLibrary MN (ELM)</a></li>
+	<li id="menu-item-5946" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5946"><a href="https://krls.org/index.php/guides-instructions/">Guides &amp; Instructions</a></li>
+</ul>
+</li>
+<li id="menu-item-157" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-157"><a href="http://krls.org/index.php/complete-list-of-databases/">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"><a href="https://krls.org/index.php/complete-list-of-databases/">Complete List of Databases</a></li>
+	<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-728"><a href="https://krls.org/index.php/academic-resources/">Academic Resources</a></li>
+	<li id="menu-item-727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-727"><a href="https://krls.org/index.php/ancestry-and-genealogy/">Ancestry and Genealogy</a></li>
+	<li id="menu-item-726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-726"><a href="https://krls.org/index.php/business-and-finance/">Business and Finance</a></li>
+	<li id="menu-item-724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-724"><a href="https://krls.org/index.php/health-and-wellness-resources/">Health and Wellness Resources</a></li>
+	<li id="menu-item-704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-704"><a href="https://krls.org/index.php/interlibrary-load/">Interlibrary Loan</a></li>
+	<li id="menu-item-758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-758"><a href="https://krls.org/index.php/other-references/">Other References</a></li>
+</ul>
+</li>
+<li id="menu-item-743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="https://krls.org/index.php/contact-us/">Contact Us</a></li>
+</ul></div>		<style type="text/css" id="wp-custom-css">
+			 
+
+#menu-quicklink-menu {
+text-align:center;
+}
+#menu-quicklink-menu a {
+text-decoration:none; 
+padding:10px 52px; /* variable width */
+}
+	
+
+
+* { margin: 0; padding: -50; }
+fieldset { border: none }
+
+#search-form {
+	width: 190px;
+	position: relative;
+}
+#search {
+	background: #b2a48c;
+	border: 0px solid #402f1d;
+	color: #2b1e11;
+	height: 30px;
+	line-height: 20px;
+	width: 800px;
+	padding: 1px 4px;
+	position: relative;
+	top: 0px;
+	left: 
+}
+#search-submit {
+	background: #FF url(../images/search.png) no-repeat 12px 7px;
+	border: 3px solid #FFFFF;
+	height: 50px;
+	width: px;
+	position: absolute;
+	top: 12px;
+	right:0;
+	left:800px
+}
+
+.empty {
+	color: #524630;
+}
+
+/* CSS3 */
+#search { border-radius: 20px; 
+	-moz-border-radius: 20px; 
+	-webkit-border-radius: 20px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#b2a48c), to(#9b8d74));
+	background: -moz-linear-gradient(top, #b2a48c, #9b8d74);
+	text-shadow: rgba(0,0,0,.2) 0 0 5px;
+}
+
+#search-submit { 
+	border-radius: 50px; 
+	-moz-border-radius: 50px; 
+	-webkit-border-radius: 50px; 
+	-mox-box-shadow: 0 0 5px black;
+
+	/* Webkit-transition */
+	-webkit-transition-property: background-color; 
+	-webkit-transition-duration: 0.4s, 0.4s; 
+	-webkit-transition-timing-function: linear, ease-in;
+	}		</style>
+		
+</head>
+<body id="builder-layout-51798032b3b4a" class="home page-template-default page page-id-357 builder-responsive tribe-no-js builder-template-page builder-view-page builder-view-page-357">
+<div class="builder-container-background-wrapper">
+<div class="builder-container-outer-wrapper">
+<div class="builder-container" id="builder-container-51798032b3b4a">
+<div class="builder-module-background-wrapper builder-module-widget-bar-background-wrapper builder-module-1-background-wrapper builder-module-widget-bar-1-background-wrapper builder-module-top-background-wrapper builder-module-before-navigation-background-wrapper dark-blue-widget-bar-background-wrapper" id="builder-module-5908aba0340c5-background-wrapper">
+<div class="builder-module-outer-wrapper builder-module-widget-bar-outer-wrapper builder-module-1-outer-wrapper builder-module-widget-bar-1-outer-wrapper builder-module-top-outer-wrapper builder-module-before-navigation-outer-wrapper dark-blue-widget-bar-outer-wrapper" id="builder-module-5908aba0340c5-outer-wrapper">
+<div class="builder-module builder-module-widget-bar builder-module-1 builder-module-widget-bar-1 builder-module-top builder-module-before-navigation dark-blue-widget-bar clearfix" id="builder-module-5908aba0340c5">
+<div class="builder-module-block-outer-wrapper builder-module-sidebar-outer-wrapper builder-module-column-1-outer-wrapper single clearfix">
+<div class="builder-module-block builder-module-sidebar builder-module-column-1   sidebar single clearfix">
+<div class="widget-wrapper single widget-wrapper-single widget-wrapper-1 clearfix">
+<div class="widget-background-wrapper" id="text-50-background-wrapper"><div class="widget widget-1 widget-single clearfix widget_text" id="text-50">			<div class="textwidget"><div class='white' style='background:rgba(0,0,0,0); border:solid 0px rgba(0,0,0,0); border-radius:0px; padding:0px 0px 0px 0px;'>
+<div id='slider_348' class='owl-carousel sa_owl_theme autohide-arrows' data-slider-id='slider_348' style='visibility:hidden;'>
+<div id='slider_348_slide01' class='sa_hover_container' style='padding:7% 5%; margin:0px 0%; background-image:url(&quot;https://krls.org/wp-content/uploads/2017/05/Header-Image.png&quot;); background-position:center center; background-size:100% auto; background-repeat:no-repeat; background-color:rgba(0, 0, 0, 0); '></div>
+</div>
+</div>
+<script type='text/javascript'>
+	jQuery(document).ready(function() {
+		jQuery('#slider_348').owlCarousel({
+			items : 1,
+			animateOut : 'fadeOut',
+			smartSpeed : 200,
+			autoplay : true,
+			autoplayTimeout : 5000,
+			autoplayHoverPause : false,
+			smartSpeed : 200,
+			fluidSpeed : 200,
+			autoplaySpeed : 200,
+			navSpeed : 200,
+			dotsSpeed : 200,
+			loop : false,
+			nav : false,
+			navText : ['Previous','Next'],
+			dots : false,
+			responsiveRefreshRate : 200,
+			slideBy : 1,
+			mergeFit : true,
+			autoHeight : false,
+			mouseDrag : false,
+			touchDrag : false
+		});
+		jQuery('#slider_348').css('visibility', 'visible');
+		var owl_goto = jQuery('#slider_348');
+		jQuery('.slider_348_goto1').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 0);
+		});
+		var resize_348 = jQuery('.owl-carousel');
+		resize_348.on('initialized.owl.carousel', function(e) {
+			if (typeof(Event) === 'function') {
+				window.dispatchEvent(new Event('resize'));
+			} else {
+				var evt = window.document.createEvent('UIEvents');
+				evt.initUIEvent('resize', true, false, window, 0);
+				window.dispatchEvent(evt);
+			}
+		});
+	});
+</script>
+	</div>
+		</div></div></div>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="builder-module-background-wrapper builder-module-navigation-background-wrapper builder-module-2-background-wrapper builder-module-navigation-1-background-wrapper builder-module-middle-background-wrapper builder-module-before-widget-bar-background-wrapper builder-module-after-widget-bar-background-wrapper dark-blue-background-wrapper" id="builder-module-58bf0c4847249-background-wrapper">
+<div class="builder-module-outer-wrapper builder-module-navigation-outer-wrapper builder-module-2-outer-wrapper builder-module-navigation-1-outer-wrapper builder-module-middle-outer-wrapper builder-module-before-widget-bar-outer-wrapper builder-module-after-widget-bar-outer-wrapper dark-blue-outer-wrapper" id="builder-module-58bf0c4847249-outer-wrapper">
+<div class="builder-module builder-module-navigation builder-module-2 builder-module-navigation-1 builder-module-middle builder-module-before-widget-bar builder-module-after-widget-bar dark-blue clearfix builder-module-navigation-custom-menu builder-module-navigation-custom-menu-id-2" id="builder-module-58bf0c4847249">
+<div class="builder-module-block-outer-wrapper builder-module-element-outer-wrapper builder-module-column-1-outer-wrapper single clearfix">
+<div class="builder-module-block builder-module-element builder-module-column-1">
+<div class="menu-home-page-menu-container builder-module-navigation-menu-wrapper"><ul id="menu-home-page-menu-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-12"><a href="http://krls.org" aria-current="page">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-142"><a href="http://192.168.0.69">Branch Locations</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"><a href="https://krls.org/index.php/bemidji-home-page/">Bemidji Public Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="https://krls.org/index.php/blackduck-home-page/">Blackduck Community Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://krls.org/index.php/brainerd-home-page/">Brainerd Public Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://krls.org/index.php/cass-lake-home-page/">Cass Lake Community Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><a href="https://krls.org/index.php/headquarters/">Headquarters</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://krls.org/index.php/longville-home-page/">Margaret Welch Memorial Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://krls.org/index.php/mobile-library/">Mobile Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://krls.org/index.php/park-rapids-home-page/">Park Rapids Area Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://krls.org/index.php/pine-river-home-page/">Pine River Public Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://krls.org/index.php/wadena-home-page/">Wadena City Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://krls.org/index.php/walker-home-page/">Walker Public Library</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1278"><a href="https://krls.ent.sirsi.net">Catalog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153"><a href="http://krls.org/index.php/events/">Events</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-439"><a href="https://krls.org/index.php/venue/bemidji-public-library/">Bemidji Public Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-440"><a href="https://krls.org/index.php/venue/blackduck-community-library/">Blackduck Community Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-441"><a href="https://krls.org/index.php/venue/brainerd-public-library/">Brainerd Public Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-442"><a href="https://krls.org/index.php/venue/cass-lake-community-library/">Cass Lake Community Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-443"><a href="https://krls.org/index.php/venue/margaret-welch-memorial-library/">Margaret Welch Memorial Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-444"><a href="https://krls.org/index.php/venue/mobile-library/">Mobile Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-445"><a href="https://krls.org/index.php/venue/park-rapids-area-library/">Park Rapids Area Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-446"><a href="https://krls.org/index.php/venue/pine-river-public-library/">Pine River Public Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-447"><a href="https://krls.org/index.php/venue/wadena-city-library/">Wadena City Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-tribe_venue menu-item-448"><a href="https://krls.org/index.php/venue/walker-public-library/">Walker Public Library</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-154"><a>About</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-155"><a>Regional Services</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-597"><a href="https://krls.org/index.php/interlibrary-load/">Interlibrary Loan</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-687"><a href="https://krls.org/index.php/book-club-in-a-bag/">Book Club in a Bag</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-688"><a href="https://krls.org/index.php/kits-for-kids/">Kits for Kids</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-701"><a href="https://krls.org/index.php/headquarters/">Headquarters</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-466"><a>Kitchigami Regional Library Board</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="https://krls.org/index.php/board-members/">Board Members</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465"><a href="https://krls.org/index.php/board-meetings-minutes-agenda/">Board Meetings, Minutes, &amp; Agenda</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-459"><a>Employment Opportunities</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-457"><a href="https://krls.org/index.php/current-employment-opportunities/">Current Employment Opportunities</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458"><a href="https://krls.org/index.php/equal-employment-opportunity-statement/">Equal Employment Opportunity Statement</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589"><a href="https://krls.org/index.php/policies/">Policies</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-451"><a href="https://krls.org/index.php/mission-values/">Mission &amp; Values</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1199"><a href="http://krls.org/wp-content/uploads/2022/02/2020-Audit-Final-Report.pdf">Financial Report</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707"><a href="https://krls.org/index.php/volunteers/">Volunteers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1183"><a href="https://krls.org/index.php/holiday-hours/">Holiday Hours</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-156"><a>Digital Library</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-608"><a href="https://ebook.yourcloudlibrary.com/">CloudLibrary</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6128"><a href="http://hoopladigital.com">hoopla</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-607"><a href="http://search.ebscohost.com/login.aspx?authtype=ip,cpid&#038;custid=s9124673&#038;profile=eon">Flipster Magazines</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-606"><a href="http://ebooksmn.org/">eBooks Minnesota</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5930"><a href="https://elibrarymn.org/">eLibrary MN (ELM)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5946"><a href="https://krls.org/index.php/guides-instructions/">Guides &amp; Instructions</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-157"><a href="http://krls.org/index.php/complete-list-of-databases/">Resources</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"><a href="https://krls.org/index.php/complete-list-of-databases/">Complete List of Databases</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-728"><a href="https://krls.org/index.php/academic-resources/">Academic Resources</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-727"><a href="https://krls.org/index.php/ancestry-and-genealogy/">Ancestry and Genealogy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-726"><a href="https://krls.org/index.php/business-and-finance/">Business and Finance</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-724"><a href="https://krls.org/index.php/health-and-wellness-resources/">Health and Wellness Resources</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-704"><a href="https://krls.org/index.php/interlibrary-load/">Interlibrary Loan</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-758"><a href="https://krls.org/index.php/other-references/">Other References</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="https://krls.org/index.php/contact-us/">Contact Us</a></li>
+</ul></div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="builder-module-background-wrapper builder-module-widget-bar-background-wrapper builder-module-3-background-wrapper builder-module-widget-bar-2-background-wrapper builder-module-middle-background-wrapper builder-module-before-navigation-background-wrapper builder-module-after-navigation-background-wrapper default-module-style-background-wrapper" id="builder-module-58bf1fcc54dd4-background-wrapper">
+<div class="builder-module-outer-wrapper builder-module-widget-bar-outer-wrapper builder-module-3-outer-wrapper builder-module-widget-bar-2-outer-wrapper builder-module-middle-outer-wrapper builder-module-before-navigation-outer-wrapper builder-module-after-navigation-outer-wrapper default-module-style-outer-wrapper" id="builder-module-58bf1fcc54dd4-outer-wrapper">
+<div class="builder-module builder-module-widget-bar builder-module-3 builder-module-widget-bar-2 builder-module-middle builder-module-before-navigation builder-module-after-navigation default-module-style clearfix" id="builder-module-58bf1fcc54dd4">
+<div class="builder-module-block-outer-wrapper builder-module-sidebar-outer-wrapper builder-module-column-1-outer-wrapper left clearfix">
+<div class="builder-module-block builder-module-sidebar builder-module-column-1   sidebar left clearfix">
+<div class="widget-wrapper left widget-wrapper-left widget-wrapper-1 clearfix">
+<div class="widget-background-wrapper" id="text-55-background-wrapper"><div class="widget widget-1 widget-top clearfix widget_text" id="text-55"><h4 class="widget-title">hoopla</h4>			<div class="textwidget"><p><img loading="lazy" class="alignnone size-medium wp-image-6126" src="http://krls.org/wp-content/uploads/2020/12/hoopla-logo-blue-300x128.png" alt="" width="300" height="128" srcset="https://krls.org/wp-content/uploads/2020/12/hoopla-logo-blue-300x128.png 300w, https://krls.org/wp-content/uploads/2020/12/hoopla-logo-blue-768x329.png 768w, https://krls.org/wp-content/uploads/2020/12/hoopla-logo-blue-1024x438.png 1024w, https://krls.org/wp-content/uploads/2020/12/hoopla-logo-blue-24x10.png 24w, https://krls.org/wp-content/uploads/2020/12/hoopla-logo-blue-36x15.png 36w, https://krls.org/wp-content/uploads/2020/12/hoopla-logo-blue-48x21.png 48w, https://krls.org/wp-content/uploads/2020/12/hoopla-logo-blue.png 1712w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Kitchigami Regional Library is pleased to offer <a href="http://hoopladigital.com">hoopla</a> &#8211; Instantly borrow digital movies, music, eBooks, and more, 24/7 with your library card! 3 titles per month.</p>
+</div>
+		</div></div><div class="widget-background-wrapper" id="text-231-background-wrapper"><div class="widget widget-2 widget-bottom clearfix widget_text" id="text-231"><h4 class="widget-title">Summer Reading Program</h4>			<div class="textwidget"><p>Our Summer Reading Program is here! Sign up online <a href="http://krls.beanstack.org">here</a> or scan the QR code below to download the app.</p>
+<p><img loading="lazy" class="size-full wp-image-6399 aligncenter" src="http://krls.org/wp-content/uploads/2021/07/onlink_to_49s3zf_small.png" alt="" width="124" height="124" srcset="https://krls.org/wp-content/uploads/2021/07/onlink_to_49s3zf_small.png 124w, https://krls.org/wp-content/uploads/2021/07/onlink_to_49s3zf_small-24x24.png 24w, https://krls.org/wp-content/uploads/2021/07/onlink_to_49s3zf_small-36x36.png 36w, https://krls.org/wp-content/uploads/2021/07/onlink_to_49s3zf_small-48x48.png 48w" sizes="(max-width: 124px) 100vw, 124px" /></p>
+</div>
+		</div></div></div>
+
+</div>
+</div>
+<div class="builder-module-block-outer-wrapper builder-module-sidebar-outer-wrapper builder-module-column-2-outer-wrapper middle clearfix">
+<div class="builder-module-block builder-module-sidebar builder-module-column-2   sidebar middle clearfix">
+<div class="widget-wrapper middle widget-wrapper-middle widget-wrapper-2 clearfix">
+<div class="widget-background-wrapper" id="text-54-background-wrapper"><div class="widget widget-1 widget-top clearfix widget_text" id="text-54"><h4 class="widget-title">CloudLibrary</h4>			<div class="textwidget"><p><a href="https://ebook.yourcloudlibrary.com/"><img loading="lazy" class="aligncenter" src="http://krls.org/wp-content/uploads/2017/06/dreamstime_s_27191278-cloud-library.jpg" alt="" width="617" height="447" /></a></p>
+<p>Check out the <a href="https://ebook.yourcloudlibrary.com/">CloudLibrary</a>, offering popular fiction and nonfiction downloadable eBooks and eAudiobooks for all ages.</p>
+</div>
+		</div></div><div class="widget-background-wrapper" id="enhancedtextwidget-12-background-wrapper"><div class="widget widget-2 widget-bottom clearfix widget_text enhanced-text-widget" id="enhancedtextwidget-12"><h4 class="widget-title">Search Catalog</h4><div class="textwidget widget-text"><p>KEYWORD
+TITLE
+AUTHOR
+SUBJECT
+<br /></p>
+</div></div></div></div>
+
+</div>
+</div>
+<div class="builder-module-block-outer-wrapper builder-module-sidebar-outer-wrapper builder-module-column-3-outer-wrapper right clearfix">
+<div class="builder-module-block builder-module-sidebar builder-module-column-3   sidebar right clearfix">
+<div class="widget-wrapper right widget-wrapper-right widget-wrapper-3 clearfix">
+<div class="widget-background-wrapper" id="text-230-background-wrapper"><div class="widget widget-1 widget-single clearfix widget_text" id="text-230"><h4 class="widget-title">State of Minnesota Legacy Amendment Fund Events</h4>			<div class="textwidget"><p style="text-align: center"><a href="http://krls.org/index.php/events/category/kitchigami-regional-librarys-legacy-fund-events/" target="_blank" rel="noopener"><img loading="lazy" class="alignnone" style="margin-left: auto;margin-right: auto" src="http://krls.org/wp-content/uploads/2017/05/Clean-Water-Logo.png" alt="" width="137" height="202" /></a><br />
+<a href="http://krls.org/index.php/events/category/kitchigami-regional-librarys-legacy-fund-events/">Kitchigami Regional Library&#8217;s Legacy Fund Events</a> are funded by the Legacy Amendment which dedicates monies to preserve Minnesota arts and cultural heritage. During 2021 a variety of programs will feature history, music, literature, and much more.</p>
+</div>
+		</div></div></div>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="builder-module-background-wrapper builder-module-navigation-background-wrapper builder-module-4-background-wrapper builder-module-navigation-2-background-wrapper builder-module-middle-background-wrapper builder-module-navigation-last-background-wrapper builder-module-before-widget-bar-background-wrapper builder-module-after-widget-bar-background-wrapper default-module-style-background-wrapper" id="builder-module-5903a0ac7fe86-background-wrapper">
+<div class="builder-module-outer-wrapper builder-module-navigation-outer-wrapper builder-module-4-outer-wrapper builder-module-navigation-2-outer-wrapper builder-module-middle-outer-wrapper builder-module-navigation-last-outer-wrapper builder-module-before-widget-bar-outer-wrapper builder-module-after-widget-bar-outer-wrapper default-module-style-outer-wrapper" id="builder-module-5903a0ac7fe86-outer-wrapper">
+<div class="builder-module builder-module-navigation builder-module-4 builder-module-navigation-2 builder-module-middle builder-module-navigation-last builder-module-before-widget-bar builder-module-after-widget-bar default-module-style clearfix builder-module-navigation-custom-menu builder-module-navigation-custom-menu-id-20" id="builder-module-5903a0ac7fe86">
+<div class="builder-module-block-outer-wrapper builder-module-element-outer-wrapper builder-module-column-1-outer-wrapper single clearfix">
+<div class="builder-module-block builder-module-element builder-module-column-1">
+<div class="menu-quicklink-menu-container builder-module-navigation-menu-wrapper"><ul id="menu-quicklink-menu" class="menu"><li id="menu-item-4274" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4274"><a href="http://krls.ent.sirsi.net" class="menu-image-title-below menu-image-not-hovered"><img width="48" height="48" src="https://krls.org/wp-content/uploads/2017/04/user-512-e1497633527160.png" class="menu-image menu-image-title-below" alt="" loading="lazy" /><span class="menu-image-title-below menu-image-title">My Library Card</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-4273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4273"><a href="http://krls.ent.sirsi.net">Login</a></li>
+</ul>
+</li>
+<li id="menu-item-1279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1279"><a href="http://krls.ent.sirsi.net" class="menu-image-title-below menu-image-not-hovered"><img width="36" height="36" src="https://krls.org/wp-content/uploads/2017/04/95-200-e1497633542956.png" class="menu-image menu-image-title-below" alt="" loading="lazy" /><span class="menu-image-title-below menu-image-title">Search Catalog</span></a></li>
+<li id="menu-item-327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-327"><a href="http://krls.org/index.php/events/" class="menu-image-title-below menu-image-not-hovered"><img width="48" height="48" src="https://krls.org/wp-content/uploads/2017/04/404-200-e1497633551721.png" class="menu-image menu-image-title-below" alt="" loading="lazy" /><span class="menu-image-title-below menu-image-title">Events</span></a></li>
+<li id="menu-item-328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-328"><a href="http://krls.org/index.php/mobile-library/" class="menu-image-title-below menu-image-not-hovered"><img width="48" height="48" src="https://krls.org/wp-content/uploads/2017/04/9cRLzB7Mi-48x48.png" class="menu-image menu-image-title-below" alt="" loading="lazy" /><span class="menu-image-title-below menu-image-title">Mobile Services</span></a></li>
+<li id="menu-item-329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-329"><a href="http://www.krls.org" class="menu-image-title-below menu-image-not-hovered"><img width="48" height="48" src="https://krls.org/wp-content/uploads/2017/04/36601-e1497633501282.png" class="menu-image menu-image-title-below" alt="" loading="lazy" /><span class="menu-image-title-below menu-image-title">How Do I&#8230;?</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-673"><a href="https://krls.org/index.php/get-a-library-card/">Get a Library Card?</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="https://krls.org/index.php/get-a-pin/">Get a PIN Number?</a></li>
+	<li id="menu-item-1225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1225"><a href="https://krls.org/index.php/login-page/">View my patron record?</a></li>
+	<li id="menu-item-678" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-678"><a href="https://krls.org/index.php/renew-items/">Renew Items?</a></li>
+	<li id="menu-item-679" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-679"><a href="https://krls.org/index.php/holds/">Reserve Items?</a></li>
+	<li id="menu-item-685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-685"><a href="https://krls.org/index.php/return-overduesreplacement-policy/">Return Items?</a></li>
+	<li id="menu-item-697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697"><a href="https://krls.org/index.php/interlibrary-load/">Request non-KRLS items?</a></li>
+</ul>
+</li>
+</ul></div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="builder-module-background-wrapper builder-module-widget-bar-background-wrapper builder-module-5-background-wrapper builder-module-widget-bar-3-background-wrapper builder-module-middle-background-wrapper builder-module-before-widget-bar-background-wrapper builder-module-after-navigation-background-wrapper default-module-style-background-wrapper" id="builder-module-590cd3f41cb9e-background-wrapper">
+<div class="builder-module-outer-wrapper builder-module-widget-bar-outer-wrapper builder-module-5-outer-wrapper builder-module-widget-bar-3-outer-wrapper builder-module-middle-outer-wrapper builder-module-before-widget-bar-outer-wrapper builder-module-after-navigation-outer-wrapper default-module-style-outer-wrapper" id="builder-module-590cd3f41cb9e-outer-wrapper">
+<div class="builder-module builder-module-widget-bar builder-module-5 builder-module-widget-bar-3 builder-module-middle builder-module-before-widget-bar builder-module-after-navigation default-module-style clearfix" id="builder-module-590cd3f41cb9e">
+<div class="builder-module-block-outer-wrapper builder-module-sidebar-outer-wrapper builder-module-column-1-outer-wrapper left clearfix">
+<div class="builder-module-block builder-module-sidebar builder-module-column-1   sidebar left clearfix">
+<div class="widget-wrapper left widget-wrapper-left widget-wrapper-1 clearfix">
+<div class="widget-background-wrapper" id="calendar-2-background-wrapper"><div class="widget widget-1 widget-single clearfix widget_calendar" id="calendar-2"><h4 class="widget-title">Calendar</h4><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar" class="wp-calendar-table">
+	<caption>June 2022</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+	</tr>
+	<tr>
+		<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+	</tr>
+	<tr>
+		<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+	</tr>
+	<tr>
+		<td>20</td><td>21</td><td id="today">22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+	</tr>
+	<tr>
+		<td>27</td><td>28</td><td>29</td><td>30</td>
+		<td class="pad" colspan="3">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table><nav aria-label="Previous and next months" class="wp-calendar-nav">
+		<span class="wp-calendar-nav-prev"><a href="https://krls.org/index.php/2021/10/">&laquo; Oct</a></span>
+		<span class="pad">&nbsp;</span>
+		<span class="wp-calendar-nav-next">&nbsp;</span>
+	</nav></div></div></div></div>
+
+</div>
+</div>
+<div class="builder-module-block-outer-wrapper builder-module-sidebar-outer-wrapper builder-module-column-2-outer-wrapper right clearfix">
+<div class="builder-module-block builder-module-sidebar builder-module-column-2   sidebar right clearfix">
+<div class="widget-wrapper right widget-wrapper-right widget-wrapper-2 clearfix">
+<div class="widget-background-wrapper" id="text-58-background-wrapper"><div class="widget widget-1 widget-single clearfix widget_text" id="text-58"><h4 class="widget-title">Today&#8217;s Events</h4>			<div class="textwidget">[tribe_events view="day" tribe-bar="true" featured=false]</div>
+		</div></div></div>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="builder-module-background-wrapper builder-module-widget-bar-background-wrapper builder-module-6-background-wrapper builder-module-widget-bar-4-background-wrapper builder-module-middle-background-wrapper builder-module-before-widget-bar-background-wrapper builder-module-after-widget-bar-background-wrapper dark-blue-widget-bar-background-wrapper" id="builder-module-590cc4bfb6cf0-background-wrapper">
+<div class="builder-module-outer-wrapper builder-module-widget-bar-outer-wrapper builder-module-6-outer-wrapper builder-module-widget-bar-4-outer-wrapper builder-module-middle-outer-wrapper builder-module-before-widget-bar-outer-wrapper builder-module-after-widget-bar-outer-wrapper dark-blue-widget-bar-outer-wrapper" id="builder-module-590cc4bfb6cf0-outer-wrapper">
+<div class="builder-module builder-module-widget-bar builder-module-6 builder-module-widget-bar-4 builder-module-middle builder-module-before-widget-bar builder-module-after-widget-bar dark-blue-widget-bar clearfix" id="builder-module-590cc4bfb6cf0">
+<div class="builder-module-block-outer-wrapper builder-module-sidebar-outer-wrapper builder-module-column-1-outer-wrapper single clearfix">
+<div class="builder-module-block builder-module-sidebar builder-module-column-1   sidebar single clearfix">
+<div class="widget-wrapper single widget-wrapper-single widget-wrapper-1 clearfix">
+<div class="widget-background-wrapper" id="text-57-background-wrapper"><div class="widget widget-1 widget-single clearfix widget_text" id="text-57"><h4 class="widget-title">Staff Picks</h4>			<div class="textwidget"><div class="novelist-series-grid">			<div class="novelist-book-list novelist-book-columns-6">
+									<div id="novelist-book-1200" class="novelist-book novelist-covers-align-center" itemscope itemtype="http://schema.org/Book">
+						<div class="novelist-book-cover-image">
+	<a href="https://krls.org/index.php/books/hunger/" title="Hunger">
+		<img width="249" height="375" src="https://krls.org/wp-content/uploads/2017/06/41DxxoN-wfL._SX329_BO1204203200_.jpg" class="attachment-315x375 size-315x375" alt="" loading="lazy" srcset="https://krls.org/wp-content/uploads/2017/06/41DxxoN-wfL._SX329_BO1204203200_.jpg 331w, https://krls.org/wp-content/uploads/2017/06/41DxxoN-wfL._SX329_BO1204203200_-199x300.jpg 199w, https://krls.org/wp-content/uploads/2017/06/41DxxoN-wfL._SX329_BO1204203200_-16x24.jpg 16w, https://krls.org/wp-content/uploads/2017/06/41DxxoN-wfL._SX329_BO1204203200_-24x36.jpg 24w, https://krls.org/wp-content/uploads/2017/06/41DxxoN-wfL._SX329_BO1204203200_-32x48.jpg 32w" sizes="(max-width: 249px) 100vw, 249px" />	</a>
+</div>
+					</div>
+									<div id="novelist-book-1202" class="novelist-book novelist-covers-align-center" itemscope itemtype="http://schema.org/Book">
+						<div class="novelist-book-cover-image">
+	<a href="https://krls.org/index.php/books/once-and-for-all/" title="Once and for All">
+		<img width="248" height="375" src="https://krls.org/wp-content/uploads/2017/06/9780425290330.jpg" class="attachment-315x375 size-315x375" alt="" loading="lazy" srcset="https://krls.org/wp-content/uploads/2017/06/9780425290330.jpg 298w, https://krls.org/wp-content/uploads/2017/06/9780425290330-199x300.jpg 199w, https://krls.org/wp-content/uploads/2017/06/9780425290330-16x24.jpg 16w, https://krls.org/wp-content/uploads/2017/06/9780425290330-24x36.jpg 24w, https://krls.org/wp-content/uploads/2017/06/9780425290330-32x48.jpg 32w" sizes="(max-width: 248px) 100vw, 248px" />	</a>
+</div>
+					</div>
+									<div id="novelist-book-1204" class="novelist-book novelist-covers-align-center" itemscope itemtype="http://schema.org/Book">
+						<div class="novelist-book-cover-image">
+	<a href="https://krls.org/index.php/books/since-we-fell/" title="Since We Fell">
+		<img width="248" height="375" src="https://krls.org/wp-content/uploads/2017/06/SinceWeFell-hc-c.jpg" class="attachment-315x375 size-315x375" alt="" loading="lazy" srcset="https://krls.org/wp-content/uploads/2017/06/SinceWeFell-hc-c.jpg 1838w, https://krls.org/wp-content/uploads/2017/06/SinceWeFell-hc-c-199x300.jpg 199w, https://krls.org/wp-content/uploads/2017/06/SinceWeFell-hc-c-768x1160.jpg 768w, https://krls.org/wp-content/uploads/2017/06/SinceWeFell-hc-c-678x1024.jpg 678w, https://krls.org/wp-content/uploads/2017/06/SinceWeFell-hc-c-16x24.jpg 16w, https://krls.org/wp-content/uploads/2017/06/SinceWeFell-hc-c-24x36.jpg 24w, https://krls.org/wp-content/uploads/2017/06/SinceWeFell-hc-c-32x48.jpg 32w" sizes="(max-width: 248px) 100vw, 248px" />	</a>
+</div>
+					</div>
+									<div id="novelist-book-1206" class="novelist-book novelist-covers-align-center" itemscope itemtype="http://schema.org/Book">
+						<div class="novelist-book-cover-image">
+	<a href="https://krls.org/index.php/books/the-ministry-of-utmost-happiness/" title="The Ministry of Utmost Happiness">
+		<img width="254" height="375" src="https://krls.org/wp-content/uploads/2017/06/51CHItFapoL._SX336_BO1204203200_.jpg" class="attachment-315x375 size-315x375" alt="" loading="lazy" srcset="https://krls.org/wp-content/uploads/2017/06/51CHItFapoL._SX336_BO1204203200_.jpg 338w, https://krls.org/wp-content/uploads/2017/06/51CHItFapoL._SX336_BO1204203200_-203x300.jpg 203w, https://krls.org/wp-content/uploads/2017/06/51CHItFapoL._SX336_BO1204203200_-16x24.jpg 16w, https://krls.org/wp-content/uploads/2017/06/51CHItFapoL._SX336_BO1204203200_-24x36.jpg 24w, https://krls.org/wp-content/uploads/2017/06/51CHItFapoL._SX336_BO1204203200_-33x48.jpg 33w" sizes="(max-width: 254px) 100vw, 254px" />	</a>
+</div>
+					</div>
+							</div>
+
+			</div></div>
+		</div></div></div>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="builder-module-background-wrapper builder-module-widget-bar-background-wrapper builder-module-7-background-wrapper builder-module-widget-bar-5-background-wrapper builder-module-middle-background-wrapper builder-module-widget-bar-last-background-wrapper builder-module-before-footer-background-wrapper builder-module-after-widget-bar-background-wrapper default-module-style-background-wrapper" id="builder-module-590252c24df69-background-wrapper">
+<div class="builder-module-outer-wrapper builder-module-widget-bar-outer-wrapper builder-module-7-outer-wrapper builder-module-widget-bar-5-outer-wrapper builder-module-middle-outer-wrapper builder-module-widget-bar-last-outer-wrapper builder-module-before-footer-outer-wrapper builder-module-after-widget-bar-outer-wrapper default-module-style-outer-wrapper" id="builder-module-590252c24df69-outer-wrapper">
+<div class="builder-module builder-module-widget-bar builder-module-7 builder-module-widget-bar-5 builder-module-middle builder-module-widget-bar-last builder-module-before-footer builder-module-after-widget-bar default-module-style clearfix" id="builder-module-590252c24df69">
+<div class="builder-module-block-outer-wrapper builder-module-sidebar-outer-wrapper builder-module-column-1-outer-wrapper left clearfix">
+<div class="builder-module-block builder-module-sidebar builder-module-column-1   sidebar left clearfix">
+<div class="widget-wrapper left widget-wrapper-left widget-wrapper-1 clearfix">
+<div class="widget-background-wrapper" id="text-61-background-wrapper"><div class="widget widget-1 widget-top clearfix widget_text" id="text-61"><h4 class="widget-title">Contact Information</h4>			<div class="textwidget"><p style="text-align: center;"><span style="color: #000000;"><strong>Kitchigami Regional Library Headquarters</strong></span><br /><span style="font-family: arial, helvetica; color: #000000;">310 2nd St North, P.O. Box 84, Pine River, Minnesota 56474<br />Phone: 218.587.2171 / Fax: 218.587.4855</span></p></div>
+		</div></div><div class="widget-background-wrapper" id="text-62-background-wrapper"><div class="widget widget-2 widget-bottom clearfix widget_text" id="text-62"><h4 class="widget-title">Find Us</h4>			<div class="textwidget"><div class="clear-float" style="
+    width:100%;
+    float:left;margin:0px !important;">
+    </div>
+<div class="huge_it_google_map_container">
+    <div id="huge_it_google_map_4913" data-map_id="2"
+         class="huge_it_google_map" style="
+    position:relative !important;
+    height:450px;
+    width:100%;
+    border-radius:0px;
+    float:left;margin:0px !important;"
+         data-name="Kitchigami Regional Library Headquarters"
+         data-type="ROADMAP"
+         data-zoom="17"
+         data-min-zoom="3"
+         data-max-zoom="22"
+         data-locator-enabled="0"
+         data-img-url        ="https://krls.org/wp-content/plugins/google-maps/assets/images/"
+         data-border-radius="0"
+         data-center-lat="46.721666"
+         data-center-lng="-94.405686"
+         data-pan-controller="1"
+         data-zoom-controller="1"
+         data-type-controller="1"
+         data-scale-controller="1"
+         data-street-view-controller="1"
+         data-overview-map-controller="1"
+         data-width="100"
+         data-height="450"
+         data-align="left"
+         data-info-type="click"
+         data-open-infowindows-onload="0"
+         data-animation="none"
+         data-language="location based"
+         data-draggable="1"
+         data-wheel-scroll="1"
+         data-traffic-layer="0"
+         data-bike-layer="0"
+         data-transit-layer="0"
+         data-styling-hue=""
+         data-styling-lightness="0"
+         data-styling-gamma="1"
+         data-styling-saturation="0"></div>
+</div>
+	</div>
+		</div></div></div>
+
+</div>
+</div>
+<div class="builder-module-block-outer-wrapper builder-module-sidebar-outer-wrapper builder-module-column-2-outer-wrapper right clearfix">
+<div class="builder-module-block builder-module-sidebar builder-module-column-2   sidebar right clearfix">
+<div class="widget-wrapper right widget-wrapper-right widget-wrapper-2 clearfix">
+<div class="widget-background-wrapper" id="text-60-background-wrapper"><div class="widget widget-1 widget-single clearfix widget_text" id="text-60"><h4 class="widget-title">Contact Us</h4>			<div class="textwidget"><div role="form" class="wpcf7" id="wpcf7-f427-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f427-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="427" />
+<input type="hidden" name="_wpcf7_version" value="5.4.1" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f427-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="0" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+<input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+</div>
+<p><label> Your Name (required)<br />
+    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </label></p>
+<p><label> Your Email (required)<br />
+    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </label></p>
+<p><label> Branch Location<br />
+<span class="wpcf7-form-control-wrap your-recipient"><select name="your-recipient" class="wpcf7-form-control wpcf7-select" aria-invalid="false"><option value="Bemidji Public Library">Bemidji Public Library</option><option value="Blackduck Community Library">Blackduck Community Library</option><option value="Brainerd Public Library">Brainerd Public Library</option><option value="Cass Lake Community Library">Cass Lake Community Library</option><option value="Digital Library">Digital Library</option><option value="Margaret Welch Memorial Library">Margaret Welch Memorial Library</option><option value="Mobile Library">Mobile Library</option><option value="Park Rapids Area Library">Park Rapids Area Library</option><option value="Pine River Public Library">Pine River Public Library</option><option value="Wadena City Library">Wadena City Library</option><option value="Walker Public Library">Walker Public Library</option></select></span></p>
+<p><label> What type of comment would you like to send?<br />
+  <span class="wpcf7-form-control-wrap menu-832"><select name="menu-832" class="wpcf7-form-control wpcf7-select" aria-invalid="false"><option value="Request a Book">Request a Book</option><option value="Praise">Praise</option><option value="Problem">Problem</option></select></span> </label></p>
+<p><label> Patron Card Number<br />
+<span class="wpcf7-form-control-wrap PatronCardNumber"><input type="text" name="PatronCardNumber" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </label> </p>
+<p><label> Your Message<br />
+    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </label></p>
+
+<p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" /></p>
+<input type='hidden' class='wpcf7-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' /><div class="wpcf7-response-output" aria-hidden="true"></div></form></div></div>
+		</div></div></div>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="builder-module-background-wrapper builder-module-footer-background-wrapper builder-module-8-background-wrapper builder-module-footer-1-background-wrapper builder-module-bottom-background-wrapper builder-module-last-background-wrapper builder-module-footer-last-background-wrapper builder-module-after-widget-bar-background-wrapper dark-blue-footer-background-wrapper" id="builder-module-58bf0d854480e-background-wrapper">
+<div class="builder-module-outer-wrapper builder-module-footer-outer-wrapper builder-module-8-outer-wrapper builder-module-footer-1-outer-wrapper builder-module-bottom-outer-wrapper builder-module-last-outer-wrapper builder-module-footer-last-outer-wrapper builder-module-after-widget-bar-outer-wrapper dark-blue-footer-outer-wrapper" id="builder-module-58bf0d854480e-outer-wrapper">
+<div class="builder-module builder-module-footer builder-module-8 builder-module-footer-1 builder-module-bottom builder-module-last builder-module-footer-last builder-module-after-widget-bar dark-blue-footer clearfix" id="builder-module-58bf0d854480e">
+<div class="builder-module-block-outer-wrapper builder-module-element-outer-wrapper builder-module-column-1-outer-wrapper single clearfix">
+<div class="builder-module-block builder-module-element builder-module-column-1 clearfix">
+	<div class="alignleft">
+		<strong>Kitchigami Regional Library System</strong><br />
+		Copyright &copy; 2022 All Rights Reserved	</div>
+	<div class="alignright">
+		<a rel="nofollow" href="https://www.lcsc.org" title="LCSC">Developed by Lakes Country Service Cooperative</a> <a rel="nofollow" href="http://ithemes.com/" title="iThemes WordPress Themes"></a><br />Technology Department <a rel="nofollow" href="http://wordpress.org"></a>	</div>
+			<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><link rel='stylesheet' id='owl_carousel_css-css'  href='https://krls.org/wp-content/plugins/slide-anything/owl-carousel/owl.carousel.css?ver=2.2.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='owl_theme_css-css'  href='https://krls.org/wp-content/plugins/slide-anything/owl-carousel/sa-owl-theme.css?ver=2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='owl_animate_css-css'  href='https://krls.org/wp-content/plugins/slide-anything/owl-carousel/animate.min.css?ver=2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='hugeit_maps_frontend-css'  href='https://krls.org/wp-content/plugins/google-maps/assets/css/frontend.css?ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='hugeit_maps_store_locator-css'  href='https://krls.org/wp-content/plugins/google-maps/assets/css/store-locator.css?ver=5.7.6' type='text/css' media='all' />
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/awesome-responsive-menu/assets/js/modernizr.custom.js?ver=1.0' id='awesome-responsive-menu-modernizr-jquery-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/awesome-responsive-menu/assets/js/jquery.dlmenu.js?ver=1.0' id='awesome-responsive-menu-jquery-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-content/themes/Builder-Bryant/lib/builder-core/lib/responsive/js/jquery.fitvids-max-width-modification.js?ver=1.0' id='fitvids-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-content/themes/Builder-Bryant/lib/builder-core/lib/responsive/js/init-fitvids.js?ver=1.0' id='builder-init-fitvids-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='wp-polyfill-js-after'>
+( 'fetch' in window ) || document.write( '<script src="https://krls.org/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://krls.org/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://krls.org/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://krls.org/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://krls.org/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://krls.org/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="https://krls.org/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
+</script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/krls.org\/index.php\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4.1' id='contact-form-7-js'></script>
+<script type='text/javascript' id='stickThis-js-extra'>
+/* <![CDATA[ */
+var sticky_anything_engage = {"element":"#builder-module-58bf0c4847249","topspace":"0","minscreenwidth":"0","maxscreenwidth":"999999","zindex":"1","legacymode":"","dynamicmode":"","debugmode":"","pushup":"","adminbar":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/sticky-menu-or-anything-on-scroll/assets/js/stickThis.js?ver=2.1.1' id='stickThis-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-content/themes/Builder-Bryant/js/custom_jquery_additions.js?ver=5.7.6' id='custom_jquery_additions-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/supercarousel/js/supercarouselmerged.js?ver=2.4' id='sucarouselmergedjs-js'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LfAc4oUAAAAABKyRNyPO63crdqDbO99xyuvpXVM&#038;ver=3.0' id='google-recaptcha-js'></script>
+<script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6LfAc4oUAAAAABKyRNyPO63crdqDbO99xyuvpXVM","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.4.1' id='wpcf7-recaptcha-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=13.4.2' id='__ytprefsfitvids__-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-includes/js/wp-embed.min.js?ver=5.7.6' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/slide-anything/owl-carousel/owl.carousel.min.js?ver=2.2.1' id='owl_carousel_js-js'></script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/slide-anything/js/jquery.mousewheel.min.js?ver=3.1.13' id='mousewheel_js-js'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCGtFToA25oq7MF6cod3Pvx8TwxgihDZKQ&#038;libraries=places,geometry' id='hugeit-google-maps-api-js'></script>
+<script type='text/javascript' id='hugeit_maps_frontend-js-extra'>
+/* <![CDATA[ */
+var mapFrontL10n = {"draggable":"1","wheel_scroll":"1","center_lat":"46.721666","center_lng":"-94.405686","styling_hue":"","styling_saturation":"0","styling_lightness":"0","styling_gamma":"1"};
+var frontdir_options = {"locator_enabled":"0","imgurl":"https:\/\/krls.org\/wp-content\/plugins\/google-maps\/assets\/images\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://krls.org/wp-content/plugins/google-maps/assets/js/frontend/frontend.js?ver=5.7.6' id='hugeit_maps_frontend-js'></script>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+<script type='text/javascript'>
+(function() {
+var bsl_1=document.createElement('script');
+bsl_1.type='text/javascript';bsl_1.async=true;bsl_1.src='https://krls.org/wp-content/uploads/it-file-cache/builder-core/javascript-footer.js';
+var se=document.getElementsByTagName('script')[0];se.parentNode.insertBefore(bsl_1,se);
+})();
+</script>
+
+</body>
+</html>
