@@ -19,7 +19,7 @@ app.use(cors())
 
 
 app.get("/", async (req, res) => {
-
+    
     const form = new FormModel({ fName: "sujitha", lName: "konda" })
     try {
         await form.save();
@@ -158,11 +158,11 @@ app.delete("/issueBook/:id", async (request, response) => {
                 response.send(err);
             } else {
                 const { id, title, author, publication, year, issuedTo } = results
-                const bookIssued = new IssuedBooksModel({bookId:id, title:title, author:author, publication:publication, year:year, issuedTo:issuedTo })
-                bookIssued.save().then((res)=>{
+                const bookIssued = new IssuedBooksModel({ bookId: id, title: title, author: author, publication: publication, year: year, issuedTo: issuedTo })
+                bookIssued.save().then((res) => {
                     RequestedBooksModel.findByIdAndRemove(_id).exec()
                     res.send("book issued")
-                }).catch((err)=>{
+                }).catch((err) => {
                     res.send(err)
                 })
             }
@@ -334,6 +334,27 @@ app.post("/addBook", async (req, res) => {
     }
 })
 
+// get Existing Users List
+
+app.get("/users", authenticateToken, async (request, response) => {
+    let { email } = request;
+    console.log("...email", email);
+    try {
+        LibraryModel.find({}, (err, results) => {
+            if (err) {
+                response.send(err);
+            } else {
+                const list = results.filter((each) => each.userType === "User")
+                response.send(list)
+
+            }
+        })
+    }
+    catch (error) {
+        console.log(error)
+        response.send("Invalid Token")
+    }
+})
 
 
 // myprofile details
@@ -406,6 +427,8 @@ app.post("/login", async (req, res) => {
 
     }
 })
+
+
 
 
 

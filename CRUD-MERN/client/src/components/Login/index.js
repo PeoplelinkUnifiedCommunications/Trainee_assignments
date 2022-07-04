@@ -5,8 +5,10 @@ import { Navigate } from "react-router";
 import Button from '@material-ui/core/Button';
 import Axios from "axios";
 import { useNavigate } from 'react-router';
+// import { createUser } from '../../config'
 
 import "./styles.css"
+import { config } from '../../config';
 
 function Login() {
 
@@ -17,14 +19,22 @@ function Login() {
     const navigate = useNavigate()
 
     const logInUser = () => {
-        Axios.post("http://localhost:3000/login",
+        Axios.post(`${config.url}/login`,
             credentials).then((res)=>{
                 setToken(res.data)
+                console.log("....", res.data)
+                localStorage.setItem("tokenLogin", res.data)
                 navigate("/myprofile")
             }).catch((err) => {
                 setErrorMsg(err.response.data)
             })
     }
+
+    const isLoggedIn = localStorage.getItem("tokenLogin") !== null
+    if(isLoggedIn){
+        setToken(localStorage.getItem("tokenLogin"))
+    }
+    
 
     const submitHandle = (e) => {
         e.preventDefault();
@@ -34,7 +44,7 @@ function Login() {
     useEffect(() => {
         if (token) {
             console.log("....login return token...", token)
-            return <Navigate to="/myprofile" />
+            return <Navigate to="/" />
         }
     }, [token])
 

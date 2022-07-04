@@ -25,7 +25,7 @@ function BookRequests() {
         Axios.get('http://localhost:3000/requestedBooks',
             {
                 headers: {
-                    'x-token': [token]
+                    'x-token': [localStorage.getItem("tokenLogin")]
                 },
                 contentType: "application/json"
             }

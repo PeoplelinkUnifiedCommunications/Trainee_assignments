@@ -18,7 +18,7 @@ function IssuedBooks() {
         Axios.get('http://localhost:3000/myIssuedBooks',
             {
                 headers: {
-                    'x-token': [token]
+                    'x-token': [localStorage.getItem("tokenLogin")]
                 },
                 contentType: "application/json"
             }
@@ -64,7 +64,7 @@ function IssuedBooks() {
                             </div>
                         </li>)}
 
-                </ul> : <h1>No book requests</h1>}
+                </ul> : <h1>No Issued Books</h1>}
             </div>
         </div>
     )

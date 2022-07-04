@@ -11,6 +11,7 @@ function UserNav() {
 
     const handleLogout=()=>{
         setToken("")
+        localStorage.removeItem("tokenLogin")
         navigate("/login")
     }
 

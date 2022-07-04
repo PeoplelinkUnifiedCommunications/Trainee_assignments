@@ -1,0 +1,5 @@
+.minWidthNav{
+    min-width: 10vw;
+    width: 20vw;
+    flex-grow: 1;
+}

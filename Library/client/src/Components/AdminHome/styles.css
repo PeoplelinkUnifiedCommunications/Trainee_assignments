@@ -1,0 +1,9 @@
+.card-container{
+    min-width: 40%;
+    min-height: 40%;
+    display: flex;
+}
+
+.jcSpaceAround{
+    justify-content: space-around;
+}

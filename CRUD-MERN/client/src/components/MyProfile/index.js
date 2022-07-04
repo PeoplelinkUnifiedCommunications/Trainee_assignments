@@ -23,21 +23,17 @@ const MyProfile = () => {
 
     }
 
-    useEffect(()=>{
-        console.log(".......", data["email"])
-    }, [data])
-
-
     useEffect(() => {
         Axios.get('http://localhost:3000/myprofile',
             {
                 headers: {
-                    'x-token': [token]
+                    'x-token': [localStorage.getItem("tokenLogin")]
                 },
                 contentType: "application/json"
             }
         )
             .then((res) => {
+                console.log(res.data)
                 setData(res.data);
             })
             .catch((error) => {

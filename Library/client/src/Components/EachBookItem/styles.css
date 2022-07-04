@@ -1,0 +1,24 @@
+.bookImageDiv{
+    width: 120px;
+    height:180px;
+}
+.bookImageDiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bookCard{
+    width:50%;
+}
+
+.hrztlScroll.hideScroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+.hrztlScroll.hideScroll::-webkit-scrollbar {
+    display: none;
+  }
+
+.descHalfWidth{
+    width: 50%;
+}
