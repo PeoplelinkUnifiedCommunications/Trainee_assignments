@@ -18,14 +18,19 @@ function Login() {
 
     const loginNewUser = () => {
         Axios.post(`${config.url}/loginUser`,
-            credentials).then((res) => {
+        credentials,{
+            headers: {
+                'x-token': ["newUser"]
+            },
+            contentType: "application/json"
+        }).then((res) => {
                 console.log("register response", res)
                 setToken(res.data)
                 localStorage.setItem("TOKEN", res.data)
                 navigate("/")
             }).catch((err) => {
-                console.log(err)
-                setErrorMsg(err.response.data)
+                console.log(err.response.data)
+                setErrorMsg("Error Occured")
             })
     }
 

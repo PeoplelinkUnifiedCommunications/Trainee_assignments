@@ -69,6 +69,9 @@ app.put("/update", async (req, res) => {
 
     try {
         await FormModel.findById(Id, (error, userToUpdate) => {
+            if(error){
+                console.log(error)
+            }
             userToUpdate.fName = updatedName;
             userToUpdate.lName = updatedSecondName;
             userToUpdate.save();

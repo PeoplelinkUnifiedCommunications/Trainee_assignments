@@ -10,8 +10,6 @@ function UserHome() {
     const [loading, setLoading] = useState(true)
     const [details, setDetails] = useState([])
 
-
-
     useEffect(() => {
         Axios.get(`${config.url}/userHomeDetails`,{
             headers: {
@@ -44,7 +42,7 @@ function UserHome() {
             </a>
             <a href='/myRequetedBooks' className="card-container noTextDecoration jcCntr alignCntr goastBg borderRadius mrgnVLG mrgnLG">
                 <div>
-                    <h1>{`New Requests ${details.requests}`}</h1>
+                    <h1>{`My Book Requests ${details.requests}`}</h1>
                 </div>
             </a>
             </>}

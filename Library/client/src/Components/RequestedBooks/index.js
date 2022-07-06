@@ -18,8 +18,14 @@ function RequestedBooks() {
 
 
     const handleAccept = (id) => {
-        Axios.delete(`${config.url}/acceptBookRequest/${id}`).then((res) => {
+        Axios.delete(`${config.url}/acceptBookRequest/${id}`,{
+            headers: {
+                'x-token': [token]
+            },
+            contentType: "application/json"
+        }).then((res) => {
             console.log(res.data)
+            alert("Book issued Successfully")
             const newList = RequestsList.filter((each) => each._id !== id)
             setRequestsList(newList)
         }).catch((error) => {

@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import Axios from 'axios'
 import { config } from '../../config'
 import { useState, useEffect } from 'react'
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import './styles.css'
 
 
@@ -14,6 +14,7 @@ function Users() {
     const [token] = useContext(store)
     const [UsersList, setUsersList] = useState([])
     const [isLoading, setisLoading] = useState(true)
+      
 
     useEffect(() => {
         Axios.get(`${config.url}/usersList`, {
@@ -54,9 +55,7 @@ function Users() {
                                     <p>Year: {each.year}</p>
                                 </div>
                                 <div>
-                                    <Button variant="contained" color="secondary">
-                                        View
-                                    </Button>
+                                    {/* <Button color="secondary">View</Button> */}
                                 </div>
                             </div>
 

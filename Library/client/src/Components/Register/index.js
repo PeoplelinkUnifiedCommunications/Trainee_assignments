@@ -18,7 +18,12 @@ function Register() {
 
     const registerNewUser=()=>{
         Axios.post(`${config.url}/registerUser`,
-            userDetails).then((res)=>{
+            userDetails,{
+                headers: {
+                    'x-token': ["newUser"]
+                },
+                contentType: "application/json"
+            }).then((res)=>{
               console.log("register response", res)
               alert(res.data)
               navigate("/login")
@@ -125,7 +130,6 @@ function Register() {
                                     <MenuItem value={"2"}>2 nd</MenuItem>
                                     <MenuItem value={"3"}>3 rd</MenuItem>
                                     <MenuItem value={"4"}>4 th</MenuItem>
-                                    <MenuItem value={"0"}>Admin</MenuItem>
                                 </Select>
                             </FormControl>
                         </div>

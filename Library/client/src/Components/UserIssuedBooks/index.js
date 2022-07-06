@@ -4,12 +4,28 @@ import { useContext, useEffect, useState } from 'react'
 import Axios from 'axios'
 import { config } from '../../config'
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Button from '@material-ui/core/Button';
 
 function UserIssuedBooks() {
 
     const [token] = useContext(store)
     const [booksData, setBooksData] = useState([])
     const [loading, setLoading] = useState(false)
+
+    const returnBook = (id) => {
+        Axios.delete(`${config.url}/returnBook/${id}`, {
+            headers: {
+                'x-token': [token]
+            },
+            contentType: "application/json"
+        }).then((res)=>{
+            alert("Book returned successfully")
+            const List = booksData.filter((each)=>each._id !== id)
+            setBooksData(List)
+        }).catch((err)=>{
+            console.log(err)
+        })
+    }
 
     useEffect(() => {
         setLoading(true)
@@ -51,6 +67,11 @@ function UserIssuedBooks() {
                                             </div>
                                             <p>{`Book Id  : ${each.bookId}`}</p>
                                             <p>{`Author   : ${each.author}`}</p>
+                                            <div>
+                                                <Button variant="contained" onClick={() => { returnBook(each._id) }} color="secondary">
+                                                    Return Book
+                                                </Button>
+                                            </div>
                                         </div>
 
                                     </div>
