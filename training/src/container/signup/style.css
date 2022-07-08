@@ -1,0 +1,12 @@
+.width75{
+    width: 75%;
+}
+.tabActive {
+    background-color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    height: 40px;
+  }
