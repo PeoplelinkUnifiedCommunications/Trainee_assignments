@@ -1,6 +1,6 @@
 const UsersModel = require("../../models/Users")
 
-const usersList = ()=>{
+const usersList = (request,response)=>{
     let { email } = request;
     try {
         UsersModel.find({}, (err, result) => {
@@ -12,6 +12,7 @@ const usersList = ()=>{
             }
         })
     }
+    
     catch (error) {
         console.log(error)
         response.send(error)

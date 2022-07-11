@@ -2,7 +2,6 @@ const RequestedListModel = require("../../models/RequestedBooks")
 const IssuedBooksModel = require("../../models/IssuedBooks")
 
 const acceptBookRequest=async(request, response)=>{
-    console.log(".....:::::issued,")
     const _id = request.params.id
     try {
         RequestedListModel.findOne({ _id: _id }, (err, results) => {

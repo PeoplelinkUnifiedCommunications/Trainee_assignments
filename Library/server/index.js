@@ -3,13 +3,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 const app = express();
 app.use(express.json());
-const bodyParser = require("body-parser")
-const UsersModel = require("./models/Users")
-const BooksListModel = require("./models/BooksList")
-const RequestedListModel = require("./models/RequestedBooks")
-const IssuedBooksModel = require("./models/IssuedBooks")
 const jwt = require('jsonwebtoken');
-const bcrypt = require("bcrypt");
 const { response, request } = require("express");
 const login = require("./Actions/User/user");
 const returnBook = require("./Actions/User/returnBook")
@@ -30,6 +24,7 @@ const loginUser = require("./Actions/loginUser");
 const register = require("./Actions/register");
 
 app.use(cors())
+
 
 
 // authentication
@@ -66,7 +61,6 @@ app.use(middleware)
 app.get("/getRequestList", async (request, response) => {
     requestList(request,response)
 })
-
 
 
 // get issued books for admin
@@ -165,6 +159,7 @@ app.get("/homePage", async (request, response) => {
     getUserDetails(request, response)
 
 });
+
 
 //  User Login
 
