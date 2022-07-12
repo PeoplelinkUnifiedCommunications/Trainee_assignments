@@ -59,7 +59,6 @@ function Chat({ socket, userName, room }) {
     }).catch((err)=>{
       console.log(".........delete error", err)
     })
-
   }
 
 
@@ -73,7 +72,6 @@ function Chat({ socket, userName, room }) {
       <div className="chat-header">
         <p>Live Chat</p>
       </div>
-
       <div className="chat-body hrztlScroll hideScroll">
           {listOfMessages.map((each) =>
             <div className="message" id={userName !== each.author ? "you" : "other"}>

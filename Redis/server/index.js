@@ -59,8 +59,6 @@ app.delete("/deleteMsg/", async (req, res) => {
     } catch (error) {
         console.log(error.message)
     }
-
-
 })
 
 app.get("/:id", async (req, res) => {
