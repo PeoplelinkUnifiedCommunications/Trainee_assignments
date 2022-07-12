@@ -50,12 +50,24 @@ io.on("connection", (socket) => {
 
 })
 
-app.get("/:id", async (req, res) => {
-    console.log("h1");
-    const params = req.params.id // socket room number
-    const data = await client.lRange(params, 0, -1)// sending all the data stored in                                                                                                                                                                   room number
-    res.send(data)
+app.delete("/deleteMsg/", async (req, res) => {
+    const msg = req.params.id
+    const { roomId, body } = req.query
+    const removing = await client.lRem(roomId, 1, body)
+    try {
+        res.json(removing)
+    } catch (error) {
+        console.log(error.message)
+    }
+
+
 })
+
+app.get("/:id", async (req, res) => {
+    const params = req.params.id
+    const data = await client.lRange(params, 0, -1)
+    res.send(data)
+}, [])
 
 
 server.listen(8001, () => {

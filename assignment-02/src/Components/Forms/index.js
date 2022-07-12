@@ -27,6 +27,7 @@ function Forms() {
     const validName=()=>{
        
         let count = 0
+        
         for (let eachChar of name){
             if(!(letters.includes(eachChar.toUpperCase()))){
                 count+=1

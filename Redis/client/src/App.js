@@ -2,7 +2,7 @@ import './App.css';
 import io from "socket.io-client"
 import { useState } from 'react'
 import Chats from './Components/Chats';
-import Axios from 'axios'
+
 
 const socket = io.connect("http://localhost:8001")
 
@@ -16,12 +16,6 @@ function App() {
     e.preventDefault()
     socket.emit("join_room", room, userName)
     setShowChats(true)
-
-    Axios.get(`http://localhost:3000/${room}`).then((res)=>{
-      console.log(res,"..............res")
-    }).catch((err)=>{
-      console.log(err,"..............err")
-    })
     socket.on("message", (data) => {
       console.log(data)
     })
