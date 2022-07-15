@@ -1,0 +1,12 @@
+.sideNav ul li{
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 400;
+    color:black;
+    border-bottom: 1px solid #9d9fa0;
+    width: 100%;
+}
+.sideNav ul li:hover{
+    background-color: #d4d7d9;
+    border-radius: 4px;
+}

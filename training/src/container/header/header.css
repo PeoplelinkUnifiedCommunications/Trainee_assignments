@@ -1,6 +1,21 @@
 .headerHome{
-    height: 64px;
-    border-bottom: 1px solid var(--blackLight);
+    /* height: 64px;
+    border-bottom: 1px solid var(--blackLight); */
+
+    z-index: 999;
+    display: flex;
+    flex: 1 1;
+    position: fixed;
+    height: 56px;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #fff !important;
+    background-color: var(--whiteBg);
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    align-items: center;
+    /* justify-content: space-between; */
+    box-sizing: border-box;
 }
 .headerLogo{
     width: 75px;

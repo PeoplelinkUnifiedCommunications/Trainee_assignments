@@ -1,29 +1,27 @@
-// import Login from "../src/container/login/index";
-// import { Routes, Route } from "react-router-dom";
-// export default (
-//     <>
-//         <Routes>
-//             <Route path="/" element={<Login />} />
-
-//             {/* <Route path="about" element={<AboutPage />} /> */}
-//         </Routes>
-//     </>
-// )
-
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './container/header/header';
 const Signup = lazy(() => import('../src/container/signup/index'));
 const Login = lazy(() => import('../src/container/login/index'));
-// const About = lazy(() => import('./routes/About'));
+const Dashboard = lazy(() => import('./container/dashboard/index'));
+const BorrowedBooks = lazy(() => import('./container/BorrowedBooks/index'));
 
 const RoutesPage = () => (
-    <Router>
-        <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-            </Routes>
-        </Suspense>
-    </Router>
+    <>
+
+        <div className='flexCol headerHeight'>
+            <Header />
+            <Router>
+                <Suspense fallback={<div className='flexRow alignCntr justifyCntr fullHeight'>Loading...</div>}>
+                    <Routes>
+                        <Route path="/" element={<Login />} />
+                        <Route path="/signup" element={<Signup />} />
+                        <Route path='/dashboard' element={<Dashboard />} />
+                        <Route path='/borrowedBooks' element={<BorrowedBooks />} />
+                    </Routes>
+                </Suspense>
+            </Router>
+        </div>
+    </>
 );
 export default RoutesPage

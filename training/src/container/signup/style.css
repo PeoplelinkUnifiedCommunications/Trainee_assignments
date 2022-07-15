@@ -1,5 +1,5 @@
 .width75{
-    width: 75%;
+    width: 100%;
 }
 .tabActive {
     background-color: var(--primaryColor);
@@ -10,3 +10,30 @@
     color: white;
     height: 40px;
   }
+  .PhoneInputInput {
+    border: none;
+    outline: none;
+    background-color: inherit;
+  }
+  .react_phneInput {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    border-bottom: var(--brdrDark);
+    /* border-left: 1px solid var(--primaryColor);
+    border-right: 1px solid var(--primaryColor);
+    border-bottom: 1px solid var(--primaryColor); */
+    outline: none;
+  }
+  .react_phneInput:hover{
+    border: 1px solid var(--primaryColor);
+  }
+  @media (min-width: 768px) and (max-width: 1112px) {
+}
+
+/* MEDIA FOR SMALL LAPTOPS, AND LARGE DEVICES */
+@media (min-width: 1113px) {
+    .width75{
+    width: 50%;
+}
+}

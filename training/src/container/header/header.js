@@ -4,8 +4,11 @@ const Header = () => {
     return (
         <div className='flexRow pdngHSM headerHome alignCntr'>
             <div className='flexMinWidthRow alignCntr'>
-                <div className='headerLogo'>
-                    <img src='/images/logo.jpeg' alt='' />
+                <div className='flexRow'>
+                    <div className='headerLogo'>
+                        <img src='/images/logo.jpeg' alt='' />
+                    </div>
+                    <h2 className=''>peoplelink library management system</h2>
                 </div>
             </div>
             <div className='flexAutoRow alignCntr'>

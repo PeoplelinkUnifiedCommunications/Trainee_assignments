@@ -1,3 +1,16 @@
-.bodyCntr{
-    height: calc(100vh - 120px);
+.width50{
+    width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1112px) {
+    .width50{
+        width: 50%;
+    }
+}
+
+
+/* MEDIA FOR SMALL LAPTOPS, AND LARGE DEVICES */
+@media (min-width: 1113px) {
+    .width50{
+    width: 40%;
+}
 }
