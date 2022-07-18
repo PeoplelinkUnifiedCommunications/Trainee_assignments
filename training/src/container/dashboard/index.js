@@ -1,14 +1,9 @@
 import React from 'react'
-import MainCntr from './mainCntr.js/mainCntr'
-import Saidnav from './saidNav/saidnav'
 
-const Layout = () => {
+const Dashboard = () => {
     return (
-        <div className='flexRow'>
-            <Saidnav />
-            <MainCntr />
-        </div>
+        <div>Dashboard</div>
     )
 }
 
-export default Layout
+export default Dashboard;

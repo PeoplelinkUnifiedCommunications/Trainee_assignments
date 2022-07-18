@@ -1,0 +1,10 @@
+.bookCntr{
+    width: auto;
+    height: 120px;
+    /* aspect-ratio: 16 / 9; */
+}
+.bookCntr img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

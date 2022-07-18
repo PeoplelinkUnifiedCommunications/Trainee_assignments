@@ -50,7 +50,7 @@ const Index = () => {
             Object.keys(form_error).length <= 0
         ) {
             // setFormSubmit(true);
-            navigate("/dashboard");
+            navigate("/layout");
         }
     }
 

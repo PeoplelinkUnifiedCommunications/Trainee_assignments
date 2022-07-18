@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './container/header/header';
 const Signup = lazy(() => import('../src/container/signup/index'));
 const Login = lazy(() => import('../src/container/login/index'));
-const Dashboard = lazy(() => import('./container/dashboard/index'));
+const Layout = lazy(() => import('./container/layout/index'));
 const BorrowedBooks = lazy(() => import('./container/BorrowedBooks/index'));
+const Dashboard = lazy(() => import('./container/dashboard/index'));
 
 const RoutesPage = () => (
     <>
@@ -16,8 +17,10 @@ const RoutesPage = () => (
                     <Routes>
                         <Route path="/" element={<Login />} />
                         <Route path="/signup" element={<Signup />} />
-                        <Route path='/dashboard' element={<Dashboard />} />
-                        <Route path='/borrowedBooks' element={<BorrowedBooks />} />
+                        <Route path='/layout' element={<Layout />} >
+                            <Route path='borrowedBooks' element={<BorrowedBooks />} />
+                            <Route path='dashboard' element={<Dashboard />} />
+                        </Route>
                     </Routes>
                 </Suspense>
             </Router>

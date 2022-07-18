@@ -1021,6 +1021,9 @@ button {
 .inlineBlock .inlineBlock5 {
   width: calc(100% / 1);
 }
+.inlineBlock .inlineBlock6 {
+  width: calc(100% / 2);
+}
 .boxShadow {
   display: flex;
   position: relative;
@@ -1064,6 +1067,9 @@ button {
 
 /* MEDIA FOR SMALL LAPTOPS, AND LARGE DEVICES */
 @media (min-width: 768px) and (max-width: 1112px) {
+  .inlineBlock .inlineBlock6 {
+    width: calc(100% / 4);
+  }
 }
 
 /* MEDIA FOR SMALL LAPTOPS, AND LARGE DEVICES */
@@ -1131,6 +1137,9 @@ button {
   }
   .inlineBlock .inlineBlock5 {
     width: calc(100% / 5);
+  }
+  .inlineBlock .inlineBlock6 {
+    width: calc(100% / 6);
   }
   .mobpdngVSM {
     padding: 0;

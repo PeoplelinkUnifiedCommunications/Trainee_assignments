@@ -1,11 +1,11 @@
 import React from 'react'
-import BorrowedBooks from '../../BorrowedBooks'
+import { Outlet } from 'react-router-dom';
 
 const MainCntr = () => {
     return (
         <div className='contentLayout'>
             <div className='mainCntnr'>
-                <BorrowedBooks />
+                <Outlet />
             </div>
         </div>
     )
