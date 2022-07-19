@@ -3,6 +3,8 @@
   height: 64px;
   background-color: mediumorchid;
   border-bottom: 1px solid rgba(0,0,0,0.12);
+  position: fixed;
+  z-index: 999;
 }
 .avatar {
   width: 40px;
@@ -24,4 +26,9 @@
 }
 a:hover{text-decoration: none !important; cursor: pointer;}
 a {text-decoration: none;}
+.navHover:hover{
+  background-color: rgb(229, 229, 240);
+  cursor: pointer;
+  border-radius: 4px;
+}
 

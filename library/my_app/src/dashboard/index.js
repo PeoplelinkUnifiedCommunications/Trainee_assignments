@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidenav from "../common/components/sidenav";
 import "./Styles.css";
+import { Outlet } from "react-router-dom";
+
 
 const Dashboard = () => {
+ 
   return (
     <>
       <div className="leftAsideLayout pdngSM">
@@ -10,7 +13,7 @@ const Dashboard = () => {
       </div>
       <div className="innerContentCol">
         <div className="flexCol contentInnerBlock fullHeight pdngSM">
-          ssjadwfdfghjklwaesdfghjk
+          <Outlet/>
         </div>
       </div>
     </>

@@ -10,7 +10,7 @@ import PhoneInput from "react-phone-number-input";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
-  const [values, setValue] = useState({ phone: "",});
+  const [values, setValue] = useState();
   const [inputvalues, setInputvalues] = useState({
     fullName: "",
     rollNo: "",
@@ -25,10 +25,10 @@ const Signup = () => {
     setInputvalues({ ...inputvalues, [e.target.name]: e.target.value });
     // console.log(...inputvalues);
   };
-  const handlePhoneChange = (e) => {
-    setInputvalues({ ...values, [e.target.phone]: e.target.value });
-    console.log("...inputvalues",e);
-  };
+  // const handlePhoneChange = (e) => {
+  //   setInputvalues({ ...values, [e.target.phone]: e.target.value });
+  //   console.log("...inputvalues",e);
+  // };
   const handleFormSubmit = (e) => {
     e.preventDefault();
     let errorObj = {};
@@ -83,6 +83,7 @@ const Signup = () => {
 
   return (
     <>
+     <div className="flexMinWidthCol alignCntr jcCntr fullHeight brdrBtm">
       <div className="flexCol HalfWidth brdrSM pdngMD brdrRadiusXSM whiteBG">
         <div className="flexRow alignCntr jcCntr pdngTLG">
           <span className="mainHdngTxt">Sign Up</span>
@@ -164,59 +165,17 @@ const Signup = () => {
             <span className="alertTXt">{errorData.password}</span>
           )}
         </div>
-        {/* <div className="flexCol jcCntr pdngVSM">
-          <FormControl variant="outlined" size="small">
-            <InputLabel id="demo-simple-select-outlined-label">
-              Country
-            </InputLabel>
-            <Select
-              onChange={handleChange}
-              label="Country"
-              size="small"
-              value={inputvalues.country}
-            >
-              <MenuItem value="">
-                <em>Select Country</em>
-              </MenuItem>
-              <MenuItem value="india">India</MenuItem>
-              <MenuItem value="afr">afrrica</MenuItem>
-              <MenuItem value="as">America</MenuItem>
-            </Select>
-          </FormControl>
-        </div>
-        <div className="flexCol jcCntr pdngVSM">
-          <FormControl variant="outlined" size="small">
-            <InputLabel id="demo-simple-select-outlined-label">
-              State
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
-              onChange={handleChange}
-              value={inputvalues.state}
-              label="State"
-              size="small"
-            >
-              <MenuItem value="">
-                <em>Select state</em>
-              </MenuItem>
-              <MenuItem value="Tg">Telangana</MenuItem>
-              <MenuItem value="AP">Andra pradesh</MenuItem>
-              <MenuItem value="Tl">Tamilnadu</MenuItem>
-            </Select>
-          </FormControl>
-        </div> */}
         <div className="flexCol jcCntr pdngVSM">
           <PhoneInput
             name="phone"
             placeholder="Enter phone number"
-            value={values.phone}
+            value={values}
             limitMaxLength="10"
-            onChange={handlePhoneChange}
+            onChange={setValue}
           />
-          {errorData.phone && (
+          {/* {errorData.phone && (
             <span className="alertTXt">{errorData.phone}</span>
-          )}
+          )} */}
         </div>
         <div className="flexRow pdngVMD">
           <Button
@@ -232,9 +191,10 @@ const Signup = () => {
         </div>
         <div className="flexRow pdngBSM jcCntr">
           <span className="txtCntr">
-            Already have an Account? <Link to="/login">Login</Link>
+            Already have an Account? <Link to="/">Login</Link>
           </span>
         </div>
+      </div>
       </div>
     </>
   );

@@ -9,6 +9,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import { Link, useNavigate } from "react-router-dom";
+import Footer from "../common/components/footer";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -18,7 +19,6 @@ const Login = () => {
     showPassword: false,
   });
   const [errors, setErrors] = useState({});
-  const [formSubmit, setFormSubmit] = useState();
   const handleChange = (e) => {
     setInputvalues({ ...inputvalues, [e.target.name]: e.target.value });
   };
@@ -43,18 +43,11 @@ const Login = () => {
       errorObj.password =
         "Password length should be max 8 value, one capital letter, one number, one special character ";
     }
-    // console.log("ftshjgdytujh", inputvalues.email !== "" && inputvalues.password !==  "" && errors !== {})
-    if (
-      inputvalues.email !== "" &&
-      inputvalues.password !== "" &&
-      errors !== {}
-    ) {
-      setFormSubmit(true);
-      navigate("/dashboard");
-    } else {
-      setFormSubmit(false);
+    if(!errorObj.email && !errorObj.password){
+      navigate("/dashboard")
     }
-
+    console.log("errorrOnj===",errorObj)
+    // console.log("ftshjgdytujh", inputvalues.email !== "" && inputvalues.password !==  "" && errors !== {})
     setErrors(errorObj);
   };
 
@@ -71,11 +64,12 @@ const Login = () => {
 
   return (
     <>
+    <div className="flexMinWidthCol alignCntr jcCntr fullHeight brdrBtm">
       <div className="flexCol HalfWidth brdrSM pdngMD brdrRadiusXSM whiteBG">
         <div className="flexRow alignCntr jcCntr pdngTLG">
           <span className="mainHdngTxt">Login</span>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="flexCol pdngVMD pdngTLG">
             <TextField
               label="Email"
@@ -83,7 +77,7 @@ const Login = () => {
               variant="outlined"
               size="small"
               dense="margin"
-              type="email"
+              type="text"
               fullWidth
               onChange={handleChange}
               value={inputvalues.email}
@@ -141,7 +135,6 @@ const Login = () => {
               type="submit"
               fullWidth
               disableElevation
-              onClick={handleSubmit}
             >
               Login
             </Button>
@@ -153,6 +146,8 @@ const Login = () => {
           </span>
         </div>
       </div>
+      </div>
+      <Footer/>
     </>
   );
 };
