@@ -19,7 +19,9 @@ const Saidnav = () => {
 
                             </li>
                         </Link>
-                        <li className='pdngMD'>Reserved Books</li>
+                        <Link to="reservedbooks">
+                            <li className='pdngMD'>Reserved Books</li>
+                        </Link>
                         <li className='pdngMD'>Returned Books</li>
                         <li className='pdngMD'>Lost Books</li>
                         <li className='pdngMD'>Fine amount</li>

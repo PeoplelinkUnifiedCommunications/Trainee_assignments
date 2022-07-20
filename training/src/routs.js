@@ -6,7 +6,7 @@ const Login = lazy(() => import('../src/container/login/index'));
 const Layout = lazy(() => import('./container/layout/index'));
 const BorrowedBooks = lazy(() => import('./container/BorrowedBooks/index'));
 const Dashboard = lazy(() => import('./container/dashboard/index'));
-
+const ReservedBooks = lazy(() => import('./ReservedBooks/index'))
 const RoutesPage = () => (
     <>
 
@@ -20,6 +20,7 @@ const RoutesPage = () => (
                         <Route path='/layout' element={<Layout />} >
                             <Route path='borrowedBooks' element={<BorrowedBooks />} />
                             <Route path='dashboard' element={<Dashboard />} />
+                            <Route path="reservedbooks" element={<ReservedBooks />} />
                         </Route>
                     </Routes>
                 </Suspense>

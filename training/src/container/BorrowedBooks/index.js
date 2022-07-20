@@ -1,4 +1,5 @@
 import React from 'react'
+import UseEffect from './components/UseEffect'
 import "./style.css"
 const BorrowedBooks = () => {
     const BookList = [
@@ -11,13 +12,13 @@ const BorrowedBooks = () => {
         {
             id: "2",
             notebook: "/images/pic4.webp",
-            bookName: "Book Cover",
+            bookName: "Book Cover MockUp",
             role: "Telugu"
         },
         {
             id: "3",
             notebook: "/images/pic5.webp",
-            bookName: "Book Cover",
+            bookName: "Book Cover List",
             role: "Economics"
         },
         {
@@ -28,12 +29,12 @@ const BorrowedBooks = () => {
         },
         {
             notebook: "/images/pic4.webp",
-            bookName: "Book Cover",
+            bookName: "Book Cover MockUp",
             role: "Telugu"
         },
         {
             notebook: "/images/pic5.webp",
-            bookName: "Book Cover",
+            bookName: "Book Cover List",
             role: "Economics"
         },
 
@@ -47,7 +48,7 @@ const BorrowedBooks = () => {
             <div className='flexWrap inlineBlock'>
                 <ul>
                     {BookList.map((item) =>
-                        <li className='flexInline inlineBlock6 pdngSM'>
+                        <li className='flexInline inlineBlock6 pdngSM ' >
                             <div className='flexCol whiteBg brdrRadiusXSM pdngSM'>
                                 <div className='bookCntr alignCntr justifyCntr'>
                                     <img src={item.notebook} />
@@ -62,6 +63,7 @@ const BorrowedBooks = () => {
                         </li>)}
                 </ul>
             </div>
+            <UseEffect />
         </div>
     )
 }
