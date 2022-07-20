@@ -71,9 +71,9 @@ const Signup = () => {
       errorObj.password =
         "Password length should be max 8 value, one capital letter, one number, one special character ";
     }
-    if (values === "") {
-      errorObj.phone = "Please enter phoneno";
-    } 
+    // if (values === "") {
+    //   errorObj.phone = "Please enter phoneno";
+    // } 
     // else if (value !== "" && value.length === 10) {
     //   errorObj.phone = "Please enter valid phoneno";
     // }
