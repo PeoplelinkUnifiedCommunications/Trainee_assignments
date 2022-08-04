@@ -7,6 +7,8 @@ import Dashboard from "./dashboard/index";
 import StudentDetails from "./dashboard/Components/studentDetails";
 import BorrowBooks from "./dashboard/Components/borrowBooks";
 import ReturnBooks from "./dashboard/Components/returnBooks";
+import InputTabaledata from "./dashboard/Components/inputTabaledata";
+import Formdata from "./dashboard/Components/formdata";
 
 const Routers = () => {
   return (
@@ -22,6 +24,8 @@ const Routers = () => {
                 <Route path="studentdetails" element={<StudentDetails />} />
                 <Route path="borrowBooks" element={<BorrowBooks />} />
                 <Route path="returnBooks" element={<ReturnBooks />} />
+                <Route path="inputFields" element={<InputTabaledata />} />
+                <Route path="formdata" element={<Formdata/>}/>
               </Route>
             </Routes>
           </div>

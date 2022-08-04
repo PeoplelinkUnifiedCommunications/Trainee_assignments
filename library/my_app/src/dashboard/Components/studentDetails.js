@@ -6,6 +6,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import Formdata from "./formdata";
 
 const StudentDetails = () => {
   const tabledata = [
@@ -15,7 +16,7 @@ const StudentDetails = () => {
       className: "4th class",
       borrow_date: "12-05-2022",
       return_date: "12-06-2022",
-      age:15
+      age: 15,
     },
     {
       student_name: "koushik",
@@ -23,7 +24,7 @@ const StudentDetails = () => {
       className: "10th class",
       borrow_date: "12-06-2022",
       return_date: "12-07-2022",
-      age:18
+      age: 18,
     },
     {
       student_name: "santhoshi",
@@ -31,7 +32,7 @@ const StudentDetails = () => {
       className: "7th class",
       borrow_date: "25-05-2022",
       return_date: "25-06-2022",
-      age:17
+      age: 17,
     },
     {
       student_name: "deepika",
@@ -39,7 +40,7 @@ const StudentDetails = () => {
       className: "6th class",
       borrow_date: "30-05-2022",
       return_date: "29-06-2022",
-      age:15
+      age: 15,
     },
     {
       student_name: "sujitha",
@@ -47,7 +48,7 @@ const StudentDetails = () => {
       className: "9th class",
       borrow_date: "12-07-2022",
       return_date: "12-08-2022",
-      age:18
+      age: 18,
     },
   ];
   return (
@@ -69,19 +70,24 @@ const StudentDetails = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-            {tabledata.filter(agedata => agedata.student_name.length > 7 ).map((item) => (
-                <TableRow >
-                  <TableCell>{item.student_name}</TableCell>
-                  <TableCell>{item.id}</TableCell>
-                  <TableCell>{item.className}</TableCell>
-                  <TableCell>{item.borrow_date}</TableCell>
-                  <TableCell>{item.return_date}</TableCell>
-                  <TableCell>{item.age}</TableCell>
-                </TableRow>
-              ))}
+              {tabledata
+                .filter((agedata) => agedata.student_name.length > 7)
+                .map((item,index) => (
+                  <TableRow key={index}>
+                    <TableCell>{item.student_name}</TableCell>
+                    <TableCell>{item.id}</TableCell>
+                    <TableCell>{item.className}</TableCell>
+                    <TableCell>{item.borrow_date}</TableCell>
+                    <TableCell>{item.return_date}</TableCell>
+                    <TableCell>{item.age}</TableCell>
+                  </TableRow>
+                ))}
             </TableBody>
           </Table>
         </TableContainer>
+      </div>
+      <div className="flexCol">
+        <Formdata />
       </div>
     </>
   );

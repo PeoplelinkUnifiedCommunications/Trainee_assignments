@@ -45,6 +45,18 @@ const Sidenav = () => {
               </div>
             </div>
           </Link>
+          <Link to="inputFields">
+            <div className="flexRow pdngSM alignCntr navHover">
+              <div className="flexAutoRow pdngRMD">
+                <div className="iconBox24">
+                  <img src="/images/logos/withdrawfinal.png" alt="cgvhj" />
+                </div>
+              </div>
+              <div className="flexMinWidthCol">
+                <span className="subHdngTxt">Practice</span>
+              </div>
+            </div>
+          </Link>
         </div>
         <div className="flexAutoCol pdngBLG">
           <span className="subHdngTxt pdngHMD">
