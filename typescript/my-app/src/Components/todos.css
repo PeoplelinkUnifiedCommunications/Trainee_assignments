@@ -1,0 +1,27 @@
+
+.input{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.inputStyle {
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+  }
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right:10px;
+  font-size: 20px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  transition: 0.3sec all;
+}
+.txtalgnCntr{
+    text-align: center;
+}
