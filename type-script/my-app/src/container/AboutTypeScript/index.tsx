@@ -1,10 +1,13 @@
 import React from 'react'
 
 const AboutTypeScript = () => {
+  let firstName:string="santhoshi";
+  // firstName=33;
+  console.log(firstName)
+  console.log(typeof(firstName))
   return (
     <div>
-        <input  type="text"/>
-        <button>submit</button>
+        <div>{firstName}</div>
     </div>
   )
 }
